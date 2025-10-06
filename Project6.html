@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="Picture1.png">
+  <title>How to Build a Modern Sign In Form using HTML, CSS & JavaScript</title>
+    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <style>
+    body {
+      background: linear-gradient(to right, #2c0e43 10%, #581c87);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      padding: 0 2rem;
+      background-color: #0d1325;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      color: #a855f7;
+      font-size: 26px;
+      margin-right: 8px;
+      letter-spacing: 2.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #a855f7;
+      transform: scale(1.2);
+    }
+    /*linke*/
+    .con1 {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: auto 0;
+      height: 50vh;
+    }
+    .countdown {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+
+    .link-box {
+      display: none;
+      padding: 20px 40px;
+      background: #1e2a47;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+      transition: 0.3s;
+    }
+
+    .link-box a {
+      text-decoration: none;
+      color: #00ffcc;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .link-box:hover {
+      background: #26385c;
+      transform: scale(1.05);
+    }
+    /**ret**/
+    .Ret{
+      margin: 5px 0 0 3rem;
+      width: max-content;
+    }
+    .Ret a {
+      font-size: 2rem;
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .Ret a span{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+    }
+    .Ret a:hover {
+  color: #00e1ff;
+}
+    .Ret a:hover span {
+  border-color: #00e1ff;
+}
+    /**img**/
+    .img{
+      display: flex;
+      justify-content: center;
+      margin: 2rem auto;
+    }
+    .img img{
+      border-radius: 8px;
+      max-width: 100vw;
+    width: 70vw;
+    height: 65vh;
+    }
+    /**par**/
+    .par{
+       font-family: Arial, sans-serif;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #ffffff;
+    }
+    h1, h2, h3 {
+      color: #00c8ff;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 35px;
+      font-size: 1.6rem;
+    }
+    h3 {
+      margin-top: 25px;
+      font-size: 1.3rem;
+    }
+    p {
+      margin-bottom: 18px;
+    }
+    ul {
+      margin: 15px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .highlight {
+      background: #000000;
+      padding: 8px 12px;
+      border-left: 4px solid #0073e6;
+      margin: 20px 0;
+    }
+    /**respon**/
+    @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .img img{
+    max-width: 100vw;
+    width: 90vw;
+    }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">{ / }</span> 77cod_ing
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="Terms & Conditions.html">Terms & Conditions</a>
+    </nav>
+  </header>
+  <div class="Ret">
+    <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
+  </div>
+  <div class="img">
+    <img src="image copy 2.png" alt="subscribe.box">
+  </div>
+  <div class="par">
+  <span>
+<h1>How to Build a Modern Sign In Form using HTML, CSS & JavaScript</h1>
+<p>
+  The <strong>Sign In Form</strong> is one of the most essential components of any website or application.
+  A well-designed login interface doesn’t just authenticate users — it also sets the tone for the user experience.
+  In this guide, we’ll explore how to create a modern, frosted-glass styled sign-in card with interactive features using
+  <strong>HTML, CSS, and JavaScript</strong>.
+</p>
+
+<div class="highlight">
+  <p>
+    <strong>Quick Summary:</strong> In this tutorial, you’ll learn how to design a visually appealing Sign In form,
+    style it with modern CSS effects like glassmorphism, and enhance it with JavaScript features such as
+    password visibility toggling and basic form validation.
+  </p>
+</div>
+
+<h2>What Is a Modern Sign In Form?</h2>
+<p>
+  A modern Sign In form is more than just two input fields and a button.
+  It often includes responsive layouts, clear accessibility labels, smooth focus states, and user-friendly enhancements.
+  Adding subtle gradients, shadows, and frosted-glass effects can elevate the form into a professional UI component
+  that users enjoy interacting with.
+</p>
+
+<h2>Why Use a Stylish Sign In Form</h2>
+<ul>
+  <li><strong>User Trust:</strong> A clean and modern design builds credibility and trust.</li>
+  <li><strong>Accessibility:</strong> Clear labels and focus states make the form usable for all users.</li>
+  <li><strong>Interactivity:</strong> Features like password visibility toggling improve usability.</li>
+  <li><strong>First Impression:</strong> The login screen is often the user’s first touchpoint with your product.</li>
+</ul>
+
+<h2>How to Implement the Sign In Form</h2>
+
+<h3>1. HTML Structure</h3>
+<p>
+  Start with a centered card that contains a <code>form</code> element.
+  Inside the form, include input fields for username and password, along with a "Sign In" button
+  and a “Forgot password?” link.
+</p>
+
+<h3>2. CSS Styling</h3>
+<p>
+  Use a frosted-glass style with <code>backdrop-filter</code> and subtle gradients.
+  Rounded corners, smooth shadows, and hover states make the UI modern and inviting.
+  Responsive media queries ensure it adapts well to mobile screens.
+</p>
+
+<h3>3. JavaScript Enhancements</h3>
+<p>
+  Add a small script to toggle password visibility between “text” and “password.”
+  Include simple form validation logic to enable or disable the Sign In button
+  depending on whether both fields are filled.
+</p>
+
+<h2>Practical Example</h2>
+<p>
+  Imagine a user visiting your app.
+  They see a sleek card in the center of the screen with a gradient background and frosted effect.
+  They type in their <strong>username</strong> and <strong>password</strong>,
+  click the "Show" button to verify the password, and then hit “Sign In.”
+  A smooth interaction gives them confidence that the site is secure and professional.
+</p>
+
+<h2>Benefits for SEO and User Engagement</h2>
+<ul>
+  <li><strong>Lower Bounce Rate:</strong> A professional login page keeps users from leaving quickly.</li>
+  <li><strong>Improved Accessibility:</strong> Proper labels and ARIA attributes make the form screen-reader friendly.</li>
+  <li><strong>Modern UI:</strong> A polished login experience encourages trust and return visits.</li>
+</ul>
+
+<h2>Common Mistakes to Avoid</h2>
+<ul>
+  <li>Forgetting to disable the Sign In button when fields are empty.</li>
+  <li>Not adding password visibility toggle, which frustrates users.</li>
+  <li>Using overly complex animations that slow down the page.</li>
+  <li>Skipping responsive design, making the form hard to use on mobile.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+  The <strong>Sign In Form</strong> is a vital part of any digital product.
+  With HTML, CSS, and a touch of JavaScript, you can create a login page that is not only functional
+  but also visually appealing and user-friendly.
+  By combining accessibility, modern design, and interactivity, your Sign In page can become
+  a polished entry point that leaves a strong impression on users.
+</p>
+
+<div class="highlight">
+  <p>
+    <strong>SEO Keywords:</strong> sign in form HTML CSS, modern login page, glassmorphism sign in UI,
+    frosted glass login card, responsive sign in design, password visibility toggle
+  </p>
+</div>
+
+  <div class="con1">
+    <div class="countdown" id="countdown">
+    <span id="number">10</span> wait...
+  </div>
+
+  <div class="link-box" id="linkBox">
+    <a href="https://gist.github.com/77cod-ing/a10075de3a9db81afea4a7e30b38904f" target="_blank">Go to code</a>
+  </div>
+  </div>
+
+  <script>
+    let counter = 10;
+    let timer = null;
+    const countdownEl = document.getElementById("countdown");
+    const numberEl = document.getElementById("number");
+    const linkBox = document.getElementById("linkBox");
+
+    function startCountdown() {
+      if (timer) return;
+      timer = setInterval(() => {
+        counter--;
+        numberEl.textContent = counter;
+
+        if (counter === 0) {
+          clearInterval(timer);
+          timer = null;
+          countdownEl.style.display = "none"; 
+          linkBox.style.display = "block";
+        }
+      }, 1000);
+    }
+
+    function stopCountdown() {
+      clearInterval(timer);
+      timer = null;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startCountdown();
+        } else {
+          stopCountdown();
+        }
+      });
+    }, { threshold: 1.0 });
+
+    observer.observe(countdownEl);
+  </script>
+</body>
+</html>

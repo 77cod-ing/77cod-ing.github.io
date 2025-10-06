@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="Picture1.png">
+  <title>Create a Particles Login Page — HTML/CSS/JS</title>
+    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <style>
+    body {
+      background: linear-gradient(to right, #2c0e43 10%, #581c87);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      padding: 0 2rem;
+      background-color: #0d1325;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      color: #a855f7;
+      font-size: 26px;
+      margin-right: 8px;
+      letter-spacing: 2.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #a855f7;
+      transform: scale(1.2);
+    }
+    /*linke*/
+    .con1 {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: auto 0;
+      height: 50vh;
+    }
+    .countdown {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+
+    .link-box {
+      display: none;
+      padding: 20px 40px;
+      background: #1e2a47;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+      transition: 0.3s;
+    }
+
+    .link-box a {
+      text-decoration: none;
+      color: #00ffcc;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .link-box:hover {
+      background: #26385c;
+      transform: scale(1.05);
+    }
+    /**ret**/
+    .Ret{
+      margin: 5px 0 0 3rem;
+      width: max-content;
+    }
+    .Ret a {
+      font-size: 2rem;
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .Ret a span{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+    }
+    .Ret a:hover {
+  color: #00e1ff;
+}
+    .Ret a:hover span {
+  border-color: #00e1ff;
+}
+    /**img**/
+    .img{
+      display: flex;
+      justify-content: center;
+      margin: 2rem auto;
+    }
+    .img img{
+      border-radius: 8px;
+      max-width: 100vw;
+    width: 70vw;
+    height: 65vh;
+    }
+    /**par**/
+    .par{
+       font-family: Arial, sans-serif;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #ffffff;
+    }
+    h1, h2, h3 {
+      color: #00c8ff;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 35px;
+      font-size: 1.6rem;
+    }
+    h3 {
+      margin-top: 25px;
+      font-size: 1.3rem;
+    }
+    p {
+      margin-bottom: 18px;
+    }
+    ul {
+      margin: 15px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .highlight {
+      background: #000000;
+      padding: 8px 12px;
+      border-left: 4px solid #0073e6;
+      margin: 20px 0;
+    }
+    /**respon**/
+    @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .img img{
+    max-width: 100vw;
+    width: 90vw;
+    }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">{ / }</span> 77cod_ing
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="Terms & Conditions.html">Terms & Conditions</a>
+    </nav>
+  </header>
+  <div class="Ret">
+    <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
+  </div>
+  <div class="img">
+    <img src="image copy 33.png" alt="subscribe.box">
+  </div>
+  <div class="par">
+  <span>
+<h1>Create a Particles Login Page — HTML/CSS/JS</h1>
+<p>
+  Animated particle backgrounds are a popular way to enhance the visual appeal of websites. 
+  In this guide, you’ll learn how to create a <strong>particles login page</strong> 
+  using <em>HTML, CSS, and Particles.js</em>. 
+  This design combines a futuristic particle animation with a sleek glassy login form, 
+  making your login interface both modern and user-friendly.
+</p>
+
+<div class="highlight">
+  <p><strong>Quick Summary:</strong> Use Particles.js to generate interactive particles 
+  in the background and a glassmorphism login box using CSS with blur and neon glow effects.</p>
+</div>
+
+<h2>What Is a Particles Login Page?</h2>
+<p>
+  A particles login page features animated particles moving in the background behind a login form. 
+  It adds depth and interactivity, giving users a visually engaging interface. 
+  The login form is usually styled with a glass-like effect to ensure readability and highlight the input fields.
+</p>
+
+<h2>Why Use a Particles Login Page?</h2>
+<ul>
+  <li><strong>Modern Design:</strong> Creates a futuristic, high-tech look for your site.</li>
+  <li><strong>Interactive:</strong> Subtle motion in the background makes the interface feel alive.</li>
+  <li><strong>Focus:</strong> Glassy login box ensures the form is readable and accessible.</li>
+  <li><strong>Customizable:</strong> Adjust particle size, color, number, speed, and box styling.</li>
+</ul>
+
+<h2>Steps to Build the Particles Login Page</h2>
+
+<h3>1. Structure the HTML</h3>
+<p>
+  Begin with a <code>div</code> for particles and another for the login form. 
+  The login box contains input fields for username and password, 
+  along with a submit button. Optionally, add a semi-transparent container for additional styling.
+</p>
+<div class="img"><img src="image copy 34.png" alt="HTML structure for particles login page"></div>
+
+<h3>2. Add CSS Styling</h3>
+<p>
+  Style the background, login box, and inputs:
+</p>
+<ul>
+  <li>Set <code>body</code> background to dark for contrast.</li>
+  <li>Use <code>backdrop-filter: blur()</code> for a glassy effect.</li>
+  <li>Add <code>box-shadow</code> with neon color to make the login box glow.</li>
+  <li>Style input fields and buttons with padding, border-radius, and hover effects.</li>
+</ul>
+<div class="img"><img src="image copy 35.png" alt="CSS styling for login page"></div>
+
+<h3>3. Implement Particles.js</h3>
+<p>
+  Include Particles.js in your project and configure particle options:
+  number, color, size, movement speed, and line linking. 
+  You can enable or disable interactivity like hover or click effects depending on your preference.
+</p>
+<div class="img"><img src="image copy 33.png" alt="Particles.js configuration for login page"></div>
+
+<h2>Best Practices for Particles Login Pages</h2>
+<ul>
+  <li><strong>Accessibility:</strong> Ensure input fields are labeled properly for screen readers.</li>
+  <li><strong>Performance:</strong> Avoid too many particles on mobile devices to maintain smooth animation.</li>
+  <li><strong>Design Consistency:</strong> Match colors of particles and login box with your website theme.</li>
+  <li><strong>Responsiveness:</strong> Make sure the login box remains centered on different screen sizes.</li>
+</ul>
+
+<h2>Common Mistakes to Avoid</h2>
+<ul>
+  <li>Making particles too distracting or fast, which reduces readability.</li>
+  <li>Using a background too bright or with low contrast against the login box.</li>
+  <li>Neglecting mobile responsiveness — box should remain centered and inputs accessible.</li>
+  <li>Forgetting to optimize particle numbers for performance.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+  Creating a <strong>Particles Login Page</strong> combines aesthetic appeal with usability. 
+  The animated background draws attention, while the glassy login form keeps the interface clean and professional. 
+  This approach is perfect for portfolios, tech startups, apps, or any website that wants a modern login experience.
+</p>
+
+<div class="highlight">
+  <p><strong>SEO Keywords:</strong> Particles login page, HTML CSS JavaScript login, glassmorphism form, 
+  interactive background, neon login box, modern web UI, Particles.js tutorial</p>
+</div>
+
+
+
+
+  <div class="con1">
+    <div class="countdown" id="countdown">
+    <span id="number">10</span> wait...
+  </div>
+
+  <div class="link-box" id="linkBox">
+    <a href="https://gist.github.com/77cod-ing/00030038885626c22d323ffa9cfea26e" target="_blank">Go to code</a>
+  </div>
+  </div>
+
+  <script>
+    let counter = 10;
+    let timer = null;
+    const countdownEl = document.getElementById("countdown");
+    const numberEl = document.getElementById("number");
+    const linkBox = document.getElementById("linkBox");
+
+    function startCountdown() {
+      if (timer) return;
+      timer = setInterval(() => {
+        counter--;
+        numberEl.textContent = counter;
+
+        if (counter === 0) {
+          clearInterval(timer);
+          timer = null;
+          countdownEl.style.display = "none"; 
+          linkBox.style.display = "block";
+        }
+      }, 1000);
+    }
+
+    function stopCountdown() {
+      clearInterval(timer);
+      timer = null;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startCountdown();
+        } else {
+          stopCountdown();
+        }
+      });
+    }, { threshold: 1.0 });
+
+    observer.observe(countdownEl);
+  </script>
+</body>
+</html>

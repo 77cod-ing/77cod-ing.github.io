@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="Picture1.png">
+  <title>Create Interactive Social Media Icons with Tooltips — HTML/CSS</title>
+    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <style>
+    body {
+      background: linear-gradient(to right, #2c0e43 10%, #581c87);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      padding: 0 2rem;
+      background-color: #0d1325;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      color: #a855f7;
+      font-size: 26px;
+      margin-right: 8px;
+      letter-spacing: 2.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #a855f7;
+      transform: scale(1.2);
+    }
+    /*linke*/
+    .con1 {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: auto 0;
+      height: 50vh;
+    }
+    .countdown {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+
+    .link-box {
+      display: none;
+      padding: 20px 40px;
+      background: #1e2a47;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+      transition: 0.3s;
+    }
+
+    .link-box a {
+      text-decoration: none;
+      color: #00ffcc;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .link-box:hover {
+      background: #26385c;
+      transform: scale(1.05);
+    }
+    /**ret**/
+    .Ret{
+      margin: 5px 0 0 3rem;
+      width: max-content;
+    }
+    .Ret a {
+      font-size: 2rem;
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .Ret a span{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+    }
+    .Ret a:hover {
+  color: #00e1ff;
+}
+    .Ret a:hover span {
+  border-color: #00e1ff;
+}
+    /**img**/
+    .img{
+      display: flex;
+      justify-content: center;
+      margin: 2rem auto;
+    }
+    .img img{
+      border-radius: 8px;
+      max-width: 100vw;
+    width: 70vw;
+    height: 65vh;
+    }
+    /**par**/
+    .par{
+       font-family: Arial, sans-serif;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #ffffff;
+    }
+    h1, h2, h3 {
+      color: #00c8ff;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 35px;
+      font-size: 1.6rem;
+    }
+    h3 {
+      margin-top: 25px;
+      font-size: 1.3rem;
+    }
+    p {
+      margin-bottom: 18px;
+    }
+    ul {
+      margin: 15px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .highlight {
+      background: #000000;
+      padding: 8px 12px;
+      border-left: 4px solid #0073e6;
+      margin: 20px 0;
+    }
+    /**respon**/
+    @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .img img{
+    max-width: 100vw;
+    width: 90vw;
+    }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">{ / }</span> 77cod_ing
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="Terms & Conditions.html">Terms & Conditions</a>
+    </nav>
+  </header>
+  <div class="Ret">
+    <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
+  </div>
+  <div class="img">
+    <img src="image copy 47.png" alt="subscribe.box">
+  </div>
+  <div class="par">
+  <span>
+<h1>Create Interactive Social Media Icons with Tooltips — HTML/CSS</h1>
+<p>
+  Interactive social media icons enhance user engagement by providing a visually appealing 
+  and responsive interface. In this tutorial, you’ll learn how to create 
+  <strong>circular social icons</strong> with <em>hover animations and tooltips</em> 
+  using <strong>HTML and CSS</strong>. The result is a sleek set of icons that highlight 
+  on hover and display tooltip labels.
+</p>
+
+<div class="highlight">
+  <p><strong>Quick Summary:</strong> Each social icon is wrapped in a container that displays a tooltip on hover. CSS transitions animate the icon's color, background, and tooltip position, creating an interactive effect without any JavaScript.</p>
+</div>
+
+<h2>What Are Interactive Social Media Icons?</h2>
+<p>
+  These are circular icons representing different social platforms such as LinkedIn, 
+  GitHub, Instagram, and YouTube. They respond to user interaction with hover effects, 
+  including color changes, background animations, and tooltip displays that identify 
+  the platform.
+</p>
+
+<h2>Why Use Hover Animations and Tooltips?</h2>
+<ul>
+  <li><strong>Enhanced UX:</strong> Users can easily identify each social platform.</li>
+  <li><strong>Visual Appeal:</strong> Smooth hover effects make the website look modern and dynamic.</li>
+  <li><strong>No JavaScript Needed:</strong> Pure HTML and CSS achieve professional interaction.</li>
+  <li><strong>Customizable:</strong> Colors, sizes, and animations can be changed via CSS.</li>
+</ul>
+
+<h2>How It Works</h2>
+<p>
+  The structure uses an unordered list (<code>&lt;ul&gt;</code>) with list items for 
+  each icon. Each icon contains a link (<code>&lt;a&gt;</code>), an SVG for the platform 
+  logo, and a <code>div</code> for the tooltip. CSS handles the hover animation, 
+  background fill, and tooltip display using <code>:hover</code> selectors and 
+  <code>transition</code> properties.
+</p>
+<div class="img"><img src="image copy 48.png" alt="Social media icons with tooltip animation"></div>
+
+<h3>1. Set Up the HTML</h3>
+<p>
+  Create a <code>&lt;ul&gt;</code> with class <code>example-2</code>. Each list item 
+  has a <code>div</code> container with the icon link and tooltip. Assign data attributes 
+  like <code>data-social="linkedin"</code> to target specific platforms in CSS.
+</p>
+<div class="img"><img src="image copy 48.png" alt="HTML structure for social media icons"></div>
+
+<h3>2. Add CSS Styling</h3>
+<p>
+  CSS styles the icon size, shape, and colors. The <code>.filled</code> div animates 
+  background fill from bottom to top on hover. Tooltip visibility and position are 
+  managed with <code>opacity</code>, <code>visibility</code>, and <code>transition</code>.
+</p>
+<div class="img"><img src="image copy 49.png" alt="CSS styling for social media icons"></div>
+
+<h3>3. Customize for Different Platforms</h3>
+<p>
+  Use <code>[data-social="platform"]</code> selectors to assign unique colors for 
+  LinkedIn, GitHub, Instagram, and YouTube. Each icon has a matching tooltip color 
+  for a cohesive design.
+</p>
+
+<h2>Tips for Better Results</h2>
+<ul>
+  <li><strong>Contrast:</strong> Ensure the icon color stands out from the background.</li>
+  <li><strong>Accessibility:</strong> Add <code>aria-label</code> for screen readers.</li>
+  <li><strong>Consistency:</strong> Keep all icons the same size and spacing for balance.</li>
+  <li><strong>Performance:</strong> Pure CSS hover animations are lightweight and fast.</li>
+</ul>
+
+<h2>Common Mistakes to Avoid</h2>
+<ul>
+  <li>Not wrapping each icon in a container — hover effects may break.</li>
+  <li>Forgetting to use <code>transition</code> — animations will be abrupt.</li>
+  <li>Using too many colors — keep a consistent palette for a professional look.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+  The <strong>Interactive Social Media Icons</strong> provide a modern, professional 
+  way to link to your platforms. With just HTML and CSS, you can create visually 
+  appealing icons with hover animations and tooltips that improve user engagement.
+</p>
+
+<div class="highlight">
+  <p><strong>SEO Keywords:</strong> social media icons, hover animation, tooltip CSS, interactive icons, HTML CSS SVG, circular icons design</p>
+</div>
+
+
+
+  <div class="con1">
+    <div class="countdown" id="countdown">
+      <span id="number">10</span> wait...
+    </div>
+
+    <div class="link-box" id="linkBox">
+      <a href="https://gist.github.com/77cod-ing/5bfee8e50711538221e250260cbe3377" target="_blank">Go to code</a>
+    </div>
+  </div>
+
+  <script>
+    let counter = 10;
+    let timer = null;
+    const countdownEl = document.getElementById("countdown");
+    const numberEl = document.getElementById("number");
+    const linkBox = document.getElementById("linkBox");
+
+    function startCountdown() {
+      if (timer) return;
+      timer = setInterval(() => {
+        counter--;
+        numberEl.textContent = counter;
+
+        if (counter === 0) {
+          clearInterval(timer);
+          timer = null;
+          countdownEl.style.display = "none"; 
+          linkBox.style.display = "block";
+        }
+      }, 1000);
+    }
+
+    function stopCountdown() {
+      clearInterval(timer);
+      timer = null;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startCountdown();
+        } else {
+          stopCountdown();
+        }
+      });
+    }, { threshold: 1.0 });
+
+    observer.observe(countdownEl);
+  </script>
+</body>
+</html>

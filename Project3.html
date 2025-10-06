@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../Picture1.png">
+  <title>Build the Theater Search Bar — HTML/CSS</title>
+    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <style>
+    body {
+      background: linear-gradient(to right, #2c0e43 10%, #581c87);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      padding: 0 2rem;
+      background-color: #0d1325;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      color: #a855f7;
+      font-size: 26px;
+      margin-right: 8px;
+      letter-spacing: 2.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #a855f7;
+      transform: scale(1.2);
+    }
+    /*linke*/
+    .con1 {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: auto 0;
+      height: 50vh;
+    }
+    .countdown {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+
+    .link-box {
+      display: none;
+      padding: 20px 40px;
+      background: #1e2a47;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+      transition: 0.3s;
+    }
+
+    .link-box a {
+      text-decoration: none;
+      color: #00ffcc;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .link-box:hover {
+      background: #26385c;
+      transform: scale(1.05);
+    }
+    /**ret**/
+    .Ret{
+      margin: 5px 0 0 3rem;
+      width: max-content;
+    }
+    .Ret a {
+      font-size: 2rem;
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .Ret a span{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+    }
+    .Ret a:hover {
+  color: #00e1ff;
+}
+    .Ret a:hover span {
+  border-color: #00e1ff;
+}
+    /**img**/
+    .img{
+      display: flex;
+      justify-content: center;
+      margin: 2rem auto;
+    }
+    .img img{
+      border-radius: 8px;
+    }
+    /**par**/
+    .par{
+       font-family: Arial, sans-serif;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #ffffff;
+    }
+    h1, h2, h3 {
+      color: #00c8ff;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 35px;
+      font-size: 1.6rem;
+    }
+    h3 {
+      margin-top: 25px;
+      font-size: 1.3rem;
+    }
+    p {
+      margin-bottom: 18px;
+    }
+    ul {
+      margin: 15px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .highlight {
+      background: #000000;
+      padding: 8px 12px;
+      border-left: 4px solid #0073e6;
+      margin: 20px 0;
+    }
+    /**respon**/
+    @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">{ / }</span> 77cod_ing
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../Privacy Policy.html">Privacy Policy</a>
+      <a href="../Terms & Conditions.html">Terms & Conditions</a>
+    </nav>
+  </header>
+  <div class="Ret">
+    <a href="../projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
+  </div>
+  <div class="img">
+    <img src="../animition.png" alt="subscribe.box">
+  </div>
+<div class="par">
+  <span>
+    <h1>Build the Theater Search Bar — HTML/CSS (Floating Placeholder)</h1>
+    <p>
+      A search bar is one of the most essential elements of any website. In this guide, you’ll learn 
+      how to build a <strong>theater-style search bar</strong> with HTML and CSS, featuring a modern 
+      <em>floating placeholder effect</em>. This design is clean, responsive, and perfect for improving 
+      user experience.
+    </p>
+
+    <div class="highlight">
+      <p><strong>Quick Summary:</strong> Create a simple search bar with HTML, style it with CSS, and 
+      add a floating placeholder effect for a professional and modern UI component.</p>
+    </div>
+
+    <h2>What Is a Floating Placeholder?</h2>
+    <p>
+      A floating placeholder is a design technique where the placeholder text moves above the input 
+      field when the user types or focuses on it. This approach improves usability and ensures the 
+      input label is always visible.
+    </p>
+
+    <h2>Why Use a Floating Placeholder Search Bar?</h2>
+    <ul>
+      <li><strong>Improved Usability:</strong> Users always know what the field represents.</li>
+      <li><strong>Modern UI:</strong> Floating placeholders give a sleek, app-like experience.</li>
+      <li><strong>Space-Saving:</strong> It replaces the need for a separate label above the input.</li>
+      <li><strong>Engagement:</strong> An attractive search bar encourages interaction.</li>
+    </ul>
+
+    <h2>Steps to Build the Theater Search Bar</h2>
+
+    <h3>1. Structure the Search Bar</h3>
+    <p>
+      Begin by setting up a simple HTML structure for the search box and its label. 
+      The label will act as the floating placeholder.
+    </p>
+    <div class="img"><img src="image copy 8.png" alt="Basic HTML structure for floating placeholder search bar"></div>
+
+    <h3>2. Add CSS Styling</h3>
+    <p>
+      Next, apply CSS to style the input box. Use transitions to animate the placeholder when the 
+      input is active or filled.
+    </p>
+    <div class="img"><img src="image copy 9.png" alt="CSS styling for floating placeholder effect"></div>
+
+    <h3>3. Preview the Final Design</h3>
+    <p>
+      Once styled, the placeholder will smoothly float above the input field, creating a 
+      professional theater-style search bar.
+    </p>
+    <div class="img"><img src="image copy 10.png" alt="Final preview of theater search bar with floating placeholder"></div>
+
+    <h2>Best Practices for Search Bar Design</h2>
+    <ul>
+      <li><strong>Keep It Clear:</strong> Use short and meaningful placeholder text.</li>
+      <li><strong>Ensure Accessibility:</strong> Maintain contrast for readability.</li>
+      <li><strong>Responsive Layout:</strong> Test on both desktop and mobile devices.</li>
+      <li><strong>Consistent Styling:</strong> Match the design with your website’s theme.</li>
+    </ul>
+
+    <h2>Common Mistakes to Avoid</h2>
+    <ul>
+      <li>Using long placeholder text that gets cut off.</li>
+      <li>Not testing how the animation behaves on mobile screens.</li>
+      <li>Overusing effects that slow down the user experience.</li>
+      <li>Forgetting to provide focus states for accessibility.</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>
+      Building a <strong>theater search bar with a floating placeholder</strong> using HTML and CSS is 
+      simple yet effective. It improves the overall look of your site, enhances user interaction, 
+      and creates a polished design that feels modern and user-friendly. 
+      Add it to your next project and make your website more engaging.
+    </p>
+
+    <div class="highlight">
+      <p><strong>SEO Keywords:</strong> HTML CSS search bar, floating placeholder, theater search bar, 
+      modern UI design, CSS input field, responsive search bar</p>
+    </div>
+  </span>
+</div>
+
+<div class="con1">
+  <div class="countdown" id="countdown">
+    <span id="number">10</span> wait...
+  </div>
+  <div class="link-box" id="linkBox">
+    <a href="https://gist.github.com/77cod-ing/708702c3649e72ef52c3bb297a027d48" target="_blank">Go to code</a>
+  </div>
+</div>
+
+
+
+  <script>
+    let counter = 10;
+    let timer = null;
+    const countdownEl = document.getElementById("countdown");
+    const numberEl = document.getElementById("number");
+    const linkBox = document.getElementById("linkBox");
+
+    function startCountdown() {
+      if (timer) return;
+      timer = setInterval(() => {
+        counter--;
+        numberEl.textContent = counter;
+
+        if (counter === 0) {
+          clearInterval(timer);
+          timer = null;
+          countdownEl.style.display = "none"; // يخفي العداد والكلمة
+          linkBox.style.display = "block";
+        }
+      }, 1000);
+    }
+
+    function stopCountdown() {
+      clearInterval(timer);
+      timer = null;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startCountdown();
+        } else {
+          stopCountdown();
+        }
+      });
+    }, { threshold: 1.0 });
+
+    observer.observe(countdownEl);
+  </script>
+</body>
+</html>
+
+
+
+
+
+

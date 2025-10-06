@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="Picture1.png">
+  <title>Create a Neon Cursor Animation — HTML/CSS/JS</title>
+    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <style>
+    body {
+      background: linear-gradient(to right, #2c0e43 10%, #581c87);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      padding: 0 2rem;
+      background-color: #0d1325;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      color: #a855f7;
+      font-size: 26px;
+      margin-right: 8px;
+      letter-spacing: 2.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #a855f7;
+      transform: scale(1.2);
+    }
+    /*linke*/
+    .con1 {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: auto 0;
+      height: 50vh;
+    }
+    .countdown {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+
+    .link-box {
+      display: none;
+      padding: 20px 40px;
+      background: #1e2a47;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+      transition: 0.3s;
+    }
+
+    .link-box a {
+      text-decoration: none;
+      color: #00ffcc;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .link-box:hover {
+      background: #26385c;
+      transform: scale(1.05);
+    }
+    /**ret**/
+    .Ret{
+      margin: 5px 0 0 3rem;
+      width: max-content;
+    }
+    .Ret a {
+      font-size: 2rem;
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .Ret a span{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+    }
+    .Ret a:hover {
+  color: #00e1ff;
+}
+    .Ret a:hover span {
+  border-color: #00e1ff;
+}
+    /**img**/
+    .img{
+      display: flex;
+      justify-content: center;
+      margin: 2rem auto;
+    }
+    .img img{
+      border-radius: 8px;
+      max-width: 100vw;
+    width: 70vw;
+    height: 65vh;
+    }
+    /**par**/
+    .par{
+       font-family: Arial, sans-serif;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #ffffff;
+    }
+    h1, h2, h3 {
+      color: #00c8ff;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 35px;
+      font-size: 1.6rem;
+    }
+    h3 {
+      margin-top: 25px;
+      font-size: 1.3rem;
+    }
+    p {
+      margin-bottom: 18px;
+    }
+    ul {
+      margin: 15px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .highlight {
+      background: #000000;
+      padding: 8px 12px;
+      border-left: 4px solid #0073e6;
+      margin: 20px 0;
+    }
+    /**respon**/
+    @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .img img{
+    max-width: 100vw;
+    width: 90vw;
+    }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">{ / }</span> 77cod_ing
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="Terms & Conditions.html">Terms & Conditions</a>
+    </nav>
+  </header>
+  <div class="Ret">
+    <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
+  </div>
+  <div class="img">
+    <img src="image copy 43.png" alt="subscribe.box">
+  </div>
+  <div class="par">
+  <span>
+<h1>Create a Neon Cursor Animation — HTML/CSS/JS</h1>
+  <p>
+    Neon cursor effects are one of those small but striking details that can make a website feel alive and futuristic. 
+    In this guide, you’ll learn how to create a <strong>Neon Cursor Animation</strong> using 
+    <em>HTML, CSS, and JavaScript (with Three.js Toys)</em>. 
+    This glowing cursor trail gives your site a cyberpunk aesthetic—bright, interactive, and unforgettable.
+  </p>
+
+  <div class="highlight">
+    <p><strong>Quick Summary:</strong> Use the <code>threejs-toys</code> library to generate a flowing neon light trail that follows your mouse movement. Combine it with glowing text and dark backgrounds for a high-tech look.</p>
+  </div>
+
+  <h2>What Is a Neon Cursor Animation?</h2>
+  <p>
+    A neon cursor animation adds a reactive light trail that follows the user’s mouse. 
+    Each movement generates a smooth, glowing flow that mimics neon light tubes. 
+    This design is commonly seen in futuristic portfolios, tech demos, or websites inspired by synthwave and cyber aesthetics.
+  </p>
+
+  <h2>Why Use a Neon Cursor Effect?</h2>
+  <ul>
+    <li><strong>Visual Impact:</strong> It instantly draws attention and gives the interface a high-tech atmosphere.</li>
+    <li><strong>Interactive:</strong> Users feel connected to the interface as the cursor reacts to movement.</li>
+    <li><strong>Customizable:</strong> You can tweak parameters like glow radius, color, speed, and motion smoothness.</li>
+    <li><strong>Lightweight:</strong> The effect uses efficient WebGL rendering through Three.js, keeping performance high.</li>
+  </ul>
+
+  <h2>Steps to Build the Neon Cursor Animation</h2>
+
+  <h3>1. Structure the HTML</h3>
+  <p>
+    Start with a simple page structure. The main container (<code>#app</code>) holds the glowing animation canvas generated by the script, 
+    while the text or logo elements float above it.
+  </p>
+  <div class="img"><img src="image copy 37.png" alt="HTML structure for neon cursor animation"></div>
+
+  <h3>2. Add CSS Styling</h3>
+  <p>
+    Style the page for a clean, futuristic look:
+  </p>
+  <ul>
+    <li>Use a dark background to enhance neon visibility.</li>
+    <li>Apply glowing text shadows and bright accent colors like cyan or magenta.</li>
+    <li>Use <code>position: fixed</code> for the canvas so the glow covers the full viewport.</li>
+    <li>Use <code>pointer-events: none</code> on text to prevent interference with mouse tracking.</li>
+  </ul>
+  <div class="img"><img src="image copy 38.png" alt="CSS styling for neon cursor effect"></div>
+
+  <h3>3. Implement the Neon Cursor Script</h3>
+  <p>
+    The core of the animation uses the <code>neonCursor()</code> function from the <strong>Three.js Toys</strong> library. 
+    It creates a set of moving particles that follow your cursor path with adjustable physics parameters.
+  </p>
+  <p>Example configuration:</p>
+  <ul>
+    <li><code>shaderPoints</code>: controls the number of glowing segments.</li>
+    <li><code>radius1</code> and <code>radius2</code>: define the thickness and spread of the light.</li>
+    <li><code>curvePoints</code> and <code>curveLerp</code>: adjust the smoothness of motion.</li>
+    <li><code>sleepTimeCoefX/Y</code>: tweak the delay and softness of the trail when the cursor slows down.</li>
+  </ul>
+  <div class="img"><img src="image copy 39.png" alt="JavaScript neon cursor configuration"></div>
+
+  <h2>Best Practices for Neon Cursor Pages</h2>
+  <ul>
+    <li><strong>Performance:</strong> Keep shader points moderate for smooth animation on lower-end devices.</li>
+    <li><strong>Contrast:</strong> Use neon effects against dark backgrounds for maximum glow impact.</li>
+    <li><strong>Design Integration:</strong> Match the glow color with your website’s primary theme color.</li>
+    <li><strong>Accessibility:</strong> Ensure important text remains readable despite glowing visuals.</li>
+  </ul>
+
+  <h2>Common Mistakes to Avoid</h2>
+  <ul>
+    <li>Overusing bright colors that clash or cause visual strain.</li>
+    <li>Applying too many shadows, which can make text blurry.</li>
+    <li>Allowing the cursor trail to be too dense—subtlety looks more professional.</li>
+    <li>Forgetting to optimize for mobile devices (some older phones may struggle with WebGL).</li>
+  </ul>
+
+  <h2>Conclusion</h2>
+  <p>
+    The <strong>Neon Cursor Animation</strong> is an elegant touch that blends motion and light into your web design. 
+    By using <em>Three.js Toys</em>, you can build this effect with minimal code and maximum style. 
+    Whether you’re building a creative portfolio, a landing page, or an interactive art project, this glowing cursor gives your interface a pulse of energy.
+  </p>
+
+  <div class="highlight">
+    <p><strong>SEO Keywords:</strong> Neon cursor effect, Three.js cursor animation, glowing mouse trail, interactive background, WebGL neon animation, HTML CSS JS cursor effect, futuristic web UI</p>
+  </div>
+
+  <div class="con1">
+    <div class="countdown" id="countdown">
+      <span id="number">10</span> wait...
+    </div>
+
+    <div class="link-box" id="linkBox">
+      <a href="https://gist.github.com/77cod-ing/806d3c7a601804e41c1bd7d9fa26f9af" target="_blank">Go to code</a>
+    </div>
+  </div>
+
+  <script>
+    let counter = 10;
+    let timer = null;
+    const countdownEl = document.getElementById("countdown");
+    const numberEl = document.getElementById("number");
+    const linkBox = document.getElementById("linkBox");
+
+    function startCountdown() {
+      if (timer) return;
+      timer = setInterval(() => {
+        counter--;
+        numberEl.textContent = counter;
+
+        if (counter === 0) {
+          clearInterval(timer);
+          timer = null;
+          countdownEl.style.display = "none"; 
+          linkBox.style.display = "block";
+        }
+      }, 1000);
+    }
+
+    function stopCountdown() {
+      clearInterval(timer);
+      timer = null;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startCountdown();
+        } else {
+          stopCountdown();
+        }
+      });
+    }, { threshold: 1.0 });
+
+    observer.observe(countdownEl);
+  </script>
+</body>
+</html>

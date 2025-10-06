@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Picture1.png">
+    <title>About</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+  body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right,#2c0e43 10%,#581c87  ) ;
+    }
+
+    /* Navbar container */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 60px;
+      background-color: #0d1325;
+    }
+
+    /* Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+    .logo-icon {
+      color: #a855f7;
+      font-size: 26px;
+      margin-right: 8px;
+      letter-spacing: 2.5px;
+    }
+
+    /* Links */
+    .nav-links {
+      display: flex;
+      gap: 35px;
+    }
+    .nav-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      display: inline-block;          
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .nav-links a:hover {
+      color: #a855f7;               
+      transform: scale(1.2);    
+    }
+h1{
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.con{
+    display: flex;
+    position: relative;
+    background: rgba(0, 0, 0, 0.318);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(12px);
+    margin: 0 auto;
+    width: 1100px;
+    height: 450px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.751);
+    opacity: 0;
+    transform: scale(0.5);
+    animation: fadeInUp 0.8s forwards;
+    }
+    /* keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+p{   
+    margin: 1rem auto;
+    width: 1000px;
+     font-family: "Noto Sans", sans-serif;
+     font-size: 30px;
+     color: #fff;
+
+}
+.hi{
+    font-size: 3.5rem;
+     color: rgb(15, 235, 255);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  p{
+    font-size: 1.5rem;
+  }
+
+}
+.con{
+  max-width: 760px;
+  width: 98%;
+  height: max-content;
+}
+
+p{
+  max-width: 760px;
+  width: 90%;
+  font-size: 1.5rem;
+  font-weight: 100;
+    padding: 1rem 2rem;
+}
+.hi{
+    font-size: 1.5rem !important;
+    font-weight: bold;
+    display: block;
+}
+</style>
+<body>
+    <header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">{ / }</span> 77cod_ing
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="Terms & Conditions.html">Terms & Conditions</a>
+    </nav>
+  </header>
+
+
+       <h1>About</h1>
+       <div class="con">
+       <p>
+        <span class="hi" >Welcome to my website!</span> <br>
+
+
+                 I created this platform as a space for learning and sharing, where I share everything 
+                 I learn in the field of web design and development . Here, you will find ready-to-use 
+                 and free codes that you can apply directly to your own projects . This website is for 
+                 everyone—whether you are a beginner looking for a starting point or someone experienced
+                 who wants to add new tools to their projects . My mission is to keep improving myself
+                 day by day to become the best web designer I can be , and I hope this site will be a
+                 valuable resource for anyone who visits it.
+       </p>
+        </div>
+
+</body>
+</html>

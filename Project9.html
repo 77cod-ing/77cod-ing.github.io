@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="Picture1.png">
+  <title>Code Build an Interactive Download Button — HTML/CSS</title>
+    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <style>
+    body {
+      background: linear-gradient(to right, #2c0e43 10%, #581c87);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      padding: 0 2rem;
+      background-color: #0d1325;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      color: #a855f7;
+      font-size: 26px;
+      margin-right: 8px;
+      letter-spacing: 2.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #a855f7;
+      transform: scale(1.2);
+    }
+    /*linke*/
+    .con1 {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: auto 0;
+      height: 50vh;
+    }
+    .countdown {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+
+    .link-box {
+      display: none;
+      padding: 20px 40px;
+      background: #1e2a47;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+      transition: 0.3s;
+    }
+
+    .link-box a {
+      text-decoration: none;
+      color: #00ffcc;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .link-box:hover {
+      background: #26385c;
+      transform: scale(1.05);
+    }
+    /**ret**/
+    .Ret{
+      margin: 5px 0 0 3rem;
+      width: max-content;
+    }
+    .Ret a {
+      font-size: 2rem;
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .Ret a span{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+    }
+    .Ret a:hover {
+  color: #00e1ff;
+}
+    .Ret a:hover span {
+  border-color: #00e1ff;
+}
+    /**img**/
+    .img{
+      display: flex;
+      justify-content: center;
+      margin: 2rem auto;
+    }
+    .img img{
+      border-radius: 8px;
+      max-width: 100vw;
+    width: 70vw;
+    height: 65vh;
+    }
+    /**par**/
+    .par{
+       font-family: Arial, sans-serif;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #ffffff;
+    }
+    h1, h2, h3 {
+      color: #00c8ff;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 35px;
+      font-size: 1.6rem;
+    }
+    h3 {
+      margin-top: 25px;
+      font-size: 1.3rem;
+    }
+    p {
+      margin-bottom: 18px;
+    }
+    ul {
+      margin: 15px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .highlight {
+      background: #000000;
+      padding: 8px 12px;
+      border-left: 4px solid #0073e6;
+      margin: 20px 0;
+    }
+    /**respon**/
+    @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .img img{
+    max-width: 100vw;
+    width: 90vw;
+    }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">{ / }</span> 77cod_ing
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="Terms & Conditions.html">Terms & Conditions</a>
+    </nav>
+  </header>
+  <div class="Ret">
+    <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
+  </div>
+  <div class="img">
+    <img src="image copy 22.png" alt="subscribe.box">
+  </div>
+  <div class="par">
+  <span>
+<h1>Build an Interactive Download Button — HTML/CSS</h1>
+<p>
+  Buttons with interactive animations improve user experience and make websites feel dynamic. 
+  In this tutorial, you’ll learn how to create a <strong>download button</strong> 
+  that transforms into an "Open" button with animations using only HTML and CSS. 
+  This button features pulsing effects, rotating icons, and text transitions.
+</p>
+
+<div class="highlight">
+  <p><strong>Quick Summary:</strong> Set up an HTML structure with a checkbox input, 
+  style the button container and circle with CSS, 
+  and add keyframe animations for pulses, rotation, and text transitions.</p>
+</div>
+
+<h2>How the Interactive Download Button Works</h2>
+<p>
+  The button uses a hidden checkbox to detect clicks. When checked:
+  <ul>
+    <li>The circle pulses with a <code>pulse</code> animation.</li>
+    <li>An icon rotates and disappears with the <code>rotate</code> animation.</li>
+    <li>The "Download" text fades out, and "Open" text fades in.</li>
+    <li>Additional effects like scaling and shadow enhance the visual feedback.</li>
+  </ul>
+</p>
+
+<h2>Why Use This Type of Button?</h2>
+<ul>
+  <li><strong>Improved User Experience:</strong> Users see a clear visual action.</li>
+  <li><strong>Modern Design:</strong> Adds professional-looking UI interactions.</li>
+  <li><strong>Pure CSS:</strong> No JavaScript is required for animations.</li>
+  <li><strong>Customizable:</strong> Easily change colors, icon, text, or timing.</li>
+</ul>
+
+<h2>Steps to Build the Interactive Button</h2>
+
+<h3>1. Structure the HTML</h3>
+<p>
+  Use a <code>label</code> with a hidden checkbox input, a circle for the icon, 
+  and two text spans for "Download" and "Open".
+</p>
+<div class="img"><img src="image copy 25.png" alt="HTML structure for interactive download button"></div>
+
+<h3>2. Add CSS Styling</h3>
+<p>
+  Style the button container with borders, rounded corners, and positioning. 
+  Use <code>::before</code> and <code>::after</code> pseudo-elements 
+  for animations like pulse, rotation, and background expansion.
+</p>
+<div class="img"><img src="image copy 27.png" alt="CSS styling for interactive button"></div>
+
+<h3>3. Add Keyframe Animations</h3>
+<p>
+  Create keyframes for pulse, installing, rotation, and text transitions. 
+  Adjust timing to make the effect smooth and realistic.
+</p>
+<div class="img"><img src="image copy 26.png" alt="CSS keyframe animations for download button"></div>
+
+<h3>4. Preview the Final Button</h3>
+<p>
+  Once complete, clicking the button triggers animations:
+  <ul>
+    <li>Pulsing circle effect.</li>
+    <li>Rotating arrow icon disappearing.</li>
+    <li>Text changes from "Download" to "Open".</li>
+    <li>Smooth scaling and shadow effects enhance feedback.</li>
+  </ul>
+</p>
+<div class="img"><img src="image copy 22.png" alt="Final interactive download button preview"></div>
+
+<h2>Best Practices for Button Design</h2>
+<ul>
+  <li><strong>Keep Text Short:</strong> Ensure messages like "Download" or "Open" are readable.</li>
+  <li><strong>Maintain Contrast:</strong> Text and icon colors should be visible against the background.</li>
+  <li><strong>Responsive Layout:</strong> Button should adapt well to different screen sizes.</li>
+  <li><strong>Smooth Animations:</strong> Use easing for natural transitions without jarring movements.</li>
+</ul>
+
+<h2>Common Mistakes to Avoid</h2>
+<ul>
+  <li>Overcomplicating animations which distract users.</li>
+  <li>Using too many text labels or confusing messages.</li>
+  <li>Neglecting hover/focus effects for accessibility.</li>
+  <li>Not testing the button on mobile or different browsers.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+  Creating an <strong>interactive download button</strong> with HTML and CSS 
+  is a fun and practical way to enhance your website. 
+  With pulsating circles, rotating icons, and smooth text transitions, 
+  you can deliver clear visual feedback to users and make your UI more engaging.
+</p>
+
+<div class="highlight">
+  <p><strong>SEO Keywords:</strong> HTML CSS button animation, interactive download button, 
+  CSS keyframes animation, pulse effect, rotate icon, text transition, modern UI button</p>
+</div>
+
+
+  <div class="con1">
+    <div class="countdown" id="countdown">
+    <span id="number">10</span> wait...
+  </div>
+
+  <div class="link-box" id="linkBox">
+    <a href="https://gist.github.com/77cod-ing/ca5f90be1678a5ce306071d48f8d407a" target="_blank">Go to code</a>
+  </div>
+  </div>
+
+  <script>
+    let counter = 10;
+    let timer = null;
+    const countdownEl = document.getElementById("countdown");
+    const numberEl = document.getElementById("number");
+    const linkBox = document.getElementById("linkBox");
+
+    function startCountdown() {
+      if (timer) return;
+      timer = setInterval(() => {
+        counter--;
+        numberEl.textContent = counter;
+
+        if (counter === 0) {
+          clearInterval(timer);
+          timer = null;
+          countdownEl.style.display = "none"; 
+          linkBox.style.display = "block";
+        }
+      }, 1000);
+    }
+
+    function stopCountdown() {
+      clearInterval(timer);
+      timer = null;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startCountdown();
+        } else {
+          stopCountdown();
+        }
+      });
+    }, { threshold: 1.0 });
+
+    observer.observe(countdownEl);
+  </script>
+</body>
+</html>
