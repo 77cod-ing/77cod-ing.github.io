@@ -560,10 +560,10 @@ body {
 
 @media (max-width: 1300px){
   .main{
-    
-    display: none;
+    width: 250PX;
   }
 }
+
 
 
 
