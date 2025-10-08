@@ -558,14 +558,15 @@ body {
   }
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1300px){
   .main{
     position: relative;
     overflow: hidden;
-    max-width: 19rem;
+    max-width: 17rem;
     width: 100%;
   }
 }
+
 
 
 
