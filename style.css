@@ -1,7 +1,4 @@
 
-*{
-        overflow-x: hidden;
-}
 body {
       margin: 0;
       padding: 0;
@@ -560,4 +557,14 @@ body {
     display: none;
   }
 }
+
+@media (max-width: 1008px){
+  .main{
+    position: relative;
+    overflow: hidden;
+    max-width: 19rem;
+    width: 100%;
+  }
+}
+
 
