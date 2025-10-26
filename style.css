@@ -9,8 +9,14 @@ body {
       overflow-x: hidden;
       font-family: Arial, sans-serif;
       background: linear-gradient(to right,#2c0e43 10%,#581c87  ) ;
-      overflow: hidden !important;
     }
+.adsbygoogle {
+  display: block;
+  margin: 10px auto;
+  overflow: hidden !important;
+  max-width: 100%;
+}
+
 
     /* Navbar container */
     .navbar {
@@ -570,6 +576,7 @@ body {
     margin: 50px;
   }
 }
+
 
 
 
