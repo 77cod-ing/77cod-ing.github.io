@@ -9,7 +9,7 @@ body {
       overflow-x: hidden;
       font-family: Arial, sans-serif;
       background: linear-gradient(to right,#2c0e43 10%,#581c87  ) ;
-      overflow: hidden;
+      overflow: hidden !important;
     }
 
     /* Navbar container */
@@ -570,6 +570,7 @@ body {
     margin: 50px;
   }
 }
+
 
 
 
