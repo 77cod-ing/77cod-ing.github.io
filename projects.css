@@ -130,9 +130,6 @@ h1 span {
 
 
 /* projects*/
-.space{
-    min-height:55vh;
-}
 
 .con1{
     font-family: Inter, "Segoe UI", Tahoma, sans-serif;
@@ -283,8 +280,6 @@ h1 span {
     direction:ltr;
 }
 .con5{
-    min-height:55vh;
-    margin-top: 20.5rem;
     font-family: Inter, "Segoe UI", Tahoma, sans-serif;
     display:flex;
     align-items:flex-start;
@@ -293,6 +288,7 @@ h1 span {
     background:#123558;
     padding:60px;
     direction:ltr;
+    margin-top: 20.5rem;
 }
       /**respon**/
     @media (max-width: 768px) {
@@ -358,4 +354,3 @@ h1 span {
       font-size: 3.5rem;
     }
   }
-
