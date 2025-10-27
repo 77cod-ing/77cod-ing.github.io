@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="Picture1.png">
+  <title>Create a Skewed Navigation Menu — HTML/CSS</title>
+  <meta name="description" content="Skewed navigation menu, interactive menu design, CSS 3D effects, hover animation, responsive web design, modern UI navigation.">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+   <style>
+    body {
+      background: linear-gradient(to right, #2c0e43 10%, #581c87);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      padding: 0 2rem;
+      background-color: #0d1325;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      color: #a855f7;
+      font-size: 26px;
+      margin-right: 8px;
+      letter-spacing: 2.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #a855f7;
+      transform: scale(1.2);
+    }
+    /*linke*/
+    .con1 {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: auto 0;
+      height: 50vh;
+    }
+    .countdown {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+
+    .link-box {
+      display: none;
+      padding: 20px 40px;
+      background: #1e2a47;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+      transition: 0.3s;
+    }
+
+    .link-box a {
+      text-decoration: none;
+      color: #00ffcc;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .link-box:hover {
+      background: #26385c;
+      transform: scale(1.05);
+    }
+    /**ret**/
+    .Ret{
+      margin: 5px 0 0 3rem;
+      width: max-content;
+    }
+    .Ret a {
+      font-size: 2rem;
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .Ret a span{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+    }
+    .Ret a:hover {
+  color: #00e1ff;
+}
+    .Ret a:hover span {
+  border-color: #00e1ff;
+}
+    /**img**/
+    .img{
+      display: flex;
+      justify-content: center;
+      margin: 2rem auto;
+    }
+    .img img{
+      border-radius: 8px;
+      max-width: 100vw;
+    width: 70vw;
+    height: 65vh;
+    }
+    /**par**/
+    .par{
+       font-family: Arial, sans-serif;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #ffffff;
+    }
+    h1, h2, h3 {
+      color: #00c8ff;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 35px;
+      font-size: 1.6rem;
+    }
+    h3 {
+      margin-top: 25px;
+      font-size: 1.3rem;
+    }
+    p {
+      margin-bottom: 18px;
+    }
+    ul {
+      margin: 15px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .highlight {
+      background: #000000;
+      padding: 8px 12px;
+      border-left: 4px solid #0073e6;
+      margin: 20px 0;
+    }
+    /**respon**/
+    @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .img img{
+    max-width: 100vw;
+    width: 90vw;
+    }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">{ / }</span> 77cod_ing
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="Terms & Conditions.html">Terms & Conditions</a>
+    </nav>
+  </header>
+
+<div class="Ret">
+  <a href="projects.html#menu"><pre><span>&lt;</span> Return</pre></a>
+</div>
+
+<div class="img">
+  <img src="image copy 65.png" alt="Skewed Menu Example">
+</div>
+
+<div class="par">
+  <span>
+<h1>Build a Stylish Animated Input Field — HTML/CSS</h1>
+<p>
+  Input fields are essential for user interaction on websites. 
+  In this guide, you’ll learn how to create a <strong>modern animated input field</strong> 
+  using HTML and CSS. This design features smooth underline animations, 
+  floating labels, and responsive styling for an elegant user experience.
+</p>
+
+<div class="highlight">
+  <p><strong>Quick Summary:</strong> Build a text input field with HTML, 
+  style it with CSS, and add animations for floating labels and underlines.</p>
+</div>
+
+<h2>What Is an Animated Input Field?</h2>
+<p>
+  An animated input field is a form element that responds visually 
+  when users interact with it. Features like floating labels, color changes, 
+  and sliding lines create a more engaging and intuitive experience for users.
+</p>
+
+<h2>Why Use Animated Input Fields?</h2>
+<ul>
+  <li><strong>Visual Feedback:</strong> Provides clear indication of focus and interaction.</li>
+  <li><strong>Better UX:</strong> Improves user experience and form completion rates.</li>
+  <li><strong>Modern Design:</strong> Makes your forms look sleek and professional.</li>
+  <li><strong>No JavaScript Needed:</strong> Built entirely with HTML and CSS.</li>
+</ul>
+
+<h2>Steps to Build the Animated Input Field</h2>
+
+<h3>1. Structure the Input Field</h3>
+<p>
+  Start with a simple HTML input element wrapped in a container div. 
+  Add a label and decorative divs for top and bottom lines that animate on focus.
+</p>
+<div class="img"><img src="image copy 66.png" alt="HTML structure for animated input field"></div>
+
+<h3>2. Add CSS Styling</h3>
+<p>
+  Style the input with padding, border, and transparent background. 
+  Position the label absolutely to create a floating effect. 
+  Use pseudo-elements or extra divs for underline animations when the input is focused.
+</p>
+<div class="img"><img src="image copy 67.png" alt="CSS styling for animated input field"></div>
+
+<h3>3. Preview the Final Effect</h3>
+<p>
+  When the user focuses on the input, the label scales and moves upward, 
+  the top and bottom lines animate smoothly, and the border highlights — 
+  resulting in a visually appealing and interactive input field.
+</p>
+<div class="img"><img src="image copy 65.png" alt="Final preview of animated input field"></div>
+
+<h2>Best Practices for Input Field Design</h2>
+<ul>
+  <li><strong>Use Clear Labels:</strong> Make sure the label describes the input.</li>
+  <li><strong>Maintain Accessibility:</strong> Ensure text is readable and fields are focusable.</li>
+  <li><strong>Responsive Design:</strong> Input should resize gracefully on mobile screens.</li>
+  <li><strong>Smooth Animations:</strong> Use transitions to create subtle and natural movement.</li>
+</ul>
+
+<h2>Common Mistakes to Avoid</h2>
+<ul>
+  <li>Overcomplicating animations that distract users.</li>
+  <li>Low-contrast labels that reduce readability.</li>
+  <li>Neglecting focus and hover states for accessibility.</li>
+  <li>Making the input too narrow or too tall for typical usage.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+  Creating an <strong>animated input field</strong> with HTML and CSS 
+  is a simple yet effective way to improve your website forms. 
+  With floating labels, animated underlines, and responsive design, 
+  you can make your forms modern, functional, and visually appealing.
+</p>
+
+<div class="highlight">
+  <p><strong>SEO Keywords:</strong> HTML CSS input animation, animated input field, 
+  floating label CSS, underline animation input, responsive form field, modern UI input</p>
+</div>
+</span>
+</div>
+
+
+
+<div class="con1">
+  <div class="countdown" id="countdown">
+    <span id="number">10</span> wait...
+  </div>
+
+  <div class="link-box" id="linkBox">
+    <a href="https://gist.github.com/77cod-ing/a1a1e94ca403e53e0dece88d9c659fd0" target="_blank">Go to code</a>
+  </div>
+</div>
+
+<script>
+  let counter = 10;
+  let timer = null;
+  const countdownEl = document.getElementById("countdown");
+  const numberEl = document.getElementById("number");
+  const linkBox = document.getElementById("linkBox");
+
+  function startCountdown() {
+    if (timer) return;
+    timer = setInterval(() => {
+      counter--;
+      numberEl.textContent = counter;
+
+      if (counter === 0) {
+        clearInterval(timer);
+        timer = null;
+        countdownEl.style.display = "none"; 
+        linkBox.style.display = "block";
+      }
+    }, 1000);
+  }
+
+  function stopCountdown() {
+    clearInterval(timer);
+    timer = null;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startCountdown();
+      } else {
+        stopCountdown();
+      }
+    });
+  }, { threshold: 1.0 });
+
+  observer.observe(countdownEl);
+</script>
+</body>
+</html>
+
+

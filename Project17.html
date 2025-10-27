@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="Picture1.png">
+  <title>Create a Skewed Navigation Menu — HTML/CSS</title>
+  <meta name="description" content="Skewed navigation menu, interactive menu design, CSS 3D effects, hover animation, responsive web design, modern UI navigation.">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+   <style>
+    body {
+      background: linear-gradient(to right, #2c0e43 10%, #581c87);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      padding: 0 2rem;
+      background-color: #0d1325;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      color: #a855f7;
+      font-size: 26px;
+      margin-right: 8px;
+      letter-spacing: 2.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #a855f7;
+      transform: scale(1.2);
+    }
+    /*linke*/
+    .con1 {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: auto 0;
+      height: 50vh;
+    }
+    .countdown {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+
+    .link-box {
+      display: none;
+      padding: 20px 40px;
+      background: #1e2a47;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+      transition: 0.3s;
+    }
+
+    .link-box a {
+      text-decoration: none;
+      color: #00ffcc;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .link-box:hover {
+      background: #26385c;
+      transform: scale(1.05);
+    }
+    /**ret**/
+    .Ret{
+      margin: 5px 0 0 3rem;
+      width: max-content;
+    }
+    .Ret a {
+      font-size: 2rem;
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .Ret a span{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+    }
+    .Ret a:hover {
+  color: #00e1ff;
+}
+    .Ret a:hover span {
+  border-color: #00e1ff;
+}
+    /**img**/
+    .img{
+      display: flex;
+      justify-content: center;
+      margin: 2rem auto;
+    }
+    .img img{
+      border-radius: 8px;
+      max-width: 100vw;
+    width: 70vw;
+    height: 65vh;
+    }
+    /**par**/
+    .par{
+       font-family: Arial, sans-serif;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #ffffff;
+    }
+    h1, h2, h3 {
+      color: #00c8ff;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 35px;
+      font-size: 1.6rem;
+    }
+    h3 {
+      margin-top: 25px;
+      font-size: 1.3rem;
+    }
+    p {
+      margin-bottom: 18px;
+    }
+    ul {
+      margin: 15px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .highlight {
+      background: #000000;
+      padding: 8px 12px;
+      border-left: 4px solid #0073e6;
+      margin: 20px 0;
+    }
+    /**respon**/
+    @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .img img{
+    max-width: 100vw;
+    width: 90vw;
+    }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">{ / }</span> 77cod_ing
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="Terms & Conditions.html">Terms & Conditions</a>
+    </nav>
+  </header>
+
+<div class="Ret">
+  <a href="projects.html#menu"><pre><span>&lt;</span> Return</pre></a>
+</div>
+
+<div class="img">
+  <img src="image copy 50.png" alt="Skewed Menu Example">
+</div>
+
+<div class="par">
+<h1>Create a Skewed Navigation Menu — HTML/CSS</h1>
+<p>
+  Skewed navigation menus add a dynamic, modern look to your website. Using <strong>CSS transforms</strong>, you can create menus with angled backgrounds and hover effects that enhance user interaction.
+</p>
+
+<div class="highlight">
+  <p><strong>Quick Summary:</strong> Each menu item is styled with a skew transform to tilt the background. Hovering on an item slightly animates it back to neutral for a 3D interactive feel. This effect is achieved with only HTML and CSS.</p>
+</div>
+
+<h2>What Is a Skewed Navigation Menu?</h2>
+<p>
+  A skewed menu is a navigation bar where the background of each menu item is angled, creating a sense of depth. This modern design adds visual interest compared to flat horizontal menus.
+</p>
+
+<h2>Why Use Skewed Menus?</h2>
+<ul>
+  <li><strong>Stylish Design:</strong> Angled backgrounds provide a modern, eye-catching effect.</li>
+  <li><strong>Interactive Feedback:</strong> Hover animations make navigation feel dynamic.</li>
+  <li><strong>Pure CSS:</strong> No JavaScript required for animation.</li>
+  <li><strong>Customizable:</strong> Skew angles, colors, and hover effects are fully adjustable.</li>
+</ul>
+
+<h2>How It Works</h2>
+<p>
+  The menu items use <code>transform: skew()</code> to angle the background. On hover, a transition resets the skew slightly or changes the background color for a subtle 3D effect. Additional <code>box-shadow</code> can enhance depth perception.
+</p>
+
+<div class="img"><img src="image copy 51.png" alt="CSS skewed menu styling"></div>
+
+<h3>1. Set Up the HTML</h3>
+<p>
+  Each menu link is wrapped in a container div with a class like <code>.menu</code>. This container holds the anchor element that will be skewed.
+</p>
+
+<h3>2. Add CSS Styling</h3>
+<p>
+  Use <code>transform: skew(0deg, 10deg);</code> to tilt the menu container. Add <code>transition</code> for smooth hover animation. Customize colors, padding, and border-radius to your design needs.
+</p>
+
+<h3>3. Enhance Interactivity</h3>
+<p>
+  On <code>:hover</code>, reset the skew to <code>0deg</code> or adjust shadow for a subtle 3D “lift” effect. Combine with <code>box-shadow</code> to enhance depth.
+</p>
+
+<h2>Tips for Better Results</h2>
+<ul>
+  <li><strong>Angle Choice:</strong> Keep skew angles moderate to avoid readability issues.</li>
+  <li><strong>Hover Feedback:</strong> Slight movements are better than drastic changes.</li>
+  <li><strong>Consistent Design:</strong> Use the same skew angle for all menu items.</li>
+  <li><strong>Responsive:</strong> Test on smaller screens to maintain alignment and readability.</li>
+</ul>
+
+<h2>Common Mistakes to Avoid</h2>
+<ul>
+  <li>Over-skewing menu items — text may become hard to read.</li>
+  <li>Neglecting transitions — items jump abruptly without smooth animation.</li>
+  <li>Using incompatible colors — skew effect looks best with contrast between text and background.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+  Skewed navigation menus provide a modern, stylish approach to website design. Using only HTML and CSS, you can create interactive menus with tilt and hover effects that improve user experience and visual appeal.
+</p>
+
+<div class="highlight">
+  <p><strong>SEO Keywords:</strong> skewed menu, CSS skew transform, 3D navigation menu, hover animation, HTML CSS menu, modern navigation bar</p>
+</div>
+
+<div class="con1">
+  <div class="countdown" id="countdown">
+    <span id="number">10</span> wait...
+  </div>
+
+  <div class="link-box" id="linkBox">
+    <a href="https://gist.github.com/77cod-ing/8866c175d96fcd5abc60e5956cb1a8c3" target="_blank">Go to code</a>
+  </div>
+</div>
+</div>
+
+<script>
+  let counter = 10;
+  let timer = null;
+  const countdownEl = document.getElementById("countdown");
+  const numberEl = document.getElementById("number");
+  const linkBox = document.getElementById("linkBox");
+
+  function startCountdown() {
+    if (timer) return;
+    timer = setInterval(() => {
+      counter--;
+      numberEl.textContent = counter;
+
+      if (counter === 0) {
+        clearInterval(timer);
+        timer = null;
+        countdownEl.style.display = "none"; 
+        linkBox.style.display = "block";
+      }
+    }, 1000);
+  }
+
+  function stopCountdown() {
+    clearInterval(timer);
+    timer = null;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startCountdown();
+      } else {
+        stopCountdown();
+      }
+    });
+  }, { threshold: 1.0 });
+
+  observer.observe(countdownEl);
+</script>
+</body>
+</html>
