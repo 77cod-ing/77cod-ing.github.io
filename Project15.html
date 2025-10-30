@@ -11,6 +11,12 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
      crossorigin="anonymous"></script>
   <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
     body {
       background: linear-gradient(to right, #2c0e43 10%, #581c87);
       font-family: Arial, sans-serif;
@@ -196,6 +202,113 @@
     width: 90vw;
     }
   }
+        /**respon1**/
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hamburger .scrolled {
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+    .hamburger span {
+      width: 28px;
+      height: 3px;
+      background: white;
+      transition: all 0.3s ease;
+    }
+
+    /* ====== القائمة المنبثقة ====== */
+    .mobile-menu {
+      position: fixed;
+      top:0;
+      left: -100%;
+      width: 100%;
+      height: 100vh;
+      padding-top: 0.5rem ;
+      backdrop-filter: blur(10px); 
+      -webkit-backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 35px;
+      transition: left 0.5s ease;
+      z-index: 999;
+    }
+
+    .mobile-menu.active {
+      left: 0;
+    }
+
+    .mobile-menu a {
+      color: white;
+      font-size: 22px;
+      width: 100%;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      border-bottom: 0.5px solid #fff;
+      transition: color 0.3s;
+    }
+
+    .mobile-menu a:hover {
+      color: #ffffff;
+      background: rgba(104, 104, 104, 0.508);
+      backdrop-filter: bulur(20px);
+    }
+
+    /* ====== زر الإغلاق (X) ====== */
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #fff;
+      background: rgb(88, 88, 88);
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
+    .close-btn:hover {
+      transform: rotate(90deg);
+      color: #00e1ff;
+    }
+
+    /* ====== استجابة الهاتف ====== */
+    @media (max-width: 910px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hamburger.scrolled {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      background: rgb(65, 65, 65);
+}
+    }
   </style>
 </head>
 <body>
@@ -212,6 +325,21 @@
       <a href="Terms & Conditions.html">Terms & Conditions</a>
     </nav>
   </header>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <a href="index.html"style="border-top: 2px solid #fff;height: 5rem;">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="Terms & Conditions.html" style="border-bottom: 2px solid #fff;">Terms & Conditions</a>
+  </div>
   <div class="Ret">
     <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
   </div>
@@ -353,7 +481,31 @@
     }, { threshold: 1.0 });
 
     observer.observe(countdownEl);
+    /**hamburger**/
+
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeBtn = document.getElementById('closeBtn');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+    });
+    
+
+    window.addEventListener("scroll", function() {
+  const hamburger = document.querySelector(".hamburger");
+  if (window.scrollY > 50) {
+    hamburger.classList.add("scrolled");
+  } else {
+    hamburger.classList.remove("scrolled");
+  }
+});
   </script>
 </body>
 
 </html>
+
