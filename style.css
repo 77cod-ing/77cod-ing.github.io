@@ -511,13 +511,7 @@ body {
   }
 }
 
-    /*  768px */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
+
 
   .navbar .logo {
     margin-bottom: 10px;
@@ -684,6 +678,7 @@ body {
       background: rgb(65, 65, 65);
 }
     }
+
 
 
 
