@@ -288,8 +288,22 @@ h1 span {
     background:#123558;
     padding:60px;
     direction:ltr;
-    margin-top: 20.5rem;
 }
+.con6{
+    font-family: Inter, "Segoe UI", Tahoma, sans-serif;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    min-height:10vh;
+    background:#123558;
+    padding:60px;
+    direction:ltr; 
+    margin-top: 20.5rem;
+  }
+  .con6 .card-link{
+    width: 30vw;
+    margin:0 auto;
+  }
       /**respon**/
     @media (max-width: 768px) {
   .navbar {
@@ -353,4 +367,5 @@ h1 span {
     h1{
       font-size: 3.5rem;
     }
+
   }
