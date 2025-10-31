@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="Picture1.png">
+  <title>Create a Skewed Navigation Menu — HTML/CSS</title>
+  <meta name="description" content="Skewed navigation menu, interactive menu design, CSS 3D effects, hover animation, responsive web design, modern UI navigation.">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+   <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+    body {
+      background: linear-gradient(to right, #2c0e43 10%, #581c87);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      padding: 0 2rem;
+      background-color: #0d1325;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      color: #a855f7;
+      font-size: 26px;
+      margin-right: 8px;
+      letter-spacing: 2.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #a855f7;
+      transform: scale(1.2);
+    }
+    /*linke*/
+    .con1 {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: auto 0;
+      height: 50vh;
+    }
+    .countdown {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+
+    .link-box {
+      display: none;
+      padding: 20px 40px;
+      background: #1e2a47;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+      transition: 0.3s;
+    }
+
+    .link-box a {
+      text-decoration: none;
+      color: #00ffcc;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .link-box:hover {
+      background: #26385c;
+      transform: scale(1.05);
+    }
+    /**ret**/
+    .Ret{
+      margin: 5px 0 0 3rem;
+      width: max-content;
+    }
+    .Ret a {
+      font-size: 2rem;
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .Ret a span{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+    }
+    .Ret a:hover {
+  color: #00e1ff;
+}
+    .Ret a:hover span {
+  border-color: #00e1ff;
+}
+    /**img**/
+    .img{
+      display: flex;
+      justify-content: center;
+      margin: 2rem auto;
+    }
+    .img img{
+      border-radius: 8px;
+      max-width: 100vw;
+    width: 70vw;
+    height: 65vh;
+    }
+    /**par**/
+    .par{
+       font-family: Arial, sans-serif;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #ffffff;
+    }
+    h1, h2, h3 {
+      color: #00c8ff;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 35px;
+      font-size: 1.6rem;
+    }
+    h3 {
+      margin-top: 25px;
+      font-size: 1.3rem;
+    }
+    p {
+      margin-bottom: 18px;
+    }
+    ul {
+      margin: 15px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .highlight {
+      background: #000000;
+      padding: 8px 12px;
+      border-left: 4px solid #0073e6;
+      margin: 20px 0;
+    }
+
+    /**respon1**/
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hamburger .scrolled {
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+    .hamburger span {
+      width: 28px;
+      height: 3px;
+      background: white;
+      transition: all 0.3s ease;
+    }
+
+    /* ====== القائمة المنبثقة ====== */
+    .mobile-menu {
+      position: fixed;
+      top:0;
+      left: -100%;
+      width: 100%;
+      height: 100vh;
+      padding-top: 0.5rem ;
+      background: rgb(53, 53, 53);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 35px;
+      transition: left 0.5s ease;
+      z-index: 999;
+    }
+
+    .mobile-menu.active {
+      left: 0;
+    }
+
+    .mobile-menu a {
+      color: white;
+      font-size: 22px;
+      width: 100%;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      border-bottom: 0.5px solid #fff;
+      transition: color 0.3s;
+    }
+
+    .mobile-menu a:hover {
+      color: #ffffff;
+      background: rgba(104, 104, 104, 0.508);
+      backdrop-filter: bulur(20px);
+    }
+
+    /* ====== زر الإغلاق (X) ====== */
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #fff;
+      background: rgb(88, 88, 88);
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
+    .close-btn:hover {
+      transform: rotate(90deg);
+      color: #00e1ff;
+    }
+
+    /* ====== استجابة الهاتف ====== */
+    @media (max-width: 910px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hamburger.scrolled {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      background: rgb(65, 65, 65);
+}
+    }
+    /**respon**/
+    @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .img img{
+    max-width: 100vw;
+    width: 90vw;
+    }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">{ / }</span> 77cod_ing
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="Terms & Conditions.html">Terms & Conditions</a>
+    </nav>
+  </header>
+
+  <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <a href="index.html"style="border-top: 2px solid #fff;height: 5rem;">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="Terms & Conditions.html" style="border-bottom: 2px solid #fff;">Terms & Conditions</a>
+  </div>
+
+<div class="Ret">
+  <a href="projects.html#menu"><pre><span>&lt;</span> Return</pre></a>
+</div>
+
+<div class="img">
+  <img src="image copy 71.png" alt="Skewed Menu Example">
+</div>
+
+<div class="par">
+  <span>
+
+    <h1>Create an Animated Navigation Bar with Floating Indicator — HTML/CSS/JS</h1>
+
+    <p>
+      Navigation bars are essential for any modern website — they guide users and define your site’s personality.
+      In this tutorial, you’ll learn how to build a
+      <strong>floating animated navigation bar</strong> using only HTML, CSS, and a touch of JavaScript.
+      This design features smooth transitions, a glowing circular indicator, and icons that lift gracefully when active.
+    </p>
+
+    <div class="highlight">
+      <p>
+        <strong>Quick Summary:</strong>
+        Build a responsive navigation bar using HTML, style it with CSS for a futuristic floating effect,
+        and use minimal JavaScript to make icons animate dynamically on click.
+      </p>
+    </div>
+
+    <h2>What Is an Animated Navigation Bar?</h2>
+
+    <p>
+      An animated navigation bar adds motion and interaction to the user experience.
+      Instead of static icons, this version makes each icon rise and glow when selected.
+      A circular indicator moves smoothly beneath the active icon, giving a sense of movement and energy —
+      ideal for modern websites, portfolios, or apps with a clean UI aesthetic.
+    </p>
+
+    <h2>Why Use This Navigation Design?</h2>
+
+    <ul>
+      <li><strong>Interactive Feel:</strong> Each icon reacts visually, creating satisfying user feedback.</li>
+      <li><strong>Clean & Minimal:</strong> Uses subtle animations and colors to avoid clutter.</li>
+      <li><strong>Lightweight:</strong> Requires no external frameworks or libraries beyond Boxicons.</li>
+      <li><strong>Fully Responsive:</strong> Works across mobile and desktop screens effortlessly.</li>
+    </ul>
+
+    <h2>Steps to Build the Navigation Bar</h2>
+
+    <h3>1. Structure with HTML</h3>
+
+    <p>
+      Start by creating a <code>&lt;div&gt;</code> with the class <code>navigation</code>.
+      Inside it, include an unordered list <code>&lt;ul&gt;</code> containing five list items — one for each navigation link.
+      Each item includes an icon (from Boxicons) and a text label.
+    </p>
+
+    <div class="img">
+      <img src="image copy 73.png" alt="HTML structure for animated navigation bar">
+    </div>
+
+    <h3>2. Style and Animate with CSS</h3>
+
+    <p>
+      In CSS, use <strong>flexbox</strong> to align items evenly inside the navigation bar.
+      Each icon is centered, and the <code>.indicator</code> and <code>.indicator1</code> elements create the moving circular highlight effect.
+      The key to the smooth motion lies in the <code>transition: 0.5s;</code> property, which animates the indicator’s position when a different item is activated.
+    </p>
+
+    <p>
+      Colors are managed using <code>:root</code> variables for easy customization.
+      For instance, <code>--crl</code> defines the background color and <code>--form</code> controls the accent color of the indicator.
+    </p>
+
+    <div class="img">
+      <img src="image copy 72.png" alt="CSS styling for navigation bar">
+    </div>
+
+    <h3>3. Add Interactivity with JavaScript</h3>
+
+    <p>
+      A few lines of JavaScript handle the “active” state logic.
+      When a user clicks on an icon, the script removes the <code>active</code> class from all items and adds it to the clicked one.
+      This triggers the CSS transitions and moves the indicator to the new position.
+    </p>
+
+    <div class="img">
+      <img src="image copy 74.png" alt="JavaScript active class handling for navigation">
+    </div>
+
+    <h3>4. See the Final Result</h3>
+
+    <p>
+      The final result is a sleek navigation bar where icons lift smoothly on click and the glowing circle slides beneath the active item.
+      This gives the interface a floating, high-tech aesthetic perfect for modern websites or app dashboards.
+    </p>
+
+    <div class="img">
+      <img src="image copy 71.png" alt="Final animated navigation bar preview">
+    </div>
+
+    <h2>Best Practices for Navigation Bars</h2>
+
+    <ul>
+      <li><strong>Keep It Simple:</strong> Limit navigation items to the most essential pages.</li>
+      <li><strong>Ensure Readability:</strong> Use contrasting colors for icons and backgrounds.</li>
+      <li><strong>Maintain Smooth Transitions:</strong> Use consistent animation speeds for a cohesive look.</li>
+      <li><strong>Optimize for Mobile:</strong> Use flexible units (like %) for widths and padding.</li>
+    </ul>
+
+    <h2>Common Mistakes to Avoid</h2>
+
+    <ul>
+      <li>Overcrowding the bar with too many icons.</li>
+      <li>Using inconsistent icon sizes or styles.</li>
+      <li>Forgetting to include hover/focus accessibility styles.</li>
+      <li>Overusing animations that distract rather than enhance.</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+
+    <p>
+      The <strong>animated floating navigation bar</strong> is an elegant, interactive design
+      that instantly modernizes your website.
+      Built entirely with HTML, CSS, and minimal JavaScript, it’s lightweight, responsive,
+      and visually engaging. Perfect for portfolios, dashboards, or creative web projects —
+      it gives users a polished, immersive navigation experience.
+    </p>
+
+    <div class="highlight">
+      <p>
+        <strong>SEO Keywords:</strong> animated navigation bar, CSS indicator menu, floating nav bar,
+        HTML CSS JavaScript navigation, responsive navbar, modern UI navigation
+      </p>
+    </div>
+
+  </span>
+</div>
+
+
+
+
+<div class="con1">
+  <div class="countdown" id="countdown">
+    <span id="number">10</span> wait...
+  </div>
+
+  <div class="link-box" id="linkBox">
+    <a href="https://gist.github.com/77cod-ing/54f33688ec35390f42da98e2bf0cd7f0" target="_blank">Go to code</a>
+  </div>
+</div>
+
+<script>
+  let counter = 10;
+  let timer = null;
+  const countdownEl = document.getElementById("countdown");
+  const numberEl = document.getElementById("number");
+  const linkBox = document.getElementById("linkBox");
+
+  function startCountdown() {
+    if (timer) return;
+    timer = setInterval(() => {
+      counter--;
+      numberEl.textContent = counter;
+
+      if (counter === 0) {
+        clearInterval(timer);
+        timer = null;
+        countdownEl.style.display = "none"; 
+        linkBox.style.display = "block";
+      }
+    }, 1000);
+  }
+
+  function stopCountdown() {
+    clearInterval(timer);
+    timer = null;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startCountdown();
+      } else {
+        stopCountdown();
+      }
+    });
+  }, { threshold: 1.0 });
+
+  observer.observe(countdownEl);
+
+  /**hamburger**/
+
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeBtn = document.getElementById('closeBtn');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+    });
+    
+
+    window.addEventListener("scroll", function() {
+  const hamburger = document.querySelector(".hamburger");
+  if (window.scrollY > 50) {
+    hamburger.classList.add("scrolled");
+  } else {
+    hamburger.classList.remove("scrolled");
+  }
+});
+
+</script>
+</body>
+</html>
+
+
