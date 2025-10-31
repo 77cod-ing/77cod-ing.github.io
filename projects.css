@@ -303,12 +303,8 @@ h1 span {
     min-height:10vh;
     background:#123558;
     padding:60px;
-    direction:ltr; 
+    direction:ltr;
     margin-top: 20.5rem;
-  }
-  .con6 .card-link{
-    width: 30vw;
-    margin:0 auto;
   }
       /**respon**/
     @media (max-width: 768px) {
@@ -363,6 +359,7 @@ h1 span {
     transition: none;
   }
   }
+
 
 
 
