@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="Picture1.png">
+  <title>Create a Skewed Navigation Menu — HTML/CSS</title>
+  <meta name="description" content="Skewed navigation menu, interactive menu design, CSS 3D effects, hover animation, responsive web design, modern UI navigation.">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+   <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+    body {
+      background: linear-gradient(to right, #2c0e43 10%, #581c87);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      padding: 0 2rem;
+      background-color: #0d1325;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      color: #a855f7;
+      font-size: 26px;
+      margin-right: 8px;
+      letter-spacing: 2.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #a855f7;
+      transform: scale(1.2);
+    }
+    /*linke*/
+    .con1 {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: auto 0;
+      height: 50vh;
+    }
+    .countdown {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+
+    .link-box {
+      display: none;
+      padding: 20px 40px;
+      background: #1e2a47;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+      transition: 0.3s;
+    }
+
+    .link-box a {
+      text-decoration: none;
+      color: #00ffcc;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .link-box:hover {
+      background: #26385c;
+      transform: scale(1.05);
+    }
+    /**ret**/
+    .Ret{
+      margin: 5px 0 0 3rem;
+      width: max-content;
+    }
+    .Ret a {
+      font-size: 2rem;
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .Ret a span{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+    }
+    .Ret a:hover {
+  color: #00e1ff;
+}
+    .Ret a:hover span {
+  border-color: #00e1ff;
+}
+    /**img**/
+    .img{
+      display: flex;
+      justify-content: center;
+      margin: 2rem auto;
+    }
+    .img img{
+      border-radius: 8px;
+      max-width: 100vw;
+    width: 70vw;
+    height: 65vh;
+    }
+    /**par**/
+    .par{
+       font-family: Arial, sans-serif;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #ffffff;
+    }
+    h1, h2, h3 {
+      color: #00c8ff;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 35px;
+      font-size: 1.6rem;
+    }
+    h3 {
+      margin-top: 25px;
+      font-size: 1.3rem;
+    }
+    p {
+      margin-bottom: 18px;
+    }
+    ul {
+      margin: 15px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .highlight {
+      background: #000000;
+      padding: 8px 12px;
+      border-left: 4px solid #0073e6;
+      margin: 20px 0;
+    }
+
+    /**respon1**/
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hamburger .scrolled {
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+    .hamburger span {
+      width: 28px;
+      height: 3px;
+      background: white;
+      transition: all 0.3s ease;
+    }
+
+    /* ====== القائمة المنبثقة ====== */
+    .mobile-menu {
+      position: fixed;
+      top:0;
+      left: -100%;
+      width: 100%;
+      height: 100vh;
+      padding-top: 0.5rem ;
+      background: rgb(53, 53, 53);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 35px;
+      transition: left 0.5s ease;
+      z-index: 999;
+    }
+
+    .mobile-menu.active {
+      left: 0;
+    }
+
+    .mobile-menu a {
+      color: white;
+      font-size: 22px;
+      width: 100%;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      border-bottom: 0.5px solid #fff;
+      transition: color 0.3s;
+    }
+
+    .mobile-menu a:hover {
+      color: #ffffff;
+      background: rgba(104, 104, 104, 0.508);
+      backdrop-filter: bulur(20px);
+    }
+
+    /* ====== زر الإغلاق (X) ====== */
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #fff;
+      background: rgb(88, 88, 88);
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
+    .close-btn:hover {
+      transform: rotate(90deg);
+      color: #00e1ff;
+    }
+
+    /* ====== استجابة الهاتف ====== */
+    @media (max-width: 910px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hamburger.scrolled {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      background: rgb(65, 65, 65);
+}
+    }
+    /**respon**/
+    @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .img img{
+    max-width: 100vw;
+    width: 90vw;
+    }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">{ / }</span> 77cod_ing
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="Terms & Conditions.html">Terms & Conditions</a>
+    </nav>
+  </header>
+
+  <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <a href="index.html"style="border-top: 2px solid #fff;height: 5rem;">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="Terms & Conditions.html" style="border-bottom: 2px solid #fff;">Terms & Conditions</a>
+  </div>
+
+<div class="Ret">
+  <a href="projects.html#menu"><pre><span>&lt;</span> Return</pre></a>
+</div>
+
+<div class="img">
+  <img src="image copy 75.png" alt="Skewed Menu Example">
+</div>
+
+<div class="par">
+  <span>
+
+  <h1>Create a Modern Animated Login & Signup Page — HTML/CSS/JS</h1>
+
+  <p>
+    Login and signup forms are the gateway to most web applications — they shape the user's first impression.
+    In this tutorial, you’ll learn how to build a
+    <strong>modern animated login and signup page</strong> using pure HTML, CSS, and a touch of JavaScript.
+    This design combines smooth transitions, gradient effects, and an interactive toggle that slides beautifully between two forms.
+  </p>
+
+  <div class="highlight">
+    <p>
+      <strong>Quick Summary:</strong>
+      Build a sleek two-in-one authentication interface.
+      Use HTML to structure the forms, CSS for animation and gradient styling,
+      and JavaScript to switch dynamically between login and signup panels.
+    </p>
+  </div>
+
+  <h2>What Is a Modern Login & Signup Page?</h2>
+
+  <p>
+    A modern login page isn’t just a box with input fields — it’s a dynamic, interactive experience.
+    This design features a <strong>two-panel layout</strong>: one for signing in, one for signing up.
+    The toggle animation slides a gradient background from side to side, creating the illusion of flipping panels.
+    Smooth transitions, clean typography, and responsive layout make it both elegant and functional.
+  </p>
+
+  <h2>Why Use This Design?</h2>
+
+  <ul>
+    <li><strong>Dynamic Animation:</strong> The background slides seamlessly between login and signup modes.</li>
+    <li><strong>Gradient Aesthetic:</strong> A two-color gradient adds a fresh and professional look.</li>
+    <li><strong>Interactive Buttons:</strong> Hover effects animate button backgrounds from bottom to top for a stylish glow.</li>
+    <li><strong>Lightweight & Responsive:</strong> Built entirely with HTML, CSS, and minimal JS — no frameworks required.</li>
+  </ul>
+
+  <h2>Steps to Build the Login Page</h2>
+
+  <h3>1. Structure with HTML</h3>
+
+  <p>
+    Start by creating a <code>&lt;div&gt;</code> with the class <code>container</code>.
+    Inside, place two form containers — one for <code>sign-in</code> and another for <code>sign-up</code>.
+    Each form includes input fields for email, password, and (for signup) a name field.
+    A <code>toggle-container</code> holds the animated background and toggle buttons.
+  </p>
+
+  <h3>2. Style and Animate with CSS</h3>
+
+  <p>
+    The magic lies in CSS transitions.
+    Using <strong>flexbox</strong>, elements are perfectly centered on the page.
+    The <code>.toggle</code> background uses a linear gradient moving from <code>#38e8ff</code> to <code>#1d7896</code>,
+    giving a cool blue glow effect.
+    Buttons have a hover animation that fills from bottom to top using <code>background-size</code> transitions.
+  </p>
+
+  <p>
+    The <code>.container.active</code> class triggers a transform effect that shifts panels horizontally,
+    revealing either the sign-in or sign-up form smoothly.
+  </p>
+
+  <h3>3. Add Interactivity with JavaScript</h3>
+
+  <p>
+    The JavaScript is minimal — just two event listeners.
+    Clicking the <code>Sign Up</code> button adds the <code>active</code> class to the container,
+    while clicking <code>Sign In</code> removes it.
+    These class changes trigger the CSS transitions, animating the sliding panels instantly.
+  </p>
+
+  <h3>4. Explore the Final Result</h3>
+
+  <p>
+    The final product is a <strong>modern, responsive login/signup interface</strong> with smooth sliding transitions,
+    gradient highlights, and interactive hover effects.
+    It feels professional, fresh, and perfectly suitable for SaaS platforms, portfolios, or creative apps.
+  </p>
+
+  <h2>Best Practices for Login Page Design</h2>
+
+  <ul>
+    <li><strong>Keep It Clean:</strong> Avoid visual clutter and unnecessary text.</li>
+    <li><strong>Consistent Colors:</strong> Use a unified gradient palette to maintain brand identity.</li>
+    <li><strong>Focus on Usability:</strong> Ensure inputs and buttons are easily tappable on mobile devices.</li>
+    <li><strong>Enhance Accessibility:</strong> Use proper labels and color contrast for readability.</li>
+  </ul>
+
+  <p>
+    With just a few lines of CSS and JavaScript, you can transform a static login page into a
+    <strong>modern interactive experience</strong> that impresses users from the very first click.
+  </p>
+
+  </span>
+</div>
+
+
+
+
+<div class="con1">
+  <div class="countdown" id="countdown">
+    <span id="number">10</span> wait...
+  </div>
+
+  <div class="link-box" id="linkBox">
+    <a href="https://gist.github.com/77cod-ing/3c2ff353a550b6831b1e2510f84dd5db" target="_blank">Go to code</a>
+  </div>
+</div>
+
+<script>
+  let counter = 10;
+  let timer = null;
+  const countdownEl = document.getElementById("countdown");
+  const numberEl = document.getElementById("number");
+  const linkBox = document.getElementById("linkBox");
+
+  function startCountdown() {
+    if (timer) return;
+    timer = setInterval(() => {
+      counter--;
+      numberEl.textContent = counter;
+
+      if (counter === 0) {
+        clearInterval(timer);
+        timer = null;
+        countdownEl.style.display = "none"; 
+        linkBox.style.display = "block";
+      }
+    }, 1000);
+  }
+
+  function stopCountdown() {
+    clearInterval(timer);
+    timer = null;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startCountdown();
+      } else {
+        stopCountdown();
+      }
+    });
+  }, { threshold: 1.0 });
+
+  observer.observe(countdownEl);
+
+  /**hamburger**/
+
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeBtn = document.getElementById('closeBtn');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+    });
+    
+
+    window.addEventListener("scroll", function() {
+  const hamburger = document.querySelector(".hamburger");
+  if (window.scrollY > 50) {
+    hamburger.classList.add("scrolled");
+  } else {
+    hamburger.classList.remove("scrolled");
+  }
+});
+
+</script>
+</body>
+</html>
+
+
