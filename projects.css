@@ -6,12 +6,6 @@
     --transition: 300ms cubic-bezier(.2,.9,.2,1);
     --radius: 12px;
   }
-    *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      overflow-x: hidden;
-    }
 
 body {
       margin: 0;
@@ -303,8 +297,13 @@ h1 span {
     min-height:10vh;
     background:#123558;
     padding:60px;
-    direction:ltr;
+    direction:ltr; 
     margin-top: 20.5rem;
+  }
+  .con6 .card-link{
+    max-width: 1300px;
+    width: 90%;
+    margin:0 auto;
   }
       /**respon**/
     @media (max-width: 768px) {
@@ -359,8 +358,4 @@ h1 span {
     transition: none;
   }
   }
-
-
-
-
 
