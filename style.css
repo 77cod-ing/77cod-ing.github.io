@@ -10,13 +10,6 @@ body {
       font-family: Arial, sans-serif;
       background: linear-gradient(to right,#2c0e43 10%,#581c87  ) ;
     }
-.adsbygoogle {
-  display: block;
-  margin: 10px auto;
-  overflow: hidden !important;
-  max-width: 100%;
-}
-
 
     /* Navbar container */
     .navbar {
@@ -511,7 +504,13 @@ body {
   }
 }
 
-
+    /*  768px */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
 
   .navbar .logo {
     margin-bottom: 10px;
@@ -570,18 +569,3 @@ body {
     margin: 50px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
