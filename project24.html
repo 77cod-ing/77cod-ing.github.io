@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="Picture1.png">
+  <title>Create a Skewed Navigation Menu — HTML/CSS</title>
+  <meta name="description" content="Skewed navigation menu, interactive menu design, CSS 3D effects, hover animation, responsive web design, modern UI navigation.">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+   <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+    body {
+      background: linear-gradient(to right, #2c0e43 10%, #581c87);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      padding: 0 2rem;
+      background-color: #0d1325;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      color: #a855f7;
+      font-size: 26px;
+      margin-right: 8px;
+      letter-spacing: 2.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #a855f7;
+      transform: scale(1.2);
+    }
+    /*linke*/
+    .con1 {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: auto 0;
+      height: 50vh;
+    }
+    .countdown {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+
+    .link-box {
+      display: none;
+      padding: 20px 40px;
+      background: #1e2a47;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+      transition: 0.3s;
+    }
+
+    .link-box a {
+      text-decoration: none;
+      color: #00ffcc;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .link-box:hover {
+      background: #26385c;
+      transform: scale(1.05);
+    }
+    /**ret**/
+    .Ret{
+      margin: 5px 0 0 3rem;
+      width: max-content;
+    }
+    .Ret a {
+      font-size: 2rem;
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .Ret a span{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+    }
+    .Ret a:hover {
+  color: #00e1ff;
+}
+    .Ret a:hover span {
+  border-color: #00e1ff;
+}
+    /**img**/
+    .img{
+      display: flex;
+      justify-content: center;
+      margin: 2rem auto;
+    }
+    .img img{
+      border-radius: 8px;
+      max-width: 100vw;
+    width: 70vw;
+    height: 65vh;
+    }
+    /**par**/
+    .par{
+       font-family: Arial, sans-serif;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #ffffff;
+    }
+    h1, h2, h3 {
+      color: #00c8ff;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 35px;
+      font-size: 1.6rem;
+    }
+    h3 {
+      margin-top: 25px;
+      font-size: 1.3rem;
+    }
+    p {
+      margin-bottom: 18px;
+    }
+    ul {
+      margin: 15px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .highlight {
+      background: #000000;
+      padding: 8px 12px;
+      border-left: 4px solid #0073e6;
+      margin: 20px 0;
+    }
+
+    /**respon1**/
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hamburger .scrolled {
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+    .hamburger span {
+      width: 28px;
+      height: 3px;
+      background: white;
+      transition: all 0.3s ease;
+    }
+
+    /* ====== القائمة المنبثقة ====== */
+    .mobile-menu {
+      position: fixed;
+      top:0;
+      left: -100%;
+      width: 100%;
+      height: 100vh;
+      padding-top: 0.5rem ;
+      background: rgb(53, 53, 53);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 35px;
+      transition: left 0.5s ease;
+      z-index: 999;
+    }
+
+    .mobile-menu.active {
+      left: 0;
+    }
+
+    .mobile-menu a {
+      color: white;
+      font-size: 22px;
+      width: 100%;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      border-bottom: 0.5px solid #fff;
+      transition: color 0.3s;
+    }
+
+    .mobile-menu a:hover {
+      color: #ffffff;
+      background: rgba(104, 104, 104, 0.508);
+      backdrop-filter: bulur(20px);
+    }
+
+    /* ====== زر الإغلاق (X) ====== */
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #fff;
+      background: rgb(88, 88, 88);
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
+    .close-btn:hover {
+      transform: rotate(90deg);
+      color: #00e1ff;
+    }
+
+    /* ====== استجابة الهاتف ====== */
+    @media (max-width: 910px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hamburger.scrolled {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      background: rgb(65, 65, 65);
+}
+    }
+    /**respon**/
+    @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .img img{
+    max-width: 100vw;
+    width: 90vw;
+    }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">{ / }</span> 77cod_ing
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="Terms & Conditions.html">Terms & Conditions</a>
+    </nav>
+  </header>
+
+  <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <a href="index.html"style="border-top: 2px solid #fff;height: 5rem;">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="Terms & Conditions.html" style="border-bottom: 2px solid #fff;">Terms & Conditions</a>
+  </div>
+
+<div class="Ret">
+  <a href="projects.html#menu"><pre><span>&lt;</span> Return</pre></a>
+</div>
+
+<div class="img">
+  <img src="image copy 76.png" alt="Skewed Menu Example">
+</div>
+
+<div class="par">
+  <span>
+
+    <h1>Create an Expanding Animated Button with Circle and Arrows — HTML/CSS</h1>
+
+    <p>
+      Buttons are not just for clicking — they can communicate motion, focus, and excitement.
+      In this guide, we’ll build an <strong>expanding animated button</strong> using pure HTML and CSS.
+      This button features sliding arrows, a circular ripple expansion, and smooth hover transitions
+      that bring your interface to life.
+    </p>
+
+    <div class="highlight">
+      <p>
+        <strong>Quick Summary:</strong>
+        Learn how to design a futuristic button that expands with a glowing circle,
+        flips arrows on hover, and reacts dynamically — all without JavaScript.
+      </p>
+    </div>
+
+    <h2>What Is an Expanding Animated Button?</h2>
+
+    <p>
+      This type of button reacts visually when hovered.
+      Two arrows slide across from left to right, a glowing circle expands beneath the text,
+      and the text smoothly shifts forward — giving the illusion of motion and depth.
+      The result feels energetic, modern, and tactile.
+    </p>
+
+    <h2>Why Use This Button Design?</h2>
+
+    <ul>
+      <li><strong>High Visual Impact:</strong> The expanding circle draws immediate attention.</li>
+      <li><strong>Motion Direction:</strong> The arrows visually suggest “go” or “next”.</li>
+      <li><strong>Pure CSS:</strong> No scripts or libraries — just clean code.</li>
+      <li><strong>Reusable Component:</strong> Works for “Download”, “Start”, or “Next Step” actions.</li>
+    </ul>
+
+    <h2>Steps to Build the Animated Button</h2>
+
+    <h3>1. Create the Button with HTML</h3>
+
+    <p>
+      Start with a <code>&lt;button&gt;</code> element containing two SVG arrows,
+      a <code>&lt;span&gt;</code> for the button text, and another <code>&lt;span&gt;</code> for the expanding circle.
+      This gives you the structure to animate each part independently.
+    </p>
+
+    <div class="img">
+      <img src="image copy 77.png" alt="HTML structure for expanding animated button">
+    </div>
+
+    <h3>2. Add CSS for Layout and Effects</h3>
+
+    <p>
+      The secret behind the animation lies in the <strong>hover transitions</strong>.
+      The circle starts small and invisible, then expands with <code>width</code> and <code>height</code> growth
+      and <code>opacity</code> animation.
+      The arrows swap sides using <code>left</code> and <code>right</code> position transitions,
+      while the button text slides forward.
+    </p>
+
+    <p>
+      Using <code>transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);</code> gives each motion a soft, natural easing effect.
+      The result feels fluid, not robotic.
+    </p>
+
+    <div class="img">
+      <img src="image copy 78.png" alt="CSS styling for button animations">
+    </div>
+
+    <h3>3. Observe the Animation</h3>
+
+    <p>
+      When hovered, the circular shape grows from the center while arrows glide smoothly.
+      The text color inverts for contrast, and the button morphs into a more compact, rounded shape.
+      A click also gives a brief <em>press</em> effect using <code>scale: 0.95;</code>.
+    </p>
+
+    <div class="img">
+      <img src="image copy 76.png" alt="Final effect of expanding animated button">
+    </div>
+
+    <h2>Best Practices for Animated Buttons</h2>
+
+    <ul>
+      <li><strong>Keep it fast:</strong> Ideal hover duration is under 1 second.</li>
+      <li><strong>Match your theme:</strong> Adjust glow and text colors to fit your site palette.</li>
+      <li><strong>Use readable text:</strong> Maintain high contrast when colors invert.</li>
+      <li><strong>Ensure accessibility:</strong> Keep visible focus outlines for keyboard navigation.</li>
+    </ul>
+
+    <h2>Common Mistakes to Avoid</h2>
+
+    <ul>
+      <li>Using too many bright glow colors — they can overpower the design.</li>
+      <li>Animating both background and border simultaneously — causes jitter.</li>
+      <li>Forgetting to test scaling behavior on small screens.</li>
+      <li>Omitting <code>cursor: pointer;</code> for clickable feel.</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+
+    <p>
+      The <strong>expanding animated button</strong> combines elegance with interactivity.
+      It uses motion to subtly guide users without overwhelming the design.
+      Perfect for landing pages, signup forms, or call-to-action sections,
+      this effect blends minimalism and motion into one stylish component —
+      entirely powered by CSS transitions.
+    </p>
+
+    <div class="highlight">
+      <p>
+        <strong>SEO Keywords:</strong> animated CSS button, circle hover effect, pure CSS expanding button,
+        glowing button design, modern UI button, interactive web elements
+      </p>
+    </div>
+
+  </span>
+</div>
+
+
+
+
+<div class="con1">
+  <div class="countdown" id="countdown">
+    <span id="number">10</span> wait...
+  </div>
+
+  <div class="link-box" id="linkBox">
+    <a href="https://gist.github.com/77cod-ing/42b9e2065e89142abcbd01dc080d4c28" target="_blank">Go to code</a>
+  </div>
+</div>
+
+<script>
+  let counter = 10;
+  let timer = null;
+  const countdownEl = document.getElementById("countdown");
+  const numberEl = document.getElementById("number");
+  const linkBox = document.getElementById("linkBox");
+
+  function startCountdown() {
+    if (timer) return;
+    timer = setInterval(() => {
+      counter--;
+      numberEl.textContent = counter;
+
+      if (counter === 0) {
+        clearInterval(timer);
+        timer = null;
+        countdownEl.style.display = "none"; 
+        linkBox.style.display = "block";
+      }
+    }, 1000);
+  }
+
+  function stopCountdown() {
+    clearInterval(timer);
+    timer = null;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startCountdown();
+      } else {
+        stopCountdown();
+      }
+    });
+  }, { threshold: 1.0 });
+
+  observer.observe(countdownEl);
+
+  /**hamburger**/
+
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeBtn = document.getElementById('closeBtn');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+    });
+    
+
+    window.addEventListener("scroll", function() {
+  const hamburger = document.querySelector(".hamburger");
+  if (window.scrollY > 50) {
+    hamburger.classList.add("scrolled");
+  } else {
+    hamburger.classList.remove("scrolled");
+  }
+});
+
+</script>
+</body>
+</html>
+
+
