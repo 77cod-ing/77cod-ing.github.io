@@ -205,7 +205,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageCounterEl = document.getElementById('imageCounter');
 
     const totalImages = 76;
-    const imagePath = '';
     const imageFormat = '.jpg';
     let currentIndex = 1;
 
@@ -213,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (index < 1 || index > totalImages) return;
 
         currentIndex = index;
-        currentImageEl.src = `${imagePath}image${currentIndex}${imageFormat}`;
+        currentImageEl.src = `image${currentIndex}${imageFormat}`;
         imageCounterEl.value = currentIndex;
 
         scale = 1;
@@ -291,4 +290,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </body>
 </html>
+
 
