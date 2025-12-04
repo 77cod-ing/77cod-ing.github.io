@@ -203,10 +203,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     const imageCounterEl = document.getElementById('imageCounter');
-    const imageFormat = '.jpg';
-let currentIndex = 1;
-const totalImages = 76;
 
+    const totalImages = 76;
+    const imageFormat = '.jpg';
+    let currentIndex = 1;
 
     function updateImage(index) {
         if (index < 1 || index > totalImages) return;
@@ -288,8 +288,10 @@ const totalImages = 76;
 });
 </script>
 
+
 </body>
 </html>
+
 
 
 
