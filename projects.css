@@ -311,7 +311,7 @@ h1 span {
     margin-top: 20.5rem;
   }
   .con7 .gallery{
-  width: 58vw;
+  width: 70vw;
   }
       /**respon**/
     @media (max-width: 768px) {
@@ -366,6 +366,7 @@ h1 span {
     transition: none;
   }
   }
+
 
 
 
