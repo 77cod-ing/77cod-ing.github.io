@@ -310,9 +310,6 @@ h1 span {
     direction:ltr; 
     margin-top: 20.5rem;
   }
-  .con7 .gallery{
-  width: 70vw;
-  }
       /**respon**/
     @media (max-width: 768px) {
   .navbar {
@@ -366,6 +363,7 @@ h1 span {
     transition: none;
   }
   }
+
 
 
 
