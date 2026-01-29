@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="Picture1.png">
+  <title>Floating Placeholder Input | Modern UI Design with HTML & CSS</title>
+    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <style>
+    body {
+      background: linear-gradient(to right, #2c0e43 10%, #581c87);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      padding: 0 2rem;
+      background-color: #0d1325;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      color: #a855f7;
+      font-size: 26px;
+      margin-right: 8px;
+      letter-spacing: 2.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #a855f7;
+      transform: scale(1.2);
+    }
+    /*linke*/
+    .con1 {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: auto 0;
+      height: 50vh;
+    }
+    .countdown {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+
+    .link-box {
+      display: none;
+      padding: 20px 40px;
+      background: #1e2a47;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+      transition: 0.3s;
+    }
+
+    .link-box a {
+      text-decoration: none;
+      color: #00ffcc;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .link-box:hover {
+      background: #26385c;
+      transform: scale(1.05);
+    }
+    /**ret**/
+    .Ret{
+      margin: 5px 0 0 3rem;
+      width: max-content;
+    }
+    .Ret a {
+      font-size: 2rem;
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .Ret a span{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+    }
+    .Ret a:hover {
+  color: #00e1ff;
+}
+    .Ret a:hover span {
+  border-color: #00e1ff;
+}
+    /**img**/
+    .img{
+      display: flex;
+      justify-content: center;
+      margin: 2rem auto;
+    }
+    .img img{
+      border-radius: 8px;
+      max-width: 100vw;
+    width: 70vw;
+    height: 65vh;
+    }
+    /**par**/
+    .par{
+       font-family: Arial, sans-serif;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #ffffff;
+    }
+    h1, h2, h3 {
+      color: #00c8ff;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 35px;
+      font-size: 1.6rem;
+    }
+    h3 {
+      margin-top: 25px;
+      font-size: 1.3rem;
+    }
+    p {
+      margin-bottom: 18px;
+    }
+    ul {
+      margin: 15px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .highlight {
+      background: #000000;
+      padding: 8px 12px;
+      border-left: 4px solid #0073e6;
+      margin: 20px 0;
+    }
+    /**respon**/
+    @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .img img{
+    max-width: 100vw;
+    width: 90vw;
+    }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">{ / }</span> 77cod_ing
+    </a>
+    <nav class="nav-links">
+      <a href="https://77cod-ing.github.io/">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="Terms & Conditions.html">Terms & Conditions</a>
+    </nav>
+  </header>
+  <div class="Ret">
+    <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
+  </div>
+  <div class="img">
+    <img src="image copy 86.png" alt="subscribe.box">
+  </div>
+<div class="par">
+
+<h2>Why a Matrix Style Login Page Stands Out</h2>
+<ul>
+<li><strong>Strong Visual Identity:</strong> The Matrix-inspired green code instantly creates a futuristic, hacker-style atmosphere that captures attention.</li>
+<li><strong>User Engagement:</strong> Subtle animated effects (falling code, glowing inputs) keep users visually engaged without blocking usability.</li>
+<li><strong>Modern Appeal:</strong> This style resonates strongly with tech, cybersecurity, gaming, and developer-oriented audiences.</li>
+<li><strong>Brand Differentiation:</strong> A unique login page helps your platform stand out compared to generic form-based designs.</li>
+<li><strong>Flexible Implementation:</strong> Effects can be scaled from minimal glow to full animated backgrounds depending on performance needs.</li>
+</ul>
+
+<h2>How to Build a Matrix Style Login Page</h2>
+
+<h3>1. HTML Structure</h3>
+<p>
+Start with a clean, semantic structure using a <code>&lt;form&gt;</code> element containing labeled inputs for username/email and password.
+Wrap the form in a centered container and place a <code>&lt;canvas&gt;</code> or background <code>&lt;div&gt;</code> behind it for the Matrix animation.
+Keep the markup minimal to ensure accessibility and maintainability.
+</p>
+
+<h3>2. CSS Styling & Effects</h3>
+<p>
+Use dark backgrounds (<code>#000</code> or near-black) combined with neon green accents.
+Apply glow effects using <code>box-shadow</code> and <code>text-shadow</code> on inputs and buttons.
+Fonts like monospace or custom digital fonts enhance the Matrix aesthetic.
+Ensure contrast remains high so text stays readable despite visual effects.
+</p>
+
+<h3>3. JavaScript Matrix Animation</h3>
+<p>
+JavaScript drives the signature Matrix rain effect:
+<ol>
+<li>Create a full-screen <code>&lt;canvas&gt;</code> element.</li>
+<li>Use an array of characters (letters, numbers, symbols) drawn vertically.</li>
+<li>Animate falling characters using <code>requestAnimationFrame</code>.</li>
+<li>Control speed, opacity, and density to balance performance and visuals.</li>
+</ol>
+The animation should run independently of the login logic to avoid blocking user input.
+</p>
+
+<h2>Benefits for UX, Security Perception & Branding</h2>
+<p>
+A Matrix Style Login Page enhances perceived security and technical sophistication.
+Users often associate advanced visuals with advanced systems, which can increase trust when combined with proper security practices.
+When optimized correctly, these effects do not harm performance or usability.
+</p>
+
+<ul>
+<li><strong>Improved First Impression:</strong> Users immediately recognize a premium, tech-focused interface.</li>
+<li><strong>Higher Memorability:</strong> Unique visuals make your platform more recognizable.</li>
+<li><strong>Performance-Friendly:</strong> Canvas-based animations can be optimized to run smoothly even on mid-range devices.</li>
+</ul>
+
+<h2>Accessibility & Best Practices</h2>
+<ul>
+<li>Ensure all inputs have visible labels and proper <code>aria-label</code> attributes.</li>
+<li>Provide sufficient contrast between text and background despite neon effects.</li>
+<li>Respect <code>prefers-reduced-motion</code> by disabling or simplifying animations when requested.</li>
+<li>Allow keyboard navigation and visible focus states for all form controls.</li>
+</ul>
+
+<h2>Common Mistakes to Avoid</h2>
+<ul>
+<li>Overloading animations that distract from the login action.</li>
+<li>Low contrast text that becomes unreadable over animated backgrounds.</li>
+<li>Heavy JavaScript loops that reduce frame rate on low-end devices.</li>
+<li>Ignoring mobile responsiveness for smaller screens.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+The <strong>Matrix Style Login Page</strong> combines advanced HTML, CSS, and JavaScript effects to create a visually striking yet functional authentication interface.
+By balancing animation, performance, and accessibility, you can deliver a login experience that feels modern, secure, and memorable.
+When implemented thoughtfully, this design becomes a powerful branding element rather than just a decorative effect.
+</p>
+
+<div class="highlight">
+<p><strong>SEO Keywords:</strong> Matrix style login page, animated login form, Matrix rain effect JavaScript, futuristic login UI, canvas animation login, cyberpunk web design, advanced CSS effects, JavaScript visual effects, hacker style interface</p>
+</div>
+
+</div>
+
+
+
+
+
+  <div class="con1">
+    <div class="countdown" id="countdown">
+    <span id="number">10</span> wait...
+  </div>
+
+  <div class="link-box" id="linkBox">
+    <a href="https://gist.github.com/77cod-ing/d4227093484796c36d265396b1314d83" target="_blank">Go to code</a>
+  </div>
+  </div>
+
+  <script>
+    let counter = 10;
+    let timer = null;
+    const countdownEl = document.getElementById("countdown");
+    const numberEl = document.getElementById("number");
+    const linkBox = document.getElementById("linkBox");
+
+    function startCountdown() {
+      if (timer) return;
+      timer = setInterval(() => {
+        counter--;
+        numberEl.textContent = counter;
+
+        if (counter === 0) {
+          clearInterval(timer);
+          timer = null;
+          countdownEl.style.display = "none"; // يخفي العداد والكلمة
+          linkBox.style.display = "block";
+        }
+      }, 1000);
+    }
+
+    function stopCountdown() {
+      clearInterval(timer);
+      timer = null;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startCountdown();
+        } else {
+          stopCountdown();
+        }
+      });
+    }, { threshold: 1.0 });
+
+    observer.observe(countdownEl);
+  </script>
+</body>
+</html>
