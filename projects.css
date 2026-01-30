@@ -318,7 +318,20 @@ h1 span {
     background:#123558;
     padding:60px;
     direction:ltr; 
+    }
+  .con9{
+    font-family: Inter, "Segoe UI", Tahoma, sans-serif;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    min-height:10vh;
+    background:#123558;
+    padding:60px;
+    direction:ltr; 
     margin-top: 20.5rem;
+  }
+  .con9 .gallery{
+    width: 20vw;
   }
       /**respon**/
     @media (max-width: 768px) {
@@ -373,6 +386,7 @@ h1 span {
     transition: none;
   }
   }
+
 
 
 
