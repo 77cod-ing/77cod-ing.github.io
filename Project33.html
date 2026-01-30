@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="Picture1.png">
+  <title>Floating Placeholder Input | Modern UI Design with HTML & CSS</title>
+    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <style>
+    body {
+      background: linear-gradient(to right, #2c0e43 10%, #581c87);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      padding: 0 2rem;
+      background-color: #0d1325;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      color: #a855f7;
+      font-size: 26px;
+      margin-right: 8px;
+      letter-spacing: 2.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #a855f7;
+      transform: scale(1.2);
+    }
+    /*linke*/
+    .con1 {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: auto 0;
+      height: 50vh;
+    }
+    .countdown {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+
+    .link-box {
+      display: none;
+      padding: 20px 40px;
+      background: #1e2a47;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+      transition: 0.3s;
+    }
+
+    .link-box a {
+      text-decoration: none;
+      color: #00ffcc;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .link-box:hover {
+      background: #26385c;
+      transform: scale(1.05);
+    }
+    /**ret**/
+    .Ret{
+      margin: 5px 0 0 3rem;
+      width: max-content;
+    }
+    .Ret a {
+      font-size: 2rem;
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .Ret a span{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+    }
+    .Ret a:hover {
+  color: #00e1ff;
+}
+    .Ret a:hover span {
+  border-color: #00e1ff;
+}
+    /**img**/
+    .img{
+      display: flex;
+      justify-content: center;
+      margin: 2rem auto;
+    }
+    .img img{
+      border-radius: 8px;
+      max-width: 100vw;
+    width: 70vw;
+    height: 65vh;
+    }
+    /**par**/
+    .par{
+       font-family: Arial, sans-serif;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #ffffff;
+    }
+    h1, h2, h3 {
+      color: #00c8ff;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 35px;
+      font-size: 1.6rem;
+    }
+    h3 {
+      margin-top: 25px;
+      font-size: 1.3rem;
+    }
+    p {
+      margin-bottom: 18px;
+    }
+    ul {
+      margin: 15px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .highlight {
+      background: #000000;
+      padding: 8px 12px;
+      border-left: 4px solid #0073e6;
+      margin: 20px 0;
+    }
+    /**respon**/
+    @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .img img{
+    max-width: 100vw;
+    width: 90vw;
+    }
+  }
+  </style>
+</head>
+<body>
+<header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">{ / }</span> 77cod_ing
+    </a>
+    <nav class="nav-links">
+      <a href="https://77cod-ing.github.io/">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="Terms & Conditions.html">Terms & Conditions</a>
+    </nav>
+  </header>
+  <div class="Ret">
+    <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
+  </div>
+  <div class="img">
+    <img src="image copy 87.png" alt="subscribe.box">
+  </div>
+<div class="par">
+
+<h2>Why an Interactive Dragon Cursor Effect Captures Attention</h2>
+<ul>
+<li><strong>Unique Visual Experience:</strong> A dragon that follows the cursor creates an immediate sense of wonder and interactivity.</li>
+<li><strong>High Engagement:</strong> Users instinctively move the mouse to explore the animation, increasing time spent on the page.</li>
+<li><strong>Creative Storytelling:</strong> The dragon adds personality and narrative to an otherwise static interface.</li>
+<li><strong>Memorable Design:</strong> Interactive cursor effects are rare, making your website stand out instantly.</li>
+<li><strong>Lightweight & Flexible:</strong> SVG-based animations are scalable, crisp, and performance-friendly.</li>
+</ul>
+
+<h2>How to Build an Interactive Dragon Cursor Effect</h2>
+
+<h3>1. SVG Dragon Structure</h3>
+<p>
+Begin by designing the dragon using <code>&lt;svg&gt;</code> elements.
+Separate the dragon into logical parts such as head, body, tail, and wings using <code>&lt;g&gt;</code> groups.
+This structure allows smooth transformations and precise control over each segment.
+SVG ensures the dragon remains sharp on all screen sizes.
+</p>
+
+<h3>2. CSS Styling & Animation</h3>
+<p>
+Use CSS to define colors, gradients, and subtle shadows that give the dragon a sense of depth.
+Apply <code>transform-origin</code> to body parts to enable realistic rotation and movement.
+Transitions and keyframe animations can add idle motion, such as breathing or tail swaying.
+Keep animations smooth to maintain a natural, organic feel.
+</p>
+
+<h3>3. JavaScript Cursor Interaction</h3>
+<p>
+JavaScript handles the interactivity:
+<ol>
+<li>Track mouse position using <code>mousemove</code> events.</li>
+<li>Calculate the angle between the dragon and the cursor.</li>
+<li>Rotate the head and body segments toward the cursor.</li>
+<li>Animate delayed movement for the tail to simulate fluid motion.</li>
+</ol>
+This approach creates a lifelike follow effect without heavy physics engines.
+</p>
+
+<h2>Benefits for User Experience & Branding</h2>
+<p>
+An Interactive Dragon Cursor Effect transforms a simple website into an immersive experience.
+It communicates creativity, technical skill, and attention to detail.
+When used strategically, it enhances the brand without overwhelming the content.
+</p>
+
+<ul>
+<li><strong>Stronger Emotional Impact:</strong> Users feel entertained and connected to the interface.</li>
+<li><strong>Brand Personality:</strong> Perfect for gaming, fantasy, creative, or experimental tech brands.</li>
+<li><strong>Performance Efficient:</strong> SVG and optimized JavaScript ensure smooth interaction.</li>
+</ul>
+
+<h2>Accessibility & Best Practices</h2>
+<ul>
+<li>Disable or simplify the effect when <code>prefers-reduced-motion</code> is enabled.</li>
+<li>Ensure the cursor effect does not block clicks or form interactions.</li>
+<li>Keep CPU usage low by throttling animation updates.</li>
+<li>Provide a fallback for touch devices where cursors are not available.</li>
+</ul>
+
+<h2>Common Mistakes to Avoid</h2>
+<ul>
+<li>Overly complex SVG paths that reduce performance.</li>
+<li>Forcing the effect on mobile devices without adaptation.</li>
+<li>Excessive rotation that breaks the illusion of natural motion.</li>
+<li>Ignoring user control or preference to disable animations.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+The <strong>Interactive Dragon Cursor Effect with SVG & JavaScript</strong> blends creativity with technical precision.
+By combining SVG structure, CSS animations, and JavaScript interaction, you can create a magical and memorable experience.
+When optimized and accessible, this effect becomes a powerful visual signature rather than a gimmick.
+</p>
+
+<div class="highlight">
+<p><strong>SEO Keywords:</strong> interactive dragon cursor, SVG cursor animation, JavaScript cursor effects, animated dragon SVG, creative mouse interaction, fantasy web animation, advanced SVG animation, cursor follow effect</p>
+</div>
+
+</div>
+
+
+
+
+
+
+  <div class="con1">
+    <div class="countdown" id="countdown">
+    <span id="number">10</span> wait...
+  </div>
+
+  <div class="link-box" id="linkBox">
+    <a href="https://gist.github.com/77cod-ing/73e1d4e1f6e5a80a0dc9622a76076549" target="_blank">Go to code</a>
+  </div>
+  </div>
+
+  <script>
+    let counter = 10;
+    let timer = null;
+    const countdownEl = document.getElementById("countdown");
+    const numberEl = document.getElementById("number");
+    const linkBox = document.getElementById("linkBox");
+
+    function startCountdown() {
+      if (timer) return;
+      timer = setInterval(() => {
+        counter--;
+        numberEl.textContent = counter;
+
+        if (counter === 0) {
+          clearInterval(timer);
+          timer = null;
+          countdownEl.style.display = "none"; // يخفي العداد والكلمة
+          linkBox.style.display = "block";
+        }
+      }, 1000);
+    }
+
+    function stopCountdown() {
+      clearInterval(timer);
+      timer = null;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startCountdown();
+        } else {
+          stopCountdown();
+        }
+      });
+    }, { threshold: 1.0 });
+
+    observer.observe(countdownEl);
+  </script>
+</body>
+</html>
