@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="Picture1.png">
+  <title>Floating Placeholder Input | Modern UI Design with HTML & CSS</title>
+    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+      <link href="https://networks0.github.io/copy.css" rel="stylesheet"/>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+  <style>
+   
+  .card{
+    display: flex;
+    width: 99vw;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 90vh;
+    margin: 0 auto;
+    
+  }
+   .code-box{
+	background: #1e1e2f;
+    position: relative; 
+    border-radius: 8px;
+    
+}
+  .copy-btn {
+    
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    background: transparent;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+   .language-js{
+       height: 50vh;
+       font-family: Arial, sans-serif;
+    }
+    :not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  width: 30vw;
+  height: 50vh;
+    border-radius: 20px;
+  overflow-y: auto; 
+}
+/* للمتصفحات المبنية على Chromium (Chrome, Edge) */
+pre::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+pre::-webkit-scrollbar-track {
+  background: transparent; /* 👈 خلفية شفافة */
+}
+
+pre::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 242, 255); /* لون المقبض */
+  border-radius: 10px;
+}
+.type{
+  color: #fff;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  width: 80px;
+  height: 60px;
+}
+
+
+    body {
+      background: linear-gradient(to right, #2c0e43 10%, #581c87);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      padding: 0 2rem;
+      background-color: #0d1325;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      color: #a855f7;
+      font-size: 26px;
+      margin-right: 8px;
+      letter-spacing: 2.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #a855f7;
+      transform: scale(1.2);
+    }
+    /*linke*/
+    .con1 {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: auto 0;
+      height: 50vh;
+    }
+    .countdown {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+
+    .link-box {
+      display: none;
+      padding: 20px 40px;
+      background: #1e2a47;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+      transition: 0.3s;
+    }
+
+    .link-box a {
+      text-decoration: none;
+      color: #00ffcc;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .link-box:hover {
+      background: #26385c;
+      transform: scale(1.05);
+    }
+    /**ret**/
+    .Ret{
+      margin: 5px 0 0 3rem;
+      width: max-content;
+    }
+    .Ret a {
+      font-size: 2rem;
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .Ret a span{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+    }
+    .Ret a:hover {
+  color: #00e1ff;
+}
+    .Ret a:hover span {
+  border-color: #00e1ff;
+}
+    /**img**/
+    .img{
+      display: flex;
+      justify-content: center;
+      margin: 2rem auto;
+    }
+    .img img{
+      border-radius: 8px;
+      max-width: 100vw;
+    width: 70vw;
+    height: 65vh;
+    }
+    /**par**/
+    .par{
+       font-family: Arial, sans-serif;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #ffffff;
+    }
+    h1, h2, h3 {
+      color: #00c8ff;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 35px;
+      font-size: 1.6rem;
+    }
+    h3 {
+      margin-top: 25px;
+      font-size: 1.3rem;
+    }
+    p {
+      margin-bottom: 18px;
+    }
+    ul {
+      margin: 15px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .highlight {
+      background: #000000;
+      padding: 8px 12px;
+      border-left: 4px solid #0073e6;
+      margin: 20px 0;
+    }
+    /**respon**/
+    @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .img img{
+    max-width: 100vw;
+    width: 90vw;
+    }
+  }
+  hr{
+    width: 80vw;
+  }
+  .down{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    width: 80vw;
+    color: #fff;
+    font-size: 1.5rem;
+    border: 2px solid #fff;
+    border-radius: 20px;
+  }
+  .down img{
+    width: 50vw;
+  }
+  .down i{
+    color: rgb(0, 255, 255);
+  }
+  </style>
+</head>
+<body>
+<header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">{ / }</span> 77cod_ing
+    </a>
+    <nav class="nav-links">
+      <a href="https://77cod-ing.github.io/">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="Terms & Conditions.html">Terms & Conditions</a>
+    </nav>
+  </header>
+  <div class="Ret">
+    <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
+  </div>
+  <div class="img">
+    <img src='https://i.suar.me/g4rQ2/m' alt="subscribe.box">
+  </div>
+<div class="par">
+
+  <h2>Why GAMERS WORLD  is the Future of Gaming Discovery</h2>
+  <ul>
+    <li><strong>Modern Gaming Interface:</strong> A clean and responsive design that makes browsing games smooth and enjoyable.</li>
+    <li><strong>Fast Navigation:</strong> Easy access to all sections like Games, Features, About, and Contact.</li>
+    <li><strong>Powerful Search System:</strong> Quickly find any game using the built-in search bar.</li>
+    <li><strong>Engaging Hero Section:</strong> Attractive landing area that highlights adventure and excitement.</li>
+    <li><strong>Optimized User Experience:</strong> Designed for speed, clarity, and smooth interaction.</li>
+  </ul>
+
+  <h2>How the GAMERS WORLD Website is Built</h2>
+
+  <h3>1. HTML Structure & Layout</h3>
+  <p>
+    The website is built using semantic HTML elements such as <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;nav&gt;</code>.
+    This ensures a clean structure that is easy to maintain and improves SEO performance.
+  </p>
+
+  <h3>2. CSS Styling & Visual Design</h3>
+  <p>
+    CSS is used to create a modern gaming aesthetic with smooth layouts, responsive design, and visual hierarchy.
+    Elements like the hero section and navigation bar are styled to deliver a professional gaming experience.
+  </p>
+
+  <h3>3. JavaScript Interactivity</h3>
+  <p>
+    JavaScript is responsible for dynamic features such as the loading screen, search functionality, and interactive elements.
+    It enhances user engagement by making the website feel more responsive and alive.
+  </p>
+
+  <h3>4. Navigation System</h3>
+  <p>
+    The navigation bar allows users to move easily between sections like Home, Games, Features, About Us, and Contact.
+    It improves usability and ensures a smooth browsing experience across the site.
+  </p>
+
+  <h3>5. Responsive Design</h3>
+  <p>
+    The layout is designed to adapt to all screen sizes including mobile, tablet, and desktop devices.
+    This ensures that users get a consistent experience regardless of the device they use.
+  </p>
+
+  <h2>Key Features of GAMERS WORLD</h2>
+  <p>
+    The website focuses on delivering a complete gaming discovery experience with both performance and design in mind.
+  </p>
+
+  <ul>
+    <li><strong>Clean UI Design:</strong> Minimal and modern interface focused on usability.</li>
+    <li><strong>Game Discovery:</strong> Easy browsing for different types of games.</li>
+    <li><strong>Interactive Elements:</strong> Smooth animations and user feedback.</li>
+  </ul>
+
+  <h2>Best Practices Used in Development</h2>
+  <ul>
+    <li>Using semantic HTML for better SEO and structure.</li>
+    <li>Optimized CSS for performance and responsiveness.</li>
+    <li>Separation of concerns (HTML, CSS, JS in different files).</li>
+    <li>Simple and scalable layout design.</li>
+  </ul>
+
+  <h2>Common Improvements for Future Updates</h2>
+  <ul>
+    <li>Add user accounts and login system.</li>
+    <li>Integrate real-time game database API.</li>
+    <li>Improve animations and transitions.</li>
+    <li>Add dark/light mode toggle.</li>
+  </ul>
+
+  <h2>Conclusion</h2>
+  <p>
+    The <strong>GAMERS WORLD gaming website</strong> is a modern front-end project designed to deliver a smooth and engaging experience.
+    With a strong focus on UI/UX, responsive design, and interactivity, it serves as a solid foundation for a professional gaming platform.
+    Future improvements can transform it into a fully functional gaming hub.
+  </p>
+
+  <div class="highlight">
+    <p><strong>SEO Keywords:</strong> gaming website HTML CSS JS, game landing page design, modern gaming UI, responsive game website, GAMERS WORLD project, gaming homepage template</p>
+  </div>
+
+</div>
+
+<div class="down">
+    <p>Image used <i class='bx bx-down-arrow-circle' ></i> </p>
+<img src="https://i.suar.me/9zXG3/m" alt="">
+</div>
+
+<div class="img">
+    <img src='https://i.suar.me/g4rQ2/m' alt="GAMERS WORLD" >
+  </div>
+
+
+    <div class="card">
+  
+
+  <div class="code-box" id="cpoy">
+    <span class="type" style="color: #ff6600;">html</span><button class="copy-btn"><i class='bx bxs-copy' style='color:#ffffff' ></i></button>
+    <pre><code id="code1" class="language-html"></code></pre>
+  </div>
+  <div class="code-box">
+    <span class="type" style="color: #00ffff;">css</span><button class="copy-btn"><i class='bx bxs-copy' style='color:#ffffff' ></i></button>
+    <pre><code id="code2" class="language-js"></code></pre>
+  </div>
+  <div class="code-box">
+    <span class="type" style="color: #ebdf00; ">JS</span><button class="copy-btn"><i class='bx bxs-copy' style='color:#ffffff' ></i></button>
+    <pre><code id="code3" class="language-js"></code></pre>
+  </div>
+</div>
+
+
+
+
+</body>
+
+<script>
+async function loadCode() {
+  const response = await fetch("https://gist.githubusercontent.com/77cod-ing/7ecf2e011c5f0f7cabcc040b869851a2/raw/8d742dcf2d5ac76f21458c93379bccce242bbd30/77cod-ing.html");
+  const text = await response.text();
+
+  const codeElement = document.getElementById("code1");
+  codeElement.textContent = text;
+
+  Prism.highlightElement(codeElement); // 👈 هذا هو السر
+}
+
+loadCode();
+async function loadCSS() {
+  const response = await fetch("https://gist.githubusercontent.com/77cod-ing/7ecf2e011c5f0f7cabcc040b869851a2/raw/8d742dcf2d5ac76f21458c93379bccce242bbd30/77cod-ing.css");
+  const text = await response.text();
+
+  const codeElement = document.getElementById("code2");
+  codeElement.textContent = text;
+
+  Prism.highlightElement(codeElement); // 👈 هذا هو السر
+}
+
+loadCSS();
+async function loadJS() {
+  const response = await fetch("https://gist.githubusercontent.com/77cod-ing/7ecf2e011c5f0f7cabcc040b869851a2/raw/8d742dcf2d5ac76f21458c93379bccce242bbd30/77cod-ing.js");
+  const text = await response.text();
+
+  const codeElement = document.getElementById("code3");
+  codeElement.textContent = text;
+
+  Prism.highlightElement(codeElement); // 👈 هذا هو السر
+}
+
+loadJS();
+
+</script>
+<script>
+document.querySelectorAll(".copy-btn").forEach(button => {
+    button.addEventListener("click", async () => {
+
+        const code = button.closest(".code-box").querySelector("code").innerText;
+
+        if (!code.trim()) return; // منع النسخ إذا الكود فارغ
+
+        await navigator.clipboard.writeText(code);
+
+        // تغيير نص الزر مؤقتًا لإظهار ✔️
+        const originalText = button.innerText;
+        button.innerText = "✔";
+        setTimeout(() => {
+            button.innerText = originalText;
+        }, 1500);
+    });
+});
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
