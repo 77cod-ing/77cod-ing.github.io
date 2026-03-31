@@ -330,10 +330,7 @@ h1 span {
     direction:ltr; 
     margin-top: 20.5rem;
   }
-  .con9 .gallery{
-    width: 60vw;
-  }
-      /**respon**/
+ /**respon**/
     @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
