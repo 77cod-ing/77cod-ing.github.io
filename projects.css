@@ -318,8 +318,17 @@ h1 span {
     background:#123558;
     padding:60px;
     direction:ltr; 
-    }
-  .con9{
+    } .con9{
+    font-family: Inter, "Segoe UI", Tahoma, sans-serif;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    min-height:10vh;
+    background:#123558;
+    padding:60px;
+    direction:ltr;
+  }
+  .con10{
     font-family: Inter, "Segoe UI", Tahoma, sans-serif;
     display:flex;
     align-items:flex-start;
@@ -330,6 +339,10 @@ h1 span {
     direction:ltr; 
     margin-top: 20.5rem;
   }
+   .con10 .gallery{
+    width: 18vw;
+  }
+  
  /**respon**/
     @media (max-width: 768px) {
   .navbar {
