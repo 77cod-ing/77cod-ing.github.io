@@ -26,14 +26,14 @@ body {
     .logo {
       display: flex;
       align-items: center;
-      font-size: 22px;
+      font-size: 2.5vw;
       font-weight: bold;
       color: white;
       text-decoration: none;
     }
     .logo-icon {
       color: #a855f7;
-      font-size: 26px;
+      font-size: 3.5vw;
       margin-right: 8px;
       letter-spacing: 2.5px;
     }
@@ -382,6 +382,9 @@ h1 span {
 
   .navbar .logo {
     margin-bottom: 10px;
+  }
+        .logo ,.logo-icon  {
+    font-size: 4vw;
   }
 
   .navbar nav {
