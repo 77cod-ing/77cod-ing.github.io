@@ -8,88 +8,13 @@
     <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
-     crossorigin="anonymous"></script>
-<style>
-   
-  .card{
-    display: flex;
-    width: 99vw;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 90vh;
-    margin: 0 auto;
-    
-  }
-   .code-box{
-	background: #1e1e2f;
-    position: relative; 
-    border-radius: 8px;
-    
-}
-  .copy-btn {
-    
-    position: absolute;
-    top: 10px;
-    right: 10px;
-
-    width: 40px;
-    height: 40px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: #fff;
-    background: transparent;
-    border: none;
-    font-size: 1.4rem;
-    cursor: pointer;
-}
-   .language-js{
-       height: 50vh;
-       font-family: Arial, sans-serif;
-    }
-    :not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  width: 30vw;
-  height: 50vh;
-    border-radius: 20px;
-  overflow-y: auto; 
-}
-/* للمتصفحات المبنية على Chromium (Chrome, Edge) */
-pre::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-pre::-webkit-scrollbar-track {
-  background: transparent; /* 👈 خلفية شفافة */
-}
-
-pre::-webkit-scrollbar-thumb {
-  background-color: rgb(0, 242, 255); /* لون المقبض */
-  border-radius: 10px;
-}
-.type{
-  color: #fff;
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  width: 80px;
-  height: 60px;
-}
-
-
+  <style>
     body {
       background: linear-gradient(to right, #2c0e43 10%, #581c87);
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      overflow-x: hidden;
     }
 
     .navbar {
@@ -135,7 +60,42 @@ pre::-webkit-scrollbar-thumb {
       color: #a855f7;
       transform: scale(1.2);
     }
+    /*linke*/
+    .con1 {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: auto 0;
+      height: 50vh;
+    }
+    .countdown {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
 
+    .link-box {
+      display: none;
+      padding: 20px 40px;
+      background: #1e2a47;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+      transition: 0.3s;
+    }
+
+    .link-box a {
+      text-decoration: none;
+      color: #00ffcc;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .link-box:hover {
+      background: #26385c;
+      transform: scale(1.05);
+    }
     /**ret**/
     .Ret{
       margin: 5px 0 0 3rem;
@@ -170,8 +130,7 @@ pre::-webkit-scrollbar-thumb {
     .img img{
       border-radius: 8px;
       max-width: 100vw;
-    width: 70vw;
-    height: 65vh;
+    width: 90vw;
     }
     /**par**/
     .par{
@@ -215,9 +174,9 @@ pre::-webkit-scrollbar-thumb {
     }
     /**respon**/
     @media (max-width: 768px) {
-      body{
-        overflow-x: hidden;
-      }
+		body{
+			overflow-x: hidden;
+		}
   .navbar {
     flex-direction: column;
     height: auto;
@@ -228,6 +187,11 @@ pre::-webkit-scrollbar-thumb {
     margin-bottom: 10px;
   }
 
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+		
   .navbar nav {
     width: 10vw;
     margin: 0;
@@ -238,50 +202,10 @@ pre::-webkit-scrollbar-thumb {
   .navbar nav a{
     font-size: 3vw;
   }
-      
- 
   .img img{
     max-width: 100vw;
     width: 90vw;
     }
-    .card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 210vh;
-  }
-  .language-js{
-       height: 50vh;
-       font-family: Arial, sans-serif;
-    }
-    :not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  width: 80vw;
-  height: 50vh;
-    border-radius: 20px;
-  overflow-y: auto; 
-}
-  }
-  hr{
-    width: 80vw;
-  }
-  .down{
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    align-items: center;
-    width: 80vw;
-    color: #fff;
-    font-size: 1.5rem;
-    border: 2px solid #fff;
-    border-radius: 20px;
-  }
-  .down img{
-    width: 50vw;
-  }
-  .down i{
-    color: rgb(0, 255, 255);
   }
   </style>
 </head>
@@ -299,9 +223,6 @@ pre[class*="language-"] {
       <a href="Terms & Conditions.html">Terms & Conditions</a>
     </nav>
   </header>
- 
-
-  
   <div class="Ret">
     <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
   </div>
@@ -410,17 +331,6 @@ pre[class*="language-"] {
   </div>
   </span>
   </div>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-3299172127946365"
-     data-ad-slot="2912511510"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
   <div class="con1">
     <div class="countdown" id="countdown">
     <span id="number">10</span> wait...
@@ -469,36 +379,6 @@ pre[class*="language-"] {
     }, { threshold: 1.0 });
 
     observer.observe(countdownEl);
-
-      /**hamburger**/
-
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeBtn = document.getElementById('closeBtn');
-
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.add('active');
-    });
-
-    closeBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-    });
-    
-
-    window.addEventListener("scroll", function() {
-  const hamburger = document.querySelector(".hamburger");
-  if (window.scrollY > 50) {
-    hamburger.classList.add("scrolled");
-  } else {
-    hamburger.classList.remove("scrolled");
-  }
-});
   </script>
 </body>
 </html>
-
-
-
-
-
-
