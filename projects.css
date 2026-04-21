@@ -86,12 +86,12 @@ body {
 
     h1 .tol{
       background: linear-gradient(90deg, #ff4ecd, #7b61ff);
-      -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     h1 .tol2{
       background: linear-gradient(90deg, #4eafff,#4eafff, #ff4ecd);
-      -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
@@ -100,6 +100,7 @@ body {
       color: #ffffff;
       font-weight: 200;
       margin: 20px 0 40px;
+      text-align: center;
     }
     h1  #color{
       color: #fff;
@@ -317,8 +318,9 @@ h1 span {
     min-height:10vh;
     background:#123558;
     padding:60px;
-    direction:ltr; 
-    } .con9{
+    direction:ltr;
+  }
+  .con9{
     font-family: Inter, "Segoe UI", Tahoma, sans-serif;
     display:flex;
     align-items:flex-start;
@@ -340,10 +342,20 @@ h1 span {
     margin-top: 20.5rem;
   }
    .con10 .gallery{
-    width: 42vw;
+    width: 60vw;
   }
   
- /**respon**/
+  
+  
+      /**respon**/
+         @media (max-width: 1000px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    gap: 3vh;
+  }
+}
     @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -359,8 +371,29 @@ h1 span {
     flex-direction: column;
     gap: 10px;
   }
+      body{
+        overflow-x: hidden;
+      }
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar nav {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+  }
+  .navbar nav a{
+    font-size: 3vw;
+  }
   h1{
-    font-size: 2rem;
+    font-size: 3.5vh;
     padding: 0;
   }
   .card-accent{
@@ -396,14 +429,3 @@ h1 span {
     transition: none;
   }
   }
-
-
-
-
-
-
-
-
-
-
-
