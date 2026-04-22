@@ -4,13 +4,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="Picture1.png">
-  <title>Why an Interactive Dragon Cursor Effect Captures Attention</title>
+  <title>Floating Placeholder Input | Modern UI Design with HTML & CSS</title>
     <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+        <link href="https://networks0.github.io/copy.css" rel="stylesheet"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
      crossorigin="anonymous"></script>
   <style>
+      .card{
+    display: flex;
+    width: 99vw;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 90vh;
+    margin: 0 auto;
+    
+  }
+   .code-box{
+	background: #1e1e2f;
+    position: relative; 
+    border-radius: 8px;
+    
+}
+  .copy-btn {
+    
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    background: transparent;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+   .language-js{
+       height: 50vh;
+       font-family: Arial, sans-serif;
+    }
+    :not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  width: 30vw;
+  height: 50vh;
+    border-radius: 20px;
+  overflow-y: auto; 
+}
+/* للمتصفحات المبنية على Chromium (Chrome, Edge) */
+pre::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+pre::-webkit-scrollbar-track {
+  background: transparent; /* 👈 خلفية شفافة */
+}
+
+pre::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 242, 255); /* لون المقبض */
+  border-radius: 10px;
+}
+.type{
+  color: #fff;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  width: 80px;
+  height: 60px;
+}
     body {
       background: linear-gradient(to right, #2c0e43 10%, #581c87);
       font-family: Arial, sans-serif;
@@ -175,6 +246,11 @@
       border-left: 4px solid #0073e6;
       margin: 20px 0;
     }
+    .videos{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     /**respon**/
     @media (max-width: 768px) {
   .navbar {
@@ -194,8 +270,25 @@
   .img img{
     max-width: 100vw;
     width: 90vw;
-    }
+    }    .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 210vh;
   }
+  .language-js{
+       height: 50vh;
+       font-family: Arial, sans-serif;
+    }
+    :not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  width: 80vw;
+  height: 50vh;
+    border-radius: 20px;
+  overflow-y: auto; 
+}
+    }
   </style>
 </head>
 <body>
@@ -220,141 +313,165 @@
   </div>
 <div class="par">
 
-<h2>Why an Interactive Dragon Cursor Effect Captures Attention</h2>
+<h2>Interactive Dragon Cursor Effect with SVG & JavaScript (Advanced Web Animation)</h2>
+<p>
+An <strong>interactive dragon cursor effect</strong> is a cutting-edge <strong>web animation technique</strong> that enhances user engagement using <strong>SVG animation</strong> and <strong>JavaScript cursor tracking</strong>. This type of <strong>custom cursor effect</strong> is widely used in modern <strong>frontend development</strong> to create immersive digital experiences.
+</p>
+
+<h2>Why Interactive Cursor Effects Improve User Engagement</h2>
 <ul>
-<li><strong>Unique Visual Experience:</strong> A dragon that follows the cursor creates an immediate sense of wonder and interactivity.</li>
-<li><strong>High Engagement:</strong> Users instinctively move the mouse to explore the animation, increasing time spent on the page.</li>
-<li><strong>Creative Storytelling:</strong> The dragon adds personality and narrative to an otherwise static interface.</li>
-<li><strong>Memorable Design:</strong> Interactive cursor effects are rare, making your website stand out instantly.</li>
-<li><strong>Lightweight & Flexible:</strong> SVG-based animations are scalable, crisp, and performance-friendly.</li>
+<li><strong>Unique Web Experience:</strong> A dynamic dragon cursor creates a highly engaging <strong>interactive UI</strong>.</li>
+<li><strong>Increased Time on Site:</strong> Users interact naturally with <strong>mouse animation effects</strong>, improving retention.</li>
+<li><strong>Modern Web Design Trend:</strong> Popular in <strong>creative coding</strong> and <strong>web design inspiration</strong> platforms.</li>
+<li><strong>Memorable Branding:</strong> Custom cursor animations help differentiate your website in competitive markets.</li>
+<li><strong>High Performance:</strong> <strong>SVG-based animations</strong> are lightweight and scalable across devices.</li>
 </ul>
 
-<h2>How to Build an Interactive Dragon Cursor Effect</h2>
+<h2>How to Create a Dragon Cursor Effect (Step-by-Step Tutorial)</h2>
 
-<h3>1. SVG Dragon Structure</h3>
+<h3>1. SVG Structure for Animated Cursor</h3>
 <p>
-Begin by designing the dragon using <code>&lt;svg&gt;</code> elements.
-Separate the dragon into logical parts such as head, body, tail, and wings using <code>&lt;g&gt;</code> groups.
-This structure allows smooth transformations and precise control over each segment.
-SVG ensures the dragon remains sharp on all screen sizes.
+Start by building the dragon using scalable <code>&lt;svg&gt;</code> elements. Group parts such as head, body, and tail with <code>&lt;g&gt;</code> tags to enable modular animation. This structure is essential for advanced <strong>SVG animation techniques</strong> used in professional <strong>web animation projects</strong>.
 </p>
 
-<h3>2. CSS Styling & Animation</h3>
+<h3>2. CSS Animation and Styling</h3>
 <p>
-Use CSS to define colors, gradients, and subtle shadows that give the dragon a sense of depth.
-Apply <code>transform-origin</code> to body parts to enable realistic rotation and movement.
-Transitions and keyframe animations can add idle motion, such as breathing or tail swaying.
-Keep animations smooth to maintain a natural, organic feel.
+Use modern CSS features like <code>transform</code>, <code>transform-origin</code>, and <code>@keyframes</code> to create smooth motion. Add gradients and shadows for depth, making the animation visually appealing and aligned with current <strong>web design trends in the US and Europe</strong>.
 </p>
 
-<h3>3. JavaScript Cursor Interaction</h3>
+<h3>3. JavaScript Cursor Tracking & Interaction</h3>
 <p>
-JavaScript handles the interactivity:
+Implement cursor interaction using JavaScript:
+</p>
 <ol>
-<li>Track mouse position using <code>mousemove</code> events.</li>
-<li>Calculate the angle between the dragon and the cursor.</li>
-<li>Rotate the head and body segments toward the cursor.</li>
-<li>Animate delayed movement for the tail to simulate fluid motion.</li>
+<li>Capture cursor position via <code>mousemove</code> events.</li>
+<li>Calculate direction and angle dynamically.</li>
+<li>Apply rotation transforms to SVG elements.</li>
+<li>Add delayed motion for realistic trailing animation.</li>
 </ol>
-This approach creates a lifelike follow effect without heavy physics engines.
+<p>
+This method is commonly used in <strong>interactive web animation</strong> and <strong>JavaScript animation libraries</strong>.
 </p>
 
-<h2>Benefits for User Experience & Branding</h2>
+<h2>Benefits for UX and Modern Web Design</h2>
 <p>
-An Interactive Dragon Cursor Effect transforms a simple website into an immersive experience.
-It communicates creativity, technical skill, and attention to detail.
-When used strategically, it enhances the brand without overwhelming the content.
+Using an <strong>interactive cursor animation</strong> significantly improves <strong>user experience (UX)</strong> and strengthens your brand identity in global markets.
 </p>
 
 <ul>
-<li><strong>Stronger Emotional Impact:</strong> Users feel entertained and connected to the interface.</li>
-<li><strong>Brand Personality:</strong> Perfect for gaming, fantasy, creative, or experimental tech brands.</li>
-<li><strong>Performance Efficient:</strong> SVG and optimized JavaScript ensure smooth interaction.</li>
+<li><strong>Higher Engagement Rates:</strong> Encourages user interaction.</li>
+<li><strong>Creative Branding:</strong> Ideal for gaming, tech startups, and digital agencies.</li>
+<li><strong>Optimized Performance:</strong> Works efficiently with modern browsers.</li>
 </ul>
 
-<h2>Accessibility & Best Practices</h2>
+<h2>SEO & Performance Best Practices</h2>
 <ul>
-<li>Disable or simplify the effect when <code>prefers-reduced-motion</code> is enabled.</li>
-<li>Ensure the cursor effect does not block clicks or form interactions.</li>
-<li>Keep CPU usage low by throttling animation updates.</li>
-<li>Provide a fallback for touch devices where cursors are not available.</li>
+<li>Use <code>prefers-reduced-motion</code> for accessibility compliance (important in EU regulations).</li>
+<li>Optimize SVG paths to reduce DOM complexity.</li>
+<li>Throttle animation updates for better performance.</li>
+<li>Ensure compatibility with mobile and touch devices.</li>
 </ul>
 
-<h2>Common Mistakes to Avoid</h2>
+<h2>Common SEO & Development Mistakes to Avoid</h2>
 <ul>
-<li>Overly complex SVG paths that reduce performance.</li>
-<li>Forcing the effect on mobile devices without adaptation.</li>
-<li>Excessive rotation that breaks the illusion of natural motion.</li>
-<li>Ignoring user control or preference to disable animations.</li>
+<li>Using heavy animations that affect Core Web Vitals.</li>
+<li>Ignoring accessibility standards (WCAG).</li>
+<li>Overusing effects that distract from content.</li>
 </ul>
 
-<h2>Conclusion</h2>
+<h2>Conclusion: A Modern JavaScript & SVG Animation Technique</h2>
 <p>
-The <strong>Interactive Dragon Cursor Effect with SVG & JavaScript</strong> blends creativity with technical precision.
-By combining SVG structure, CSS animations, and JavaScript interaction, you can create a magical and memorable experience.
-When optimized and accessible, this effect becomes a powerful visual signature rather than a gimmick.
+The <strong>Interactive Dragon Cursor Effect with SVG & JavaScript</strong> is a powerful example of modern <strong>web animation</strong> and <strong>frontend engineering</strong>. When optimized for performance and SEO, it becomes a valuable asset for attracting traffic from competitive markets like the US and Europe.
 </p>
 
 <div class="highlight">
-<p><strong>SEO Keywords:</strong> interactive dragon cursor, SVG cursor animation, JavaScript cursor effects, animated dragon SVG, creative mouse interaction, fantasy web animation, advanced SVG animation, cursor follow effect</p>
+<p>
+<strong>SEO Keywords:</strong> javascript animation, svg animation, custom cursor effect, interactive cursor effect, web animation ideas, frontend development, creative coding, interactive UI, cursor follow effect, animated SVG tutorial, modern web design, UX animation, JavaScript mouse tracking, advanced web animation
+</p>
 </div>
 
 </div>
 
+ <div class="videos">
+<iframe width="356" height="634" src="https://www.youtube.com/embed/gRgkTbLdT9A" title="Interactive Dragon Cursor Effect with SVG &amp; JavaScript #coding  #shrots" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+ </div>
 
+    <div class="card">
+  
 
-
-
-
-  <div class="con1">
-    <div class="countdown" id="countdown">
-    <span id="number">10</span> wait...
+  <div class="code-box" id="cpoy">
+    <span class="type" style="color: #ff6600;">html</span><button class="copy-btn"><i class='bx bxs-copy' style='color:#ffffff' ></i></button>
+    <pre><code id="code1" class="language-html"></code></pre>
   </div>
-
-  <div class="link-box" id="linkBox">
-    <a href="https://gist.github.com/77cod-ing/73e1d4e1f6e5a80a0dc9622a76076549" target="_blank">Go to code</a>
+  <div class="code-box">
+    <span class="type" style="color: #00ffff;">css</span><button class="copy-btn"><i class='bx bxs-copy' style='color:#ffffff' ></i></button>
+    <pre><code id="code2" class="language-js"></code></pre>
   </div>
+  <div class="code-box">
+    <span class="type" style="color: #ebdf00; ">JS</span><button class="copy-btn"><i class='bx bxs-copy' style='color:#ffffff' ></i></button>
+    <pre><code id="code3" class="language-js"></code></pre>
   </div>
+</div>
 
-  <script>
-    let counter = 10;
-    let timer = null;
-    const countdownEl = document.getElementById("countdown");
-    const numberEl = document.getElementById("number");
-    const linkBox = document.getElementById("linkBox");
 
-    function startCountdown() {
-      if (timer) return;
-      timer = setInterval(() => {
-        counter--;
-        numberEl.textContent = counter;
 
-        if (counter === 0) {
-          clearInterval(timer);
-          timer = null;
-          countdownEl.style.display = "none"; // يخفي العداد والكلمة
-          linkBox.style.display = "block";
-        }
-      }, 1000);
-    }
 
-    function stopCountdown() {
-      clearInterval(timer);
-      timer = null;
-    }
+</body>
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          startCountdown();
-        } else {
-          stopCountdown();
-        }
-      });
-    }, { threshold: 1.0 });
+<script>
+async function loadCode() {
+  const response = await fetch("https://gist.githubusercontent.com/77cod-ing/73e1d4e1f6e5a80a0dc9622a76076549/raw/b74c1221376ffefa158c300fcfcff9d28c4723d9/index.html");
+  const text = await response.text();
 
-    observer.observe(countdownEl);
-  </script>
+  const codeElement = document.getElementById("code1");
+  codeElement.textContent = text;
+
+  Prism.highlightElement(codeElement); // 👈 هذا هو السر
+}
+
+loadCode();
+async function loadCSS() {
+  const response = await fetch("https://gist.githubusercontent.com/77cod-ing/73e1d4e1f6e5a80a0dc9622a76076549/raw/b74c1221376ffefa158c300fcfcff9d28c4723d9/77cod-ing.css");
+  const text = await response.text();
+
+  const codeElement = document.getElementById("code2");
+  codeElement.textContent = text;
+
+  Prism.highlightElement(codeElement); // 👈 هذا هو السر
+}
+
+loadCSS();
+async function loadJS() {
+  const response = await fetch("https://gist.githubusercontent.com/77cod-ing/73e1d4e1f6e5a80a0dc9622a76076549/raw/b74c1221376ffefa158c300fcfcff9d28c4723d9/77cod-ing.js");
+  const text = await response.text();
+
+  const codeElement = document.getElementById("code3");
+  codeElement.textContent = text;
+
+  Prism.highlightElement(codeElement); // 👈 هذا هو السر
+}
+
+loadJS();
+
+</script>
+<script>
+document.querySelectorAll(".copy-btn").forEach(button => {
+    button.addEventListener("click", async () => {
+
+        const code = button.closest(".code-box").querySelector("code").innerText;
+
+        if (!code.trim()) return; // منع النسخ إذا الكود فارغ
+
+        await navigator.clipboard.writeText(code);
+
+        // تغيير نص الزر مؤقتًا لإظهار ✔️
+        const originalText = button.innerText;
+        button.innerText = "✔";
+        setTimeout(() => {
+            button.innerText = originalText;
+        }, 1500);
+    });
+});
+</script>
 </body>
 </html>
-
