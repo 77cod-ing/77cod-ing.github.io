@@ -99,12 +99,16 @@ body {
 
     .buttons {
       display: flex;
+      overflow: hidden;
       gap: 20px;
+    }
+    .buttons button{
+      width: 25vw;
     }
 
     .btn {
-      padding: 14px 28px;
-      font-size: 1rem;
+      padding: 2vh 5vw;
+      font-size: 2.5vw;
       border-radius: 8px;
       font-weight: bold;
       cursor: pointer;
@@ -196,7 +200,9 @@ body {
     .comment { color: #a43af6 ; font-style: italic; }
     .propert { color: #4bff5d; }
 
-
+.keyword , .string , .property , .value , .comment , .propert{
+ font-size: 2vw;
+}
 
 
 
@@ -375,7 +381,7 @@ body {
       margin-right: 20px;
     }
     .editor {
-  overflow: hidden; /* يمنع ظهور أي شريط */
+  overflow: hidden;
 }
 
 .container1{
@@ -489,6 +495,32 @@ body {
       transform: scale(1.09);
       box-shadow: 0 8px 10px #ffffff7a;
     }
+    footer{
+      width: 100vw;
+      background:#0d1325; 
+      padding:20px 0; 
+      text-align:center; 
+      margin-top:50px;
+    }
+    .icon{
+      width: 50%;
+      margin: 2vh auto;
+      display: flex;
+      font-size: 5vw;
+      justify-content: space-around;
+    }
+    .icon a{
+      height: auto;
+      overflow: hidden;
+      width: 10vw;
+    }
+    .icon a svg{
+      width: 3vw;
+      transition-duration: 0.8s;
+    }
+    .icon a svg:hover{
+    scale: calc(1.5);
+    }
 
 @media (max-width: 1000px) {
   .con1{
@@ -502,15 +534,21 @@ body {
     font-weight: 200;
     width: 300px;
   }
-}
-
-    /*  768px */
-@media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     height: auto;
     padding: 10px;
   }
+  .navbar a{
+    font-size: 2vw;
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+    /*  768px */
+@media (max-width: 768px) {
 
   .navbar .logo {
     margin-bottom: 10px;
@@ -525,16 +563,19 @@ body {
     padding: 0px;
   }
   .container h1{
-    font-size: 2rem;
+    font-size: 8vw;
   }
   .container p{
-    font-size: 1rem;
+    font-size: 2vw;
   }
   .con1{
-    max-width: 600px;
+    max-width: 100vw;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
   }
   .con2{
-    max-width: 300px;
+    max-width: 90vw;
     margin: 0;
     height: 60vh;
   }
@@ -542,7 +583,7 @@ body {
     font-size: 2rem;
   }
   .con2 .container1 p{
-    max-width: 300px;
+    width: 90vw;
     font-size: 1rem;
   }
   .con3{
@@ -554,9 +595,13 @@ body {
   }
 
   .code-card {
-    width: 100%; 
-    display: none;
+    width: 50%;
+    height: max-content;
+    overflow: hidden;
   }
+  .keyword , .string , .property , .value , .comment , .propert{
+ font-size: 2.5vw;
+}
   .main{
     display: none;
   }
