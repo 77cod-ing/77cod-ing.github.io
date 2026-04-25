@@ -39,19 +39,21 @@ body {
     /* Links */
     .nav-links {
       display: flex;
-      gap: 35px;
+      width: 60vw;
+      justify-content: space-around;
+      overflow-y: hidden;
     }
     .nav-links a {
       color: #d1d5db;
       text-decoration: none;
       font-size: 16px;
       font-weight: 600;
-      display: inline-block;          /* مهم عشان scale يشتغل */
+      display: inline-block;  
       transition: transform 0.3s ease, color 0.3s ease;
     }
     .nav-links a:hover {
-      color: #a855f7;                 /* تغيير اللون */
-      transform: scale(1.2);          /* تكبير بصري بدون تحريك باقي الروابط */
+      color: #a855f7;               
+      transform: scale(1.2); 
     }
     .con1{
       display: flex;
@@ -339,12 +341,12 @@ body {
     .editor {
       width: 90%;
       max-width: 700px;
-      height: 350px;
+      height: 550px;
       background: transparent;
       border-radius: 10px;
       padding: 20px;
       position: relative;
-      font-size: 14px;
+      font-size: 2vw;
       line-height: 1.5;
       overflow: auto;
       white-space: pre-wrap;
@@ -363,12 +365,12 @@ body {
     }
 
     /* Syntax highlight */
-    .keyword { color: #bb86fc; }
-    .function { color: #82aaff; }
-    .variable { color: #03dac6; }
-    .number { color: #f78c6c; }
-    .string { color: #fbc02d; }
-    .error-code { color: #cf6679; }
+    .keyword { color: #bb86fc; font-size: 2vw; }
+    .function { color: #82aaff; font-size: 2vw;}
+    .variable { color: #03dac6; font-size: 2vw;}
+    .number { color: #f78c6c; font-size: 2vw;}
+    .string { color: #fbc02d; font-size: 2vw;}
+    .error-code { color: #cf6679; font-size: 2vw;}
 
     /* Labels */
     .labels {
@@ -523,6 +525,9 @@ body {
     }
 
 @media (max-width: 1000px) {
+  .nav-links{
+      width: 100vw;
+  }
   .con1{
     max-width: 900px;
   }
@@ -549,7 +554,6 @@ body {
 
     /*  768px */
 @media (max-width: 768px) {
-
   .navbar .logo {
     margin-bottom: 10px;
   }
