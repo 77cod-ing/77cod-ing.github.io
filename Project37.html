@@ -4,97 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="Picture1.png">
-  <title>Modern Glassmorphism Login Page Design</title>
-    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+  <title>Glassmorphism Login Form with Particles.js (Free Code Tutorial 2026 + HTML CSS) | HTML CSS UI Design</title>
+<meta name="description" content="In this tutorial, you’ll learn how to build a stunning glassmorphism login interface enhanced with interactive Particles.js animations. This design combines transparency, blur effects, and smooth motion to deliver a visually impressive user experience that works perfectly across all devices. Whether you're a beginner or an experienced developer, this guide will help you level up your front-end skills.">  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
       <link href="https://networks0.github.io/copy.css" rel="stylesheet"/>
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<meta property="og:title" content="Glassmorphism Login Form with Particles.js">
+<meta property="og:description" content="Build a modern glassmorphism login UI with HTML & CSS + free source code.">
+<meta property="og:image" content="https://77cod-ing.github.io/Glassmorphism%20Login%20Form%20with%20Particles.js.png">
+<meta property="og:url" content="https://77cod-ing.github.io/Project37.html">
+<meta property="og:type" content="article">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
      crossorigin="anonymous"></script>
 
 
   <style>
-   
-  .card{
-    display: flex;
-    width: 99vw;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 90vh;
-    margin: 0 auto;
-    
-  }
-   .code-box{
-	background: #1e1e2f;
-    position: relative; 
-    border-radius: 8px;
-    
-}
-  .copy-btn {
-    
-    position: absolute;
-    top: 10px;
-    right: 10px;
-
-    width: 40px;
-    height: 40px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: #fff;
-    background: transparent;
-    border: none;
-    font-size: 1.4rem;
-    cursor: pointer;
-}
-   .language-js{
-       height: 50vh;
-       font-family: Arial, sans-serif;
-    }
-    :not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  width: 30vw;
-  height: 50vh;
-    border-radius: 20px;
-  overflow-y: auto; 
-}
-/* للمتصفحات المبنية على Chromium (Chrome, Edge) */
-pre::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-pre::-webkit-scrollbar-track {
-  background: transparent; /* 👈 خلفية شفافة */
-}
-
-pre::-webkit-scrollbar-thumb {
-  background-color: rgb(0, 242, 255); /* لون المقبض */
-  border-radius: 10px;
-}
-.type{
-  color: #fff;
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  width: 80px;
-  height: 60px;
-}
-
-
-    body {
-      background: linear-gradient(to right, #2c0e43 10%, #581c87);
-      font-family: Arial, sans-serif;
+    /* ===== RESET & BASE ===== */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
-
+  
+    :root {
+      --back: linear-gradient(to right, #002d54 10%, #001c35);
+      --premcolo: #00d9ff;
+    }
+  
+    body {
+      background: var(--back);
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+  
+    /* ===== NAVBAR ===== */
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -103,28 +49,30 @@ pre::-webkit-scrollbar-thumb {
       padding: 0 2rem;
       background-color: #0d1325;
     }
-
+  
     .logo {
       display: flex;
       align-items: center;
-      font-size: 22px;
+      font-size: 2.5vw;
       font-weight: bold;
       color: white;
       text-decoration: none;
     }
-
+  
     .logo-icon {
-      color: #a855f7;
-      font-size: 26px;
+      color: var(--premcolo);
+      font-size: 2vw;
       margin-right: 8px;
       letter-spacing: 2.5px;
     }
-
+  
     .nav-links {
+      gap: 2vw;
+      width: 60%;
       display: flex;
-      gap: 35px;
+      justify-content: space-around;
     }
-
+  
     .nav-links a {
       color: #d1d5db;
       text-decoration: none;
@@ -133,168 +81,466 @@ pre::-webkit-scrollbar-thumb {
       display: inline-block;
       transition: transform 0.3s ease, color 0.3s ease;
     }
-
+  
     .nav-links a:hover {
-      color: #a855f7;
+      color: var(--premcolo);
       transform: scale(1.2);
     }
-    /*linke*/
-    .con1 {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin: auto 0;
-      height: 50vh;
-    }
-    .countdown {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00ffcc;
-    }
-
-    .link-box {
-      display: none;
-      padding: 20px 40px;
-      background: #1e2a47;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-      transition: 0.3s;
-    }
-
-    .link-box a {
-      text-decoration: none;
-      color: #00ffcc;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    .link-box:hover {
-      background: #26385c;
-      transform: scale(1.05);
-    }
-    /**ret**/
-    .Ret{
-      margin: 5px 0 0 3rem;
+  
+    /* ===== RETURN BUTTON ===== */
+    .Ret {
+      margin: 10px 0 0 1.5rem;
       width: max-content;
     }
+  
     .Ret a {
-      font-size: 2rem;
+      font-size: 1.5rem;
       text-decoration: none;
       color: #ffffff;
     }
-    .Ret a span{
+  
+    .Ret a span {
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      width: 38px;
-      height: 38px;
+      width: 34px;
+      height: 34px;
       border: 2px solid #fff;
       border-radius: 50%;
     }
+  
     .Ret a:hover {
-  color: #00e1ff;
-}
+      color: #00e1ff;
+    }
+  
     .Ret a:hover span {
-  border-color: #00e1ff;
-}
-    /**img**/
-    .img{
+      border-color: #00e1ff;
+    }
+  
+    /* ===== MAIN IMAGE ===== */
+    .img {
       display: flex;
       justify-content: center;
-      margin: 2rem auto;
+      margin: 1.5rem auto;
+      padding: 0 1rem;
     }
-    .img img{
+  
+    .img img {
       border-radius: 8px;
-      max-width: 100vw;
-    width: 70vw;
-    height: 65vh;
-    }
-    /**par**/
-    .par{
-       font-family: Arial, sans-serif;
-      line-height: 1.7;
+      width: 70%;
       max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
+      height: auto;
+      display: block;
+    }
+  
+    /* ===== CONTENT LAYOUT ===== */
+    .conten {
+      display: flex;
+      width: 100%;
+      gap: 0;
+      align-items: flex-start;
+    }
+  
+    /* ===== ARTICLE / PAR ===== */
+    .par {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      flex: 1 1 0;
+      min-width: 0;
+      padding: 20px 3vw;
       color: #ffffff;
     }
-    h1, h2, h3 {
+  
+    h1,
+    h2,
+    h3 {
       color: #00c8ff;
     }
+  
     h1 {
-      font-size: 2.2rem;
+      font-size: clamp(1.4rem, 3.5vw, 2.2rem);
       margin-bottom: 20px;
     }
+  
     h2 {
       margin-top: 35px;
-      font-size: 1.6rem;
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
     }
+  
     h3 {
       margin-top: 25px;
-      font-size: 1.3rem;
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
     }
+  
     p {
       margin-bottom: 18px;
     }
+  
     ul {
       margin: 15px 0;
       padding-left: 25px;
     }
+  
     li {
       margin-bottom: 10px;
     }
+  
     .highlight {
       background: #000000;
       padding: 8px 12px;
       border-left: 4px solid #0073e6;
       margin: 20px 0;
     }
-    /**respon**/
-    @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .img img{
-    max-width: 100vw;
-    width: 90vw;
+  
+    /* ===== CODE CARDS ===== */
+    .card {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      gap: 20px;
+      padding: 20px 0;
+      min-height: 0;
     }
-		.navbar nav a{
-    font-size: 3vw;
-  }
-  }
-  hr{
-    width: 80vw;
-  }
-  .down{
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    align-items: center;
-    width: 80vw;
-    color: #fff;
-    font-size: 1.5rem;
-    border: 2px solid #fff;
-    border-radius: 20px;
-  }
-  .down img{
-    width: 50vw;
-  }
-  .down i{
-    color: rgb(0, 255, 255);
-  }
+  
+    .code-box {
+      background: #1e1e2f;
+      position: relative;
+      border-radius: 8px;
+      flex: 1 1 300px;
+      min-width: 0;
+      max-width: 100%;
+    }
+  
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      background: transparent;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      z-index: 2;
+    }
+  
+    .type {
+      color: #fff;
+      font-size: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      width: 80px;
+      height: 50px;
+    }
+  
+    :not(pre)>code[class*="language-"],
+    pre[class*="language-"] {
+      width: 100%;
+      max-width: 100%;
+      height: 50vh;
+      border-radius: 20px;
+      overflow-y: auto;
+      overflow-x: auto;
+    }
+  
+    /* Scrollbar */
+    pre::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+  
+    pre::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  
+    pre::-webkit-scrollbar-thumb {
+      background-color: #00f2ff;
+      border-radius: 10px;
+    }
+  
+    /* ===== SIDEBAR ===== */
+    .more {
+      border: 3px solid #ffffff;
+      width: 25vw;
+      flex-shrink: 0;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-top: 5vh;
+    }
+  
+    .internal-sidebar h3 {
+      color: #000000;
+      font-size: 1.1rem;
+      background: #fff;
+      margin: 0vh auto;
+      height: 5vh;
+      text-align: center;
+      padding-top: 5px;
+      width: 80%;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  
+    .con10 {
+      font-family: Inter, "Segoe UI", Tahoma, sans-serif;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      padding: 16px;
+      direction: ltr;
+    }
+  
+    .con10 .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+  
+    .card-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 1 / 1;
+      box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+      transform: translateZ(0);
+      flex-shrink: 0;
+    }
+  
+    .card-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+  
+    .card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.55) 100%);
+      transition: background 0.3s ease;
+      pointer-events: none;
+    }
+  
+    .card-accent {
+      position: absolute;
+      inset: 0;
+      background: var(--accent, var(--premcolo));
+      mix-blend-mode: overlay;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+  
+    .card-link:hover .card-accent {
+      opacity: 0.3;
+    }
+  
+    .card-title {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.82rem;
+      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.55);
+      pointer-events: none;
+      line-height: 1.3;
+    }
+  
+    .card-desc {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 0.78rem;
+      opacity: 0.9;
+      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+    }
+  
+    hr {
+      width: 80vw;
+      margin: 10px auto;
+    }
+  
+    .img1 {
+      height: 40vh;
+      width: auto;
+      background: url('https://77cod-ing.github.io/login-preview.gif') no-repeat;
+      background-size: contain;
+      margin-left: 20vw;
+    }
+  
+  
+  
+    /* ===== RESPONSIVE BREAKPOINTS ===== */
+  
+    /* Large tablets and small desktops */
+    @media (max-width: 1100px) {
+      .more {
+        width: 220px;
+      }
+  
+      .navbar {
+        flex-direction: column;
+        height: 10vh;
+        padding-top: 1vh;
+      }
+  
+      .nav-links {
+        gap: 2vw;
+        width: 90vw;
+        display: flex;
+        justify-content: space-around;
+      }
+  
+      .nav-links a {
+        margin-top: -3vh;
+      }
+    }
+  
+    /* Tablets */
+    @media (max-width: 900px) {
+      .conten {
+        flex-direction: column;
+        align-items: stretch;
+      }
+  
+      .more {
+        width: calc(100% - 2rem);
+        margin: 0 1rem 1rem;
+        border-radius: 16px;
+      }
+  
+      .con10 .gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+  
+      .card-link {
+        flex: 1 1 calc(50% - 12px);
+        min-width: 130px;
+        max-width: calc(50% - 6px);
+      }
+  
+      .img img {
+        width: 85%;
+      }
+    }
+  
+    /* Mobile landscape & small tablets */
+    @media (max-width: 640px) {
+      .navbar {
+        padding: 10px 1rem;
+        gap: 8px;
+      }
+  
+      .nav-links {
+        gap: 2vw;
+        width: 100vw;
+        display: flex;
+        justify-content: space-around;
+      }
+  
+      .nav-links a {
+        font-size: 2vw;
+      }
+  
+      .logo {
+        font-size: 18px;
+      }
+  
+      .img img {
+        width: 95%;
+      }
+  
+      .par {
+        padding: 15px 1rem;
+      }
+  
+      .card {
+        gap: 16px;
+        padding: 16px 0;
+      }
+  
+      .code-box {
+        flex: 1 1 100%;
+      }
+  
+      :not(pre)>code[class*="language-"],
+      pre[class*="language-"] {
+        height: 40vh;
+      }
+  
+      .more {
+        width: calc(100% - 1.5rem);
+        margin: 0 0.75rem 1rem;
+      }
+  
+      .con10 .gallery {
+        gap: 12px;
+      }
+  
+      .card-link {
+        flex: 1 1 100%;
+        max-width: 100%;
+        aspect-ratio: 16 / 7;
+      }
+  
+      .card-title {
+        font-size: 2vw;
+      }
+    }
+  
+    /* Small mobile */
+    @media (max-width: 420px) {
+  
+      .logo {
+        font-size: 16px;
+      }
+  
+      .logo-icon {
+        font-size: 20px;
+      }
+  
+      .Ret a {
+        font-size: 1.2rem;
+      }
+  
+      h1 {
+        font-size: 1.25rem;
+      }
+  
+      h2 {
+        font-size: 1.1rem;
+      }
+  
+      h3 {
+        font-size: 1rem;
+      }
+  
+      .type {
+        font-size: 1.1rem;
+        width: 60px;
+        height: 40px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -315,63 +561,72 @@ pre::-webkit-scrollbar-thumb {
     <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
   </div>
   <div class="img">
-    <img src='https://i.suar.me/Np3EO/m' alt="subscribe.box">
+    <img src='https://77cod-ing.github.io/Glassmorphism%20Login%20Form%20with%20Particles.js.png' alt="glassmorphism login form html css particles js">
   </div>
+  <div class="conten">
 <div class="par">
 
-  <h2>Modern Glassmorphism Login Page Design</h2>
+  <h1>How to Build a Glassmorphism Login Form with Particles.js (Step-by-Step Guide)</h1>
+
+  <p>
+    Want to build a <strong>glassmorphism login form</strong> with animated backgrounds? This free tutorial shows you how to create a stunning <strong>glassmorphism login page</strong> using only <strong>HTML and CSS</strong>, enhanced with a <strong>Particles.js animation</strong>. The result is a modern, responsive login interface featuring transparency, blur effects, and smooth motion — perfect for portfolios, web apps, or front-end practice projects.
+  </p>
+
+
   <ul>
-    <li><strong>Glass Effect UI:</strong> Transparent login box with blur effect creates a modern and elegant interface.</li>
-    <li><strong>Centered Layout:</strong> Uses Flexbox to perfectly center the login form on the screen.</li>
-    <li><strong>Full-Screen Background:</strong> Background images cover the entire page without distortion.</li>
-    <li><strong>Smooth Animations:</strong> Falling leaves animation adds a dynamic and engaging feel.</li>
-    <li><strong>Clean User Interface:</strong> Simple and user-friendly input fields for better experience.</li>
+    <li><strong>CSS Glassmorphism Effect:</strong> Semi-transparent login box with <code>backdrop-filter: blur()</code> for a sleek, frosted-glass UI.</li>
+    <li><strong>Flexbox Centered Layout:</strong> The login form is perfectly centered on all screen sizes using CSS Flexbox.</li>
+    <li><strong>Full-Screen Background Image:</strong> Background covers the entire viewport without distortion using <code>background-size: cover</code>.</li>
+    <li><strong>CSS Falling Leaves Animation:</strong> Pure CSS <code>@keyframes</code> animation adds a dynamic, engaging visual effect.</li>
+    <li><strong>Clean & Accessible Input Fields:</strong> Simple, styled form inputs for a smooth and user-friendly login experience.</li>
   </ul>
 
-  <h2>How the Login Page is Built</h2>
 
-  <h3>1. HTML Structure</h3>
+  <h2>How to Build a Glassmorphism Login Page with HTML & CSS</h2>
+
+
+  <h3>1. HTML Structure of the Login Form</h3>
   <p>
-    The page is structured using basic HTML elements like <code>&lt;section&gt;</code>, <code>&lt;div&gt;</code>, and <code>&lt;input&gt;</code>.
-    This ensures a clear layout for the login form and background elements.
+    The login page is built using semantic HTML elements including <code>&lt;section&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;div&gt;</code>, and <code>&lt;input&gt;</code>. Using semantic HTML improves both accessibility and SEO crawlability.
   </p>
 
-  <h3>2. CSS Design & Glassmorphism</h3>
+  <h3>2. CSS Glassmorphism Design</h3>
   <p>
-    CSS is used to apply the Glassmorphism effect using transparency and <code>backdrop-filter: blur()</code>.
-    This creates a stylish glass-like appearance for the login box.
+    The <strong>glassmorphism effect</strong> is achieved with CSS using <code>background: rgba()</code> for transparency and <code>backdrop-filter: blur()</code> for the frosted-glass look. This technique creates a modern, layered UI that stands out from traditional flat designs.
   </p>
 
-  <h3>3. Background & Layers</h3>
+  <h3>3. Layered Background with Depth Effect</h3>
   <p>
-    Multiple background images like trees and main background are layered using absolute positioning and z-index.
-    This creates depth and a visually appealing scene.
+    Multiple background layers — including tree silhouettes and a full-screen image — are stacked using CSS <code>position: absolute</code> and <code>z-index</code>. This layering technique adds depth and makes the scene visually rich without JavaScript.
   </p>
 
-  <h3>4. Input Fields & Button</h3>
+  <h3>4. Styled Input Fields & Login Button</h3>
   <p>
-    Input fields are styled for clarity and ease of use, while the login button includes a hover effect for better interaction.
+    Input fields use clean CSS styling for readability and usability. The login button includes a <code>:hover</code> transition effect that provides clear visual feedback, improving the overall user experience (UX).
   </p>
 
-  <h3>5. CSS Animation</h3>
+  <h3>5. CSS Keyframe Animation (Falling Leaves)</h3>
   <p>
-    The falling leaves animation is created using <code>@keyframes</code>, allowing elements to move, rotate, and fade smoothly.
+    The animated falling leaves are built entirely with <strong>CSS <code>@keyframes</code></strong> — no JavaScript required. Elements move, rotate, and fade using smooth transitions, adding a polished feel to the login page.
   </p>
 
-  <h2>Key Features</h2>
+
+  <h2>Key Features of This Free HTML & CSS Login Form</h2>
   <ul>
-    <li><strong>No JavaScript Needed:</strong> Fully functional visually using only HTML and CSS.</li>
-    <li><strong>Modern Design:</strong> Clean and professional UI.</li>
-    <li><strong>Interactive Feel:</strong> Animations enhance user engagement.</li>
+    <li><strong>100% HTML & CSS Only:</strong> No JavaScript or external libraries needed for the visual effects.</li>
+    <li><strong>Modern Glassmorphism UI:</strong> Clean, professional frosted-glass design suitable for any web project.</li>
+    <li><strong>Fully Animated:</strong> CSS animations keep users engaged without impacting performance.</li>
+    <li><strong>Free to Download & Use:</strong> Full source code is available for personal and commercial projects.</li>
   </ul>
 
-  <h2>Conclusion</h2>
+
+  <h2>Final Thoughts</h2>
   <p>
-    This login page is a great example of modern front-end design using only HTML and CSS.
-    It combines visual effects, animations, and clean layout to deliver a professional user experience.
+    This <strong>glassmorphism login form</strong> is a great showcase of what's possible with pure <strong>HTML and CSS</strong>. By combining <strong>CSS backdrop-filter</strong>, layered backgrounds, and <strong>@keyframes animations</strong>, you can create a login page that looks professional and feels interactive — with zero JavaScript. Download the free source code, follow the tutorial, and start building your own glass-effect UI today.
   </p>
 
-</div>
+
+
 
 <hr>
 
@@ -390,8 +645,12 @@ pre::-webkit-scrollbar-thumb {
   </div>
 
 
+<div class="img1">
+  <h6>Live code </h6>
+</div>
+
+  <p style="color: #fff;font-size: 2vw;">You can copy the full source code below and use it in your projects.👇</p>
     <div class="card">
-  
 
   <div class="code-box" id="cpoy">
     <span class="type" style="color: #ff6600;">html</span><button class="copy-btn"><i class='bx bxs-copy' style='color:#ffffff' ></i></button>
@@ -402,11 +661,45 @@ pre::-webkit-scrollbar-thumb {
     <pre><code id="code2" class="language-js"></code></pre>
   </div>
 </div>
+</div>
+
+<div class="more">
+  <aside class="internal-sidebar">
+    <h3>🔗 Explore More</h3>
+    <div class="con10">
+      <div class="gallery">
+        <a class="card-link" href="Project40.html" aria-label="View CSS neon digital clock project" id="pro39">
+          <img class="card-img" src='https://i.suar.me/Ep114/m' alt="CSS Neon Digital Clock Animation" />
+          <div class="card-overlay"></div>
+          <div class="card-accent" aria-hidden="true"></div>
+          <div class="card-title">CSS Neon Digital Clock Animation – HTML CSS JavaScript Project for Beginners</div>
+        </a>
+        <a class="card-link" href="Project39.html" aria-label="View CSS neon digital clock project">
+          <img class="card-img" src='https://i.suar.me/jvZZv/m'
+            alt="Creative Animated Button with Star Effects Using HTML & CSS" />
+          <div class="card-overlay"></div>
+          <div class="card-accent" aria-hidden="true"></div>
+          <div class="card-title">Creative Animated Button with Star Effects Using HTML & CSS</div>
+        </a>
+        <a class="card-link" href="Project38.html" aria-label="View CSS neon digital clock project" id="pro38">
+          <img class="card-img" src='https://i.suar.me/og7YP/m' alt="Modern voice player design JavaScript tutorial" />
+          <div class="card-overlay"></div>
+          <div class="card-accent" aria-hidden="true"></div>
+          <div class="card-title">Modern Voice Player Design with JavaScript</div>
+        </a>
+        <a class="card-link" href="Project37.html" aria-label="View CSS neon digital clock project">
+          <img class="card-img" src='https://i.suar.me/Np3EO/m' alt="Modern Glassmorphism Login Page Design" />
+          <div class="card-overlay"></div>
+          <div class="card-accent" aria-hidden="true"></div>
+          <div class="card-title">Modern Glassmorphism Login Page Design</div>
+        </a>
+      </div>
+    </div>
+  </aside>
+</div>
+</div>
 
 
-
-
-</body>
 
 <script>
 async function loadCode() {
@@ -453,7 +746,112 @@ document.querySelectorAll(".copy-btn").forEach(button => {
     });
 });
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
 
+    {
+      "@type": "WebSite",
+      "@id": "https://77cod-ing.github.io/#website",
+      "url": "https://77cod-ing.github.io/",
+      "name": "77cod-ing",
+      "publisher": {
+        "@id": "https://77cod-ing.github.io/#organization"
+      }
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://77cod-ing.github.io/#organization",
+      "name": "77cod-ing",
+      "url": "https://77cod-ing.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Picture1.png"
+      }
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://77cod-ing.github.io/Project37.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://77cod-ing.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://77cod-ing.github.io/projects.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Glassmorphism Login Form",
+          "item": "https://77cod-ing.github.io/Project37.html"
+        }
+      ]
+    },
+
+    {
+      "@type": "TechArticle",
+      "@id": "https://77cod-ing.github.io/Project37.html#article",
+      "headline": "Glassmorphism Login Form with Particles.js – Free Code + Full Tutorial 2026",
+      "description": "Build a modern glassmorphism login form with animated Particles.js background. Step-by-step tutorial with free source code and responsive design.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Glassmorphism%20Login%20Form%20with%20Particles.js.png",
+        "width": 1200,
+        "height": 630
+      },
+      "author": {
+        "@type": "Person",
+        "name": "77cod-ing"
+      },
+      "publisher": {
+        "@id": "https://77cod-ing.github.io/#organization"
+      },
+      "datePublished": "2026-05-03",
+      "dateModified": "2026-05-03",
+      "inLanguage": "en",
+      "articleSection": "Web Development",
+      "wordCount": 650,
+      "keywords": [
+        "glassmorphism login form",
+        "particles.js login UI",
+        "animated login form CSS",
+        "HTML CSS login form",
+        "modern UI design",
+        "frontend tutorial",
+        "glass effect CSS",
+        "responsive login page"
+      ],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://77cod-ing.github.io/Project37.html"
+      }
+    },
+
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Glassmorphism Login Form with Particles.js",
+      "codeLanguage": "HTML, CSS, JavaScript",
+      "programmingLanguage": ["HTML", "CSS", "JavaScript"],
+      "runtimePlatform": "Web Browser",
+      "author": {
+        "@type": "Person",
+        "name": "77cod-ing"
+      },
+      "url": "https://77cod-ing.github.io/Project37.html"
+    }
+
+  ]
+}
+</script>
 
 </body>
 </html>
