@@ -397,11 +397,55 @@
 }
 
    
+    /* =====  Breadcrumb ===== */
 
+
+.breadcrumb {
+  padding: 15px 20px;
+}
+
+.breadcrumb ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+  color: #94a3b8;
+  font-size: 14px;
+  position: relative;
+}
+
+.breadcrumb li a {
+  color: #e2e8f0;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.breadcrumb li a:hover {
+  background: #00e0f920;
+  color: white;
+}
 /*=== Ads ===*/
-.ad-container {
-  max-width: 100%;
-  overflow: hidden;
+.ad-container{
+   width:100%;
+   max-width:100%;
+   overflow:hidden;
+   margin:20px auto;
+}
+
+.adsbygoogle{
+   max-width:100% !important;
 }
     /* ===== RESPONSIVE BREAKPOINTS ===== */
 
@@ -582,16 +626,18 @@
   </div>
 
   <div class="conten">
-    <div class="ad-container">
-      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXX" data-ad-slot="XXXX" data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-    </div>
     
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+    
     <div class="par">
 
+    <div class="ad-container">
+         <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-XXXX"
+              data-ad-slot="XXXX"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+      </div>
       <div class="card">
         <div class="code-box" id="cpoy">
           <span class="type" style="color: #ff6600;">html</span>
