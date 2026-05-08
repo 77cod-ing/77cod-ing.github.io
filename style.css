@@ -213,7 +213,7 @@ p {
   left: 20px;
   width: 12px;
   height: 12px;
-  background: #000000;
+  background: #b91010;
   border-radius: 50%;
   box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
 }
@@ -271,7 +271,7 @@ pre {
   margin: 80px auto 60px;
   padding: 48px 40px;
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(168, 85, 247, 0.18);
+  border: 1px solid rgba(85, 231, 247, 0.18);
   border-radius: 16px;
   backdrop-filter: blur(6px);
 }
@@ -311,7 +311,7 @@ pre {
   position: relative;
   padding: 12px 14px 12px 36px;
   margin-bottom: 10px;
-  background: rgba(168, 85, 247, 0.08);
+  background: rgba(85, 234, 247, 0.08);
   border-left: 3px solid var(--premcolo);
   border-radius: 0 8px 8px 0;
   font-size: 0.97rem;
@@ -332,7 +332,7 @@ pre {
 }
 
 .seo-content ul li:hover {
-  background: rgba(168, 85, 247, 0.14);
+  background: rgba(85, 247, 244, 0.14);
 }
 
 .seo-content ul li a {
@@ -352,7 +352,7 @@ pre {
   color: var(--premcolo);
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 1px solid rgba(192, 132, 252, 0.4);
+  border-bottom: 1px solid rgba(132, 246, 252, 0.4);
   transition: border-color 0.2s ease, color 0.2s ease;
 }
 
@@ -364,7 +364,7 @@ pre {
 .seo-content code {
   font-family: 'Courier New', Courier, monospace;
   font-size: 0.88rem;
-  background: rgba(168, 85, 247, 0.15);
+  background: rgba(85, 244, 247, 0.15);
   color: var(--seco);
   padding: 2px 7px;
   border-radius: 4px;
@@ -431,12 +431,12 @@ pre {
   color: var(--premcolo);
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 1px solid rgba(192, 132, 252, 0.4);
+  border-bottom: 1px solid rgba(132, 240, 252, 0.4);
   transition: color 0.2s, border-color 0.2s;
 }
 
 .seo-content details p a:hover {
-  color: #e9d5ff;
+  color: var(--seco);
   border-bottom-color: var(--premcolo);
 }
 
