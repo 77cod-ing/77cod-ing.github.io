@@ -1,405 +1,751 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="projects.css">
-    <link rel="icon" type="image/png" href="Picture1.png">
-    <title>77cod-ing|Projects</title>
- 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ══════════════════════════════════════════════
+       SEO META – TITLE & DESCRIPTION
+  ══════════════════════════════════════════════ -->
+  <title>40+ HTML CSS JavaScript Projects – Free Frontend Code Examples & UI Snippets</title>
+  <meta name="description"
+    content="Browse 40+ free HTML, CSS &amp; JavaScript projects: glassmorphism logins, neon clocks, animated buttons, carousels &amp; more. Copy-paste UI code for any web dev project." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://77cod-ing.com/projects.html" />
+
+  <!-- Robots -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <!-- Keywords (supplementary signal) -->
+  <meta name="keywords"
+    content="HTML CSS JavaScript projects, frontend code examples, UI components, web development tutorials, free code snippets, glassmorphism, animated buttons, login page design" />
+
+  <!-- Author / Publisher -->
+  <meta name="author" content="77cod_ing" />
+
+  <!-- ══════════════════════════════════════════════
+       OPEN GRAPH
+  ══════════════════════════════════════════════ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="77cod_ing" />
+  <meta property="og:url" content="https://77cod-ing.com/projects.html" />
+  <meta property="og:title" content="40+ HTML CSS JavaScript Projects – Free Frontend UI Code Examples" />
+  <meta property="og:description"
+    content="Explore 40+ copy-paste HTML, CSS &amp; JavaScript projects: glassmorphism, neon animations, carousels, login pages &amp; more. Perfect for frontend devs." />
+  <meta property="og:image" content="https://i.suar.me/Ep114/m" />
+  <meta property="og:image:alt" content="CSS Neon Digital Clock – HTML CSS JavaScript project preview" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- ══════════════════════════════════════════════
+       TWITTER CARD
+  ══════════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@77cod_ing" />
+  <meta name="twitter:title" content="40+ HTML CSS JavaScript Projects – Free Frontend UI Code Examples" />
+  <meta name="twitter:description"
+    content="Browse 40+ free, copy-paste HTML/CSS/JS projects: animated buttons, login forms, neon clocks, carousels &amp; more." />
+  <meta name="twitter:image" content="https://i.suar.me/Ep114/m" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Picture1.png" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="projects.css" />
+
+  <!-- ══════════════════════════════════════════════
+       JSON-LD STRUCTURED DATA
+  ══════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+
+      {
+        "@type": "CollectionPage",
+        "@id": "https://77cod-ing.com/projects.html#webpage",
+        "url": "https://77cod-ing.com/projects.html",
+        "name": "40+ HTML CSS JavaScript Projects – Free Frontend Code Examples & UI Snippets",
+        "description": "A curated collection of 40+ free HTML, CSS, and JavaScript projects including glassmorphism logins, neon animations, animated buttons, carousels, and more UI components.",
+        "inLanguage": "en-US",
+        "isPartOf": { "@id": "https://77cod-ing.com/#website" },
+        "breadcrumb": { "@id": "https://77cod-ing.com/projects.html#breadcrumb" },
+        "publisher": {
+          "@type": "Person",
+          "name": "77cod_ing",
+          "url": "https://77cod-ing.com"
+        }
+      },
+
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://77cod-ing.com/projects.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home",     "item": "https://77cod-ing.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.com/projects.html" }
+        ]
+      },
+
+      {
+        "@type": "ItemList",
+        "@id": "https://77cod-ing.com/projects.html#projects",
+        "name": "HTML CSS JavaScript Frontend Projects",
+        "description": "40+ free, copy-paste HTML, CSS, and JavaScript UI projects and code snippets for web developers.",
+        "numberOfItems": 40,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1,  "name": "CSS Neon Digital Clock Animation",                          "url": "https://77cod-ing.com/Project40.html",  "description": "A glowing neon digital clock built with pure HTML, CSS, and JavaScript — great for beginners learning frontend animations." },
+          { "@type": "ListItem", "position": 2,  "name": "Animated Star-Effect Button in HTML & CSS",                 "url": "https://77cod-ing.com/Project39.html",  "description": "Creative animated button with star particle effects using only HTML and CSS for modern UI design." },
+          { "@type": "ListItem", "position": 3,  "name": "Modern Voice Player UI with JavaScript",                    "url": "https://77cod-ing.com/Project38.html",  "description": "A sleek, modern voice/audio player designed with HTML, CSS, and JavaScript." },
+          { "@type": "ListItem", "position": 4,  "name": "Glassmorphism Login Page Design",                           "url": "https://77cod-ing.com/Project37.html",  "description": "Modern glassmorphism-style login page with blur backdrop effect using HTML and CSS." },
+          { "@type": "ListItem", "position": 5,  "name": "Interactive Dragon Cursor Effect",                          "url": "https://77cod-ing.com/Project33.html",  "description": "A captivating dragon-trail cursor animation built with HTML, CSS, and JavaScript." },
+          { "@type": "ListItem", "position": 6,  "name": "3D Flip Login Interface",                                   "url": "https://77cod-ing.com/Project34.html",  "description": "A 3D card-flip login and registration form with smooth CSS3 transitions for better user engagement." },
+          { "@type": "ListItem", "position": 7,  "name": "Custom Checkbox Design with CSS",                           "url": "https://77cod-ing.com/Project35.html",  "description": "Custom-styled checkboxes with animations that improve accessibility and user experience." },
+          { "@type": "ListItem", "position": 8,  "name": "Gamers World Gaming Landing Page",                          "url": "https://77cod-ing.com/Project36.html",  "description": "A fully responsive gaming discovery landing page built with HTML, CSS, and JavaScript." },
+          { "@type": "ListItem", "position": 9,  "name": "File Upload Dropzone UI (v1)",                              "url": "https://77cod-ing.com/Project29.html",  "description": "Modern drag-and-drop file upload zone component styled with HTML, CSS, and JavaScript." },
+          { "@type": "ListItem", "position": 10, "name": "File Upload Dropzone UI (v2)",                              "url": "https://77cod-ing.com/Project30.html",  "description": "Alternative drag-and-drop file upload zone with a clean, minimal design." },
+          { "@type": "ListItem", "position": 11, "name": "Gooey SVG Navigation Bar Animation (v1)",                   "url": "https://77cod-ing.com/Project31.html",  "description": "Smooth gooey SVG navigation bar animation using CSS and SVG filter effects." },
+          { "@type": "ListItem", "position": 12, "name": "Gooey SVG Navigation Bar Animation (v2)",                   "url": "https://77cod-ing.com/Project32.html",  "description": "A variant gooey navigation bar with fluid blob transitions using SVG and CSS." },
+          { "@type": "ListItem", "position": 13, "name": "Animated Tag Input Field UI",                               "url": "https://77cod-ing.com/Project25.html",  "description": "Modern tag input component with CSS animations for better UX in web forms." },
+          { "@type": "ListItem", "position": 14, "name": "Portfolio Landing Page with HTML CSS JS",                   "url": "https://77cod-ing.com/Project26.html",  "description": "A personal branding portfolio landing page template with animated sections." },
+          { "@type": "ListItem", "position": 15, "name": "Responsive Image Gallery with CSS",                         "url": "https://77cod-ing.com/Project27.html",  "description": "Clean, responsive CSS image gallery with hover overlay effects for portfolios." },
+          { "@type": "ListItem", "position": 16, "name": "Gooey Navigation Menu Animation",                           "url": "https://77cod-ing.com/Project28.html",  "description": "Creative gooey navigation menu with CSS and JavaScript liquid animation effects." },
+          { "@type": "ListItem", "position": 17, "name": "Glowing Animated Text Button",                              "url": "https://77cod-ing.com/Project21.html",  "description": "A pulsing, glowing animated CTA button using pure HTML and CSS keyframe animations." },
+          { "@type": "ListItem", "position": 18, "name": "Animated Navigation Bar with Floating Indicator",           "url": "https://77cod-ing.com/Project22.html",  "description": "Smooth floating active-state indicator navigation bar built with HTML, CSS, and JavaScript." },
+          { "@type": "ListItem", "position": 19, "name": "Animated Login & Signup Page",                              "url": "https://77cod-ing.com/Project23.html",  "description": "Modern animated sliding login and signup page using HTML, CSS, and JavaScript transitions." },
+          { "@type": "ListItem", "position": 20, "name": "Expanding Circle Animated Button",                          "url": "https://77cod-ing.com/project24.html",  "description": "An animated button with expanding circle reveal and directional arrow effects in HTML and CSS." },
+          { "@type": "ListItem", "position": 21, "name": "Skewed Diagonal Navigation Menu",                           "url": "https://77cod-ing.com/Project17.html",  "description": "A bold skewed navigation menu design using CSS transforms for a modern editorial look." },
+          { "@type": "ListItem", "position": 22, "name": "Animated Card with CSS Wave Effect",                        "url": "https://77cod-ing.com/Project18.html",  "description": "Stylish UI card component with animated CSS wave background for engaging designs." },
+          { "@type": "ListItem", "position": 23, "name": "3D Flipping Card with Glow Animation",                     "url": "https://77cod-ing.com/Project19.html",  "description": "3D CSS card flip with neon glow animation — a stunning frontend interaction pattern." },
+          { "@type": "ListItem", "position": 24, "name": "3D Interactive Support Message Carousel",                   "url": "https://77cod-ing.com/Project20.html",  "description": "3D rotating carousel for support or testimonial messages using HTML and CSS perspective." },
+          { "@type": "ListItem", "position": 25, "name": "Neon Cursor Trail Animation",                               "url": "https://77cod-ing.com/Project13.html",  "description": "Custom neon glowing cursor trail animation with HTML, CSS, and JavaScript canvas." },
+          { "@type": "ListItem", "position": 26, "name": "Electric Neon Card with SVG Animation",                     "url": "https://77cod-ing.com/Project14.html",  "description": "Electric neon-bordered card animation using CSS and SVG stroke-dashoffset techniques." },
+          { "@type": "ListItem", "position": 27, "name": "Glassmorphism 3D Card UI Component",                        "url": "https://77cod-ing.com/Project15.html",  "description": "A glassmorphism-styled 3D interactive card UI component built with CSS filters and transforms." },
+          { "@type": "ListItem", "position": 28, "name": "CSS Perspective Tilt Card Effect",                          "url": "https://77cod-ing.com/Project16.html",  "description": "Mouse-driven CSS perspective tilt card effect for immersive UI interactions." },
+          { "@type": "ListItem", "position": 29, "name": "Interactive Download Button Animation",                     "url": "https://77cod-ing.com/Project9.html",   "description": "Animated download button with progress state transitions using HTML and CSS." },
+          { "@type": "ListItem", "position": 30, "name": "CSS Star Rating System",                                    "url": "https://77cod-ing.com/Project10.html",  "description": "Interactive star rating widget built with pure HTML and CSS — no JavaScript required." },
+          { "@type": "ListItem", "position": 31, "name": "Animated Typewriter Text Effect",                           "url": "https://77cod-ing.com/Project11.html",  "description": "Smooth CSS typewriter text animation effect for hero sections and landing pages." },
+          { "@type": "ListItem", "position": 32, "name": "Particles Login Page",                                      "url": "https://77cod-ing.com/Project12.html",  "description": "Login form with interactive particle background animation using HTML, CSS, and JavaScript." },
+          { "@type": "ListItem", "position": 33, "name": "Email Subscribe Box UI Component",                          "url": "https://77cod-ing.com/Project1.html",   "description": "Stylish email subscribe form component for increasing newsletter sign-ups and AdSense approval." },
+          { "@type": "ListItem", "position": 34, "name": "Glassmorphism Login Page with Blur Effect",                 "url": "https://77cod-ing.com/Project6.html",   "description": "Classic glassmorphism login form with CSS backdrop-filter blur for modern web apps." },
+          { "@type": "ListItem", "position": 35, "name": "Terminal Typing Animation",                                 "url": "https://77cod-ing.com/Project7.html",   "description": "Build a retro terminal typing animation with blinking cursor using HTML and CSS." },
+          { "@type": "ListItem", "position": 36, "name": "Animated Subscribe Button",                                 "url": "https://77cod-ing.com/Project8.html",   "description": "Animated subscribe/call-to-action button with state transition effects in HTML and CSS." },
+          { "@type": "ListItem", "position": 37, "name": "Install VS Code on Windows – Step-by-Step Guide",           "url": "https://77cod-ing.com/Project2.html",   "description": "Step-by-step visual guide on how to download and install Visual Studio Code on Windows." },
+          { "@type": "ListItem", "position": 38, "name": "Theater Search Bar with Floating Placeholder",             "url": "https://77cod-ing.com/Project3.html",   "description": "Creative search bar UI with animated floating placeholder label using HTML and CSS." },
+          { "@type": "ListItem", "position": 39, "name": "Floating Label Input Field",                                "url": "https://77cod-ing.com/Project4.html",   "description": "Modern floating placeholder input field component with smooth CSS label animations." },
+          { "@type": "ListItem", "position": 40, "name": "Shape Morph Animation: Circle to Rectangle",               "url": "https://77cod-ing.com/Project5.html",   "description": "Smooth CSS and JavaScript shape morphing animation from circle to rectangle — great for learning transitions." }
+        ]
+      }
+
+    ]
+  }
+  </script>
+
 </head>
+
 <body>
-    <header class="navbar">
-    <a href="https://77cod-ing.github.io" class="logo">
-      <span class="logo-icon">{ / }</span> 77cod_ing
+
+  <!-- ════════════════════════════════════
+       HEADER / NAV
+  ════════════════════════════════════ -->
+  <header class="navbar" role="banner">
+    <a href="/" class="logo" aria-label="77cod_ing – HTML CSS JavaScript Projects Home">
+      <span class="logo-icon" aria-hidden="true">{ / }</span> 77cod_ing
     </a>
-    <nav class="nav-links">
-      <a href="pages.html">Pages</a>
+    <nav class="nav-links" role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
+      <a href="projects.html" aria-current="page">Projects</a>
       <a href="contact.html">Contact</a>
       <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html">Terms & Conditions</a>
+      <a href="Terms & Conditions.html">Terms &amp; Conditions</a>
     </nav>
   </header>
 
-    
-  
+  <!-- ════════════════════════════════════
+       HERO / INTRO
+  ════════════════════════════════════ -->
   <div class="container">
     <h1>
-      <span id="color">Projects</span>  <span class="tol2"> Showcase</span>
+      <span id="color">HTML CSS JavaScript</span> <span class="tol2"> Projects Showcase</span>
     </h1>
+
+    <!-- SEO Intro – 150–250 words, naturally keyword-rich -->
     <p>
-      Explore a collection of my programming projects, built with modern technologies and clean design. Each project highlights practical coding solutions, creative ideas, and real-world applications.
+      Welcome to the ultimate collection of <strong>HTML, CSS, and JavaScript projects</strong> — hand-crafted for
+      developers who want ready-to-use, copy-paste <strong>frontend code examples</strong>. Whether you are a beginner
+      looking for your first <strong>web development tutorial</strong> or an experienced engineer searching for polished
+      <strong>UI components</strong> and interaction patterns, you will find something here to use immediately.
     </p>
-    
-  </div>
-    <div class="con10">
-  <div class="gallery" >
-
-      <a class="card-link" href="Project40.html" aria-label="imag" id="pro39">
-    <img class="card-img" src='https://i.suar.me/Ep114/m' alt="CSS Neon Digital Clock Animation" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">CSS Neon Digital Clock Animation – HTML CSS JavaScript Project for Beginners (Frontend UI Idea)</div>
-  </a>
-     <a class="card-link" href="Project39.html" aria-label="imag" id="pro39">
-    <img class="card-img" src='https://i.suar.me/jvZZv/m' alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Creative Animated Button with Star Effects Using HTML & CSS – Modern UI Design for Better Engagement</div>
-  </a>
-   <a class="card-link" href="Project38.html" aria-label="imag" id="pro38">
-    <img class="card-img" src='https://i.suar.me/og7YP/m' alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Modern voice Player Design with JavaScript</div>
-  </a>
-  <a class="card-link" href="Project37.html" aria-label="imag" >
-    <img class="card-img" src='https://i.suar.me/Np3EO/m' alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Modern Glassmorphism Login Page Design</div>
-  </a>
-  </div>
+    <p>
+      Each project is built from scratch with clean, well-structured code and a focus on modern design trends:
+      glassmorphism, neon animations, 3D card effects, animated navigation bars, interactive login forms, and much more.
+      All <strong>free code snippets</strong> are browser-ready — no build tools required. You can open the source,
+      study the technique, and drop it straight into your own project.
+    </p>
+    <p>
+      The showcase currently features <strong>40+ frontend UI examples</strong> covering everything from
+      micro-interactions and animated buttons to full landing pages and glassmorphism interfaces. New projects are added
+      regularly, so bookmark this page and come back often if you want to stay current with modern <strong>CSS and
+        JavaScript design patterns</strong>. Explore, learn, and build faster.
+    </p>
   </div>
 
-    <div class="con9">
-  <div class="gallery" >
-    
-  <a class="card-link" href="Project33.html" aria-label="imag" >
-    <img class="card-img" src="image copy 87.png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Why an Interactive Dragon Cursor Effect Captures Attention</div>
-  </a>
-  <a class="card-link" href="Project34.html" aria-label="imag">
-    <img class="card-img" src="image copy 88.png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Why a 3D Flip Login Interface Improves User Engagement</div>
-  </a>
-  <a class="card-link" href="Project35.html" aria-label="imag" >
-    <img class="card-img" src='https://i.suar.me/7nXqw/m' alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Why Custom Checkbox Design Improves User Experience</div>
-  </a>
-      <a class="card-link" href="Project36.html" aria-label="imag" >
-    <img class="card-img" src='https://i.suar.me/g4rQ2/m' alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Why GAMERS WORLD  is the Future of Gaming Discovery</div>
-  </a>
-  </div>
-  </div>
-    
-    <div class="con8">
-  <div class="gallery" >
-    <a class="card-link" href="Project29.html" aria-label="imag">
-    <img class="card-img" src="image copy 83.png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">File Upload Dropzone | Modern UI Design with HTML, CSS & JavaScript</div>
-  </a>
-  <a class="card-link" href="Project30.html" aria-label="imag">
-    <img class="card-img" src="image copy 84.png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">File Upload Dropzone | Modern UI Design with HTML, CSS & JavaScript</div>
-  </a>
-  <a class="card-link" href="Project31.html" aria-label="imag">
-    <img class="card-img" src="image copy 85.png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Gooey SVG Navigation Bar Animation | HTML & CSS Smooth UI Effect</div>
-  </a>
-  <a class="card-link" href="Project32.html" aria-label="imag">
-    <img class="card-img" src="image copy 86.png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Gooey SVG Navigation Bar Animation | HTML & CSS Smooth UI Effect</div>
-  </a>
-  </div>
-  </div>
+  <!-- ════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════ -->
+  <main id="main-content" role="main" aria-label="HTML CSS JavaScript project gallery">
 
-    
-<div class="con7">
-  <div class="gallery" >
-  <a class="card-link" href="project25.html" aria-label="imag">
-    <img class="card-img" src="image copy 79.png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">File Upload Dropzone | Modern UI Design with HTML, CSS & JavaScript</div>
-  </a>
+    <!-- ── SECTION: Latest Projects ─────────────────── -->
+    <section class="con10" aria-labelledby="latest-heading">
+      <h2 id="latest-heading" class="section-heading">Latest HTML CSS JavaScript Projects</h2>
+      <p class="section-desc">Our newest additions — featuring a CSS neon clock, animated star-effect buttons, a voice
+        player UI, and a glassmorphism login page. These recent frontend code examples showcase the latest CSS and
+        JavaScript animation techniques.</p>
+      <div class="gallery">
 
-  <a class="card-link" href="Project26.html" aria-label="imag">
-    <img class="card-img" src="image copy 80.png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Portfolio Landing Page | Modern Personal Branding with HTML, CSS & JavaScript</div>
-  </a>
-      <a class="card-link" href="Project27.html" aria-label="imag">
-    <img class="card-img" src="image copy 81.png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Responsive Image Gallery | Modern UI Design with HTML & CSS</div>
-  </a>
-      <a class="card-link" href="Project28.html" aria-label="imag">
-    <img class="card-img" src="image copy 82.png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Gooey Navigation | Creative CSS & JavaScript Menu Animation</div>
-  </a>
-  
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project40.html" aria-label="View CSS Neon Digital Clock Animation project">
+            <img class="card-img" src="https://i.suar.me/Ep114/m"
+              alt="CSS neon digital clock animation – HTML CSS JavaScript beginner project preview" loading="lazy"
+              width="400" height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">CSS Neon Digital Clock Animation – Beginner HTML CSS JavaScript Project</div>
+          </a>
+        </article>
 
-</div>
-</div>
-         <div class="con6">
-  <div class="gallery" >
-  
-  
-  <a class="card-link" href="Project21.html" aria-label="imag">
-    <img class="card-img" src="image copy 68.png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Create a Glowing Animated Text Button — HTML/CSS</div>
-  </a>
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project39.html" aria-label="View Animated Star-Effect Button project">
+            <img class="card-img" src="https://i.suar.me/jvZZv/m"
+              alt="Animated button with CSS star particle effects – modern UI design example" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Animated Star-Effect Button with HTML &amp; CSS – Modern UI Component</div>
+          </a>
+        </article>
 
- <a class="card-link" href="Project22.html" aria-label="imag">
-    <img class="card-img" src="image copy 71.png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Create an Animated Navigation Bar with Floating Indicator — HTML/CSS/JS</div>
-  </a>
-      <a class="card-link" href="Project23.html" aria-label="imag">
-    <img class="card-img" src="image copy 75.png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Create a Modern Animated Login & Signup Page — HTML/CSS/JS</div>
-  </a>
-      <a class="card-link" href="Project24.html" aria-label="imag">
-    <img class="card-img" src="image copy 76.png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Create an Expanding Animated Button with Circle and Arrows — HTML/CSS</div>
-  </a>
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project38.html" aria-label="View Modern Voice Player UI with JavaScript project">
+            <img class="card-img" src="https://i.suar.me/og7YP/m"
+              alt="Modern voice player UI design built with HTML CSS and JavaScript" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Modern Voice Player UI Design – HTML CSS JavaScript Project</div>
+          </a>
+        </article>
 
-</div>
-</div>
-   <div class="con5">
-  <div class="gallery" >
-  
-  
-  <a class="card-link" href="Project17.html" aria-label="imag">
-    <img class="card-img" src="image copy 50.png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Create a Skewed Navigation Menu — HTML/CSS</div>
-  </a>
-  <a class="card-link" href="Project18.html"  aria-label="inag">
-    <img class="card-img" src="image copy 52.png" id="subscribe" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">How to Create a Stylish Animated Card with CSS Waves</div>
-  </a>
-  <a class="card-link" href="Project19.html"  aria-label="inag">
-    <img class="card-img" src="image copy 58.png" id="subscribe" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">How to Create a 3D Flipping Card with Glowing Animation Using HTML and CSS</div>
-  </a>
-  <a class="card-link" href="Project20.html"  aria-label="inag">
-    <img class="card-img" src="image copy 65.png" id="subscribe" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">3D Interactive Carousel for Support Messages | Stunning HTML & CSS Animation</div>
-  </a>
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project37.html" aria-label="View Glassmorphism Login Page Design project">
+            <img class="card-img" src="https://i.suar.me/Np3EO/m"
+              alt="Modern glassmorphism login page with CSS backdrop blur effect" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Modern Glassmorphism Login Page – CSS Backdrop Blur Design</div>
+          </a>
+        </article>
 
-</div>
-</div>
+      </div>
+    </section>
 
-<div class="con4">
-  <div class="gallery" >
-  
-  
-  <a class="card-link" href="Project13.html" aria-label="imag">
-    <img class="card-img" src="image copy 36.png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Create a Neon Cursor Animation — HTML/CSS/JS</div>
-  </a>
-  <a class="card-link" href="Project14.html"  aria-label="inag">
-    <img class="card-img" src="image copy 40.png" id="subscribe" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Create an Electric Neon Card Animation — HTML/CSS/SVG</div>
-  </a>
-  <a class="card-link" href="Project15.html"  aria-label="inag">
-    <img class="card-img" src="image copy 43.png" id="subscribe" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">3D Interactive Carousel for Support Messages | Stunning HTML & CSS Animation</div>
-  </a>
-  <a class="card-link" href="Project16.html"  aria-label="inag">
-    <img class="card-img" src="image copy 47.png" id="subscribe" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">3D Interactive Carousel for Support Messages | Stunning HTML & CSS Animation</div>
-  </a>
+    <!-- ── SECTION: Interactive Effects & Animations ── -->
+    <section class="con9" aria-labelledby="effects-heading">
+      <h2 id="effects-heading" class="section-heading">Interactive Cursor Effects &amp; Login UI Components</h2>
+      <p class="section-desc">These frontend UI examples focus on user interaction: a dragon cursor effect, a 3D flip
+        login card, accessible custom checkboxes, and a complete gaming landing page — all built with HTML, CSS, and
+        JavaScript.</p>
+      <div class="gallery">
 
-</div>
-</div>
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project33.html" aria-label="View Interactive Dragon Cursor Effect project">
+            <img class="card-img" src="image copy 87.png"
+              alt="Interactive dragon trail cursor effect built with HTML CSS JavaScript" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Interactive Dragon Cursor Trail Effect – JavaScript Animation</div>
+          </a>
+        </article>
 
-<div class="con3">
-  <div class="gallery" >
-  
-  
-  <a class="card-link" href="Project9.html" aria-label="imag">
-    <img class="card-img" src="image copy 21.png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Build an Interactive Download Button — HTML/CSS</div>
-  </a>
-  <a class="card-link" href="Project10.html"  aria-label="inag">
-    <img class="card-img" src="image copy 24.png" id="subscribe" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Build a Star Rating System — HTML/CSS</div>
-  </a>
-  <a class="card-link" href="Project11.html"  aria-label="inag">
-    <img class="card-img" src="image copy 23.png" id="subscribe" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">3D Interactive Carousel for Support Messages | Stunning HTML & CSS Animation</div>
-  </a>
-  <a class="card-link" href="Project12.html"  aria-label="inag">
-    <img class="card-img" src="image copy 33.png" id="subscribe" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Create a Particles Login Page — HTML/CSS/JS</div>
-  </a>
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project34.html" aria-label="View 3D Flip Login Interface project">
+            <img class="card-img" src="image copy 88.png"
+              alt="3D flip card login interface with CSS3 perspective transforms" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">3D Flip Card Login Interface – CSS3 Perspective Transform UI</div>
+          </a>
+        </article>
 
-</div>
-</div>
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project35.html" aria-label="View Custom Checkbox CSS Design project">
+            <img class="card-img" src="https://i.suar.me/7nXqw/m"
+              alt="Custom animated CSS checkbox design improving form accessibility and UX" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Custom Animated Checkbox Design – CSS UI Component for Better UX</div>
+          </a>
+        </article>
 
-<div class="con2">
-  <div class="gallery" >
-  <!-- كرر هذا العنصر لكل رابط -->
-  
-  <a class="card-link" href="Project1.html" aria-label="imag">
-    <img class="card-img" src="image copy.png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">How to Add a Subscribe Box to Your Website for Better Engagement and AdSense Approval</div>
-  </a>
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project36.html" aria-label="View Gamers World gaming landing page project">
+            <img class="card-img" src="https://i.suar.me/g4rQ2/m"
+              alt="Gamers World gaming discovery landing page built with HTML CSS JavaScript" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Gamers World – Responsive Gaming Landing Page in HTML &amp; CSS</div>
+          </a>
+        </article>
 
-<a class="card-link" href="Project6.html"  aria-label="inag">
-    <img class="card-img" src="image copy 2.png" id="subscribe" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Modern Glassmorphism Login Page with Blur Effect | HTML & CSS</div>
-  </a>
-  <a class="card-link" href="Project7.html"  aria-label="inag">
-    <img class="card-img" src="image copy 16.png" id="subscribe" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Build a Terminal Typing Animation — HTML/CSS</div>
-  </a>
-  <a class="card-link" href="Project8.html"  aria-label="inag">
-    <img class="card-img" src="image copy 18.png" id="subscribe" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Build an Animated Subscribe Button — HTML/CSS</div>
-  </a>
+      </div>
+    </section>
 
-</div>
-</div>
-<div class="con1">
-  <div class="gallery" >
-  <!-- كرر هذا العنصر لكل رابط -->
-  
-  <a class="card-link" href="Project2.html" id="vscod" aria-label="imag">
-    <img class="card-img" src="Picture2 (2).png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">How to Download and Install Visual Studio Code on Windows (Step by Step)</div>
-  </a>
+    <!-- ── SECTION: Drag-and-Drop & Navigation ──────── -->
+    <section class="con8" aria-labelledby="dropzone-heading">
+      <h2 id="dropzone-heading" class="section-heading">File Upload UI &amp; CSS Navigation Bar Animations</h2>
+      <p class="section-desc">Practical UI components for real-world web apps — two drag-and-drop file upload dropzone
+        designs and two gooey SVG navigation bar animations you can drop straight into any project.</p>
+      <div class="gallery">
 
-<a class="card-link" href="Project3.html" aria-label="inag">
-    <img class="card-img" src="animition.png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Build the Thater Search Bar — HTML/CSS (Floating Placeholder)</div>
-  </a>
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project29.html" aria-label="View File Upload Dropzone UI v1 project">
+            <img class="card-img" src="image copy 83.png"
+              alt="Modern drag-and-drop file upload dropzone UI built with HTML CSS and JavaScript" loading="lazy"
+              width="400" height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Drag-and-Drop File Upload Dropzone UI – HTML CSS JavaScript Component</div>
+          </a>
+        </article>
 
-  <a class="card-link" href="Project4.html" aria-label="imag">
-    <img class="card-img" src="Screenshot 2025-09-19 163918.png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">Floating Placeholder Input | Modern UI Design with HTML & CSS</div>
-  </a>
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project30.html" aria-label="View File Upload Dropzone UI v2 project">
+            <img class="card-img" src="image copy 84.png"
+              alt="Alternative minimal file upload dropzone design with CSS styling" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Minimal File Upload Dropzone – Clean CSS &amp; JavaScript UI Design</div>
+          </a>
+        </article>
 
-  <a class="card-link" href="Project5.html" aria-label="imag">
-    <img class="card-img" src="image.png" alt="imag" />
-    <div class="card-overlay"></div>
-    <div class="card-accent" aria-hidden="true"></div>
-    <div class="card-title">How to Animate Shape from Circle to Rectangle using HTML, CSS & JavaScript</div>
-  </a>
-  <!-- أضف المزيد حسب الحاجة -->
-</div>
-</div>
-    <script>
-         /**hamburger**/
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project31.html" aria-label="View Gooey SVG Navigation Bar Animation v1">
+            <img class="card-img" src="image copy 85.png"
+              alt="Gooey SVG navigation bar animation with CSS filter blob effect" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Gooey SVG Navigation Bar Animation – CSS Blob Effect Tutorial</div>
+          </a>
+        </article>
 
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeBtn = document.getElementById('closeBtn');
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project32.html" aria-label="View Gooey SVG Navigation Bar Animation v2">
+            <img class="card-img" src="image copy 86.png"
+              alt="Fluid gooey navigation bar variant with smooth CSS SVG transitions" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Fluid Gooey Navigation Variant – SVG &amp; CSS Smooth UI Animation</div>
+          </a>
+        </article>
 
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.add('active');
-    });
+      </div>
+    </section>
 
-    closeBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-    });
-    
+    <!-- ── SECTION: Galleries & Portfolios ───────────── -->
+    <section class="con7" aria-labelledby="gallery-heading">
+      <h2 id="gallery-heading" class="section-heading">Portfolio Pages, Image Galleries &amp; Creative Menus</h2>
+      <p class="section-desc">Full-page frontend projects: an animated tag input field, a portfolio landing page, a
+        responsive CSS image gallery, and a gooey navigation menu — all ideal for personal branding and portfolio
+        websites.</p>
+      <div class="gallery">
 
-    window.addEventListener("scroll", function() {
-  const hamburger = document.querySelector(".hamburger");
-  if (window.scrollY > 50) {
-    hamburger.classList.add("scrolled");
-  } else {
-    hamburger.classList.remove("scrolled");
-  }
-});
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project25.html" aria-label="View Animated Tag Input Field UI project">
+            <img class="card-img" src="image copy 79.png"
+              alt="Animated tag input field UI component with CSS and JavaScript" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Animated Tag Input Field – CSS JavaScript UI Component</div>
+          </a>
+        </article>
 
-</script>
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project26.html" aria-label="View Portfolio Landing Page project">
+            <img class="card-img" src="image copy 80.png"
+              alt="Modern personal portfolio landing page template with HTML CSS JavaScript animations" loading="lazy"
+              width="400" height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Personal Portfolio Landing Page – HTML CSS JavaScript Template</div>
+          </a>
+        </article>
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project27.html" aria-label="View Responsive CSS Image Gallery project">
+            <img class="card-img" src="image copy 81.png"
+              alt="Responsive CSS image gallery with hover overlay effects for portfolio websites" loading="lazy"
+              width="400" height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Responsive Image Gallery with Hover Overlay – CSS Layout Design</div>
+          </a>
+        </article>
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project28.html" aria-label="View Gooey Navigation Menu Animation project">
+            <img class="card-img" src="image copy 82.png"
+              alt="Creative gooey CSS JavaScript navigation menu with liquid blob animation" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Gooey Navigation Menu – Creative CSS &amp; JavaScript Liquid Animation</div>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ── SECTION: Buttons & Login Forms ─────────────── -->
+    <section class="con6" aria-labelledby="buttons-heading">
+      <h2 id="buttons-heading" class="section-heading">Animated Buttons &amp; Login Form UI Projects</h2>
+      <p class="section-desc">Four focused frontend code examples: a glowing CTA button, a floating-indicator navbar, a
+        sliding login/signup page, and an expanding circle button — all ready-to-use CSS and JavaScript snippets.</p>
+      <div class="gallery">
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project21.html" aria-label="View Glowing Animated Text Button project">
+            <img class="card-img" src="image copy 68.png"
+              alt="Glowing pulsing animated CTA text button built with pure CSS keyframe animations" loading="lazy"
+              width="400" height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Glowing Animated CTA Button – Pure CSS Keyframe Animation</div>
+          </a>
+        </article>
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project22.html"
+            aria-label="View Animated Navigation Bar with Floating Indicator project">
+            <img class="card-img" src="image copy 71.png"
+              alt="Animated navigation bar with smooth floating active indicator using CSS and JavaScript"
+              loading="lazy" width="400" height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Navigation Bar with Floating Active Indicator – CSS JavaScript UI</div>
+          </a>
+        </article>
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project23.html" aria-label="View Animated Login and Signup Page project">
+            <img class="card-img" src="image copy 75.png"
+              alt="Modern animated sliding login and signup page with CSS transitions and JavaScript" loading="lazy"
+              width="400" height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Animated Login &amp; Signup Sliding Page – HTML CSS JavaScript</div>
+          </a>
+        </article>
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="project24.html" aria-label="View Expanding Circle Animated Button project">
+            <img class="card-img" src="image copy 76.png"
+              alt="Expanding animated button with circle reveal and arrow direction effects in CSS" loading="lazy"
+              width="400" height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Expanding Circle Animated Button with Arrow – CSS UI Effect</div>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ── SECTION: Cards & Carousels ─────────────────── -->
+    <section class="con5" aria-labelledby="cards-heading">
+      <h2 id="cards-heading" class="section-heading">CSS Card Designs, Carousels &amp; Navigation Menus</h2>
+      <p class="section-desc">Explore visually striking card and carousel components: a skewed nav menu, an animated
+        wave card, a 3D glowing flip card, and a 3D rotating support-message carousel — each a standalone CSS/JS
+        frontend project.</p>
+      <div class="gallery">
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project17.html" aria-label="View Skewed Diagonal Navigation Menu project">
+            <img class="card-img" src="image copy 50.png"
+              alt="Bold skewed diagonal navigation menu design using CSS transforms" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Skewed Diagonal Navigation Menu – CSS Transform UI Design</div>
+          </a>
+        </article>
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project18.html" aria-label="View Animated Card with CSS Wave Effect project">
+            <img class="card-img" src="image copy 52.png"
+              alt="Stylish UI card component with animated CSS wave background effect" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Stylish Card with Animated CSS Wave Background – UI Component</div>
+          </a>
+        </article>
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project19.html" aria-label="View 3D Flipping Card with Glow Animation project">
+            <img class="card-img" src="image copy 58.png"
+              alt="3D CSS flip card with neon glow animation using HTML and CSS transforms" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">3D Flip Card with Neon Glow – CSS3 Transform Animation</div>
+          </a>
+        </article>
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project20.html" aria-label="View 3D Interactive Support Message Carousel project">
+            <img class="card-img" src="image copy 65.png"
+              alt="3D rotating CSS carousel displaying support or testimonial messages" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">3D Rotating Testimonial Carousel – CSS Perspective Animation</div>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ── SECTION: Neon & Cursor Effects ─────────────── -->
+    <section class="con4" aria-labelledby="neon-heading">
+      <h2 id="neon-heading" class="section-heading">Neon Animations &amp; Glassmorphism UI Code Examples</h2>
+      <p class="section-desc">Neon and glassmorphism are two of the most searched frontend design trends. Here you will
+        find a neon cursor trail, an electric SVG card, a glassmorphism 3D card, and a CSS perspective tilt effect.</p>
+      <div class="gallery">
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project13.html" aria-label="View Neon Cursor Trail Animation project">
+            <img class="card-img" src="image copy 36.png"
+              alt="Custom neon glowing cursor trail animation using HTML CSS and JavaScript canvas" loading="lazy"
+              width="400" height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Neon Glowing Cursor Trail Animation – HTML CSS JavaScript Canvas</div>
+          </a>
+        </article>
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project14.html" aria-label="View Electric Neon SVG Card Animation project">
+            <img class="card-img" src="image copy 40.png"
+              alt="Electric neon card with animated SVG stroke border effect" loading="lazy" width="400" height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Electric Neon SVG Card – Animated CSS Stroke Border Effect</div>
+          </a>
+        </article>
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project15.html" aria-label="View Glassmorphism 3D Card UI Component project">
+            <img class="card-img" src="image copy 43.png"
+              alt="Glassmorphism 3D card UI component with CSS backdrop filter and transform" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Glassmorphism 3D Card – CSS Backdrop Filter &amp; Transform UI</div>
+          </a>
+        </article>
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project16.html" aria-label="View CSS Perspective Tilt Card Effect project">
+            <img class="card-img" src="image copy 47.png"
+              alt="Mouse-driven CSS perspective tilt card interaction for immersive UI" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">CSS Perspective Tilt Card – Mouse-Driven 3D Interaction Effect</div>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ── SECTION: Buttons, Ratings & Login ──────────── -->
+    <section class="con3" aria-labelledby="buttons2-heading">
+      <h2 id="buttons2-heading" class="section-heading">Download Buttons, Star Ratings &amp; Particle Login Pages</h2>
+      <p class="section-desc">Four practical and visually impressive UI code snippets: an animated download button, a
+        pure-CSS star rating widget, a typewriter text animation, and a particle-background login page.</p>
+      <div class="gallery">
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project9.html" aria-label="View Interactive Download Button Animation project">
+            <img class="card-img" src="image copy 21.png"
+              alt="Animated download button with progress state transition built in HTML and CSS" loading="lazy"
+              width="400" height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Animated Download Button with Progress State – HTML CSS UI</div>
+          </a>
+        </article>
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project10.html" aria-label="View CSS Star Rating System project">
+            <img class="card-img" src="image copy 24.png"
+              alt="Interactive pure CSS star rating system – no JavaScript required" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Pure CSS Star Rating Widget – No JavaScript Required</div>
+          </a>
+        </article>
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project11.html" aria-label="View CSS Typewriter Text Animation project">
+            <img class="card-img" src="image copy 23.png"
+              alt="CSS typewriter text animation with blinking cursor for hero sections" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Typewriter Text Animation with Blinking Cursor – CSS Only</div>
+          </a>
+        </article>
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project12.html" aria-label="View Particles Login Page project">
+            <img class="card-img" src="image copy 33.png"
+              alt="Login page with animated JavaScript particle background effect" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Particle Background Login Page – HTML CSS JavaScript Animation</div>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ── SECTION: Core UI Components ──────────────── -->
+    <section class="con2" aria-labelledby="core-heading">
+      <h2 id="core-heading" class="section-heading">Subscribe Forms, Glassmorphism &amp; Terminal Animations</h2>
+      <p class="section-desc">Essential frontend UI components every developer needs: an email subscribe box, a
+        glassmorphism login form, a terminal typing animation, and an animated subscribe button — all free and
+        copy-paste ready.</p>
+      <div class="gallery">
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project1.html" aria-label="View Email Subscribe Box UI Component project">
+            <img class="card-img" src="image copy.png"
+              alt="Email newsletter subscribe form UI component for websites and landing pages" loading="lazy"
+              width="400" height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Email Subscribe Box UI Component – Newsletter Form for Websites</div>
+          </a>
+        </article>
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project6.html" aria-label="View Glassmorphism Login Page with Blur Effect project">
+            <img class="card-img" src="image copy 2.png"
+              alt="Glassmorphism login page with CSS backdrop-filter blur for modern web apps" loading="lazy"
+              width="400" height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Glassmorphism Login Form with CSS Backdrop Blur – Modern UI</div>
+          </a>
+        </article>
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project7.html" aria-label="View Terminal Typing Animation project">
+            <img class="card-img" src="image copy 16.png"
+              alt="Retro terminal typing animation with blinking cursor using HTML and CSS" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Retro Terminal Typing Animation – HTML CSS Blinking Cursor Effect</div>
+          </a>
+        </article>
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project8.html" aria-label="View Animated Subscribe Button project">
+            <img class="card-img" src="image copy 18.png"
+              alt="Animated subscribe call-to-action button with state transition effects in HTML and CSS"
+              loading="lazy" width="400" height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Animated Subscribe CTA Button – CSS State Transition Effect</div>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ── SECTION: Starter Projects ────────────────── -->
+    <section class="con1" aria-labelledby="starter-heading">
+      <h2 id="starter-heading" class="section-heading">Starter Web Dev Tutorials &amp; Foundational UI Code</h2>
+      <p class="section-desc">Where it all began — foundational HTML, CSS, and JavaScript projects: a VS Code setup
+        guide, an animated search bar, a floating label input, and a shape-morph animation. Perfect starting points for
+        beginners.</p>
+      <div class="gallery">
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project2.html" id="vscod"
+            aria-label="View How to Install VS Code on Windows guide">
+            <img class="card-img" src="Picture2 (2).png"
+              alt="Step-by-step guide to download and install Visual Studio Code on Windows" loading="lazy" width="400"
+              height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">How to Install Visual Studio Code on Windows – Step-by-Step Guide</div>
+          </a>
+        </article>
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project3.html"
+            aria-label="View Theater Search Bar with Floating Placeholder project">
+            <img class="card-img" src="animition.png"
+              alt="Creative animated theater search bar with floating placeholder label in HTML and CSS" loading="lazy"
+              width="400" height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Animated Search Bar with Floating Placeholder – HTML CSS UI Design</div>
+          </a>
+        </article>
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project4.html" aria-label="View Floating Label Input Field project">
+            <img class="card-img" src="Screenshot 2025-09-19 163918.png"
+              alt="Modern floating label input field component with smooth CSS label animations" loading="lazy"
+              width="400" height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Floating Label Input Field – Modern CSS Form Animation Component</div>
+          </a>
+        </article>
+
+        <article class="card-link-wrapper">
+          <a class="card-link" href="Project5.html" aria-label="View Circle to Rectangle Shape Morph Animation project">
+            <img class="card-img" src="image.png"
+              alt="CSS JavaScript shape morphing animation transitioning from circle to rectangle" loading="lazy"
+              width="400" height="300" />
+            <div class="card-overlay" aria-hidden="true"></div>
+            <div class="card-accent" aria-hidden="true"></div>
+            <div class="card-title">Shape Morph: Circle to Rectangle – CSS &amp; JavaScript Animation Tutorial</div>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
