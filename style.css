@@ -62,9 +62,7 @@ body {
 
 .nav-links {
   display: flex;
-  width: 60vw;
-  justify-content: space-around;
-  overflow-y: hidden;
+  gap: 35px;
 }
 
 .nav-links a {
