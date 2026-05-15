@@ -1,299 +1,1043 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== PRIMARY SEO META ===== -->
+  <title>Dragon Cursor Effect with SVG & JavaScript | Creative Web Animation Tutorial 2026</title>
+  <meta name="description"
+    content="Learn how to build an interactive dragon cursor effect using SVG and JavaScript. Step-by-step tutorial with full free source code. Custom cursor animation, mouse tracking, and SVG path animation included.">
+  <meta name="author" content="77cod_ing">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://77cod-ing.github.io/Project-dragon.html">
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Dragon Cursor Effect with SVG & JavaScript — Creative Web Animation Tutorial 2026">
+  <meta property="og:description"
+    content="Build an interactive dragon cursor animation with SVG and JavaScript. Mouse tracking, trailing motion, and animated SVG path. Full free source code included.">
+  <meta property="og:image" content="https://77cod-ing.github.io/image%20copy%2087.png">
+  <meta property="og:url" content="https://77cod-ing.github.io/Project-dragon.html">
+  <meta property="og:site_name" content="77cod_ing">
+  <meta property="article:published_time" content="2026-05-10T00:00:00Z">
+  <meta property="article:modified_time" content="2026-05-10T00:00:00Z">
+  <meta property="article:author" content="77cod_ing">
+  <meta property="article:section" content="JavaScript Tutorials">
+  <meta property="article:tag" content="JavaScript, SVG, Custom Cursor, Web Animation, Creative Coding">
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dragon Cursor Effect — SVG & JavaScript Tutorial">
+  <meta name="twitter:description"
+    content="Build an interactive dragon cursor with SVG & JavaScript. Mouse tracking, trailing animation, full source code free.">
+  <meta name="twitter:image" content="https://77cod-ing.github.io/image%20copy%2087.png">
+
+  <!-- ===== SCHEMA: TechArticle ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Dragon Cursor Effect with SVG & JavaScript — Creative Web Animation Tutorial",
+    "description": "A complete step-by-step tutorial on building an interactive dragon cursor effect using SVG animation and JavaScript mouse tracking, with full free source code.",
+    "image": "https://77cod-ing.github.io/image%20copy%2087.png",
+    "datePublished": "2026-05-10",
+    "dateModified": "2026-05-10",
+    "author": {
+      "@type": "Person",
+      "name": "77cod_ing",
+      "url": "https://77cod-ing.github.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "77cod_ing",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Picture1.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://77cod-ing.github.io/Project-dragon.html"
+    },
+    "articleSection": "JavaScript Tutorials",
+    "keywords": "dragon cursor effect, custom cursor javascript, svg animation, mouse tracking javascript, interactive cursor",
+    "timeRequired": "PT25M",
+    "educationalLevel": "Intermediate to Advanced",
+    "teaches": ["SVG Animation", "JavaScript Mouse Tracking", "CSS Transforms", "DOM Manipulation", "Creative Coding"]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: HowTo ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Build a Dragon Cursor Effect with SVG & JavaScript",
+    "description": "Step-by-step guide to creating an interactive dragon cursor animation using SVG paths and JavaScript mouse tracking.",
+    "image": "https://77cod-ing.github.io/image%20copy%2087.png",
+    "totalTime": "PT25M",
+    "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "0"},
+    "supply": [
+      {"@type": "HowToSupply", "name": "Text editor (VS Code)"},
+      {"@type": "HowToSupply", "name": "A modern web browser"}
+    ],
+    "tool": [
+      {"@type": "HowToTool", "name": "HTML"},
+      {"@type": "HowToTool", "name": "CSS"},
+      {"@type": "HowToTool", "name": "JavaScript"},
+      {"@type": "HowToTool", "name": "SVG"}
+    ],
+    "step": [
+      {"@type": "HowToStep", "name": "Build the SVG Dragon Structure", "text": "Create the dragon using grouped SVG elements — head, body segments, and tail — each wrapped in <g> tags for modular animation.", "position": 1},
+      {"@type": "HowToStep", "name": "Style with CSS Transforms", "text": "Use CSS transform, transform-origin, and @keyframes to create idle breathing and wing-flap animations.", "position": 2},
+      {"@type": "HowToStep", "name": "Capture Mouse Position", "text": "Listen to the mousemove event to capture real-time cursor coordinates (event.clientX and event.clientY).", "position": 3},
+      {"@type": "HowToStep", "name": "Calculate Angle and Direction", "text": "Use Math.atan2() to calculate the angle between the dragon's current position and the cursor, then apply it as a rotation.", "position": 4},
+      {"@type": "HowToStep", "name": "Add Trailing Body Segments", "text": "Store a history of past positions and interpolate each body segment toward the next, creating a realistic trailing effect.", "position": 5},
+      {"@type": "HowToStep", "name": "Animate with requestAnimationFrame", "text": "Use requestAnimationFrame for the main update loop to ensure smooth 60fps animation synchronized with the display refresh rate.", "position": 6},
+      {"@type": "HowToStep", "name": "Add prefers-reduced-motion Support", "text": "Wrap the animation loop in a prefers-reduced-motion media query check to respect accessibility preferences.", "position": 7}
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: FAQ ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I create a custom cursor effect with JavaScript?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To create a custom cursor: 1) Hide the default cursor with cursor: none on the body. 2) Create an SVG or HTML element to act as your cursor. 3) Listen to the mousemove event and update the element's position using event.clientX and event.clientY. 4) Apply CSS transforms for smooth motion. Full source code is available above."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the dragon trailing animation work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The trailing effect works by storing an array of past cursor positions. Each body segment of the dragon is positioned at a slightly older entry in that array, offset by a fixed delay. This makes the body segments follow the head with a natural lag, like a snake or dragon moving through space."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is Math.atan2 used for in cursor animations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Math.atan2(y, x) returns the angle (in radians) between the positive x-axis and the point (x, y). In cursor animations, it calculates the direction from the dragon's current position to the mouse cursor, allowing the head to rotate and face the cursor at all times."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will a custom SVG cursor affect page performance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A well-optimized SVG cursor using requestAnimationFrame has minimal performance impact. Avoid updating positions on every mousemove event directly — instead, store the target and update only on each animation frame. This limits updates to ~60 per second and prevents layout thrashing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does a custom cursor work on mobile devices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Custom cursor effects are desktop-only features — mobile and tablet devices use touch input, not a mouse cursor. You should detect touch support and disable the cursor animation on touch devices using a check like 'ontouchstart' in window."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I add prefers-reduced-motion support to cursor animations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use window.matchMedia('(prefers-reduced-motion: reduce)').matches to check if the user has requested reduced motion in their OS settings. If true, skip starting the animation loop and show a simplified static version instead."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: BreadcrumbList ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+      {"@type": "ListItem", "position": 3, "name": "Dragon Cursor Effect", "item": "https://77cod-ing.github.io/Project-dragon.html"}
+    ]
+  }
+  </script>
+
+  <!-- ===== ASSETS ===== -->
   <link rel="icon" type="image/png" href="Picture1.png">
-  <title>Dragon Cursor Effect Using SVG & JavaScript – Creative Web Animation Idea</title>
-    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
-        <link href="https://networks0.github.io/copy.css" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+  <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
      crossorigin="anonymous"></script>
+
   <style>
-   
-  .card{
-    display: flex;
-    width: 99vw;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 90vh;
-    margin: 0 auto;
-    
-  }
-   .code-box{
-	background: #1e1e2f;
-    position: relative; 
-    border-radius: 8px;
-    
-}
-  .copy-btn {
-    
-    position: absolute;
-    top: 10px;
-    right: 10px;
-
-    width: 40px;
-    height: 40px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: #fff;
-    background: transparent;
-    border: none;
-    font-size: 1.4rem;
-    cursor: pointer;
-}
-   .language-js{
-       height: 50vh;
-       font-family: Arial, sans-serif;
-    }
-    :not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  width: 30vw;
-  height: 50vh;
-    border-radius: 20px;
-  overflow-y: auto; 
-}
-/* للمتصفحات المبنية على Chromium (Chrome, Edge) */
-pre::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-pre::-webkit-scrollbar-track {
-  background: transparent; /* 👈 خلفية شفافة */
-}
-
-pre::-webkit-scrollbar-thumb {
-  background-color: rgb(0, 242, 255); /* لون المقبض */
-  border-radius: 10px;
-}
-.type{
-  color: #fff;
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  width: 80px;
-  height: 60px;
-}
-
-
-    body {
-      background: linear-gradient(to right, #2c0e43 10%, #581c87);
-      font-family: Arial, sans-serif;
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      overflow-x: hidden;
     }
 
+    :root {
+      --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+      --premcolo: #00d9ff;
+      --accent2: #ff6b35;
+      --neon2: #79e1f9;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --surface: rgba(85, 225, 247, 0.04);
+      --surface-hover: rgba(85, 239, 247, 0.08);
+      --border: rgba(85, 239, 247, 0.1);
+      --font-head: 'Space Mono', monospace;
+      --font-body: 'DM Sans', sans-serif;
+    }
+    
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--back);
+      font-family: var(--font-body);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    /* ===== NAVBAR ===== */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 50px;
-      padding: 0 2rem;
-      background-color: #0d1325;
+      height: 56px;
+      padding: 0 2.5rem;
+      background: rgba(13, 0, 21, 0.7);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      font-size: 22px;
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 2vw, 1.2rem);
       font-weight: bold;
       color: white;
       text-decoration: none;
+      gap: 8px;
     }
 
     .logo-icon {
-      color: #a855f7;
-      font-size: 26px;
-      margin-right: 8px;
-      letter-spacing: 2.5px;
+      color: var(--premcolo);
+      letter-spacing: 2px;
     }
 
     .nav-links {
       display: flex;
-      gap: 35px;
+      gap: clamp(1rem, 2vw, 2rem);
+      align-items: center;
     }
 
     .nav-links a {
-      color: #d1d5db;
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.25s;
     }
 
     .nav-links a:hover {
-      color: #a855f7;
-      transform: scale(1.2);
+      color: var(--premcolo);
     }
 
-    /**ret**/
-    .Ret{
-      margin: 5px 0 0 3rem;
-      width: max-content;
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      padding: 12px 2.5rem;
+      border-bottom: 1px solid var(--border);
     }
-    .Ret a {
-      font-size: 2rem;
+
+    .breadcrumb ol {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .breadcrumb li+li::before {
+      content: "›";
+      color: var(--premcolo);
+      margin-right: 6px;
+      font-size: 1.1rem;
+    }
+
+    .breadcrumb a {
+      color: var(--text-muted);
       text-decoration: none;
-      color: #ffffff;
+      transition: color 0.2s;
     }
-    .Ret a span{
+
+    .breadcrumb a:hover {
+      color: var(--premcolo);
+    }
+
+    .breadcrumb [aria-current="page"] {
+      color: var(--premcolo);
+      font-weight: 600;
+    }
+
+    /* ===== BACK BUTTON ===== */
+    .back-link {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
-      width: 38px;
-      height: 38px;
-      border: 2px solid #fff;
-      border-radius: 50%;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.2s;
+      margin: 1rem 2.5rem;
     }
-    .Ret a:hover {
-  color: #00e1ff;
-}
-    .Ret a:hover span {
-  border-color: #00e1ff;
-}
-    /**img**/
-    .img{
-      display: flex;
-      justify-content: center;
-      margin: 2rem auto;
+
+    .back-link:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
     }
-    .img img{
-      border-radius: 8px;
-      max-width: 100vw;
-    width: auto;
-    height: 65vh;
-    }
-    /**par**/
-    .par{
-       font-family: Arial, sans-serif;
-      line-height: 1.7;
-      max-width: 900px;
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 3rem 2.5rem 2rem;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 20px;
-      color: #ffffff;
     }
-    h1, h2, h3 {
-      color: #00c8ff;
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
+      pointer-events: none;
     }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
     }
-    h2 {
-      margin-top: 35px;
-      font-size: 1.6rem;
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-head);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
     }
-    h3 {
-      margin-top: 25px;
-      font-size: 1.3rem;
+
+    .tag-tutorial {
+      background: rgba(85, 223, 247, 0.12);
+      color: var(--premcolo);
+      border: 1px solid rgba(168, 85, 247, 0.25);
     }
-    p {
-      margin-bottom: 18px;
+
+    .tag-js {
+      background: rgba(235, 223, 0, 0.1);
+      color: #ebdf00;
+      border: 1px solid rgba(235, 223, 0, 0.2);
     }
-    ul {
-      margin: 15px 0;
-      padding-left: 25px;
+
+    .tag-svg {
+      background: rgba(232, 121, 249, 0.1);
+      color: var(--neon2);
+      border: 1px solid rgba(232, 121, 249, 0.2);
     }
-    li {
-      margin-bottom: 10px;
+
+    .tag-level {
+      background: rgba(249, 115, 22, 0.1);
+      color: var(--accent2);
+      border: 1px solid rgba(249, 115, 22, 0.2);
     }
-    .highlight {
-      background: #000000;
-      padding: 8px 12px;
-      border-left: 4px solid #0073e6;
-      margin: 20px 0;
+
+    .read-time {
+      color: var(--text-muted);
+      font-size: 13px;
     }
-    .videos{
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      color: var(--premcolo);
+    }
+
+    .hero h1 em {
+      color: var(--neon2);
+      font-style: normal;
+    }
+
+    .hero-lead {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      color: var(--premcolo);
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid rgba(168, 85, 247, 0.2);
+      display: block;
+      box-shadow: 0 0 60px rgba(168, 85, 247, 0.1), 0 32px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem;
+      align-items: start;
+    }
+
+    /* ===== ARTICLE ===== */
+    .article-body h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: var(--premcolo);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 80px;
+    }
+
+    .article-body h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: #43ecff;
+      margin: 1.8rem 0 0.75rem;
+      scroll-margin-top: 80px;
+    }
+
+    .article-body p {
+      margin-bottom: 1.1rem;
+      color: var(--text);
+    }
+
+    .article-body code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 234, 255, 0.12);
+      color: var(--premcolo);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .article-body ul,
+    .article-body ol {
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .article-body li {
+      margin-bottom: 9px;
+    }
+
+    .article-body li strong {
+      color: #fff;
+    }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .toc-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--premcolo);
+      margin-bottom: 0.75rem;
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--premcolo);
+    }
+
+    /* ===== FEATURE CARDS ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(85, 234, 247, 0.35);
+      background: var(--surface-hover);
+    }
+
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .feature-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .feature-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ===== STEPS ===== */
+    .steps {
+      margin: 1.5rem 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      width: 44px;
+      height: 44px;
+      background: rgba(85, 228, 247, 0.1);
+      border: 1px solid rgba(85, 231, 247, 0.25);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      color: var(--premcolo);
+      font-size: 1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+
+    .step-content p {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* ===== CODE SECTION ===== */
+    
+    .code-section {
+      margin: 2rem 0;
+      width: 60vw;
+    }
+
+    .code-tabs {
+      display: flex;
+      gap: 4px;
+      margin-bottom: -1px;
+    }
+
+    .code-tab {
+      padding: 8px 20px;
+      border-radius: 8px 8px 0 0;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .code-tab.active {
+      background: #1e2d2f;
+      color: #fff;
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .code-tab[data-lang="html"].active {
+      color: #ff6600;
+    }
+
+    .code-tab[data-lang="css"].active {
+      color: #00ffff;
+    }
+
+    .code-tab[data-lang="js"].active {
+      color: #ebdf00;
+    }
+
+    .code-panels {
+      position: relative;
+    }
+
+    .code-box {
+      background: #1e2f2e;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 0 12px 12px 12px;
+      position: relative;
+      display: none;
+    }
+
+    .code-box.active {
+      display: block;
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-lang-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    .copy-btn.copied {
+      color: #4ade80;
+      border-color: #4ade80;
+    }
+
+    :not(pre)>code[class*="language-"],
+    pre[class*="language-"] {
+      width: 100%;
+      max-width: 100%;
+      height: 50vh;
+      border-radius: 0 0 12px 12px;
+      overflow-y: auto;
+      overflow-x: auto;
+      margin: 0;
+    }
+
+    pre::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    pre::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    pre::-webkit-scrollbar-thumb {
+      background: var(--premcolo);
+      border-radius: 10px;
+      opacity: 0.5;
+    }
+
+    /* ===== INFO / WARN BOXES ===== */
+    .info-box {
+      background: rgba(85, 225, 247, 0.06);
+      border: 1px solid rgba(85, 244, 247, 0.2);
+      border-left: 4px solid var(--premcolo);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .info-box strong {
+      color: var(--premcolo);
+    }
+
+    .warn-box {
+      background: rgba(249, 115, 22, 0.06);
+      border: 1px solid rgba(249, 115, 22, 0.2);
+      border-left: 4px solid var(--accent2);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .warn-box strong {
+      color: var(--accent2);
+    }
+
+    /* ===== VIDEO ===== */
+    .video-wrap {
       display: flex;
       justify-content: center;
+      margin: 2rem 0;
+    }
+
+    .video-wrap iframe {
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 16px 48px rgba(85, 201, 247, 0.1);
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      margin: 1.5rem 0;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
       align-items: center;
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      background: var(--surface);
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s;
+      list-style: none;
+      user-select: none;
     }
-    /**respon**/
-    @media (max-width: 980px) {
-      body{
-        overflow-x: hidden;
+
+    .faq-question:hover {
+      background: var(--surface-hover);
+    }
+
+    .faq-question::after {
+      content: "+";
+      font-size: 1.3rem;
+      color: var(--premcolo);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    details[open] .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 1rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ===== CONCLUSION ===== */
+    .conclusion {
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.07), rgba(80, 0, 120, 0.05));
+      border: 1px solid rgba(168, 85, 247, 0.2);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .conclusion h2 {
+      border: none;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      position: sticky;
+      top: 72px;
+    }
+
+    .sidebar-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-header {
+      padding: 14px 16px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--premcolo);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .related-list {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .related-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/9;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(85, 247, 247, 0.35);
+    }
+
+    .related-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .related-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    .related-card-title {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1.25rem;
       }
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
 
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
+      .sidebar {
+        position: static;
+      }
 
-  .navbar nav {
-    gap: 5vw;
-  }
-  .navbar nav a{
-    font-size: 2vw;
-  }
-  .img img{
-    max-width: 100vw;
-    width: 90vw;
-    height: auto;
+      .related-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .related-card {
+        flex: 1 1 calc(50% - 8px);
+      }
+
+      .hero {
+        padding: 2rem 1.25rem 1.5rem;
+      }
+
+      .navbar {
+        padding: 0 1.25rem;
+      }
+
+      .breadcrumb {
+        padding: 10px 1.25rem;
+      }
+
+      .back-link {
+        margin: 0.75rem 1.25rem;
+      }
+      .code-section{
+        width: 85vw;
+      }
     }
-    .card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 210vh;
-  }
-  .language-js{
-       height: 50vh;
-       font-family: Arial, sans-serif;
+
+    @media (max-width: 640px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-stats {
+        gap: 1.2rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .code-tab {
+        padding: 7px 13px;
+        font-size: 12px;
+      }
+
+      .related-card {
+        flex: 1 1 100%;
+      }
+
+      .video-wrap iframe {
+        width: 100%;
+        height: 250px;
+      }
     }
-    :not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  width: 80vw;
-  height: 50vh;
-    border-radius: 20px;
-  overflow-y: auto; 
-}
-  }
-  hr{
-    width: 80vw;
-  }
-  .down{
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    align-items: center;
-    width: 80vw;
-    color: #fff;
-    font-size: 1.5rem;
-    border: 2px solid #fff;
-    border-radius: 20px;
-  }
-  .down img{
-    width: 50vw;
-  }
-  .down i{
-    color: rgb(0, 255, 255);
-  }
   </style>
+
 </head>
+
 <body>
-<header class="navbar">
-    <a href="#" class="logo">
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
       <span class="logo-icon">{ / }</span> 77cod_ing
     </a>
-    <nav class="nav-links">
-      <a href="https://77cod-ing.github.io/">Home</a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
@@ -301,173 +1045,553 @@ pre[class*="language-"] {
       <a href="Terms & Conditions.html">Terms & Conditions</a>
     </nav>
   </header>
-  <div class="Ret">
-    <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
+      <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+      <li><span aria-current="page">Dragon Cursor Effect</span></li>
+    </ol>
+  </nav>
+
+  <!-- ===== BACK BUTTON ===== -->
+  <a href="projects.html#subscribe" class="back-link" aria-label="Return to Projects">
+    <i class='bx bx-arrow-back'></i> Return to Projects
+  </a>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="main-heading">
+    <div class="hero-meta">
+      <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+      <span class="tag tag-js">JavaScript</span>
+      <span class="tag tag-svg">SVG</span>
+      <span class="tag tag-level">Advanced</span>
+      <span class="read-time"><i class='bx bx-time'></i> ~20 min read</span>
+    </div>
+
+    <h1 id="main-heading">
+      Build a <span>Dragon Cursor Effect</span><br>with <em>SVG & JavaScript</em>
+    </h1>
+
+    <p class="hero-lead">
+      A complete, step-by-step tutorial to create an interactive dragon cursor animation from scratch —
+      using SVG paths, JavaScript mouse tracking, and CSS transforms. The dragon follows your cursor,
+      rotates toward it, and trails realistically. Full source code free.
+    </p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value">7</span>
+        <span class="stat-label">Core Steps</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">0</span>
+        <span class="stat-label">Libraries</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">SVG</span>
+        <span class="stat-label">+ JS</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">Free</span>
+        <span class="stat-label">Source Code</span>
+      </div>
+    </div>
+
+    <img src="image copy 87.png"
+      alt="Interactive dragon cursor effect built with SVG and JavaScript — the dragon follows and rotates toward the mouse cursor"
+      class="hero-img" width="1200" height="420" loading="eager" fetchpriority="high">
+    <p class="img-caption">Final result: a dragon that follows your cursor, built with pure SVG and vanilla JavaScript
+    </p>
+  </section>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <div class="layout">
+
+    <!-- ===== ARTICLE ===== -->
+    <main class="article-body" id="main-content">
+
+      <!-- TOC -->
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-title">📋 Contents</p>
+        <ol>
+          <li><a href="#overview">What You'll Build</a></li>
+          <li><a href="#features">Key Features</a></li>
+          <li><a href="#source-code">Full Source Code</a></li>
+          <li><a href="#how-it-works">How It Works — Step by Step</a></li>
+          <li><a href="#concepts">JavaScript & SVG Concepts Used</a></li>
+          <li><a href="#video">Video Demo</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </nav>
+
+      <!-- OVERVIEW -->
+      <section id="overview">
+        <h2>What You'll Build</h2>
+        <p>
+          In this tutorial, you'll create an <strong>interactive dragon cursor effect</strong> entirely
+          from scratch — no libraries, no canvas, just clean HTML, CSS, SVG, and vanilla JavaScript.
+          The result is a fully animated dragon that tracks your mouse, rotates to face it, and
+          trails behind with realistic body segment motion.
+        </p>
+        <p>
+          This is one of the most impressive <strong>creative cursor effects</strong> you can build
+          for a portfolio, gaming site, or interactive landing page. It combines
+          <strong>SVG animation</strong>, <strong>JavaScript mouse tracking</strong>, and
+          <strong>CSS transforms</strong> into a single cohesive effect.
+        </p>
+      </section>
+
+      <hr>
+
+      <!-- FEATURES -->
+      <section id="features">
+        <h2>Key Features of This Dragon Cursor Effect</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🐉</div>
+            <div class="feature-title">Animated SVG Dragon</div>
+            <div class="feature-desc">Fully custom SVG structure with head, body segments, wings, and tail.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🖱️</div>
+            <div class="feature-title">Real-Time Mouse Tracking</div>
+            <div class="feature-desc">The dragon head rotates and moves toward the cursor position in real time.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🌀</div>
+            <div class="feature-title">Trailing Body Animation</div>
+            <div class="feature-desc">Each body segment follows the previous with a natural delay for a snake-like
+              trail.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📐</div>
+            <div class="feature-title">Math.atan2 Direction Logic</div>
+            <div class="feature-desc">Precise angle calculation ensures the dragon always faces the cursor perfectly.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <div class="feature-title">requestAnimationFrame Loop</div>
+            <div class="feature-desc">60fps smooth animation using the native browser animation API — no setInterval.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">♿</div>
+            <div class="feature-title">Accessibility Aware</div>
+            <div class="feature-desc">Respects prefers-reduced-motion — animation pauses for users who need it.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <div class="feature-title">CSS Idle Animation</div>
+            <div class="feature-desc">Idle breathing and wing-flap animations keep the dragon alive even when still.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <div class="feature-title">Zero Dependencies</div>
+            <div class="feature-desc">Pure HTML, CSS, SVG, and JavaScript — no libraries, no build tools.</div>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- SOURCE CODE -->
+      <section id="source-code">
+        <h2>Full Source Code (Free)</h2>
+        <p>
+          The project is split into three files: the <strong>HTML</strong> for structure and SVG,
+          the <strong>CSS</strong> for styling and idle animations, and the
+          <strong>JavaScript</strong> for mouse tracking and body segment motion.
+          Use the tabs to switch between them and the copy button to grab the code.
+        </p>
+
+        <div class="code-section">
+          <div class="code-tabs" role="tablist" aria-label="Code files">
+            <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+              aria-controls="panel-html">HTML</button>
+            <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+              aria-controls="panel-css">CSS</button>
+            <button class="code-tab" data-lang="js" role="tab" aria-selected="false"
+              aria-controls="panel-js">JavaScript</button>
+          </div>
+
+          <div class="code-panels">
+            <div class="code-box active" id="panel-html" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code1" class="language-html"></code></pre>
+            </div>
+
+            <div class="code-box" id="panel-css" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
+                <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code2" class="language-css"></code></pre>
+            </div>
+
+            <div class="code-box" id="panel-js" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#ebdf00;">JavaScript — script.js</span>
+                <button class="copy-btn" data-target="code3"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code3" class="language-js"></code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <strong>💡 Tip:</strong> Place all three files in the same folder and open <code>index.html</code>
+          in your browser. Move your mouse around to see the dragon follow it. No server required.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- HOW IT WORKS -->
+      <section id="how-it-works">
+        <h2>How It Works — Step by Step</h2>
+        <p>
+          Let's break down the seven core techniques that power this dragon cursor effect,
+          from SVG structure to the animation loop.
+        </p>
+
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>SVG Dragon Structure</h3>
+              <p>
+                The dragon is built using grouped <code>&lt;g&gt;</code> elements inside an
+                <code>&lt;svg&gt;</code> tag. Each part — head, body segment, wing, and tail —
+                is a separate group with its own <code>transform-origin</code>, enabling
+                independent rotation without affecting the rest of the body.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>CSS Idle Animations</h3>
+              <p>
+                Even when the mouse is still, the dragon stays alive. CSS <code>@keyframes</code>
+                apply a gentle scale pulse to the body (breathing) and a rotation oscillation to
+                the wings (flapping). Each part uses a different <code>animation-delay</code>
+                for a natural, offset rhythm.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>Capturing Mouse Position</h3>
+              <p>
+                A <code>mousemove</code> listener on the <code>document</code> stores the
+                cursor's <code>event.clientX</code> and <code>event.clientY</code> into a
+                target object. The actual movement toward that target happens separately inside
+                the animation loop — not directly on the event — to keep rendering smooth.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h3>Math.atan2 — Angle Calculation</h3>
+              <p>
+                <code>Math.atan2(targetY - currentY, targetX - currentX)</code> returns the
+                angle (in radians) from the dragon's head to the cursor. Converting to degrees
+                and applying it as a CSS <code>rotate()</code> transform makes the head always
+                face the mouse, no matter where it moves.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">05</div>
+            <div class="step-content">
+              <h3>Trailing Body Segments</h3>
+              <p>
+                An array stores the last N cursor positions (one per body segment). On each
+                animation frame, the head moves toward the mouse, then each body segment
+                is placed at an earlier entry in the position history. This lag makes the
+                body realistically trail behind the head like a snake in motion.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">06</div>
+            <div class="step-content">
+              <h3>requestAnimationFrame Loop</h3>
+              <p>
+                The main update function calls itself recursively with
+                <code>requestAnimationFrame(update)</code>. This syncs the animation to the
+                display's refresh rate (~60fps), preventing over-rendering and ensuring
+                buttery-smooth motion without <code>setInterval</code> timing drift.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">07</div>
+            <div class="step-content">
+              <h3>prefers-reduced-motion Support</h3>
+              <p>
+                Before starting the loop, the code checks
+                <code>window.matchMedia('(prefers-reduced-motion: reduce)').matches</code>.
+                If the user has requested reduced motion in their OS settings, the animation
+                loop does not start. This ensures the effect is accessible and compliant
+                with WCAG 2.1 guidelines.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="warn-box">
+          <strong>⚠️ Desktop Only:</strong> Custom cursor effects only work on devices with a mouse pointer.
+          On mobile and tablet (touch input), no cursor exists. Add a check like
+          <code>if ('ontouchstart' in window) return;</code> before starting the animation to skip
+          it on touch devices gracefully.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- CONCEPTS -->
+      <section id="concepts">
+        <h2>JavaScript & SVG Concepts Used</h2>
+        <p>This project is an excellent way to practice these intermediate-to-advanced web techniques:</p>
+        <ul>
+          <li><strong>SVG Grouping & Transforms</strong> — Using <code>&lt;g&gt;</code> tags with
+            <code>transform-origin</code> for modular, independently animated parts.</li>
+          <li><strong>JavaScript Trigonometry</strong> — <code>Math.atan2()</code>, <code>Math.cos()</code>, and
+            <code>Math.sin()</code> for direction and smooth interpolation.</li>
+          <li><strong>requestAnimationFrame</strong> — Building a performant 60fps animation loop that syncs with the
+            browser's paint cycle.</li>
+          <li><strong>Positional Array History</strong> — Storing past positions in an array to create trailing motion
+            effects.</li>
+          <li><strong>CSS Keyframe Animations</strong> — Layering multiple <code>@keyframes</code> with different delays
+            to simulate breathing and wing motion.</li>
+          <li><strong>Accessibility</strong> — Detecting and respecting <code>prefers-reduced-motion</code> for
+            inclusive design.</li>
+          <li><strong>Event Delegation</strong> — Capturing mouse events at the document level for global coverage.</li>
+        </ul>
+      </section>
+
+      <hr>
+
+      <!-- VIDEO -->
+      <section id="video">
+        <h2>Video Demo</h2>
+        <p>Watch the dragon cursor effect in action before diving into the code:</p>
+        <div class="video-wrap">
+          <iframe width="356" height="634" src="https://www.youtube.com/embed/gRgkTbLdT9A"
+            title="Interactive Dragon Cursor Effect with SVG & JavaScript" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+
+          <details class="faq-item">
+            <summary class="faq-question">How do I create a custom cursor effect with JavaScript?</summary>
+            <div class="faq-answer">
+              Hide the default cursor with <code>cursor: none</code> on the body. Create an SVG or HTML
+              element for your custom cursor. Listen to <code>mousemove</code> and update the element's
+              position using <code>event.clientX</code> and <code>event.clientY</code>. Apply CSS transforms
+              for smooth positioning. Full source code is in the tabs above.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How does the dragon trailing body animation work?</summary>
+            <div class="faq-answer">
+              The trail effect stores an array of past cursor positions — one entry per frame. Each body
+              segment is rendered at an older entry in the array, offset by a fixed number of frames.
+              This delay makes each segment appear to follow the one ahead of it, creating a fluid
+              snake-like trailing motion.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">What is Math.atan2 used for in cursor animations?</summary>
+            <div class="faq-answer">
+              <code>Math.atan2(y, x)</code> returns the angle (in radians) between the positive x-axis
+              and the point (x, y). In this project it calculates the direction from the dragon's head
+              to the cursor, allowing the head to rotate and always face the mouse position precisely.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Will this cursor animation hurt page performance?</summary>
+            <div class="faq-answer">
+              No — when built correctly with <code>requestAnimationFrame</code>, the animation runs at
+              exactly the display refresh rate and never over-renders. Avoid updating DOM positions
+              directly inside the <code>mousemove</code> handler; always defer rendering to the animation
+              frame for best performance.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Does a custom cursor work on mobile?</summary>
+            <div class="faq-answer">
+              No. Mobile and tablet devices use touch input — there is no mouse cursor. Add a check
+              like <code>if ('ontouchstart' in window) return;</code> at the start of your script to
+              gracefully skip the animation on touch devices and avoid any wasted computation.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How do I support prefers-reduced-motion?</summary>
+            <div class="faq-answer">
+              Check <code>window.matchMedia('(prefers-reduced-motion: reduce)').matches</code> before
+              starting the animation loop. If it returns <code>true</code>, skip starting
+              <code>requestAnimationFrame</code> entirely and optionally show a static version of
+              the cursor instead. This respects WCAG 2.1 accessibility guidelines.
+            </div>
+          </details>
+
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- CONCLUSION -->
+      <section id="conclusion" class="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          The <strong>dragon cursor effect</strong> is one of the most visually striking things you can
+          build with vanilla web technologies. By combining <strong>SVG modular structure</strong>,
+          <strong>JavaScript trigonometry</strong>, a <strong>position history trail</strong>, and a
+          <strong>requestAnimationFrame loop</strong>, you get a production-quality interactive animation
+          with zero dependencies.
+        </p>
+        <p>
+          Whether you're building a gaming site, a creative portfolio, or just want to master advanced
+          JavaScript animation techniques, this project covers the real-world patterns that matter.
+          Copy the code, customize the SVG dragon design, and make it yours.
+        </p>
+        <p style="color:var(--text-muted); font-size:14px; margin-bottom:0;">
+          Found this useful? Check out the related projects in the sidebar for more creative web animations.
+        </p>
+      </section>
+
+    </main>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" aria-label="Related projects">
+      <div class="sidebar-box">
+        <div class="sidebar-header">🔗 Related Projects</div>
+        <div class="related-list">
+          <a class="related-card" href="Project40.html" aria-label="CSS Neon Digital Clock Animation">
+            <img src="https://i.suar.me/Ep114/m" alt="CSS Neon Digital Clock Animation" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">CSS Neon Digital Clock Animation</div>
+          </a>
+          <a class="related-card" href="Project39.html" aria-label="Animated Button with Star Effects">
+            <img src="https://i.suar.me/jvZZv/m" alt="Animated Button with Star Effects Using HTML & CSS" loading="lazy"
+              width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Button with Star Effects — HTML & CSS</div>
+          </a>
+          <a class="related-card" href="Project38.html" aria-label="Modern Voice Player JavaScript">
+            <img src="https://i.suar.me/og7YP/m" alt="Modern Voice Player Design with JavaScript" loading="lazy"
+              width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Modern Voice Player Design with JavaScript</div>
+          </a>
+          <a class="related-card" href="Project37.html" aria-label="Glassmorphism Login Page">
+            <img src="https://i.suar.me/Np3EO/m" alt="Modern Glassmorphism Login Page Design" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Modern Glassmorphism Login Page Design</div>
+          </a>
+        </div>
+      </div>
+    </aside>
+
   </div>
-  <div class="img">
-    <img src="image copy 87.png" alt="subscribe.box">
-  </div>
-<div class="par">
 
-<h2>Interactive Dragon Cursor Effect with SVG & JavaScript (Advanced Web Animation)</h2>
-<p>
-An <strong>interactive dragon cursor effect</strong> is a cutting-edge <strong>web animation technique</strong> that enhances user engagement using <strong>SVG animation</strong> and <strong>JavaScript cursor tracking</strong>. This type of <strong>custom cursor effect</strong> is widely used in modern <strong>frontend development</strong> to create immersive digital experiences.
-</p>
-
-<h2>Why Interactive Cursor Effects Improve User Engagement</h2>
-<ul>
-<li><strong>Unique Web Experience:</strong> A dynamic dragon cursor creates a highly engaging <strong>interactive UI</strong>.</li>
-<li><strong>Increased Time on Site:</strong> Users interact naturally with <strong>mouse animation effects</strong>, improving retention.</li>
-<li><strong>Modern Web Design Trend:</strong> Popular in <strong>creative coding</strong> and <strong>web design inspiration</strong> platforms.</li>
-<li><strong>Memorable Branding:</strong> Custom cursor animations help differentiate your website in competitive markets.</li>
-<li><strong>High Performance:</strong> <strong>SVG-based animations</strong> are lightweight and scalable across devices.</li>
-</ul>
-
-<h2>How to Create a Dragon Cursor Effect (Step-by-Step Tutorial)</h2>
-
-<h3>1. SVG Structure for Animated Cursor</h3>
-<p>
-Start by building the dragon using scalable <code>&lt;svg&gt;</code> elements. Group parts such as head, body, and tail with <code>&lt;g&gt;</code> tags to enable modular animation. This structure is essential for advanced <strong>SVG animation techniques</strong> used in professional <strong>web animation projects</strong>.
-</p>
-
-<h3>2. CSS Animation and Styling</h3>
-<p>
-Use modern CSS features like <code>transform</code>, <code>transform-origin</code>, and <code>@keyframes</code> to create smooth motion. Add gradients and shadows for depth, making the animation visually appealing and aligned with current <strong>web design trends in the US and Europe</strong>.
-</p>
-
-<h3>3. JavaScript Cursor Tracking & Interaction</h3>
-<p>
-Implement cursor interaction using JavaScript:
-</p>
-<ol>
-<li>Capture cursor position via <code>mousemove</code> events.</li>
-<li>Calculate direction and angle dynamically.</li>
-<li>Apply rotation transforms to SVG elements.</li>
-<li>Add delayed motion for realistic trailing animation.</li>
-</ol>
-<p>
-This method is commonly used in <strong>interactive web animation</strong> and <strong>JavaScript animation libraries</strong>.
-</p>
-
-<h2>Benefits for UX and Modern Web Design</h2>
-<p>
-Using an <strong>interactive cursor animation</strong> significantly improves <strong>user experience (UX)</strong> and strengthens your brand identity in global markets.
-</p>
-
-<ul>
-<li><strong>Higher Engagement Rates:</strong> Encourages user interaction.</li>
-<li><strong>Creative Branding:</strong> Ideal for gaming, tech startups, and digital agencies.</li>
-<li><strong>Optimized Performance:</strong> Works efficiently with modern browsers.</li>
-</ul>
-
-<h2>SEO & Performance Best Practices</h2>
-<ul>
-<li>Use <code>prefers-reduced-motion</code> for accessibility compliance (important in EU regulations).</li>
-<li>Optimize SVG paths to reduce DOM complexity.</li>
-<li>Throttle animation updates for better performance.</li>
-<li>Ensure compatibility with mobile and touch devices.</li>
-</ul>
-
-<h2>Common SEO & Development Mistakes to Avoid</h2>
-<ul>
-<li>Using heavy animations that affect Core Web Vitals.</li>
-<li>Ignoring accessibility standards (WCAG).</li>
-<li>Overusing effects that distract from content.</li>
-</ul>
-
-<h2>Conclusion: A Modern JavaScript & SVG Animation Technique</h2>
-<p>
-The <strong>Interactive Dragon Cursor Effect with SVG & JavaScript</strong> is a powerful example of modern <strong>web animation</strong> and <strong>frontend engineering</strong>. When optimized for performance and SEO, it becomes a valuable asset for attracting traffic from competitive markets like the US and Europe.
-</p>
-
-<div class="highlight">
-<p>
-<strong>SEO Keywords:</strong> javascript animation, svg animation, custom cursor effect, interactive cursor effect, web animation ideas, frontend development, creative coding, interactive UI, cursor follow effect, animated SVG tutorial, modern web design, UX animation, JavaScript mouse tracking, advanced web animation
-</p>
-</div>
-
-</div>
-
- <div class="videos">
-<iframe width="356" height="634" src="https://www.youtube.com/embed/gRgkTbLdT9A" title="Interactive Dragon Cursor Effect with SVG &amp; JavaScript #coding  #shrots" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
- </div>
-
-    <div class="card">
-  
-
-  <div class="code-box" id="cpoy">
-    <span class="type" style="color: #ff6600;">html</span><button class="copy-btn"><i class='bx bxs-copy' style='color:#ffffff' ></i></button>
-    <pre><code id="code1" class="language-html"></code></pre>
-  </div>
-  <div class="code-box">
-    <span class="type" style="color: #00ffff;">css</span><button class="copy-btn"><i class='bx bxs-copy' style='color:#ffffff' ></i></button>
-    <pre><code id="code2" class="language-js"></code></pre>
-  </div>
-  <div class="code-box">
-    <span class="type" style="color: #ebdf00; ">JS</span><button class="copy-btn"><i class='bx bxs-copy' style='color:#ffffff' ></i></button>
-    <pre><code id="code3" class="language-js"></code></pre>
-  </div>
-</div>
+  <!-- ===== SCRIPTS ===== -->
 
 
+  <script>
+    // ===== LOAD CODE FROM GIST =====
+    const gistBase = "https://gist.githubusercontent.com/77cod-ing/73e1d4e1f6e5a80a0dc9622a76076549/raw/";
 
+    async function loadCode(url, elementId, lang) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const text = await res.text();
+        const el = document.getElementById(elementId);
+        el.textContent = text;
+        el.className = `language-${lang}`;
+        Prism.highlightElement(el);
+      } catch (e) {
+        const el = document.getElementById(elementId);
+        if (el) el.textContent = `// Failed to load code: ${e.message}`;
+      }
+    }
 
-</body>
+    loadCode(gistBase + "b74c1221376ffefa158c300fcfcff9d28c4723d9/index.html", "code1", "html");
+    loadCode(gistBase + "91014dd5ad2e4e8bd7b7b318e5029c4c56f9b89b/77cod-ing.css", "code2", "css");
+    loadCode(gistBase + "b74c1221376ffefa158c300fcfcff9d28c4723d9/77cod-ing.js", "code3", "js");
 
-<script>
-async function loadCode() {
-  const response = await fetch("https://gist.githubusercontent.com/77cod-ing/73e1d4e1f6e5a80a0dc9622a76076549/raw/b74c1221376ffefa158c300fcfcff9d28c4723d9/index.html");
-  const text = await response.text();
-
-  const codeElement = document.getElementById("code1");
-  codeElement.textContent = text;
-
-  Prism.highlightElement(codeElement); // 👈 هذا هو السر
-}
-
-loadCode();
-async function loadCSS() {
-  const response = await fetch("https://gist.githubusercontent.com/77cod-ing/73e1d4e1f6e5a80a0dc9622a76076549/raw/91014dd5ad2e4e8bd7b7b318e5029c4c56f9b89b/77cod-ing.css");
-  const text = await response.text();
-
-  const codeElement = document.getElementById("code2");
-  codeElement.textContent = text;
-
-  Prism.highlightElement(codeElement); // 👈 هذا هو السر
-}
-
-loadCSS();
-async function loadJS() {
-  const response = await fetch("https://gist.githubusercontent.com/77cod-ing/73e1d4e1f6e5a80a0dc9622a76076549/raw/b74c1221376ffefa158c300fcfcff9d28c4723d9/77cod-ing.js");
-  const text = await response.text();
-
-  const codeElement = document.getElementById("code3");
-  codeElement.textContent = text;
-
-  Prism.highlightElement(codeElement); // 👈 هذا هو السر
-}
-
-loadJS();
-
-</script>
-<script>
-document.querySelectorAll(".copy-btn").forEach(button => {
-    button.addEventListener("click", async () => {
-
-        const code = button.closest(".code-box").querySelector("code").innerText;
-
-        if (!code.trim()) return; // منع النسخ إذا الكود فارغ
-
-        await navigator.clipboard.writeText(code);
-
-        // تغيير نص الزر مؤقتًا لإظهار ✔️
-        const originalText = button.innerText;
-        button.innerText = "✔";
-        setTimeout(() => {
-            button.innerText = originalText;
-        }, 1500);
+    // ===== TABS =====
+    document.querySelectorAll(".code-tab").forEach(tab => {
+      tab.addEventListener("click", () => {
+        const lang = tab.dataset.lang;
+        document.querySelectorAll(".code-tab").forEach(t => {
+          t.classList.remove("active");
+          t.setAttribute("aria-selected", "false");
+        });
+        document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+        tab.classList.add("active");
+        tab.setAttribute("aria-selected", "true");
+        const panelMap = { html: "panel-html", css: "panel-css", js: "panel-js" };
+        document.getElementById(panelMap[lang]).classList.add("active");
+      });
     });
-});
-</script>
+
+    // ===== COPY BUTTONS =====
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const targetId = btn.dataset.target;
+        const code = document.getElementById(targetId)?.innerText || "";
+        if (!code.trim()) return;
+        try {
+          await navigator.clipboard.writeText(code);
+          btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+          btn.classList.add("copied");
+          setTimeout(() => {
+            btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
+            btn.classList.remove("copied");
+          }, 2000);
+        } catch (e) {
+          btn.textContent = "Error";
+        }
+      });
+    });
+  </script>
 </body>
+
 </html>
