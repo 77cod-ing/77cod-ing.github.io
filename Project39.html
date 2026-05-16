@@ -698,10 +698,18 @@
       width: 60vw;
     }
 
+    .code-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
     .code-tabs {
       display: flex;
       gap: 4px;
-      margin-bottom: -1px;
     }
 
     .code-tab {
@@ -729,6 +737,70 @@
 
     .code-tab[data-lang="css"].active {
       color: #00ffff;
+    }
+
+    /* ===== PREVIEW BUTTON ===== */
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.3px;
+    }
+
+    .preview-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .preview-btn:hover {
+      border-color: var(--premcolo);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .preview-btn:hover::before {
+      opacity: 1;
+    }
+
+    .preview-btn:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .preview-btn i {
+      font-size: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn.loading i {
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
     }
 
     .code-panels {
@@ -988,6 +1060,207 @@
       line-height: 1.3;
     }
 
+    /* ===== PREVIEW MODAL ===== */
+    .preview-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 5, 15, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+    }
+
+    .preview-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .preview-modal {
+      width: 92vw;
+      max-width: 860px;
+      height: 75vh;
+      max-height: 580px;
+      background: #0a0e1a;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow:
+        0 0 0 1px rgba(0, 217, 255, 0.06),
+        0 24px 80px rgba(0, 0, 0, 0.7),
+        0 0 120px rgba(0, 217, 255, 0.06);
+      transform: scale(0.92) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .preview-overlay.open .preview-modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .preview-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+    }
+
+    .preview-modal-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-modal-title i {
+      color: var(--premcolo);
+      font-size: 16px;
+    }
+
+    .preview-modal-title strong {
+      color: #fff;
+    }
+
+    .preview-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .preview-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, filter 0.2s;
+    }
+
+    .preview-dot:hover {
+      transform: scale(1.2);
+      filter: brightness(1.3);
+    }
+
+    .preview-dot.red {
+      background: #ff5f57;
+    }
+
+    .preview-dot.yellow {
+      background: #febc2e;
+    }
+
+    .preview-dot.green {
+      background: #28c840;
+    }
+
+    .preview-close-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .preview-close-btn:hover {
+      border-color: var(--accent2);
+      color: var(--accent2);
+      background: rgba(255, 107, 53, 0.08);
+    }
+
+    .preview-iframe-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .preview-iframe-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      background: #000;
+    }
+
+    .preview-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: #0a0e1a;
+      z-index: 2;
+      transition: opacity 0.4s;
+    }
+
+    .preview-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .preview-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(0, 217, 255, 0.15);
+      border-top-color: var(--premcolo);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    .preview-loading-text {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .preview-hint {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 16px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      color: var(--text-muted);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s 0.8s;
+      white-space: nowrap;
+      z-index: 3;
+    }
+
+    .preview-hint.show {
+      opacity: 1;
+    }
+
+    .preview-hint i {
+      color: var(--premcolo);
+      margin-right: 4px;
+    }
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 900px) {
       .layout {
@@ -1027,8 +1300,16 @@
       .practice-grid {
         grid-template-columns: 1fr;
       }
-      .code-section{
+
+      .code-section {
         width: 85vw;
+      }
+
+      .preview-modal {
+        width: 96vw;
+        height: 70vh;
+        max-height: 500px;
+        border-radius: 14px;
       }
     }
 
@@ -1052,6 +1333,28 @@
 
       .related-card {
         flex: 1 1 100%;
+      }
+
+      .code-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .preview-modal {
+        width: 98vw;
+        height: 65vh;
+        border-radius: 12px;
+      }
+
+      .preview-modal-header {
+        padding: 10px 14px;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .preview-hint {
+        font-size: 10px;
+        padding: 5px 12px;
       }
     }
   </style>
@@ -1158,7 +1461,8 @@
       <section id="overview">
         <h2>What You'll Build</h2>
         <p>
-          In this tutorial, you'll create a <strong><a href="project24.html" style="color: rgb(0, 255, 255);"><i class='bx bx-link-alt'></i> creative animated button with star effects</a></strong> using
+          In this tutorial, you'll create a <strong><a href="project24.html" style="color: rgb(0, 255, 255);"><i
+                class='bx bx-link-alt'></i> creative animated button with star effects</a></strong> using
           only HTML and CSS — no JavaScript required. When a user hovers over the button, multiple SVG star
           shapes animate outward in an explosion pattern, each glowing with a drop-shadow filter.
         </p>
@@ -1223,11 +1527,18 @@
         </p>
 
         <div class="code-section">
-          <div class="code-tabs" role="tablist" aria-label="Code files">
-            <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
-              aria-controls="panel-html">HTML</button>
-            <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
-              aria-controls="panel-css">CSS</button>
+          <!-- ===== TOOLBAR: Tabs + Preview Button ===== -->
+          <div class="code-toolbar">
+            <div class="code-tabs" role="tablist" aria-label="Code files">
+              <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                aria-controls="panel-html">HTML</button>
+              <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+                aria-controls="panel-css">CSS</button>
+            </div>
+            <button class="preview-btn" id="previewBtn" aria-label="Preview the final result">
+              <i class='bx bx-play-circle'></i>
+              <span>Preview Result</span>
+            </button>
           </div>
 
           <div class="code-panels">
@@ -1251,7 +1562,8 @@
 
         <div class="info-box">
           <strong>💡 Quick Start:</strong> Copy both files into the same folder and open <code>index.html</code> in your
-          browser. Hover over the button to see the star animation immediately.
+          browser. Hover over the button to see the star animation immediately. Or click <strong>Preview Result</strong>
+          above to see it live right here.
         </div>
       </section>
 
@@ -1479,8 +1791,8 @@
         <div class="sidebar-header">🔗 Related Projects</div>
         <div class="related-list">
           <a class="related-card" href="Project28.html" aria-label="CSS Neon Digital Clock Animation">
-            <img src="image copy 82.png" alt="Creative gooey CSS JavaScript navigation menu with liquid blob animation" loading="lazy" width="4500"
-              height="158">
+            <img src="image copy 82.png" alt="Creative gooey CSS JavaScript navigation menu with liquid blob animation"
+              loading="lazy" width="4500" height="158">
             <div class="related-card-overlay"></div>
             <div class="related-card-title">Gooey Navigation Menu – Creative CSS &amp; JavaScript Liquid Animation</div>
           </a>
@@ -1508,9 +1820,49 @@
 
   </div>
 
+  <!-- ===== PREVIEW MODAL ===== -->
+  <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+    aria-label="Live preview of the animated button">
+    <div class="preview-modal">
+      <div class="preview-modal-header">
+        <div class="preview-modal-title">
+          <i class='bx bx-show'></i>
+          <strong>Live Preview</strong> — Animated Button with Star Effects
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="preview-dots">
+            <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+            <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+            <button class="preview-dot green" aria-label="Maximize" disabled></button>
+          </div>
+          <button class="preview-close-btn" id="previewCloseBtn">
+            <i class='bx bx-x'></i> Close
+          </button>
+        </div>
+      </div>
+      <div class="preview-iframe-wrap">
+        <div class="preview-loading" id="previewLoading">
+          <div class="preview-spinner"></div>
+          <span class="preview-loading-text">Loading preview...</span>
+        </div>
+        <iframe id="previewIframe" title="Preview of animated button with star effects"
+          sandbox="allow-same-origin"></iframe>
+        <div class="preview-hint" id="previewHint">
+          <i class='bx bx-cursor'></i> Hover over the button to see the star animation
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ===== SCRIPTS ===== -->
   <script>
     const gistBase = "https://gist.githubusercontent.com/77cod-ing/905e2d1164b8104cdb8d407592d5dfdd/raw/";
+    const htmlUrl = gistBase + "49d8d983d7532d1a7e6454b8e867d10a7bafb3b3/77cod-ing.html";
+    const cssUrl = gistBase + "60c3e0c79c1d132965689f339988c20a9bb75bc0/77cod-ing.css";
+
+    /* Storing downloaded texts for use in previewing */
+    let cachedHTML = "";
+    let cachedCSS = "";
 
     async function loadCode(url, elementId, lang) {
       try {
@@ -1521,16 +1873,20 @@
         el.textContent = text;
         el.className = `language-${lang}`;
         Prism.highlightElement(el);
+
+        /* Temporary storage */
+        if (lang === "html") cachedHTML = text;
+        if (lang === "css") cachedCSS = text;
       } catch (e) {
         const el = document.getElementById(elementId);
         if (el) el.textContent = `/* Failed to load: ${e.message} */`;
       }
     }
 
-    loadCode(gistBase + "49d8d983d7532d1a7e6454b8e867d10a7bafb3b3/77cod-ing.html", "code1", "html");
-    loadCode(gistBase + "60c3e0c79c1d132965689f339988c20a9bb75bc0/77cod-ing.css", "code2", "css");
+    loadCode(htmlUrl, "code1", "html");
+    loadCode(cssUrl, "code2", "css");
 
-    // ===== TABS =====
+    /* ===== TABS ===== */
     document.querySelectorAll(".code-tab").forEach(tab => {
       tab.addEventListener("click", () => {
         const lang = tab.dataset.lang;
@@ -1546,7 +1902,7 @@
       });
     });
 
-    // ===== COPY BUTTONS =====
+    /* ===== COPY BUTTONS ===== */
     document.querySelectorAll(".copy-btn").forEach(btn => {
       btn.addEventListener("click", async () => {
         const code = document.getElementById(btn.dataset.target)?.innerText || "";
@@ -1563,6 +1919,115 @@
           btn.textContent = "Error";
         }
       });
+    });
+
+    /* ===== PREVIEW MODAL ===== */
+    const previewOverlay = document.getElementById("previewOverlay");
+    const previewIframe = document.getElementById("previewIframe");
+    const previewLoading = document.getElementById("previewLoading");
+    const previewHint = document.getElementById("previewHint");
+    const previewBtn = document.getElementById("previewBtn");
+    const previewCloseBtn = document.getElementById("previewCloseBtn");
+    const previewDotClose = document.getElementById("previewDotClose");
+
+    function openPreview() {
+      previewOverlay.classList.add("open");
+      document.body.style.overflow = "hidden";
+      previewLoading.classList.remove("hidden");
+      previewHint.classList.remove("show");
+      previewBtn.classList.add("loading");
+      buildPreview();
+    }
+
+    function closePreview() {
+      previewOverlay.classList.remove("open");
+      document.body.style.overflow = "";
+      previewIframe.srcdoc = "";
+      previewBtn.classList.remove("loading");
+    }
+
+    async function buildPreview() {
+      /* If the data is pre-loaded, we use it directly. */
+      if (cachedHTML && cachedCSS) {
+        injectPreview(cachedHTML, cachedCSS);
+        return;
+      }
+
+      /*Otherwise get it again */
+      try {
+        const [htmlRes, cssRes] = await Promise.all([fetch(htmlUrl), fetch(cssUrl)]);
+        const html = await htmlRes.text();
+        const css = await cssRes.text();
+        cachedHTML = html;
+        cachedCSS = css;
+        injectPreview(html, css);
+      } catch (e) {
+        previewLoading.innerHTML = `
+          <i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i>
+          <span class="preview-loading-text" style="color:var(--accent2);">Failed to load preview: ${e.message}</span>
+        `;
+        previewBtn.classList.remove("loading");
+      }
+    }
+
+    function injectPreview(html, css) {
+      /* Replace the external CSS link with an inline style */
+      let combined = html.replace(
+        /<link[^>]*href=["']style\.css["'][^>]*>/gi,
+        `<style>${css}</style>`
+      );
+
+      /* If no CSS link is found, add the style before </head> or </body> */
+      if (!combined.includes("<style>")) {
+        if (combined.includes("</head>")) {
+          combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
+        } else if (combined.includes("</body>")) {
+          combined = combined.replace("</body>", `<style>${css}</style>\n</body>`);
+        } else {
+          combined = `<style>${css}</style>\n${combined}`;
+        }
+      }
+
+      /* Add a suitable background for the preview */
+      const bgStyle = `<style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#0a0e1a;}</style>`;
+      if (combined.includes("<head>")) {
+        combined = combined.replace("<head>", `<head>${bgStyle}`);
+      } else {
+        combined = bgStyle + combined;
+      }
+
+      previewIframe.srcdoc = combined;
+
+      previewIframe.addEventListener("load", function onLoad() {
+        previewLoading.classList.add("hidden");
+        previewBtn.classList.remove("loading");
+        /* Show a hint after loading the preview*/
+        setTimeout(() => {
+          previewHint.classList.add("show");
+          /* The hint will be automatically hidden after 9 seconds. */
+          setTimeout(() => previewHint.classList.remove("show"), 9000);
+        }, 300);
+        previewIframe.removeEventListener("load", onLoad);
+      });
+    }
+
+    /* Open the preview */
+    previewBtn.addEventListener("click", openPreview);
+
+    /* Close preview */
+    previewCloseBtn.addEventListener("click", closePreview);
+    previewDotClose.addEventListener("click", closePreview);
+
+    /* Close by clicking outside the window */
+    previewOverlay.addEventListener("click", (e) => {
+      if (e.target === previewOverlay) closePreview();
+    });
+
+    /* Close with key Escape */
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && previewOverlay.classList.contains("open")) {
+        closePreview();
+      }
     });
   </script>
 
