@@ -1,156 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="Picture1.png">
-    <title>Terms and Conditions for 77cod_ing</title>
-    <style>
-        body {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="Picture1.png">
+  <title>Terms &amp; Conditions — 77cod_ing</title>
+  <meta name="description" content="Terms and Conditions for 77cod_ing. Read the rules governing the use of our website and content.">
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right,#2c0e43 10%,#581c87  ) ;
+      padding: 0;
     }
 
-    /* Navbar container */
+    :root {
+      --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+      --premcolo: #00d9ff;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --surface: rgba(255, 255, 255, 0.04);
+      --surface-hover: rgba(0, 217, 255, 0.07);
+      --border: rgba(255, 255, 255, 0.08);
+      --font-head: 'Space Mono', monospace;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--back);
+      font-family: var(--font-body);
+      color: var(--text);
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* ===== NAVBAR ===== */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 60px;
-      background-color: #0d1325;
+      height: 56px;
+      padding: 0 2.5rem;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
-    /* Logo */
     .logo {
       display: flex;
       align-items: center;
-      font-size: 22px;
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 2vw, 1.2rem);
       font-weight: bold;
       color: white;
       text-decoration: none;
-    }
-    .logo-icon {
-      color: #a855f7;
-      font-size: 26px;
-      margin-right: 8px;
-      letter-spacing: 2.5px;
+      gap: 8px;
     }
 
-    /* Links */
+    .logo-icon { color: var(--premcolo); letter-spacing: 2px; }
+
     .nav-links {
       display: flex;
-      gap: 35px;
+      gap: clamp(1rem, 2vw, 2.2rem);
+      align-items: center;
     }
+
     .nav-links a {
-      color: #d1d5db;
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      display: inline-block;          /* مهم عشان scale يشتغل */
-      transition: transform 0.3s ease, color 0.3s ease;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.25s;
     }
-    .nav-links a:hover {
-      color: #a855f7;                 /* تغيير اللون */
-      transform: scale(1.2);          /* تكبير بصري بدون تحريك باقي الروابط */
+
+    .nav-links a:hover { color: var(--premcolo); }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      text-align: center;
+      padding: 5rem 2rem 3rem;
+      overflow: hidden;
     }
-     @media (max-width: 1000px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 0;
-  }
-  }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 300px;
+      background: radial-gradient(ellipse, rgba(0, 217, 255, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 99px;
+      border: 1px solid rgba(0, 217, 255, 0.25);
+      background: rgba(0, 217, 255, 0.08);
+      font-family: var(--font-head);
+      font-size: 11px;
+      color: var(--premcolo);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      animation: fadeDown 0.6s ease both;
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(2.2rem, 6vw, 4.5rem);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      animation: fadeDown 0.7s 0.1s ease both;
+    }
+
+    .hero h1 span {
+      color: var(--premcolo);
+      position: relative;
+    }
+
+    .hero h1 span::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--premcolo), transparent);
+      border-radius: 2px;
+    }
+
+    .hero-sub {
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      color: var(--text-muted);
+      margin-top: 1rem;
+      animation: fadeDown 0.7s 0.2s ease both;
+    }
+
+    /* ===== LAYOUT ===== */
+    .policy-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem 5rem;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 1.5rem;
+      align-items: start;
+      animation: scaleIn 0.8s 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    }
+
+    /* ===== TOC CARD ===== */
+    .toc-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      position: sticky;
+      top: 72px;
+    }
+
+    .card-accent {
+      height: 3px;
+      background: linear-gradient(90deg, var(--premcolo), rgba(0, 217, 255, 0.2), transparent);
+    }
+
+    .toc-body { padding: 1.75rem 1.5rem; }
+
+    .toc-title {
+      font-family: var(--font-head);
+      font-size: 11px;
+      color: var(--premcolo);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .toc-list a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 8px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .toc-list a:hover {
+      background: var(--surface-hover);
+      color: var(--premcolo);
+    }
+
+    .toc-list a i {
+      font-size: 1rem;
+      color: var(--premcolo);
+      opacity: 0.6;
+      flex-shrink: 0;
+    }
+
+    .toc-list a:hover i { opacity: 1; }
+
+    .last-updated {
+      margin-top: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-family: var(--font-head);
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .last-updated i { color: var(--premcolo); }
+
+    /* ===== CONTENT CARD ===== */
+    .content-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 40px rgba(0, 217, 255, 0.04), 0 24px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .content-body { padding: 2rem 2.25rem; }
+
+    /* ===== SECTIONS ===== */
+    .policy-section {
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .policy-section:first-child { padding-top: 0; }
+    .policy-section:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .section-num {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(0, 217, 255, 0.1);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--premcolo);
+      flex-shrink: 0;
+    }
+
+    .section-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(0, 217, 255, 0.1);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      color: var(--premcolo);
+    }
+
+    .section-title {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      color: #fff;
+      scroll-margin-top: 80px;
+    }
+
+    .policy-section p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 0.75rem;
+    }
+
+    .policy-section p:last-child { margin-bottom: 0; }
+
+    .policy-section ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .policy-section ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .policy-section ul li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--premcolo);
+      flex-shrink: 0;
+      margin-top: 7px;
+      opacity: 0.7;
+    }
+
+    .policy-section a {
+      color: var(--premcolo);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .policy-section a:hover { opacity: 0.75; }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.93) translateY(20px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
+      .navbar { padding: 0 1.25rem; }
+      .nav-links { gap: 1rem; }
+      .nav-links a { font-size: 13px; }
+      .policy-wrapper { grid-template-columns: 1fr; }
+      .toc-card { position: static; }
+      .hero { padding: 3.5rem 1.5rem 2rem; }
+      .content-body { padding: 1.75rem 1.5rem; }
+      .toc-body { padding: 1.5rem; }
     }
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background: #0d1325;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #00d0ff;
-        }
-        p {
-            margin-bottom: 15px;
-            color: #fff;
-        }
-        ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-            color: #fff;
-        }
-    </style>
+
+    @media (max-width: 500px) {
+      .nav-links { display: none; }
+    }
+  </style>
 </head>
+
 <body>
-    <header class="navbar">
-    <a href="https://77cod-ing.github.io" class="logo">
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
       <span class="logo-icon">{ / }</span> 77cod_ing
     </a>
-    <nav class="nav-links">
-      <a href="pages.html">Pages</a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
       <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html">Terms & Conditions</a>
+      <a href="Terms & Conditions.html">Terms &amp; Conditions</a>
     </nav>
   </header>
-    <div class="container">
-        <h1>Terms and Conditions for 77cod_ing</h1>
-        <p>Welcome to <strong>77cod_ing</strong>. By using this website, you agree to the following terms and conditions:</p>
 
-        <h2>1. Acceptance of Terms</h2>
-        <p>By accessing and using this website, you agree to be bound by these terms. If you do not agree, please do not use the site.</p>
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-label">
+      <i class='bx bx-file'></i> Legal
+    </div>
+    <h1>Terms &amp; <span>Conditions</span></h1>
+    <p class="hero-sub">The rules governing the use of our website and content.</p>
+  </section>
 
-        <h2>2. Content</h2>
-        <ul>
+  <!-- ===== LAYOUT ===== -->
+  <div class="policy-wrapper">
+
+    <!-- TOC SIDEBAR -->
+    <aside class="toc-card" aria-label="Table of contents">
+      <div class="card-accent"></div>
+      <div class="toc-body">
+        <p class="toc-title"><i class='bx bx-list-ul'></i> Contents</p>
+        <ul class="toc-list">
+          <li><a href="#acceptance"><i class='bx bx-check-shield'></i> Acceptance of Terms</a></li>
+          <li><a href="#content"><i class='bx bx-book-open'></i> Content</a></li>
+          <li><a href="#permitted"><i class='bx bx-user-check'></i> Permitted Use</a></li>
+          <li><a href="#ip"><i class='bx bx-copyright'></i> Intellectual Property</a></li>
+          <li><a href="#external"><i class='bx bx-link-external'></i> External Links</a></li>
+          <li><a href="#modifications"><i class='bx bx-refresh'></i> Modifications</a></li>
+          <li><a href="#advertising"><i class='bx bx-broadcast'></i> Advertising Policy</a></li>
+          <li><a href="#contact"><i class='bx bx-envelope'></i> Contact Us</a></li>
+        </ul>
+        <div class="last-updated">
+          <i class='bx bx-calendar'></i> Last updated: September 2025
+        </div>
+      </div>
+    </aside>
+
+    <!-- CONTENT CARD -->
+    <main class="content-card" aria-label="Terms and conditions content">
+      <div class="card-accent"></div>
+      <div class="content-body">
+
+        <!-- Intro -->
+        <div class="policy-section">
+          <p>Welcome to <strong style="color:#fff;">77cod_ing</strong>. By using this website, you agree to the following terms and conditions. Please read them carefully before continuing.</p>
+        </div>
+
+        <!-- 1. Acceptance -->
+        <div class="policy-section" id="acceptance">
+          <div class="section-header">
+            <div class="section-num">01</div>
+            <h2 class="section-title">Acceptance of Terms</h2>
+          </div>
+          <p>By accessing and using this website, you agree to be bound by these terms. If you do not agree with any part of these terms, please do not use the site.</p>
+        </div>
+
+        <!-- 2. Content -->
+        <div class="policy-section" id="content">
+          <div class="section-header">
+            <div class="section-num">02</div>
+            <h2 class="section-title">Content</h2>
+          </div>
+          <ul>
             <li>All codes and articles published on the site are for educational purposes only.</li>
             <li>We do not guarantee that the content is 100% error-free.</li>
-        </ul>
+          </ul>
+        </div>
 
-        <h2>3. Permitted Use</h2>
-        <ul>
+        <!-- 3. Permitted Use -->
+        <div class="policy-section" id="permitted">
+          <div class="section-header">
+            <div class="section-num">03</div>
+            <h2 class="section-title">Permitted Use</h2>
+          </div>
+          <ul>
             <li>You may copy and use the code for personal or educational projects.</li>
-            <li>Using the content for illegal purposes or spam is prohibited.</li>
-        </ul>
+            <li>Using the content for illegal purposes or spam is strictly prohibited.</li>
+          </ul>
+        </div>
 
-        <h2>4. Intellectual Property</h2>
-        <ul>
+        <!-- 4. Intellectual Property -->
+        <div class="policy-section" id="ip">
+          <div class="section-header">
+            <div class="section-num">04</div>
+            <h2 class="section-title">Intellectual Property</h2>
+          </div>
+          <ul>
             <li>All rights reserved by 77cod_ing.</li>
             <li>Reposting or selling content without written permission is prohibited.</li>
-        </ul>
+          </ul>
+        </div>
 
-        <h2>5. External Links</h2>
-        <p>The website may contain links to external sites. We are not responsible for their content or handling of your data.</p>
+        <!-- 5. External Links -->
+        <div class="policy-section" id="external">
+          <div class="section-header">
+            <div class="section-num">05</div>
+            <h2 class="section-title">External Links</h2>
+          </div>
+          <p>The website may contain links to external sites. We are not responsible for their content or for how they handle your personal data.</p>
+        </div>
 
-        <h2>6. Modifications</h2>
-        <p>We may update or modify these terms at any time. Continued use of the site after changes implies your acceptance.</p>
+        <!-- 6. Modifications -->
+        <div class="policy-section" id="modifications">
+          <div class="section-header">
+            <div class="section-num">06</div>
+            <h2 class="section-title">Modifications</h2>
+          </div>
+          <p>We may update or modify these terms at any time without prior notice. Continued use of the site after changes are posted implies your acceptance of the updated terms.</p>
+        </div>
 
-        <h2>7. Advertising Policy</h2>
-        <p>The website displays ads through Google AdSense. Google may use cookies to show personalized ads. By using the site, you agree to this.</p>
+        <!-- 7. Advertising -->
+        <div class="policy-section" id="advertising">
+          <div class="section-header">
+            <div class="section-num">07</div>
+            <h2 class="section-title">Advertising Policy</h2>
+          </div>
+          <p>This website displays ads through Google AdSense. Google may use cookies to show personalized ads based on your browsing activity. By using the site, you agree to this practice.</p>
+        </div>
 
-        <h2>8. Contact Us</h2>
-        <p>For any questions regarding the terms, please contact us via the <strong>Contact Us</strong> page.</p>
-    </div>
+        <!-- 8. Contact -->
+        <div class="policy-section" id="contact">
+          <div class="section-header">
+            <div class="section-num">08</div>
+            <h2 class="section-title">Contact Us</h2>
+          </div>
+          <p>For any questions regarding these terms, please reach out via our <a href="contact.html">contact form</a>. We'll get back to you as soon as possible.</p>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
 </body>
-
 </html>
-
