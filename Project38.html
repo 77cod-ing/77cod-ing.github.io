@@ -2,157 +2,137 @@
 <html lang="en">
 
 <head>
+  <!-- ===== BASIC ===== -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- ===== PRIMARY SEO META ===== -->
-  <title>Build a Modern Music Player with JavaScript | HTML CSS JS Tutorial 2025</title>
+  <!-- ===== PRIMARY SEO ===== -->
+  <title>Modern Music Player with JavaScript | HTML CSS JS Tutorial</title>
+
   <meta name="description"
-    content="Step-by-step tutorial to build a modern voice/music player with JavaScript. Includes playlist, shuffle, repeat, volume control, progress bar, and animated particles. Full source code included.">
+    content="Learn how to build a modern music player using HTML, CSS, and JavaScript with playlist, shuffle, repeat, volume control, progress bar, and animated UI effects.">
+
+  <meta name="keywords"
+    content="music player javascript, html css js tutorial, audio player javascript, custom music player, html5 audio api">
+
   <meta name="author" content="77cod_ing">
+
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
   <link rel="canonical" href="https://77cod-ing.github.io/Project38.html">
 
-  <!-- ===== OPEN GRAPH (Facebook / LinkedIn) ===== -->
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Build a Modern Music Player with JavaScript | Full Tutorial + Source Code">
-  <meta property="og:description"
-    content="Learn how to build a fully functional music player using HTML, CSS, and JavaScript — with playlist, shuffle, repeat, volume control, and animated effects.">
-  <meta property="og:image" content="https://i.suar.me/og7YP/m">
-  <meta property="og:url" content="https://77cod-ing.github.io/Project38.html">
-  <meta property="og:site_name" content="77cod_ing">
-  <meta property="article:published_time" content="2025-01-01T00:00:00Z">
-  <meta property="article:modified_time" content="2025-07-01T00:00:00Z">
-  <meta property="article:author" content="77cod_ing">
-  <meta property="article:section" content="JavaScript Tutorials">
-  <meta property="article:tag" content="JavaScript, Music Player, HTML, CSS, Audio API">
+  <!-- ===== THEME ===== -->
+  <meta name="theme-color" content="#001b33">
+  <meta name="color-scheme" content="dark">
 
-  <!-- ===== TWITTER CARD ===== -->
+  <!-- ===== FAVICON ===== -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/Picture1.png">
+  <link rel="apple-touch-icon" href="/Picture1.png">
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Build a Modern Music Player with JavaScript">
+
+  <meta property="og:description"
+    content="Step-by-step tutorial to create a modern music player using HTML, CSS, and JavaScript.">
+
+  <meta property="og:url" content="https://77cod-ing.github.io/Project38.html">
+
+  <meta property="og:site_name" content="77cod_ing">
+
+  <meta property="og:image" content="https://i.suar.me/og7YP/m">
+
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta property="article:published_time" content="2026-05-10T00:00:00Z">
+
+  <meta property="article:modified_time" content="2026-05-10T00:00:00Z">
+
+  <!-- ===== TWITTER ===== -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Build a Modern Music Player with JavaScript">
-  <meta name="twitter:description"
-    content="Full tutorial: Build a music player with playlist, shuffle, repeat & animated UI using HTML CSS JavaScript.">
+
+  <meta name="twitter:title" content="Modern Music Player with JavaScript">
+
+  <meta name="twitter:description" content="Build a beautiful music player using HTML CSS and JavaScript.">
+
   <meta name="twitter:image" content="https://i.suar.me/og7YP/m">
 
-  <!-- ===== SCHEMA MARKUP: Article ===== -->
+  <!-- ===== PERFORMANCE ===== -->
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Prism -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
+  </noscript>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js">
+  </script>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+  <!-- Copy Code CSS -->
+  <link rel="stylesheet" href="https://networks0.github.io/copy.css">
+
+  <!-- ===== ADSENSE ===== -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+    crossorigin="anonymous">
+    </script>
+
+  <!-- ===== STRUCTURED DATA ===== -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "Build a Modern Music Player with JavaScript — Full Tutorial with Source Code",
-    "description": "A complete step-by-step tutorial on building a modern voice/music player using HTML, CSS, and JavaScript, with playlist management, shuffle, repeat, volume control, progress bar, and animated particle effects.",
-    "image": "https://i.suar.me/og7YP/m",
-    "datePublished": "2026-05-10",
-    "dateModified": "2026-05-10",
-    "author": {
-      "@type": "Person",
-      "name": "77cod_ing",
-      "url": "https://77cod-ing.github.io"
+    "@context":"https://schema.org",
+    "@type":"TechArticle",
+    "headline":"Modern Music Player with JavaScript",
+    "description":"Learn how to build a modern music player using HTML, CSS, and JavaScript.",
+    "image":"https://i.suar.me/og7YP/m",
+    "author":{
+      "@type":"Person",
+      "name":"77cod_ing"
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "77cod_ing",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://77cod-ing.github.io/Picture1.png"
+    "publisher":{
+      "@type":"Organization",
+      "name":"77cod_ing",
+      "logo":{
+        "@type":"ImageObject",
+        "url":"https://77cod-ing.github.io/Picture1.png"
       }
     },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://77cod-ing.github.io/Project38.html"
-    },
-    "articleSection": "JavaScript Tutorials",
-    "keywords": "music player javascript, html css javascript music player, custom audio player js, javascript audio player with playlist",
-    "timeRequired": "PT20M",
-    "educationalLevel": "Intermediate",
-    "teaches": ["HTML5 Audio API", "JavaScript State Management", "CSS Animations", "DOM Manipulation"]
+    "datePublished":"2026-05-10",
+    "dateModified":"2026-05-10",
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"https://77cod-ing.github.io/Project38.html"
+    }
   }
   </script>
 
-  <!-- ===== SCHEMA MARKUP: HowTo ===== -->
+  <!-- ===== FAQ SCHEMA ===== -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": "How to Build a Music Player with JavaScript",
-    "description": "Step-by-step guide to creating a fully functional music player using HTML, CSS, and JavaScript.",
-    "image": "https://i.suar.me/og7YP/m",
-    "totalTime": "PT20M",
-    "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "0"},
-    "supply": [{"@type": "HowToSupply", "name": "Text editor (VS Code)"},{"@type": "HowToSupply", "name": "A modern web browser"}],
-    "tool": [{"@type": "HowToTool", "name": "HTML"},{"@type": "HowToTool", "name": "CSS"},{"@type": "HowToTool", "name": "JavaScript"}],
-    "step": [
-      {"@type": "HowToStep", "name": "Set Up Songs Data Structure", "text": "Create a JavaScript array with song objects containing title, artist, cover, and src properties.", "position": 1},
-      {"@type": "HowToStep", "name": "Initialize State Management", "text": "Create a central state object to track playback status, current song index, shuffle/repeat mode, and volume level.", "position": 2},
-      {"@type": "HowToStep", "name": "Build Audio Controls", "text": "Implement togglePlay(), nextSong(), and prevSong() functions using the HTML5 Audio API.", "position": 3},
-      {"@type": "HowToStep", "name": "Add Progress Bar with timeupdate", "text": "Listen to the timeupdate event to update the progress bar and allow click/drag seeking.", "position": 4},
-      {"@type": "HowToStep", "name": "Implement Shuffle & Repeat", "text": "Add shuffle (random index) and repeat (loop current track) modes with toast notification feedback.", "position": 5},
-      {"@type": "HowToStep", "name": "Create Volume & Mute System", "text": "Build a volume slider with dynamic mute toggle and icon changes.", "position": 6},
-      {"@type": "HowToStep", "name": "Generate Dynamic Playlist", "text": "Render the playlist dynamically using JavaScript and attach click events to load songs instantly.", "position": 7},
-      {"@type": "HowToStep", "name": "Add Visual Animations", "text": "Apply CSS animations for rotating album art and particle effects to create an engaging UI.", "position": 8}
-    ]
-  }
-  </script>
-
-  <!-- ===== SCHEMA MARKUP: FAQ ===== -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
       {
-        "@type": "Question",
-        "name": "How do I build a music player with JavaScript?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To build a music player with JavaScript: 1) Create an array of song objects with title, artist, cover, and src. 2) Use the HTML5 Audio API to control playback. 3) Add event listeners for play, pause, next, and previous. 4) Use the timeupdate event to sync a progress bar. 5) Implement shuffle and repeat logic. Full source code is available above."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I build a music player without any JavaScript library or framework?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. This tutorial uses pure vanilla JavaScript — no jQuery, React, or any external framework. Only the native HTML5 Audio API and DOM methods are needed."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does shuffle mode work in a JavaScript music player?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Shuffle mode selects a random song index using Math.random() multiplied by the total number of songs, then loads that song. A check prevents the same song from repeating consecutively."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I add a progress bar to an HTML audio player?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Listen to the audio element's timeupdate event. On each update, calculate (currentTime / duration) × 100 and set the progress bar's width to that percentage. For seeking, add a click event to the bar that sets audio.currentTime = (clickX / barWidth) × duration."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is this music player design responsive?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. The design uses flexible CSS units, media queries, and a fluid layout that adapts from mobile to desktop screens without losing functionality."
+        "@type":"Question",
+        "name":"How do I build a music player with JavaScript?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"You can build a music player using the HTML5 Audio API, JavaScript controls, and dynamic playlist rendering."
         }
       }
-    ]
-  }
-  </script>
-
-  <!-- ===== SCHEMA MARKUP: BreadcrumbList ===== -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
-      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
-      {"@type": "ListItem", "position": 3, "name": "Modern Music Player with JavaScript", "item": "https://77cod-ing.github.io/Project38.html"}
     ]
   }
   </script>
@@ -585,10 +565,18 @@
       width: 60vw;
     }
 
+    .code-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
     .code-tabs {
       display: flex;
       gap: 4px;
-      margin-bottom: -1px;
     }
 
     .code-tab {
@@ -596,7 +584,7 @@
       border-radius: 8px 8px 0 0;
       border: 1px solid var(--border);
       border-bottom: none;
-      background: rgba(255, 255, 255, 0.03);
+      background: rgba(255, 255, 255, 0.02);
       color: var(--text-muted);
       font-family: var(--font-head);
       font-size: 13px;
@@ -618,8 +606,68 @@
       color: #00ffff;
     }
 
-    .code-tab[data-lang="js"].active {
-      color: #ebdf00;
+    /* ===== PREVIEW BUTTON ===== */
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.3px;
+    }
+
+    .preview-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .preview-btn:hover {
+      border-color: var(--premcolo);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .preview-btn:hover::before {
+      opacity: 1;
+    }
+
+    .preview-btn:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .preview-btn i {
+      font-size: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn.loading i {
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
     }
 
     .code-panels {
@@ -699,8 +747,8 @@
     pre::-webkit-scrollbar-thumb {
       background: var(--premcolo);
       border-radius: 10px;
-      opacity: 0.5;
     }
+
 
     /* ===== HIGHLIGHT BOX ===== */
     .info-box {
@@ -888,6 +936,242 @@
       margin: 1.5rem 0;
     }
 
+        /* ===== PREVIEW MODAL ===== */
+    .preview-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 10, 30, 0.88);
+      backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s, visibility 0.35s;
+    }
+
+    .preview-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .preview-modal {
+      width: 92vw;
+      max-width: 92vw;
+      height: 94vh;
+      max-height: 95vh;
+      background: #0a1628;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.7);
+      transform: scale(0.92) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .preview-overlay.open .preview-modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .preview-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+    }
+
+    .preview-modal-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-modal-title i {
+      color: var(--premcolo);
+      font-size: 16px;
+    }
+
+    .preview-modal-title strong {
+      color: #fff;
+    }
+
+    .preview-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .preview-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .preview-dot:hover {
+      transform: scale(1.2);
+    }
+
+    .preview-dot.red {
+      background: #ff5f57;
+    }
+
+    .preview-dot.yellow {
+      background: #febc2e;
+    }
+
+    .preview-dot.green {
+      background: #28c840;
+    }
+
+    .preview-close-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .preview-close-btn:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+      background: rgba(0, 217, 255, 0.08);
+    }
+
+    .preview-iframe-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .preview-iframe-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .preview-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: #0a1628;
+      z-index: 2;
+      transition: opacity 0.4s;
+    }
+
+    .preview-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .preview-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(0, 217, 255, 0.2);
+      border-top-color: var(--premcolo);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    .preview-loading-text {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-loading-files {
+      display: flex;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .preview-file-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      font-weight: 700;
+      opacity: 0.4;
+      transition: opacity 0.3s;
+    }
+
+    .preview-file-tag.loaded {
+      opacity: 1;
+    }
+
+    .preview-file-tag.html-tag {
+      background: rgba(255, 102, 0, 0.15);
+      color: #ff6600;
+      border: 1px solid rgba(255, 102, 0, 0.3);
+    }
+
+    .preview-file-tag.css-tag {
+      background: rgba(192, 132, 252, 0.12);
+      color: #c084fc;
+      border: 1px solid rgba(192, 132, 252, 0.3);
+    }
+
+    .preview-file-tag.js-tag {
+      background: rgba(247, 223, 30, 0.1);
+      color: #f7df1e;
+      border: 1px solid rgba(247, 223, 30, 0.25);
+    }
+
+    .preview-hint {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 16px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      color: var(--text-muted);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s 0.8s;
+      white-space: nowrap;
+      z-index: 3;
+    }
+
+    .preview-hint.show {
+      opacity: 1;
+    }
+
+    .preview-hint i {
+      color: var(--premcolo);
+      margin-right: 4px;
+    }
+
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 900px) {
       .layout {
@@ -925,6 +1209,9 @@
       }
       .code-section{
         width: 90vw;
+      }
+      .code-section{
+        width: 85vw;
       }
     }
 
@@ -1118,59 +1405,72 @@
 
       <!-- SOURCE CODE -->
       <section id="source-code">
-        <h2>Full Source Code (free)</h2>
+        <h2>Get the Source Code</h2>
         <p>
-          Below are the three files you need: the <strong>HTML structure</strong>, the <strong>CSS styles</strong>,
-          and the <strong>JavaScript logic</strong>. Use the tabs to switch between them and the copy button
-          to grab the code.
+          The full source code is split across three files — <code>index.html</code>, <code>style.css</code>, and
+          <code>script.js</code>.
+          Explore the code below or wait for the countdown to get the GitHub Gist link.
         </p>
-
+      
         <div class="code-section">
-          <div class="code-tabs" role="tablist" aria-label="Code files">
-            <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
-              aria-controls="panel-html">HTML</button>
-            <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
-              aria-controls="panel-css">CSS</button>
-            <button class="code-tab" data-lang="js" role="tab" aria-selected="false"
-              aria-controls="panel-js">JavaScript</button>
+          <div class="code-toolbar">
+            <div class="code-tabs" role="tablist" aria-label="Code files">
+              <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                aria-controls="panel-html">HTML</button>
+              <button class="code-tab" data-lang="css" role="tab" aria-selected="false" aria-controls="panel-css">CSS</button>
+              <button class="code-tab" data-lang="js" role="tab" aria-selected="false" aria-controls="panel-js">JS</button>
+            </div>
+            <button class="preview-btn" id="previewBtn" aria-label="Preview GAMERS WORLD">
+              <i class='bx bx-play-circle'></i>
+              <span>Preview Result</span>
+            </button>
           </div>
-
+      
           <div class="code-panels">
             <div class="code-box active" id="panel-html" role="tabpanel">
               <div class="code-header">
                 <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
-                <button class="copy-btn" data-target="code1">
-                  <i class='bx bxs-copy'></i> Copy
-                </button>
+                <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
               </div>
-              <pre><code id="code1" class="language-html"></code></pre>
+              <pre><code id="code1" class="language-html"><!-- Loading source code... --></code></pre>
             </div>
-
+      
             <div class="code-box" id="panel-css" role="tabpanel">
               <div class="code-header">
-                <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
-                <button class="copy-btn" data-target="code2">
-                  <i class='bx bxs-copy'></i> Copy
-                </button>
+                <span class="code-lang-label" style="color:#c084fc;">CSS — style.css</span>
+                <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
               </div>
-              <pre><code id="code2" class="language-css"></code></pre>
+              <pre><code id="code2" class="language-css">/* Loading source code... */</code></pre>
             </div>
-
+      
             <div class="code-box" id="panel-js" role="tabpanel">
               <div class="code-header">
-                <span class="code-lang-label" style="color:#ebdf00;">JavaScript — script.js</span>
-                <button class="copy-btn" data-target="code3">
-                  <i class='bx bxs-copy'></i> Copy
-                </button>
+                <span class="code-lang-label" style="color:#f7df1e;">JS — script.js</span>
+                <button class="copy-btn" data-target="code3"><i class='bx bxs-copy'></i> Copy</button>
               </div>
-              <pre><code id="code3" class="language-js"></code></pre>
+              <pre><code id="code3" class="language-javascript">// Loading source code...</code></pre>
             </div>
           </div>
         </div>
-
+      
         <div class="info-box">
-          <strong>💡 Tip:</strong> Place all three files in the same folder and open <code>index.html</code> in your
-          browser to see the music player in action immediately.
+          <strong>💡 Quick Start:</strong> Download all three files into the same folder and open
+          <code>index.html</code> in your browser. No server or build process required —
+          the site runs immediately.
+        </div>
+      
+        <!-- COUNTDOWN -->
+        <div class="countdown-section">
+          <p style="color:var(--text-muted); font-size:14px; margin-bottom:0.75rem;">Full source code available after
+            countdown</p>
+          <div class="countdown" id="countdown">
+            <span id="number">10</span> seconds...
+          </div>
+          <div class="link-box" id="linkBox">
+            <a href="https://gist.github.com/77cod-ing/7ecf2e011c5f0f7cabcc040b869851a2" target="_blank">
+              <i class='bx bx-link-external'></i> View Full Source Code on GitHub Gist
+            </a>
+          </div>
         </div>
       </section>
 
@@ -1433,12 +1733,108 @@
 
   </div>
 
+
+  <!-- ===== PREVIEW MODAL ===== -->
+  <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+    aria-label="Live preview of GAMERS WORLD">
+    <div class="preview-modal">
+      <div class="preview-modal-header">
+        <div class="preview-modal-title">
+          <i class='bx bx-show'></i>
+          <strong>Live Preview</strong> — GAMERS WORLD
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="preview-dots">
+            <button class="preview-dot red" id="previewDotClose" aria-label="Close preview"></button>
+            <button class="preview-dot yellow" disabled aria-label="Minimize"></button>
+            <button class="preview-dot green" disabled aria-label="Maximize"></button>
+          </div>
+          <button class="preview-close-btn" id="previewCloseBtn"><i class='bx bx-x'></i> Close</button>
+        </div>
+      </div>
+      <div class="preview-iframe-wrap">
+        <div class="preview-loading" id="previewLoading">
+          <div class="preview-spinner"></div>
+          <span class="preview-loading-text">Loading preview...</span>
+          <div class="preview-loading-files">
+            <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+            <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+            <span class="preview-file-tag js-tag" id="tagJS">JS</span>
+          </div>
+        </div>
+        <iframe id="previewIframe" title="Preview of GAMERS WORLD" sandbox="allow-scripts allow-same-origin"></iframe>
+        <div class="preview-hint" id="previewHint">
+          <i class='bx bx-cursor'></i> Explore the gaming interface
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <!-- ===== SCRIPTS ===== -->
   <script>
-    // ===== LOAD CODE FROM GIST =====
-    const gistBase = "https://gist.githubusercontent.com/77cod-ing/8452b5e993fa44a78c9b3a51a121f6d0/raw/cae405094a218910f3ab73833cb168ddf7cef3bb/";
+    /* ===== Countdown ===== */
+    let counter = 10, timer = null;
+    const countdownEl = document.getElementById("countdown");
+    const numberEl = document.getElementById("number");
+    const linkBox = document.getElementById("linkBox");
 
-    async function loadCode(url, elementId, lang) {
+    function startCountdown() {
+      if (timer) return;
+      timer = setInterval(() => {
+        counter--;
+        numberEl.textContent = counter;
+        if (counter === 0) {
+          clearInterval(timer); timer = null;
+          countdownEl.style.display = "none";
+          linkBox.style.display = "block";
+        }
+      }, 1000);
+    }
+
+    function stopCountdown() { clearInterval(timer); timer = null; }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) startCountdown(); else stopCountdown(); });
+    }, { threshold: 0.5 });
+
+    observer.observe(countdownEl);
+
+    /* ===== Code tabs ===== */
+    document.querySelectorAll(".code-tab").forEach(tab => {
+      tab.addEventListener("click", () => {
+        const lang = tab.dataset.lang;
+        document.querySelectorAll(".code-tab").forEach(t => { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
+        document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+        tab.classList.add("active");
+        tab.setAttribute("aria-selected", "true");
+        const map = { html: "panel-html", css: "panel-css", js: "panel-js" };
+        document.getElementById(map[lang]).classList.add("active");
+      });
+    });
+
+    /* ===== Copy buttons ===== */
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const code = document.getElementById(btn.dataset.target)?.innerText || "";
+        if (!code.trim()) return;
+        try {
+          await navigator.clipboard.writeText(code);
+          btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+          btn.classList.add("copied");
+          setTimeout(() => { btn.innerHTML = "<i class='bx bxs-copy'></i> Copy"; btn.classList.remove("copied"); }, 2000);
+        } catch { btn.textContent = "Error"; }
+      });
+    });
+
+    /* ===== Load code from Gist ===== */
+    const gistBase = "https://gist.githubusercontent.com/77cod-ing/8452b5e993fa44a78c9b3a51a121f6d0/raw/cae405094a218910f3ab73833cb168ddf7cef3bb/";
+    const htmlUrl = gistBase + "77cod-ing.html";
+    const cssUrl = gistBase + "77cod-ing.css";
+    const jsUrl = gistBase + "77cod-ing.Js";
+
+    let cachedHTML = "", cachedCSS = "", cachedJS = "";
+
+    async function loadCode(url, elementId, lang, cacheKey) {
       try {
         const res = await fetch(url);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -1446,52 +1842,98 @@
         const el = document.getElementById(elementId);
         el.textContent = text;
         el.className = `language-${lang}`;
-        Prism.highlightElement(el);
-      } catch (e) {
+        if (window.Prism) Prism.highlightElement(el);
+        if (lang === "html") cachedHTML = text;
+        if (lang === "css") cachedCSS = text;
+        if (lang === "javascript") cachedJS = text;
+      } catch {
         const el = document.getElementById(elementId);
-        if (el) el.textContent = `// Failed to load code: ${e.message}`;
+        if (el) el.textContent = `/* Source code available via the GitHub Gist link below. */`;
       }
     }
 
-    loadCode(gistBase + "77cod-ing.html", "code1", "html");
-    loadCode(gistBase + "77cod-ing.css", "code2", "css");
-    loadCode(gistBase + "77cod-ing.Js", "code3", "js");
+    loadCode(htmlUrl, "code1", "html");
+    loadCode(cssUrl, "code2", "css");
+    loadCode(jsUrl, "code3", "javascript");
 
-    // ===== TABS =====
-    document.querySelectorAll(".code-tab").forEach(tab => {
-      tab.addEventListener("click", () => {
-        const lang = tab.dataset.lang;
-        document.querySelectorAll(".code-tab").forEach(t => {
-          t.classList.remove("active");
-          t.setAttribute("aria-selected", "false");
-        });
-        document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
-        tab.classList.add("active");
-        tab.setAttribute("aria-selected", "true");
-        const panelMap = { html: "panel-html", css: "panel-css", js: "panel-js" };
-        document.getElementById(panelMap[lang]).classList.add("active");
-      });
-    });
+    /* ===== Preview modal ===== */
+    const previewOverlay = document.getElementById("previewOverlay");
+    const previewIframe = document.getElementById("previewIframe");
+    const previewLoading = document.getElementById("previewLoading");
+    const previewHint = document.getElementById("previewHint");
+    const previewBtn = document.getElementById("previewBtn");
+    const previewCloseBtn = document.getElementById("previewCloseBtn");
+    const previewDotClose = document.getElementById("previewDotClose");
+    const tagHTML = document.getElementById("tagHTML");
+    const tagCSS = document.getElementById("tagCSS");
+    const tagJS = document.getElementById("tagJS");
 
-    // ===== COPY BUTTONS =====
-    document.querySelectorAll(".copy-btn").forEach(btn => {
-      btn.addEventListener("click", async () => {
-        const targetId = btn.dataset.target;
-        const code = document.getElementById(targetId)?.innerText || "";
-        if (!code.trim()) return;
-        try {
-          await navigator.clipboard.writeText(code);
-          btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
-          btn.classList.add("copied");
-          setTimeout(() => {
-            btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
-            btn.classList.remove("copied");
-          }, 2000);
-        } catch (e) {
-          btn.textContent = "Error";
-        }
+    function openPreview() {
+      previewOverlay.classList.add("open");
+      document.body.style.overflow = "hidden";
+      previewLoading.classList.remove("hidden");
+      previewHint.classList.remove("show");
+      previewBtn.classList.add("loading");
+      tagHTML.classList.remove("loaded"); tagCSS.classList.remove("loaded"); tagJS.classList.remove("loaded");
+      buildPreview();
+    }
+
+    function closePreview() {
+      previewOverlay.classList.remove("open");
+      document.body.style.overflow = "";
+      previewIframe.srcdoc = "";
+      previewBtn.classList.remove("loading");
+    }
+
+    async function buildPreview() {
+      if (cachedHTML && cachedCSS && cachedJS) {
+        tagHTML.classList.add("loaded"); tagCSS.classList.add("loaded"); tagJS.classList.add("loaded");
+        injectPreview(cachedHTML, cachedCSS, cachedJS); return;
+      }
+      try {
+        const fetches = [];
+        if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
+        if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
+        if (!cachedJS) fetches.push(fetch(jsUrl).then(r => r.text()).then(t => { cachedJS = t; tagJS.classList.add("loaded"); }));
+        if (cachedHTML) tagHTML.classList.add("loaded");
+        if (cachedCSS) tagCSS.classList.add("loaded");
+        if (cachedJS) tagJS.classList.add("loaded");
+        await Promise.all(fetches);
+        injectPreview(cachedHTML, cachedCSS, cachedJS);
+      } catch (e) {
+        previewLoading.innerHTML = `<i class='bx bx-error-circle' style="font-size:32px;color:#00d9ff;"></i><span class="preview-loading-text" style="color:#00d9ff;">Failed to load preview: ${e.message}</span>`;
+        previewBtn.classList.remove("loading");
+      }
+    }
+
+    function injectPreview(html, css, js) {
+      let combined = html;
+      if (/style\.css/i.test(combined)) {
+        combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
+      } else if (combined.includes("</head>")) {
+        combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
+      } else { combined = `<style>${css}</style>\n${combined}`; }
+
+      if (/script\.js/i.test(combined)) {
+        combined = combined.replace(/<script[^>]*src=["'][^"']*script\.js["'][^>]*><\/script>/gi, `<script>${js}<\/script>`);
+      } else if (combined.includes("</body>")) {
+        combined = combined.replace("</body>", `<script>${js}<\/script>\n</body>`);
+      } else { combined = `${combined}\n<script>${js}<\/script>`; }
+
+      previewIframe.srcdoc = combined;
+      previewIframe.addEventListener("load", function onLoad() {
+        previewLoading.classList.add("hidden");
+        previewBtn.classList.remove("loading");
+        setTimeout(() => { previewHint.classList.add("show"); setTimeout(() => previewHint.classList.remove("show"), 4000); }, 300);
+        previewIframe.removeEventListener("load", onLoad);
       });
-    });
+    }
+
+    previewBtn.addEventListener("click", openPreview);
+    previewCloseBtn.addEventListener("click", closePreview);
+    previewDotClose.addEventListener("click", closePreview);
+    previewOverlay.addEventListener("click", (e) => { if (e.target === previewOverlay) closePreview(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
   </script>
 
 </body>
