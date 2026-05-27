@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ===== PRIMARY SEO META ===== -->
-  <title>Dragon Cursor Effect with SVG & JavaScript | Creative Web Animation Tutorial 2026</title> 
+  <title>Dragon Cursor Effect with SVG & JavaScript | Creative Web Animation Tutorial 2026</title>
   <meta name="description"
     content="Learn how to build an interactive dragon cursor effect using SVG and JavaScript. Step-by-step tutorial with full free source code. Custom cursor animation, mouse tracking, and SVG path animation included.">
   <meta name="author" content="77cod_ing">
@@ -652,25 +652,29 @@
       color: var(--text-muted);
     }
 
+
     /* ===== CODE SECTION ===== */
-    
     .code-section {
       margin: 2rem 0;
       width: 60vw;
     }
 
-    .code-tabs {
+    .code-toolbar {
       display: flex;
-      gap: 4px;
-      margin-bottom: -1px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
     }
+
+    .code-tabs { display: flex; gap: 4px; }
 
     .code-tab {
       padding: 8px 20px;
       border-radius: 8px 8px 0 0;
       border: 1px solid var(--border);
       border-bottom: none;
-      background: rgba(255, 255, 255, 0.03);
+      background: rgba(255, 255, 255, 0.02);
       color: var(--text-muted);
       font-family: var(--font-head);
       font-size: 13px;
@@ -678,39 +682,53 @@
       transition: all 0.2s;
     }
 
-    .code-tab.active {
-      background: #1e2d2f;
-      color: #fff;
-      border-color: rgba(0, 217, 255, 0.3);
-    }
+    .code-tab.active { background: #1e1e2f; color: #fff; border-color: rgba(0, 217, 255, 0.3); }
+    .code-tab[data-lang="html"].active { color: #ff6600; }
+    .code-tab[data-lang="css"].active  { color: #00ffff; }
+    .code-tab[data-lang="js"].active   { color: #f7df1e; }
 
-    .code-tab[data-lang="html"].active {
-      color: #ff6600;
-    }
-
-    .code-tab[data-lang="css"].active {
-      color: #00ffff;
-    }
-
-    .code-tab[data-lang="js"].active {
-      color: #ebdf00;
-    }
-
-    .code-panels {
+    /* ===== PREVIEW BUTTON ===== */
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
+      overflow: hidden;
+      letter-spacing: 0.3px;
     }
+
+    .preview-btn:hover {
+      border-color: var(--premcolo);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .preview-btn:active { transform: translateY(0) scale(0.98); }
+    .preview-btn.loading i { animation: spin 0.8s linear infinite; }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .code-panels { position: relative; }
 
     .code-box {
-      background: #1e2f2e;
+      background: #1e1e2f;
       border: 1px solid rgba(0, 217, 255, 0.15);
       border-radius: 0 12px 12px 12px;
       position: relative;
       display: none;
     }
 
-    .code-box.active {
-      display: block;
-    }
+    .code-box.active { display: block; }
 
     .code-header {
       display: flex;
@@ -720,11 +738,7 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .code-lang-label {
-      font-family: var(--font-head);
-      font-size: 13px;
-      font-weight: 700;
-    }
+    .code-lang-label { font-family: var(--font-head); font-size: 13px; font-weight: 700; }
 
     .copy-btn {
       display: flex;
@@ -740,18 +754,10 @@
       transition: all 0.2s;
     }
 
-    .copy-btn:hover {
-      border-color: var(--premcolo);
-      color: var(--premcolo);
-    }
+    .copy-btn:hover { border-color: var(--premcolo); color: var(--premcolo); }
+    .copy-btn.copied { color: #4ade80; border-color: #4ade80; }
 
-    .copy-btn.copied {
-      color: #4ade80;
-      border-color: #4ade80;
-    }
-
-    :not(pre)>code[class*="language-"],
-    pre[class*="language-"] {
+    :not(pre)>code[class*="language-"], pre[class*="language-"] {
       width: 100%;
       max-width: 100%;
       height: 50vh;
@@ -761,20 +767,9 @@
       margin: 0;
     }
 
-    pre::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
-    }
-
-    pre::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    pre::-webkit-scrollbar-thumb {
-      background: var(--premcolo);
-      border-radius: 10px;
-      opacity: 0.5;
-    }
+    pre::-webkit-scrollbar { width: 6px; height: 6px; }
+    pre::-webkit-scrollbar-track { background: transparent; }
+    pre::-webkit-scrollbar-thumb { background: var(--premcolo); border-radius: 10px; }
 
     /* ===== INFO / WARN BOXES ===== */
     .info-box {
@@ -816,24 +811,7 @@
       box-shadow: 0 16px 48px rgba(85, 201, 247, 0.1);
     }
 
-.preview-btn {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 5px 12px;
-  border-radius: 7px;
-  border: 1px solid var(--border);
-  background: transparent;
-  color: var(--text-muted);
-  font-size: 13px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
 
-.preview-btn:hover {
-  border-color: #00ffcc;
-  color: #00ffcc;
-}
     /* ===== FAQ ===== */
     .faq {
       margin: 1.5rem 0;
@@ -975,6 +953,186 @@
       font-weight: 600;
       line-height: 1.3;
     }
+
+        /* ===== PREVIEW MODAL ===== */
+    .preview-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 5, 15, 0.85);
+      backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+    }
+
+    .preview-overlay.open { opacity: 1; visibility: visible; }
+
+    .preview-modal {
+      width: 92vw;
+      max-width: 92vw;
+      height: 95vh;
+      max-height: 95vh;
+      background: #0a0e1a;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow:
+        0 0 0 1px rgba(0, 217, 255, 0.06),
+        0 24px 80px rgba(0, 0, 0, 0.7),
+        0 0 120px rgba(0, 217, 255, 0.06);
+      transform: scale(0.92) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .preview-overlay.open .preview-modal { transform: scale(1) translateY(0); }
+
+    .preview-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+    }
+
+    .preview-modal-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-modal-title i { color: var(--premcolo); font-size: 16px; }
+    .preview-modal-title strong { color: #fff; }
+
+    .preview-dots { display: flex; gap: 7px; }
+
+    .preview-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, filter 0.2s;
+    }
+
+    .preview-dot:hover { transform: scale(1.2); filter: brightness(1.3); }
+    .preview-dot.red    { background: #ff5f57; }
+    .preview-dot.yellow { background: #febc2e; }
+    .preview-dot.green  { background: #28c840; }
+
+    .preview-close-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .preview-close-btn:hover {
+      border-color: var(--accent2);
+      color: var(--accent2);
+      background: rgba(255, 107, 53, 0.08);
+    }
+
+    .preview-iframe-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .preview-iframe-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
+
+    .preview-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: #0a0e1a;
+      z-index: 2;
+      transition: opacity 0.4s;
+    }
+
+    .preview-loading.hidden { opacity: 0; pointer-events: none; }
+
+    .preview-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(0, 217, 255, 0.15);
+      border-top-color: var(--premcolo);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    .preview-loading-text {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .preview-loading-files { display: flex; gap: 8px; margin-top: 4px; }
+
+    .preview-file-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      font-weight: 700;
+      opacity: 0.5;
+      transition: opacity 0.3s;
+    }
+
+    .preview-file-tag.loaded { opacity: 1; }
+    .preview-file-tag.html-tag { background: rgba(255, 102, 0, 0.15); color: #ff6600; border: 1px solid rgba(255, 102, 0, 0.3); }
+    .preview-file-tag.css-tag  { background: rgba(0, 255, 255, 0.1);  color: #00ffff; border: 1px solid rgba(0, 255, 255, 0.25); }
+    .preview-file-tag.js-tag   { background: rgba(247, 223, 30, 0.1); color: #f7df1e; border: 1px solid rgba(247, 223, 30, 0.25); }
+
+    .preview-hint {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 16px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      color: var(--text-muted);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s 0.8s;
+      white-space: nowrap;
+      z-index: 3;
+    }
+
+    .preview-hint.show { opacity: 1; }
+    .preview-hint i { color: var(--premcolo); margin-right: 4px; }
+
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 900px) {
@@ -1148,6 +1306,10 @@
       <!-- OVERVIEW -->
       <section id="overview">
         <h2>What You'll Build</h2>
+        <p class="snippet-box">
+          A dragon cursor effect is an interactive custom cursor animation built with SVG, CSS, and JavaScript where a dragon
+          follows the mouse pointer, rotates toward it, and trails behind with segmented motion effects.
+        </p>
         <p>
           In this tutorial, you'll create an <strong>interactive dragon cursor effect</strong> entirely
           from scratch — no libraries, no canvas, just clean HTML, CSS, SVG, and vanilla JavaScript.
@@ -1217,68 +1379,39 @@
 
       <hr>
 
-      <!-- SOURCE CODE -->
-      <section id="source-code">
-        <h2>Full Source Code (Free)</h2>
-        <p>
-          The project is split into three files: the <strong>HTML</strong> for structure and SVG,
-          the <strong>CSS</strong> for styling and idle animations, and the
-          <strong>JavaScript</strong> for mouse tracking and body segment motion.
-          Use the tabs to switch between them and the copy button to grab the code.
-        </p>
-
-        <div class="code-section">
-          <div class="code-tabs" role="tablist" aria-label="Code files">
-            <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
-              aria-controls="panel-html">HTML</button>
-            <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
-              aria-controls="panel-css">CSS</button>
-            <button class="code-tab" data-lang="js" role="tab" aria-selected="false"
-              aria-controls="panel-js">JavaScript</button>
+        <!-- SOURCE CODE -->
+        <div class="code-section" id="source-code">
+          <!-- ===== TOOLBAR: Tabs + Preview Button ===== -->
+          <div class="code-toolbar">
+            <div class="code-tabs" role="tablist" aria-label="Code files">
+              <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                aria-controls="panel-html">HTML</button>
+              <button class="code-tab" data-lang="css" role="tab" aria-selected="false" aria-controls="panel-css">CSS</button>
+            </div>
+            <button class="preview-btn" id="previewBtn" aria-label="Preview the final result">
+              <i class='bx bx-play-circle'></i>
+              <span>Preview Result</span>
+            </button>
           </div>
-
+        
           <div class="code-panels">
             <div class="code-box active" id="panel-html" role="tabpanel">
               <div class="code-header">
                 <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
-                <div style="display:flex; gap:8px;">
-                  <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
-                </div>
+                <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
               </div>
               <pre><code id="code1" class="language-html"></code></pre>
             </div>
-
+        
             <div class="code-box" id="panel-css" role="tabpanel">
               <div class="code-header">
                 <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
-                <div style="display:flex; gap:8px;">
-                  <button class="copy-btn" data-target="code1">
-                    <i class='bx bxs-copy'></i> Copy
-                  </button>
-                
-                  <button class="preview-btn" >
-                    <i class='bx bx-show'></i> Preview
-                  </button>
-                </div>
+                <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
               </div>
               <pre><code id="code2" class="language-css"></code></pre>
             </div>
-
-            <div class="code-box" id="panel-js" role="tabpanel">
-              <div class="code-header">
-                <span class="code-lang-label" style="color:#ebdf00;">JavaScript — script.js</span>
-                <button class="copy-btn" data-target="code3"><i class='bx bxs-copy'></i> Copy</button>
-              </div>
-              <pre><code id="code3" class="language-js"></code></pre>
-            </div>
           </div>
         </div>
-
-        <div class="info-box">
-          <strong>💡 Tip:</strong> Place all three files in the same folder and open <code>index.html</code>
-          in your browser. Move your mouse around to see the dragon follow it. No server required.
-        </div>
-      </section>
 
       <hr>
 
@@ -1558,12 +1691,50 @@
 
   </div>
 
+  <!-- ===== PREVIEW MODAL ===== -->
+  <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+    aria-label="Live preview of the animated button">
+    <div class="preview-modal">
+      <div class="preview-modal-header">
+        <div class="preview-modal-title">
+          <i class='bx bx-show'></i>
+          <strong>Live Preview</strong> — Dragon Cursor Effect
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="preview-dots">
+            <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+            <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+            <button class="preview-dot green" aria-label="Maximize" disabled></button>
+          </div>
+          <button class="preview-close-btn" id="previewCloseBtn">
+            <i class='bx bx-x'></i> Close
+          </button>
+        </div>
+      </div>
+      <div class="preview-iframe-wrap">
+        <div class="preview-loading" id="previewLoading">
+          <div class="preview-spinner"></div>
+          <span class="preview-loading-text">Loading preview...</span>
+        </div>
+        <iframe id="previewIframe" title="Preview of animated button with star effects"
+          sandbox="allow-scripts allow-same-origin">
+        </iframe>
+        <div class="preview-hint" id="previewHint">
+          <i class='bx bx-cursor'></i> Hover over Dragon Cursor Effect
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <!-- ===== SCRIPTS ===== -->
-
-
   <script>
-    // ===== LOAD CODE FROM GIST =====
-    const gistBase = "https://gist.githubusercontent.com/77cod-ing/73e1d4e1f6e5a80a0dc9622a76076549/raw/";
+    const gistBase = "https://gist.githubusercontent.com/77cod-ing/73e1d4e1f6e5a80a0dc9622a76076549/raw/4598b256b07eebe3ff9af30022a1e63bef22296c/";
+    const htmlUrl = gistBase + "index.html";
+    const cssUrl = gistBase + "77cod-ing.css";
+
+    /* Storing downloaded texts for use in previewing */
+    let cachedHTML = "";
+    let cachedCSS = "";
 
     async function loadCode(url, elementId, lang) {
       try {
@@ -1574,17 +1745,20 @@
         el.textContent = text;
         el.className = `language-${lang}`;
         Prism.highlightElement(el);
+
+        /* Temporary storage */
+        if (lang === "html") cachedHTML = text;
+        if (lang === "css") cachedCSS = text;
       } catch (e) {
         const el = document.getElementById(elementId);
-        if (el) el.textContent = `// Failed to load code: ${e.message}`;
+        if (el) el.textContent = `/* Failed to load: ${e.message} */`;
       }
     }
 
-    loadCode(gistBase + "b74c1221376ffefa158c300fcfcff9d28c4723d9/index.html", "code1", "html");
-    loadCode(gistBase + "91014dd5ad2e4e8bd7b7b318e5029c4c56f9b89b/77cod-ing.css", "code2", "css");
-    loadCode(gistBase + "b74c1221376ffefa158c300fcfcff9d28c4723d9/77cod-ing.js", "code3", "js");
+    loadCode(htmlUrl, "code1", "html");
+    loadCode(cssUrl, "code2", "css");
 
-    // ===== TABS =====
+    /* ===== TABS ===== */
     document.querySelectorAll(".code-tab").forEach(tab => {
       tab.addEventListener("click", () => {
         const lang = tab.dataset.lang;
@@ -1595,16 +1769,15 @@
         document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
         tab.classList.add("active");
         tab.setAttribute("aria-selected", "true");
-        const panelMap = { html: "panel-html", css: "panel-css", js: "panel-js" };
+        const panelMap = { html: "panel-html", css: "panel-css" };
         document.getElementById(panelMap[lang]).classList.add("active");
       });
     });
 
-    // ===== COPY BUTTONS =====
+    /* ===== COPY BUTTONS ===== */
     document.querySelectorAll(".copy-btn").forEach(btn => {
       btn.addEventListener("click", async () => {
-        const targetId = btn.dataset.target;
-        const code = document.getElementById(targetId)?.innerText || "";
+        const code = document.getElementById(btn.dataset.target)?.innerText || "";
         if (!code.trim()) return;
         try {
           await navigator.clipboard.writeText(code);
@@ -1614,56 +1787,120 @@
             btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
             btn.classList.remove("copied");
           }, 2000);
-        } catch (e) {
+        } catch {
           btn.textContent = "Error";
         }
       });
     });
-    
-  </script>
-  <script>
-    // ===== PREVIEW BUTTON =====
-      document.querySelectorAll(".preview-btn").forEach(btn => {
-        btn.addEventListener("click", () => {
 
-          const html = document.getElementById("code1")?.innerText || "";
-          const css = document.getElementById("code2")?.innerText || "";
-          const js = document.getElementById("code3")?.innerText || "";
+    /* ===== PREVIEW MODAL ===== */
+    const previewOverlay = document.getElementById("previewOverlay");
+    const previewIframe = document.getElementById("previewIframe");
+    const previewLoading = document.getElementById("previewLoading");
+    const previewHint = document.getElementById("previewHint");
+    const previewBtn = document.getElementById("previewBtn");
+    const previewCloseBtn = document.getElementById("previewCloseBtn");
+    const previewDotClose = document.getElementById("previewDotClose");
 
-          if (!html.trim()) return;
+    function openPreview() {
+      previewOverlay.classList.add("open");
+      document.body.style.overflow = "hidden";
+      previewLoading.classList.remove("hidden");
+      previewHint.classList.remove("show");
+      previewBtn.classList.add("loading");
+      buildPreview();
+    }
 
-          // دمج الكود كامل
-          const fullCode = `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-${css}
-</style>
-</head>
-<body>
+    function closePreview() {
+      previewOverlay.classList.remove("open");
+      document.body.style.overflow = "";
+      previewIframe.srcdoc = "";
+      previewBtn.classList.remove("loading");
+    }
 
-${html}
+    async function buildPreview() {
+      /* If the data is pre-loaded, we use it directly. */
+      if (cachedHTML && cachedCSS) {
+        injectPreview(cachedHTML, cachedCSS);
+        return;
+      }
 
-<script>
-${js}
-<\/script>
+      /*Otherwise get it again */
+      try {
+        const [htmlRes, cssRes] = await Promise.all([fetch(htmlUrl), fetch(cssUrl)]);
+        const html = await htmlRes.text();
+        const css = await cssRes.text();
+        cachedHTML = html;
+        cachedCSS = css;
+        injectPreview(html, css);
+      } catch (e) {
+        previewLoading.innerHTML = `
+            <i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i>
+            <span class="preview-loading-text" style="color:var(--accent2);">Failed to load preview: ${e.message}</span>
+          `;
+        previewBtn.classList.remove("loading");
+      }
+    }
 
-</body>
-</html>
-    `;
+    function injectPreview(html, css) {
+      /* Replace the external CSS link with an inline style */
+      let combined = html.replace(
+        /<link[^>]*href=["']style\.css["'][^>]*>/gi,
+        `<style>${css}</style>`
+      );
 
-          // فتح نافذة جديدة
-          const previewWindow = window.open("", "_blank");
+      /* If no CSS link is found, add the style before </head> or </body> */
+      if (!combined.includes("<style>")) {
+        if (combined.includes("</head>")) {
+          combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
+        } else if (combined.includes("</body>")) {
+          combined = combined.replace("</body>", `<style>${css}</style>\n</body>`);
+        } else {
+          combined = `<style>${css}</style>\n${combined}`;
+        }
+      }
 
-          previewWindow.document.open();
-          previewWindow.document.write(fullCode);
-          previewWindow.document.close();
-        });
+      /* Add a suitable background for the preview */
+      const bgStyle = `<style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#0a0e1a;}</style>`;
+      if (combined.includes("<head>")) {
+        combined = combined.replace("<head>", `<head>${bgStyle}`);
+      } else {
+        combined = bgStyle + combined;
+      }
+
+      previewIframe.srcdoc = combined;
+
+      previewIframe.addEventListener("load", function onLoad() {
+        previewLoading.classList.add("hidden");
+        previewBtn.classList.remove("loading");
+        /* Show a hint after loading the preview*/
+        setTimeout(() => {
+          previewHint.classList.add("show");
+          /* The hint will be automatically hidden after 9 seconds. */
+          setTimeout(() => previewHint.classList.remove("show"), 9000);
+        }, 300);
+        previewIframe.removeEventListener("load", onLoad);
       });
-      
+    }
+
+    /* Open the preview */
+    previewBtn.addEventListener("click", openPreview);
+
+    /* Close preview */
+    previewCloseBtn.addEventListener("click", closePreview);
+    previewDotClose.addEventListener("click", closePreview);
+
+    /* Close by clicking outside the window */
+    previewOverlay.addEventListener("click", (e) => {
+      if (e.target === previewOverlay) closePreview();
+    });
+
+    /* Close with key Escape */
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && previewOverlay.classList.contains("open")) {
+        closePreview();
+      }
+    });
   </script>
 </body>
 
