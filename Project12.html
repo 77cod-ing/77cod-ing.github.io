@@ -1,512 +1,1940 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+  <!-- ===== BASIC ===== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="Picture1.png">
-  <title>This Login Form Will Blow Your Mind 🤯 (Glassmorphism + Particles.js)</title>
-    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
-        <link href="https://networks0.github.io/copy.css" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
-     crossorigin="anonymous"></script>
-   <style>
-   
-  .card{
-    display: flex;
-    width: 99vw;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 90vh;
-    margin: 0 auto;
-    
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- ===== PRIMARY SEO ===== -->
+  <title>Particles Login Page using HTML, CSS & JavaScript</title>
+
+  <meta name="description"
+    content="Learn how to create a modern particles login page using HTML, CSS, JavaScript, and Particles.js. Build animated backgrounds, glassmorphism effects, and futuristic login UI designs with free source code.">
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <meta name="author" content="77cod_ing">
+
+  <link rel="canonical" href="https://77cod-ing.github.io/particles-login-page.html">
+
+  <!-- ===== THEME ===== -->
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- ===== FAVICON ===== -->
+  <link rel="icon" type="image/png" href="https://77cod-ing.github.io/favicon.png">
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="article">
+
+  <meta property="og:title" content="Particles Login Page using HTML, CSS & JavaScript">
+
+  <meta property="og:description"
+    content="Build a futuristic particles login page with animated backgrounds and glassmorphism effects using Particles.js.">
+
+  <meta property="og:url" content="https://77cod-ing.github.io/particles-login-page.html">
+
+  <meta property="og:image" content="https://77cod-ing.github.io/image%20copy%2033.png">
+
+  <meta property="og:site_name" content="77cod_ing">
+
+  <meta property="og:locale" content="en_US">
+
+  <!-- ===== TWITTER ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="twitter:title" content="Particles Login Page | HTML CSS JavaScript Tutorial">
+
+  <meta name="twitter:description"
+    content="Create a glassmorphism particles login UI with HTML, CSS, JavaScript, and Particles.js.">
+
+  <meta name="twitter:image" content="https://77cod-ing.github.io/image%20copy%2033.png">
+
+  <!-- ===== PERFORMANCE ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- ===== SCHEMA: TECH ARTICLE ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Particles Login Page using HTML, CSS & JavaScript",
+    "description": "Step-by-step tutorial for building a particles login page with glassmorphism effects and animated particle backgrounds.",
+    "image": "https://77cod-ing.github.io/image%20copy%2033.png",
+
+    "author": {
+      "@type": "Person",
+      "name": "77cod_ing"
+    },
+
+    "publisher": {
+      "@type": "Organization",
+      "name": "77cod_ing",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Picture1.png"
+      }
+    },
+
+    "datePublished": "2026-05-01",
+    "dateModified": "2026-05-28",
+
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://77cod-ing.github.io/particles-login-page.html"
+    },
+
+    "proficiencyLevel": "Beginner",
+
+    "keywords": [
+      "particles.js",
+      "glassmorphism login form",
+      "HTML CSS JavaScript UI",
+      "animated login page",
+      "modern frontend design"
+    ]
   }
-   .code-box{
-	background: #1e1e2f;
-    position: relative; 
-    border-radius: 8px;
-    
-}
-  .copy-btn {
-    
-    position: absolute;
-    top: 10px;
-    right: 10px;
+  </script>
 
-    width: 40px;
-    height: 40px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: #fff;
-    background: transparent;
-    border: none;
-    font-size: 1.4rem;
-    cursor: pointer;
-}
-   .language-js{
-       height: 50vh;
-       font-family: Arial, sans-serif;
-    }
-    :not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  width: 30vw;
-  height: 50vh;
-    border-radius: 20px;
-  overflow-y: auto; 
-}
-/* للمتصفحات المبنية على Chromium (Chrome, Edge) */
-pre::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-pre::-webkit-scrollbar-track {
-  background: transparent; /* 👈 خلفية شفافة */
-}
-
-pre::-webkit-scrollbar-thumb {
-  background-color: rgb(0, 242, 255); /* لون المقبض */
-  border-radius: 10px;
-}
-.type{
-  color: #fff;
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  width: 80px;
-  height: 60px;
-}
+  <!-- ===== SCHEMA: BREADCRUMB ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://77cod-ing.github.io/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Projects",
+        "item": "https://77cod-ing.github.io/projects.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Particles Login Page",
+        "item": "https://77cod-ing.github.io/particles-login-page.html"
+      }
+    ]
+  }
+  </script>
 
 
-    body {
-      background: linear-gradient(to right, #2c0e43 10%, #581c87);
-      font-family: Arial, sans-serif;
+  <!-- ===== ASSETS ===== -->
+  <link rel="icon" type="image/png" href="Picture1.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+  <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+    crossorigin="anonymous"></script>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      overflow-x: hidden;
     }
 
+    :root {
+      --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+      --premcolo: #00d9ff;
+      --accent2: #ff6b35;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --surface: rgba(255, 255, 255, 0.04);
+      --surface-hover: rgba(0, 217, 255, 0.07);
+      --border: rgba(255, 255, 255, 0.08);
+      --font-head: 'Space Mono', monospace;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--back);
+      font-family: var(--font-body);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    /* ===== NAVBAR ===== */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 50px;
-      padding: 0 2rem;
-      background-color: #0d1325;
+      height: 56px;
+      padding: 0 2.5rem;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      font-size: 22px;
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 2vw, 1.2rem);
       font-weight: bold;
       color: white;
       text-decoration: none;
+      gap: 8px;
     }
 
     .logo-icon {
-      color: #a855f7;
-      font-size: 26px;
-      margin-right: 8px;
-      letter-spacing: 2.5px;
+      color: var(--premcolo);
+      letter-spacing: 2px;
     }
 
     .nav-links {
       display: flex;
-      gap: 35px;
+      gap: clamp(1rem, 2vw, 2rem);
+      align-items: center;
     }
 
     .nav-links a {
-      color: #d1d5db;
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.25s;
     }
 
     .nav-links a:hover {
-      color: #a855f7;
-      transform: scale(1.2);
+      color: var(--premcolo);
     }
-    /*linke*/
-    .con1 {
-      font-family: Arial, sans-serif;
+
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      padding: 12px 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb ol {
       display: flex;
-      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      list-style: none;
       align-items: center;
-      flex-direction: column;
-      margin: auto 0;
-      height: 50vh;
-    }
-    .countdown {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00ffcc;
     }
 
-    .link-box {
-      display: none;
-      padding: 20px 40px;
-      background: #1e2a47;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-      transition: 0.3s;
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 13px;
     }
 
-    .link-box a {
+    .breadcrumb li+li::before {
+      content: "\203A";
+      color: var(--premcolo);
+      margin-right: 6px;
+      font-size: 1.1rem;
+    }
+
+    .breadcrumb a {
+      color: var(--text-muted);
       text-decoration: none;
-      color: #00ffcc;
-      font-size: 1.2rem;
-      font-weight: bold;
+      transition: color 0.2s;
     }
 
-    .link-box:hover {
-      background: #26385c;
-      transform: scale(1.05);
+    .breadcrumb a:hover {
+      color: var(--premcolo);
     }
-    /**ret**/
-    .Ret{
-      margin: 5px 0 0 3rem;
-      width: max-content;
+
+    .breadcrumb [aria-current="page"] {
+      color: var(--premcolo);
+      font-weight: 600;
     }
-    .Ret a {
-      font-size: 2rem;
-      text-decoration: none;
-      color: #ffffff;
-    }
-    .Ret a span{
+
+    /* ===== BACK BUTTON ===== */
+    .back-link {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
-      width: 38px;
-      height: 38px;
-      border: 2px solid #fff;
-      border-radius: 50%;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.2s;
+      margin: 1rem 2.5rem;
     }
-    .Ret a:hover {
-  color: #00e1ff;
-}
-    .Ret a:hover span {
-  border-color: #00e1ff;
-}
-    /**img**/
-    .img{
-      display: flex;
-      justify-content: center;
-      margin: 2rem auto;
+
+    .back-link:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
     }
-    .img img{
-      border-radius: 8px;
-      max-width: 100vw;
-    width: 70vw;
-    height: 65vh;
-    }
-    /**par**/
-    .par{
-       font-family: Arial, sans-serif;
-      line-height: 1.7;
-      max-width: 900px;
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 3rem 2.5rem 2rem;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 20px;
-      color: #ffffff;
     }
-    h1, h2, h3 {
-      color: #00c8ff;
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+      pointer-events: none;
     }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
     }
-    h2 {
-      margin-top: 35px;
-      font-size: 1.6rem;
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-head);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
     }
-    h3 {
-      margin-top: 25px;
-      font-size: 1.3rem;
+
+    .tag-tutorial {
+      background: rgba(0, 217, 255, 0.12);
+      color: var(--premcolo);
+      border: 1px solid rgba(0, 217, 255, 0.25);
     }
-    p {
-      margin-bottom: 18px;
+
+    .tag-css {
+      background: rgba(0, 217, 255, 0.08);
+      color: #7dd3fc;
+      border: 1px solid rgba(0, 217, 255, 0.15);
     }
-    ul {
-      margin: 15px 0;
-      padding-left: 25px;
+
+    .tag-js {
+      background: rgba(250, 204, 21, 0.1);
+      color: #facc15;
+      border: 1px solid rgba(250, 204, 21, 0.2);
     }
-    li {
+
+    .tag-particles {
+      background: rgba(168, 85, 247, 0.1);
+      color: #c084fc;
+      border: 1px solid rgba(168, 85, 247, 0.2);
+    }
+
+    .tag-level {
+      background: rgba(255, 107, 53, 0.1);
+      color: var(--accent2);
+      border: 1px solid rgba(255, 107, 53, 0.2);
+    }
+
+    .read-time {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      color: var(--premcolo);
+    }
+
+    .hero-lead {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      color: var(--premcolo);
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      display: block;
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem;
+      align-items: start;
+    }
+
+    /* ===== ARTICLE ===== */
+    .article-body h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: var(--premcolo);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 80px;
+    }
+
+    .article-body h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: #7dd3fc;
+      margin: 1.8rem 0 0.75rem;
+      scroll-margin-top: 80px;
+    }
+
+    .article-body p {
+      margin-bottom: 1.1rem;
+      color: var(--text);
+    }
+
+    .article-body code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .article-body ul,
+    .article-body ol {
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .article-body li {
+      margin-bottom: 9px;
+    }
+
+    .article-body li strong {
+      color: #fff;
+    }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .toc-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--premcolo);
+      margin-bottom: 0.75rem;
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--premcolo);
+    }
+
+    /* ===== FEATURE CARDS ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(0, 217, 255, 0.3);
+      background: var(--surface-hover);
+    }
+
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .feature-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .feature-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ===== STEPS ===== */
+    .steps {
+      margin: 1.5rem 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      width: 44px;
+      height: 44px;
+      background: rgba(0, 217, 255, 0.1);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      color: var(--premcolo);
+      font-size: 1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+
+    .step-content p {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* ===== PRACTICE GRID ===== */
+    .practice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .practice-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+    }
+
+    .practice-card-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+    }
+
+    .practice-card.do {
+      border-left: 3px solid #4ade80;
+    }
+
+    .practice-card.do .practice-card-title {
+      color: #4ade80;
+    }
+
+    .practice-card.dont {
+      border-left: 3px solid var(--accent2);
+    }
+
+    .practice-card.dont .practice-card-title {
+      color: var(--accent2);
+    }
+
+    .practice-card ul {
+      padding-left: 1.1rem;
+      margin: 0;
+    }
+
+    .practice-card li {
+      font-size: 13px;
+      margin-bottom: 6px;
+      color: var(--text-muted);
+    }
+
+    /* ===== INFO / WARN ===== */
+    .info-box {
+      background: rgba(0, 217, 255, 0.06);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-left: 4px solid var(--premcolo);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .info-box strong {
+      color: var(--premcolo);
+    }
+
+    .warn-box {
+      background: rgba(255, 107, 53, 0.06);
+      border: 1px solid rgba(255, 107, 53, 0.2);
+      border-left: 4px solid var(--accent2);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .warn-box strong {
+      color: var(--accent2);
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      margin: 1.5rem 0;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
       margin-bottom: 10px;
+      overflow: hidden;
     }
-    .highlight {
-      background: #000000;
-      padding: 8px 12px;
-      border-left: 4px solid #0073e6;
-      margin: 20px 0;
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      background: var(--surface);
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s;
+      list-style: none;
+      user-select: none;
     }
-    /**respon**/
-    @media (max-width: 768px) {
-      body{
-        overflow-x: hidden;
+
+    .faq-question:hover {
+      background: var(--surface-hover);
+    }
+
+    .faq-question::after {
+      content: "+";
+      font-size: 1.3rem;
+      color: var(--premcolo);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    details[open] .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 1rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-answer code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* ===== CONCLUSION ===== */
+    .conclusion {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.07), rgba(0, 140, 160, 0.05));
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .conclusion h2 {
+      border: none;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* ===== CODE SECTION ===== */
+    .code-section {
+      margin: 2rem 0;
+      width: 100%;
+    }
+
+    .code-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .code-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .code-tab {
+      padding: 8px 20px;
+      border-radius: 8px 8px 0 0;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .code-tab.active {
+      background: #1e1e2f;
+      color: #fff;
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .code-tab[data-lang="html"].active {
+      color: #ff6600;
+    }
+
+    .code-tab[data-lang="css"].active {
+      color: #00ffff;
+    }
+
+    .code-tab[data-lang="js"].active {
+      color: #f7df1e;
+    }
+
+    /* ===== PREVIEW BUTTON ===== */
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.3px;
+    }
+
+    .preview-btn:hover {
+      border-color: var(--premcolo);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .preview-btn:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .preview-btn.loading i {
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
       }
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
-
-  .navbar nav {
-    width: 10vw;
-    margin: 0;
-    padding: 0;
-    gap: 5vw;
-    margin-left: -80vw;
-  }
-  .navbar nav a{
-    font-size: 3vw;
-  }
-  .img img{
-    max-width: 100vw;
-    width: 90vw;
     }
-    .card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 210vh;
-  }
-  .language-js{
-       height: 50vh;
-       font-family: Arial, sans-serif;
+
+    .code-panels {
+      position: relative;
     }
-    :not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  width: 80vw;
-  height: 50vh;
-    border-radius: 20px;
-  overflow-y: auto; 
-}
-  }
-  hr{
-    width: 80vw;
-  }
-  .down{
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    align-items: center;
-    width: 80vw;
-    color: #fff;
-    font-size: 1.5rem;
-    border: 2px solid #fff;
-    border-radius: 20px;
-  }
-  .down img{
-    width: 50vw;
-  }
-  .down i{
-    color: rgb(0, 255, 255);
-  }
+
+    .code-box {
+      background: #1e1e2f;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 0 12px 12px 12px;
+      position: relative;
+      display: none;
+    }
+
+    .code-box.active {
+      display: block;
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-lang-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    .copy-btn.copied {
+      color: #4ade80;
+      border-color: #4ade80;
+    }
+
+    :not(pre)>code[class*="language-"],
+    pre[class*="language-"] {
+      width: 100%;
+      max-width: 100%;
+      height: 50vh;
+      border-radius: 0 0 12px 12px;
+      overflow-y: auto;
+      overflow-x: auto;
+      margin: 0;
+    }
+
+    pre::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    pre::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    pre::-webkit-scrollbar-thumb {
+      background: var(--premcolo);
+      border-radius: 10px;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      position: sticky;
+      top: 72px;
+    }
+
+    .sidebar-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-header {
+      padding: 14px 16px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--premcolo);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .related-list {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .related-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/9;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .related-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .related-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    .related-card-title {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* ===== PREVIEW MODAL ===== */
+    .preview-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 5, 15, 0.85);
+      backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+    }
+
+    .preview-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .preview-modal {
+      width: 92vw;
+      max-width: 92vw;
+      max-height: 90vh;
+      height: 90vh;
+      background: #0a0e1a;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(0, 217, 255, 0.06);
+      transform: scale(0.92) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .preview-overlay.open .preview-modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .preview-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+    }
+
+    .preview-modal-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-modal-title i {
+      color: var(--premcolo);
+      font-size: 16px;
+    }
+
+    .preview-modal-title strong {
+      color: #fff;
+    }
+
+    .preview-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .preview-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, filter 0.2s;
+    }
+
+    .preview-dot:hover {
+      transform: scale(1.2);
+      filter: brightness(1.3);
+    }
+
+    .preview-dot.red {
+      background: #ff5f57;
+    }
+
+    .preview-dot.yellow {
+      background: #febc2e;
+    }
+
+    .preview-dot.green {
+      background: #28c840;
+    }
+
+    .preview-close-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .preview-close-btn:hover {
+      border-color: var(--accent2);
+      color: var(--accent2);
+      background: rgba(255, 107, 53, 0.08);
+    }
+
+    .preview-iframe-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .preview-iframe-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .preview-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: #0a0e1a;
+      z-index: 2;
+      transition: opacity 0.4s;
+    }
+
+    .preview-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .preview-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(0, 217, 255, 0.15);
+      border-top-color: var(--premcolo);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    .preview-loading-text {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .preview-loading-files {
+      display: flex;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .preview-file-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      font-weight: 700;
+      opacity: 0.5;
+      transition: opacity 0.3s;
+    }
+
+    .preview-file-tag.loaded {
+      opacity: 1;
+    }
+
+    .preview-file-tag.html-tag {
+      background: rgba(255, 102, 0, 0.15);
+      color: #ff6600;
+      border: 1px solid rgba(255, 102, 0, 0.3);
+    }
+
+    .preview-file-tag.css-tag {
+      background: rgba(0, 255, 255, 0.1);
+      color: #00ffff;
+      border: 1px solid rgba(0, 255, 255, 0.25);
+    }
+
+    .preview-file-tag.js-tag {
+      background: rgba(247, 223, 30, 0.1);
+      color: #f7df1e;
+      border: 1px solid rgba(247, 223, 30, 0.25);
+    }
+
+    .preview-hint {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 16px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      color: var(--text-muted);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s 0.8s;
+      white-space: nowrap;
+      z-index: 3;
+    }
+
+    .preview-hint.show {
+      opacity: 1;
+    }
+
+    .preview-hint i {
+      color: var(--premcolo);
+      margin-right: 4px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1.25rem;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .related-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .related-card {
+        flex: 1 1 calc(50% - 8px);
+      }
+
+      .hero {
+        padding: 2rem 1.25rem 1.5rem;
+      }
+
+      .navbar {
+        padding: 0 1.25rem;
+      }
+
+      .breadcrumb {
+        padding: 10px 1.25rem;
+      }
+
+      .back-link {
+        margin: 0.75rem 1.25rem;
+      }
+
+      .practice-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-stats {
+        gap: 1.2rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .related-card {
+        flex: 1 1 100%;
+      }
+    }
   </style>
 </head>
+
 <body>
-<header class="navbar">
-    <a href="#" class="logo">
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <a href="https://77cod-ing.github.io/" class="logo">
       <span class="logo-icon">{ / }</span> 77cod_ing
     </a>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="https://77cod-ing.github.io/">Home</a>
       <a href="about.html">About</a>
-      <a href="projects.html">Projects</a> 
+      <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
       <a href="Privacy Policy.html">Privacy Policy</a>
       <a href="Terms & Conditions.html">Terms & Conditions</a>
     </nav>
   </header>
-  <div class="Ret">
-    <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="https://77cod-ing.github.io/"><i class='bx bx-home-alt-2'></i> Home</a></li>
+      <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+      <li><span aria-current="page">Particles Login Page</span></li>
+    </ol>
+  </nav>
+
+  <!-- ===== BACK BUTTON ===== -->
+  <a href="projects.html#subscribe" class="back-link" aria-label="Return to Projects">
+    <i class='bx bx-arrow-back'></i> Return to Projects
+  </a>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="main-heading">
+    <div class="hero-meta">
+      <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+      <span class="tag tag-css">CSS</span>
+      <span class="tag tag-js">JavaScript</span>
+      <span class="tag tag-particles">Particles.js</span>
+      <span class="tag tag-level">Beginner</span>
+      <span class="read-time"><i class='bx bx-time'></i> ~10 min read</span>
+    </div>
+
+    <h1 id="main-heading">
+      Create a <span>Particles Login Page</span><br>— HTML, CSS & JavaScript
+    </h1>
+
+    <p class="hero-lead">
+      A complete tutorial to build a stunning animated particles login page using Particles.js and glassmorphism CSS.
+      Animated particle backgrounds, neon glow effects, and a sleek glassy login form — fully responsive. Free source
+      code included.
+    </p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value">3</span>
+        <span class="stat-label">Build Steps</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">HTML/CSS/JS</span>
+        <span class="stat-label">Technologies</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">Glass</span>
+        <span class="stat-label">Morphism</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">Free</span>
+        <span class="stat-label">Source Code</span>
+      </div>
+    </div>
+
+    <img src="image copy 33.png"
+      alt="Particles login page built with HTML, CSS, and JavaScript featuring glassmorphism and Particles.js animation"
+      class="hero-img" width="1200" height="420" loading="eager" fetchpriority="high">
+    <p class="img-caption">Final result: an animated particles login page with glassmorphism and neon glow — built with
+      HTML, CSS & Particles.js</p>
+  </section>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <div class="layout">
+
+    <!-- ===== ARTICLE ===== -->
+    <main class="article-body" id="main-content">
+
+      <!-- TOC -->
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-title">Table of Contents</p>
+        <ol>
+          <li><a href="#overview">What You'll Build</a></li>
+          <li><a href="#features">Key Features</a></li>
+          <li><a href="#how-it-works">How It Works — Step by Step</a></li>
+          <li><a href="#benefits">Benefits for UI Design</a></li>
+          <li><a href="#best-practices">Best Practices & Mistakes to Avoid</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+          <li><a href="#source-code">Get Source Code</a></li>
+        </ol>
+      </nav>
+
+      <!-- OVERVIEW -->
+      <section id="overview">
+        <h2>What You'll Build</h2>
+        <p>
+          In this tutorial, you'll create a <strong>particles login page</strong> using
+          HTML for structure, CSS for glassmorphism styling, and Particles.js for the animated background.
+          The result is a futuristic login interface where interactive particles float behind a frosted-glass form.
+        </p>
+        <p>
+          This project is ideal for learning <strong>Particles.js integration</strong>,
+          <strong>CSS backdrop-filter</strong>, <strong>neon box-shadow effects</strong>, and
+          <strong>responsive login form design</strong> — skills directly applicable to portfolios,
+          tech startups, SaaS apps, and any website needing a modern authentication screen.
+        </p>
+      </section>
+
+      <hr>
+
+      <!-- FEATURES -->
+      <section id="features">
+        <h2>Key Features of This Particles Login Page</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">✨</div>
+            <div class="feature-title">Animated Particles</div>
+            <div class="feature-desc">Particles.js generates interactive floating particles that react to mouse hover
+              and clicks.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🪟</div>
+            <div class="feature-title">Glassmorphism Form</div>
+            <div class="feature-desc">CSS <code>backdrop-filter: blur()</code> and semi-transparent background create a
+              frosted glass effect.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💡</div>
+            <div class="feature-title">Neon Glow Effects</div>
+            <div class="feature-desc">Box-shadow with neon cyan color makes the login box glow against the dark particle
+              background.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <div class="feature-title">Fully Responsive</div>
+            <div class="feature-desc">The login box stays centered and properly sized across desktop, tablet, and mobile
+              screens.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <div class="feature-title">Lightweight</div>
+            <div class="feature-desc">Particles.js is only ~28KB. Particle count can be reduced on mobile for smooth
+              performance.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <div class="feature-title">Customizable</div>
+            <div class="feature-desc">Adjust particle count, color, size, speed, and line linking via a simple JSON
+              config object.</div>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- CODE SECTION -->
+      <div class="code-section" id="source-code">
+        <div class="code-toolbar">
+          <div class="code-tabs" role="tablist" aria-label="Code files">
+            <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+              aria-controls="panel-html">HTML</button>
+            <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+              aria-controls="panel-css">CSS</button>
+            <button class="code-tab" data-lang="js" role="tab" aria-selected="false"
+              aria-controls="panel-js">JS</button>
+          </div>
+          <button class="preview-btn" id="previewBtn" aria-label="Preview the particles login page">
+            <i class='bx bx-play-circle'></i>
+            <span>Preview Result</span>
+          </button>
+        </div>
+
+        <div class="code-panels">
+          <div class="code-box active" id="panel-html" role="tabpanel">
+            <div class="code-header">
+              <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+              <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+            </div>
+            <pre><code id="code1" class="language-html"><!-- Loading source code... --></code></pre>
+          </div>
+
+          <div class="code-box" id="panel-css" role="tabpanel">
+            <div class="code-header">
+              <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
+              <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+            </div>
+            <pre><code id="code2" class="language-css">/* Loading source code... */</code></pre>
+          </div>
+
+          <div class="code-box" id="panel-js" role="tabpanel">
+            <div class="code-header">
+              <span class="code-lang-label" style="color:#f7df1e;">JS — script.js</span>
+              <button class="copy-btn" data-target="code3"><i class='bx bxs-copy'></i> Copy</button>
+            </div>
+            <pre><code id="code3" class="language-javascript">// Loading source code...</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- HOW IT WORKS -->
+      <section id="how-it-works">
+        <h2>How It Works — Step by Step</h2>
+        <p>
+          Here's exactly how each layer of this particles login page is constructed, from the HTML structure
+          down to the Particles.js configuration.
+        </p>
+
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>Structure the HTML</h3>
+              <p>
+                Create a <code>div</code> with <code>id="particles-js"</code> as the animation canvas,
+                and a separate <code>.login-box</code> container for the form. The form contains input fields
+                for username and password, plus a submit button. Both elements sit inside a full-viewport wrapper
+                so the particles fill the entire background.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>Add CSS Glassmorphism Styling</h3>
+              <p>
+                Set <code>body</code> background to dark for maximum contrast against the particles.
+                Apply <code>backdrop-filter: blur(12px)</code> and a semi-transparent
+                <code>background: rgba()</code> on the login box for the glassmorphism effect.
+                Add <code>box-shadow</code> with a neon cyan color to make the form glow.
+                Style input fields with padding, border-radius, and smooth focus transitions.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>Implement Particles.js</h3>
+              <p>
+                Include Particles.js via CDN and call <code>particlesJS()</code> with a configuration object.
+                Set the particle count, color, size, movement speed, and line linking options.
+                Enable interactivity via <code>hover</code> and <code>click</code> events to make particles
+                react to the user's mouse — making the interface feel alive.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="info-box">
+          <strong>Performance Tip:</strong> Set <code>particles.number.value</code> to <code>80</code> or lower
+          for mobile devices. Too many particles on low-end hardware can cause frame drops and drain battery.
+          Use a media query or a JS check for <code>window.innerWidth</code> to reduce the count automatically.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- BENEFITS -->
+      <section id="benefits">
+        <h2>Benefits for UI Design & Front-End Projects</h2>
+        <p>
+          A particles login page immediately sets a professional, tech-forward tone for any website.
+          The combination of animated depth and glassmorphism keeps the interface visually rich without
+          sacrificing usability or form readability.
+        </p>
+        <ul>
+          <li><strong>Modern Design:</strong> Creates a futuristic, high-tech look ideal for SaaS apps, dashboards, and
+            portfolios.</li>
+          <li><strong>Interactive Feel:</strong> Subtle particle motion in the background makes the interface feel alive
+            and engaging.</li>
+          <li><strong>Readable Form:</strong> The glassy login box ensures input fields remain clear and accessible
+            against the animated background.</li>
+          <li><strong>Customizable:</strong> Particle color, size, speed, and count are all configurable via a simple
+            JSON object.</li>
+          <li><strong>Memorable:</strong> Users are more likely to remember and return to sites with distinctive visual
+            experiences.</li>
+        </ul>
+      </section>
+
+      <hr>
+
+      <!-- BEST PRACTICES -->
+      <section id="best-practices">
+        <h2>Best Practices & Common Mistakes</h2>
+
+        <div class="practice-grid">
+          <div class="practice-card do">
+            <div class="practice-card-title">Do</div>
+            <ul>
+              <li>Reduce particle count on mobile for smooth performance</li>
+              <li>Use <code>position: absolute</code> on <code>#particles-js</code> so it fills the background</li>
+              <li>Label all input fields properly for accessibility</li>
+              <li>Keep contrast high between text and the glassy form</li>
+              <li>Match particle color with your site's accent color</li>
+              <li>Test on real mobile devices before deploying</li>
+            </ul>
+          </div>
+          <div class="practice-card dont">
+            <div class="practice-card-title">Don't</div>
+            <ul>
+              <li>Use too many particles — it reduces readability and performance</li>
+              <li>Make particles move too fast — it becomes distracting</li>
+              <li>Use a bright background — low contrast hides the particles</li>
+              <li>Forget mobile responsiveness — box must stay centered</li>
+              <li>Use too many colors — keep the particle palette minimal</li>
+              <li>Neglect to optimize particle count for performance</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="warn-box">
+          <strong>Accessibility note:</strong> Users with vestibular disorders may be sensitive to motion.
+          Consider respecting <code>@media (prefers-reduced-motion: reduce)</code> by reducing or disabling
+          particle animation for affected users.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+
+          <details class="faq-item">
+            <summary class="faq-question">What is a particles login page?</summary>
+            <div class="faq-answer">
+              A particles login page features animated particles moving in the background behind a login form.
+              Using Particles.js, the particles can be made interactive — reacting to mouse hover and clicks.
+              The login form is typically styled with a glassmorphism effect for readability and visual appeal.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">What is Particles.js?</summary>
+            <div class="faq-answer">
+              Particles.js is a lightweight (~28KB) open-source JavaScript library that generates configurable
+              animated particle effects on an HTML canvas. You control the number, color, size, speed, shape,
+              and interactivity of the particles via a JSON configuration object.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How does glassmorphism work in CSS?</summary>
+            <div class="faq-answer">
+              Glassmorphism is achieved by combining <code>backdrop-filter: blur()</code> with a
+              semi-transparent background (<code>rgba()</code>), a subtle border, and a soft
+              <code>box-shadow</code>. This creates the illusion of frosted glass layered over the
+              animated particle background behind it.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Can I connect this login form to a real backend?</summary>
+            <div class="faq-answer">
+              Absolutely. The HTML form uses standard <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code>,
+              and <code>&lt;button&gt;</code> elements. You can add <code>action</code> and <code>method</code>
+              attributes, or use JavaScript <code>fetch()</code> to send form data to any backend —
+              Firebase, Node.js, PHP, Python, and more.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Is Particles.js free to use?</summary>
+            <div class="faq-answer">
+              Yes. Particles.js is open-source and completely free. You can include it via CDN
+              (<code>cdn.jsdelivr.net</code> or <code>cdnjs</code>) or download it from the official
+              GitHub repository at github.com/VincentGarreau/particles.js.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How do I change the particle color?</summary>
+            <div class="faq-answer">
+              In the Particles.js configuration object, set <code>particles.color.value</code> to any
+              hex color, for example <code>"#00d9ff"</code> for cyan or <code>"#ff6b35"</code> for orange.
+              You can also set it to <code>"random"</code> to generate multi-colored particles automatically.
+            </div>
+          </details>
+
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- CONCLUSION -->
+      <section id="conclusion" class="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          The <strong>Particles Login Page with HTML, CSS, and JavaScript</strong> combines aesthetic appeal
+          with usability. Particles.js delivers the animated background with minimal performance overhead,
+          while CSS glassmorphism keeps the login form clean, readable, and visually striking.
+        </p>
+        <p>
+          When optimized for mobile (reduced particle count) and accessibility (<code>prefers-reduced-motion</code>,
+          proper labels, sufficient contrast), this component is fully production-ready — ideal for portfolios,
+          tech startups, apps, or any site that wants a modern login experience.
+        </p>
+        <p style="color:var(--text-muted); font-size:14px; margin-bottom:0;">
+          Found this useful? Explore the related projects in the sidebar for more modern CSS and JavaScript UI effects.
+        </p>
+      </section>
+
+    </main>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" aria-label="Related projects">
+      <div class="sidebar-box">
+        <div class="sidebar-header">Related Projects</div>
+        <div class="related-list">
+          <a class="related-card" href="Project39.html" aria-label="Animated Button with Star Effects">
+            <img src="https://i.suar.me/jvZZv/m" alt="Animated Button with Star Effects" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Button with Star Effects — HTML & CSS</div>
+          </a>
+          <a class="related-card" href="Project37.html" aria-label="Glassmorphism Login Page">
+            <img src="https://i.suar.me/Np3EO/m" alt="Modern Glassmorphism Login Page Design" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Modern Glassmorphism Login Page Design</div>
+          </a>
+          <a class="related-card" href="Project40.html" aria-label="CSS Neon Digital Clock">
+            <img src="https://i.suar.me/Ep114/m" alt="CSS Neon Digital Clock Animation" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">CSS Neon Digital Clock Animation</div>
+          </a>
+          <a class="related-card" href="project14.html" aria-label="Electric Neon Card Animation">
+            <img src="https://77cod-ing.github.io/image%20copy%2040.png" alt="Electric Neon Card Animation"
+              loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Electric Neon Card Animation — HTML CSS SVG</div>
+          </a>
+        </div>
+      </div>
+    </aside>
+
   </div>
-  <div class="img">
-    <img src="image copy 33.png" alt="subscribe.box">
+
+  <!-- ===== PREVIEW MODAL ===== -->
+  <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+    aria-label="Particles Login Page Preview">
+    <div class="preview-modal">
+      <div class="preview-modal-header">
+        <div class="preview-modal-title">
+          <i class='bx bx-show'></i>
+          <strong>Live Preview</strong> — Particles Login Page
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="preview-dots">
+            <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+            <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+            <button class="preview-dot green" aria-label="Maximize" disabled></button>
+          </div>
+          <button class="preview-close-btn" id="previewCloseBtn">
+            <i class='bx bx-x'></i> Close
+          </button>
+        </div>
+      </div>
+      <div class="preview-iframe-wrap">
+        <div class="preview-loading" id="previewLoading">
+          <div class="preview-spinner"></div>
+          <span class="preview-loading-text">Loading preview...</span>
+          <div class="preview-loading-files">
+            <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+            <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+            <span class="preview-file-tag js-tag" id="tagJS">JS</span>
+          </div>
+        </div>
+        <iframe id="previewIframe" title="Preview of Particles Login Page"
+          sandbox="allow-scripts allow-same-origin"></iframe>
+        <div class="preview-hint" id="previewHint">
+          <i class='bx bx-cursor'></i> Particles Login Page — Hover to interact
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="par">
-  <span>
-<h1>Create a Particles Login Page — HTML/CSS/JS</h1>
-<p>
-  Animated particle backgrounds are a popular way to enhance the visual appeal of websites. 
-  In this guide, you’ll learn how to create a <strong>particles login page</strong> 
-  using <em>HTML, CSS, and Particles.js</em>. 
-  This design combines a futuristic particle animation with a sleek glassy login form, 
-  making your login interface both modern and user-friendly.
-</p>
 
-<div class="highlight">
-  <p><strong>Quick Summary:</strong> Use Particles.js to generate interactive particles 
-  in the background and a glassmorphism login box using CSS with blur and neon glow effects.</p>
-</div>
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    /* ===== Code tabs ===== */
+    document.querySelectorAll(".code-tab").forEach(tab => {
+      tab.addEventListener("click", () => {
+        const lang = tab.dataset.lang;
+        document.querySelectorAll(".code-tab").forEach(t => { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
+        document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+        tab.classList.add("active");
+        tab.setAttribute("aria-selected", "true");
+        const panelMap = { html: "panel-html", css: "panel-css", js: "panel-js" };
+        document.getElementById(panelMap[lang]).classList.add("active");
+      });
+    });
 
-<h2>What Is a Particles Login Page?</h2>
-<p>
-  A particles login page features animated particles moving in the background behind a login form. 
-  It adds depth and interactivity, giving users a visually engaging interface. 
-  The login form is usually styled with a glass-like effect to ensure readability and highlight the input fields.
-</p>
+    /* ===== Copy buttons ===== */
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const code = document.getElementById(btn.dataset.target)?.innerText || "";
+        if (!code.trim()) return;
+        try {
+          await navigator.clipboard.writeText(code);
+          btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+          btn.classList.add("copied");
+          setTimeout(() => { btn.innerHTML = "<i class='bx bxs-copy'></i> Copy"; btn.classList.remove("copied"); }, 2000);
+        } catch { btn.textContent = "Error"; }
+      });
+    });
 
-<h2>Why Use a Particles Login Page?</h2>
-<ul>
-  <li><strong>Modern Design:</strong> Creates a futuristic, high-tech look for your site.</li>
-  <li><strong>Interactive:</strong> Subtle motion in the background makes the interface feel alive.</li>
-  <li><strong>Focus:</strong> Glassy login box ensures the form is readable and accessible.</li>
-  <li><strong>Customizable:</strong> Adjust particle size, color, number, speed, and box styling.</li>
-</ul>
+    /* ===== Source code loading ===== */
+    const gistBase = "https://gist.githubusercontent.com/77cod-ing/00030038885626c22d323ffa9cfea26e/raw/7c6eae2b0fe4cea2683a1aa8708c1558ef389c9c/";
+    const htmlUrl = gistBase + "index.html";
+    const cssUrl = gistBase + "style.css";
+    const jsUrl = gistBase + "script.js";
 
-<h2>Steps to Build the Particles Login Page</h2>
+    let cachedHTML = "", cachedCSS = "", cachedJS = "";
 
-<h3>1. Structure the HTML</h3>
-<p>
-  Begin with a <code>div</code> for particles and another for the login form. 
-  The login box contains input fields for username and password, 
-  along with a submit button. Optionally, add a semi-transparent container for additional styling.
-</p>
-<div class="img"><img src="image copy 34.png" alt="HTML structure for particles login page"></div>
+    async function loadCode(url, elementId, lang, cacheKey) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const text = await res.text();
+        if (lang === "html") cachedHTML = text;
+        if (lang === "css") cachedCSS = text;
+        if (lang === "js") cachedJS = text;
+        const el = document.getElementById(elementId);
+        el.textContent = text;
+        el.className = `language-${lang}`;
+        if (window.Prism) Prism.highlightElement(el);
+      } catch (e) {
+        const el = document.getElementById(elementId);
+        if (el) el.textContent = `/* Source code available via the GitHub Gist link. */`;
+      }
+    }
 
-<h3>2. Add CSS Styling</h3>
-<p>
-  Style the background, login box, and inputs:
-</p>
-<ul>
-  <li>Set <code>body</code> background to dark for contrast.</li>
-  <li>Use <code>backdrop-filter: blur()</code> for a glassy effect.</li>
-  <li>Add <code>box-shadow</code> with neon color to make the login box glow.</li>
-  <li>Style input fields and buttons with padding, border-radius, and hover effects.</li>
-</ul>
-<div class="img"><img src="image copy 35.png" alt="CSS styling for login page"></div>
+    loadCode(htmlUrl, "code1", "html");
+    loadCode(cssUrl, "code2", "css");
+    loadCode(jsUrl, "code3", "javascript");
 
-<h3>3. Implement Particles.js</h3>
-<p>
-  Include Particles.js in your project and configure particle options:
-  number, color, size, movement speed, and line linking. 
-  You can enable or disable interactivity like hover or click effects depending on your preference.
-</p>
-<div class="img"><img src="image copy 33.png" alt="Particles.js configuration for login page"></div>
+    /* ===== Preview modal ===== */
+    const previewOverlay = document.getElementById("previewOverlay");
+    const previewIframe = document.getElementById("previewIframe");
+    const previewLoading = document.getElementById("previewLoading");
+    const previewHint = document.getElementById("previewHint");
+    const previewBtn = document.getElementById("previewBtn");
+    const previewCloseBtn = document.getElementById("previewCloseBtn");
+    const previewDotClose = document.getElementById("previewDotClose");
+    const tagHTML = document.getElementById("tagHTML");
+    const tagCSS = document.getElementById("tagCSS");
+    const tagJS = document.getElementById("tagJS");
 
-<h2>Best Practices for Particles Login Pages</h2>
-<ul>
-  <li><strong>Accessibility:</strong> Ensure input fields are labeled properly for screen readers.</li>
-  <li><strong>Performance:</strong> Avoid too many particles on mobile devices to maintain smooth animation.</li>
-  <li><strong>Design Consistency:</strong> Match colors of particles and login box with your website theme.</li>
-  <li><strong>Responsiveness:</strong> Make sure the login box remains centered on different screen sizes.</li>
-</ul>
+    function openPreview() {
+      previewOverlay.classList.add("open");
+      document.body.style.overflow = "hidden";
+      previewLoading.classList.remove("hidden");
+      previewHint.classList.remove("show");
+      previewBtn.classList.add("loading");
+      tagHTML.classList.remove("loaded");
+      tagCSS.classList.remove("loaded");
+      tagJS.classList.remove("loaded");
+      buildPreview();
+    }
 
-<h2>Common Mistakes to Avoid</h2>
-<ul>
-  <li>Making particles too distracting or fast, which reduces readability.</li>
-  <li>Using a background too bright or with low contrast against the login box.</li>
-  <li>Neglecting mobile responsiveness — box should remain centered and inputs accessible.</li>
-  <li>Forgetting to optimize particle numbers for performance.</li>
-</ul>
+    function closePreview() {
+      previewOverlay.classList.remove("open");
+      document.body.style.overflow = "";
+      previewIframe.srcdoc = "";
+      previewBtn.classList.remove("loading");
+    }
 
-<h2>Conclusion</h2>
-<p>
-  Creating a <strong>Particles Login Page</strong> combines aesthetic appeal with usability. 
-  The animated background draws attention, while the glassy login form keeps the interface clean and professional. 
-  This approach is perfect for portfolios, tech startups, apps, or any website that wants a modern login experience.
-</p>
+    async function buildPreview() {
+      if (cachedHTML && cachedCSS && cachedJS) {
+        tagHTML.classList.add("loaded"); tagCSS.classList.add("loaded"); tagJS.classList.add("loaded");
+        injectPreview(cachedHTML, cachedCSS, cachedJS);
+        return;
+      }
+      try {
+        const fetches = [];
+        if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
+        if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
+        if (!cachedJS) fetches.push(fetch(jsUrl).then(r => r.text()).then(t => { cachedJS = t; tagJS.classList.add("loaded"); }));
+        if (cachedHTML) tagHTML.classList.add("loaded");
+        if (cachedCSS) tagCSS.classList.add("loaded");
+        if (cachedJS) tagJS.classList.add("loaded");
+        await Promise.all(fetches);
+        injectPreview(cachedHTML, cachedCSS, cachedJS);
+      } catch (e) {
+        previewLoading.innerHTML = `<i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i><span class="preview-loading-text" style="color:var(--accent2);">Failed to load: ${e.message}</span>`;
+        previewBtn.classList.remove("loading");
+      }
+    }
 
-<div class="highlight">
-  <p><strong>SEO Keywords:</strong> Particles login page, HTML CSS JavaScript login, glassmorphism form, 
-  interactive background, neon login box, modern web UI, Particles.js tutorial</p>
-</div>
+    function injectPreview(html, css, js) {
+      let combined = html;
+      if (/style\.css/i.test(combined)) {
+        combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
+      } else if (combined.includes("</head>")) {
+        combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
+      } else { combined = `<style>${css}</style>\n${combined}`; }
 
+      if (/script\.js/i.test(combined)) {
+        combined = combined.replace(/<script[^>]*src=["'][^"']*script\.js["'][^>]*><\/script>/gi, `<script>${js}<\/script>`);
+      } else if (combined.includes("</body>")) {
+        combined = combined.replace("</body>", `<script>${js}<\/script>\n</body>`);
+      } else { combined = `${combined}\n<script>${js}<\/script>`; }
 
-</div>
-    <div class="card">
-  
+      previewIframe.srcdoc = combined;
+      previewIframe.addEventListener("load", function onLoad() {
+        previewLoading.classList.add("hidden");
+        previewBtn.classList.remove("loading");
+        setTimeout(() => { previewHint.classList.add("show"); setTimeout(() => previewHint.classList.remove("show"), 4000); }, 300);
+        previewIframe.removeEventListener("load", onLoad);
+      });
+    }
 
-  <div class="code-box" id="cpoy">
-    <span class="type" style="color: #ff6600;">html</span><button class="copy-btn"><i class='bx bxs-copy' style='color:#ffffff' ></i></button>
-    <pre><code id="code1" class="language-html"></code></pre>
-  </div>
-  <div class="code-box">
-    <span class="type" style="color: #00ffff;">css</span><button class="copy-btn"><i class='bx bxs-copy' style='color:#ffffff' ></i></button>
-    <pre><code id="code2" class="language-js"></code></pre>
-  </div>
-  <div class="code-box">
-    <span class="type" style="color: #ebdf00; ">JS</span><button class="copy-btn"><i class='bx bxs-copy' style='color:#ffffff' ></i></button>
-    <pre><code id="code3" class="language-js"></code></pre>
-  </div>
-</div>
-
-
-
+    previewBtn.addEventListener("click", openPreview);
+    previewCloseBtn.addEventListener("click", closePreview);
+    previewDotClose.addEventListener("click", closePreview);
+    previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
+  </script>
 
 </body>
-
-<script>
-async function loadCode() {
-  const response = await fetch("https://gist.githubusercontent.com/77cod-ing/00030038885626c22d323ffa9cfea26e/raw/7c6eae2b0fe4cea2683a1aa8708c1558ef389c9c/index.html");
-  const text = await response.text();
-
-  const codeElement = document.getElementById("code1");
-  codeElement.textContent = text;
-
-  Prism.highlightElement(codeElement); // 👈 هذا هو السر
-}
-
-loadCode();
-async function loadCSS() {
-  const response = await fetch("https://gist.githubusercontent.com/77cod-ing/00030038885626c22d323ffa9cfea26e/raw/7c6eae2b0fe4cea2683a1aa8708c1558ef389c9c/style.css");
-  const text = await response.text();
-
-  const codeElement = document.getElementById("code2");
-  codeElement.textContent = text;
-
-  Prism.highlightElement(codeElement); // 👈 هذا هو السر
-}
-
-loadCSS();
-async function loadJS() {
-  const response = await fetch("https://gist.githubusercontent.com/77cod-ing/00030038885626c22d323ffa9cfea26e/raw/7c6eae2b0fe4cea2683a1aa8708c1558ef389c9c/script.js");
-  const text = await response.text();
-
-  const codeElement = document.getElementById("code3");
-  codeElement.textContent = text;
-
-  Prism.highlightElement(codeElement); // 👈 هذا هو السر
-}
-
-loadJS();
-
-</script>
-<script>
-document.querySelectorAll(".copy-btn").forEach(button => {
-    button.addEventListener("click", async () => {
-
-        const code = button.closest(".code-box").querySelector("code").innerText;
-
-        if (!code.trim()) return; // منع النسخ إذا الكود فارغ
-
-        await navigator.clipboard.writeText(code);
-
-        // تغيير نص الزر مؤقتًا لإظهار ✔️
-        const originalText = button.innerText;
-        button.innerText = "✔";
-        setTimeout(() => {
-            button.innerText = originalText;
-        }, 1500);
-    });
-});
-</script>
 
 </html>
