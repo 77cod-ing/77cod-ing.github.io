@@ -1,316 +1,1303 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ===== BASIC ===== -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- ===== PRIMARY SEO ===== -->
+<title>Terminal Typing Animation with HTML & CSS (No JavaScript) | Free Source Code</title>
+
+<meta name="description"
+  content="Learn how to create a terminal typing and deleting animation using pure HTML and CSS. Includes blinking cursor effects, CSS steps() animation, retro terminal UI, and free source code.">
+
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<meta name="author" content="77cod_ing">
+
+<link rel="canonical" href="https://77cod-ing.github.io/terminal-typing.html">
+
+<!-- ===== THEME ===== -->
+<meta name="theme-color" content="#00d9ff">
+
+<!-- ===== FAVICON ===== -->
+<link rel="icon" type="image/png" href="https://77cod-ing.github.io/favicon.png">
+
+<!-- ===== PERFORMANCE ===== -->
+<link rel="preload" as="image" href="https://77cod-ing.github.io/image%20copy%2016.png">
+
+<link rel="dns-prefetch" href="//77cod-ing.github.io">
+
+<link rel="preconnect" href="https://77cod-ing.github.io">
+
+<!-- ===== OPEN GRAPH ===== -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Terminal Typing Animation with HTML & CSS (No JavaScript)">
+<meta property="og:description"
+  content="Build a realistic terminal typing and deleting animation using pure HTML and CSS. Includes blinking cursor effects, CSS steps() timing, retro terminal design, and free source code.">
+<meta property="og:url" content="https://77cod-ing.github.io/terminal-typing.html">
+<meta property="og:image" content="https://77cod-ing.github.io/image%20copy%2016.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="77cod_ing">
+<meta property="og:locale" content="en_US">
+
+<!-- ===== TWITTER ===== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Terminal Typing Animation with HTML & CSS">
+<meta name="twitter:description"
+  content="Create a terminal typing animation with blinking cursor using pure HTML and CSS. No JavaScript required. Free source code included.">
+<meta name="twitter:image" content="https://77cod-ing.github.io/image%20copy%2016.png">
+
+<!-- أضف هذا فقط إذا عندك حساب X -->
+<meta name="twitter:creator" content="@77cod_ing">
+
+<!-- ===== SCHEMA : TECH ARTICLE ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Terminal Typing Animation with HTML & CSS",
+  "description": "Step-by-step tutorial for creating a realistic terminal typing and deleting animation using CSS keyframes and the steps() timing function.",
+  "image": "https://77cod-ing.github.io/image%20copy%2016.png",
+  "articleSection": "Web Development",
+  "proficiencyLevel": "Beginner",
+  "programmingLanguage": [
+    "HTML",
+    "CSS"
+  ],
+  "keywords": [
+    "terminal typing animation",
+    "HTML typing effect",
+    "CSS typing animation",
+    "blinking cursor CSS",
+    "terminal animation HTML CSS",
+    "typewriter effect CSS",
+    "CSS steps animation",
+    "coding animation",
+    "hacker terminal UI",
+    "retro terminal design"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "77cod_ing"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "77cod_ing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://77cod-ing.github.io/Picture1.png"
+    }
+  },
+  "datePublished": "2025-10-01",
+  "dateModified": "2026-05-28",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://77cod-ing.github.io/terminal-typing.html"
+  }
+}
+</script>
+
+<!-- ===== SCHEMA : BREADCRUMB ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://77cod-ing.github.io/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://77cod-ing.github.io/projects.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Terminal Typing Animation",
+      "item": "https://77cod-ing.github.io/terminal-typing.html"
+    }
+  ]
+}
+</script>
+
+<!-- ===== SCHEMA : WEBSITE ===== -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"77cod_ing",
+  "url":"https://77cod-ing.github.io/"
+}
+</script>
+
+
+  <!-- ===== ASSETS ===== -->
   <link rel="icon" type="image/png" href="Picture1.png">
-  <title>Build a Terminal Typing Animation — HTML/CSS</title>
-    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
-     crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+  <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
   <style>
-    body {
-      background: linear-gradient(to right, #2c0e43 10%, #581c87);
-      font-family: Arial, sans-serif;
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
+    :root {
+      --back: linear-gradient(135deg, #001212 0%, #090020 50%, #030010 100%);
+      --neon2: #00d9ff;
+      --neon3: #ff006e;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --surface: rgba(255, 255, 255, 0.03);
+      --surface-hover: rgba(0, 213, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.07);
+      --font-head: 'Syne', sans-serif;
+      --font-body: 'Outfit', sans-serif;
+      --premcolo: #00d9ff;
+      --accent2: #ff006e;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--back);
+      font-family: var(--font-body);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    /* ===== NAVBAR ===== */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 50px;
-      padding: 0 2rem;
-      background-color: #0d1325;
+      height: 56px;
+      padding: 0 2.5rem;
+      background: rgba(0, 5, 18, 0.7);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(0, 217, 255, 0.12);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      font-size: 22px;
-      font-weight: bold;
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: 700;
       color: white;
       text-decoration: none;
+      gap: 8px;
     }
 
     .logo-icon {
-      color: #a855f7;
-      font-size: 26px;
-      margin-right: 8px;
-      letter-spacing: 2.5px;
+      color: var(--premcolo);
+      letter-spacing: 2px;
     }
 
     .nav-links {
       display: flex;
-      gap: 35px;
+      gap: clamp(1rem, 2vw, 2rem);
+      align-items: center;
     }
 
     .nav-links a {
-      color: #d1d5db;
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.25s;
     }
 
     .nav-links a:hover {
-      color: #a855f7;
-      transform: scale(1.2);
+      color: var(--premcolo);
     }
-    /*linke*/
-    .con1 {
-      font-family: Arial, sans-serif;
+
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      padding: 12px 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb ol {
       display: flex;
-      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      list-style: none;
       align-items: center;
-      flex-direction: column;
-      margin: auto 0;
-      height: 50vh;
-    }
-    .countdown {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00ffcc;
     }
 
-    .link-box {
-      display: none;
-      padding: 20px 40px;
-      background: #1e2a47;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-      transition: 0.3s;
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 13px;
     }
 
-    .link-box a {
+    .breadcrumb li+li::before {
+      content: "›";
+      color: var(--premcolo);
+      margin-right: 6px;
+      font-size: 1.1rem;
+    }
+
+    .breadcrumb a {
+      color: var(--text-muted);
       text-decoration: none;
-      color: #00ffcc;
-      font-size: 1.2rem;
-      font-weight: bold;
+      transition: color 0.2s;
     }
 
-    .link-box:hover {
-      background: #26385c;
-      transform: scale(1.05);
+    .breadcrumb a:hover {
+      color: var(--premcolo);
     }
-    /**ret**/
-    .Ret{
-      margin: 5px 0 0 3rem;
-      width: max-content;
+
+    .breadcrumb [aria-current="page"] {
+      color: var(--premcolo);
+      font-weight: 600;
     }
-    .Ret a {
-      font-size: 2rem;
-      text-decoration: none;
-      color: #ffffff;
-    }
-    .Ret a span{
+
+    /* ===== BACK BUTTON ===== */
+    .back-link {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
-      width: 38px;
-      height: 38px;
-      border: 2px solid #fff;
-      border-radius: 50%;
-    }
-    .Ret a:hover {
-  color: #00e1ff;
-}
-    .Ret a:hover span {
-  border-color: #00e1ff;
-}
-    /**img**/
-    .img{
-      display: flex;
-      justify-content: center;
-      margin: 2rem auto;
-    }
-    .img img{
-      border-radius: 8px;
-      max-width: 100vw;
-    width: 70vw;
-    height: 65vh;
-    }
-    /**par**/
-    .par{
-       font-family: Arial, sans-serif;
-      line-height: 1.7;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      color: #ffffff;
-    }
-    h1, h2, h3 {
-      color: #00c8ff;
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
-    h2 {
-      margin-top: 35px;
-      font-size: 1.6rem;
-    }
-    h3 {
-      margin-top: 25px;
-      font-size: 1.3rem;
-    }
-    p {
-      margin-bottom: 18px;
-    }
-    ul {
-      margin: 15px 0;
-      padding-left: 25px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .highlight {
-      background: #000000;
-      padding: 8px 12px;
-      border-left: 4px solid #0073e6;
-      margin: 20px 0;
-    }
-    /**respon**/
-    @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .img img{
-    max-width: 100vw;
-    width: 90vw;
-    }
-  }
-        /**respon1**/
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hamburger .scrolled {
-      background: rgba(255, 255, 255, 0.7);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-}
-
-    .hamburger span {
-      width: 28px;
-      height: 3px;
-      background: white;
-      transition: all 0.3s ease;
-    }
-
-    /* ====== القائمة المنبثقة ====== */
-    .mobile-menu {
-      position: fixed;
-      top:0;
-      left: -100%;
-      width: 100%;
-      height: 100vh;
-      padding-top: 0.5rem ;
-      background: rgb(53, 53, 53);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 35px;
-      transition: left 0.5s ease;
-      z-index: 999;
-    }
-
-    .mobile-menu.active {
-      left: 0;
-    }
-
-    .mobile-menu a {
-      color: white;
-      font-size: 22px;
-      width: 100%;
-      height: 3rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      color: var(--text);
       text-decoration: none;
-      border-bottom: 0.5px solid #fff;
-      transition: color 0.3s;
+      font-size: 14px;
+      transition: all 0.2s;
+      margin: 1rem 2.5rem;
     }
 
-    .mobile-menu a:hover {
-      color: #ffffff;
-      background: rgba(104, 104, 104, 0.508);
-      backdrop-filter: bulur(20px);
+    .back-link:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
     }
 
-    /* ====== زر الإغلاق (X) ====== */
-    .close-btn {
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 3rem 2.5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero::before {
+      content: '';
       position: absolute;
-      top: 20px;
-      right: 25px;
-      font-size: 30px;
-      color: white;
-      cursor: pointer;
-      width: 35px;
-      height: 35px;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-meta {
       display: flex;
-      justify-content: center;
       align-items: center;
-      border: 2px solid #fff;
-      background: rgb(88, 88, 88);
+      gap: 10px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: var(--font-head);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .tag-tutorial {
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+    }
+
+    .tag-css {
+      background: rgba(0, 217, 255, 0.08);
+      color: var(--neon2);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+    }
+
+    .tag-html {
+      background: rgba(255, 102, 0, 0.1);
+      color: #ff6600;
+      border: 1px solid rgba(255, 102, 0, 0.2);
+    }
+
+    .tag-nojs {
+      background: rgba(255, 255, 255, 0.05);
+      color: #94a3b8;
+      border: 1px solid var(--border);
+    }
+
+    .read-time {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.7rem, 4vw, 2.7rem);
+      line-height: 1.2;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      color: var(--premcolo);
+    }
+
+    .hero h1 em {
+      color: var(--neon2);
+      font-style: normal;
+    }
+
+    .hero-lead {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      color: var(--premcolo);
+      font-weight: 800;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== HERO IMAGE ===== */
+    .hero-img-wrap {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      box-shadow: 0 0 60px rgba(0, 217, 255, 0.1), 0 32px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem;
+      align-items: start;
+    }
+
+    /* ===== ARTICLE ===== */
+    .article-body h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: var(--premcolo);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(0, 217, 255, 0.15);
+      scroll-margin-top: 80px;
+    }
+
+    .article-body h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: var(--neon2);
+      margin: 1.8rem 0 0.75rem;
+      scroll-margin-top: 80px;
+    }
+
+    .article-body p {
+      margin-bottom: 1.1rem;
+      color: var(--text);
+    }
+
+    .article-body code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.08);
+      color: var(--premcolo);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .article-body ul {
+      padding-left: 1.4rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .article-body li {
+      margin-bottom: 9px;
+    }
+
+    .article-body li strong {
+      color: #fff;
+    }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: var(--surface);
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .toc-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--premcolo);
+      margin-bottom: 0.75rem;
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--premcolo);
+    }
+
+    /* ===== WHY CARDS ===== */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .why-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .why-card:hover {
+      border-color: rgba(0, 217, 255, 0.3);
+      background: var(--surface-hover);
+    }
+
+    .why-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .why-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .why-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ===== STEPS ===== */
+    .steps {
+      margin: 1.5rem 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      width: 44px;
+      height: 44px;
+      background: rgba(0, 217, 255, 0.08);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      color: var(--premcolo);
+      font-size: 1rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      margin-top: 0;
+      font-size: 1.05rem;
+    }
+
+    .step-content p {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* ===== TIPS / WARNINGS ===== */
+    .info-box {
+      background: rgba(0, 217, 255, 0.04);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-left: 4px solid var(--premcolo);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .info-box strong {
+      color: var(--premcolo);
+    }
+
+    .warn-box {
+      background: rgba(255, 0, 110, 0.04);
+      border: 1px solid rgba(255, 0, 110, 0.2);
+      border-left: 4px solid var(--neon3);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .warn-box strong {
+      color: var(--neon3);
+    }
+
+    /* ===== CODE SECTION ===== */
+    .code-section {
+      margin: 2rem 0;
+      width: 60vw;
+    }
+
+    .code-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .code-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .code-tab {
+      padding: 8px 20px;
+      border-radius: 8px 8px 0 0;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .code-tab.active {
+      background: #1e1e2f;
+      color: #fff;
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .code-tab[data-lang="html"].active {
+      color: #ff6600;
+    }
+
+    .code-tab[data-lang="css"].active {
+      color: #00d9ff;
+    }
+
+    /* ===== PREVIEW BUTTON ===== */
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.3px;
+    }
+
+    .preview-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .preview-btn:hover {
+      border-color: var(--premcolo);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .preview-btn:hover::before {
+      opacity: 1;
+    }
+
+    .preview-btn:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .preview-btn i {
+      font-size: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn.loading i {
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .code-panels {
+      position: relative;
+    }
+
+    .code-box {
+      background: #1e1e2f;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 0 12px 12px 12px;
+      position: relative;
+      display: none;
+    }
+
+    .code-box.active {
+      display: block;
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-lang-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    .copy-btn.copied {
+      color: #4ade80;
+      border-color: #4ade80;
+    }
+
+    :not(pre)>code[class*="language-"],
+    pre[class*="language-"] {
+      width: 100%;
+      max-width: 100%;
+      height: 50vh;
+      border-radius: 0 0 12px 12px;
+      overflow-y: auto;
+      overflow-x: auto;
+      margin: 0;
+    }
+
+    pre::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    pre::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    pre::-webkit-scrollbar-thumb {
+      background: var(--premcolo);
+      border-radius: 10px;
+    }
+
+    /* ===== PRACTICE GRID ===== */
+    .practice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 1.5rem 0;
+    }
+
+    .practice-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .practice-card.do {
+      border-color: rgba(0, 217, 255, 0.2);
+    }
+
+    .practice-card.dont {
+      border-color: rgba(255, 0, 110, 0.2);
+    }
+
+    .practice-card-title {
+      font-family: var(--font-head);
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .practice-card ul {
+      padding-left: 1.2rem;
+      color: var(--text-muted);
+    }
+
+    .practice-card li {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .faq-item[open] {
+      border-color: rgba(0, 217, 255, 0.25);
+    }
+
+    .faq-question {
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      font-family: var(--font-head);
+      font-size: 0.95rem;
+      color: #fff;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .faq-question::after {
+      content: '+';
+      color: var(--premcolo);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .faq-item[open] .faq-question::after {
+      content: '−';
+    }
+
+    .faq-answer {
+      padding: 0 1.25rem 1rem;
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* ===== CONCLUSION ===== */
+    .conclusion {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.05), rgba(0, 0, 20, 0.3));
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .conclusion h2 {
+      border: none;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      position: sticky;
+      top: 72px;
+    }
+
+    .sidebar-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-header {
+      padding: 14px 16px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--premcolo);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .related-list {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .related-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/9;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .related-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .related-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    .related-card-title {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* ===== PREVIEW MODAL ===== */
+    .preview-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 5, 15, 0.85);
+      backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+    }
+
+    .preview-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .preview-modal {
+      width: 92vw;
+      max-width: 90vw;
+      height: 90vh;
+      max-height: 90vh;
+      background: #0a0e1a;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(0, 217, 255, 0.06);
+      transform: scale(0.92) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .preview-overlay.open .preview-modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .preview-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+    }
+
+    .preview-modal-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-modal-title i {
+      color: var(--premcolo);
+      font-size: 16px;
+    }
+
+    .preview-modal-title strong {
+      color: #fff;
+    }
+
+    .preview-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .preview-dot {
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
-      transition: transform 0.3s ease;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, filter 0.2s;
     }
 
-    .close-btn:hover {
-      transform: rotate(90deg);
-      color: #00e1ff;
+    .preview-dot:hover {
+      transform: scale(1.2);
+      filter: brightness(1.3);
     }
 
-    /* ====== استجابة الهاتف ====== */
-    @media (max-width: 910px) {
+    .preview-dot.red {
+      background: #ff5f57;
+    }
+
+    .preview-dot.yellow {
+      background: #febc2e;
+    }
+
+    .preview-dot.green {
+      background: #28c840;
+    }
+
+    .preview-close-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .preview-close-btn:hover {
+      border-color: var(--accent2);
+      color: var(--accent2);
+      background: rgba(255, 0, 110, 0.08);
+    }
+
+    .preview-iframe-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .preview-iframe-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .preview-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: #0a0e1a;
+      z-index: 2;
+      transition: opacity 0.4s;
+    }
+
+    .preview-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .preview-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(0, 217, 255, 0.15);
+      border-top-color: var(--premcolo);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    .preview-loading-text {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .preview-hint {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 16px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      color: var(--text-muted);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s 0.8s;
+      white-space: nowrap;
+      z-index: 3;
+    }
+
+    .preview-hint.show {
+      opacity: 1;
+    }
+
+    .preview-hint i {
+      color: var(--premcolo);
+      margin-right: 4px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1.25rem;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .related-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .related-card {
+        flex: 1 1 calc(50% - 8px);
+      }
+
+      .hero {
+        padding: 2rem 1.25rem 1.5rem;
+      }
+
+      .navbar {
+        padding: 0 1.25rem;
+      }
+
+      .breadcrumb {
+        padding: 10px 1.25rem;
+      }
+
+      .back-link {
+        margin: 0.75rem 1.25rem;
+      }
+
+      .practice-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .code-section {
+        width: 85vw;
+      }
+    }
+
+    @media (max-width: 640px) {
       .nav-links {
         display: none;
       }
 
-      .hamburger {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hamburger.scrolled {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      background: rgb(65, 65, 65);
-}
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-stats {
+        gap: 1.2rem;
+      }
+
+      .code-tab {
+        padding: 7px 13px;
+        font-size: 12px;
+      }
+
+      .related-card {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
+
 <body>
-<header class="navbar">
-    <a href="#" class="logo">
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
       <span class="logo-icon">{ / }</span> 77cod_ing
     </a>
-    <nav class="nav-links">
-      <a href="https://77cod-ing.github.io">Home</a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
@@ -318,185 +1305,592 @@
       <a href="Terms & Conditions.html">Terms & Conditions</a>
     </nav>
   </header>
-  <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
+      <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+      <li><span aria-current="page">Terminal Typing Animation</span></li>
+    </ol>
+  </nav>
+
+  <!-- ===== BACK BUTTON ===== -->
+  <a href="projects.html#subscribe" class="back-link" aria-label="Return to Projects">
+    <i class='bx bx-arrow-back'></i> Return to Projects
+  </a>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="main-heading">
+    <div class="hero-meta">
+      <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+      <span class="tag tag-html">HTML</span>
+      <span class="tag tag-css">CSS</span>
+      <span class="tag tag-nojs">No JavaScript</span>
+      <span class="read-time"><i class='bx bx-time'></i> ~15 min read</span>
     </div>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <span class="close-btn" id="closeBtn">&times;</span>
-    <a href="index.html"style="border-top: 2px solid #fff;height: 5rem;">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html" style="border-bottom: 2px solid #fff;">Terms & Conditions</a>
+    <h1 id="main-heading">
+      Build a <span>Terminal Typing</span><br>Animation with
+      <em>HTML &amp; CSS</em>
+    </h1>
+
+    <p class="hero-lead">
+      A complete, beginner-friendly guide to creating a realistic terminal typing and deleting
+      animation from scratch — using only HTML and CSS keyframes. No JavaScript, no frameworks.
+      Blinking cursor, typing loop, and retro hacker aesthetics included. Full source code free.
+    </p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value">4</span>
+        <span class="stat-label">Steps</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">0 JS</span>
+        <span class="stat-label">Dependencies</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">CSS</span>
+        <span class="stat-label">Powered</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">Free</span>
+        <span class="stat-label">Source Code</span>
+      </div>
+    </div>
+
+    <div class="hero-img-wrap">
+      <img src="image copy 16.png" alt="Terminal typing and deleting animation built with HTML and CSS keyframes"
+        class="hero-img" width="1200" height="420" loading="eager" fetchpriority="high">
+    </div>
+    <p class="img-caption">Final result: a retro terminal typing animation built with pure HTML and CSS — no JavaScript
+    </p>
+  </section>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <div class="layout">
+
+    <!-- ===== ARTICLE ===== -->
+    <main class="article-body" id="main-content">
+
+      <!-- TOC -->
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-title">📋 Contents</p>
+        <ol>
+          <li><a href="#what-is">What Is a Terminal Typing Animation?</a></li>
+          <li><a href="#why-terminal">Why Use a Terminal Loader?</a></li>
+          <li><a href="#source-code">Full Source Code (HTML + CSS)</a></li>
+          <li><a href="#how-it-works">How the Typing Effect Works</a></li>
+          <li><a href="#best-practices">Best Practices &amp; Common Mistakes</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </nav>
+
+      <!-- WHAT IS -->
+      <section id="what-is">
+        <h2>What Is a Terminal Typing Animation?</h2>
+        <p>
+          A <strong>terminal typing animation</strong> is a visual effect that mimics how text appears in a
+          command-line interface. The characters are revealed one by one — just like someone typing in real time —
+          often paired with a <strong>blinking cursor</strong> and a delete-then-retype loop for a continuous,
+          engaging effect.
+        </p>
+        <p>
+          Popularized by <strong>hacker-style and retro UI design</strong>, this effect is widely used on developer
+          portfolios, cybersecurity websites, tech landing pages, and creative loading screens. Unlike heavy
+          JavaScript-based type libraries, this tutorial achieves the entire effect through
+          <strong>CSS <code>@keyframes</code></strong> and the <code>steps()</code> timing function — keeping it
+          lightweight, dependency-free, and easy to customize.
+        </p>
+      </section>
+
+      <hr>
+
+      <!-- WHY TERMINAL -->
+      <section id="why-terminal">
+        <h2>Why Use a Terminal Loader in Web Design?</h2>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon">🖥️</div>
+            <div class="why-title">Retro Aesthetic</div>
+            <div class="why-desc">Green text on dark backgrounds evokes classic terminals and instantly signals
+              "developer" energy.</div>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">🪶</div>
+            <div class="why-title">Zero JavaScript</div>
+            <div class="why-desc">Achieved entirely with HTML and CSS — no render-blocking scripts, no library
+              dependencies.</div>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">🎨</div>
+            <div class="why-title">Fully Customizable</div>
+            <div class="why-desc">Change typing speed, color, text content, and cursor style by editing a few CSS
+              variables.</div>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">⚡</div>
+            <div class="why-title">Grabs Attention</div>
+            <div class="why-desc">The looping motion naturally draws the eye, making it perfect for hero sections and
+              loading screens.</div>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- SOURCE CODE -->
+      <div class="code-section" id="source-code">
+        <div class="code-toolbar">
+          <div class="code-tabs" role="tablist" aria-label="Code files">
+            <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+              aria-controls="panel-html">HTML</button>
+            <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+              aria-controls="panel-css">CSS</button>
+          </div>
+          <button class="preview-btn" id="previewBtn" aria-label="Preview the final result">
+            <i class='bx bx-play-circle'></i>
+            <span>Preview Result</span>
+          </button>
+        </div>
+
+        <div class="code-panels">
+          <div class="code-box active" id="panel-html" role="tabpanel">
+            <div class="code-header">
+              <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+              <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+            </div>
+            <pre><code id="code1" class="language-html"></code></pre>
+          </div>
+
+          <div class="code-box" id="panel-css" role="tabpanel">
+            <div class="code-header">
+              <span class="code-lang-label" style="color:#00d9ff;">CSS — style.css</span>
+              <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+            </div>
+            <pre><code id="code2" class="language-css"></code></pre>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- HOW IT WORKS -->
+      <section id="how-it-works">
+        <h2>How the Terminal Typing Effect Works — Step by Step</h2>
+        <p>
+          The core technique combines two CSS mechanisms: the <code>steps()</code> timing function for
+          character-by-character reveal, and <code>@keyframes</code> for the cursor blink and optional
+          delete-and-retype loop. Here's how each layer builds the final effect.
+        </p>
+
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>HTML Terminal Structure</h3>
+              <p>
+                Build a terminal window wrapper with a header bar containing three decorative dots (red,
+                yellow, green) and a body area. Inside the body, place a <code>&lt;span&gt;</code> or
+                <code>&lt;p&gt;</code> element that will hold the animated text. Keep the markup minimal —
+                the CSS does all the heavy lifting.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>CSS steps() — Character-by-Character Reveal</h3>
+              <p>
+                Set a fixed <code>width: 0</code> on the text element and animate it to its full width
+                using <code>@keyframes</code>. The <strong><code>steps(N)</code></strong> timing function —
+                where N equals the character count — makes the animation jump discretely rather than smoothly,
+                producing the typewriter letter-by-letter effect.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>Blinking Cursor with border-right</h3>
+              <p>
+                A separate <code>@keyframes</code> animation toggles <code>border-right-color</code>
+                between the neon green and <code>transparent</code> — simulating a classic blinking
+                caret. Set it to <code>animation-iteration-count: infinite</code> so it never stops
+                while the text is displayed.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h3>Delete &amp; Retype Loop</h3>
+              <p>
+                For a continuous loop, extend the <code>@keyframes</code> to animate width back to
+                <code>0</code> after reaching full width — creating the delete effect. Add a
+                <code>steps(1)</code> pause at both endpoints (full and empty) to simulate the cursor
+                hesitating before the next action, just like a real typist would.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="info-box">
+          <strong>💡 Pro Tip:</strong> Use <code>overflow: hidden</code> and <code>white-space: nowrap</code>
+          on the text element so characters hidden by the <code>width: 0</code> starting state are clipped,
+          not wrapped — this is what makes the stepping effect work correctly.
+        </div>
+
+        <div class="warn-box">
+          <strong>⚠️ Character Count Matters:</strong> The <code>N</code> value in <code>steps(N)</code>
+          must match the exact character count of your text string, including spaces. A mismatch causes
+          uneven jumping — always count carefully before setting this value.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- BEST PRACTICES -->
+      <section id="best-practices">
+        <h2>Best Practices &amp; Common Mistakes</h2>
+        <p>Follow these guidelines to get the most realistic effect and keep your animation smooth across all devices.
+        </p>
+
+        <div class="practice-grid">
+          <div class="practice-card do">
+            <div class="practice-card-title">✅ Do</div>
+            <ul>
+              <li>Use <code>overflow: hidden</code> and <code>white-space: nowrap</code> on the text element</li>
+              <li>Match <code>steps(N)</code> exactly to your character count</li>
+              <li>Use <code>border-right</code> for the blinking cursor — it's the simplest approach</li>
+              <li>Test on real mobile devices at low zoom levels</li>
+              <li>Use CSS variables for speed and color — makes tweaking instant</li>
+            </ul>
+          </div>
+          <div class="practice-card dont">
+            <div class="practice-card-title">❌ Don't</div>
+            <ul>
+              <li>Use percentage widths — they break the <code>steps()</code> calculation</li>
+              <li>Animate too many instances simultaneously on one page</li>
+              <li>Make the text too long — it may overflow on mobile</li>
+              <li>Forget <code>font-family: monospace</code> — proportional fonts break the uniform stepping</li>
+              <li>Use <code>steps()</code> with <code>ease</code> — they conflict; always pair with <code>linear</code>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+
+          <details class="faq-item">
+            <summary class="faq-question">Can I create this typing animation without JavaScript?</summary>
+            <div class="faq-answer">
+              Yes — this tutorial requires <strong>zero JavaScript</strong>. The entire typing, deleting,
+              and cursor-blinking animation is powered purely by CSS <code>@keyframes</code> and the
+              <code>steps()</code> timing function. You only need an HTML file and a CSS file.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Why must I use a monospace font?</summary>
+            <div class="faq-answer">
+              The <code>steps()</code> trick works by revealing the text element width in equal-sized
+              jumps. With a proportional font like Arial, each character has a different width, so the
+              steps don't align with individual characters. A monospace font (like <code>Courier New</code>
+              or <code>monospace</code>) gives every character the same width, making each step reveal
+              exactly one letter.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How do I change the typing speed?</summary>
+            <div class="faq-answer">
+              Adjust the <code>animation-duration</code> on the typing keyframe. A shorter duration
+              (e.g., <code>1.5s</code>) types faster; a longer one (e.g., <code>4s</code>) types slower.
+              You can also use a CSS variable like <code>--type-speed: 3s</code> in <code>:root</code>
+              to control it from one place.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Which browsers support this CSS technique?</summary>
+            <div class="faq-answer">
+              All modern browsers support <code>@keyframes</code>, <code>steps()</code>, and
+              <code>animation</code> — including Chrome, Firefox, Edge, and Safari (desktop and mobile).
+              Internet Explorer 10+ supports it too, though IE11 and below may have minor rendering
+              inconsistencies with border-based cursors.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Can I animate multiple different text strings?</summary>
+            <div class="faq-answer">
+              Pure CSS can only animate a single text element's width — it cannot change the actual text
+              content. For cycling through multiple strings, you'd need a small amount of JavaScript.
+              However, you can visually stack multiple elements with staggered <code>animation-delay</code>
+              values to simulate a multi-line terminal output, all in pure CSS.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Do I need any framework or build tool?</summary>
+            <div class="faq-answer">
+              No framework or build tool is needed. The project uses pure HTML and CSS only — no npm,
+              no webpack, no Tailwind, no external dependencies of any kind. Save two files and open
+              in a browser.
+            </div>
+          </details>
+
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- CONCLUSION -->
+      <section id="conclusion" class="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          This <strong>terminal typing animation</strong> proves how expressive native CSS has become.
+          By combining <code>@keyframes</code> width animation with the <strong><code>steps()</code>
+            timing function</strong> and a simple <code>border-right</code> cursor blink, you get a
+          polished, retro-futuristic UI effect with zero JavaScript and zero dependencies.
+        </p>
+        <p>
+          The technique is versatile — use it in hero sections, developer portfolios, loading screens,
+          or anywhere you want to add personality and motion. Adjust the character count, swap the text,
+          change the color, and make it uniquely yours.
+        </p>
+        <p style="color:var(--text-muted); font-size:14px; margin-bottom:0;">
+          Found this useful? Explore the related projects in the sidebar for more modern UI effects built with HTML,
+          CSS, and JavaScript.
+        </p>
+      </section>
+
+    </main>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" aria-label="Related projects">
+      <div class="sidebar-box">
+        <div class="sidebar-header">🔗 Related Projects</div>
+        <div class="related-list">
+          <a class="related-card" href="Project14.html" aria-label="Electric Neon Card Animation">
+            <img src="https://77cod-ing.github.io/image%20copy%2040.png"
+              alt="Electric Neon Card Animation using HTML CSS SVG" loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Electric Neon Card Animation — HTML, CSS &amp; SVG</div>
+          </a>
+          <a class="related-card" href="Project40.html" aria-label="CSS Neon Digital Clock Animation">
+            <img src="https://i.suar.me/Ep114/m" alt="CSS Neon Digital Clock Animation" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">CSS Neon Digital Clock Animation</div>
+          </a>
+          <a class="related-card" href="Project39.html" aria-label="Animated Button with Star Effects">
+            <img src="https://i.suar.me/jvZZv/m" alt="Animated Button with Star Effects" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Button with Star Effects — HTML &amp; CSS</div>
+          </a>
+          <a class="related-card" href="Project37.html" aria-label="Glassmorphism Login Page">
+            <img src="https://i.suar.me/Np3EO/m" alt="Modern Glassmorphism Login Page" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Modern Glassmorphism Login Page Design</div>
+          </a>
+        </div>
+      </div>
+    </aside>
+
   </div>
-  <div class="Ret">
-    <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
-  </div>
-  <div class="img">
-    <img src="image copy 16.png" alt="subscribe.box">
-  </div>
-  <div class="par">
-  <span>
-<h1>Build a Terminal Typing Animation — HTML/CSS</h1>
-<p>
-  Terminal-style animations add a retro and engaging effect to websites. 
-  In this guide, you’ll learn how to create a <strong>typing and deleting animation</strong> 
-  inside a <em>terminal loader</em> using only HTML and CSS. 
-  This design is lightweight, interactive, and perfect for adding personality to your web projects.
-</p>
 
-<div class="highlight">
-  <p><strong>Quick Summary:</strong> Use HTML to set up a terminal window and CSS keyframes to 
-  animate text typing, deleting, and blinking cursor effects.</p>
-</div>
-
-<h2>What Is a Terminal Typing Animation?</h2>
-<p>
-  A terminal typing animation is a visual effect that mimics how text appears in a command-line 
-  interface. The letters are typed out character by character, often with a blinking cursor, 
-  creating a realistic hacker-style vibe.
-</p>
-
-<h2>Why Use a Terminal Loader?</h2>
-<ul>
-  <li><strong>Attractive Effect:</strong> Grabs user attention with retro computer aesthetics.</li>
-  <li><strong>Lightweight:</strong> Achieved entirely with HTML and CSS, no JavaScript needed.</li>
-  <li><strong>Customizable:</strong> Easily change colors, text, and speed of typing.</li>
-  <li><strong>Creative Loading Screen:</strong> Can serve as a unique preloader or header animation.</li>
-</ul>
-
-<h2>Steps to Build the Terminal Typing Animation</h2>
-
-<h3>1. Structure the Terminal Window</h3>
-<p>
-  Start with simple HTML. Create a container for the terminal, add a header with control buttons, 
-  and a <code>div</code> for the animated text.
-</p>
-<div class="img"><img src="image copy 17.png" alt="HTML structure for terminal animation"></div>
-
-<h3>2. Add CSS Styling</h3>
-<p>
-  Style the terminal with a dark background, green monospace text, and rounded corners. 
-  Use <code>@keyframes</code> to animate typing and deleting, and another animation for 
-  the blinking cursor.
-</p>
-<div class="img"><img src="Screenshot 2025-10-01 155037.png" alt="CSS styling with keyframes for typing animation"></div>
-
-<h3>3. Preview the Final Effect</h3>
-<p>
-  Once applied, the text will type itself out, pause, delete, and loop — all while showing a 
-  blinking green cursor for a realistic terminal effect.
-</p>
-<div class="img"><img src="image copy 16.png" alt="Final preview of terminal typing loader"></div>
-
-<h2>Best Practices for Typing Animations</h2>
-<ul>
-  <li><strong>Adjust Speed:</strong> Use <code>steps()</code> in CSS for realistic typing speed.</li>
-  <li><strong>Use Short Text:</strong> Avoid very long sentences to keep the animation smooth.</li>
-  <li><strong>Maintain Contrast:</strong> Green text on a dark background gives the best terminal look.</li>
-  <li><strong>Responsive Design:</strong> Ensure text fits on both desktop and mobile screens.</li>
-</ul>
-
-<h2>Common Mistakes to Avoid</h2>
-<ul>
-  <li>Setting <code>width</code> too small, which cuts off the text.</li>
-  <li>Using too many effects, making the animation distracting.</li>
-  <li>Forgetting the blinking cursor, which makes it feel incomplete.</li>
-  <li>Not testing across different browsers.</li>
-</ul>
-
-<h2>Conclusion</h2>
-<p>
-  Building a <strong>terminal typing animation</strong> with HTML and CSS is a creative way 
-  to bring energy and uniqueness to your website. 
-  Whether for a loading screen, a personal portfolio, or a fun project, 
-  this effect adds retro charm and keeps visitors engaged.
-</p>
-
-<div class="highlight">
-  <p><strong>SEO Keywords:</strong> HTML CSS typing animation, terminal loader, CSS keyframes animation, 
-  blinking cursor effect, hacker style animation, retro UI design</p>
-</div>
-
-
-  <div class="con1">
-    <div class="countdown" id="countdown">
-    <span id="number">10</span> wait...
+  <!-- ===== PREVIEW MODAL ===== -->
+  <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+    aria-label="Live preview of the terminal typing animation">
+    <div class="preview-modal">
+      <div class="preview-modal-header">
+        <div class="preview-modal-title">
+          <i class='bx bx-show'></i>
+          <strong>Live Preview</strong> — Terminal Typing Animation
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="preview-dots">
+            <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+            <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+            <button class="preview-dot green" aria-label="Maximize" disabled></button>
+          </div>
+          <button class="preview-close-btn" id="previewCloseBtn">
+            <i class='bx bx-x'></i> Close
+          </button>
+        </div>
+      </div>
+      <div class="preview-iframe-wrap">
+        <div class="preview-loading" id="previewLoading">
+          <div class="preview-spinner"></div>
+          <span class="preview-loading-text">Loading preview...</span>
+        </div>
+        <iframe id="previewIframe" title="Preview of terminal typing animation" sandbox="allow-same-origin"></iframe>
+        <div class="preview-hint" id="previewHint">
+          <i class='bx bx-terminal'></i> Terminal Typing Animation
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="link-box" id="linkBox">
-    <a href="https://gist.github.com/77cod-ing/ba0ec0d1ad5516fb1bd04ead984862da" target="_blank">Go to code</a>
-  </div>
-  </div>
-
+  <!-- ===== SCRIPTS ===== -->
   <script>
-    let counter = 10;
-    let timer = null;
-    const countdownEl = document.getElementById("countdown");
-    const numberEl = document.getElementById("number");
-    const linkBox = document.getElementById("linkBox");
+    // ===== UPDATE THESE GIST URLs with your actual terminal typing gist =====
+    const gistBase = "https://gist.githubusercontent.com/77cod-ing/ba0ec0d1ad5516fb1bd04ead984862da/raw/";
+    const htmlUrl = gistBase + "index.html";
+    const cssUrl = gistBase + "style.css";
 
-    function startCountdown() {
-      if (timer) return;
-      timer = setInterval(() => {
-        counter--;
-        numberEl.textContent = counter;
+    let cachedHTML = "";
+    let cachedCSS = "";
 
-        if (counter === 0) {
-          clearInterval(timer);
-          timer = null;
-          countdownEl.style.display = "none"; 
-          linkBox.style.display = "block";
-        }
-      }, 1000);
+    async function loadCode(url, elementId, lang) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const text = await res.text();
+        const el = document.getElementById(elementId);
+        el.textContent = text;
+        el.className = `language-${lang}`;
+        Prism.highlightElement(el);
+        if (lang === "html") cachedHTML = text;
+        if (lang === "css") cachedCSS = text;
+      } catch (e) {
+        const el = document.getElementById(elementId);
+        if (el) el.textContent = `/* Failed to load: ${e.message} */`;
+      }
     }
 
-    function stopCountdown() {
-      clearInterval(timer);
-      timer = null;
-    }
+    loadCode(htmlUrl, "code1", "html");
+    loadCode(cssUrl, "code2", "css");
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          startCountdown();
-        } else {
-          stopCountdown();
+    /* ===== TABS ===== */
+    document.querySelectorAll(".code-tab").forEach(tab => {
+      tab.addEventListener("click", () => {
+        const lang = tab.dataset.lang;
+        document.querySelectorAll(".code-tab").forEach(t => {
+          t.classList.remove("active");
+          t.setAttribute("aria-selected", "false");
+        });
+        document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+        tab.classList.add("active");
+        tab.setAttribute("aria-selected", "true");
+        const panelMap = { html: "panel-html", css: "panel-css" };
+        document.getElementById(panelMap[lang]).classList.add("active");
+      });
+    });
+
+    /* ===== COPY BUTTONS ===== */
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const code = document.getElementById(btn.dataset.target)?.innerText || "";
+        if (!code.trim()) return;
+        try {
+          await navigator.clipboard.writeText(code);
+          btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+          btn.classList.add("copied");
+          setTimeout(() => {
+            btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
+            btn.classList.remove("copied");
+          }, 2000);
+        } catch {
+          btn.textContent = "Error";
         }
       });
-    }, { threshold: 1.0 });
-
-    observer.observe(countdownEl);
-     /**hamburger**/
-
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeBtn = document.getElementById('closeBtn');
-
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.add('active');
     });
 
-    closeBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-    });
-    
+    /* ===== PREVIEW MODAL ===== */
+    const previewOverlay = document.getElementById("previewOverlay");
+    const previewIframe = document.getElementById("previewIframe");
+    const previewLoading = document.getElementById("previewLoading");
+    const previewHint = document.getElementById("previewHint");
+    const previewBtn = document.getElementById("previewBtn");
+    const previewCloseBtn = document.getElementById("previewCloseBtn");
+    const previewDotClose = document.getElementById("previewDotClose");
 
-    window.addEventListener("scroll", function() {
-  const hamburger = document.querySelector(".hamburger");
-  if (window.scrollY > 50) {
-    hamburger.classList.add("scrolled");
-  } else {
-    hamburger.classList.remove("scrolled");
-  }
-});
+    function openPreview() {
+      previewOverlay.classList.add("open");
+      document.body.style.overflow = "hidden";
+      previewLoading.classList.remove("hidden");
+      previewHint.classList.remove("show");
+      previewBtn.classList.add("loading");
+      buildPreview();
+    }
+
+    function closePreview() {
+      previewOverlay.classList.remove("open");
+      document.body.style.overflow = "";
+      previewIframe.srcdoc = "";
+      previewBtn.classList.remove("loading");
+    }
+
+    async function buildPreview() {
+      if (cachedHTML && cachedCSS) { injectPreview(cachedHTML, cachedCSS); return; }
+      try {
+        const [htmlRes, cssRes] = await Promise.all([fetch(htmlUrl), fetch(cssUrl)]);
+        const html = await htmlRes.text();
+        const css = await cssRes.text();
+        cachedHTML = html; cachedCSS = css;
+        injectPreview(html, css);
+      } catch (e) {
+        previewLoading.innerHTML = `
+          <i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i>
+          <span class="preview-loading-text" style="color:var(--accent2);">Failed to load preview: ${e.message}</span>`;
+        previewBtn.classList.remove("loading");
+      }
+    }
+
+    function injectPreview(html, css) {
+      let combined = html.replace(
+        /<link[^>]*href=["']style\.css["'][^>]*>/gi,
+        `<style>${css}</style>`
+      );
+      if (!combined.includes("<style>")) {
+        combined = combined.includes("</head>")
+          ? combined.replace("</head>", `<style>${css}</style>\n</head>`)
+          : `<style>${css}</style>\n${combined}`;
+      }
+      const bgStyle = `<style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#030010;}</style>`;
+      combined = combined.includes("<head>")
+        ? combined.replace("<head>", `<head>${bgStyle}`)
+        : bgStyle + combined;
+
+      previewIframe.srcdoc = combined;
+      previewIframe.addEventListener("load", function onLoad() {
+        previewLoading.classList.add("hidden");
+        previewBtn.classList.remove("loading");
+        setTimeout(() => {
+          previewHint.classList.add("show");
+          setTimeout(() => previewHint.classList.remove("show"), 9000);
+        }, 300);
+        previewIframe.removeEventListener("load", onLoad);
+      });
+    }
+
+    previewBtn.addEventListener("click", openPreview);
+    previewCloseBtn.addEventListener("click", closePreview);
+    previewDotClose.addEventListener("click", closePreview);
+    previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview();
+    });
   </script>
+
 </body>
 
 </html>
-
-
