@@ -1905,7 +1905,7 @@
     /* ===== COPY BUTTONS ===== */
     document.querySelectorAll(".copy-btn").forEach(btn => {
       btn.addEventListener("click", async () => {
-        const code = document.getElementById(btn.dataset.target)?.innerText || "";
+        const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
         if (!code.trim()) return;
         try {
           await navigator.clipboard.writeText(code);
