@@ -1,241 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Build a Star Rating System with HTML & CSS | Interactive SVG Stars Tutorial</title>
+  <meta name="description"
+    content="Learn how to build an interactive star rating system using only HTML and CSS. No JavaScript needed. Includes SVG stars, :checked selector, hover effects, and accessible radio inputs. Free source code.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="77cod_ing">
+  <link rel="canonical" href="https://77cod-ing.github.io/star-rating.html">
+  <meta name="theme-color" content="#00d9ff">
+  <link rel="icon" type="image/png" href="https://77cod-ing.github.io/favicon.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Build a Star Rating System with HTML & CSS | SVG Stars Tutorial">
+  <meta property="og:description"
+    content="Create an interactive star rating system using only HTML and CSS. SVG stars, :checked pseudo-class, hover effects. Free source code.">
+  <meta property="og:url" content="https://77cod-ing.github.io/star-rating.html">
+  <meta property="og:image" content="https://77cod-ing.github.io/image%20copy%2024.png">
+  <meta property="og:site_name" content="77cod_ing">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Star Rating System | HTML CSS SVG Tutorial">
+  <meta name="twitter:description"
+    content="Build an interactive CSS-only star rating system with SVG icons and :checked selector. No JavaScript.">
+  <meta name="twitter:image" content="https://77cod-ing.github.io/image%20copy%2024.png">
+
+  <script
+    type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Build an Interactive Star Rating System with HTML and CSS","description":"A step-by-step tutorial for creating a CSS-only star rating system using SVG icons, radio inputs, and the :checked pseudo-class.","image":"https://77cod-ing.github.io/image%20copy%2024.png","datePublished":"2025-10-01","dateModified":"2026-05-28","author":{"@type":"Person","name":"77cod_ing","url":"https://77cod-ing.github.io"},"publisher":{"@type":"Organization","name":"77cod_ing","logo":{"@type":"ImageObject","url":"https://77cod-ing.github.io/Picture1.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://77cod-ing.github.io/star-rating.html"},"proficiencyLevel":"Beginner","keywords":["star rating CSS","HTML radio input rating","CSS :checked selector","SVG star rating","interactive feedback form"]}</script>
+  <script
+    type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://77cod-ing.github.io/index.html"},{"@type":"ListItem","position":2,"name":"Projects","item":"https://77cod-ing.github.io/projects.html"},{"@type":"ListItem","position":3,"name":"Star Rating System","item":"https://77cod-ing.github.io/star-rating.html"}]}</script>
+  <script
+    type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I build a star rating system without JavaScript?","acceptedAnswer":{"@type":"Answer","text":"Yes. Using HTML radio inputs paired with CSS :checked and the general sibling selector (~), you can create a fully interactive star rating system with hover and selection effects using zero JavaScript."}},{"@type":"Question","name":"Why use SVG for star rating icons?","acceptedAnswer":{"@type":"Answer","text":"SVG icons scale perfectly at any resolution, making them sharp on Retina and high-DPI displays. They are also easily colorable with CSS fill and stroke properties."}},{"@type":"Question","name":"How do I make a star rating accessible?","acceptedAnswer":{"@type":"Answer","text":"Use actual radio inputs with associated labels. Never use display:none to hide the inputs — use opacity:0 with position:absolute instead. This keeps the inputs in the accessibility tree for keyboard and screen reader users."}}]}</script>
+
+  <!-- ===== ASSETS ===== -->
   <link rel="icon" type="image/png" href="Picture1.png">
-  <title>Build a Star Rating System — HTML/CSS</title>
-    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+  <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
-     crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
+
   <style>
-    *{
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      overflow-x: hidden;
-    }
-    body {
-      background: linear-gradient(to right, #2c0e43 10%, #581c87);
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
     }
 
+    :root {
+      --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+      --neon2: #00d9ff;
+      --neon3: #ff006e;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --surface: rgba(255, 255, 255, 0.03);
+      --surface-hover: rgba(0, 213, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.07);
+      --font-head: 'Syne', sans-serif;
+      --font-body: 'Outfit', sans-serif;
+      --premcolo: #00d9ff;
+      --accent2: #ff006e;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--back);
+      font-family: var(--font-body);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    /* NAVBAR */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 50px;
-      padding: 0 2rem;
-      background-color: #0d1325;
+      height: 56px;
+      padding: 0 2.5rem;
+      background: rgba(0, 5, 18, 0.7);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(0, 217, 255, 0.12);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      font-size: 22px;
-      font-weight: bold;
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: 700;
       color: white;
       text-decoration: none;
+      gap: 8px;
     }
 
     .logo-icon {
-      color: #a855f7;
-      font-size: 26px;
-      margin-right: 8px;
-      letter-spacing: 2.5px;
+      color: var(--premcolo);
+      letter-spacing: 2px;
     }
 
     .nav-links {
       display: flex;
-      gap: 35px;
+      gap: clamp(1rem, 2vw, 2rem);
+      align-items: center;
     }
 
     .nav-links a {
-      color: #d1d5db;
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.25s;
     }
 
     .nav-links a:hover {
-      color: #a855f7;
-      transform: scale(1.2);
-    }
-    /*linke*/
-    .con1 {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin: auto 0;
-      height: 50vh;
-    }
-    .countdown {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00ffcc;
+      color: var(--premcolo);
     }
 
-    .link-box {
-      display: none;
-      padding: 20px 40px;
-      background: #1e2a47;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-      transition: 0.3s;
-    }
-
-    .link-box a {
-      text-decoration: none;
-      color: #00ffcc;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    .link-box:hover {
-      background: #26385c;
-      transform: scale(1.05);
-    }
-    /**ret**/
-    .Ret{
-      margin: 5px 0 0 3rem;
-      width: max-content;
-    }
-    .Ret a {
-      font-size: 2rem;
-      text-decoration: none;
-      color: #ffffff;
-    }
-    .Ret a span{
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 38px;
-      height: 38px;
-      border: 2px solid #fff;
-      border-radius: 50%;
-    }
-    .Ret a:hover {
-  color: #00e1ff;
-}
-    .Ret a:hover span {
-  border-color: #00e1ff;
-}
-    /**img**/
-    .img{
-      display: flex;
-      justify-content: center;
-      margin: 2rem auto;
-    }
-    .img img{
-      border-radius: 8px;
-      max-width: 100vw;
-    width: 70vw;
-    height: 65vh;
-    }
-    /**par**/
-    .par{
-       font-family: Arial, sans-serif;
-      line-height: 1.7;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      color: #ffffff;
-    }
-    h1, h2, h3 {
-      color: #00c8ff;
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
-    h2 {
-      margin-top: 35px;
-      font-size: 1.6rem;
-    }
-    h3 {
-      margin-top: 25px;
-      font-size: 1.3rem;
-    }
-    p {
-      margin-bottom: 18px;
-    }
-    ul {
-      margin: 15px 0;
-      padding-left: 25px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .highlight {
-      background: #000000;
-      padding: 8px 12px;
-      border-left: 4px solid #0073e6;
-      margin: 20px 0;
-    }
-    /**respon**/
-    @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .img img{
-    max-width: 100vw;
-    width: 90vw;
-    }
-  }
-        /**respon1**/
+    /* HAMBURGER */
     .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
       gap: 5px;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
+      transition: all 0.3s ease;
     }
-    .hamburger .scrolled {
-      background: rgba(255, 255, 255, 0.7);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-}
 
     .hamburger span {
       width: 28px;
       height: 3px;
       background: white;
+      border-radius: 2px;
       transition: all 0.3s ease;
     }
 
-    /* ====== القائمة المنبثقة ====== */
     .mobile-menu {
       position: fixed;
-      top:0;
+      top: 0;
       left: -100%;
       width: 100%;
       height: 100vh;
-      padding-top: 0.5rem ;
-      background: rgb(53, 53, 53);
+      background: rgba(0, 13, 31, 0.97);
+      backdrop-filter: blur(20px);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 35px;
       transition: left 0.5s ease;
       z-index: 999;
     }
@@ -245,49 +172,1088 @@
     }
 
     .mobile-menu a {
-      color: white;
-      font-size: 22px;
+      color: var(--text);
+      font-size: 20px;
       width: 100%;
-      height: 3rem;
+      height: 3.5rem;
       display: flex;
       justify-content: center;
       align-items: center;
       text-decoration: none;
-      border-bottom: 0.5px solid #fff;
-      transition: color 0.3s;
+      border-bottom: 1px solid var(--border);
+      font-family: var(--font-head);
+      transition: color 0.3s, background 0.3s;
+    }
+
+    .mobile-menu a:first-of-type {
+      border-top: 1px solid var(--border);
     }
 
     .mobile-menu a:hover {
-      color: #ffffff;
-      background: rgba(104, 104, 104, 0.508);
-      backdrop-filter: bulur(20px);
+      color: var(--premcolo);
+      background: var(--surface-hover);
     }
 
-    /* ====== زر الإغلاق (X) ====== */
     .close-btn {
       position: absolute;
       top: 20px;
       right: 25px;
-      font-size: 30px;
+      font-size: 26px;
       color: white;
       cursor: pointer;
-      width: 35px;
-      height: 35px;
+      width: 36px;
+      height: 36px;
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 2px solid #fff;
-      background: rgb(88, 88, 88);
+      border: 1px solid var(--border);
+      background: var(--surface);
       border-radius: 50%;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, border-color 0.3s;
     }
 
     .close-btn:hover {
       transform: rotate(90deg);
-      color: #00e1ff;
+      border-color: var(--accent2);
+      color: var(--accent2);
     }
 
-    /* ====== استجابة الهاتف ====== */
+    /* BREADCRUMB */
+    .breadcrumb {
+      padding: 12px 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb ol {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .breadcrumb li+li::before {
+      content: "›";
+      color: var(--premcolo);
+      margin-right: 6px;
+      font-size: 1.1rem;
+    }
+
+    .breadcrumb a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--premcolo);
+    }
+
+    .breadcrumb [aria-current="page"] {
+      color: var(--premcolo);
+      font-weight: 600;
+    }
+
+    /* BACK */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.2s;
+      margin: 1rem 2.5rem;
+    }
+
+    .back-link:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 3rem 2.5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: var(--font-head);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .tag-tutorial {
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+    }
+
+    .tag-css {
+      background: rgba(0, 217, 255, 0.08);
+      color: var(--neon2);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+    }
+
+    .tag-html {
+      background: rgba(255, 102, 0, 0.1);
+      color: #ff6600;
+      border: 1px solid rgba(255, 102, 0, 0.2);
+    }
+
+    .tag-nojs {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    .read-time {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.7rem, 4vw, 2.7rem);
+      line-height: 1.2;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      color: var(--premcolo);
+    }
+
+    .hero h1 em {
+      color: var(--neon2);
+      font-style: normal;
+    }
+
+    .hero-lead {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      color: var(--premcolo);
+      font-weight: 800;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-img-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      box-shadow: 0 0 60px rgba(0, 217, 255, 0.1), 0 32px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    /* LAYOUT */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem;
+      align-items: start;
+    }
+
+    /* ARTICLE */
+    .article-body h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: var(--premcolo);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(0, 217, 255, 0.15);
+      scroll-margin-top: 80px;
+    }
+
+    .article-body h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: var(--neon2);
+      margin: 1.8rem 0 0.75rem;
+      scroll-margin-top: 80px;
+    }
+
+    .article-body p {
+      margin-bottom: 1.1rem;
+      color: var(--text);
+    }
+
+    .article-body code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.08);
+      color: var(--premcolo);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .article-body ul {
+      padding-left: 1.4rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .article-body li {
+      margin-bottom: 9px;
+    }
+
+    .article-body li strong {
+      color: #fff;
+    }
+
+    /* STEP IMAGES */
+    .step-img-wrap {
+      margin: 1.25rem 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .step-img-wrap img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      max-height: 380px;
+    }
+
+    /* TOC */
+    .toc {
+      background: var(--surface);
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .toc-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--premcolo);
+      margin-bottom: 0.75rem;
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--premcolo);
+    }
+
+    /* WHY CARDS */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .why-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .why-card:hover {
+      border-color: rgba(0, 217, 255, 0.3);
+      background: var(--surface-hover);
+    }
+
+    .why-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .why-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .why-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* STEPS */
+    .steps {
+      margin: 1.5rem 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      width: 44px;
+      height: 44px;
+      background: rgba(0, 217, 255, 0.08);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      color: var(--premcolo);
+      font-size: 1rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      margin-top: 0;
+      font-size: 1.05rem;
+    }
+
+    .step-content p {
+      margin-bottom: 0.75rem;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* BOXES */
+    .info-box {
+      background: rgba(0, 217, 255, 0.04);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-left: 4px solid var(--premcolo);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .info-box strong {
+      color: var(--premcolo);
+    }
+
+    .warn-box {
+      background: rgba(255, 0, 110, 0.04);
+      border: 1px solid rgba(255, 0, 110, 0.2);
+      border-left: 4px solid var(--neon3);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .warn-box strong {
+      color: var(--neon3);
+    }
+
+    /* PRACTICE GRID */
+    .practice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 1.5rem 0;
+    }
+
+    .practice-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .practice-card.do {
+      border-color: rgba(0, 217, 255, 0.2);
+    }
+
+    .practice-card.dont {
+      border-color: rgba(255, 0, 110, 0.2);
+    }
+
+    .practice-card-title {
+      font-family: var(--font-head);
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .practice-card ul {
+      padding-left: 1.2rem;
+      color: var(--text-muted);
+    }
+
+    .practice-card li {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    /* CODE */
+    .code-section {
+      margin: 2rem 0;
+      width: 60vw;
+    }
+
+    .code-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .code-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .code-tab {
+      padding: 8px 20px;
+      border-radius: 8px 8px 0 0;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .code-tab.active {
+      background: #1e1e2f;
+      color: #fff;
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .code-tab[data-lang="html"].active {
+      color: #ff6600;
+    }
+
+    .code-tab[data-lang="css"].active {
+      color: #00d9ff;
+    }
+
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .preview-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .preview-btn:hover {
+      border-color: var(--premcolo);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+      transform: translateY(-1px);
+    }
+
+    .preview-btn:hover::before {
+      opacity: 1;
+    }
+
+    .preview-btn i,
+    .preview-btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn i {
+      font-size: 16px;
+    }
+
+    .preview-btn.loading i {
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .code-panels {
+      position: relative;
+    }
+
+    .code-box {
+      background: #1e1e2f;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 0 12px 12px 12px;
+      display: none;
+    }
+
+    .code-box.active {
+      display: block;
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-lang-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    .copy-btn.copied {
+      color: #4ade80;
+      border-color: #4ade80;
+    }
+
+    :not(pre)>code[class*="language-"],
+    pre[class*="language-"] {
+      width: 100%;
+      max-width: 100%;
+      height: 50vh;
+      border-radius: 0 0 12px 12px;
+      overflow-y: auto;
+      overflow-x: auto;
+      margin: 0;
+      tab-size: 2;
+      -moz-tab-size: 2;
+      white-space: pre;
+      word-break: normal;
+    }
+
+    pre::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    pre::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    pre::-webkit-scrollbar-thumb {
+      background: var(--premcolo);
+      border-radius: 10px;
+    }
+
+    /* FAQ */
+    .faq {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .faq-item[open] {
+      border-color: rgba(0, 217, 255, 0.25);
+    }
+
+    .faq-question {
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      font-family: var(--font-head);
+      font-size: 0.95rem;
+      color: #fff;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .faq-question::after {
+      content: '+';
+      color: var(--premcolo);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .faq-item[open] .faq-question::after {
+      content: '−';
+    }
+
+    .faq-answer {
+      padding: 0 1.25rem 1rem;
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* CONCLUSION */
+    .conclusion {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.05), rgba(0, 0, 20, 0.3));
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .conclusion h2 {
+      border: none;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      position: sticky;
+      top: 72px;
+    }
+
+    .sidebar-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-header {
+      padding: 14px 16px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--premcolo);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .related-list {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .related-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/9;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .related-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .related-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    .related-card-title {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* PREVIEW MODAL */
+    .preview-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 5, 15, 0.85);
+      backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+    }
+
+    .preview-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .preview-modal {
+      width: 92vw;
+      max-width: 90vw;
+      height: 90vh;
+      background: #0a0e1a;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7);
+      transform: scale(0.92) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .preview-overlay.open .preview-modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .preview-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+    }
+
+    .preview-modal-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-modal-title i {
+      color: var(--premcolo);
+      font-size: 16px;
+    }
+
+    .preview-modal-title strong {
+      color: #fff;
+    }
+
+    .preview-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .preview-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, filter 0.2s;
+    }
+
+    .preview-dot:hover {
+      transform: scale(1.2);
+      filter: brightness(1.3);
+    }
+
+    .preview-dot.red {
+      background: #ff5f57;
+    }
+
+    .preview-dot.yellow {
+      background: #febc2e;
+    }
+
+    .preview-dot.green {
+      background: #28c840;
+    }
+
+    .preview-close-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .preview-close-btn:hover {
+      border-color: var(--accent2);
+      color: var(--accent2);
+      background: rgba(255, 0, 110, 0.08);
+    }
+
+    .preview-iframe-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .preview-iframe-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .preview-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: #0a0e1a;
+      z-index: 2;
+      transition: opacity 0.4s;
+    }
+
+    .preview-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .preview-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(0, 217, 255, 0.15);
+      border-top-color: var(--premcolo);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    .preview-loading-text {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-hint {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 16px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      color: var(--text-muted);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s 0.8s;
+      white-space: nowrap;
+      z-index: 3;
+    }
+
+    .preview-hint.show {
+      opacity: 1;
+    }
+
+    .preview-hint i {
+      color: var(--premcolo);
+      margin-right: 4px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1.25rem;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .related-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .related-card {
+        flex: 1 1 calc(50% - 8px);
+      }
+
+      .hero {
+        padding: 2rem 1.25rem 1.5rem;
+      }
+
+      .navbar {
+        padding: 0 1.25rem;
+      }
+
+      .breadcrumb {
+        padding: 10px 1.25rem;
+      }
+
+      .back-link {
+        margin: 0.75rem 1.25rem;
+      }
+
+      .practice-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .code-section {
+        width: 85vw;
+      }
+    }
+
     @media (max-width: 910px) {
       .nav-links {
         display: none;
@@ -298,217 +1264,463 @@
         justify-content: center;
         align-items: center;
         position: fixed;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
+        right: 1.25rem;
+        top: 14px;
+        z-index: 101;
+      }
+
+      .hamburger.scrolled {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 1px solid var(--border);
+        background: rgba(0, 13, 31, 0.9);
+      }
     }
-    .hamburger.scrolled {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      background: rgb(65, 65, 65);
-}
+
+    @media (max-width: 640px) {
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-stats {
+        gap: 1.2rem;
+      }
+
+      .code-tab {
+        padding: 7px 13px;
+        font-size: 12px;
+      }
+
+      .related-card {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
+
 <body>
-<header class="navbar">
-    <a href="#" class="logo">
-      <span class="logo-icon">{ / }</span> 77cod_ing
-    </a>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html">Terms & Conditions</a>
+
+  <header class="navbar">
+    <a href="index.html" class="logo"><span class="logo-icon">{ / }</span> 77cod_ing</a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a><a href="Privacy Policy.html">Privacy Policy</a><a
+        href="Terms & Conditions.html">Terms & Conditions</a>
     </nav>
   </header>
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+
+  <button class="hamburger" id="hamburger" aria-label="Open navigation"
+    aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+    <span class="close-btn" id="closeBtn" aria-label="Close menu">&times;</span>
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a><a href="Privacy Policy.html">Privacy Policy</a><a
+      href="Terms & Conditions.html">Terms &amp; Conditions</a>
+  </div>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
+      <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+      <li><span aria-current="page">Star Rating System</span></li>
+    </ol>
+  </nav>
+
+  <a href="projects.html#subscribe" class="back-link"><i class='bx bx-arrow-back'></i> Return to Projects</a>
+
+  <section class="hero" aria-labelledby="main-heading">
+    <div class="hero-meta">
+      <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+      <span class="tag tag-html">HTML</span>
+      <span class="tag tag-css">CSS</span>
+      <span class="tag tag-nojs">No JavaScript</span>
+      <span class="read-time"><i class='bx bx-time'></i> ~12 min read</span>
     </div>
+    <h1 id="main-heading">Build a <span>Star Rating System</span><br>with <em>HTML &amp; CSS</em></h1>
+    <p class="hero-lead">A complete beginner-friendly guide to creating an interactive star rating system using only
+      HTML radio inputs and CSS — no JavaScript. SVG icons, smooth hover effects, and full accessibility included. Free
+      source code.</p>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-value">3</span><span class="stat-label">Steps</span></div>
+      <div class="stat"><span class="stat-value">0 JS</span><span class="stat-label">Dependencies</span></div>
+      <div class="stat"><span class="stat-value">SVG</span><span class="stat-label">Icons</span></div>
+      <div class="stat"><span class="stat-value">Free</span><span class="stat-label">Source Code</span></div>
+    </div>
+    <div class="hero-img-wrap">
+      <img src="image copy 24.png"
+        alt="Interactive star rating system built with HTML and CSS showing five SVG star icons" class="hero-img"
+        width="1200" height="420" loading="eager" fetchpriority="high">
+    </div>
+    <p class="img-caption">Final result: an interactive 5-star rating system built with pure HTML &amp; CSS — no
+      JavaScript</p>
+  </section>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <span class="close-btn" id="closeBtn">&times;</span>
-    <a href="index.html"style="border-top: 2px solid #fff;height: 5rem;">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html" style="border-bottom: 2px solid #fff;">Terms & Conditions</a>
+  <div class="layout">
+    <main class="article-body" id="main-content">
+
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-title">📋 Contents</p>
+        <ol>
+          <li><a href="#what-is">What Is a Star Rating System?</a></li>
+          <li><a href="#why-use">Why Use a Star Rating System?</a></li>
+          <li><a href="#source-code">Full Source Code (HTML + CSS)</a></li>
+          <li><a href="#how-it-works">How It Works — Step by Step</a></li>
+          <li><a href="#best-practices">Best Practices &amp; Common Mistakes</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </nav>
+
+      <section id="what-is">
+        <h2>What Is a Star Rating System?</h2>
+        <p>A <strong>star rating system</strong> allows users to evaluate content, products, or services by selecting a
+          score — usually from 1 to 5 stars. Instead of plain radio buttons, the interface is transformed into an
+          intuitive row of clickable SVG stars that highlight on hover and lock in color on selection.</p>
+        <p>The technique works by pairing hidden <code>&lt;input type="radio"&gt;</code> elements with visible
+          <code>&lt;label&gt;</code> elements containing SVG star icons. The CSS <code>:checked</code> pseudo-class and
+          the general sibling combinator (<code>~</code>) do the rest — no JavaScript needed.
+        </p>
+      </section>
+
+      <hr>
+
+      <section id="why-use">
+        <h2>Why Use a Star Rating System?</h2>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon">⭐</div>
+            <div class="why-title">Universally Understood</div>
+            <div class="why-desc">Everyone recognizes stars as a rating scale — zero learning curve for users.</div>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">🪶</div>
+            <div class="why-title">Zero JavaScript</div>
+            <div class="why-desc">Pure HTML and CSS — no scripts, no libraries, no render-blocking overhead.</div>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">🎨</div>
+            <div class="why-title">Fully Customizable</div>
+            <div class="why-desc">Change star color, size, count, and spacing with a few CSS variable edits.</div>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">♿</div>
+            <div class="why-title">Accessible by Default</div>
+            <div class="why-desc">Real radio inputs keep the widget keyboard-navigable and screen-reader friendly.</div>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <div class="code-section" id="source-code">
+        <div class="code-toolbar">
+          <div class="code-tabs" role="tablist" aria-label="Code files">
+            <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+              aria-controls="panel-html">HTML</button>
+            <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+              aria-controls="panel-css">CSS</button>
+          </div>
+          <button class="preview-btn" id="previewBtn"><i class='bx bx-play-circle'></i><span>Preview
+              Result</span></button>
+        </div>
+        <div class="code-panels">
+          <div class="code-box active" id="panel-html" role="tabpanel">
+            <div class="code-header"><span class="code-lang-label" style="color:#ff6600;">HTML —
+                index.html</span><button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+            </div>
+            <pre><code id="code1" class="language-html"></code></pre>
+          </div>
+          <div class="code-box" id="panel-css" role="tabpanel">
+            <div class="code-header"><span class="code-lang-label" style="color:#00d9ff;">CSS — style.css</span><button
+                class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button></div>
+            <pre><code id="code2" class="language-css"></code></pre>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <section id="how-it-works">
+        <h2>How It Works — Step by Step</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>HTML Structure — Radio Inputs &amp; SVG Labels</h3>
+              <p>Create five <code>&lt;input type="radio"&gt;</code> elements with a shared <code>name</code> attribute.
+                Each is followed by a <code>&lt;label&gt;</code> containing an inline SVG star. The label's
+                <code>for</code> attribute links it to its input, making the entire star area clickable.
+              </p>
+              <div class="step-img-wrap"><img src="image copy 29.png"
+                  alt="HTML structure for star rating system with radio inputs and SVG labels" loading="lazy"
+                  width="900" height="380"></div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>CSS — Hover &amp; Checked State Styling</h3>
+              <p>Hide the inputs with <code>opacity: 0; position: absolute</code>. Style the SVG labels with a default
+                grey fill. Use <code>input:checked ~ label</code> (general sibling combinator) to fill all stars before
+                and including the selected one with the accent color. Add <code>transition</code> for smooth hover
+                effects.</p>
+              <div class="step-img-wrap"><img src="image copy 28.png"
+                  alt="CSS styling for star rating system with :checked selector and hover effects" loading="lazy"
+                  width="900" height="380"></div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>Final Result — Interactive Star Rating</h3>
+              <p>The finished system shows five stars that highlight on hover and lock to a filled state on click. The
+                radio input stores the selected value, ready for form submission. The design works on all modern
+                browsers and touch devices.</p>
+              <div class="step-img-wrap"><img src="image copy 24.png"
+                  alt="Final preview of the interactive star rating system with filled stars on selection"
+                  loading="lazy" width="900" height="380"></div>
+            </div>
+          </div>
+        </div>
+        <div class="info-box"><strong>💡 CSS Trick:</strong> The stars must be in reverse HTML order (5 → 1) and
+          displayed using <code>flex-direction: row-reverse</code>. This makes the <code>input:checked ~ label</code>
+          sibling selector fill all stars to the left of the selected one correctly.</div>
+        <div class="warn-box"><strong>⚠️ Accessibility:</strong> Never use <code>display: none</code> to hide radio
+          inputs — it removes them from the accessibility tree and breaks keyboard navigation. Always use
+          <code>opacity: 0; position: absolute;</code> instead.
+        </div>
+      </section>
+
+      <hr>
+
+      <section id="best-practices">
+        <h2>Best Practices &amp; Common Mistakes</h2>
+        <div class="practice-grid">
+          <div class="practice-card do">
+            <div class="practice-card-title">✅ Do</div>
+            <ul>
+              <li>Use real <code>&lt;input type="radio"&gt;</code> elements for accessibility</li>
+              <li>Use SVG icons so stars scale perfectly on all displays</li>
+              <li>Hide inputs with <code>opacity: 0; position: absolute</code></li>
+              <li>Add a <code>transition</code> on fill color for smooth hover feedback</li>
+              <li>Require selection before form submission with <code>required</code></li>
+            </ul>
+          </div>
+          <div class="practice-card dont">
+            <div class="practice-card-title">❌ Don't</div>
+            <ul>
+              <li>Use <code>display: none</code> — breaks keyboard and screen reader access</li>
+              <li>Use PNG/JPG star images — they blur on high-DPI screens</li>
+              <li>Forget hover states — makes the system feel static and unresponsive</li>
+              <li>Use the wrong sibling selector order — stars will highlight in reverse</li>
+              <li>Skip testing on mobile touch devices</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+          <details class="faq-item">
+            <summary class="faq-question">Can I build a star rating without JavaScript?</summary>
+            <div class="faq-answer">Yes — this tutorial uses zero JavaScript. The <code>:checked</code> pseudo-class and
+              the general sibling combinator (<code>~</code>) handle both hover highlighting and permanent selection
+              entirely in CSS.</div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Why use SVG instead of emoji stars or PNG images?</summary>
+            <div class="faq-answer">SVG icons scale perfectly at any resolution, including Retina and 4K displays. They
+              can be styled directly with CSS <code>fill</code> and <code>stroke</code>, making color changes instant
+              with a single variable edit. Emoji and PNG stars are blurry at large sizes.</div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">How do I read the selected rating value in a form?</summary>
+            <div class="faq-answer">Since the stars use standard <code>&lt;input type="radio"&gt;</code> elements, the
+              selected value is submitted automatically with the form. Give each input a <code>value</code> attribute
+              (e.g., <code>value="3"</code>) and a shared <code>name</code> attribute, and the rating is included in the
+              form data on submission.</div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">How do I change the star color?</summary>
+            <div class="faq-answer">Find the <code>fill</code> property in the CSS for the
+              <code>:checked ~ label svg</code> rule and update it to any color value. Store it in a CSS variable for
+              easy site-wide theming.
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Which browsers support this technique?</summary>
+            <div class="faq-answer">All modern browsers — Chrome, Firefox, Edge, Safari (desktop and iOS) — support the
+              <code>:checked</code> pseudo-class and general sibling combinator. The technique works without any
+              polyfills.
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <hr>
+
+      <section id="conclusion" class="conclusion">
+        <h2>Conclusion</h2>
+        <p>A <strong>star rating system</strong> built with HTML and CSS demonstrates how powerful native browser
+          features have become. By combining <strong>radio inputs</strong>, <strong>SVG icons</strong>, the
+          <code>:checked</code> pseudo-class, and the sibling combinator, you get a fully interactive, accessible rating
+          widget with zero JavaScript and zero dependencies.
+        </p>
+        <p>Use it in review forms, product pages, feedback widgets, or any interface where user scoring adds value.
+          Adjust the star count, color, and size — and ship it in minutes.</p>
+        <p style="color:var(--text-muted);font-size:14px;margin-bottom:0;">Found this useful? Explore the related
+          projects in the sidebar for more modern UI components.</p>
+      </section>
+
+    </main>
+
+    <aside class="sidebar" aria-label="Related projects">
+      <div class="sidebar-box">
+        <div class="sidebar-header">🔗 Related Projects</div>
+        <div class="related-list">
+          <a class="related-card" href="Project14.html"><img src="https://77cod-ing.github.io/image%20copy%2040.png"
+              alt="Electric Neon Card Animation" loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Electric Neon Card Animation — HTML, CSS &amp; SVG</div>
+          </a>
+          <a class="related-card" href="Project39.html"><img src="https://i.suar.me/jvZZv/m"
+              alt="Animated Button with Star Effects" loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Button with Star Effects</div>
+          </a>
+          <a class="related-card" href="Project37.html"><img src="https://i.suar.me/Np3EO/m"
+              alt="Glassmorphism Login Page" loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Modern Glassmorphism Login Page</div>
+          </a>
+          <a class="related-card" href="Project40.html"><img src="https://i.suar.me/Ep114/m"
+              alt="CSS Neon Digital Clock" loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">CSS Neon Digital Clock Animation</div>
+          </a>
+        </div>
+      </div>
+    </aside>
   </div>
-  <div class="Ret">
-    <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
-  </div>
-  <div class="img">
-    <img src="image copy 24.png" alt="subscribe.box">
-  </div>
-  <div class="par">
-  <span>
-<h1>Build a Star Rating System — HTML/CSS</h1>
-<p>
-  Star ratings are a common feature in modern websites, used for product reviews, feedback forms, 
-  and service evaluations. In this guide, you’ll learn how to create a 
-  <strong>star rating system</strong> using only <em>HTML and CSS</em>. 
-  This design replaces traditional radio buttons with interactive stars ⭐, 
-  making your forms more user-friendly and visually appealing.
-</p>
 
-<div class="highlight">
-  <p><strong>Quick Summary:</strong> Use HTML radio inputs for accessibility and CSS with 
-  SVG icons to create an interactive, scalable, and stylish rating system.</p>
-</div>
-
-<h2>What Is a Star Rating System?</h2>
-<p>
-  A star rating system allows users to evaluate content or services by selecting a score, 
-  usually from 1 to 5 stars. Instead of plain checkboxes or radio buttons, 
-  we transform the interface into an intuitive set of clickable stars ⭐. 
-  It’s lightweight, easy to integrate, and enhances user experience.
-</p>
-
-<h2>Why Use a Star Rating System?</h2>
-<ul>
-  <li><strong>User-Friendly:</strong> Everyone understands stars, making feedback simple.</li>
-  <li><strong>Visual Appeal:</strong> Replaces boring form elements with engaging icons.</li>
-  <li><strong>Lightweight:</strong> Works with pure HTML & CSS, no JavaScript required.</li>
-  <li><strong>Customizable:</strong> You can easily change colors, number of stars, or size.</li>
-</ul>
-
-<h2>Steps to Build the Star Rating</h2>
-
-<h3>1. Structure the HTML</h3>
-<p>
-  Start with <code>radio inputs</code> for the rating values (1 to 5). 
-  Each input is paired with a <code>label</code> containing an <code>SVG star</code>. 
-  Clicking a label selects the corresponding radio input.
-</p>
-<div class="img"><img src="image copy 29.png" alt="HTML structure for star rating system"></div>
-
-<h3>2. Add CSS Styling</h3>
-<p>
-  Style the stars using CSS. Set their default appearance, then apply hover and checked states. 
-  The <code>:checked</code> selector lets us highlight stars when chosen. 
-  You can even add transitions for smooth effects.
-</p>
-<div class="img"><img src="image copy 28.png" alt="CSS styling for star rating"></div>
-
-<h3>3. Preview the Final Effect</h3>
-<p>
-  Once styled, the rating system will show five interactive stars. 
-  Hovering highlights stars, and selecting one keeps it active. 
-  This is perfect for reviews or feedback sections on any site.
-</p>
-<div class="img"><img src="image copy 24.png" alt="Final preview of star rating system"></div>
-
-<h2>Best Practices for Star Rating Systems</h2>
-<ul>
-  <li><strong>Accessibility:</strong> Keep the <code>radio inputs</code> visible for screen readers.</li>
-  <li><strong>Scalability:</strong> Use <code>SVG</code> icons so stars remain sharp on all screens.</li>
-  <li><strong>Customization:</strong> Adjust size, colors, and hover effects to match your theme.</li>
-  <li><strong>Validation:</strong> Ensure at least one rating is required before form submission.</li>
-</ul>
-
-<h2>Common Mistakes to Avoid</h2>
-<ul>
-  <li>Hiding inputs completely without labels (hurts accessibility).</li>
-  <li>Using raster images (PNG/JPG) instead of SVG (not scalable).</li>
-  <li>Forgetting hover effects, making the system feel static.</li>
-  <li>Not testing on mobile devices where touch interactions differ.</li>
-</ul>
-
-<h2>Conclusion</h2>
-<p>
-  Building a <strong>star rating system</strong> with HTML and CSS is simple yet powerful. 
-  It improves the user interface, makes forms more interactive, 
-  and provides a clear way to collect feedback. 
-  Whether you’re designing an e-commerce site, a blog, or a service platform, 
-  this system adds professionalism and functionality to your project.
-</p>
-
-<div class="highlight">
-  <p><strong>SEO Keywords:</strong> HTML CSS star rating, rating system design, 
-  interactive feedback form, CSS UI elements, frontend web design, SVG icons</p>
-</div>
-
-
-
-  <div class="con1">
-    <div class="countdown" id="countdown">
-    <span id="number">10</span> wait...
-  </div>
-
-  <div class="link-box" id="linkBox">
-    <a href="https://gist.github.com/77cod-ing/d3e0a0681189cae28978e39f993d0494" target="_blank">Go to code</a>
-  </div>
+  <!-- PREVIEW MODAL -->
+  <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+    aria-label="Live preview of star rating system">
+    <div class="preview-modal">
+      <div class="preview-modal-header">
+        <div class="preview-modal-title"><i class='bx bx-show'></i><strong>Live Preview</strong> — Star Rating System
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="preview-dots"><button class="preview-dot red" id="previewDotClose"
+              aria-label="Close"></button><button class="preview-dot yellow" disabled></button><button
+              class="preview-dot green" disabled></button></div>
+          <button class="preview-close-btn" id="previewCloseBtn"><i class='bx bx-x'></i> Close</button>
+        </div>
+      </div>
+      <div class="preview-iframe-wrap">
+        <div class="preview-loading" id="previewLoading">
+          <div class="preview-spinner"></div><span class="preview-loading-text">Loading preview...</span>
+        </div>
+        <iframe id="previewIframe" title="Star rating preview" sandbox="allow-scripts allow-same-origin"></iframe>
+        <div class="preview-hint" id="previewHint"><i class='bx bx-cursor'></i> Click the stars to rate</div>
+      </div>
+    </div>
   </div>
 
   <script>
-    let counter = 10;
-    let timer = null;
-    const countdownEl = document.getElementById("countdown");
-    const numberEl = document.getElementById("number");
-    const linkBox = document.getElementById("linkBox");
+    /* HAMBURGER */
+    const hamburger = document.getElementById('hamburger'), mobileMenu = document.getElementById('mobileMenu'), closeBtn = document.getElementById('closeBtn');
+    hamburger.addEventListener('click', () => { mobileMenu.classList.add('active'); hamburger.setAttribute('aria-expanded', 'true'); });
+    closeBtn.addEventListener('click', () => { mobileMenu.classList.remove('active'); hamburger.setAttribute('aria-expanded', 'false'); });
+    window.addEventListener('scroll', () => hamburger.classList.toggle('scrolled', window.scrollY > 50));
 
-    function startCountdown() {
-      if (timer) return;
-      timer = setInterval(() => {
-        counter--;
-        numberEl.textContent = counter;
+    /* CODE */
+    const gistBase = "https://gist.githubusercontent.com/77cod-ing/d3e0a0681189cae28978e39f993d0494/raw/";
+    const htmlUrl = gistBase + "index.html", cssUrl = gistBase + "style.css";
+    let cachedHTML = "", cachedCSS = "";
+    const codeCache = {};
 
-        if (counter === 0) {
-          clearInterval(timer);
-          timer = null;
-          countdownEl.style.display = "none"; 
-          linkBox.style.display = "block";
-        }
-      }, 1000);
+    async function loadCode(url, elId, lang, key) {
+      try {
+        const res = await fetch(url); if (!res.ok) throw new Error("HTTP " + res.status);
+        const text = res.text ? await res.text() : "";
+        const clean = text.trim();
+        codeCache[key] = clean;
+        const el = document.getElementById(elId);
+        el.textContent = clean; el.className = "language-" + lang;
+        Prism.highlightElement(el);
+        if (lang === "html") cachedHTML = clean;
+        if (lang === "css") cachedCSS = clean;
+      } catch (e) { const el = document.getElementById(elId); if (el) el.textContent = "/* Failed to load: " + e.message + " */"; }
     }
+    loadCode(htmlUrl, "code1", "html", "html");
+    loadCode(cssUrl, "code2", "css", "css");
 
-    function stopCountdown() {
-      clearInterval(timer);
-      timer = null;
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          startCountdown();
-        } else {
-          stopCountdown();
-        }
+    /* TABS */
+    document.querySelectorAll(".code-tab").forEach(tab => {
+      tab.addEventListener("click", () => {
+        document.querySelectorAll(".code-tab").forEach(t => { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
+        document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+        tab.classList.add("active"); tab.setAttribute("aria-selected", "true");
+        document.getElementById({ html: "panel-html", css: "panel-css" }[tab.dataset.lang]).classList.add("active");
       });
-    }, { threshold: 1.0 });
-
-    observer.observe(countdownEl);
-    /**hamburger**/
-
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeBtn = document.getElementById('closeBtn');
-
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.add('active');
     });
 
-    closeBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
+    /* COPY */
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const key = btn.dataset.target === "code1" ? "html" : "css";
+        const code = (codeCache[key] || document.getElementById(btn.dataset.target)?.textContent || "").trim();
+        if (!code) return;
+        try {
+          await navigator.clipboard.writeText(code);
+          btn.innerHTML = "<i class='bx bx-check'></i> Copied!"; btn.classList.add("copied");
+          setTimeout(() => { btn.innerHTML = "<i class='bx bxs-copy'></i> Copy"; btn.classList.remove("copied"); }, 2000);
+        } catch (e) { btn.textContent = "Error"; }
+      });
     });
-    
 
-    window.addEventListener("scroll", function() {
-  const hamburger = document.querySelector(".hamburger");
-  if (window.scrollY > 50) {
-    hamburger.classList.add("scrolled");
-  } else {
-    hamburger.classList.remove("scrolled");
-  }
-});
+    /* PREVIEW */
+    const previewOverlay = document.getElementById("previewOverlay"), previewIframe = document.getElementById("previewIframe"),
+      previewLoading = document.getElementById("previewLoading"), previewHint = document.getElementById("previewHint"),
+      previewBtn = document.getElementById("previewBtn"), previewCloseBtn = document.getElementById("previewCloseBtn"),
+      previewDotClose = document.getElementById("previewDotClose");
+
+    function openPreview() { previewOverlay.classList.add("open"); document.body.style.overflow = "hidden"; previewLoading.classList.remove("hidden"); previewHint.classList.remove("show"); previewBtn.classList.add("loading"); buildPreview(); }
+    function closePreview() { previewOverlay.classList.remove("open"); document.body.style.overflow = ""; previewIframe.srcdoc = ""; previewBtn.classList.remove("loading"); }
+
+    async function buildPreview() {
+      if (cachedHTML && cachedCSS) { injectPreview(cachedHTML, cachedCSS); return; }
+      try {
+        const [hR, cR] = await Promise.all([fetch(htmlUrl), fetch(cssUrl)]);
+        cachedHTML = (await hR.text()).trim(); cachedCSS = (await cR.text()).trim();
+        injectPreview(cachedHTML, cachedCSS);
+      } catch (e) { previewLoading.innerHTML = "<i class='bx bx-error-circle' style='font-size:32px;color:var(--accent2);'></i><span class='preview-loading-text' style='color:var(--accent2);'>Failed: " + e.message + "</span>"; previewBtn.classList.remove("loading"); }
+    }
+
+    function injectPreview(html, css) {
+      let c = html.replace(/<link[^>]*href=["'][\w./]*\.css["'][^>]*>/gi, "<style>" + css + "</style>");
+      if (!c.includes("<style>")) c = c.includes("</head>") ? c.replace("</head>", "<style>" + css + "</style>\n</head>") : "<style>" + css + "</style>\n" + c;
+      const bg = "<style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#000d1f;}</style>";
+      c = c.includes("<head>") ? c.replace("<head>", "<head>" + bg) : bg + c;
+      previewIframe.srcdoc = c;
+      previewIframe.addEventListener("load", function onLoad() {
+        previewLoading.classList.add("hidden"); previewBtn.classList.remove("loading");
+        setTimeout(() => { previewHint.classList.add("show"); setTimeout(() => previewHint.classList.remove("show"), 9000); }, 300);
+        previewIframe.removeEventListener("load", onLoad);
+      });
+    }
+
+    previewBtn.addEventListener("click", openPreview);
+    previewCloseBtn.addEventListener("click", closePreview);
+    previewDotClose.addEventListener("click", closePreview);
+    previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
   </script>
 </body>
 
 </html>
-
-
