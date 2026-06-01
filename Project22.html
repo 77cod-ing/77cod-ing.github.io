@@ -1,188 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <!-- ===== BASIC ===== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- ===== PRIMARY SEO ===== -->
+  <title>Animated Floating Navigation Bar using HTML, CSS & JavaScript | Glowing Indicator Tutorial</title>
+
+  <meta name="description"
+    content="Build a modern animated floating navigation bar with a glowing circular indicator using HTML, CSS transitions, and JavaScript. Learn active state animation, icon lift effects, and responsive navbar design with free source code.">
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="77cod_ing">
+  <link rel="canonical" href="https://77cod-ing.github.io/animated-navbar.html">
+
+  <!-- ===== THEME ===== -->
+  <meta name="theme-color" content="#00d9ff">
+
+  <!-- ===== FAVICON ===== -->
+  <link rel="icon" type="image/png" href="https://77cod-ing.github.io/favicon.png">
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Animated Floating Navigation Bar | HTML CSS JavaScript Glowing Indicator">
+  <meta property="og:description"
+    content="Create a futuristic floating nav bar with a smooth glowing indicator using HTML, CSS, and minimal JavaScript. Free source code included.">
+  <meta property="og:url" content="https://77cod-ing.github.io/animated-navbar.html">
+  <meta property="og:image" content="https://77cod-ing.github.io/image%20copy%2071.png">
+  <meta property="og:site_name" content="77cod_ing">
+  <meta property="og:locale" content="en_US">
+
+  <!-- ===== TWITTER ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Animated Floating Navigation Bar | HTML CSS JS Tutorial">
+  <meta name="twitter:description"
+    content="Learn how to build an animated floating navigation bar with a glowing circular indicator using pure HTML, CSS, and JavaScript.">
+  <meta name="twitter:image" content="https://77cod-ing.github.io/image%20copy%2071.png">
+
+  <!-- ===== SCHEMA: TECH ARTICLE ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Animated Floating Navigation Bar using HTML, CSS & JavaScript",
+    "description": "Step-by-step tutorial for creating a modern animated floating navigation bar with a glowing indicator, icon lift effects, and smooth CSS transitions.",
+    "image": "https://77cod-ing.github.io/image%20copy%2071.png",
+    "author": {
+      "@type": "Person",
+      "name": "77cod_ing"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "77cod_ing",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Picture1.png"
+      }
+    },
+    "datePublished": "2025-10-01",
+    "dateModified": "2026-05-28",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://77cod-ing.github.io/animated-navbar.html"
+    },
+    "proficiencyLevel": "Beginner",
+    "keywords": [
+      "animated navigation bar",
+      "CSS indicator menu",
+      "floating nav bar",
+      "HTML CSS JavaScript navigation",
+      "responsive navbar",
+      "modern UI navigation",
+      "glowing circle indicator"
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: BREADCRUMB ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://77cod-ing.github.io/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Projects",
+        "item": "https://77cod-ing.github.io/projects.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Animated Floating Navigation Bar",
+        "item": "https://77cod-ing.github.io/animated-navbar.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== ASSETS ===== -->
   <link rel="icon" type="image/png" href="Picture1.png">
-  <title>Create a Skewed Navigation Menu — HTML/CSS</title>
-  <meta name="description" content="Skewed navigation menu, interactive menu design, CSS 3D effects, hover animation, responsive web design, modern UI navigation.">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
-     crossorigin="anonymous"></script>
-   <style>
-    *{
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+  <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+    crossorigin="anonymous"></script>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      overflow-x: hidden;
-    }
-    body {
-      background: linear-gradient(to right, #2c0e43 10%, #581c87);
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
     }
 
+    :root {
+      --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+      --neon2: #00d9ff;
+      --neon3: #ff006e;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --surface: rgba(255, 255, 255, 0.03);
+      --surface-hover: rgba(0, 213, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.07);
+      --font-head: 'Syne', sans-serif;
+      --font-body: 'Outfit', sans-serif;
+      --premcolo: #00d9ff;
+      --accent2: #ff006e;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--back);
+      font-family: var(--font-body);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    /* ===== NAVBAR ===== */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 50px;
-      padding: 0 2rem;
-      background-color: #0d1325;
+      height: 56px;
+      padding: 0 2.5rem;
+      background: rgba(0, 5, 18, 0.7);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(0, 217, 255, 0.12);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      font-size: 22px;
-      font-weight: bold;
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: 700;
       color: white;
       text-decoration: none;
+      gap: 8px;
     }
 
     .logo-icon {
-      color: #a855f7;
-      font-size: 26px;
-      margin-right: 8px;
-      letter-spacing: 2.5px;
+      color: var(--premcolo);
+      letter-spacing: 2px;
     }
 
     .nav-links {
       display: flex;
-      gap: 35px;
+      gap: clamp(1rem, 2vw, 2rem);
+      align-items: center;
     }
 
     .nav-links a {
-      color: #d1d5db;
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.25s;
     }
 
     .nav-links a:hover {
-      color: #a855f7;
-      transform: scale(1.2);
-    }
-    /*linke*/
-    .con1 {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin: auto 0;
-      height: 50vh;
-    }
-    .countdown {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00ffcc;
+      color: var(--premcolo);
     }
 
-    .link-box {
-      display: none;
-      padding: 20px 40px;
-      background: #1e2a47;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-      transition: 0.3s;
-    }
-
-    .link-box a {
-      text-decoration: none;
-      color: #00ffcc;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    .link-box:hover {
-      background: #26385c;
-      transform: scale(1.05);
-    }
-    /**ret**/
-    .Ret{
-      margin: 5px 0 0 3rem;
-      width: max-content;
-    }
-    .Ret a {
-      font-size: 2rem;
-      text-decoration: none;
-      color: #ffffff;
-    }
-    .Ret a span{
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 38px;
-      height: 38px;
-      border: 2px solid #fff;
-      border-radius: 50%;
-    }
-    .Ret a:hover {
-  color: #00e1ff;
-}
-    .Ret a:hover span {
-  border-color: #00e1ff;
-}
-    /**img**/
-    .img{
-      display: flex;
-      justify-content: center;
-      margin: 2rem auto;
-    }
-    .img img{
-      border-radius: 8px;
-      max-width: 100vw;
-    width: 70vw;
-    height: 65vh;
-    }
-    /**par**/
-    .par{
-       font-family: Arial, sans-serif;
-      line-height: 1.7;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      color: #ffffff;
-    }
-    h1, h2, h3 {
-      color: #00c8ff;
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
-    h2 {
-      margin-top: 35px;
-      font-size: 1.6rem;
-    }
-    h3 {
-      margin-top: 25px;
-      font-size: 1.3rem;
-    }
-    p {
-      margin-bottom: 18px;
-    }
-    ul {
-      margin: 15px 0;
-      padding-left: 25px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .highlight {
-      background: #000000;
-      padding: 8px 12px;
-      border-left: 4px solid #0073e6;
-      margin: 20px 0;
-    }
-
-    /**respon1**/
+    /* ===== HAMBURGER ===== */
     .hamburger {
       display: none;
       flex-direction: column;
@@ -190,32 +213,28 @@
       gap: 5px;
       transition: background 0.3s ease, box-shadow 0.3s ease;
     }
-    .hamburger .scrolled {
-      background: rgba(255, 255, 255, 0.7);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-}
 
     .hamburger span {
       width: 28px;
       height: 3px;
       background: white;
+      border-radius: 2px;
       transition: all 0.3s ease;
     }
 
-    /* ====== القائمة المنبثقة ====== */
     .mobile-menu {
       position: fixed;
-      top:0;
+      top: 0;
       left: -100%;
       width: 100%;
       height: 100vh;
-      padding-top: 0.5rem ;
-      background: rgb(53, 53, 53);
+      background: rgba(0, 13, 31, 0.97);
+      backdrop-filter: blur(20px);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 35px;
+      gap: 0;
       transition: left 0.5s ease;
       z-index: 999;
     }
@@ -225,49 +244,1096 @@
     }
 
     .mobile-menu a {
-      color: white;
-      font-size: 22px;
+      color: var(--text);
+      font-size: 20px;
       width: 100%;
-      height: 3rem;
+      height: 3.5rem;
       display: flex;
       justify-content: center;
       align-items: center;
       text-decoration: none;
-      border-bottom: 0.5px solid #fff;
-      transition: color 0.3s;
+      border-bottom: 1px solid var(--border);
+      font-family: var(--font-head);
+      transition: color 0.3s, background 0.3s;
+    }
+
+    .mobile-menu a:first-of-type {
+      border-top: 1px solid var(--border);
     }
 
     .mobile-menu a:hover {
-      color: #ffffff;
-      background: rgba(104, 104, 104, 0.508);
-      backdrop-filter: bulur(20px);
+      color: var(--premcolo);
+      background: var(--surface-hover);
     }
 
-    /* ====== زر الإغلاق (X) ====== */
     .close-btn {
       position: absolute;
       top: 20px;
       right: 25px;
-      font-size: 30px;
+      font-size: 26px;
       color: white;
       cursor: pointer;
-      width: 35px;
-      height: 35px;
+      width: 36px;
+      height: 36px;
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 2px solid #fff;
-      background: rgb(88, 88, 88);
+      border: 1px solid var(--border);
+      background: var(--surface);
       border-radius: 50%;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, border-color 0.3s;
     }
 
     .close-btn:hover {
       transform: rotate(90deg);
-      color: #00e1ff;
+      border-color: var(--accent2);
+      color: var(--accent2);
     }
 
-    /* ====== استجابة الهاتف ====== */
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      padding: 12px 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb ol {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .breadcrumb li+li::before {
+      content: "›";
+      color: var(--premcolo);
+      margin-right: 6px;
+      font-size: 1.1rem;
+    }
+
+    .breadcrumb a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--premcolo);
+    }
+
+    .breadcrumb [aria-current="page"] {
+      color: var(--premcolo);
+      font-weight: 600;
+    }
+
+    /* ===== BACK BUTTON ===== */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.2s;
+      margin: 1rem 2.5rem;
+    }
+
+    .back-link:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 3rem 2.5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: var(--font-head);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .tag-tutorial {
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+    }
+
+    .tag-html {
+      background: rgba(255, 102, 0, 0.1);
+      color: #ff6600;
+      border: 1px solid rgba(255, 102, 0, 0.2);
+    }
+
+    .tag-css {
+      background: rgba(0, 217, 255, 0.08);
+      color: var(--neon2);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+    }
+
+    .tag-js {
+      background: rgba(255, 214, 0, 0.1);
+      color: #ffd600;
+      border: 1px solid rgba(255, 214, 0, 0.2);
+    }
+
+    .read-time {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.7rem, 4vw, 2.7rem);
+      line-height: 1.2;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      color: var(--premcolo);
+    }
+
+    .hero h1 em {
+      color: var(--neon2);
+      font-style: normal;
+    }
+
+    .hero-lead {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      color: var(--premcolo);
+      font-weight: 800;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== HERO IMAGE ===== */
+    .hero-img-wrap {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      box-shadow: 0 0 60px rgba(0, 217, 255, 0.1), 0 32px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem;
+      align-items: start;
+    }
+
+    /* ===== ARTICLE ===== */
+    .article-body h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: var(--premcolo);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(0, 217, 255, 0.15);
+      scroll-margin-top: 80px;
+    }
+
+    .article-body h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: var(--neon2);
+      margin: 1.8rem 0 0.75rem;
+      scroll-margin-top: 80px;
+    }
+
+    .article-body p {
+      margin-bottom: 1.1rem;
+      color: var(--text);
+    }
+
+    .article-body code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.08);
+      color: var(--premcolo);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .article-body ul {
+      padding-left: 1.4rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .article-body li {
+      margin-bottom: 9px;
+    }
+
+    .article-body li strong {
+      color: #fff;
+    }
+
+    /* ===== INLINE STEP IMAGES ===== */
+    .step-img-wrap {
+      margin: 1.25rem 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .step-img-wrap img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      max-height: 380px;
+    }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: var(--surface);
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .toc-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--premcolo);
+      margin-bottom: 0.75rem;
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--premcolo);
+    }
+
+    /* ===== WHY CARDS ===== */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .why-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .why-card:hover {
+      border-color: rgba(0, 217, 255, 0.3);
+      background: var(--surface-hover);
+    }
+
+    .why-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .why-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .why-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ===== STEPS ===== */
+    .steps {
+      margin: 1.5rem 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      width: 44px;
+      height: 44px;
+      background: rgba(0, 217, 255, 0.08);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      color: var(--premcolo);
+      font-size: 1rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      margin-top: 0;
+      font-size: 1.05rem;
+    }
+
+    .step-content p {
+      margin-bottom: 0.75rem;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* ===== INFO / WARN BOXES ===== */
+    .info-box {
+      background: rgba(0, 217, 255, 0.04);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-left: 4px solid var(--premcolo);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .info-box strong {
+      color: var(--premcolo);
+    }
+
+    .warn-box {
+      background: rgba(255, 0, 110, 0.04);
+      border: 1px solid rgba(255, 0, 110, 0.2);
+      border-left: 4px solid var(--neon3);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .warn-box strong {
+      color: var(--neon3);
+    }
+
+    /* ===== CODE SECTION ===== */
+    .code-section {
+      margin: 2rem 0;
+      width: 60vw;
+    }
+
+    .code-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .code-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .code-tab {
+      padding: 8px 20px;
+      border-radius: 8px 8px 0 0;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .code-tab.active {
+      background: #1e1e2f;
+      color: #fff;
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .code-tab[data-lang="html"].active {
+      color: #ff6600;
+    }
+
+    .code-tab[data-lang="css"].active {
+      color: #00d9ff;
+    }
+
+    .code-tab[data-lang="js"].active {
+      color: #ffd600;
+    }
+
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.3px;
+    }
+
+    .preview-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .preview-btn:hover {
+      border-color: var(--premcolo);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .preview-btn:hover::before {
+      opacity: 1;
+    }
+
+    .preview-btn:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .preview-btn i,
+    .preview-btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn i {
+      font-size: 16px;
+    }
+
+    .preview-btn.loading i {
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .code-panels {
+      position: relative;
+    }
+
+    .code-box {
+      background: #1e1e2f;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 0 12px 12px 12px;
+      display: none;
+    }
+
+    .code-box.active {
+      display: block;
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-lang-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    .copy-btn.copied {
+      color: #4ade80;
+      border-color: #4ade80;
+    }
+
+    :not(pre)>code[class*="language-"],
+    pre[class*="language-"] {
+      width: 100%;
+      max-width: 100%;
+      height: 50vh;
+      border-radius: 0 0 12px 12px;
+      overflow-y: auto;
+      overflow-x: auto;
+      margin: 0;
+    }
+
+    pre::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    pre::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    pre::-webkit-scrollbar-thumb {
+      background: var(--premcolo);
+      border-radius: 10px;
+    }
+
+    /* ===== PRACTICE GRID ===== */
+    .practice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 1.5rem 0;
+    }
+
+    .practice-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .practice-card.do {
+      border-color: rgba(0, 217, 255, 0.2);
+    }
+
+    .practice-card.dont {
+      border-color: rgba(255, 0, 110, 0.2);
+    }
+
+    .practice-card-title {
+      font-family: var(--font-head);
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .practice-card ul {
+      padding-left: 1.2rem;
+      color: var(--text-muted);
+    }
+
+    .practice-card li {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .faq-item[open] {
+      border-color: rgba(0, 217, 255, 0.25);
+    }
+
+    .faq-question {
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      font-family: var(--font-head);
+      font-size: 0.95rem;
+      color: #fff;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .faq-question::after {
+      content: '+';
+      color: var(--premcolo);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .faq-item[open] .faq-question::after {
+      content: '−';
+    }
+
+    .faq-answer {
+      padding: 0 1.25rem 1rem;
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* ===== CONCLUSION ===== */
+    .conclusion {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.05), rgba(0, 0, 20, 0.3));
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .conclusion h2 {
+      border: none;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      position: sticky;
+      top: 72px;
+    }
+
+    .sidebar-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-header {
+      padding: 14px 16px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--premcolo);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .related-list {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .related-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/9;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .related-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .related-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    .related-card-title {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* ===== PREVIEW MODAL ===== */
+    .preview-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 5, 15, 0.85);
+      backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+    }
+
+    .preview-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .preview-modal {
+      width: 92vw;
+      max-width: 90vw;
+      height: 90vh;
+      background: #0a0e1a;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7);
+      transform: scale(0.92) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .preview-overlay.open .preview-modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .preview-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+    }
+
+    .preview-modal-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-modal-title i {
+      color: var(--premcolo);
+      font-size: 16px;
+    }
+
+    .preview-modal-title strong {
+      color: #fff;
+    }
+
+    .preview-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .preview-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, filter 0.2s;
+    }
+
+    .preview-dot:hover {
+      transform: scale(1.2);
+      filter: brightness(1.3);
+    }
+
+    .preview-dot.red {
+      background: #ff5f57;
+    }
+
+    .preview-dot.yellow {
+      background: #febc2e;
+    }
+
+    .preview-dot.green {
+      background: #28c840;
+    }
+
+    .preview-close-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .preview-close-btn:hover {
+      border-color: var(--accent2);
+      color: var(--accent2);
+      background: rgba(255, 0, 110, 0.08);
+    }
+
+    .preview-iframe-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .preview-iframe-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .preview-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: #0a0e1a;
+      z-index: 2;
+      transition: opacity 0.4s;
+    }
+
+    .preview-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .preview-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(0, 217, 255, 0.15);
+      border-top-color: var(--premcolo);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    .preview-loading-text {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .preview-hint {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 16px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      color: var(--text-muted);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s 0.8s;
+      white-space: nowrap;
+      z-index: 3;
+    }
+
+    .preview-hint.show {
+      opacity: 1;
+    }
+
+    .preview-hint i {
+      color: var(--premcolo);
+      margin-right: 4px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1.25rem;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .related-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .related-card {
+        flex: 1 1 calc(50% - 8px);
+      }
+
+      .hero {
+        padding: 2rem 1.25rem 1.5rem;
+      }
+
+      .navbar {
+        padding: 0 1.25rem;
+      }
+
+      .breadcrumb {
+        padding: 10px 1.25rem;
+      }
+
+      .back-link {
+        margin: 0.75rem 1.25rem;
+      }
+
+      .practice-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .code-section {
+        width: 85vw;
+      }
+    }
+
     @media (max-width: 910px) {
       .nav-links {
         display: none;
@@ -278,45 +1344,50 @@
         justify-content: center;
         align-items: center;
         position: fixed;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hamburger.scrolled {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      background: rgb(65, 65, 65);
-}
-    }
-    /**respon**/
-    @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
+        right: 1.25rem;
+        top: 14px;
+        z-index: 101;
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+      }
 
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .img img{
-    max-width: 100vw;
-    width: 90vw;
+      .hamburger.scrolled {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 1px solid var(--border);
+        background: rgba(0, 13, 31, 0.9);
+      }
     }
-  }
+
+    @media (max-width: 640px) {
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-stats {
+        gap: 1.2rem;
+      }
+
+      .code-tab {
+        padding: 7px 13px;
+        font-size: 12px;
+      }
+
+      .related-card {
+        flex: 1 1 100%;
+      }
+    }
   </style>
 </head>
+
 <body>
-<header class="navbar">
-    <a href="#" class="logo">
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
       <span class="logo-icon">{ / }</span> 77cod_ing
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
@@ -326,239 +1397,634 @@
     </nav>
   </header>
 
-  <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+  <!-- ===== HAMBURGER ===== -->
+  <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <span class="close-btn" id="closeBtn">&times;</span>
-    <a href="index.html"style="border-top: 2px solid #fff;height: 5rem;">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html" style="border-bottom: 2px solid #fff;">Terms & Conditions</a>
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+    <span class="close-btn" id="closeBtn" aria-label="Close menu">&times;</span>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="Privacy Policy.html">Privacy Policy</a>
+    <a href="Terms & Conditions.html">Terms &amp; Conditions</a>
   </div>
 
-<div class="Ret">
-  <a href="projects.html#menu"><pre><span>&lt;</span> Return</pre></a>
-</div>
+  <!-- ===== BREADCRUMB ===== -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
+      <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+      <li><span aria-current="page">Animated Floating Navigation Bar</span></li>
+    </ol>
+  </nav>
 
-<div class="img">
-  <img src="image copy 71.png" alt="Skewed Menu Example">
-</div>
+  <!-- ===== BACK BUTTON ===== -->
+  <a href="projects.html#menu" class="back-link" aria-label="Return to Projects">
+    <i class='bx bx-arrow-back'></i> Return to Projects
+  </a>
 
-<div class="par">
-  <span>
-
-    <h1>Create an Animated Navigation Bar with Floating Indicator — HTML/CSS/JS</h1>
-
-    <p>
-      Navigation bars are essential for any modern website — they guide users and define your site’s personality.
-      In this tutorial, you’ll learn how to build a
-      <strong>floating animated navigation bar</strong> using only HTML, CSS, and a touch of JavaScript.
-      This design features smooth transitions, a glowing circular indicator, and icons that lift gracefully when active.
-    </p>
-
-    <div class="highlight">
-      <p>
-        <strong>Quick Summary:</strong>
-        Build a responsive navigation bar using HTML, style it with CSS for a futuristic floating effect,
-        and use minimal JavaScript to make icons animate dynamically on click.
-      </p>
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="main-heading">
+    <div class="hero-meta">
+      <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+      <span class="tag tag-html">HTML</span>
+      <span class="tag tag-css">CSS</span>
+      <span class="tag tag-js">JavaScript</span>
+      <span class="read-time"><i class='bx bx-time'></i> ~15 min read</span>
     </div>
 
-    <h2>What Is an Animated Navigation Bar?</h2>
+    <h1 id="main-heading">
+      Build an <span>Animated Floating</span><br>Navigation Bar with
+      <em>HTML, CSS &amp; JS</em>
+    </h1>
 
-    <p>
-      An animated navigation bar adds motion and interaction to the user experience.
-      Instead of static icons, this version makes each icon rise and glow when selected.
-      A circular indicator moves smoothly beneath the active icon, giving a sense of movement and energy —
-      ideal for modern websites, portfolios, or apps with a clean UI aesthetic.
+    <p class="hero-lead">
+      A complete, beginner-friendly guide to creating a futuristic floating navigation bar
+      with a glowing circular indicator and smooth icon-lift animation — using HTML, CSS transitions,
+      and minimal JavaScript. Responsive, lightweight, and fully customizable. Full source code free.
     </p>
 
-    <h2>Why Use This Navigation Design?</h2>
-
-    <ul>
-      <li><strong>Interactive Feel:</strong> Each icon reacts visually, creating satisfying user feedback.</li>
-      <li><strong>Clean & Minimal:</strong> Uses subtle animations and colors to avoid clutter.</li>
-      <li><strong>Lightweight:</strong> Requires no external frameworks or libraries beyond Boxicons.</li>
-      <li><strong>Fully Responsive:</strong> Works across mobile and desktop screens effortlessly.</li>
-    </ul>
-
-    <h2>Steps to Build the Navigation Bar</h2>
-
-    <h3>1. Structure with HTML</h3>
-
-    <p>
-      Start by creating a <code>&lt;div&gt;</code> with the class <code>navigation</code>.
-      Inside it, include an unordered list <code>&lt;ul&gt;</code> containing five list items — one for each navigation link.
-      Each item includes an icon (from Boxicons) and a text label.
-    </p>
-
-    <div class="img">
-      <img src="image copy 73.png" alt="HTML structure for animated navigation bar">
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value">4</span>
+        <span class="stat-label">Steps</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">CSS</span>
+        <span class="stat-label">Transitions</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">100%</span>
+        <span class="stat-label">Responsive</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">Free</span>
+        <span class="stat-label">Source Code</span>
+      </div>
     </div>
 
-    <h3>2. Style and Animate with CSS</h3>
-
-    <p>
-      In CSS, use <strong>flexbox</strong> to align items evenly inside the navigation bar.
-      Each icon is centered, and the <code>.indicator</code> and <code>.indicator1</code> elements create the moving circular highlight effect.
-      The key to the smooth motion lies in the <code>transition: 0.5s;</code> property, which animates the indicator’s position when a different item is activated.
-    </p>
-
-    <p>
-      Colors are managed using <code>:root</code> variables for easy customization.
-      For instance, <code>--crl</code> defines the background color and <code>--form</code> controls the accent color of the indicator.
-    </p>
-
-    <div class="img">
-      <img src="image copy 72.png" alt="CSS styling for navigation bar">
+    <div class="hero-img-wrap">
+      <img src="image copy 71.png"
+        alt="Animated floating navigation bar with glowing circular indicator built with HTML CSS and JavaScript"
+        class="hero-img" width="1200" height="420" loading="eager" fetchpriority="high">
     </div>
+    <p class="img-caption">Final result: a floating navigation bar with a smooth glowing indicator — built with HTML,
+      CSS, and minimal JavaScript</p>
+  </section>
 
-    <h3>3. Add Interactivity with JavaScript</h3>
+  <!-- ===== MAIN LAYOUT ===== -->
+  <div class="layout">
 
-    <p>
-      A few lines of JavaScript handle the “active” state logic.
-      When a user clicks on an icon, the script removes the <code>active</code> class from all items and adds it to the clicked one.
-      This triggers the CSS transitions and moves the indicator to the new position.
-    </p>
+    <main class="article-body" id="main-content">
 
-    <div class="img">
-      <img src="image copy 74.png" alt="JavaScript active class handling for navigation">
-    </div>
+      <!-- TOC -->
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-title">📋 Contents</p>
+        <ol>
+          <li><a href="#what-is">What Is an Animated Navigation Bar?</a></li>
+          <li><a href="#why-use">Why Use This Navigation Design?</a></li>
+          <li><a href="#source-code">Full Source Code (HTML + CSS + JS)</a></li>
+          <li><a href="#how-it-works">How It Works — Step by Step</a></li>
+          <li><a href="#best-practices">Best Practices &amp; Common Mistakes</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </nav>
 
-    <h3>4. See the Final Result</h3>
+      <!-- WHAT IS -->
+      <section id="what-is">
+        <h2>What Is an Animated Navigation Bar?</h2>
+        <p>
+          An <strong>animated navigation bar</strong> adds motion and visual feedback to the user experience.
+          Instead of static links, this design makes each icon <em>rise and glow</em> when selected, while a
+          <strong>circular indicator slides smoothly</strong> beneath the active icon — giving a sense of energy
+          and floating lift that instantly modernizes any interface.
+        </p>
+        <p>
+          This pattern is widely used in mobile app interfaces, developer portfolios, SaaS dashboards,
+          and any project requiring a <strong>clean, modern UI aesthetic</strong>. The entire effect is driven
+          by CSS <code>transition</code> properties and a tiny JavaScript active-class toggle — no heavy
+          libraries needed.
+        </p>
+      </section>
 
-    <p>
-      The final result is a sleek navigation bar where icons lift smoothly on click and the glowing circle slides beneath the active item.
-      This gives the interface a floating, high-tech aesthetic perfect for modern websites or app dashboards.
-    </p>
+      <hr>
 
-    <div class="img">
-      <img src="image copy 71.png" alt="Final animated navigation bar preview">
-    </div>
+      <!-- WHY USE -->
+      <section id="why-use">
+        <h2>Why Use This Navigation Design?</h2>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon">✨</div>
+            <div class="why-title">Interactive Feel</div>
+            <div class="why-desc">Each icon reacts visually on click, creating satisfying and immediate user feedback.
+            </div>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">🧹</div>
+            <div class="why-title">Clean &amp; Minimal</div>
+            <div class="why-desc">Subtle animations and careful spacing avoid clutter while keeping the interface
+              modern.</div>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">🪶</div>
+            <div class="why-title">Lightweight</div>
+            <div class="why-desc">No external frameworks beyond Boxicons — just pure HTML, CSS, and a few lines of JS.
+            </div>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">📱</div>
+            <div class="why-title">Fully Responsive</div>
+            <div class="why-desc">Works flawlessly across desktop, tablet, and mobile with flexible CSS units.</div>
+          </div>
+        </div>
+      </section>
 
-    <h2>Best Practices for Navigation Bars</h2>
+      <hr>
 
-    <ul>
-      <li><strong>Keep It Simple:</strong> Limit navigation items to the most essential pages.</li>
-      <li><strong>Ensure Readability:</strong> Use contrasting colors for icons and backgrounds.</li>
-      <li><strong>Maintain Smooth Transitions:</strong> Use consistent animation speeds for a cohesive look.</li>
-      <li><strong>Optimize for Mobile:</strong> Use flexible units (like %) for widths and padding.</li>
-    </ul>
+      <!-- SOURCE CODE -->
+      <div class="code-section" id="source-code">
+        <div class="code-toolbar">
+          <div class="code-tabs" role="tablist" aria-label="Code files">
+            <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+              aria-controls="panel-html">HTML</button>
+            <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+              aria-controls="panel-css">CSS</button>
+            <button class="code-tab" data-lang="js" role="tab" aria-selected="false"
+              aria-controls="panel-js">JS</button>
+          </div>
+          <button class="preview-btn" id="previewBtn" aria-label="Preview the final result">
+            <i class='bx bx-play-circle'></i>
+            <span>Preview Result</span>
+          </button>
+        </div>
 
-    <h2>Common Mistakes to Avoid</h2>
+        <div class="code-panels">
+          <div class="code-box active" id="panel-html" role="tabpanel">
+            <div class="code-header">
+              <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+              <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+            </div>
+            <pre><code id="code1" class="language-html"></code></pre>
+          </div>
 
-    <ul>
-      <li>Overcrowding the bar with too many icons.</li>
-      <li>Using inconsistent icon sizes or styles.</li>
-      <li>Forgetting to include hover/focus accessibility styles.</li>
-      <li>Overusing animations that distract rather than enhance.</li>
-    </ul>
+          <div class="code-box" id="panel-css" role="tabpanel">
+            <div class="code-header">
+              <span class="code-lang-label" style="color:#00d9ff;">CSS — style.css</span>
+              <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+            </div>
+            <pre><code id="code2" class="language-css"></code></pre>
+          </div>
 
-    <h2>Conclusion</h2>
+          <div class="code-box" id="panel-js" role="tabpanel">
+            <div class="code-header">
+              <span class="code-lang-label" style="color:#ffd600;">JavaScript — script.js</span>
+              <button class="copy-btn" data-target="code3"><i class='bx bxs-copy'></i> Copy</button>
+            </div>
+            <pre><code id="code3" class="language-javascript"></code></pre>
+          </div>
+        </div>
+      </div>
 
-    <p>
-      The <strong>animated floating navigation bar</strong> is an elegant, interactive design
-      that instantly modernizes your website.
-      Built entirely with HTML, CSS, and minimal JavaScript, it’s lightweight, responsive,
-      and visually engaging. Perfect for portfolios, dashboards, or creative web projects —
-      it gives users a polished, immersive navigation experience.
-    </p>
+      <hr>
 
-    <div class="highlight">
-      <p>
-        <strong>SEO Keywords:</strong> animated navigation bar, CSS indicator menu, floating nav bar,
-        HTML CSS JavaScript navigation, responsive navbar, modern UI navigation
-      </p>
-    </div>
+      <!-- HOW IT WORKS -->
+      <section id="how-it-works">
+        <h2>How It Works — Step by Step</h2>
+        <p>
+          Four layers combine to produce the final floating nav effect. Here's how each one
+          contributes to the animation.
+        </p>
 
-  </span>
-</div>
+        <div class="steps">
 
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>HTML Structure</h3>
+              <p>
+                Create a <code>&lt;div class="navigation"&gt;</code> wrapper containing a
+                <code>&lt;ul&gt;</code> with five <code>&lt;li&gt;</code> items. Each item holds a
+                Boxicons icon and a text label. A separate <code>.indicator</code> element (and its
+                shadow copy <code>.indicator1</code>) sits inside the list — this is the circular
+                blob that slides behind the active icon.
+              </p>
+              <div class="step-img-wrap">
+                <img src="image copy 73.png" alt="HTML structure for animated navigation bar" loading="lazy" width="900"
+                  height="380">
+              </div>
+            </div>
+          </div>
 
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>CSS — Layout &amp; Indicator Positioning</h3>
+              <p>
+                Use <strong>Flexbox</strong> to align items evenly inside the bar. Each icon wrapper
+                is <code>position: relative</code> so the icon can <code>translateY(-30px)</code>
+                upward when active. The <code>.indicator</code> is <code>position: absolute</code>
+                and moves between items via a <code>translateX()</code> driven by CSS classes
+                set on each list item's <code>nth-child</code>.
+              </p>
+              <p>
+                Colors are stored in <code>:root</code> variables — <code>--crl</code> for the
+                bar background and <code>--form</code> for the indicator accent — making the whole
+                theme changeable in one place.
+              </p>
+              <div class="step-img-wrap">
+                <img src="image copy 72.png" alt="CSS styling and transitions for the floating navigation bar"
+                  loading="lazy" width="900" height="380">
+              </div>
+            </div>
+          </div>
 
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>JavaScript — Active State Toggle</h3>
+              <p>
+                A concise click event listener removes the <code>active</code> class from all
+                <code>&lt;li&gt;</code> elements, then adds it to the clicked one. This single
+                class toggle triggers all CSS transitions simultaneously — the icon lifts, the
+                indicator slides, and the glow appears — with no manual animation code required.
+              </p>
+              <div class="step-img-wrap">
+                <img src="image copy 74.png" alt="JavaScript active class toggling for navigation bar" loading="lazy"
+                  width="900" height="380">
+              </div>
+            </div>
+          </div>
 
-<div class="con1">
-  <div class="countdown" id="countdown">
-    <span id="number">10</span> wait...
+          <div class="step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h3>Final Result</h3>
+              <p>
+                The finished navigation bar shows icons that lift gracefully on click and a glowing
+                circular indicator that slides smoothly to the new active position. The effect works
+                on all modern browsers and adapts cleanly to mobile screen sizes.
+              </p>
+              <div class="step-img-wrap">
+                <img src="image copy 71.png" alt="Final animated floating navigation bar preview" loading="lazy"
+                  width="900" height="380">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="info-box">
+          <strong>💡 Key Detail:</strong> The smooth slide of the indicator works because the CSS
+          <code>transform: translateX()</code> value changes with each active class — and
+          <code>transition: 0.5s</code> on the indicator element interpolates between those values
+          automatically. No JavaScript animation loop is needed.
+        </div>
+
+        <div class="warn-box">
+          <strong>⚠️ Icon Library:</strong> This project uses <strong>Boxicons</strong> for the
+          navigation icons. Make sure the Boxicons stylesheet link is included in your
+          <code>&lt;head&gt;</code>, or replace icons with any alternative icon set you prefer.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- BEST PRACTICES -->
+      <section id="best-practices">
+        <h2>Best Practices &amp; Common Mistakes</h2>
+        <p>Follow these guidelines to keep your navigation bar polished, accessible, and performant.</p>
+
+        <div class="practice-grid">
+          <div class="practice-card do">
+            <div class="practice-card-title">✅ Do</div>
+            <ul>
+              <li>Limit navigation to the 4–6 most essential pages</li>
+              <li>Use contrasting colors between icons and the bar background</li>
+              <li>Store all colors in <code>:root</code> CSS variables for easy theming</li>
+              <li>Maintain consistent animation speed (<code>0.4s–0.6s</code>) across all transitions</li>
+              <li>Add <code>aria-current="page"</code> to the active item for accessibility</li>
+            </ul>
+          </div>
+          <div class="practice-card dont">
+            <div class="practice-card-title">❌ Don't</div>
+            <ul>
+              <li>Overcrowd the bar with more than 6 icons</li>
+              <li>Use inconsistent icon sizes or mixed icon sets</li>
+              <li>Forget hover and focus states — keyboard users need visible focus indicators</li>
+              <li>Set animation duration above <code>0.8s</code> — it feels sluggish</li>
+              <li>Use <code>px</code> for widths — <code>%</code> or <code>vw</code> keeps it responsive</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+
+          <details class="faq-item">
+            <summary class="faq-question">Can I add more or fewer navigation items?</summary>
+            <div class="faq-answer">
+              Yes. Add or remove <code>&lt;li&gt;</code> elements in the HTML, then update
+              the corresponding CSS <code>nth-child</code> rules that control the indicator's
+              <code>translateX()</code> position for each item. The JavaScript requires no changes —
+              it loops over all list items dynamically.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How do I change the indicator color?</summary>
+            <div class="faq-answer">
+              Find the <code>--form</code> variable in the <code>:root</code> block of the CSS
+              file and update it to any color value. This single variable controls the indicator
+              background, the icon glow, and any accent highlights throughout the component.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Does this navigation work without JavaScript?</summary>
+            <div class="faq-answer">
+              The layout and styling render without JavaScript, but the active state won't change
+              on click — the indicator stays fixed on the default item. For a pure CSS approach,
+              you can use the <code>:focus-within</code> or checkbox hack, but JavaScript provides
+              the cleanest and most reliable solution for this interaction.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Which browsers support CSS transitions used here?</summary>
+            <div class="faq-answer">
+              All modern browsers — Chrome, Firefox, Edge, Safari (desktop and iOS) — support
+              <code>transform</code>, <code>transition</code>, and <code>translateY/X</code>
+              fully. Internet Explorer 11 supports transitions but not all transform values without
+              vendor prefixes.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Can I use this as a bottom tab bar on mobile?</summary>
+            <div class="faq-answer">
+              Absolutely. Position the <code>.navigation</code> element with
+              <code>position: fixed; bottom: 0; left: 0; width: 100%</code> to pin it to the
+              bottom of the viewport on mobile screens. Use a media query to apply these rules
+              only below your mobile breakpoint if you want it to float only on small screens.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Do I need any framework or build tool?</summary>
+            <div class="faq-answer">
+              No. The project uses plain HTML, CSS, and vanilla JavaScript — no npm, no Webpack,
+              no React, no Tailwind. Save the files and open <code>index.html</code> in any browser.
+            </div>
+          </details>
+
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- CONCLUSION -->
+      <section id="conclusion" class="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          The <strong>animated floating navigation bar</strong> is an elegant, interactive design
+          that instantly modernizes any website. By combining <strong>CSS custom properties</strong>,
+          <code>transform</code> transitions, and a minimal JavaScript class toggle, you get a
+          polished, immersive navigation experience with virtually no performance overhead.
+        </p>
+        <p>
+          The technique is highly adaptable — use it as a bottom tab bar on mobile apps, a
+          centered pill nav on desktop landing pages, or a sidebar with a sliding vertical indicator.
+          Change the accent color, swap the icons, adjust the transition speed, and make it yours.
+        </p>
+        <p style="color:var(--text-muted); font-size:14px; margin-bottom:0;">
+          Found this useful? Explore the related projects in the sidebar for more modern UI effects built with HTML,
+          CSS, and JavaScript.
+        </p>
+      </section>
+
+    </main>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" aria-label="Related projects">
+      <div class="sidebar-box">
+        <div class="sidebar-header">🔗 Related Projects</div>
+        <div class="related-list">
+          <a class="related-card" href="project14.html" aria-label="Electric Neon Card Animation">
+            <img src="https://77cod-ing.github.io/image%20copy%2040.png" alt="Electric Neon Card Animation HTML CSS SVG"
+              loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Electric Neon Card Animation — HTML, CSS &amp; SVG</div>
+          </a>
+          <a class="related-card" href="Project40.html" aria-label="CSS Neon Digital Clock Animation">
+            <img src="https://i.suar.me/Ep114/m" alt="CSS Neon Digital Clock Animation" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">CSS Neon Digital Clock Animation</div>
+          </a>
+          <a class="related-card" href="Project39.html" aria-label="Animated Button with Star Effects">
+            <img src="https://i.suar.me/jvZZv/m" alt="Animated Button with Star Effects" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Button with Star Effects — HTML &amp; CSS</div>
+          </a>
+          <a class="related-card" href="Project37.html" aria-label="Glassmorphism Login Page">
+            <img src="https://i.suar.me/Np3EO/m" alt="Modern Glassmorphism Login Page Design" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Modern Glassmorphism Login Page Design</div>
+          </a>
+        </div>
+      </div>
+    </aside>
+
   </div>
 
-  <div class="link-box" id="linkBox">
-    <a href="https://gist.github.com/77cod-ing/54f33688ec35390f42da98e2bf0cd7f0" target="_blank">Go to code</a>
+  <!-- ===== PREVIEW MODAL ===== -->
+  <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+    aria-label="Live preview of the animated floating navigation bar">
+    <div class="preview-modal">
+      <div class="preview-modal-header">
+        <div class="preview-modal-title">
+          <i class='bx bx-show'></i>
+          <strong>Live Preview</strong> — Animated Floating Navigation Bar
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="preview-dots">
+            <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+            <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+            <button class="preview-dot green" aria-label="Maximize" disabled></button>
+          </div>
+          <button class="preview-close-btn" id="previewCloseBtn">
+            <i class='bx bx-x'></i> Close
+          </button>
+        </div>
+      </div>
+      <div class="preview-iframe-wrap">
+        <div class="preview-loading" id="previewLoading">
+          <div class="preview-spinner"></div>
+          <span class="preview-loading-text">Loading preview...</span>
+        </div>
+        <iframe id="previewIframe" title="Preview of animated floating navigation bar"
+          sandbox="allow-scripts allow-same-origin"></iframe>
+        <div class="preview-hint" id="previewHint">
+          <i class='bx bx-cursor'></i> Click the icons to see the animation
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 
-<script>
-  let counter = 10;
-  let timer = null;
-  const countdownEl = document.getElementById("countdown");
-  const numberEl = document.getElementById("number");
-  const linkBox = document.getElementById("linkBox");
-
-  function startCountdown() {
-    if (timer) return;
-    timer = setInterval(() => {
-      counter--;
-      numberEl.textContent = counter;
-
-      if (counter === 0) {
-        clearInterval(timer);
-        timer = null;
-        countdownEl.style.display = "none"; 
-        linkBox.style.display = "block";
-      }
-    }, 1000);
-  }
-
-  function stopCountdown() {
-    clearInterval(timer);
-    timer = null;
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        startCountdown();
-      } else {
-        stopCountdown();
-      }
-    });
-  }, { threshold: 1.0 });
-
-  observer.observe(countdownEl);
-
-  /**hamburger**/
-
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    /* ===== HAMBURGER ===== */
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     const closeBtn = document.getElementById('closeBtn');
 
     hamburger.addEventListener('click', () => {
       mobileMenu.classList.add('active');
+      hamburger.setAttribute('aria-expanded', 'true');
     });
 
     closeBtn.addEventListener('click', () => {
       mobileMenu.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
     });
-    
 
-    window.addEventListener("scroll", function() {
-  const hamburger = document.querySelector(".hamburger");
-  if (window.scrollY > 50) {
-    hamburger.classList.add("scrolled");
-  } else {
-    hamburger.classList.remove("scrolled");
-  }
-});
+    window.addEventListener('scroll', () => {
+      hamburger.classList.toggle('scrolled', window.scrollY > 50);
+    });
 
-</script>
+    /* ===== CODE LOADING ===== */
+    const gistBase = "https://gist.githubusercontent.com/77cod-ing/54f33688ec35390f42da98e2bf0cd7f0/raw/";
+    const htmlUrl = gistBase + "index.html";
+    const cssUrl = gistBase + "style.css";
+    const jsUrl = gistBase + "script.js";
+
+    let cachedHTML = "", cachedCSS = "", cachedJS = "";
+
+    async function loadCode(url, elementId, lang) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const text = await res.text();
+        const el = document.getElementById(elementId);
+        el.textContent = text;
+        el.className = `language-${lang}`;
+        Prism.highlightElement(el);
+        if (lang === "html") cachedHTML = text;
+        if (lang === "css") cachedCSS = text;
+        if (lang === "javascript") cachedJS = text;
+      } catch (e) {
+        const el = document.getElementById(elementId);
+        if (el) el.textContent = `/* Failed to load: ${e.message} */`;
+      }
+    }
+
+    loadCode(htmlUrl, "code1", "html");
+    loadCode(cssUrl, "code2", "css");
+    loadCode(jsUrl, "code3", "javascript");
+
+    /* ===== TABS ===== */
+    document.querySelectorAll(".code-tab").forEach(tab => {
+      tab.addEventListener("click", () => {
+        document.querySelectorAll(".code-tab").forEach(t => { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
+        document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+        tab.classList.add("active");
+        tab.setAttribute("aria-selected", "true");
+        const panelMap = { html: "panel-html", css: "panel-css", js: "panel-js" };
+        document.getElementById(panelMap[tab.dataset.lang]).classList.add("active");
+      });
+    });
+
+    /* ===== COPY BUTTONS ===== */
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+        if (!code.trim()) return;
+        try {
+          await navigator.clipboard.writeText(code);
+          btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+          btn.classList.add("copied");
+          setTimeout(() => { btn.innerHTML = "<i class='bx bxs-copy'></i> Copy"; btn.classList.remove("copied"); }, 2000);
+        } catch { btn.textContent = "Error"; }
+      });
+    });
+
+    /* ===== PREVIEW MODAL ===== */
+    const previewOverlay = document.getElementById("previewOverlay");
+    const previewIframe = document.getElementById("previewIframe");
+    const previewLoading = document.getElementById("previewLoading");
+    const previewHint = document.getElementById("previewHint");
+    const previewBtn = document.getElementById("previewBtn");
+    const previewCloseBtn = document.getElementById("previewCloseBtn");
+    const previewDotClose = document.getElementById("previewDotClose");
+
+    function openPreview() {
+      previewOverlay.classList.add("open");
+      document.body.style.overflow = "hidden";
+      previewLoading.classList.remove("hidden");
+      previewHint.classList.remove("show");
+      previewBtn.classList.add("loading");
+      buildPreview();
+    }
+
+    function closePreview() {
+      previewOverlay.classList.remove("open");
+      document.body.style.overflow = "";
+      previewIframe.srcdoc = "";
+      previewBtn.classList.remove("loading");
+    }
+
+    async function buildPreview() {
+      if (cachedHTML && cachedCSS) { injectPreview(cachedHTML, cachedCSS, cachedJS); return; }
+      try {
+        const [hR, cR, jR] = await Promise.all([fetch(htmlUrl), fetch(cssUrl), fetch(jsUrl).catch(() => ({ text: () => "" }))]);
+        const html = await hR.text();
+        const css = await cR.text();
+        const js = typeof jR.text === "function" ? await jR.text() : "";
+        cachedHTML = html; cachedCSS = css; cachedJS = js;
+        injectPreview(html, css, js);
+      } catch (e) {
+        previewLoading.innerHTML = `<i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i><span class="preview-loading-text" style="color:var(--accent2);">Failed to load: ${e.message}</span>`;
+        previewBtn.classList.remove("loading");
+      }
+    }
+
+    function injectPreview(html, css, js) {
+      let combined = html.replace(/<link[^>]*href=["']style\.css["'][^>]*>/gi, `<style>${css}</style>`);
+      if (js) combined = combined.replace(/<script[^>]*src=["']script\.js["'][^>]*><\/script>/gi, `<script>${js}<\/script>`);
+      if (!combined.includes("<style>")) {
+        combined = combined.includes("</head>") ? combined.replace("</head>", `<style>${css}</style>\n</head>`) : `<style>${css}</style>\n${combined}`;
+      }
+      const bgStyle = `<style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#000d1f;}</style>`;
+      combined = combined.includes("<head>") ? combined.replace("<head>", `<head>${bgStyle}`) : bgStyle + combined;
+      previewIframe.srcdoc = combined;
+      previewIframe.addEventListener("load", function onLoad() {
+        previewLoading.classList.add("hidden");
+        previewBtn.classList.remove("loading");
+        setTimeout(() => { previewHint.classList.add("show"); setTimeout(() => previewHint.classList.remove("show"), 9000); }, 300);
+        previewIframe.removeEventListener("load", onLoad);
+      });
+    }
+
+    previewBtn.addEventListener("click", openPreview);
+    previewCloseBtn.addEventListener("click", closePreview);
+    previewDotClose.addEventListener("click", closePreview);
+    previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
+  </script>
+
 </body>
+
 </html>
-
-
-
