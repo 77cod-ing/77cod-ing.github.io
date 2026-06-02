@@ -6,20 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ===== PRIMARY SEO META ===== -->
-  <title>Glassmorphism 3D Card UI Component — HTML & CSS Tutorial 2026</title>
+  <title>3D Carousel Support Messages — HTML, CSS & JavaScript Tutorial 2026</title>
   <meta name="description"
-    content="Build a stunning Glassmorphism 3D card UI component using CSS backdrop-filter, transform, and perspective. Pure HTML & CSS — no libraries. Free source code included.">
+    content="Build a stunning interactive 3D rotating carousel using HTML, CSS, and JavaScript. Display animated message cards in 3D space with mouse-drag interaction. Free source code.">
   <meta name="keywords"
-    content="glassmorphism card css, css backdrop-filter, 3d card transform, glassmorphism ui component, css glass effect, frontend ui design, css perspective transform, hover 3d effect">
+    content="3d carousel html css javascript, interactive rotating cards, 3d message slider, css transform, javascript carousel, frontend animation effects, css 3d transforms, vanilla javascript carousel">
   <meta name="author" content="77cod_ing">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://77cod-ing.github.io/glassmorphism-card.html">
+  <link rel="canonical" href="https://77cod-ing.github.io/carousel.html">
 
   <!-- ===== OPEN GRAPH ===== -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Glassmorphism 3D Card UI Component — HTML & CSS Tutorial">
+  <meta property="og:title" content="3D Carousel Support Messages — HTML CSS JavaScript Tutorial">
   <meta property="og:description"
-    content="Build a glassmorphism 3D card UI component using CSS backdrop-filter and perspective transforms. No libraries needed.">
+    content="Build an interactive 3D rotating carousel with mouse-drag interaction and smooth animation. No libraries needed.">
   <meta property="og:site_name" content="77cod_ing">
 
   <!-- ===== SCHEMA: TechArticle ===== -->
@@ -27,16 +27,16 @@
   {
     "@context": "https://schema.org",
     "@type": "TechArticle",
-    "headline": "Glassmorphism 3D Card UI Component with CSS backdrop-filter and transform",
-    "description": "A complete tutorial on building a glassmorphism 3D card UI component using CSS backdrop-filter, perspective transforms, and hover interactions — pure HTML and CSS.",
-    "datePublished": "2026-05-21",
+    "headline": "3D Carousel Support Messages — HTML CSS JavaScript Project",
+    "description": "A complete tutorial on building a 3D rotating carousel with mouse-drag interaction, velocity decay, and smooth animation using HTML, CSS, and vanilla JavaScript.",
+    "datePublished": "2026-05-01",
     "author": { "@type": "Person", "name": "77cod_ing", "url": "https://77cod-ing.github.io" },
     "publisher": { "@type": "Organization", "name": "77cod_ing" },
-    "articleSection": "CSS Tutorials",
-    "keywords": "glassmorphism, css backdrop-filter, 3d transform, css card component, frontend design",
-    "timeRequired": "PT15M",
+    "articleSection": "JavaScript Tutorials",
+    "keywords": "3d carousel, css 3d transforms, javascript carousel, frontend animation",
+    "timeRequired": "PT20M",
     "educationalLevel": "Intermediate",
-    "teaches": ["CSS Glassmorphism", "backdrop-filter", "CSS 3D Transforms", "Perspective", "Hover Interactions"]
+    "teaches": ["CSS 3D Transforms", "Mouse Event Handling", "requestAnimationFrame", "Velocity Decay Animation", "DOM Manipulation"]
   }
   </script>
 
@@ -48,7 +48,7 @@
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
       {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
-      {"@type": "ListItem", "position": 3, "name": "Glassmorphism 3D Card", "item": "https://77cod-ing.github.io/glassmorphism-card.html"}
+      {"@type": "ListItem", "position": 3, "name": "3D Carousel", "item": "https://77cod-ing.github.io/carousel.html"}
     ]
   }
   </script>
@@ -57,6 +57,7 @@
   <link rel="icon" type="image/png" href="Picture1.png">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+  <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
@@ -64,6 +65,7 @@
     rel="stylesheet">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
     crossorigin="anonymous"></script>
+
 
   <style>
     *,
@@ -230,7 +232,7 @@
       right: -80px;
       width: 500px;
       height: 500px;
-      background: radial-gradient(circle, rgba(0, 217, 255, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -258,19 +260,19 @@
     .tag-tutorial {
       background: rgba(0, 217, 255, 0.1);
       color: var(--premcolo);
-      border: 1px solid rgba(0, 217, 255, 0.3);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+    }
+
+    .tag-js {
+      background: rgba(235, 223, 0, 0.1);
+      color: #ebdf00;
+      border: 1px solid rgba(235, 223, 0, 0.2);
     }
 
     .tag-css {
       background: rgba(192, 132, 252, 0.1);
       color: #c084fc;
       border: 1px solid rgba(192, 132, 252, 0.2);
-    }
-
-    .tag-html {
-      background: rgba(255, 102, 0, 0.1);
-      color: #ff6600;
-      border: 1px solid rgba(255, 102, 0, 0.2);
     }
 
     .tag-level {
@@ -338,7 +340,7 @@
       border-radius: 16px;
       border: 1px solid var(--border);
       display: block;
-      box-shadow: 0 0 60px rgba(0, 217, 255, 0.10), 0 32px 80px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 60px rgba(168, 85, 247, 0.12), 0 32px 80px rgba(0, 0, 0, 0.5);
     }
 
     .img-caption {
@@ -387,7 +389,7 @@
     .article-body code {
       font-family: var(--font-head);
       font-size: 0.85em;
-      background: rgba(0, 217, 255, 0.15);
+      background: rgba(0, 217, 255, 0.221);
       color: var(--premcolo);
       padding: 2px 7px;
       border-radius: 5px;
@@ -504,7 +506,7 @@
       width: 44px;
       height: 44px;
       background: rgba(0, 217, 255, 0.1);
-      border: 1px solid rgba(0, 217, 255, 0.3);
+      border: 1px solid rgba(168, 85, 247, 0.3);
       border-radius: 12px;
       display: flex;
       align-items: center;
@@ -574,6 +576,10 @@
       color: #c084fc;
     }
 
+    .code-tab[data-lang="js"].active {
+      color: #f7df1e;
+    }
+
     /* ===== PREVIEW BUTTON ===== */
     .preview-btn {
       display: inline-flex;
@@ -582,7 +588,7 @@
       padding: 9px 22px;
       border-radius: 10px;
       border: 1px solid rgba(0, 217, 255, 0.4);
-      background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(0, 217, 255, 0.05));
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(168, 85, 247, 0.05));
       color: var(--premcolo);
       font-family: var(--font-head);
       font-size: 13px;
@@ -596,7 +602,7 @@
 
     .preview-btn:hover {
       border-color: var(--premcolo);
-      box-shadow: 0 0 20px rgba(0, 217, 255, 0.25), 0 0 40px rgba(0, 217, 255, 0.1);
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.25), 0 0 40px rgba(168, 85, 247, 0.1);
       transform: translateY(-1px);
     }
 
@@ -620,7 +626,7 @@
 
     .code-box {
       background: #1e1027;
-      border: 1px solid rgba(0, 217, 255, 0.2);
+      border: 1px solid rgba(168, 85, 247, 0.2);
       border-radius: 0 12px 12px 12px;
       position: relative;
       display: none;
@@ -696,8 +702,8 @@
 
     /* ===== INFO / WARN ===== */
     .info-box {
-      background: rgba(0, 217, 255, 0.05);
-      border: 1px solid rgba(0, 217, 255, 0.2);
+      background: rgba(168, 85, 247, 0.07);
+      border: 1px solid rgba(168, 85, 247, 0.25);
       border-left: 4px solid var(--premcolo);
       border-radius: 0 12px 12px 0;
       padding: 1rem 1.25rem;
@@ -773,7 +779,7 @@
     .faq-answer code {
       font-family: var(--font-head);
       font-size: 0.85em;
-      background: rgba(0, 217, 255, 0.10);
+      background: rgba(168, 85, 247, 0.12);
       color: var(--premcolo);
       padding: 2px 6px;
       border-radius: 4px;
@@ -781,8 +787,8 @@
 
     /* ===== CONCLUSION ===== */
     .conclusion {
-      background: linear-gradient(135deg, rgba(0, 217, 255, 0.06), rgba(0, 180, 210, 0.03));
-      border: 1px solid rgba(0, 217, 255, 0.2);
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.08), rgba(124, 58, 237, 0.05));
+      border: 1px solid rgba(168, 85, 247, 0.25);
       border-radius: 16px;
       padding: 1.75rem 2rem;
       margin-top: 2.5rem;
@@ -820,7 +826,7 @@
     .link-box {
       display: none;
       padding: 14px 28px;
-      background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(0, 180, 210, 0.08));
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(124, 58, 237, 0.1));
       border: 1px solid rgba(0, 217, 255, 0.4);
       border-radius: 10px;
       width: fit-content;
@@ -829,7 +835,7 @@
     }
 
     .link-box:hover {
-      background: linear-gradient(135deg, rgba(0, 217, 255, 0.25), rgba(0, 180, 210, 0.15));
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.3), rgba(124, 58, 237, 0.2));
       transform: scale(1.03);
     }
 
@@ -918,7 +924,7 @@
       position: fixed;
       inset: 0;
       z-index: 9999;
-      background: rgba(0, 10, 30, 0.88);
+      background: rgba(20, 5, 40, 0.85);
       backdrop-filter: blur(16px);
       display: flex;
       align-items: center;
@@ -938,13 +944,13 @@
       max-width: 860px;
       height: 75vh;
       max-height: 580px;
-      background: #0a1628;
-      border: 1px solid rgba(0, 217, 255, 0.2);
+      background: #1a0d2e;
+      border: 1px solid rgba(168, 85, 247, 0.25);
       border-radius: 18px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(0, 217, 255, 0.06);
+      box-shadow: 0 0 0 1px rgba(168, 85, 247, 0.08), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(168, 85, 247, 0.08);
       transform: scale(0.92) translateY(20px);
       transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
@@ -1028,9 +1034,9 @@
     }
 
     .preview-close-btn:hover {
-      border-color: #00d9ff;
-      color: #00d9ff;
-      background: rgba(0, 217, 255, 0.08);
+      border-color: #7c3aed;
+      color: #a78bfa;
+      background: rgba(124, 58, 237, 0.1);
     }
 
     .preview-iframe-wrap {
@@ -1055,7 +1061,7 @@
       align-items: center;
       justify-content: center;
       gap: 16px;
-      background: #0a1628;
+      background: #1a0d2e;
       z-index: 2;
       transition: opacity 0.4s;
     }
@@ -1068,7 +1074,7 @@
     .preview-spinner {
       width: 40px;
       height: 40px;
-      border: 3px solid rgba(0, 217, 255, 0.2);
+      border: 3px solid rgba(168, 85, 247, 0.2);
       border-top-color: var(--premcolo);
       border-radius: 50%;
       animation: spin 0.7s linear infinite;
@@ -1113,6 +1119,12 @@
       background: rgba(192, 132, 252, 0.12);
       color: #c084fc;
       border: 1px solid rgba(192, 132, 252, 0.3);
+    }
+
+    .preview-file-tag.js-tag {
+      background: rgba(247, 223, 30, 0.1);
+      color: #f7df1e;
+      border: 1px solid rgba(247, 223, 30, 0.25);
     }
 
     .preview-hint {
@@ -1229,12 +1241,12 @@
     <ol>
       <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
       <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
-      <li><span aria-current="page">Glassmorphism 3D Card UI</span></li>
+      <li><span aria-current="page">3D Carousel Support Messages</span></li>
     </ol>
   </nav>
 
   <!-- ===== BACK BUTTON ===== -->
-  <a href="projects.html#glassmorphism-card" class="back-link" aria-label="Return to Projects">
+  <a href="projects.html#carousel" class="back-link" aria-label="Return to Projects">
     <i class='bx bx-arrow-back'></i> Return to Projects
   </a>
 
@@ -1242,26 +1254,25 @@
   <section class="hero" aria-labelledby="main-heading">
     <div class="hero-meta">
       <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
-      <span class="tag tag-html">HTML</span>
-      <span class="tag tag-css">CSS</span>
+      <span class="tag tag-js">JavaScript</span>
+      <span class="tag tag-css">CSS 3D</span>
       <span class="tag tag-level">Intermediate</span>
       <span class="read-time"><i class='bx bx-time'></i> ~15 min read</span>
     </div>
 
     <h1 id="main-heading">
-      Glassmorphism <span>3D Card UI</span><br>— CSS backdrop-filter & transform
+      3D Carousel <span>Support Messages</span><br>— HTML, CSS & JavaScript
     </h1>
 
     <p class="hero-lead">
-      Build a stunning glassmorphism 3D card UI component using only HTML and CSS.
-      Master <code>backdrop-filter</code>, <code>perspective</code>, and CSS <code>transform</code>
-      to create an interactive frosted-glass card with depth, blur, and smooth hover transitions — zero JavaScript
-      required.
+      Build an interactive 3D rotating carousel that displays animated message cards in space.
+      Using only HTML, CSS, and Vanilla JavaScript — with mouse-drag interaction,
+      velocity decay, and smooth animation. No libraries required.
     </p>
 
     <div class="hero-stats">
       <div class="stat">
-        <span class="stat-value">2</span>
+        <span class="stat-value">3</span>
         <span class="stat-label">Build Steps</span>
       </div>
       <div class="stat">
@@ -1278,11 +1289,11 @@
       </div>
     </div>
 
-    <img src="image copy 43.png"
-      alt="Glassmorphism 3D card UI component built with CSS backdrop-filter and perspective transform" class="hero-img"
+    <img src="image copy 23.png"
+      alt="3D rotating carousel with animated support message cards built using HTML CSS JavaScript" class="hero-img"
       width="1200" height="420" loading="eager">
-    <p class="img-caption">Final result: a glassmorphism 3D card with frosted glass effect, depth layers, and smooth
-      hover transforms — pure HTML & CSS</p>
+    <p class="img-caption">Final result: an interactive 3D carousel with draggable rotation and smooth velocity decay —
+      pure HTML, CSS & JavaScript</p>
   </section>
 
   <!-- ===== MAIN LAYOUT ===== -->
@@ -1307,22 +1318,21 @@
       <section id="overview">
         <h2>What You'll Build</h2>
         <p>
-          This tutorial walks you through creating a <strong>Glassmorphism 3D Card UI component</strong>
-          using only <em>HTML and CSS</em>. The result is a polished, modern card that combines the
-          frosted-glass aesthetic popularized by glassmorphism design with genuine CSS 3D depth using
-          <code>perspective</code> and <code>transform</code> properties.
+          This tutorial shows you how to create a <strong>3D rotating carousel</strong>
+          that displays animated message cards in space. Using only
+          <em>HTML, CSS, and Vanilla JavaScript</em>, you'll build an interactive
+          spinning carousel perfect for highlighting key messages, testimonials, or calls to action.
         </p>
         <p>
-          Glassmorphism is a UI design trend defined by translucent surfaces, subtle borders, and blurred backgrounds.
-          When combined with CSS 3D transforms and hover interactions, it produces a card component that feels
-          tangible, elegant, and highly engaging — a staple of modern portfolio and SaaS UI design.
+          This project is ideal if you want to practice
+          <strong>CSS 3D transforms</strong>, <strong>mouse event handling</strong>,
+          and <strong>velocity-based animation</strong> in one visually impressive project.
         </p>
 
         <div class="info-box">
-          <strong>💡 Quick Summary:</strong> We'll use <code>backdrop-filter: blur()</code> for the frosted glass
-          effect,
-          <code>perspective</code> on the parent and <code>transform: rotateX() rotateY()</code> for the 3D tilt,
-          and CSS custom properties to keep the design consistent and easy to customize.
+          <strong>💡 Quick Summary:</strong> We'll use CSS 3D transforms and JavaScript rotation logic
+          to position elements around a virtual circle, then add mouse-drag interaction
+          for realistic motion and smooth velocity decay animation.
         </div>
       </section>
 
@@ -1330,43 +1340,42 @@
 
       <!-- FEATURES -->
       <section id="features">
-        <h2>Key Features of This Glassmorphism Card</h2>
+        <h2>Key Features of This 3D Carousel</h2>
         <div class="features-grid">
           <div class="feature-card">
-            <div class="feature-icon">🪟</div>
-            <div class="feature-title">Frosted Glass Effect</div>
-            <div class="feature-desc">Achieved with <code>backdrop-filter: blur()</code> and a semi-transparent
-              background — the signature glassmorphism look.</div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">📐</div>
-            <div class="feature-title">True CSS 3D Depth</div>
-            <div class="feature-desc">Card tilts in 3D space using <code>perspective</code> on the container and
-              <code>rotateX / rotateY</code> on the card.</div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">✨</div>
-            <div class="feature-title">Glowing Border</div>
-            <div class="feature-desc">Subtle neon border using <code>rgba</code> and <code>box-shadow</code> to enhance
-              the glass panel illusion.</div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🎨</div>
-            <div class="feature-title">Gradient Background</div>
-            <div class="feature-desc">A vibrant blurred gradient scene behind the card makes the
-              <code>backdrop-filter</code> effect truly shine.</div>
+            <div class="feature-icon">🎠</div>
+            <div class="feature-title">3D Circular Layout</div>
+            <div class="feature-desc">Cards positioned in a perfect circle using <code>rotateY()</code> and
+              <code>translateZ()</code> transforms.</div>
           </div>
           <div class="feature-card">
             <div class="feature-icon">🖱️</div>
-            <div class="feature-title">Hover Interaction</div>
-            <div class="feature-desc">Smooth CSS transitions bring the card to life on hover — lifting, scaling, and
-              shifting the glow.</div>
+            <div class="feature-title">Mouse Drag Interaction</div>
+            <div class="feature-desc">Drag left or right to spin the carousel with realistic momentum feel.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💨</div>
+            <div class="feature-title">Velocity Decay</div>
+            <div class="feature-desc">Smooth deceleration after release using velocity decay and continuous animation
+              frames.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">✨</div>
+            <div class="feature-title">Glassy Neon Cards</div>
+            <div class="feature-desc">Cards feature a glassy effect with a glowing neon border to enhance the futuristic
+              aesthetic.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📐</div>
+            <div class="feature-title">Pure CSS 3D</div>
+            <div class="feature-desc">No canvas, no WebGL — just <code>perspective</code> and
+              <code>transform-style: preserve-3d</code>.</div>
           </div>
           <div class="feature-card">
             <div class="feature-icon">🚀</div>
             <div class="feature-title">Zero Dependencies</div>
-            <div class="feature-desc">Pure HTML and CSS only — no JavaScript, no frameworks, no build steps. Just open
-              and run.</div>
+            <div class="feature-desc">Pure HTML, CSS, and JavaScript — no external libraries, build tools, or CDN
+              scripts.</div>
           </div>
         </div>
       </section>
@@ -1376,7 +1385,7 @@
       <!-- HOW IT WORKS -->
       <section id="how-it-works">
         <h2>How It Works — Step by Step</h2>
-        <p>Here's a breakdown of the two core layers behind this glassmorphism 3D card.</p>
+        <p>Here's a breakdown of the three core techniques behind this 3D carousel.</p>
 
         <div class="steps">
 
@@ -1385,10 +1394,9 @@
             <div class="step-content">
               <h3>HTML Structure</h3>
               <p>
-                The markup is intentionally minimal: a scene wrapper that holds the perspective context,
-                and inside it the card element containing the content — an icon, title, description, and a
-                call-to-action button.
-                Keeping the HTML flat and semantic ensures the CSS transforms apply cleanly and predictably.
+                We define a container holding several message cards. Each one represents a support message like
+                "Subscribe", "Like This Video", etc. These elements will be positioned in a circular arrangement
+                using 3D transforms. The HTML stays clean and minimal — just a wrapper and a set of card elements.
               </p>
             </div>
           </div>
@@ -1396,15 +1404,26 @@
           <div class="step">
             <div class="step-num">02</div>
             <div class="step-content">
-              <h3>CSS — Glassmorphism + 3D Transform</h3>
+              <h3>CSS Styling & 3D Scene</h3>
               <p>
-                This is where all the magic lives. The scene container receives <code>perspective: 1000px</code>
-                to establish a 3D viewing space. The card itself uses <code>backdrop-filter: blur(20px)</code> for
-                the frosted glass effect, <code>background: rgba(255, 255, 255, 0.08)</code> for translucency,
-                and <code>border: 1px solid rgba(255, 255, 255, 0.2)</code> for the glassy edge.
-                On hover, <code>transform: rotateX(8deg) rotateY(-8deg) translateZ(30px)</code>
-                lifts and tilts the card in 3D space, while <code>transition</code> handles smooth animation —
-                all without a single line of JavaScript.
+                The CSS sets the <code>perspective</code>, background gradient, and 3D transforms.
+                Each card uses <code>transform-style: preserve-3d</code> so they exist in true 3D space.
+                Cards are styled with a glassy effect and a glowing border to enhance the neon aesthetic.
+                The <code>rotateY()</code> and <code>translateZ()</code> combo places each card on the carousel ring.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>JavaScript Rotation Logic</h3>
+              <p>
+                JavaScript calculates each card's position using angles around a circle.
+                Mouse movement adds interactivity — drag left or right to spin the carousel.
+                Smooth motion is achieved through velocity decay and continuous <code>requestAnimationFrame</code>
+                loops.
+                When you release the mouse, the carousel gradually slows to a stop naturally.
               </p>
             </div>
           </div>
@@ -1412,27 +1431,10 @@
         </div>
 
         <div class="warn-box">
-          <strong>⚠️ Browser Support Note:</strong> <code>backdrop-filter</code> is supported in all modern browsers,
-          but requires the <code>-webkit-backdrop-filter</code> prefix for full Safari compatibility. Always include
-          both
-          declarations: <code>-webkit-backdrop-filter: blur(20px);</code> and <code>backdrop-filter: blur(20px);</code>.
+          <strong>⚠️ Performance Tip:</strong> If you add many cards to the carousel, ensure each card's content
+          is lightweight. Heavy images or complex CSS filters on many 3D-transformed elements can strain the GPU
+          on lower-end devices.
         </div>
-
-        <h3>Understanding backdrop-filter</h3>
-        <p>
-          The <code>backdrop-filter</code> CSS property applies graphical effects — like blur or brightness — to the
-          area <em>behind</em> an element. For this to be visible, the element itself must be at least partially
-          transparent. Combined with a colorful gradient background, the result is the iconic frosted glass panel.
-        </p>
-
-        <h3>The 3D Perspective System</h3>
-        <p>
-          CSS 3D transforms work within a perspective coordinate system. The <code>perspective</code> property on
-          the parent defines the distance between the viewer and the z=0 plane — a lower value produces more
-          dramatic 3D distortion, while higher values create a subtler depth effect.
-          Values between <code>800px</code> and <code>1200px</code> produce the most natural-looking results
-          for card components like this one.
-        </p>
       </section>
 
       <hr>
@@ -1442,7 +1444,7 @@
         <h2>Get the Source Code</h2>
         <p>
           The full source code is available for free. Scroll down and wait for the countdown
-          to finish to get the GitHub Gist link. Or explore the code preview below.
+          to finish to get the link. Or explore the code preview below.
         </p>
 
         <div class="code-section">
@@ -1452,8 +1454,10 @@
                 aria-controls="panel-html">HTML</button>
               <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
                 aria-controls="panel-css">CSS</button>
+              <button class="code-tab" data-lang="js" role="tab" aria-selected="false"
+                aria-controls="panel-js">JS</button>
             </div>
-            <button class="preview-btn" id="previewBtn" aria-label="Preview the glassmorphism card">
+            <button class="preview-btn" id="previewBtn" aria-label="Preview the 3D carousel">
               <i class='bx bx-play-circle'></i>
               <span>Preview Result</span>
             </button>
@@ -1475,13 +1479,20 @@
               </div>
               <pre><code id="code2" class="language-css">/* Loading source code... */</code></pre>
             </div>
+
+            <div class="code-box" id="panel-js" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#f7df1e;">JS — script.js</span>
+                <button class="copy-btn" data-target="code3"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code3" class="language-javascript">// Loading source code...</code></pre>
+            </div>
           </div>
         </div>
 
         <div class="info-box">
-          <strong>💡 Quick Start:</strong> Copy both files into the same folder and open <code>index.html</code> in
-          your browser. No server or build tool required — the card renders instantly. Make sure your browser supports
-          <code>backdrop-filter</code> (all modern browsers do).
+          <strong>💡 Quick Start:</strong> Copy all files into the same folder and open <code>index.html</code> in
+          your browser. No server required — the carousel runs immediately.
         </div>
 
         <!-- COUNTDOWN -->
@@ -1492,7 +1503,7 @@
             <span id="number">10</span> seconds...
           </div>
           <div class="link-box" id="linkBox">
-            <a href="https://gist.github.com/77cod-ing/a5042fb21d96d0fc4f623ff4337ea45b" target="_blank">
+            <a href="https://gist.github.com/77cod-ing/88ab620f9447b515d9bb1f7975cd14fb" target="_blank">
               <i class='bx bx-link-external'></i> View Full Source Code on GitHub Gist
             </a>
           </div>
@@ -1507,54 +1518,49 @@
         <div class="faq">
 
           <details class="faq-item">
-            <summary class="faq-question">What is glassmorphism and how is the effect created?</summary>
+            <summary class="faq-question">What is a 3D carousel and how does it work?</summary>
             <div class="faq-answer">
-              Glassmorphism is a UI design trend that mimics frosted glass panels. The effect is created
-              by combining <code>backdrop-filter: blur()</code> to blur the background content visible through
-              the element, a semi-transparent background using <code>rgba()</code>, and a subtle white or light-colored
-              border to simulate the glass edge. A colorful or gradient background behind the card is essential
-              to make the blur effect visible.
+              A 3D carousel arranges elements in a circle and rotates them in 3D space using
+              <code>rotateY()</code> and <code>translateZ()</code> CSS transforms. Each card is placed
+              at an equal angular interval around the circle. JavaScript then rotates the entire scene
+              based on mouse or drag input.
             </div>
           </details>
 
           <details class="faq-item">
-            <summary class="faq-question">How does the 3D tilt effect work without JavaScript?</summary>
+            <summary class="faq-question">How is the drag-to-rotate interaction implemented?</summary>
             <div class="faq-answer">
-              The 3D tilt on hover is handled entirely by CSS. The parent container has
-              <code>perspective: 1000px</code> set, which creates the 3D viewing context. On <code>:hover</code>,
-              the card's <code>transform</code> property applies <code>rotateX()</code> and <code>rotateY()</code>
-              values to tilt it in 3D space, combined with <code>translateZ()</code> to lift it forward.
-              A <code>transition</code> property makes the change animate smoothly.
+              Mouse events (<code>mousedown</code>, <code>mousemove</code>, <code>mouseup</code>) track
+              the drag delta. The difference in X position between frames is converted to a rotation angle.
+              When the mouse is released, the last velocity value continues to drive rotation, decaying
+              each frame via multiplication (e.g. <code>velocity *= 0.95</code>) until it approaches zero.
             </div>
           </details>
 
           <details class="faq-item">
-            <summary class="faq-question">Does backdrop-filter work in all browsers?</summary>
+            <summary class="faq-question">Can I add more cards to the carousel?</summary>
             <div class="faq-answer">
-              <code>backdrop-filter</code> is supported in Chrome, Edge, Firefox (v103+), and Safari.
-              For Safari, you must also include <code>-webkit-backdrop-filter</code> as a prefix.
-              In older Firefox versions before v103, backdrop-filter required a flag to be enabled. For maximum
-              compatibility, always include both prefixed and unprefixed declarations side by side.
+              Yes — the JavaScript automatically calculates the angle between cards as
+              <code>360 / numberOfCards</code>, so adding more cards just means adjusting the
+              radius (<code>translateZ</code>) to fit more items without overlapping.
             </div>
           </details>
 
           <details class="faq-item">
-            <summary class="faq-question">Can I customize the card content and colors?</summary>
+            <summary class="faq-question">Why use CSS 3D transforms instead of a library?</summary>
             <div class="faq-answer">
-              Yes — all colors and blur values are set with CSS custom properties (variables), making
-              customization straightforward. Change <code>--blur</code> to adjust the frost intensity,
-              <code>--glass-bg</code> for the card transparency, and <code>--border-color</code> for the glass edge.
-              Swap out the gradient colors in the background to match any brand palette.
+              Pure CSS 3D transforms are hardware-accelerated, lightweight, and have no external
+              dependencies. For a project like this, vanilla JavaScript and CSS produce the same
+              result as a library — but with zero bundle size and full control over every detail.
             </div>
           </details>
 
           <details class="faq-item">
-            <summary class="faq-question">Can I add JavaScript mouse-tracking for a dynamic tilt?</summary>
+            <summary class="faq-question">Is this project suitable for beginners?</summary>
             <div class="faq-answer">
-              Absolutely. While this project achieves the 3D effect in pure CSS on hover, you can extend it
-              with a small JavaScript <code>mousemove</code> listener that maps the cursor position to
-              <code>rotateX</code> and <code>rotateY</code> values, creating a dynamic tilt that follows
-              the mouse pointer. The CSS structure here is already set up perfectly for that enhancement.
+              It's labeled intermediate — it requires understanding of CSS 3D transforms,
+              JavaScript event handling, and animation loops. It's a great step-up project after
+              completing basic HTML/CSS projects and wanting to dive into JavaScript animation.
             </div>
           </details>
 
@@ -1567,19 +1573,18 @@
       <section id="conclusion" class="conclusion">
         <h2>Conclusion</h2>
         <p>
-          The <strong>Glassmorphism 3D Card UI Component</strong> demonstrates just how expressive
-          modern CSS has become. By combining <strong>backdrop-filter</strong> for the frosted glass look,
-          <strong>CSS perspective transforms</strong> for genuine 3D depth, and smooth
-          <strong>hover transitions</strong> for interactivity — you get a production-ready component
-          with absolutely zero JavaScript and zero external dependencies.
+          The <strong>3D Carousel Support Messages</strong> effect gives your website a professional
+          and engaging 3D presentation. By combining <strong>CSS 3D transforms</strong> for spatial
+          positioning, <strong>mouse event handling</strong> for interactivity, and
+          <strong>velocity decay animation</strong> for realistic motion — you get a production-ready
+          component with zero dependencies.
         </p>
         <p>
-          This technique is highly versatile: use it for pricing cards, profile cards, testimonial sections,
-          feature highlights, or any UI element that benefits from a premium, modern aesthetic.
-          Customize the blur, transparency, tilt angle, and gradient to match your design language in minutes.
+          It's easy to customize: change the messages, adjust the radius, swap the neon color,
+          or add touch support for mobile. A great addition to any creative front-end project or portfolio.
         </p>
         <p style="color:var(--text-muted); font-size:14px; margin-bottom:0;">
-          Found this useful? Explore more HTML & CSS projects in the sidebar →
+          Found this useful? Explore more HTML CSS JavaScript projects in the sidebar →
         </p>
       </section>
 
@@ -1590,17 +1595,17 @@
       <div class="sidebar-box">
         <div class="sidebar-header">🔗 Related Projects</div>
         <div class="related-list">
-          <a class="related-card" href="carousel.html" aria-label="3D Carousel Support Messages">
-            <img src="image copy 23.png" alt="3D Rotating Carousel with CSS JavaScript" loading="lazy" width="280"
-              height="158">
-            <div class="related-card-overlay"></div>
-            <div class="related-card-title">3D Carousel Support Messages — HTML CSS JavaScript</div>
-          </a>
           <a class="related-card" href="Project40.html" aria-label="CSS Neon Digital Clock">
             <img src="https://i.suar.me/Ep114/m" alt="CSS Neon Digital Clock Animation" loading="lazy" width="280"
               height="158">
             <div class="related-card-overlay"></div>
             <div class="related-card-title">CSS Neon Digital Clock — HTML CSS JavaScript</div>
+          </a>
+          <a class="related-card" href="Project39.html" aria-label="Animated Button with Star Effects">
+            <img src="https://i.suar.me/jvZZv/m" alt="Creative Animated Button with Star Effects" loading="lazy"
+              width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Button with Star Effects — HTML & CSS</div>
           </a>
           <a class="related-card" href="Project37.html" aria-label="Glassmorphism Login Page">
             <img src="https://i.suar.me/Np3EO/m" alt="Modern Glassmorphism Login Page Design" loading="lazy" width="280"
@@ -1616,12 +1621,12 @@
 
   <!-- ===== PREVIEW MODAL ===== -->
   <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
-    aria-label="Live preview of the glassmorphism card">
+    aria-label="Live preview of the 3D carousel">
     <div class="preview-modal">
       <div class="preview-modal-header">
         <div class="preview-modal-title">
           <i class='bx bx-show'></i>
-          <strong>Live Preview</strong> — Glassmorphism 3D Card UI
+          <strong>Live Preview</strong> — 3D Carousel Support Messages
         </div>
         <div style="display:flex;align-items:center;gap:12px;">
           <div class="preview-dots">
@@ -1641,12 +1646,12 @@
           <div class="preview-loading-files">
             <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
             <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+            <span class="preview-file-tag js-tag" id="tagJS">JS</span>
           </div>
         </div>
-        <iframe id="previewIframe" title="Preview of glassmorphism card"
-          sandbox="allow-scripts allow-same-origin"></iframe>
+        <iframe id="previewIframe" title="Preview of 3D carousel" sandbox="allow-scripts allow-same-origin"></iframe>
         <div class="preview-hint" id="previewHint">
-          <i class='bx bx-cursor'></i> Hover over the card to see the 3D effect
+          <i class='bx bx-cursor'></i> Drag to rotate the carousel
         </div>
       </div>
     </div>
@@ -1700,7 +1705,7 @@
         document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
         tab.classList.add("active");
         tab.setAttribute("aria-selected", "true");
-        const panelMap = { html: "panel-html", css: "panel-css" };
+        const panelMap = { html: "panel-html", css: "panel-css", js: "panel-js" };
         document.getElementById(panelMap[lang]).classList.add("active");
       });
     });
@@ -1708,7 +1713,7 @@
     /* ===== Copy buttons ===== */
     document.querySelectorAll(".copy-btn").forEach(btn => {
       btn.addEventListener("click", async () => {
-        const code = document.getElementById(btn.dataset.target)?.innerText || "";
+        const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
         if (!code.trim()) return;
         try {
           await navigator.clipboard.writeText(code);
@@ -1732,12 +1737,17 @@
     const previewDotClose = document.getElementById("previewDotClose");
     const tagHTML = document.getElementById("tagHTML");
     const tagCSS = document.getElementById("tagCSS");
+    const tagJS = document.getElementById("tagJS");
 
-    const gistBase = "https://gist.githubusercontent.com/77cod-ing/a5042fb21d96d0fc4f623ff4337ea45b/raw/b98a67da6c8fb153ca58ea89808aeb4489ad9ef5/";
+    /* 
+      Replace these URLs with the actual gist raw URLs for the carousel project 
+    */
+    const gistBase = "https://gist.githubusercontent.com/77cod-ing/88ab620f9447b515d9bb1f7975cd14fb/raw/";
     const htmlUrl = gistBase + "index.html";
     const cssUrl = gistBase + "style.css";
+    const jsUrl = gistBase + "script.js";
 
-    let cachedHTML = "", cachedCSS = "";
+    let cachedHTML = "", cachedCSS = "", cachedJS = "";
 
     async function loadCode(url, elementId, lang) {
       try {
@@ -1750,6 +1760,7 @@
         if (window.Prism) Prism.highlightElement(el);
         if (lang === "html") cachedHTML = text;
         if (lang === "css") cachedCSS = text;
+        if (lang === "js") cachedJS = text;
       } catch (e) {
         const el = document.getElementById(elementId);
         if (el) el.textContent = `/* Source code will be available via the GitHub Gist link below. */`;
@@ -1758,6 +1769,7 @@
 
     loadCode(htmlUrl, "code1", "html");
     loadCode(cssUrl, "code2", "css");
+    loadCode(jsUrl, "code3", "js");
 
     function openPreview() {
       previewOverlay.classList.add("open");
@@ -1767,6 +1779,7 @@
       previewBtn.classList.add("loading");
       tagHTML.classList.remove("loaded");
       tagCSS.classList.remove("loaded");
+      tagJS.classList.remove("loaded");
       buildPreview();
     }
 
@@ -1778,27 +1791,30 @@
     }
 
     async function buildPreview() {
-      if (cachedHTML && cachedCSS) {
+      if (cachedHTML && cachedCSS && cachedJS) {
         tagHTML.classList.add("loaded");
         tagCSS.classList.add("loaded");
-        injectPreview(cachedHTML, cachedCSS);
+        tagJS.classList.add("loaded");
+        injectPreview(cachedHTML, cachedCSS, cachedJS);
         return;
       }
       try {
         const fetches = [];
         if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
         if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
+        if (!cachedJS) fetches.push(fetch(jsUrl).then(r => r.text()).then(t => { cachedJS = t; tagJS.classList.add("loaded"); }));
         if (cachedHTML) tagHTML.classList.add("loaded");
         if (cachedCSS) tagCSS.classList.add("loaded");
+        if (cachedJS) tagJS.classList.add("loaded");
         await Promise.all(fetches);
-        injectPreview(cachedHTML, cachedCSS);
+        injectPreview(cachedHTML, cachedCSS, cachedJS);
       } catch (e) {
-        previewLoading.innerHTML = `<i class='bx bx-error-circle' style="font-size:32px;color:#00d9ff;"></i><span class="preview-loading-text" style="color:#00d9ff;">Failed to load preview: ${e.message}</span>`;
+        previewLoading.innerHTML = `<i class='bx bx-error-circle' style="font-size:32px;color:#a78bfa;"></i><span class="preview-loading-text" style="color:#a78bfa;">Failed to load preview: ${e.message}</span>`;
         previewBtn.classList.remove("loading");
       }
     }
 
-    function injectPreview(html, css) {
+    function injectPreview(html, css, js) {
       let combined = html;
       if (combined.includes('<link') && /style\.css/i.test(combined)) {
         combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
@@ -1806,6 +1822,19 @@
         combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
       } else {
         combined = `<style>${css}</style>\n${combined}`;
+      }
+      if (combined.includes('<script') && /script\.js/i.test(combined)) {
+        combined = combined.replace(/<script[^>]*src=["'][^"']*script\.js["'][^>]*><\/script>/gi, `<script>${js}<\/script>`);
+      } else if (combined.includes("</body>")) {
+        combined = combined.replace("</body>", `<script>${js}<\/script>\n</body>`);
+      } else {
+        combined = `${combined}\n<script>${js}<\/script>`;
+      }
+      const bgStyle = `<style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#2c0e43,#581c87);}</style>`;
+      if (combined.includes("<head>")) {
+        combined = combined.replace("<head>", `<head>${bgStyle}`);
+      } else {
+        combined = bgStyle + combined;
       }
       previewIframe.srcdoc = combined;
       previewIframe.addEventListener("load", function onLoad() {
