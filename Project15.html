@@ -6,20 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ===== PRIMARY SEO META ===== -->
-  <title>3D Carousel Support Messages — HTML, CSS & JavaScript Tutorial 2026</title>
+  <title>Floating Label Input Effect — HTML & CSS Form Animation Tutorial 2026</title>
   <meta name="description"
-    content="Build a stunning interactive 3D rotating carousel using HTML, CSS, and JavaScript. Display animated message cards in 3D space with mouse-drag interaction. Free source code.">
+    content="Build a stunning Floating Label Input Effect using CSS transitions, :focus, and :valid selectors. Pure HTML & CSS — no JavaScript. Modern animated form design with free source code.">
   <meta name="keywords"
-    content="3d carousel html css javascript, interactive rotating cards, 3d message slider, css transform, javascript carousel, frontend animation effects, css 3d transforms, vanilla javascript carousel">
+    content="floating label input effect, css input animation, animated input field, floating placeholder css, html css form animation, modern input design, css form ui component, animated form input">
   <meta name="author" content="77cod_ing">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://77cod-ing.github.io/carousel.html">
+  <link rel="canonical" href="https://77cod-ing.github.io/floating-label-input.html">
 
   <!-- ===== OPEN GRAPH ===== -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="3D Carousel Support Messages — HTML CSS JavaScript Tutorial">
+  <meta property="og:title" content="Floating Label Input Effect — HTML & CSS Form Animation Tutorial">
   <meta property="og:description"
-    content="Build an interactive 3D rotating carousel with mouse-drag interaction and smooth animation. No libraries needed.">
+    content="Build a floating label input effect using CSS transitions, :focus, and :valid selectors. No JavaScript needed — pure HTML and CSS animated form design.">
   <meta property="og:site_name" content="77cod_ing">
 
   <!-- ===== SCHEMA: TechArticle ===== -->
@@ -27,16 +27,16 @@
   {
     "@context": "https://schema.org",
     "@type": "TechArticle",
-    "headline": "3D Carousel Support Messages — HTML CSS JavaScript Project",
-    "description": "A complete tutorial on building a 3D rotating carousel with mouse-drag interaction, velocity decay, and smooth animation using HTML, CSS, and vanilla JavaScript.",
-    "datePublished": "2026-05-01",
+    "headline": "Floating Label Input Effect with CSS Transitions, :focus, and :valid Selectors",
+    "description": "A complete tutorial on building a floating label input effect using CSS transitions, :focus and :valid pseudo-class selectors, and animated underline effects — pure HTML and CSS, no JavaScript.",
+    "datePublished": "2026-05-21",
     "author": { "@type": "Person", "name": "77cod_ing", "url": "https://77cod-ing.github.io" },
     "publisher": { "@type": "Organization", "name": "77cod_ing" },
-    "articleSection": "JavaScript Tutorials",
-    "keywords": "3d carousel, css 3d transforms, javascript carousel, frontend animation",
-    "timeRequired": "PT20M",
-    "educationalLevel": "Intermediate",
-    "teaches": ["CSS 3D Transforms", "Mouse Event Handling", "requestAnimationFrame", "Velocity Decay Animation", "DOM Manipulation"]
+    "articleSection": "CSS Tutorials",
+    "keywords": "floating label input, css input animation, animated form input, floating placeholder, html css form animation, modern input design",
+    "timeRequired": "PT15M",
+    "educationalLevel": "Beginner",
+    "teaches": ["CSS Floating Label", "CSS Transitions", ":focus Selector", ":valid Selector", "Animated Underline", "Form UI Design"]
   }
   </script>
 
@@ -48,7 +48,7 @@
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
       {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
-      {"@type": "ListItem", "position": 3, "name": "3D Carousel", "item": "https://77cod-ing.github.io/carousel.html"}
+      {"@type": "ListItem", "position": 3, "name": "Floating Label Input Effect", "item": "https://77cod-ing.github.io/floating-label-input.html"}
     ]
   }
   </script>
@@ -65,7 +65,6 @@
     rel="stylesheet">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
     crossorigin="anonymous"></script>
-
 
   <style>
     *,
@@ -232,7 +231,7 @@
       right: -80px;
       width: 500px;
       height: 500px;
-      background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.08) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -260,19 +259,19 @@
     .tag-tutorial {
       background: rgba(0, 217, 255, 0.1);
       color: var(--premcolo);
-      border: 1px solid rgba(168, 85, 247, 0.3);
-    }
-
-    .tag-js {
-      background: rgba(235, 223, 0, 0.1);
-      color: #ebdf00;
-      border: 1px solid rgba(235, 223, 0, 0.2);
+      border: 1px solid rgba(0, 217, 255, 0.3);
     }
 
     .tag-css {
       background: rgba(192, 132, 252, 0.1);
       color: #c084fc;
       border: 1px solid rgba(192, 132, 252, 0.2);
+    }
+
+    .tag-html {
+      background: rgba(255, 102, 0, 0.1);
+      color: #ff6600;
+      border: 1px solid rgba(255, 102, 0, 0.2);
     }
 
     .tag-level {
@@ -340,7 +339,7 @@
       border-radius: 16px;
       border: 1px solid var(--border);
       display: block;
-      box-shadow: 0 0 60px rgba(168, 85, 247, 0.12), 0 32px 80px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 60px rgba(0, 217, 255, 0.10), 0 32px 80px rgba(0, 0, 0, 0.5);
     }
 
     .img-caption {
@@ -389,7 +388,7 @@
     .article-body code {
       font-family: var(--font-head);
       font-size: 0.85em;
-      background: rgba(0, 217, 255, 0.221);
+      background: rgba(0, 217, 255, 0.15);
       color: var(--premcolo);
       padding: 2px 7px;
       border-radius: 5px;
@@ -506,7 +505,7 @@
       width: 44px;
       height: 44px;
       background: rgba(0, 217, 255, 0.1);
-      border: 1px solid rgba(168, 85, 247, 0.3);
+      border: 1px solid rgba(0, 217, 255, 0.3);
       border-radius: 12px;
       display: flex;
       align-items: center;
@@ -539,7 +538,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 0;
+      margin-bottom: 12px;
       flex-wrap: wrap;
       gap: 10px;
     }
@@ -554,7 +553,7 @@
       border-radius: 8px 8px 0 0;
       border: 1px solid var(--border);
       border-bottom: none;
-      background: rgba(0, 217, 255, 0.1);
+      background: rgba(255, 255, 255, 0.02);
       color: var(--text-muted);
       font-family: var(--font-head);
       font-size: 13px;
@@ -563,9 +562,9 @@
     }
 
     .code-tab.active {
-      background: #1e1027;
+      background: #1e1e2f;
       color: #fff;
-      border-color: rgba(85, 223, 247, 0.4);
+      border-color: rgba(0, 217, 255, 0.3);
     }
 
     .code-tab[data-lang="html"].active {
@@ -573,14 +572,9 @@
     }
 
     .code-tab[data-lang="css"].active {
-      color: #c084fc;
+      color: #00d9ff;
     }
 
-    .code-tab[data-lang="js"].active {
-      color: #f7df1e;
-    }
-
-    /* ===== PREVIEW BUTTON ===== */
     .preview-btn {
       display: inline-flex;
       align-items: center;
@@ -588,7 +582,7 @@
       padding: 9px 22px;
       border-radius: 10px;
       border: 1px solid rgba(0, 217, 255, 0.4);
-      background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(168, 85, 247, 0.05));
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
       color: var(--premcolo);
       font-family: var(--font-head);
       font-size: 13px;
@@ -597,17 +591,35 @@
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       overflow: hidden;
-      letter-spacing: 0.3px;
+    }
+
+    .preview-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+      opacity: 0;
+      transition: opacity 0.3s;
     }
 
     .preview-btn:hover {
       border-color: var(--premcolo);
-      box-shadow: 0 0 20px rgba(168, 85, 247, 0.25), 0 0 40px rgba(168, 85, 247, 0.1);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
       transform: translateY(-1px);
     }
 
-    .preview-btn:active {
-      transform: translateY(0) scale(0.98);
+    .preview-btn:hover::before {
+      opacity: 1;
+    }
+
+    .preview-btn i,
+    .preview-btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn i {
+      font-size: 16px;
     }
 
     .preview-btn.loading i {
@@ -625,10 +637,9 @@
     }
 
     .code-box {
-      background: #1e1027;
-      border: 1px solid rgba(168, 85, 247, 0.2);
+      background: #1e1e2f;
+      border: 1px solid rgba(0, 217, 255, 0.15);
       border-radius: 0 12px 12px 12px;
-      position: relative;
       display: none;
     }
 
@@ -683,7 +694,10 @@
       overflow-y: auto;
       overflow-x: auto;
       margin: 0;
-      background: #1e1027 !important;
+      tab-size: 2;
+      -moz-tab-size: 2;
+      white-space: pre;
+      word-break: normal;
     }
 
     pre::-webkit-scrollbar {
@@ -699,11 +713,10 @@
       background: var(--premcolo);
       border-radius: 10px;
     }
-
     /* ===== INFO / WARN ===== */
     .info-box {
-      background: rgba(168, 85, 247, 0.07);
-      border: 1px solid rgba(168, 85, 247, 0.25);
+      background: rgba(0, 217, 255, 0.05);
+      border: 1px solid rgba(0, 217, 255, 0.2);
       border-left: 4px solid var(--premcolo);
       border-radius: 0 12px 12px 0;
       padding: 1rem 1.25rem;
@@ -779,7 +792,7 @@
     .faq-answer code {
       font-family: var(--font-head);
       font-size: 0.85em;
-      background: rgba(168, 85, 247, 0.12);
+      background: rgba(0, 217, 255, 0.10);
       color: var(--premcolo);
       padding: 2px 6px;
       border-radius: 4px;
@@ -787,8 +800,8 @@
 
     /* ===== CONCLUSION ===== */
     .conclusion {
-      background: linear-gradient(135deg, rgba(168, 85, 247, 0.08), rgba(124, 58, 237, 0.05));
-      border: 1px solid rgba(168, 85, 247, 0.25);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.06), rgba(0, 180, 210, 0.03));
+      border: 1px solid rgba(0, 217, 255, 0.2);
       border-radius: 16px;
       padding: 1.75rem 2rem;
       margin-top: 2.5rem;
@@ -826,7 +839,7 @@
     .link-box {
       display: none;
       padding: 14px 28px;
-      background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(124, 58, 237, 0.1));
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(0, 180, 210, 0.08));
       border: 1px solid rgba(0, 217, 255, 0.4);
       border-radius: 10px;
       width: fit-content;
@@ -835,7 +848,7 @@
     }
 
     .link-box:hover {
-      background: linear-gradient(135deg, rgba(168, 85, 247, 0.3), rgba(124, 58, 237, 0.2));
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.25), rgba(0, 180, 210, 0.15));
       transform: scale(1.03);
     }
 
@@ -924,7 +937,7 @@
       position: fixed;
       inset: 0;
       z-index: 9999;
-      background: rgba(20, 5, 40, 0.85);
+      background: rgba(0, 10, 30, 0.88);
       backdrop-filter: blur(16px);
       display: flex;
       align-items: center;
@@ -944,13 +957,13 @@
       max-width: 860px;
       height: 75vh;
       max-height: 580px;
-      background: #1a0d2e;
-      border: 1px solid rgba(168, 85, 247, 0.25);
+      background: #0a1628;
+      border: 1px solid rgba(0, 217, 255, 0.2);
       border-radius: 18px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 0 0 1px rgba(168, 85, 247, 0.08), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(168, 85, 247, 0.08);
+      box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(0, 217, 255, 0.06);
       transform: scale(0.92) translateY(20px);
       transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
@@ -1034,9 +1047,9 @@
     }
 
     .preview-close-btn:hover {
-      border-color: #7c3aed;
-      color: #a78bfa;
-      background: rgba(124, 58, 237, 0.1);
+      border-color: #00d9ff;
+      color: #00d9ff;
+      background: rgba(0, 217, 255, 0.08);
     }
 
     .preview-iframe-wrap {
@@ -1061,7 +1074,7 @@
       align-items: center;
       justify-content: center;
       gap: 16px;
-      background: #1a0d2e;
+      background: #0a1628;
       z-index: 2;
       transition: opacity 0.4s;
     }
@@ -1074,7 +1087,7 @@
     .preview-spinner {
       width: 40px;
       height: 40px;
-      border: 3px solid rgba(168, 85, 247, 0.2);
+      border: 3px solid rgba(0, 217, 255, 0.2);
       border-top-color: var(--premcolo);
       border-radius: 50%;
       animation: spin 0.7s linear infinite;
@@ -1119,12 +1132,6 @@
       background: rgba(192, 132, 252, 0.12);
       color: #c084fc;
       border: 1px solid rgba(192, 132, 252, 0.3);
-    }
-
-    .preview-file-tag.js-tag {
-      background: rgba(247, 223, 30, 0.1);
-      color: #f7df1e;
-      border: 1px solid rgba(247, 223, 30, 0.25);
     }
 
     .preview-hint {
@@ -1241,12 +1248,12 @@
     <ol>
       <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
       <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
-      <li><span aria-current="page">3D Carousel Support Messages</span></li>
+      <li><span aria-current="page">Floating Label Input Effect</span></li>
     </ol>
   </nav>
 
   <!-- ===== BACK BUTTON ===== -->
-  <a href="projects.html#carousel" class="back-link" aria-label="Return to Projects">
+  <a href="projects.html#floating-label-input" class="back-link" aria-label="Return to Projects">
     <i class='bx bx-arrow-back'></i> Return to Projects
   </a>
 
@@ -1254,25 +1261,26 @@
   <section class="hero" aria-labelledby="main-heading">
     <div class="hero-meta">
       <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
-      <span class="tag tag-js">JavaScript</span>
-      <span class="tag tag-css">CSS 3D</span>
-      <span class="tag tag-level">Intermediate</span>
+      <span class="tag tag-html">HTML</span>
+      <span class="tag tag-css">CSS</span>
+      <span class="tag tag-level">Beginner</span>
       <span class="read-time"><i class='bx bx-time'></i> ~15 min read</span>
     </div>
 
     <h1 id="main-heading">
-      3D Carousel <span>Support Messages</span><br>— HTML, CSS & JavaScript
+      Floating Label <span>Input Effect</span><br>— CSS Transitions & Form Animation
     </h1>
 
     <p class="hero-lead">
-      Build an interactive 3D rotating carousel that displays animated message cards in space.
-      Using only HTML, CSS, and Vanilla JavaScript — with mouse-drag interaction,
-      velocity decay, and smooth animation. No libraries required.
+      Build a polished Floating Label Input Effect using only HTML and CSS.
+      Master <code>:focus</code> and <code>:valid</code> pseudo-class selectors, CSS
+      <code>transition</code>, and <code>transform</code> to animate form labels that float above the
+      input on interaction — creating a modern, accessible animated input field with zero JavaScript.
     </p>
 
     <div class="hero-stats">
       <div class="stat">
-        <span class="stat-value">3</span>
+        <span class="stat-value">2</span>
         <span class="stat-label">Build Steps</span>
       </div>
       <div class="stat">
@@ -1280,8 +1288,8 @@
         <span class="stat-label">Libraries</span>
       </div>
       <div class="stat">
-        <span class="stat-value">3D</span>
-        <span class="stat-label">CSS Transforms</span>
+        <span class="stat-value">CSS</span>
+        <span class="stat-label">Animations</span>
       </div>
       <div class="stat">
         <span class="stat-value">Free</span>
@@ -1289,11 +1297,10 @@
       </div>
     </div>
 
-    <img src="image copy 23.png"
-      alt="3D rotating carousel with animated support message cards built using HTML CSS JavaScript" class="hero-img"
+    <img src="image copy 43.png"
+      alt="Floating Label Input Effect built with HTML and CSS transitions showing animated form labels" class="hero-img"
       width="1200" height="420" loading="eager">
-    <p class="img-caption">Final result: an interactive 3D carousel with draggable rotation and smooth velocity decay —
-      pure HTML, CSS & JavaScript</p>
+    <p class="img-caption">Final result: a floating label input effect with smooth label animation, animated underline, and :focus / :valid state handling — pure HTML &amp; CSS</p>
   </section>
 
   <!-- ===== MAIN LAYOUT ===== -->
@@ -1318,21 +1325,23 @@
       <section id="overview">
         <h2>What You'll Build</h2>
         <p>
-          This tutorial shows you how to create a <strong>3D rotating carousel</strong>
-          that displays animated message cards in space. Using only
-          <em>HTML, CSS, and Vanilla JavaScript</em>, you'll build an interactive
-          spinning carousel perfect for highlighting key messages, testimonials, or calls to action.
+          This tutorial walks you through creating a <strong>Floating Label Input Effect</strong>
+          using only <em>HTML and CSS</em>. The result is a clean, modern animated form input where
+          the placeholder label sits inside the field at rest, then smoothly floats upward and shrinks
+          when the user focuses the input or begins typing — a staple of contemporary form UI design.
         </p>
         <p>
-          This project is ideal if you want to practice
-          <strong>CSS 3D transforms</strong>, <strong>mouse event handling</strong>,
-          and <strong>velocity-based animation</strong> in one visually impressive project.
+          The floating label pattern improves usability and accessibility: users always know what a
+          field is for, even after they start typing, because the label never disappears — it simply
+          repositions itself above the input. When combined with an animated underline and CSS color
+          transitions, the result is a polished, production-ready form component.
         </p>
 
         <div class="info-box">
-          <strong>💡 Quick Summary:</strong> We'll use CSS 3D transforms and JavaScript rotation logic
-          to position elements around a virtual circle, then add mouse-drag interaction
-          for realistic motion and smooth velocity decay animation.
+          <strong>💡 Quick Summary:</strong> We'll use <code>:focus</code> and <code>:valid</code>
+          pseudo-class selectors on the <code>&lt;input&gt;</code> to detect interaction state, and CSS
+          <code>transition</code> with <code>transform</code> and <code>font-size</code> changes on the
+          <code>&lt;label&gt;</code> to animate it into the floating position — no JavaScript required.
         </div>
       </section>
 
@@ -1340,42 +1349,43 @@
 
       <!-- FEATURES -->
       <section id="features">
-        <h2>Key Features of This 3D Carousel</h2>
+        <h2>Key Features of This Floating Label Input</h2>
         <div class="features-grid">
           <div class="feature-card">
-            <div class="feature-icon">🎠</div>
-            <div class="feature-title">3D Circular Layout</div>
-            <div class="feature-desc">Cards positioned in a perfect circle using <code>rotateY()</code> and
-              <code>translateZ()</code> transforms.</div>
+            <div class="feature-icon">🏷️</div>
+            <div class="feature-title">Floating Label Animation</div>
+            <div class="feature-desc">The label transitions from inside the field to above it using
+              <code>transform: translateY()</code> and <code>font-size</code> — smooth, readable, and elegant.</div>
           </div>
           <div class="feature-card">
-            <div class="feature-icon">🖱️</div>
-            <div class="feature-title">Mouse Drag Interaction</div>
-            <div class="feature-desc">Drag left or right to spin the carousel with realistic momentum feel.</div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">💨</div>
-            <div class="feature-title">Velocity Decay</div>
-            <div class="feature-desc">Smooth deceleration after release using velocity decay and continuous animation
-              frames.</div>
+            <div class="feature-icon">🎯</div>
+            <div class="feature-title">:focus &amp; :valid States</div>
+            <div class="feature-desc">CSS <code>:focus</code> detects when the input is active;
+              <code>:valid</code> keeps the label floating once content has been entered.</div>
           </div>
           <div class="feature-card">
             <div class="feature-icon">✨</div>
-            <div class="feature-title">Glassy Neon Cards</div>
-            <div class="feature-desc">Cards feature a glassy effect with a glowing neon border to enhance the futuristic
-              aesthetic.</div>
+            <div class="feature-title">Animated Underline</div>
+            <div class="feature-desc">A decorative underline expands from the center on focus using
+              <code>transform: scaleX()</code>, adding a satisfying visual feedback cue.</div>
           </div>
           <div class="feature-card">
-            <div class="feature-icon">📐</div>
-            <div class="feature-title">Pure CSS 3D</div>
-            <div class="feature-desc">No canvas, no WebGL — just <code>perspective</code> and
-              <code>transform-style: preserve-3d</code>.</div>
+            <div class="feature-icon">🎨</div>
+            <div class="feature-title">Color Transitions</div>
+            <div class="feature-desc">The label and underline smoothly shift color on focus, using CSS
+              <code>transition</code> on <code>color</code> to reinforce the active state clearly.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">♿</div>
+            <div class="feature-title">Accessible by Design</div>
+            <div class="feature-desc">Using a real <code>&lt;label&gt;</code> element linked via <code>for</code>
+              and <code>id</code> ensures screen readers correctly associate labels with inputs.</div>
           </div>
           <div class="feature-card">
             <div class="feature-icon">🚀</div>
             <div class="feature-title">Zero Dependencies</div>
-            <div class="feature-desc">Pure HTML, CSS, and JavaScript — no external libraries, build tools, or CDN
-              scripts.</div>
+            <div class="feature-desc">Pure HTML and CSS — no JavaScript, no frameworks, no build steps.
+              Copy the files and it works instantly in any modern browser.</div>
           </div>
         </div>
       </section>
@@ -1385,7 +1395,7 @@
       <!-- HOW IT WORKS -->
       <section id="how-it-works">
         <h2>How It Works — Step by Step</h2>
-        <p>Here's a breakdown of the three core techniques behind this 3D carousel.</p>
+        <p>Here's a breakdown of the two core layers that power this floating label input effect.</p>
 
         <div class="steps">
 
@@ -1394,9 +1404,14 @@
             <div class="step-content">
               <h3>HTML Structure</h3>
               <p>
-                We define a container holding several message cards. Each one represents a support message like
-                "Subscribe", "Like This Video", etc. These elements will be positioned in a circular arrangement
-                using 3D transforms. The HTML stays clean and minimal — just a wrapper and a set of card elements.
+                The markup wraps each input and its label inside a shared container element —
+                typically a <code>&lt;div class="form-group"&gt;</code>. Inside, the
+                <code>&lt;input&gt;</code> comes <em>before</em> the <code>&lt;label&gt;</code> in the
+                source order. This ordering is intentional: it allows the CSS adjacent sibling combinator
+                (<code>input + label</code> or <code>input ~ label</code>) to target the label based on
+                the input's state, which is the entire mechanism behind the CSS-only floating effect.
+                The <code>required</code> attribute on the input is also important — it enables the
+                <code>:valid</code> selector to fire correctly once the field has content.
               </p>
             </div>
           </div>
@@ -1404,26 +1419,20 @@
           <div class="step">
             <div class="step-num">02</div>
             <div class="step-content">
-              <h3>CSS Styling & 3D Scene</h3>
+              <h3>CSS — Label Float &amp; Underline Animation</h3>
               <p>
-                The CSS sets the <code>perspective</code>, background gradient, and 3D transforms.
-                Each card uses <code>transform-style: preserve-3d</code> so they exist in true 3D space.
-                Cards are styled with a glassy effect and a glowing border to enhance the neon aesthetic.
-                The <code>rotateY()</code> and <code>translateZ()</code> combo places each card on the carousel ring.
-              </p>
-            </div>
-          </div>
-
-          <div class="step">
-            <div class="step-num">03</div>
-            <div class="step-content">
-              <h3>JavaScript Rotation Logic</h3>
-              <p>
-                JavaScript calculates each card's position using angles around a circle.
-                Mouse movement adds interactivity — drag left or right to spin the carousel.
-                Smooth motion is achieved through velocity decay and continuous <code>requestAnimationFrame</code>
-                loops.
-                When you release the mouse, the carousel gradually slows to a stop naturally.
+                All the interaction lives in CSS. By default, the <code>&lt;label&gt;</code> is
+                absolutely positioned inside the form group, sitting at the baseline of the input field
+                to mimic a placeholder. When the input receives <code>:focus</code>, or when it becomes
+                <code>:valid</code> (meaning the user has typed something), the adjacent label is
+                targeted with a sibling selector: <code>input:focus ~ label, input:valid ~ label</code>.
+                At this point, CSS applies <code>transform: translateY(-1.4rem)</code> and a smaller
+                <code>font-size</code> to animate the label upward into the floating position.
+                Simultaneously, an animated underline — a <code>::after</code> pseudo-element
+                with <code>transform: scaleX(0)</code> at rest — expands to <code>scaleX(1)</code>
+                on focus, growing from the center outward to complete the polished effect.
+                A <code>transition</code> property on both elements ensures all changes animate
+                smoothly at a comfortable speed.
               </p>
             </div>
           </div>
@@ -1431,10 +1440,33 @@
         </div>
 
         <div class="warn-box">
-          <strong>⚠️ Performance Tip:</strong> If you add many cards to the carousel, ensure each card's content
-          is lightweight. Heavy images or complex CSS filters on many 3D-transformed elements can strain the GPU
-          on lower-end devices.
+          <strong>⚠️ Important: Input Order Matters.</strong> The <code>&lt;input&gt;</code> element
+          <em>must</em> appear before the <code>&lt;label&gt;</code> in the HTML. CSS can only select
+          elements that come <em>after</em> a target in the source — there is no "previous sibling"
+          selector in CSS. If the label is placed first, the <code>:focus ~ label</code> technique
+          will not work. Use <code>position: absolute</code> on the label to visually layer it over
+          the input regardless of DOM order.
         </div>
+
+        <h3>Understanding :focus and :valid</h3>
+        <p>
+          The <code>:focus</code> pseudo-class matches an input element exactly while it has keyboard
+          focus — the moment the user clicks or tabs into the field. The <code>:valid</code>
+          pseudo-class matches when the input's value satisfies its constraints (for a
+          <code>required</code> text input, this means the field is not empty). Together they cover
+          both active typing and the state after the user moves on, ensuring the label stays floating
+          so it never obscures filled-in content.
+        </p>
+
+        <h3>The Animated Underline</h3>
+        <p>
+          The underline decoration is built using a CSS <code>::after</code> pseudo-element on the
+          form group container. At rest, it has <code>width: 100%</code> but
+          <code>transform: scaleX(0)</code>, making it invisible. On focus, it transitions to
+          <code>scaleX(1)</code> with <code>transform-origin: center</code>, so it expands outward
+          from the middle of the field — a widely recognized UX pattern from Material Design that
+          users immediately associate with an active, interactive input field.
+        </p>
       </section>
 
       <hr>
@@ -1444,7 +1476,7 @@
         <h2>Get the Source Code</h2>
         <p>
           The full source code is available for free. Scroll down and wait for the countdown
-          to finish to get the link. Or explore the code preview below.
+          to finish to get the GitHub Gist link. Or explore the code preview below.
         </p>
 
         <div class="code-section">
@@ -1454,10 +1486,8 @@
                 aria-controls="panel-html">HTML</button>
               <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
                 aria-controls="panel-css">CSS</button>
-              <button class="code-tab" data-lang="js" role="tab" aria-selected="false"
-                aria-controls="panel-js">JS</button>
             </div>
-            <button class="preview-btn" id="previewBtn" aria-label="Preview the 3D carousel">
+            <button class="preview-btn" id="previewBtn" aria-label="Preview the floating label input effect">
               <i class='bx bx-play-circle'></i>
               <span>Preview Result</span>
             </button>
@@ -1474,25 +1504,19 @@
 
             <div class="code-box" id="panel-css" role="tabpanel">
               <div class="code-header">
-                <span class="code-lang-label" style="color:#c084fc;">CSS — style.css</span>
+                <span class="code-lang-label" style="color:#00d9ff;">CSS — style.css</span>
                 <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
               </div>
               <pre><code id="code2" class="language-css">/* Loading source code... */</code></pre>
-            </div>
-
-            <div class="code-box" id="panel-js" role="tabpanel">
-              <div class="code-header">
-                <span class="code-lang-label" style="color:#f7df1e;">JS — script.js</span>
-                <button class="copy-btn" data-target="code3"><i class='bx bxs-copy'></i> Copy</button>
-              </div>
-              <pre><code id="code3" class="language-javascript">// Loading source code...</code></pre>
             </div>
           </div>
         </div>
 
         <div class="info-box">
-          <strong>💡 Quick Start:</strong> Copy all files into the same folder and open <code>index.html</code> in
-          your browser. No server required — the carousel runs immediately.
+          <strong>💡 Quick Start:</strong> Copy both files into the same folder and open <code>index.html</code> in
+          your browser. No server or build tool required — the floating label effect renders instantly.
+          Make sure to include the <code>required</code> attribute on your inputs so the
+          <code>:valid</code> selector fires correctly once the field has content.
         </div>
 
         <!-- COUNTDOWN -->
@@ -1503,7 +1527,7 @@
             <span id="number">10</span> seconds...
           </div>
           <div class="link-box" id="linkBox">
-            <a href="https://gist.github.com/77cod-ing/88ab620f9447b515d9bb1f7975cd14fb" target="_blank">
+            <a href="https://gist.github.com/77cod-ing/a5042fb21d96d0fc4f623ff4337ea45b" target="_blank">
               <i class='bx bx-link-external'></i> View Full Source Code on GitHub Gist
             </a>
           </div>
@@ -1518,49 +1542,61 @@
         <div class="faq">
 
           <details class="faq-item">
-            <summary class="faq-question">What is a 3D carousel and how does it work?</summary>
+            <summary class="faq-question">What is a floating label and why use it?</summary>
             <div class="faq-answer">
-              A 3D carousel arranges elements in a circle and rotates them in 3D space using
-              <code>rotateY()</code> and <code>translateZ()</code> CSS transforms. Each card is placed
-              at an equal angular interval around the circle. JavaScript then rotates the entire scene
-              based on mouse or drag input.
+              A floating label is a form input pattern where the label starts inside the field — looking
+              like a placeholder — and then animates upward when the user focuses or fills in the input.
+              Unlike a plain HTML <code>placeholder</code>, the label never disappears once typing starts,
+              so users always know what information a field is asking for. This improves both usability and
+              accessibility, especially on long forms where context is easy to lose.
             </div>
           </details>
 
           <details class="faq-item">
-            <summary class="faq-question">How is the drag-to-rotate interaction implemented?</summary>
+            <summary class="faq-question">How does the label animate without JavaScript?</summary>
             <div class="faq-answer">
-              Mouse events (<code>mousedown</code>, <code>mousemove</code>, <code>mouseup</code>) track
-              the drag delta. The difference in X position between frames is converted to a rotation angle.
-              When the mouse is released, the last velocity value continues to drive rotation, decaying
-              each frame via multiplication (e.g. <code>velocity *= 0.95</code>) until it approaches zero.
+              The animation is handled entirely by CSS. The <code>&lt;label&gt;</code> is absolutely
+              positioned inside a relative container so it overlays the input visually. When the input
+              receives <code>:focus</code> or becomes <code>:valid</code>, a CSS sibling selector
+              (<code>input:focus ~ label</code>) targets the label and applies
+              <code>transform: translateY()</code> and a smaller <code>font-size</code>. A
+              <code>transition</code> on the label smooths the position and size change over time —
+              producing the floating animation with zero JavaScript.
             </div>
           </details>
 
           <details class="faq-item">
-            <summary class="faq-question">Can I add more cards to the carousel?</summary>
+            <summary class="faq-question">Why does the input need to come before the label in HTML?</summary>
             <div class="faq-answer">
-              Yes — the JavaScript automatically calculates the angle between cards as
-              <code>360 / numberOfCards</code>, so adding more cards just means adjusting the
-              radius (<code>translateZ</code>) to fit more items without overlapping.
+              CSS sibling selectors like <code>~</code> (general sibling) only work forward in the DOM —
+              they can select elements that appear <em>after</em> the reference element, never before.
+              Since we need to select the label based on the input's state (<code>:focus</code>,
+              <code>:valid</code>), the <code>&lt;input&gt;</code> must come first in the HTML source.
+              Absolute positioning on the label then lets us layer it visually over the input regardless of
+              source order.
             </div>
           </details>
 
           <details class="faq-item">
-            <summary class="faq-question">Why use CSS 3D transforms instead of a library?</summary>
+            <summary class="faq-question">Can I customize the colors and animation speed?</summary>
             <div class="faq-answer">
-              Pure CSS 3D transforms are hardware-accelerated, lightweight, and have no external
-              dependencies. For a project like this, vanilla JavaScript and CSS produce the same
-              result as a library — but with zero bundle size and full control over every detail.
+              Yes — all colors, transition durations, and spacing values are defined with CSS custom
+              properties (variables), making customization straightforward. Change <code>--label-color</code>
+              for the default label color, <code>--focus-color</code> for the active state accent, and
+              adjust the <code>transition</code> duration on the label and underline to speed up or slow
+              down the animation. Swap the underline color to match any brand palette instantly.
             </div>
           </details>
 
           <details class="faq-item">
-            <summary class="faq-question">Is this project suitable for beginners?</summary>
+            <summary class="faq-question">Is this accessible for screen reader users?</summary>
             <div class="faq-answer">
-              It's labeled intermediate — it requires understanding of CSS 3D transforms,
-              JavaScript event handling, and animation loops. It's a great step-up project after
-              completing basic HTML/CSS projects and wanting to dive into JavaScript animation.
+              Yes. Because the pattern uses a real <code>&lt;label&gt;</code> element connected to the
+              input via matching <code>for</code> and <code>id</code> attributes, screen readers correctly
+              announce the label when the input receives focus — the same behavior as any standard form.
+              Unlike styling a <code>placeholder</code> alone (which disappears on input and has poor
+              contrast support), this approach fully meets accessibility expectations for labelled form
+              controls.
             </div>
           </details>
 
@@ -1573,18 +1609,21 @@
       <section id="conclusion" class="conclusion">
         <h2>Conclusion</h2>
         <p>
-          The <strong>3D Carousel Support Messages</strong> effect gives your website a professional
-          and engaging 3D presentation. By combining <strong>CSS 3D transforms</strong> for spatial
-          positioning, <strong>mouse event handling</strong> for interactivity, and
-          <strong>velocity decay animation</strong> for realistic motion — you get a production-ready
-          component with zero dependencies.
+          The <strong>Floating Label Input Effect</strong> demonstrates just how expressive
+          modern CSS has become. By combining <strong>CSS sibling selectors</strong> with the
+          <strong>:focus</strong> and <strong>:valid</strong> pseudo-classes, smooth
+          <strong>transition</strong> animations, and a <strong>scaleX underline</strong> effect,
+          you get a production-ready, accessible animated form component with absolutely zero
+          JavaScript and zero external dependencies.
         </p>
         <p>
-          It's easy to customize: change the messages, adjust the radius, swap the neon color,
-          or add touch support for mobile. A great addition to any creative front-end project or portfolio.
+          This technique is highly versatile: use it for login forms, registration pages, contact
+          forms, checkout flows, or any UI where clean, modern input design matters. Adjust the
+          label color, underline accent, animation timing, and typography to match your design
+          language in minutes — all through CSS custom properties.
         </p>
         <p style="color:var(--text-muted); font-size:14px; margin-bottom:0;">
-          Found this useful? Explore more HTML CSS JavaScript projects in the sidebar →
+          Found this useful? Explore more HTML &amp; CSS projects in the sidebar →
         </p>
       </section>
 
@@ -1595,23 +1634,23 @@
       <div class="sidebar-box">
         <div class="sidebar-header">🔗 Related Projects</div>
         <div class="related-list">
+          <a class="related-card" href="Project11.html" aria-label="3D Carousel Support Messages">
+            <img src="image copy 23.png" alt="3D Rotating Carousel with CSS JavaScript" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">3D Carousel Support Messages — HTML CSS JavaScript</div>
+          </a>
           <a class="related-card" href="Project40.html" aria-label="CSS Neon Digital Clock">
             <img src="https://i.suar.me/Ep114/m" alt="CSS Neon Digital Clock Animation" loading="lazy" width="280"
               height="158">
             <div class="related-card-overlay"></div>
             <div class="related-card-title">CSS Neon Digital Clock — HTML CSS JavaScript</div>
           </a>
-          <a class="related-card" href="Project39.html" aria-label="Animated Button with Star Effects">
-            <img src="https://i.suar.me/jvZZv/m" alt="Creative Animated Button with Star Effects" loading="lazy"
-              width="280" height="158">
-            <div class="related-card-overlay"></div>
-            <div class="related-card-title">Animated Button with Star Effects — HTML & CSS</div>
-          </a>
-          <a class="related-card" href="Project37.html" aria-label="Glassmorphism Login Page">
-            <img src="https://i.suar.me/Np3EO/m" alt="Modern Glassmorphism Login Page Design" loading="lazy" width="280"
+          <a class="related-card" href="Project37.html" aria-label="Modern Login Page Design">
+            <img src="https://i.suar.me/Np3EO/m" alt="Modern Animated Login Page Design" loading="lazy" width="280"
               height="158">
             <div class="related-card-overlay"></div>
-            <div class="related-card-title">Modern Glassmorphism Login Page Design</div>
+            <div class="related-card-title">Modern Animated Login Page Design — HTML CSS</div>
           </a>
         </div>
       </div>
@@ -1621,12 +1660,12 @@
 
   <!-- ===== PREVIEW MODAL ===== -->
   <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
-    aria-label="Live preview of the 3D carousel">
+    aria-label="Live preview of the floating label input effect">
     <div class="preview-modal">
       <div class="preview-modal-header">
         <div class="preview-modal-title">
           <i class='bx bx-show'></i>
-          <strong>Live Preview</strong> — 3D Carousel Support Messages
+          <strong>Live Preview</strong> — Floating Label Input Effect
         </div>
         <div style="display:flex;align-items:center;gap:12px;">
           <div class="preview-dots">
@@ -1646,12 +1685,12 @@
           <div class="preview-loading-files">
             <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
             <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
-            <span class="preview-file-tag js-tag" id="tagJS">JS</span>
           </div>
         </div>
-        <iframe id="previewIframe" title="Preview of 3D carousel" sandbox="allow-scripts allow-same-origin"></iframe>
+        <iframe id="previewIframe" title="Preview of floating label input effect"
+          sandbox="allow-scripts allow-same-origin"></iframe>
         <div class="preview-hint" id="previewHint">
-          <i class='bx bx-cursor'></i> Drag to rotate the carousel
+          <i class='bx bx-cursor'></i> Click an input field to see the floating label animate
         </div>
       </div>
     </div>
@@ -1705,7 +1744,7 @@
         document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
         tab.classList.add("active");
         tab.setAttribute("aria-selected", "true");
-        const panelMap = { html: "panel-html", css: "panel-css", js: "panel-js" };
+        const panelMap = { html: "panel-html", css: "panel-css" };
         document.getElementById(panelMap[lang]).classList.add("active");
       });
     });
@@ -1737,17 +1776,12 @@
     const previewDotClose = document.getElementById("previewDotClose");
     const tagHTML = document.getElementById("tagHTML");
     const tagCSS = document.getElementById("tagCSS");
-    const tagJS = document.getElementById("tagJS");
 
-    /* 
-      Replace these URLs with the actual gist raw URLs for the carousel project 
-    */
-    const gistBase = "https://gist.githubusercontent.com/77cod-ing/88ab620f9447b515d9bb1f7975cd14fb/raw/";
+    const gistBase = "https://gist.githubusercontent.com/77cod-ing/a5042fb21d96d0fc4f623ff4337ea45b/raw/b98a67da6c8fb153ca58ea89808aeb4489ad9ef5/";
     const htmlUrl = gistBase + "index.html";
     const cssUrl = gistBase + "style.css";
-    const jsUrl = gistBase + "script.js";
 
-    let cachedHTML = "", cachedCSS = "", cachedJS = "";
+    let cachedHTML = "", cachedCSS = "";
 
     async function loadCode(url, elementId, lang) {
       try {
@@ -1760,7 +1794,6 @@
         if (window.Prism) Prism.highlightElement(el);
         if (lang === "html") cachedHTML = text;
         if (lang === "css") cachedCSS = text;
-        if (lang === "js") cachedJS = text;
       } catch (e) {
         const el = document.getElementById(elementId);
         if (el) el.textContent = `/* Source code will be available via the GitHub Gist link below. */`;
@@ -1769,7 +1802,6 @@
 
     loadCode(htmlUrl, "code1", "html");
     loadCode(cssUrl, "code2", "css");
-    loadCode(jsUrl, "code3", "js");
 
     function openPreview() {
       previewOverlay.classList.add("open");
@@ -1779,7 +1811,6 @@
       previewBtn.classList.add("loading");
       tagHTML.classList.remove("loaded");
       tagCSS.classList.remove("loaded");
-      tagJS.classList.remove("loaded");
       buildPreview();
     }
 
@@ -1791,30 +1822,27 @@
     }
 
     async function buildPreview() {
-      if (cachedHTML && cachedCSS && cachedJS) {
+      if (cachedHTML && cachedCSS) {
         tagHTML.classList.add("loaded");
         tagCSS.classList.add("loaded");
-        tagJS.classList.add("loaded");
-        injectPreview(cachedHTML, cachedCSS, cachedJS);
+        injectPreview(cachedHTML, cachedCSS);
         return;
       }
       try {
         const fetches = [];
         if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
         if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
-        if (!cachedJS) fetches.push(fetch(jsUrl).then(r => r.text()).then(t => { cachedJS = t; tagJS.classList.add("loaded"); }));
         if (cachedHTML) tagHTML.classList.add("loaded");
         if (cachedCSS) tagCSS.classList.add("loaded");
-        if (cachedJS) tagJS.classList.add("loaded");
         await Promise.all(fetches);
-        injectPreview(cachedHTML, cachedCSS, cachedJS);
+        injectPreview(cachedHTML, cachedCSS);
       } catch (e) {
-        previewLoading.innerHTML = `<i class='bx bx-error-circle' style="font-size:32px;color:#a78bfa;"></i><span class="preview-loading-text" style="color:#a78bfa;">Failed to load preview: ${e.message}</span>`;
+        previewLoading.innerHTML = `<i class='bx bx-error-circle' style="font-size:32px;color:#00d9ff;"></i><span class="preview-loading-text" style="color:#00d9ff;">Failed to load preview: ${e.message}</span>`;
         previewBtn.classList.remove("loading");
       }
     }
 
-    function injectPreview(html, css, js) {
+    function injectPreview(html, css) {
       let combined = html;
       if (combined.includes('<link') && /style\.css/i.test(combined)) {
         combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
@@ -1822,19 +1850,6 @@
         combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
       } else {
         combined = `<style>${css}</style>\n${combined}`;
-      }
-      if (combined.includes('<script') && /script\.js/i.test(combined)) {
-        combined = combined.replace(/<script[^>]*src=["'][^"']*script\.js["'][^>]*><\/script>/gi, `<script>${js}<\/script>`);
-      } else if (combined.includes("</body>")) {
-        combined = combined.replace("</body>", `<script>${js}<\/script>\n</body>`);
-      } else {
-        combined = `${combined}\n<script>${js}<\/script>`;
-      }
-      const bgStyle = `<style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#2c0e43,#581c87);}</style>`;
-      if (combined.includes("<head>")) {
-        combined = combined.replace("<head>", `<head>${bgStyle}`);
-      } else {
-        combined = bgStyle + combined;
       }
       previewIframe.srcdoc = combined;
       previewIframe.addEventListener("load", function onLoad() {
