@@ -1,397 +1,1751 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== PRIMARY SEO META ===== -->
+  <title>How to Download and Install Visual Studio Code on Windows (Step by Step) | 77cod_ing</title>
+  <meta name="description"
+    content="Learn how to download and install Visual Studio Code on Windows with this complete step-by-step guide. Simple instructions with screenshots for every step, system requirements, and post-installation tips.">
+  <meta name="keywords"
+    content="Visual Studio Code, VS Code, install VS Code Windows, download VS Code Windows, VS Code setup guide, VS Code step by step, VS Code Windows installer, how to install VS Code, VS Code 2025, code editor Windows, VS Code system requirements, add VS Code to PATH, VS Code extensions">
+  <meta name="author" content="77cod_ing">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://77cod-ing.github.io/Project-vscode.html">
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Download and Install Visual Studio Code on Windows (Step by Step)">
+  <meta property="og:description"
+    content="A complete step-by-step guide to downloading and installing Visual Studio Code on Windows. Screenshots included for every step.">
+  <meta property="og:image" content="https://77cod-ing.github.io/Picture2%20(2).png">
+  <meta property="og:url" content="https://77cod-ing.github.io/Project-vscode.html">
+  <meta property="og:site_name" content="77cod_ing">
+  <meta property="article:published_time" content="2025-06-01T00:00:00Z">
+  <meta property="article:modified_time" content="2025-06-15T00:00:00Z">
+  <meta property="article:author" content="77cod_ing">
+  <meta property="article:section" content="Tutorials">
+  <meta property="article:tag" content="VS Code, Windows, Code Editor, Installation Guide, Front-End Development">
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Download and Install VS Code on Windows — Step by Step">
+  <meta name="twitter:description"
+    content="Complete guide with screenshots to download and install Visual Studio Code on Windows. Free, simple, and detailed.">
+  <meta name="twitter:image" content="https://77cod-ing.github.io/Picture2%20(2).png">
+
+  <!-- ===== SCHEMA: TechArticle ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "How to Download and Install Visual Studio Code on Windows (Step by Step)",
+    "description": "A complete step-by-step guide to downloading and installing Visual Studio Code on Windows with screenshots for every step, system requirements, and post-installation configuration tips.",
+    "image": "https://77cod-ing.github.io/Picture2%20(2).png",
+    "datePublished": "2025-06-01",
+    "dateModified": "2025-06-15",
+    "author": {
+      "@type": "Person",
+      "name": "77cod_ing",
+      "url": "https://77cod-ing.github.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "77cod_ing",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Picture1.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://77cod-ing.github.io/Project-vscode.html"
+    },
+    "articleSection": "Tutorials",
+    "keywords": "Visual Studio Code, VS Code, install VS Code Windows, download VS Code, step by step guide, code editor",
+    "timeRequired": "PT10M",
+    "educationalLevel": "Beginner",
+    "teaches": ["Downloading VS Code", "Running Windows Installer", "Configuring Installation Options", "Adding VS Code to PATH", "Launching VS Code"]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: HowTo ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Download and Install Visual Studio Code on Windows",
+    "description": "Step-by-step guide to downloading and installing Visual Studio Code on a Windows PC with screenshots for every step.",
+    "image": "https://77cod-ing.github.io/Picture2%20(2).png",
+    "totalTime": "PT5M",
+    "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "0"},
+    "supply": [
+      {"@type": "HowToSupply", "name": "Windows 10 or Windows 11 PC"},
+      {"@type": "HowToSupply", "name": "Internet connection"},
+      {"@type": "HowToSupply", "name": "At least 400 MB of free disk space"}
+    ],
+    "tool": [
+      {"@type": "HowToTool", "name": "Web browser (Chrome, Edge, Firefox, etc.)"}
+    ],
+    "step": [
+      {"@type": "HowToStep", "name": "Visit the Official Website", "text": "Open your web browser and go to https://code.visualstudio.com/ to reach the official Visual Studio Code download page.", "position": 1, "image": "https://77cod-ing.github.io/image%20copy%2011.png"},
+      {"@type": "HowToStep", "name": "Download the Windows Installer", "text": "Click the 'Download for Windows' button on the homepage to download the VSCodeSetup.exe installer file.", "position": 2, "image": "https://77cod-ing.github.io/image%20copy%2012.png"},
+      {"@type": "HowToStep", "name": "Run the Installer", "text": "Locate VSCodeSetup.exe in your Downloads folder and double-click it to launch the installation wizard.", "position": 3, "image": "https://77cod-ing.github.io/image%20copy%2013.png"},
+      {"@type": "HowToStep", "name": "Accept the License Agreement", "text": "Read the license agreement, select 'I accept the agreement', and click Next to proceed.", "position": 4, "image": "https://77cod-ing.github.io/image%20copy%203.png"},
+      {"@type": "HowToStep", "name": "Choose Installation Location", "text": "Select the destination folder for installation or keep the default path, then click Next.", "position": 5, "image": "https://77cod-ing.github.io/image%20copy%204.png"},
+      {"@type": "HowToStep", "name": "Select Additional Tasks", "text": "Choose optional tasks like 'Add to PATH', 'Create Desktop Icon', and 'Add Open with Code action', then click Next.", "position": 6, "image": "https://77cod-ing.github.io/image%20copy%205.png"},
+      {"@type": "HowToStep", "name": "Install and Launch", "text": "Click Install and wait for the process to complete. Then check 'Launch Visual Studio Code' and click Finish to open it.", "position": 7, "image": "https://77cod-ing.github.io/image%20copy%207.png"}
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: FAQ ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Visual Studio Code free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Visual Studio Code is completely free and open source. It is released under the MIT license and is developed by Microsoft. There are no hidden fees, no premium tiers, and no trial periods."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the system requirements for VS Code on Windows?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "VS Code requires Windows 10 or later (64-bit), at least 1 GB of RAM (4 GB recommended), and approximately 400 MB of free disk space for the base installation. Additional space is needed for extensions and project files."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I add VS Code to PATH during installation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, it is highly recommended to check 'Add to PATH' during installation. This allows you to open VS Code from any terminal or command prompt by simply typing 'code', and enables shell integration features."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I install VS Code on Mac or Linux?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, VS Code is cross-platform. You can download versions for macOS (.zip or .dmg) and Linux (.deb, .rpm, or .tar.gz) from the official website. The installation process differs slightly for each operating system."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I update Visual Studio Code after installation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "VS Code automatically checks for updates and notifies you when a new version is available. You can also manually check for updates by going to Help > Check for Updates in the menu bar. Updates are downloaded and installed in the background."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between Visual Studio and Visual Studio Code?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Visual Studio is a full-featured IDE primarily for .NET and C++ development, available in paid editions. Visual Studio Code is a lightweight, free, extensible code editor that supports virtually any programming language through extensions. VS Code is much lighter and faster for web development."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: BreadcrumbList ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+      {"@type": "ListItem", "position": 3, "name": "Install VS Code on Windows", "item": "https://77cod-ing.github.io/Project-vscode.html"}
+    ]
+  }
+  </script>
+
+  <!-- ===== ASSETS ===== -->
   <link rel="icon" type="image/png" href="Picture1.png">
-  <title>How to Download and Install Visual Studio Code on Windows (Step by Step)</title>
-  <meta name="description" content="Learn how to download and install Visual Studio Code on Windows with this step-by-step guide. Simple instructions with images included.">
-  <meta name="keywords" content="Visual Studio Code, VS Code, install VS Code Windows, download VS Code, step by step guide">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
-     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    crossorigin="anonymous"></script>
+  <script src="//instant.page/5.2.0" type="module"></script>
+
   <style>
-    *{
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      overflow-x: hidden;
-    }
-    body {
-      background: linear-gradient(to right, #2c0e43 10%, #581c87);
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
     }
 
+    :root {
+      --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+      --premcolo: #00d9ff;
+      --accent2: #ff6b35;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --surface: rgba(255, 255, 255, 0.04);
+      --surface-hover: rgba(0, 217, 255, 0.07);
+      --border: rgba(255, 255, 255, 0.08);
+      --font-head: 'Space Mono', monospace;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--back);
+      font-family: var(--font-body);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    /* ===== NAVBAR ===== */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 50px;
-      padding: 0 2rem;
-      background-color: #0d1325;
+      height: 56px;
+      padding: 0 2.5rem;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      font-size: 22px;
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 2vw, 1.2rem);
       font-weight: bold;
       color: white;
       text-decoration: none;
+      gap: 8px;
     }
 
     .logo-icon {
-      color: #a855f7;
-      font-size: 26px;
-      margin-right: 8px;
-      letter-spacing: 2.5px;
+      color: var(--premcolo);
+      letter-spacing: 2px;
     }
 
     .nav-links {
       display: flex;
-      gap: 35px;
+      gap: clamp(1rem, 2vw, 2rem);
+      align-items: center;
     }
 
     .nav-links a {
-      color: #d1d5db;
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.25s;
     }
 
     .nav-links a:hover {
-      color: #a855f7;
-      transform: scale(1.2);
+      color: var(--premcolo);
     }
 
-    /** Return **/
-    .Ret{
-      margin: 5px 0 0 3rem;
-      width: max-content;
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      padding: 12px 2.5rem;
+      border-bottom: 1px solid var(--border);
     }
-    .Ret a {
-      font-size: 2rem;
+
+    .breadcrumb ol {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .breadcrumb li + li::before {
+      content: "\203A";
+      color: var(--premcolo);
+      margin-right: 6px;
+      font-size: 1.1rem;
+    }
+
+    .breadcrumb a {
+      color: var(--text-muted);
       text-decoration: none;
-      color: #ffffff;
+      transition: color 0.2s;
     }
-    .Ret a span{
+
+    .breadcrumb a:hover {
+      color: var(--premcolo);
+    }
+
+    .breadcrumb [aria-current="page"] {
+      color: var(--premcolo);
+      font-weight: 600;
+    }
+
+    /* ===== BACK BUTTON ===== */
+    .back-link {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
-      width: 38px;
-      height: 38px;
-      border: 2px solid #fff;
-      border-radius: 50%;
-    }
-    .Ret a:hover {
-      color: #00e1ff;
-    }
-    .Ret a:hover span {
-      border-color: #00e1ff;
-    }
-
-    /** Image **/
-    .img{
-      display: flex;
-      justify-content: center;
-      margin: 2rem auto;
-    }
-    .img img{
-      border-radius: 8px;
-      max-width: 100%;
-    }
-
-    /** Paragraph **/
-    .par{
-      line-height: 1.7;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      color: #ffffff;
-    }
-    h1, h2, h3 {
-      color: #00c8ff;
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
-    h2 {
-      margin-top: 35px;
-      font-size: 1.6rem;
-    }
-    h3 {
-      margin-top: 25px;
-      font-size: 1.3rem;
-    }
-    p {
-      margin-bottom: 18px;
-    }
-    ul {
-      margin: 15px 0;
-      padding-left: 25px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .highlight {
-      background: #000000;
-      padding: 8px 12px;
-      border-left: 4px solid #0073e6;
-      margin: 20px 0;
-    }
-
-    /** Responsive **/
-    @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-      }
-      .navbar .logo {
-        margin-bottom: 10px;
-      }
-      .navbar ul {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
-        /**respon1**/
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hamburger .scrolled {
-      background: rgba(255, 255, 255, 0.7);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-}
-
-    .hamburger span {
-      width: 28px;
-      height: 3px;
-      background: white;
-      transition: all 0.3s ease;
-    }
-
-    /* ====== القائمة المنبثقة ====== */
-    .mobile-menu {
-      position: fixed;
-      top:0;
-      left: -100%;
-      width: 100%;
-      height: 100vh;
-      padding-top: 0.5rem ;
-      background: rgb(53, 53, 53);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 35px;
-      transition: left 0.5s ease;
-      z-index: 999;
-    }
-
-    .mobile-menu.active {
-      left: 0;
-    }
-
-    .mobile-menu a {
-      color: white;
-      font-size: 22px;
-      width: 100%;
-      height: 3rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      color: var(--text);
       text-decoration: none;
-      border-bottom: 0.5px solid #fff;
-      transition: color 0.3s;
+      font-size: 14px;
+      transition: all 0.2s;
+      margin: 1rem 2.5rem;
     }
 
-    .mobile-menu a:hover {
-      color: #ffffff;
-      background: rgba(104, 104, 104, 0.508);
-      backdrop-filter: bulur(20px);
+    .back-link:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
     }
 
-    /* ====== زر الإغلاق (X) ====== */
-    .close-btn {
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 3rem 2.5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero::before {
+      content: '';
       position: absolute;
-      top: 20px;
-      right: 25px;
-      font-size: 30px;
-      color: white;
-      cursor: pointer;
-      width: 35px;
-      height: 35px;
+      top: -80px;
+      right: -80px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-meta {
       display: flex;
-      justify-content: center;
       align-items: center;
-      border: 2px solid #fff;
-      background: rgb(88, 88, 88);
-      border-radius: 50%;
-      transition: transform 0.3s ease;
+      gap: 12px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
     }
 
-    .close-btn:hover {
-      transform: rotate(90deg);
-      color: #00e1ff;
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-head);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
     }
 
-    /* ====== استجابة الهاتف ====== */
-    @media (max-width: 910px) {
+    .tag-tutorial {
+      background: rgba(0, 217, 255, 0.12);
+      color: var(--premcolo);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+    }
+
+    .tag-windows {
+      background: rgba(56, 189, 248, 0.1);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+    }
+
+    .tag-vscode {
+      background: rgba(74, 222, 128, 0.1);
+      color: #4ade80;
+      border: 1px solid rgba(74, 222, 128, 0.2);
+    }
+
+    .tag-beginner {
+      background: rgba(251, 191, 36, 0.1);
+      color: #fbbf24;
+      border: 1px solid rgba(251, 191, 36, 0.2);
+    }
+
+    .tag-free {
+      background: rgba(168, 85, 247, 0.1);
+      color: #c084fc;
+      border: 1px solid rgba(168, 85, 247, 0.2);
+    }
+
+    .read-time {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      color: var(--premcolo);
+    }
+
+    .hero-lead {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      color: var(--premcolo);
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      display: block;
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem;
+      align-items: start;
+    }
+
+    /* ===== ARTICLE ===== */
+    .article-body h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: var(--premcolo);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 80px;
+    }
+
+    .article-body h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: #7dd3fc;
+      margin: 1.8rem 0 0.75rem;
+      scroll-margin-top: 80px;
+    }
+
+    .article-body p {
+      margin-bottom: 1.1rem;
+      color: var(--text);
+    }
+
+    .article-body code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .article-body strong {
+      color: #fff;
+    }
+
+    .article-body ul,
+    .article-body ol {
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .article-body li {
+      margin-bottom: 9px;
+    }
+
+    .article-body li strong {
+      color: #fff;
+    }
+
+    .article-body a {
+      color: var(--premcolo);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .article-body a:hover {
+      border-bottom-color: var(--premcolo);
+    }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .toc-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--premcolo);
+      margin-bottom: 0.75rem;
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--premcolo);
+    }
+
+    /* ===== FEATURE CARDS ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(0, 217, 255, 0.3);
+      background: var(--surface-hover);
+    }
+
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .feature-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .feature-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ===== STEPS ===== */
+    .steps {
+      margin: 1.5rem 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      width: 44px;
+      height: 44px;
+      background: rgba(0, 217, 255, 0.1);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      color: var(--premcolo);
+      font-size: 1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+
+    .step-content p {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* ===== STEP IMAGE ===== */
+    .step-img {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      margin-top: 0.75rem;
+      display: block;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+    }
+
+    .step-img-caption {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-top: 6px;
+    }
+
+    /* ===== PRACTICE GRID ===== */
+    .practice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .practice-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+    }
+
+    .practice-card-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+    }
+
+    .practice-card.do {
+      border-left: 3px solid #4ade80;
+    }
+
+    .practice-card.do .practice-card-title {
+      color: #4ade80;
+    }
+
+    .practice-card.dont {
+      border-left: 3px solid var(--accent2);
+    }
+
+    .practice-card.dont .practice-card-title {
+      color: var(--accent2);
+    }
+
+    .practice-card ul {
+      padding-left: 1.1rem;
+      margin: 0;
+    }
+
+    .practice-card li {
+      font-size: 13px;
+      margin-bottom: 6px;
+      color: var(--text-muted);
+    }
+
+    /* ===== INFO / WARN ===== */
+    .info-box {
+      background: rgba(0, 217, 255, 0.06);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-left: 4px solid var(--premcolo);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .info-box strong {
+      color: var(--premcolo);
+    }
+
+    .warn-box {
+      background: rgba(255, 107, 53, 0.06);
+      border: 1px solid rgba(255, 107, 53, 0.2);
+      border-left: 4px solid var(--accent2);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .warn-box strong {
+      color: var(--accent2);
+    }
+
+    /* ===== QUICK SUMMARY BOX ===== */
+    .summary-box {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.08), rgba(0, 140, 160, 0.04));
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .summary-box strong {
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .summary-box p {
+      color: var(--text);
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    /* ===== REQUIREMENTS TABLE ===== */
+    .req-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 14px;
+    }
+
+    .req-table th,
+    .req-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .req-table th {
+      font-family: var(--font-head);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--premcolo);
+      background: var(--surface);
+    }
+
+    .req-table td {
+      color: var(--text-muted);
+    }
+
+    .req-table td:first-child {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .req-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .req-table-wrap {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      margin: 1.5rem 0;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      background: var(--surface);
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s;
+      list-style: none;
+      user-select: none;
+      color: var(--text);
+    }
+
+    .faq-question:hover {
+      background: var(--surface-hover);
+    }
+
+    .faq-question::after {
+      content: "+";
+      font-size: 1.3rem;
+      color: var(--premcolo);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    details[open] .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 1rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-answer code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* ===== CONCLUSION ===== */
+    .conclusion {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.07), rgba(0, 140, 160, 0.05));
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .conclusion h2 {
+      border: none;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      position: sticky;
+      top: 72px;
+    }
+
+    .sidebar-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-header {
+      padding: 14px 16px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--premcolo);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .related-list {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .related-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/9;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .related-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .related-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    .related-card-title {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* ===== QUICK LINKS SIDEBAR ===== */
+    .quick-links {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .quick-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      transition: all 0.2s;
+    }
+
+    .quick-link:hover {
+      background: var(--surface-hover);
+      color: var(--premcolo);
+    }
+
+    .quick-link i {
+      font-size: 16px;
+      color: var(--premcolo);
+      flex-shrink: 0;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1.25rem;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .related-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .related-card {
+        flex: 1 1 calc(50% - 8px);
+      }
+
+      .hero {
+        padding: 2rem 1.25rem 1.5rem;
+      }
+
+      .navbar {
+        padding: 0 1.25rem;
+      }
+
+      .breadcrumb {
+        padding: 10px 1.25rem;
+      }
+
+      .back-link {
+        margin: 0.75rem 1.25rem;
+      }
+
+      .practice-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .step {
+        grid-template-columns: 36px 1fr;
+        gap: 0.75rem;
+      }
+
+      .step-num {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+        border-radius: 10px;
+      }
+    }
+
+    @media (max-width: 640px) {
       .nav-links {
         display: none;
       }
 
-      .hamburger {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hamburger.scrolled {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      background: rgb(65, 65, 65);
-}
+      .hero-stats {
+        gap: 1.2rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .related-card {
+        flex: 1 1 100%;
+      }
+
+      .req-table-wrap {
+        overflow-x: auto;
+      }
+
+      .req-table {
+        min-width: 420px;
+      }
     }
   </style>
 </head>
+
 <body>
-<header class="navbar">
-    <a href="#" class="logo">
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <a href="https://77cod-ing.github.io/" class="logo">
       <span class="logo-icon">{ / }</span> 77cod_ing
     </a>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="https://77cod-ing.github.io/">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
       <a href="Privacy Policy.html">Privacy Policy</a>
       <a href="Terms & Conditions.html">Terms & Conditions</a>
     </nav>
-</header>
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+  </header>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="https://77cod-ing.github.io/"><i class='bx bx-home-alt-2'></i> Home</a></li>
+      <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+      <li><span aria-current="page">Install VS Code on Windows</span></li>
+    </ol>
+  </nav>
+
+  <!-- ===== BACK BUTTON ===== -->
+  <a href="projects.html#vscod" class="back-link" aria-label="Return to Projects">
+    <i class='bx bx-arrow-back'></i> Return to Projects
+  </a>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="main-heading">
+    <div class="hero-meta">
+      <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+      <span class="tag tag-windows"><i class='bx bx-desktop'></i> Windows</span>
+      <span class="tag tag-vscode"><i class='bx bxl-visual-studio'></i> VS Code</span>
+      <span class="tag tag-beginner">Beginner</span>
+      <span class="tag tag-free">Free</span>
+      <span class="read-time"><i class='bx bx-time'></i> ~5 min read</span>
     </div>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <span class="close-btn" id="closeBtn">&times;</span>
-    <a href="index.html"style="border-top: 2px solid #fff;height: 5rem;">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html" style="border-bottom: 2px solid #fff;">Terms & Conditions</a>
+    <h1 id="main-heading">
+      How to <span>Download and Install</span><br>Visual Studio Code on Windows
+    </h1>
+
+    <p class="hero-lead">
+      Visual Studio Code (VS Code) is the most popular free code editor for developers worldwide.
+      This step-by-step guide walks you through downloading and installing VS Code on Windows
+      with screenshots for every single step — from visiting the official website to launching
+      your first editor session.
+    </p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value">8</span>
+        <span class="stat-label">Simple Steps</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">0$</span>
+        <span class="stat-label">Totally Free</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">~5 min</span>
+        <span class="stat-label">Install Time</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">400 MB</span>
+        <span class="stat-label">Disk Space</span>
+      </div>
+    </div>
+
+    <img src="Picture2 (2).png"
+      alt="Visual Studio Code official website homepage showing the download button for Windows"
+      class="hero-img" width="1200" height="420" loading="eager" fetchpriority="high">
+    <p class="img-caption">Visual Studio Code official website — the starting point for your installation</p>
+  </section>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <div class="layout">
+
+    <!-- ===== ARTICLE ===== -->
+    <main class="article-body" id="main-content">
+
+      <!-- TOC -->
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-title">Table of Contents</p>
+        <ol>
+          <li><a href="#overview">What is Visual Studio Code?</a></li>
+          <li><a href="#requirements">System Requirements</a></li>
+          <li><a href="#features">Why Choose VS Code?</a></li>
+          <li><a href="#steps">Installation — Step by Step</a></li>
+          <li><a href="#after-install">After Installation — What to Do Next</a></li>
+          <li><a href="#best-practices">Best Practices & Common Mistakes</a></li>
+          <li><a href="#faq">Frequently Asked Questions</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </nav>
+
+      <!-- OVERVIEW -->
+      <section id="overview">
+        <h2>What is Visual Studio Code?</h2>
+        <p>
+          <strong>Visual Studio Code</strong> (commonly called <strong>VS Code</strong>) is a free,
+          open-source code editor developed by Microsoft. It's lightweight, fast, and packed with
+          powerful features like IntelliSense code completion, built-in Git support, an integrated
+          terminal, and a massive extensions marketplace with over 40,000 extensions.
+        </p>
+        <p>
+          VS Code supports <strong>virtually every programming language</strong> — JavaScript, Python,
+          HTML/CSS, C++, Java, Go, Rust, and many more — through its extension system. It's the
+          most-used code editor in the world according to the Stack Overflow Developer Survey,
+          preferred by over 70% of developers.
+        </p>
+
+        <div class="summary-box">
+          <strong>Quick Summary</strong>
+          <p>
+            Open the official website → Download the Windows installer → Run the setup → Accept the
+            license → Choose the installation path → Select additional tasks (like "Add to PATH") →
+            Click Install → Launch VS Code. Screenshots for every step are included below.
+          </p>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- REQUIREMENTS -->
+      <section id="requirements">
+        <h2>System Requirements for VS Code on Windows</h2>
+        <p>
+          Before downloading, make sure your system meets these minimum requirements. VS Code is
+          very lightweight, so most modern Windows PCs will run it without any issues.
+        </p>
+
+        <div class="req-table-wrap">
+          <table class="req-table">
+            <thead>
+              <tr>
+                <th>Requirement</th>
+                <th>Minimum</th>
+                <th>Recommended</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Operating System</td>
+                <td>Windows 10 (64-bit)</td>
+                <td>Windows 11 (64-bit)</td>
+              </tr>
+              <tr>
+                <td>Processor (CPU)</td>
+                <td>1.6 GHz or faster</td>
+                <td>2.0 GHz dual-core or faster</td>
+              </tr>
+              <tr>
+                <td>Memory (RAM)</td>
+                <td>1 GB</td>
+                <td>4 GB or more</td>
+              </tr>
+              <tr>
+                <td>Disk Space</td>
+                <td>400 MB</td>
+                <td>1 GB+ (with extensions)</td>
+              </tr>
+              <tr>
+                <td>Internet Connection</td>
+                <td>Required for download</td>
+                <td>Required for extensions & updates</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-box">
+          <strong>Note:</strong> VS Code is a <strong>64-bit application</strong> and will not
+          install on 32-bit versions of Windows. If you're unsure, right-click <strong>This PC</strong>
+          → <strong>Properties</strong> and check your system type.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- FEATURES -->
+      <section id="features">
+        <h2>Why Choose Visual Studio Code?</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🆓</div>
+            <div class="feature-title">Free & Open Source</div>
+            <div class="feature-desc">Completely free under the MIT license. No premium tiers, no trial periods, no hidden costs.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🪶</div>
+            <div class="feature-title">Lightweight & Fast</div>
+            <div class="feature-desc">Starts in under 2 seconds. Uses minimal RAM compared to full IDEs like Visual Studio or IntelliJ.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🧩</div>
+            <div class="feature-title">40,000+ Extensions</div>
+            <div class="feature-desc">Add language support, themes, debuggers, linters, Git tools, and more from the built-in marketplace.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🧠</div>
+            <div class="feature-title">IntelliSense</div>
+            <div class="feature-desc">Smart code completion, parameter hints, and quick info across JavaScript, Python, HTML, CSS, and more.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔧</div>
+            <div class="feature-title">Integrated Terminal</div>
+            <div class="feature-desc">Run commands, git operations, and build scripts without leaving the editor. Supports PowerShell, CMD, and WSL.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔀</div>
+            <div class="feature-title">Built-in Git Support</div>
+            <div class="feature-desc">Track changes, stage files, commit, push, and pull directly from the source control sidebar.</div>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- INSTALLATION STEPS -->
+      <section id="steps">
+        <h2>Installation — Step by Step</h2>
+        <p>
+          Follow these 8 simple steps to download and install Visual Studio Code on your Windows PC.
+          Each step includes a screenshot so you can follow along visually.
+        </p>
+
+        <div class="steps">
+
+          <!-- Step 1 -->
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>Visit the Official VS Code Website</h3>
+              <p>
+                Open your web browser (Chrome, Edge, Firefox, etc.) and navigate to
+                <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">https://code.visualstudio.com/</a>.
+                This is the official Microsoft page — always download from here to avoid modified or
+                unsafe installers.
+              </p>
+              <img src="image copy 11.png"
+                alt="VS Code official website homepage showing the blue download button for Windows"
+                class="step-img" width="700" height="394" loading="lazy">
+              <p class="step-img-caption">The official Visual Studio Code download page</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>Download the Windows Installer</h3>
+              <p>
+                Click the <strong>"Download for Windows"</strong> button. The website will automatically
+                detect your system and offer the correct <code>.exe</code> installer (usually
+                <strong>User Installer</strong> for 64-bit Windows). The file
+                <code>VSCodeSetup-x64-*.exe</code> will be saved to your Downloads folder.
+              </p>
+              <img src="image copy 12.png"
+                alt="Download button highlighted on the VS Code website for Windows"
+                class="step-img" width="700" height="394" loading="lazy">
+              <p class="step-img-caption">Click "Download for Windows" to get the installer</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>Run the Installer</h3>
+              <p>
+                Open your <strong>Downloads</strong> folder and locate
+                <code>VSCodeSetup.exe</code>. Double-click the file to launch the installation wizard.
+                If Windows shows a "User Account Control" prompt asking "Do you want to allow this app
+                to make changes?", click <strong>Yes</strong>.
+              </p>
+              <img src="image copy 13.png"
+                alt="VS Code installer welcome screen after running VSCodeSetup.exe"
+                class="step-img" width="700" height="394" loading="lazy">
+              <p class="step-img-caption">The VS Code setup wizard welcome screen</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h3>Accept the License Agreement</h3>
+              <p>
+                Read the license agreement (it's the MIT License — very permissive), select
+                <strong>"I accept the agreement"</strong>, and click <strong>Next</strong> to continue
+                with the installation.
+              </p>
+              <img src="image copy 3.png"
+                alt="VS Code license agreement screen with the accept option selected"
+                class="step-img" width="700" height="394" loading="lazy">
+              <p class="step-img-caption">Accept the MIT license agreement to proceed</p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="step">
+            <div class="step-num">05</div>
+            <div class="step-content">
+              <h3>Choose the Installation Location</h3>
+              <p>
+                Select the folder where VS Code will be installed. The default path is usually
+                <code>C:\Users\[YourName]\AppData\Local\Programs\Microsoft VS Code</code>.
+                You can keep the default or click <strong>Browse</strong> to choose a custom location,
+                then press <strong>Next</strong>.
+              </p>
+              <img src="image copy 4.png"
+                alt="Installation location selection screen in VS Code setup"
+                class="step-img" width="700" height="394" loading="lazy">
+              <p class="step-img-caption">Choose where to install VS Code on your drive</p>
+            </div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="step">
+            <div class="step-num">06</div>
+            <div class="step-content">
+              <h3>Select Additional Tasks</h3>
+              <p>
+                This is an important screen. Here are the recommended options to check:
+              </p>
+              <ul style="margin-top: 0.5rem;">
+                <li><strong>Add "Open with Code" action to Windows Explorer file context menu</strong> — right-click any file to open it in VS Code</li>
+                <li><strong>Add "Open with Code" action to Windows Explorer directory context menu</strong> — right-click any folder to open it as a project</li>
+                <li><strong>Register Code as an editor for supported file types</strong> — makes VS Code the default for .js, .py, .html, etc.</li>
+                <li><strong>Add to PATH</strong> — allows you to type <code>code</code> in any terminal to open VS Code</li>
+                <li><strong>Create a Desktop Shortcut</strong> — quick access from your desktop</li>
+              </ul>
+              <p style="margin-top: 0.75rem; margin-bottom: 0;">
+                After selecting your options, click <strong>Next</strong>.
+              </p>
+              <img src="image copy 5.png"
+                alt="Additional tasks screen showing PATH, desktop shortcut, and context menu options"
+                class="step-img" width="700" height="394" loading="lazy">
+              <p class="step-img-caption">Select additional tasks — "Add to PATH" is highly recommended</p>
+            </div>
+          </div>
+
+          <!-- Step 7 -->
+          <div class="step">
+            <div class="step-num">07</div>
+            <div class="step-content">
+              <h3>Install Visual Studio Code</h3>
+              <p>
+                Click the <strong>Install</strong> button to begin the installation process. This
+                typically takes <strong>30 seconds to 2 minutes</strong> depending on your system speed.
+                Wait for the progress bar to complete.
+              </p>
+              <img src="image copy 6.png"
+                alt="VS Code installation progress bar showing the setup is copying files"
+                class="step-img" width="700" height="394" loading="lazy">
+              <p class="step-img-caption">Installation in progress — wait for it to finish</p>
+            </div>
+          </div>
+
+          <!-- Step 8 -->
+          <div class="step">
+            <div class="step-num">08</div>
+            <div class="step-content">
+              <h3>Launch Visual Studio Code</h3>
+              <p>
+                Once the installation is complete, check the box labeled
+                <strong>"Launch Visual Studio Code"</strong> and click <strong>Finish</strong>.
+                VS Code will open immediately, and you'll see the welcome tab with quick-start options.
+              </p>
+              <img src="image copy 7.png"
+                alt="VS Code completion screen with the launch checkbox and finish button"
+                class="step-img" width="700" height="394" loading="lazy">
+              <p class="step-img-caption">Check "Launch Visual Studio Code" and click Finish</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="info-box">
+          <strong>Pro Tip:</strong> If you forgot to check "Add to PATH" during installation, you can
+          add it manually later. Open VS Code → press <code>Ctrl+Shift+P</code> → type
+          <code>shell command</code> → select <strong>"Shell Command: Install 'code' command in PATH"</strong>.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- AFTER INSTALLATION -->
+      <section id="after-install">
+        <h2>After Installation — What to Do Next</h2>
+        <p>
+          Now that VS Code is installed, here are the first things you should do to set up your
+          development environment properly:
+        </p>
+
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h3>Install Essential Extensions</h3>
+              <p>
+                Click the <strong>Extensions</strong> icon in the sidebar (or press <code>Ctrl+Shift+X</code>)
+                and install must-have extensions like <strong>Prettier</strong> (code formatting),
+                <strong>ESLint</strong> (JavaScript linting), <strong>Live Server</strong> (local dev server),
+                and language-specific extensions for your stack.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h3>Change the Theme</h3>
+              <p>
+                Go to <strong>File → Preferences → Color Theme</strong> (or <code>Ctrl+K Ctrl+T</code>)
+                and pick a theme you like. Popular choices include <strong>Dark+ (default dark)</strong>,
+                <strong>One Dark Pro</strong>, <strong>GitHub Dark</strong>, and <strong>Ayu Dark</strong>.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h3>Open Your First Project</h3>
+              <p>
+                Go to <strong>File → Open Folder</strong> (or <code>Ctrl+K Ctrl+O</code>) and select
+                a folder on your computer. VS Code will show your files in the Explorer sidebar, and
+                you can start editing immediately.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h3>Try the Integrated Terminal</h3>
+              <p>
+                Press <code>Ctrl+`</code> (backtick) to open the built-in terminal. You can run
+                <code>npm install</code>, <code>git</code> commands, <code>python</code> scripts, and
+                more — all without leaving VS Code.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">5</div>
+            <div class="step-content">
+              <h3>Enable Auto Save</h3>
+              <p>
+                Go to <strong>File → Auto Save</strong> to enable automatic file saving. This prevents
+                you from losing work if you accidentally close the editor or your computer crashes.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- BEST PRACTICES -->
+      <section id="best-practices">
+        <h2>Best Practices & Common Mistakes</h2>
+
+        <div class="practice-grid">
+          <div class="practice-card do">
+            <div class="practice-card-title">Do</div>
+            <ul>
+              <li>Always download from the official <code>code.visualstudio.com</code> website</li>
+              <li>Check <strong>"Add to PATH"</strong> during installation</li>
+              <li>Enable <strong>"Open with Code"</strong> context menu options</li>
+              <li>Keep VS Code updated for security and performance fixes</li>
+              <li>Install only necessary extensions to keep the editor fast</li>
+              <li>Use the <strong>User Installer</strong> (not System Installer) for personal use</li>
+            </ul>
+          </div>
+          <div class="practice-card dont">
+            <div class="practice-card-title">Don't</div>
+            <ul>
+              <li>Download VS Code from third-party sites or unofficial sources</li>
+              <li>Skip the "Add to PATH" option — you'll need it for terminal usage</li>
+              <li>Install too many extensions at once — it slows down startup time</li>
+              <li>Use the System Installer unless you're an IT admin managing shared machines</li>
+              <li>Ignore update notifications — they often include important security patches</li>
+              <li>Store large project files directly on the VS Code installation drive if space is limited</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="warn-box">
+          <strong>Security Warning:</strong> Never download VS Code from third-party download sites,
+          cracked software portals, or suspicious links. These may contain modified installers with
+          malware, adware, or tracking software. The official URL is always
+          <strong>code.visualstudio.com</strong>.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+
+          <details class="faq-item">
+            <summary class="faq-question">Is Visual Studio Code free?</summary>
+            <div class="faq-answer">
+              Yes, Visual Studio Code is <strong>completely free and open source</strong>. It is released
+              under the MIT license and developed by Microsoft. There are no hidden fees, no premium tiers,
+              no trial periods, and no feature restrictions. Every feature — including the debugger,
+              Git integration, and extensions marketplace — is free for everyone.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">What are the system requirements for VS Code on Windows?</summary>
+            <div class="faq-answer">
+              VS Code requires <strong>Windows 10 or later (64-bit)</strong>, at least <strong>1 GB of RAM</strong>
+              (4 GB recommended), and approximately <strong>400 MB of free disk space</strong> for the base
+              installation. You'll need additional space for extensions and your project files. A 1.6 GHz
+              or faster processor is the minimum requirement.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Should I add VS Code to PATH during installation?</summary>
+            <div class="faq-answer">
+              <strong>Yes, absolutely.</strong> Adding VS Code to PATH allows you to open the editor from
+              any terminal or command prompt by simply typing <code>code</code>. It also enables shell
+              integration features and makes it possible to use VS Code as the default editor for tools
+              like Git. If you skipped this during installation, you can add it later from the command
+              palette (<code>Ctrl+Shift+P</code> → "Shell Command: Install 'code' command in PATH").
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Can I install VS Code on Mac or Linux?</summary>
+            <div class="faq-answer">
+              Yes, VS Code is <strong>fully cross-platform</strong>. For macOS, download the
+              <code>.zip</code> or <code>.dmg</code> file from the official website. For Linux, choose
+              your package format: <code>.deb</code> (Debian/Ubuntu), <code>.rpm</code> (Fedora/RHEL),
+              or <code>.tar.gz</code> (universal). You can also install via package managers like
+              <code>brew install --cask visual-studio-code</code> on macOS or
+              <code>sudo apt install code</code> on Ubuntu.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How do I update Visual Studio Code after installation?</summary>
+            <div class="faq-answer">
+              VS Code <strong>automatically checks for updates</strong> in the background and shows a
+              notification when a new version is available. Click the notification to restart and update.
+              You can also manually check by going to <strong>Help → Check for Updates</strong> in the
+              menu bar. Updates are downloaded incrementally and installed quickly without requiring a
+              full re-download.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">What is the difference between Visual Studio and Visual Studio Code?</summary>
+            <div class="faq-answer">
+              <strong>Visual Studio</strong> is a full-featured, heavyweight IDE primarily designed for
+              .NET, C++, and enterprise development. It comes in paid editions (Community, Professional,
+              Enterprise) and requires significant disk space (several GB). <strong>Visual Studio Code</strong>
+              is a lightweight, free, extensible <em>code editor</em> that supports virtually any language
+              through extensions. VS Code starts faster, uses less memory, and is the preferred choice
+              for web development, scripting, and general-purpose coding.
+            </div>
+          </details>
+
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- CONCLUSION -->
+      <section id="conclusion" class="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          Congratulations! You've successfully <strong>downloaded and installed Visual Studio Code
+          on Windows</strong> in just 8 simple steps. VS Code is now ready to use — you can open files,
+          install extensions, customize your theme, and start building projects right away.
+        </p>
+        <p>
+          To get the most out of VS Code, make sure you've added it to PATH, enabled the context menu
+          options, and installed the essential extensions for your development stack. Check out the
+          related tutorials in the sidebar for more guides on setting up your coding environment.
+        </p>
+        <p style="color:var(--text-muted); font-size:14px; margin-bottom:0;">
+          Found this guide helpful? Explore the related projects below for more tutorials and modern
+          front-end UI components.
+        </p>
+      </section>
+
+    </main>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" aria-label="Related content">
+
+      <!-- Quick Links -->
+      <div class="sidebar-box">
+        <div class="sidebar-header">Quick Links</div>
+        <div class="quick-links">
+          <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="quick-link">
+            <i class='bx bx-download'></i> Download VS Code
+          </a>
+          <a href="https://code.visualstudio.com/docs" target="_blank" rel="noopener noreferrer" class="quick-link">
+            <i class='bx bx-book'></i> VS Code Docs
+          </a>
+          <a href="https://marketplace.visualstudio.com/vscode" target="_blank" rel="noopener noreferrer" class="quick-link">
+            <i class='bx bx-plug'></i> Extensions Marketplace
+          </a>
+          <a href="https://code.visualstudio.com/updates" target="_blank" rel="noopener noreferrer" class="quick-link">
+            <i class='bx bx-refresh'></i> Release Notes
+          </a>
+        </div>
+      </div>
+
+      <!-- Related Projects -->
+      <div class="sidebar-box">
+        <div class="sidebar-header">Related Projects</div>
+        <div class="related-list">
+          <a class="related-card" href="Project-subscribe.html" aria-label="3D Flip Login Interface Tutorial">
+            <img src="https://77cod-ing.github.io/image%20copy%2088.png" alt="3D Flip Login and Register Interface built with HTML CSS and JavaScript" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">3D Flip Login & Register Interface — HTML CSS JS</div>
+          </a>
+          <a class="related-card" href="Project37.html" aria-label="Glassmorphism Login Page">
+            <img src="https://i.suar.me/Np3EO/m" alt="Modern Glassmorphism Login Page Design" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Modern Glassmorphism Login Page Design</div>
+          </a>
+          <a class="related-card" href="Project39.html" aria-label="Animated Button with Star Effects">
+            <img src="https://i.suar.me/jvZZv/m" alt="Animated Button with Star Effects" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Button with Star Effects — HTML & CSS</div>
+          </a>
+          <a class="related-card" href="Project40.html" aria-label="CSS Neon Digital Clock">
+            <img src="https://i.suar.me/Ep114/m" alt="CSS Neon Digital Clock Animation" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">CSS Neon Digital Clock Animation</div>
+          </a>
+        </div>
+      </div>
+    </aside>
+
   </div>
 
-<div class="Ret">
-  <a href="projects.html#vscod"><pre><span>&lt;</span> Return</pre></a>
-</div>
-
-<div class="img">
-  <img src="Picture2 (2).png" alt="Visual Studio Code official website homepage">
-</div>
-
-<div class="par">
-  <h1>How to Download and Install Visual Studio Code on Windows (Step by Step)</h1>
-
-  <p>
-    Visual Studio Code (VS Code) is one of the most popular code editors for developers.
-    It’s free, lightweight, and packed with useful extensions. In this guide, you’ll learn
-    <strong>how to download and install Visual Studio Code on Windows step by step</strong>.
-  </p>
-
-  <div class="highlight">
-    <p><strong>Quick Summary:</strong> Open the official website, download the Windows installer, run the setup, choose options, and launch VS Code. Screenshots included below.</p>
-  </div>
-
-  <h2>Step 1: Visit the Official Visual Studio Code Website</h2>
-  <p>Go to <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a>.</p>
-  <div class="img"><img src="image copy 11.png" alt="VS Code official website"></div>
-
-  <h2>Step 2: Download the Windows Installer</h2>
-  <p>Click <strong>Download for Windows</strong> to get the setup file.</p>
-  <div class="img"><img src="image copy 12.png" alt="Download button for VS Code Windows"></div>
-
-  <h2>Step 3: Run the Installer</h2>
-  <p>Locate <code>VSCodeSetup.exe</code> in your Downloads folder and double-click to start.</p>
-  <div class="img"><img src="image copy 13.png" alt="VS Code installer window"></div>
-
-  <h2>Step 4: Accept License Agreement</h2>
-  <p>Accept the agreement and click <strong>Next</strong>.</p>
-  <div class="img"><img src="image copy 3.png" alt="VS Code license agreement"></div>
-
-  <h2>Step 5: Choose Installation Location</h2>
-  <p>Select your folder or keep the default path, then press <strong>Next</strong>.</p>
-  <div class="img"><img src="image copy 4.png" alt="Choose installation folder"></div>
-
-  <h2>Step 6: Select Additional Tasks</h2>
-  <p>Choose options like <em>“Add to PATH”</em> or <em>Create a desktop icon</em>, then click <strong>Next</strong>.</p>
-  <div class="img"><img src="image copy 5.png" alt="Additional tasks options"></div>
-
-  <h2>Step 7: Install Visual Studio Code</h2>
-  <p>Click <strong>Install</strong> and wait for the process to complete.</p>
-  <div class="img"><img src="image copy 6.png" alt="Installation progress of VS Code"></div>
-
-  <h2>Step 8: Launch Visual Studio Code</h2>
-  <p>Check <strong>Launch Visual Studio Code</strong> and click <strong>Finish</strong> to open it.</p>
-  <div class="img"><img src="image copy 7.png" alt="Launching VS Code after installation"></div>
-
-  <h2>Conclusion</h2>
-  <p>
-    Congratulations! You’ve successfully installed Visual Studio Code on Windows. 
-    Now you can install extensions, customize themes, and start building projects efficiently.
-  </p>
-
-  <div class="highlight">
-    <p><strong>SEO Keywords:</strong> Visual Studio Code, VS Code, install VS Code Windows, download VS Code, step by step guide</p>
-  </div>
-</div>
-  <script>
-    /**hamburger**/
-
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeBtn = document.getElementById('closeBtn');
-
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.add('active');
-    });
-
-    closeBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-    });
-    
-
-    window.addEventListener("scroll", function() {
-  const hamburger = document.querySelector(".hamburger");
-  if (window.scrollY > 50) {
-    hamburger.classList.add("scrolled");
-  } else {
-    hamburger.classList.remove("scrolled");
-  }
-});
-
-</script>
 </body>
+
 </html>
-
-
-
-
