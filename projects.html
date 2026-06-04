@@ -191,10 +191,37 @@
     </p>
   </div>
 
+  <!-- ✚ ADDED: Filter Bar — Search, Category Pills, Counter -->
+  <div class="filter-bar" id="filterBar" role="search" aria-label="Filter projects">
+    <div class="filter-bar-inner">
+      <div class="filter-search">
+        <svg class="filter-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <input type="text" id="searchInput" placeholder="Search projects..."
+          aria-label="Search projects by name or category" />
+        <button id="clearSearch" class="clear-search" aria-label="Clear search" style="display:none;">&times;</button>
+      </div>
+      <div class="filter-count" id="filterCount" aria-live="polite">40 projects</div>
+    </div>
+    <div class="filter-categories" id="filterCategories" role="tablist" aria-label="Filter by category">
+      <!-- Pills injected by JavaScript -->
+    </div>
+  </div>
+
   <!-- ════════════════════════════════════
        MAIN CONTENT
   ════════════════════════════════════ -->
   <main id="main-content" role="main" aria-label="HTML CSS JavaScript project gallery">
+
+    <!-- ✚ ADDED: No Results State -->
+    <div class="no-results" id="noResults" aria-live="polite">
+      <div class="no-results-icon" aria-hidden="true">🔍</div>
+      <div class="no-results-text">No projects found</div>
+      <div class="no-results-hint">Try a different search term or category</div>
+    </div>
 
     <!-- ── SECTION: Latest Projects ─────────────────── -->
     <section class="con10" aria-labelledby="latest-heading">
@@ -204,7 +231,7 @@
         JavaScript animation techniques.</p>
       <div class="gallery">
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="animations,buttons" data-featured="true"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project40.html" aria-label="View CSS Neon Digital Clock Animation project">
             <img class="card-img" src="https://i.suar.me/Ep114/m"
               alt="CSS neon digital clock animation – HTML CSS JavaScript beginner project preview" loading="lazy"
@@ -215,7 +242,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="buttons" data-featured="true"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project39.html" aria-label="View Animated Star-Effect Button project">
             <img class="card-img" src="https://i.suar.me/jvZZv/m"
               alt="Animated button with CSS star particle effects – modern UI design example" loading="lazy" width="400"
@@ -226,7 +253,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="ui-components" data-featured="true"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project38.html" aria-label="View Modern Voice Player UI with JavaScript project">
             <img class="card-img" src="https://i.suar.me/og7YP/m"
               alt="Modern voice player UI design built with HTML CSS and JavaScript" loading="lazy" width="400"
@@ -237,7 +264,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="login-forms" data-featured="true"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project37.html" aria-label="View Glassmorphism Login Page Design project">
             <img class="card-img" src="https://i.suar.me/Np3EO/m"
               alt="Modern glassmorphism login page with CSS backdrop blur effect" loading="lazy" width="400"
@@ -259,7 +286,7 @@
         JavaScript.</p>
       <div class="gallery">
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="animations"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project33.html" aria-label="View Interactive Dragon Cursor Effect project">
             <img class="card-img" src="image copy 87.png"
               alt="Interactive dragon trail cursor effect built with HTML CSS JavaScript" loading="lazy" width="400"
@@ -270,7 +297,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="login-forms,cards"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project34.html" aria-label="View 3D Flip Login Interface project">
             <img class="card-img" src="image copy 88.png"
               alt="3D flip card login interface with CSS3 perspective transforms" loading="lazy" width="400"
@@ -281,7 +308,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="ui-components"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project35.html" aria-label="View Custom Checkbox CSS Design project">
             <img class="card-img" src="https://i.suar.me/7nXqw/m"
               alt="Custom animated CSS checkbox design improving form accessibility and UX" loading="lazy" width="400"
@@ -292,7 +319,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="navigation" data-featured="true"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project36.html" aria-label="View Gamers World gaming landing page project">
             <img class="card-img" src="https://i.suar.me/g4rQ2/m"
               alt="Gamers World gaming discovery landing page built with HTML CSS JavaScript" loading="lazy" width="400"
@@ -313,7 +340,7 @@
         designs and two gooey SVG navigation bar animations you can drop straight into any project.</p>
       <div class="gallery">
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="file-upload"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project29.html" aria-label="View File Upload Dropzone UI v1 project">
             <img class="card-img" src="image copy 83.png"
               alt="Modern drag-and-drop file upload dropzone UI built with HTML CSS and JavaScript" loading="lazy"
@@ -324,7 +351,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="file-upload"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project30.html" aria-label="View File Upload Dropzone UI v2 project">
             <img class="card-img" src="image copy 84.png"
               alt="Alternative minimal file upload dropzone design with CSS styling" loading="lazy" width="400"
@@ -335,7 +362,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="navigation"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project31.html" aria-label="View Gooey SVG Navigation Bar Animation v1">
             <img class="card-img" src="image copy 85.png"
               alt="Gooey SVG navigation bar animation with CSS filter blob effect" loading="lazy" width="400"
@@ -346,7 +373,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="navigation"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project32.html" aria-label="View Gooey SVG Navigation Bar Animation v2">
             <img class="card-img" src="image copy 86.png"
               alt="Fluid gooey navigation bar variant with smooth CSS SVG transitions" loading="lazy" width="400"
@@ -368,7 +395,7 @@
         websites.</p>
       <div class="gallery">
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="ui-components"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project25.html" aria-label="View Animated Tag Input Field UI project">
             <img class="card-img" src="image copy 79.png"
               alt="Animated tag input field UI component with CSS and JavaScript" loading="lazy" width="400"
@@ -379,7 +406,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="tutorials"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project26.html" aria-label="View Portfolio Landing Page project">
             <img class="card-img" src="image copy 80.png"
               alt="Modern personal portfolio landing page template with HTML CSS JavaScript animations" loading="lazy"
@@ -390,7 +417,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="ui-components"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project27.html" aria-label="View Responsive CSS Image Gallery project">
             <img class="card-img" src="image copy 81.png"
               alt="Responsive CSS image gallery with hover overlay effects for portfolio websites" loading="lazy"
@@ -401,7 +428,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="navigation"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project28.html" aria-label="View Gooey Navigation Menu Animation project">
             <img class="card-img" src="image copy 82.png"
               alt="Creative gooey CSS JavaScript navigation menu with liquid blob animation" loading="lazy" width="400"
@@ -422,7 +449,7 @@
         sliding login/signup page, and an expanding circle button — all ready-to-use CSS and JavaScript snippets.</p>
       <div class="gallery">
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="buttons" data-featured="true"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project21.html" aria-label="View Glowing Animated Text Button project">
             <img class="card-img" src="image copy 68.png"
               alt="Glowing pulsing animated CTA text button built with pure CSS keyframe animations" loading="lazy"
@@ -433,7 +460,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="navigation"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project22.html"
             aria-label="View Animated Navigation Bar with Floating Indicator project">
             <img class="card-img" src="image copy 71.png"
@@ -445,7 +472,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="login-forms"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project23.html" aria-label="View Animated Login and Signup Page project">
             <img class="card-img" src="image copy 75.png"
               alt="Modern animated sliding login and signup page with CSS transitions and JavaScript" loading="lazy"
@@ -456,7 +483,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="buttons"> <!-- ✚ ADDED -->
           <a class="card-link" href="project24.html" aria-label="View Expanding Circle Animated Button project">
             <img class="card-img" src="image copy 76.png"
               alt="Expanding animated button with circle reveal and arrow direction effects in CSS" loading="lazy"
@@ -478,7 +505,7 @@
         frontend project.</p>
       <div class="gallery">
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="navigation"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project17.html" aria-label="View Skewed Diagonal Navigation Menu project">
             <img class="card-img" src="image copy 50.png"
               alt="Bold skewed diagonal navigation menu design using CSS transforms" loading="lazy" width="400"
@@ -489,7 +516,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="cards" data-featured="true"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project18.html" aria-label="View Animated Card with CSS Wave Effect project">
             <img class="card-img" src="image copy 52.png"
               alt="Stylish UI card component with animated CSS wave background effect" loading="lazy" width="400"
@@ -500,7 +527,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="cards" data-featured="true"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project19.html" aria-label="View 3D Flipping Card with Glow Animation project">
             <img class="card-img" src="image copy 58.png"
               alt="3D CSS flip card with neon glow animation using HTML and CSS transforms" loading="lazy" width="400"
@@ -511,7 +538,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="cards" data-featured="true"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project20.html" aria-label="View 3D Interactive Support Message Carousel project">
             <img class="card-img" src="image copy 65.png"
               alt="3D rotating CSS carousel displaying support or testimonial messages" loading="lazy" width="400"
@@ -532,7 +559,7 @@
         find a neon cursor trail, an electric SVG card, a glassmorphism 3D card, and a CSS perspective tilt effect.</p>
       <div class="gallery">
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="neon-effects,animations"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project13.html" aria-label="View Neon Cursor Trail Animation project">
             <img class="card-img" src="image copy 36.png"
               alt="Custom neon glowing cursor trail animation using HTML CSS and JavaScript canvas" loading="lazy"
@@ -543,7 +570,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="neon-effects,cards"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project14.html" aria-label="View Electric Neon SVG Card Animation project">
             <img class="card-img" src="image copy 40.png"
               alt="Electric neon card with animated SVG stroke border effect" loading="lazy" width="400" height="300" />
@@ -553,18 +580,18 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="cards"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project15.html" aria-label="View Glassmorphism 3D Card UI Component project">
             <img class="card-img" src="image copy 43.png"
-              alt="Glassmorphism 3D card UI component with CSS backdrop filter and transform" loading="lazy" width="400"
+              alt="Floating Label Input Effect — CSS" loading="lazy" width="400"
               height="300" />
             <div class="card-overlay" aria-hidden="true"></div>
             <div class="card-accent" aria-hidden="true"></div>
-            <div class="card-title">Glassmorphism 3D Card – CSS Backdrop Filter &amp; Transform UI</div>
+            <div class="card-title">Floating Label Input Effect — CSS</div>
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="cards"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project16.html" aria-label="View CSS Perspective Tilt Card Effect project">
             <img class="card-img" src="image copy 47.png"
               alt="Mouse-driven CSS perspective tilt card interaction for immersive UI" loading="lazy" width="400"
@@ -585,7 +612,7 @@
         pure-CSS star rating widget, a typewriter text animation, and a particle-background login page.</p>
       <div class="gallery">
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="buttons"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project9.html" aria-label="View Interactive Download Button Animation project">
             <img class="card-img" src="image copy 21.png"
               alt="Animated download button with progress state transition built in HTML and CSS" loading="lazy"
@@ -596,7 +623,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="ui-components"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project10.html" aria-label="View CSS Star Rating System project">
             <img class="card-img" src="image copy 24.png"
               alt="Interactive pure CSS star rating system – no JavaScript required" loading="lazy" width="400"
@@ -607,7 +634,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="animations"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project11.html" aria-label="View CSS Typewriter Text Animation project">
             <img class="card-img" src="image copy 23.png"
               alt="CSS typewriter text animation with blinking cursor for hero sections" loading="lazy" width="400"
@@ -618,7 +645,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="login-forms,animations"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project12.html" aria-label="View Particles Login Page project">
             <img class="card-img" src="image copy 33.png"
               alt="Login page with animated JavaScript particle background effect" loading="lazy" width="400"
@@ -640,7 +667,7 @@
         copy-paste ready.</p>
       <div class="gallery">
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="ui-components"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project1.html" aria-label="View Email Subscribe Box UI Component project">
             <img class="card-img" src="image copy.png"
               alt="Email newsletter subscribe form UI component for websites and landing pages" loading="lazy"
@@ -651,7 +678,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="login-forms"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project6.html" aria-label="View Glassmorphism Login Page with Blur Effect project">
             <img class="card-img" src="image copy 2.png"
               alt="Glassmorphism login page with CSS backdrop-filter blur for modern web apps" loading="lazy"
@@ -662,7 +689,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="animations"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project7.html" aria-label="View Terminal Typing Animation project">
             <img class="card-img" src="image copy 16.png"
               alt="Retro terminal typing animation with blinking cursor using HTML and CSS" loading="lazy" width="400"
@@ -673,7 +700,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="buttons"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project8.html" aria-label="View Animated Subscribe Button project">
             <img class="card-img" src="image copy 18.png"
               alt="Animated subscribe call-to-action button with state transition effects in HTML and CSS"
@@ -695,7 +722,7 @@
         beginners.</p>
       <div class="gallery">
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="tutorials"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project2.html" id="vscod"
             aria-label="View How to Install VS Code on Windows guide">
             <img class="card-img" src="Picture2 (2).png"
@@ -707,7 +734,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="ui-components"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project3.html"
             aria-label="View Theater Search Bar with Floating Placeholder project">
             <img class="card-img" src="animition.png"
@@ -719,7 +746,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="ui-components"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project4.html" aria-label="View Floating Label Input Field project">
             <img class="card-img" src="Screenshot 2025-09-19 163918.png"
               alt="Modern floating label input field component with smooth CSS label animations" loading="lazy"
@@ -730,7 +757,7 @@
           </a>
         </article>
 
-        <article class="card-link-wrapper">
+        <article class="card-link-wrapper" data-category="animations"> <!-- ✚ ADDED -->
           <a class="card-link" href="Project5.html" aria-label="View Circle to Rectangle Shape Morph Animation project">
             <img class="card-img" src="image.png"
               alt="CSS JavaScript shape morphing animation transitioning from circle to rectangle" loading="lazy"
@@ -745,6 +772,8 @@
     </section>
 
   </main>
+
+<script src="projects.js"></script>
 
 </body>
 
