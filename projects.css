@@ -40,7 +40,7 @@
 
   /* ── Gradients — text ────────────────────────────────────── */
   --grad-tol: linear-gradient(90deg, #ff4ecd, #7b61ff);
-  --grad-tol2: linear-gradient(90deg, #4eafff, #4eafff, #ff4ecd);
+  --grad-tol2: linear-gradient(90deg, #008cff, #00d5ff, #5eefff);
   --grad-btn: linear-gradient(90deg, var(--link), var(--btn-primary));
   --grad-editor-h2: linear-gradient(90deg, #00c3ff, #61ffff);
   --grad-h1-tol-alt: linear-gradient(90deg, #008cff, #00d5ff, #5eefff);
@@ -274,9 +274,10 @@ section[aria-labelledby] {
 .gallery {
   display: grid;
   gap: var(--gap);
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(390px, 290px));
+  justify-content: center;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1800px;
 }
 
 /* ============================================================
@@ -1214,8 +1215,251 @@ section[aria-labelledby]:nth-child(even) {
   border-radius: 0 0 8px 8px;
   z-index: 9999;
   transition: top 0.2s;
-}
+} 
 
 .skip-link:focus {
   top: 0;
 }
+
+
+
+
+
+
+
+/* ============================================================
+   FILTER BAR — Search, Category Pills, Counter
+   ============================================================ */
+.filter-bar {
+  position: sticky;
+  top: 52px;
+  z-index: 90;
+  background: var(--navbar-bg);
+  border-bottom: 1px solid var(--border-faq-sep);
+  padding: 14px 60px 0;
+}
+
+.filter-bar-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ── Search Input ── */
+.filter-search {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+}
+
+.filter-search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-nav);
+  pointer-events: none;
+}
+
+.filter-search input {
+  width: 100%;
+  padding: 10px 38px 10px 42px;
+  background: var(--con-bg);
+  border: 1px solid var(--border-faq-sep);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.filter-search input::placeholder {
+  color: var(--text-nav);
+  opacity: 0.5;
+}
+
+.filter-search input:focus {
+  border-color: var(--link);
+}
+
+.clear-search {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-nav);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.clear-search:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ── Result Counter ── */
+.filter-count {
+  font-size: 0.85rem;
+  color: var(--text-nav);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Category Pills Row ── */
+.filter-categories {
+  display: flex;
+  gap: 8px;
+  padding: 12px 0 14px;
+  overflow-x: auto;
+  max-width: 1300px;
+  margin: 0 auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--link) transparent;
+}
+
+.filter-categories::-webkit-scrollbar {
+  height: 4px;
+}
+
+.filter-categories::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.filter-categories::-webkit-scrollbar-thumb {
+  background: var(--link);
+  border-radius: 4px;
+}
+
+.filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 99px;
+  border: 1px solid var(--border-faq-sep);
+  background: transparent;
+  color: var(--text-nav);
+  font-size: 0.82rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.filter-pill:hover {
+  border-color: var(--link);
+  color: var(--link);
+  background: rgba(0, 217, 255, 0.06);
+}
+
+.filter-pill.active {
+  background: var(--link);
+  color: #000;
+  border-color: var(--link);
+  font-weight: 700;
+}
+
+.pill-count {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 1px 7px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.1);
+  font-variant-numeric: tabular-nums;
+  min-width: 20px;
+  text-align: center;
+}
+
+.filter-pill.active .pill-count {
+  background: rgba(0, 0, 0, 0.18);
+  color: #000;
+}
+
+/* ── No Results State ── */
+.no-results {
+  display: none;
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-nav);
+}
+
+.no-results.visible {
+  display: block;
+}
+
+.no-results-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  opacity: 0.35;
+}
+
+.no-results-text {
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.no-results-hint {
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+/* ── Hidden Section (all cards filtered out) ── */
+section[aria-labelledby].section-hidden {
+  display: none;
+}
+
+/* ============================================================
+   FILTER BAR — Responsive
+   ============================================================ */
+@media (max-width: 1000px) {
+  .filter-bar {
+    padding: 12px 32px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-bar {
+    position: static;
+    padding: 12px 16px 0;
+    border-bottom: 1px solid var(--border-faq-sep);
+  }
+
+  .filter-bar-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .filter-search {
+    max-width: none;
+  }
+
+  .filter-count {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .filter-pill {
+    font-size: 0.78rem;
+    padding: 6px 12px;
+  }
+
+  .pill-count {
+    font-size: 0.68rem;
+    padding: 1px 5px;
+  }
+}
+
