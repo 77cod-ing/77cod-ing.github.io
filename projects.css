@@ -274,10 +274,10 @@ section[aria-labelledby] {
 .gallery {
   display: grid;
   gap: var(--gap);
-  grid-template-columns: repeat(auto-fill, minmax(390px, 290px));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 280px));
   justify-content: center;
   width: 100%;
-  max-width: 1800px;
+  max-width: 1300px;
 }
 
 /* ============================================================
