@@ -1,242 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== PRIMARY SEO META ===== -->
+  <title>Neon Cursor Animation — HTML CSS JavaScript Tutorial 2026</title>
+  <meta name="description"
+    content="Build a stunning neon cursor animation using HTML, CSS, and JavaScript with Three.js Toys. Create a glowing mouse trail effect with WebGL — cyberpunk aesthetic, free source code included.">
+  <meta name="keywords"
+    content="neon cursor animation html css js, glowing mouse trail, three.js cursor effect, WebGL neon animation, cursor light trail javascript, futuristic web ui, cyberpunk cursor effect, interactive background animation 2026">
+  <meta name="author" content="77cod_ing">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://77cod-ing.github.io/neon-cursor.html">
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Neon Cursor Animation — HTML CSS JavaScript Tutorial">
+  <meta property="og:description"
+    content="Create a reactive neon light trail that follows the mouse using Three.js Toys. WebGL-powered, cyberpunk aesthetic, minimal code — free source code included.">
+  <meta property="og:site_name" content="77cod_ing">
+
+  <!-- ===== SCHEMA: TechArticle ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Neon Cursor Animation with Three.js Toys — HTML CSS JavaScript",
+    "description": "A complete tutorial on building a neon cursor animation using HTML, CSS, and JavaScript with the Three.js Toys library. Features a glowing WebGL light trail that follows the mouse for a futuristic cyberpunk interface.",
+    "datePublished": "2026-05-01",
+    "author": { "@type": "Person", "name": "77cod_ing", "url": "https://77cod-ing.github.io" },
+    "publisher": { "@type": "Organization", "name": "77cod_ing" },
+    "articleSection": "HTML CSS JavaScript Tutorials",
+    "keywords": "neon cursor animation, three.js cursor, glowing mouse trail, WebGL neon, cyberpunk web UI, interactive cursor effect",
+    "timeRequired": "PT15M",
+    "educationalLevel": "Beginner",
+    "teaches": ["HTML Structure", "CSS Styling", "JavaScript DOM", "Three.js Toys", "WebGL Rendering", "Cursor Interactivity"]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: BreadcrumbList ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+      {"@type": "ListItem", "position": 3, "name": "Neon Cursor Animation", "item": "https://77cod-ing.github.io/neon-cursor.html"}
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: FAQPage ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the neon cursor animation work?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The neonCursor() function from Three.js Toys creates a WebGL canvas fixed behind your content. It tracks mousemove events and generates a flowing light trail of shader-based particles that follow the cursor path with configurable physics." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the neon cursor effect work on mobile?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The neonCursor effect relies on mousemove events, so it is primarily designed for desktop. On mobile devices with WebGL support you can adapt it using touchmove events, though performance varies across older devices." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this require any JavaScript frameworks or build tools?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No build tools are needed. The effect uses the threejs-toys CDN library loaded via a script tag. Everything else is plain HTML and CSS — open the file in any modern browser and it works instantly." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I change the neon glow color?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The color is controlled via the colors array inside the neonCursor() configuration object. Pass hex values to switch from the default cyan glow to any color that matches your brand or theme." }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== ASSETS ===== -->
   <link rel="icon" type="image/png" href="Picture1.png">
-  <title>Create a Neon Cursor Animation — HTML/CSS/JS</title>
-    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+  <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
-     crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
+
   <style>
-    *{
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      overflow-x: hidden;
-    }
-    body {
-      background: linear-gradient(to right, #2c0e43 10%, #581c87);
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
     }
 
+    :root {
+      --accent3: #00e1ff;
+      --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+      --premcolo: #00d9ff;
+      --accent2: #ff6b35;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --surface: rgba(255, 255, 255, 0.04);
+      --surface-hover: rgba(0, 217, 255, 0.07);
+      --border: rgba(255, 255, 255, 0.08);
+      --font-head: 'Space Mono', monospace;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--back);
+      font-family: var(--font-body);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ===== NAVBAR ===== */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 50px;
-      padding: 0 2rem;
-      background-color: #0d1325;
+      height: 56px;
+      padding: 0 2.5rem;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      font-size: 22px;
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 2vw, 1.2rem);
       font-weight: bold;
       color: white;
       text-decoration: none;
+      gap: 8px;
     }
 
     .logo-icon {
-      color: #a855f7;
-      font-size: 26px;
-      margin-right: 8px;
-      letter-spacing: 2.5px;
+      color: var(--premcolo);
+      letter-spacing: 2px;
     }
 
     .nav-links {
       display: flex;
-      gap: 35px;
+      gap: clamp(1rem, 2vw, 2rem);
+      align-items: center;
     }
 
     .nav-links a {
-      color: #d1d5db;
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
+      font-size: 14px;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.25s;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--premcolo);
+      transition: width 0.3s ease;
     }
 
     .nav-links a:hover {
-      color: #a855f7;
-      transform: scale(1.2);
-    }
-    /*linke*/
-    .con1 {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin: auto 0;
-      height: 50vh;
-    }
-    .countdown {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00ffcc;
+      color: var(--premcolo);
     }
 
-    .link-box {
-      display: none;
-      padding: 20px 40px;
-      background: #1e2a47;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-      transition: 0.3s;
+    .nav-links a:hover::after {
+      width: 100%;
     }
 
-    .link-box a {
-      text-decoration: none;
-      color: #00ffcc;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    .link-box:hover {
-      background: #26385c;
-      transform: scale(1.05);
-    }
-    /**ret**/
-    .Ret{
-      margin: 5px 0 0 3rem;
-      width: max-content;
-    }
-    .Ret a {
-      font-size: 2rem;
-      text-decoration: none;
-      color: #ffffff;
-    }
-    .Ret a span{
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 38px;
-      height: 38px;
-      border: 2px solid #fff;
-      border-radius: 50%;
-    }
-    .Ret a:hover {
-  color: #00e1ff;
-}
-    .Ret a:hover span {
-  border-color: #00e1ff;
-}
-    /**img**/
-    .img{
-      display: flex;
-      justify-content: center;
-      margin: 2rem auto;
-    }
-    .img img{
-      border-radius: 8px;
-      max-width: 100vw;
-    width: 70vw;
-    height: 65vh;
-    }
-    /**par**/
-    .par{
-       font-family: Arial, sans-serif;
-      line-height: 1.7;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      color: #ffffff;
-    }
-    h1, h2, h3 {
-      color: #00c8ff;
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
-    h2 {
-      margin-top: 35px;
-      font-size: 1.6rem;
-    }
-    h3 {
-      margin-top: 25px;
-      font-size: 1.3rem;
-    }
-    p {
-      margin-bottom: 18px;
-    }
-    ul {
-      margin: 15px 0;
-      padding-left: 25px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .highlight {
-      background: #000000;
-      padding: 8px 12px;
-      border-left: 4px solid #0073e6;
-      margin: 20px 0;
-    }
-    /**respon**/
-    @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .img img{
-    max-width: 100vw;
-    width: 90vw;
-    }
-  }
-        /**respon1**/
+    /* ===== HAMBURGER ===== */
     .hamburger {
       display: none;
       flex-direction: column;
-      cursor: pointer;
       gap: 5px;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      padding: 6px;
+      z-index: 200;
     }
-    .hamburger .scrolled {
-      background: rgba(255, 255, 255, 0.7);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-}
 
     .hamburger span {
-      width: 28px;
-      height: 3px;
-      background: white;
-      transition: all 0.3s ease;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      transition: all 0.3s;
+      border-radius: 2px;
     }
 
-    /* ====== القائمة المنبثقة ====== */
     .mobile-menu {
       position: fixed;
-      top:0;
+      top: 0;
       left: -100%;
       width: 100%;
       height: 100vh;
-      padding-top: 0.5rem ;
-      background: rgb(53, 53, 53);
+      background: rgba(0, 8, 20, 0.97);
+      backdrop-filter: blur(20px);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 35px;
-      transition: left 0.5s ease;
+      transition: left 0.45s cubic-bezier(0.77, 0, 0.175, 1);
       z-index: 999;
     }
 
@@ -245,271 +236,1773 @@
     }
 
     .mobile-menu a {
-      color: white;
-      font-size: 22px;
-      width: 100%;
-      height: 3rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      color: var(--text-muted);
       text-decoration: none;
-      border-bottom: 0.5px solid #fff;
-      transition: color 0.3s;
+      width: 100%;
+      padding: 1.2rem 2rem;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.25s, background 0.25s;
+      letter-spacing: 1px;
+    }
+
+    .mobile-menu a:first-of-type {
+      border-top: 1px solid var(--border);
     }
 
     .mobile-menu a:hover {
-      color: #ffffff;
-      background: rgba(104, 104, 104, 0.508);
-      backdrop-filter: bulur(20px);
+      color: var(--premcolo);
+      background: var(--surface-hover);
     }
 
-    /* ====== زر الإغلاق (X) ====== */
     .close-btn {
       position: absolute;
-      top: 20px;
-      right: 25px;
-      font-size: 30px;
-      color: white;
+      top: 18px;
+      right: 22px;
+      font-size: 1.5rem;
+      color: var(--text-muted);
       cursor: pointer;
-      width: 35px;
-      height: 35px;
+      width: 36px;
+      height: 36px;
       display: flex;
-      justify-content: center;
       align-items: center;
-      border: 2px solid #fff;
-      background: rgb(88, 88, 88);
+      justify-content: center;
+      border: 1px solid var(--border);
       border-radius: 50%;
-      transition: transform 0.3s ease;
+      transition: color 0.25s, border-color 0.25s, transform 0.3s;
     }
 
     .close-btn:hover {
+      color: var(--premcolo);
+      border-color: var(--premcolo);
       transform: rotate(90deg);
-      color: #00e1ff;
     }
 
-    /* ====== استجابة الهاتف ====== */
-    @media (max-width: 910px) {
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      padding: 12px 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb ol {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .breadcrumb li+li::before {
+      content: "\203A";
+      color: var(--premcolo);
+      margin-right: 6px;
+      font-size: 1.1rem;
+    }
+
+    .breadcrumb a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--premcolo);
+    }
+
+    .breadcrumb [aria-current="page"] {
+      color: var(--premcolo);
+      font-weight: 600;
+    }
+
+    /* ===== BACK BUTTON ===== */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.2s;
+      margin: 1rem 2.5rem;
+    }
+
+    .back-link:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 3rem 2.5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-head);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .tag-tutorial {
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      border: 1px solid rgba(0, 217, 255, 0.3);
+    }
+
+    .tag-css {
+      background: rgba(192, 132, 252, 0.1);
+      color: #c084fc;
+      border: 1px solid rgba(192, 132, 252, 0.2);
+    }
+
+    .tag-html {
+      background: rgba(255, 102, 0, 0.1);
+      color: #ff6600;
+      border: 1px solid rgba(255, 102, 0, 0.2);
+    }
+
+    .tag-js {
+      background: rgba(250, 204, 21, 0.1);
+      color: #facc15;
+      border: 1px solid rgba(250, 204, 21, 0.2);
+    }
+
+    .tag-level {
+      background: rgba(124, 58, 237, 0.15);
+      color: #a78bfa;
+      border: 1px solid rgba(124, 58, 237, 0.3);
+    }
+
+    .read-time {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      color: var(--premcolo);
+    }
+
+    .hero-lead {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      color: var(--premcolo);
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      display: block;
+      box-shadow: 0 0 60px rgba(0, 217, 255, 0.10), 0 32px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem;
+      align-items: start;
+    }
+
+    /* ===== ARTICLE ===== */
+    .article-body h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: var(--premcolo);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 80px;
+    }
+
+    .article-body h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: #7dd3fc;
+      margin: 1.8rem 0 0.75rem;
+      scroll-margin-top: 80px;
+    }
+
+    .article-body p {
+      margin-bottom: 1.1rem;
+      color: var(--text);
+    }
+
+    .article-body code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.15);
+      color: var(--premcolo);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .article-body ul,
+    .article-body ol {
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .article-body li {
+      margin-bottom: 9px;
+    }
+
+    .article-body li strong {
+      color: #fff;
+    }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .toc-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--premcolo);
+      margin-bottom: 0.75rem;
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--premcolo);
+    }
+
+    /* ===== FEATURE CARDS ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(0, 217, 255, 0.4);
+      background: var(--surface-hover);
+    }
+
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .feature-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .feature-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ===== STEPS ===== */
+    .steps {
+      margin: 1.5rem 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      width: 44px;
+      height: 44px;
+      background: rgba(0, 217, 255, 0.1);
+      border: 1px solid rgba(0, 217, 255, 0.3);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      color: var(--premcolo);
+      font-size: 1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+
+    .step-content p {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* ===== INFO / WARN ===== */
+    .info-box {
+      background: rgba(0, 217, 255, 0.05);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-left: 4px solid var(--premcolo);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .info-box strong {
+      color: var(--premcolo);
+    }
+
+    .warn-box {
+      background: rgba(255, 107, 53, 0.06);
+      border: 1px solid rgba(255, 107, 53, 0.2);
+      border-left: 4px solid var(--accent2);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .warn-box strong {
+      color: var(--accent2);
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* ===== CODE SECTION ===== */
+    .code-section {
+      margin: 2rem 0;
+      width: 60vw;
+    }
+
+    .code-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .code-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .code-tab {
+      padding: 8px 20px;
+      border-radius: 8px 8px 0 0;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .code-tab.active {
+      background: #1e1e2f;
+      color: #fff;
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .code-tab[data-lang="html"].active {
+      color: #ff6600;
+    }
+
+    .code-tab[data-lang="css"].active {
+      color: #00d9ff;
+    }
+
+    .code-tab[data-lang="js"].active {
+      color: #facc15;
+    }
+
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .preview-btn:hover {
+      border-color: var(--premcolo);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+      transform: translateY(-1px);
+    }
+
+    .preview-btn.loading i {
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .code-panels {
+      position: relative;
+    }
+
+    .code-box {
+      background: #0c182af7;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 0 12px 12px 12px;
+      display: none;
+    }
+
+    .code-box.active {
+      display: block;
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-lang-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    .copy-btn.copied {
+      color: #4ade80;
+      border-color: #4ade80;
+    }
+
+    pre[class*="language-"] {
+      width: 100%;
+      max-width: 100%;
+      height: 50vh;
+      border-radius: 0 0 12px 12px;
+      overflow-y: auto;
+      overflow-x: auto;
+      margin: 0;
+      tab-size: 2;
+      white-space: pre;
+      background: #0c182af7 !important;
+    }
+
+    pre::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    pre::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    pre::-webkit-scrollbar-thumb {
+      background: var(--premcolo);
+      border-radius: 10px;
+    }
+
+    /* ===== PREVIEW MODAL ===== */
+    .preview-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 5, 15, 0.85);
+      backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+    }
+
+    .preview-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .preview-modal {
+      width: 92vw;
+      max-width: 85vw;
+      height: 100vh;
+      background: #0a0e1a;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(0, 217, 255, 0.06);
+      transform: scale(0.92) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .preview-overlay.open .preview-modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .preview-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+    }
+
+    .preview-modal-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-modal-title i {
+      color: var(--premcolo);
+      font-size: 16px;
+    }
+
+    .preview-modal-title strong {
+      color: #fff;
+    }
+
+    .preview-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .preview-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, filter 0.2s;
+    }
+
+    .preview-dot:hover {
+      transform: scale(1.2);
+      filter: brightness(1.3);
+    }
+
+    .preview-dot.red {
+      background: #ff5f57;
+    }
+
+    .preview-dot.yellow {
+      background: #febc2e;
+    }
+
+    .preview-dot.green {
+      background: #28c840;
+    }
+
+    .preview-close-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .preview-close-btn:hover {
+      border-color: var(--accent2);
+      color: var(--accent2);
+      background: rgba(255, 107, 53, 0.08);
+    }
+
+    .preview-iframe-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .preview-iframe-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .preview-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: #0a0e1a;
+      z-index: 2;
+      transition: opacity 0.4s;
+    }
+
+    .preview-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .preview-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(1, 217, 255, 0.15);
+      border-top-color: var(--premcolo);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    .preview-loading-text {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .preview-loading-files {
+      display: flex;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .preview-file-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      font-weight: 700;
+      opacity: 0.5;
+      transition: opacity 0.3s;
+    }
+
+    .preview-file-tag.loaded {
+      opacity: 1;
+    }
+
+    .preview-file-tag.html-tag {
+      background: rgba(255, 102, 0, 0.15);
+      color: #ff6600;
+      border: 1px solid rgba(255, 102, 0, 0.3);
+    }
+
+    .preview-file-tag.css-tag {
+      background: rgba(0, 255, 255, 0.1);
+      color: #00ffff;
+      border: 1px solid rgba(0, 255, 255, 0.25);
+    }
+
+    .preview-file-tag.js-tag {
+      background: rgba(247, 223, 30, 0.1);
+      color: #f7df1e;
+      border: 1px solid rgba(247, 223, 30, 0.25);
+    }
+
+    .preview-hint {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 16px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      color: var(--text-muted);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s 0.8s;
+      white-space: nowrap;
+      z-index: 3;
+    }
+
+    .preview-hint.show {
+      opacity: 1;
+    }
+
+    .preview-hint i {
+      color: var(--premcolo);
+      margin-right: 4px;
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      margin: 1.5rem 0;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      background: var(--surface);
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s;
+      list-style: none;
+      user-select: none;
+    }
+
+    .faq-question:hover {
+      background: var(--surface-hover);
+    }
+
+    .faq-question::after {
+      content: "+";
+      font-size: 1.3rem;
+      color: var(--premcolo);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    details[open] .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 1rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-answer code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.10);
+      color: var(--premcolo);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* ===== CONCLUSION ===== */
+    .conclusion {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.06), rgba(0, 180, 210, 0.03));
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .conclusion h2 {
+      border: none;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      position: sticky;
+      top: 72px;
+    }
+
+    .sidebar-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-header {
+      padding: 14px 16px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--premcolo);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .related-list {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .related-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/9;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 217, 255, 0.4);
+    }
+
+    .related-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .related-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    .related-card-title {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* ===== COUNTDOWN ===== */
+    .countdown-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .countdown-text {
+      font-family: var(--font-head);
+      font-size: 1.5rem;
+      color: var(--premcolo);
+      margin-bottom: 1rem;
+    }
+
+    .link-box {
+      display: none;
+      padding: 14px 28px;
+      background: rgba(0, 217, 255, 0.1);
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      border-radius: 10px;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .link-box a {
+      text-decoration: none;
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .link-box:hover {
+      background: rgba(0, 217, 255, 0.18);
+      transform: translateY(-2px);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1300px) {
+      .code-section {
+        width: 90vw;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1.25rem;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .hero {
+        padding: 2rem 1.25rem 1.5rem;
+      }
+
+      .navbar {
+        padding: 0 1.25rem;
+      }
+
+      .breadcrumb {
+        padding: 10px 1.25rem;
+      }
+
+      .back-link {
+        margin: 0.75rem 1.25rem;
+      }
+    }
+
+    @media (max-width: 640px) {
       .nav-links {
         display: none;
       }
 
       .hamburger {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hamburger.scrolled {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      background: rgb(65, 65, 65);
-}
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .code-section {
+        width: 90vw;
+      }
     }
   </style>
 </head>
+
 <body>
-<header class="navbar">
-    <a href="#" class="logo">
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
       <span class="logo-icon">{ / }</span> 77cod_ing
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html">Terms & Conditions</a>
     </nav>
-  </header>
     <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </div>
+  </header>
 
+  <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <span class="close-btn" id="closeBtn">&times;</span>
-    <a href="index.html"style="border-top: 2px solid #fff;height: 5rem;">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html" style="border-bottom: 2px solid #fff;">Terms & Conditions</a>
-  </div>
-  <div class="Ret">
-    <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
-  </div>
-  <div class="img">
-    <img src="image copy 43.png" alt="subscribe.box">
-  </div>
-  <div class="par">
-  <span>
-<h1>Create a Neon Cursor Animation — HTML/CSS/JS</h1>
-  <p>
-    Neon cursor effects are one of those small but striking details that can make a website feel alive and futuristic. 
-    In this guide, you’ll learn how to create a <strong>Neon Cursor Animation</strong> using 
-    <em>HTML, CSS, and JavaScript (with Three.js Toys)</em>. 
-    This glowing cursor trail gives your site a cyberpunk aesthetic—bright, interactive, and unforgettable.
-  </p>
-
-  <div class="highlight">
-    <p><strong>Quick Summary:</strong> Use the <code>threejs-toys</code> library to generate a flowing neon light trail that follows your mouse movement. Combine it with glowing text and dark backgrounds for a high-tech look.</p>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="Privacy Policy.html">Privacy Policy</a>
+    <a href="Terms & Conditions.html">Terms & Conditions</a>
   </div>
 
-  <h2>What Is a Neon Cursor Animation?</h2>
-  <p>
-    A neon cursor animation adds a reactive light trail that follows the user’s mouse. 
-    Each movement generates a smooth, glowing flow that mimics neon light tubes. 
-    This design is commonly seen in futuristic portfolios, tech demos, or websites inspired by synthwave and cyber aesthetics.
-  </p>
+  <!-- ===== BREADCRUMB ===== -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
+      <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+      <li><span aria-current="page">Neon Cursor Animation</span></li>
+    </ol>
+  </nav>
 
-  <h2>Why Use a Neon Cursor Effect?</h2>
-  <ul>
-    <li><strong>Visual Impact:</strong> It instantly draws attention and gives the interface a high-tech atmosphere.</li>
-    <li><strong>Interactive:</strong> Users feel connected to the interface as the cursor reacts to movement.</li>
-    <li><strong>Customizable:</strong> You can tweak parameters like glow radius, color, speed, and motion smoothness.</li>
-    <li><strong>Lightweight:</strong> The effect uses efficient WebGL rendering through Three.js, keeping performance high.</li>
-  </ul>
+  <!-- ===== BACK BUTTON ===== -->
+  <a href="projects.html#subscribe" class="back-link" aria-label="Return to Projects">
+    <i class='bx bx-arrow-back'></i> Return to Projects
+  </a>
 
-  <h2>Steps to Build the Neon Cursor Animation</h2>
-
-  <h3>1. Structure the HTML</h3>
-  <p>
-    Start with a simple page structure. The main container (<code>#app</code>) holds the glowing animation canvas generated by the script, 
-    while the text or logo elements float above it.
-  </p>
-  <div class="img"><img src="image copy 37.png" alt="HTML structure for neon cursor animation"></div>
-
-  <h3>2. Add CSS Styling</h3>
-  <p>
-    Style the page for a clean, futuristic look:
-  </p>
-  <ul>
-    <li>Use a dark background to enhance neon visibility.</li>
-    <li>Apply glowing text shadows and bright accent colors like cyan or magenta.</li>
-    <li>Use <code>position: fixed</code> for the canvas so the glow covers the full viewport.</li>
-    <li>Use <code>pointer-events: none</code> on text to prevent interference with mouse tracking.</li>
-  </ul>
-  <div class="img"><img src="image copy 38.png" alt="CSS styling for neon cursor effect"></div>
-
-  <h3>3. Implement the Neon Cursor Script</h3>
-  <p>
-    The core of the animation uses the <code>neonCursor()</code> function from the <strong>Three.js Toys</strong> library. 
-    It creates a set of moving particles that follow your cursor path with adjustable physics parameters.
-  </p>
-  <p>Example configuration:</p>
-  <ul>
-    <li><code>shaderPoints</code>: controls the number of glowing segments.</li>
-    <li><code>radius1</code> and <code>radius2</code>: define the thickness and spread of the light.</li>
-    <li><code>curvePoints</code> and <code>curveLerp</code>: adjust the smoothness of motion.</li>
-    <li><code>sleepTimeCoefX/Y</code>: tweak the delay and softness of the trail when the cursor slows down.</li>
-  </ul>
-  <div class="img"><img src="image copy 39.png" alt="JavaScript neon cursor configuration"></div>
-
-  <h2>Best Practices for Neon Cursor Pages</h2>
-  <ul>
-    <li><strong>Performance:</strong> Keep shader points moderate for smooth animation on lower-end devices.</li>
-    <li><strong>Contrast:</strong> Use neon effects against dark backgrounds for maximum glow impact.</li>
-    <li><strong>Design Integration:</strong> Match the glow color with your website’s primary theme color.</li>
-    <li><strong>Accessibility:</strong> Ensure important text remains readable despite glowing visuals.</li>
-  </ul>
-
-  <h2>Common Mistakes to Avoid</h2>
-  <ul>
-    <li>Overusing bright colors that clash or cause visual strain.</li>
-    <li>Applying too many shadows, which can make text blurry.</li>
-    <li>Allowing the cursor trail to be too dense—subtlety looks more professional.</li>
-    <li>Forgetting to optimize for mobile devices (some older phones may struggle with WebGL).</li>
-  </ul>
-
-  <h2>Conclusion</h2>
-  <p>
-    The <strong>Neon Cursor Animation</strong> is an elegant touch that blends motion and light into your web design. 
-    By using <em>Three.js Toys</em>, you can build this effect with minimal code and maximum style. 
-    Whether you’re building a creative portfolio, a landing page, or an interactive art project, this glowing cursor gives your interface a pulse of energy.
-  </p>
-
-  <div class="highlight">
-    <p><strong>SEO Keywords:</strong> Neon cursor effect, Three.js cursor animation, glowing mouse trail, interactive background, WebGL neon animation, HTML CSS JS cursor effect, futuristic web UI</p>
-  </div>
-
-  <div class="con1">
-    <div class="countdown" id="countdown">
-      <span id="number">10</span> wait...
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="main-heading">
+    <div class="hero-meta">
+      <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+      <span class="tag tag-html">HTML</span>
+      <span class="tag tag-css">CSS</span>
+      <span class="tag tag-js">JavaScript</span>
+      <span class="tag tag-level">Beginner</span>
+      <span class="read-time"><i class='bx bx-time'></i> ~15 min read</span>
     </div>
 
-    <div class="link-box" id="linkBox">
-      <a href="https://gist.github.com/77cod-ing/806d3c7a601804e41c1bd7d9fa26f9af" target="_blank">Go to code</a>
+    <h1 id="main-heading">
+      <span>Neon Cursor</span> Animation<br>— HTML CSS JS
+    </h1>
+
+    <p class="hero-lead">
+      Neon cursor effects are one of those small but striking details that can make a website feel alive and futuristic.
+      Build a <strong>Neon Cursor Animation</strong> using <em>HTML, CSS, and JavaScript (with Three.js Toys)</em>.
+      This glowing cursor trail gives your site a cyberpunk aesthetic — bright, interactive, and unforgettable.
+      No build tools required, free source code included.
+    </p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value">WebGL</span>
+        <span class="stat-label">Rendering</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">1</span>
+        <span class="stat-label">CDN Library</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">60fps</span>
+        <span class="stat-label">Smooth Trail</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">Free</span>
+        <span class="stat-label">Source Code</span>
+      </div>
+    </div>
+
+    <img src="image copy 36.png"
+      alt="Neon cursor animation built with HTML CSS JavaScript and Three.js Toys — glowing mouse trail WebGL effect"
+      class="hero-img" width="1200" height="420" loading="eager">
+    <p class="img-caption">Final result: a WebGL-powered neon cursor trail that reacts to mouse movement in real time —
+      built with Three.js Toys, pure HTML &amp; CSS</p>
+  </section>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <div class="layout">
+
+    <main class="article-body" id="main-content">
+
+      <!-- TOC -->
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-title">📋 Contents</p>
+        <ol>
+          <li><a href="#overview">What You'll Build</a></li>
+          <li><a href="#features">Key Features</a></li>
+          <li><a href="#how-it-works">How It Works — Step by Step</a></li>
+          <li><a href="#source-code">Get the Source Code</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </nav>
+
+      <!-- OVERVIEW -->
+      <section id="overview">
+        <h2>What You'll Build</h2>
+        <p>
+          This tutorial walks you through creating a <strong>Neon Cursor Animation</strong>
+          using <em>HTML, CSS, and JavaScript</em> powered by the <strong>Three.js Toys</strong> library.
+          The result is a reactive glowing light trail that follows the user's mouse across the page —
+          rendered in real time via WebGL for maximum smoothness and visual impact.
+        </p>
+        <p>
+          Each mouse movement generates a flowing neon stream that mimics illuminated light tubes.
+          The design is perfectly suited for futuristic portfolios, tech demos, and any website
+          inspired by synthwave or cyberpunk aesthetics.
+        </p>
+
+        <div class="info-box">
+          <strong>💡 Quick Summary:</strong> The <code>neonCursor()</code> function from the
+          <code>threejs-toys</code> CDN creates a fixed WebGL canvas behind your content.
+          It listens to <code>mousemove</code> events and renders a flowing shader-based particle trail.
+          Combine it with glowing text and a dark background for a high-tech look — no build tools needed.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- FEATURES -->
+      <section id="features">
+        <h2>Key Features of This Neon Cursor Effect</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">✨</div>
+            <div class="feature-title">WebGL Light Trail</div>
+            <div class="feature-desc">A shader-based particle system renders a smooth neon glow trail that follows
+              cursor movement with physics-driven easing.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <div class="feature-title">Fully Customizable</div>
+            <div class="feature-desc">Tweak <code>shaderPoints</code>, <code>radius1</code>, <code>radius2</code>,
+              colors, and motion smoothness via simple config parameters.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <div class="feature-title">High Performance</div>
+            <div class="feature-desc">Efficient WebGL rendering via Three.js keeps the animation at 60fps even with
+              multiple glow segments active at once.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🌐</div>
+            <div class="feature-title">CDN Ready</div>
+            <div class="feature-desc">The <code>threejs-toys</code> library loads from a CDN — no npm, no bundler, no
+              build step. Add one script tag and it works.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🖥️</div>
+            <div class="feature-title">Full Viewport Canvas</div>
+            <div class="feature-desc">The WebGL canvas is fixed and covers the full viewport using
+              <code>position: fixed</code> so the glow effect spans every pixel of the screen.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <div class="feature-title">Zero Build Tools</div>
+            <div class="feature-desc">Pure HTML, CSS, and a single CDN script — open the file in any modern browser and
+              the neon cursor runs instantly.</div>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- HOW IT WORKS -->
+      <section id="how-it-works">
+        <h2>How It Works — Step by Step</h2>
+        <p>Here's a breakdown of the three layers that power the neon cursor animation.</p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>Structure the HTML</h3>
+              <p>
+                Start with a minimal page structure. A <code>#app</code> container holds the WebGL canvas
+                generated by the Three.js Toys script. Text, headings, or logo elements sit above it using
+                <code>position: relative</code> and a higher <code>z-index</code>. The canvas itself
+                is injected automatically by the library into the DOM, so your HTML stays clean and simple.
+                Use <code>pointer-events: none</code> on elements you want to pass mouse events straight
+                through to the cursor tracker below.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>Style with CSS</h3>
+              <p>
+                Set a dark background to maximize neon glow contrast — <code>#000</code> or a deep navy works best.
+                Apply <code>position: fixed; inset: 0</code> to the canvas wrapper so the effect covers
+                the full viewport without affecting page scroll. Add glowing <code>text-shadow</code>
+                properties using cyan or magenta accent colors to match the cursor trail. Use
+                <code>pointer-events: none</code> on the canvas container so clicks pass through
+                to your actual page content below.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>Configure the Neon Cursor Script</h3>
+              <p>
+                The core of the effect is a single <code>neonCursor()</code> call from the
+                <code>threejs-toys</code> library. Pass a configuration object to control the visual
+                behavior: <code>shaderPoints</code> sets the number of glow segments along the trail;
+                <code>curvePoints</code> and <code>curveLerp</code> control path smoothness;
+                <code>radius1</code> and <code>radius2</code> define inner glow thickness and outer spread;
+                <code>sleepTimeCoefX</code> and <code>sleepTimeCoefY</code> adjust how the trail
+                softens and fades when the cursor slows down. Set <code>colors</code> to any hex values
+                to match your site's color palette.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h3>Polish and Combine</h3>
+              <p>
+                The finished page pairs the neon trail with glowing text shadows, a centered layout,
+                and a fully dark background. The result is a <strong>cyberpunk-style interactive
+                  interface</strong> where every mouse movement leaves a luminous streak of light.
+                Performance stays high because WebGL handles all rendering — the DOM is never touched
+                during animation, keeping everything smooth even on lower-powered hardware.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="warn-box">
+          <strong>⚠️ Performance tip:</strong> Keep <code>shaderPoints</code> between 10–20 for
+          the best balance of visual quality and frame rate. Very high values increase GPU load and
+          may cause frame drops on older integrated graphics. Always test on a mid-range device
+          before deploying to production.
+        </div>
+
+        <h3>Understanding the neonCursor() Configuration</h3>
+        <p>
+          The <code>neonCursor()</code> function accepts a single configuration object. The most
+          impactful parameters are <code>shaderPoints</code> (number of glowing nodes along the trail),
+          <code>radius1</code> (inner glow size, controls the bright core), and <code>radius2</code>
+          (outer glow spread, controls the soft halo). <code>curveLerp</code> is a value between 0 and 1
+          that controls how tightly the trail follows the cursor — lower values create a lazy, flowing
+          motion while higher values make the trail snap directly to cursor position.
+        </p>
+
+        <h3>Best Practices for Neon Cursor Pages</h3>
+        <p>
+          A neon cursor effect works best as an accent, not the main content. Keep surrounding UI elements
+          minimal so the glow isn't competing with other visuals. Match the cursor trail color to your
+          primary accent color using the <code>colors</code> config array. Ensure all text has sufficient
+          contrast against the dark background — neon shadows on headings can add to the aesthetic
+          without harming readability when kept subtle. For accessibility, provide a way to reduce motion
+          using the <code>prefers-reduced-motion</code> media query to disable or simplify the effect.
+        </p>
+      </section>
+
+      <hr>
+
+      <!-- SOURCE CODE -->
+      <section id="source-code">
+        <h2>Get the Source Code</h2>
+        <p>
+          The full source code is available for free on GitHub Gist. Explore the code below, copy it directly,
+          or click <strong>Preview Result</strong> to see the live demo — then wait for the countdown to grab the full
+          Gist link.
+        </p>
+
+        <div class="code-section">
+          <div class="code-toolbar">
+            <div class="code-tabs" role="tablist" aria-label="Code files">
+              <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                aria-controls="panel-html">HTML</button>
+              <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+                aria-controls="panel-css">CSS</button>
+              <button class="code-tab" data-lang="js" role="tab" aria-selected="false"
+                aria-controls="panel-js">JS</button>
+            </div>
+            <button class="preview-btn" id="previewBtn" aria-label="Preview the neon cursor animation">
+              <i class='bx bx-play-circle'></i>
+              <span>Preview Result</span>
+            </button>
+          </div>
+
+          <div class="code-panels">
+            <div class="code-box active" id="panel-html" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code1" class="language-html"><!-- Loading source code... --></code></pre>
+            </div>
+
+            <div class="code-box" id="panel-css" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
+                <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code2" class="language-css">/* Loading source code... */</code></pre>
+            </div>
+
+            <div class="code-box" id="panel-js" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#f7df1e;">JS — script.js</span>
+                <button class="copy-btn" data-target="code3"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code3" class="language-javascript">// Loading source code...</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <strong>💡 Quick Start:</strong> Download <code>index.html</code>, <code>style.css</code>,
+          and <code>script.js</code>, place them in the same folder, and open <code>index.html</code>
+          in your browser. The Three.js Toys library loads from a CDN automatically —
+          no server or install step required.
+        </div>
+
+        <!-- COUNTDOWN -->
+        <div class="countdown-box">
+          <div class="countdown-text" id="countdown">
+            <span id="number">10</span> wait...
+          </div>
+          <div class="link-box" id="linkBox">
+            <a href="https://gist.github.com/77cod-ing/806d3c7a601804e41c1bd7d9fa26f9af" target="_blank">
+              <i class='bx bxl-github'></i> View Full Code on GitHub Gist
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+      <hr>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+
+          <details class="faq-item">
+            <summary class="faq-question">How does the neon cursor animation work?</summary>
+            <div class="faq-answer">
+              The <code>neonCursor()</code> function from Three.js Toys creates a WebGL canvas fixed
+              behind your page content. It tracks <code>mousemove</code> events and renders a flowing
+              trail of shader-based particles along the cursor path. All rendering happens on the GPU
+              via WebGL — the DOM is never touched during animation, keeping performance high.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Does the neon cursor effect work on mobile?</summary>
+            <div class="faq-answer">
+              The default implementation uses <code>mousemove</code> events, which are desktop-only.
+              On mobile, you can adapt it by replacing or supplementing the event listener with
+              <code>touchmove</code>. WebGL support on modern smartphones is generally good, though
+              performance varies on older devices — test before deploying on mobile-first projects.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Does this require any JavaScript frameworks or build tools?</summary>
+            <div class="faq-answer">
+              No. The only dependency is the <code>threejs-toys</code> library, loaded via a single
+              CDN script tag. Everything else is plain HTML and CSS. No npm, no Webpack, no React —
+              just open the HTML file in any modern browser and the effect runs immediately.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Can I change the neon glow color?</summary>
+            <div class="faq-answer">
+              Yes. Pass a <code>colors</code> array of hex values inside the <code>neonCursor()</code>
+              configuration object. For example, <code>colors: [0xff00cc, 0x00ffff]</code> switches
+              the trail from cyan to a magenta-cyan gradient. You can use any colors that complement
+              your site's theme — just keep them bright against the dark background for maximum impact.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How do I prevent the cursor trail from blocking page interactions?</summary>
+            <div class="faq-answer">
+              Set <code>pointer-events: none</code> on the WebGL canvas container using CSS. This passes
+              all click and hover events through to your actual page content beneath the canvas.
+              The Three.js Toys library typically handles this automatically, but it's good practice
+              to confirm via DevTools that the canvas element has this style applied.
+            </div>
+          </details>
+
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- CONCLUSION -->
+      <section id="conclusion" class="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          The <strong>Neon Cursor Animation</strong> is an elegant touch that blends motion and light
+          into your web design. By using <em>Three.js Toys</em>, you can build this WebGL-powered effect
+          with minimal code and maximum visual impact — a single configuration call generates a smooth,
+          physics-based glow trail that reacts to every mouse movement.
+        </p>
+        <p>
+          Whether you're building a creative portfolio, a futuristic landing page, or an interactive
+          art project, this glowing cursor gives your interface a pulse of energy that users notice
+          and remember. Customize the colors, adjust the trail physics, and combine it with dark
+          backgrounds and neon typography for a complete cyberpunk aesthetic.
+        </p>
+        <p style="color:var(--text-muted); font-size:14px; margin-bottom:0;">
+          Found this useful? Explore more HTML, CSS &amp; JavaScript projects in the sidebar →
+        </p>
+      </section>
+
+    </main>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" aria-label="Related projects">
+      <div class="sidebar-box">
+        <div class="sidebar-header">🔗 Related Projects</div>
+        <div class="related-list">
+          <a class="related-card" href="Project23.html" aria-label="Animated Login and Signup Page">
+            <img src="image copy 75.png" alt="Modern Animated Login Signup Page HTML CSS JS" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Login &amp; Signup Page — HTML CSS JS</div>
+          </a>
+          <a class="related-card" href="Project40.html" aria-label="CSS Neon Digital Clock">
+            <img src="https://i.suar.me/Ep114/m" alt="CSS Neon Digital Clock Animation" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">CSS Neon Digital Clock — HTML CSS JS</div>
+          </a>
+          <a class="related-card" href="Project15.html" aria-label="Floating Label Input Effect">
+            <img src="image copy 43.png" alt="Floating Label Input Effect CSS" loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Floating Label Input Effect — HTML CSS</div>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ===== PREVIEW MODAL ===== -->
+  <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true" aria-label="Live preview">
+    <div class="preview-modal">
+      <div class="preview-modal-header">
+        <div class="preview-modal-title">
+          <i class='bx bx-show'></i>
+          <strong>Live Preview</strong> — Neon Cursor Animation
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="preview-dots">
+            <button class="preview-dot red" id="previewDotClose" aria-label="Close preview"></button>
+            <button class="preview-dot yellow" disabled></button>
+            <button class="preview-dot green" disabled></button>
+          </div>
+          <button class="preview-close-btn" id="previewCloseBtn"><i class='bx bx-x'></i> Close</button>
+        </div>
+      </div>
+      <div class="preview-iframe-wrap">
+        <div class="preview-loading" id="previewLoading">
+          <div class="preview-spinner"></div>
+          <span class="preview-loading-text">Loading preview...</span>
+          <div class="preview-loading-files">
+            <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+            <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+            <span class="preview-file-tag js-tag" id="tagJS">JS</span>
+          </div>
+        </div>
+        <iframe id="previewIframe" title="Live preview" sandbox="allow-scripts allow-same-origin"></iframe>
+        <div class="preview-hint" id="previewHint">
+          <i class='bx bx-info-circle'></i> This is a live rendered preview of the source code above
+        </div>
+      </div>
     </div>
   </div>
 
+  <!-- ===== SCRIPTS ===== -->
   <script>
-    let counter = 10;
-    let timer = null;
-    const countdownEl = document.getElementById("countdown");
+    /* ===== Hamburger menu ===== */
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const closeBtn = document.getElementById("closeBtn");
+    hamburger.addEventListener("click", () => mobileMenu.classList.add("active"));
+    closeBtn.addEventListener("click", () => mobileMenu.classList.remove("active"));
+
+    /* ===== Countdown ===== */
+    let count = 10;
     const numberEl = document.getElementById("number");
+    const countdownEl = document.getElementById("countdown");
     const linkBox = document.getElementById("linkBox");
 
-    function startCountdown() {
-      if (timer) return;
-      timer = setInterval(() => {
-        counter--;
-        numberEl.textContent = counter;
+    const timer = setInterval(() => {
+      count--;
+      if (numberEl) numberEl.textContent = count;
+      if (count <= 0) {
+        clearInterval(timer);
+        if (countdownEl) countdownEl.style.display = "none";
+        if (linkBox) linkBox.style.display = "inline-block";
+      }
+    }, 1000);
 
-        if (counter === 0) {
-          clearInterval(timer);
-          timer = null;
-          countdownEl.style.display = "none"; 
-          linkBox.style.display = "block";
-        }
-      }, 1000);
-    }
-
-    function stopCountdown() {
-      clearInterval(timer);
-      timer = null;
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          startCountdown();
-        } else {
-          stopCountdown();
-        }
+    /* ===== Code tabs ===== */
+    document.querySelectorAll(".code-tab").forEach(tab => {
+      tab.addEventListener("click", () => {
+        const lang = tab.dataset.lang;
+        document.querySelectorAll(".code-tab").forEach(t => { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
+        document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+        tab.classList.add("active");
+        tab.setAttribute("aria-selected", "true");
+        const panelMap = { html: "panel-html", css: "panel-css", js: "panel-js" };
+        document.getElementById(panelMap[lang]).classList.add("active");
       });
-    }, { threshold: 1.0 });
-
-    observer.observe(countdownEl);
-    /**hamburger**/
-
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeBtn = document.getElementById('closeBtn');
-
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.add('active');
     });
 
-    closeBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
+    /* ===== Copy buttons ===== */
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+        if (!code.trim()) return;
+        try {
+          await navigator.clipboard.writeText(code);
+          btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+          btn.classList.add("copied");
+          setTimeout(() => { btn.innerHTML = "<i class='bx bxs-copy'></i> Copy"; btn.classList.remove("copied"); }, 2000);
+        } catch { btn.textContent = "Error"; }
+      });
     });
-    
 
-    window.addEventListener("scroll", function() {
-  const hamburger = document.querySelector(".hamburger");
-  if (window.scrollY > 50) {
-    hamburger.classList.add("scrolled");
-  } else {
-    hamburger.classList.remove("scrolled");
-  }
-});
+    /* ===== Preview modal ===== */
+    const previewOverlay = document.getElementById("previewOverlay");
+    const previewIframe = document.getElementById("previewIframe");
+    const previewLoading = document.getElementById("previewLoading");
+    const previewHint = document.getElementById("previewHint");
+    const previewBtn = document.getElementById("previewBtn");
+    const previewCloseBtn = document.getElementById("previewCloseBtn");
+    const previewDotClose = document.getElementById("previewDotClose");
+    const tagHTML = document.getElementById("tagHTML");
+    const tagCSS = document.getElementById("tagCSS");
+    const tagJS = document.getElementById("tagJS");
+
+    const gistBase = "https://gist.githubusercontent.com/77cod-ing/806d3c7a601804e41c1bd7d9fa26f9af/raw/3d30f575ed8bbcc68f6902d141338a0851098ab6/";
+    const htmlUrl = gistBase + "index.html";
+    const cssUrl = gistBase + "style.css";
+    const jsUrl = gistBase + "script.js";
+
+    let cachedHTML = "", cachedCSS = "", cachedJS = "";
+
+    async function loadCode(url, elementId, lang) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const text = await res.text();
+        const el = document.getElementById(elementId);
+        el.textContent = text;
+        el.className = "language-" + lang;
+        if (window.Prism) Prism.highlightElement(el);
+        if (lang === "html") cachedHTML = text;
+        if (lang === "css") cachedCSS = text;
+        if (lang === "js") cachedJS = text;
+      } catch (e) {
+        const el = document.getElementById(elementId);
+        if (el) el.textContent = "/* Source code available via the GitHub Gist link below. */";
+      }
+    }
+
+    loadCode(htmlUrl, "code1", "html");
+    loadCode(cssUrl, "code2", "css");
+    loadCode(jsUrl, "code3", "js");
+
+    function openPreview() {
+      previewOverlay.classList.add("open");
+      document.body.style.overflow = "hidden";
+      previewLoading.classList.remove("hidden");
+      previewHint.classList.remove("show");
+      previewBtn.classList.add("loading");
+      tagHTML.classList.remove("loaded");
+      tagCSS.classList.remove("loaded");
+      tagJS.classList.remove("loaded");
+      buildPreview();
+    }
+
+    function closePreview() {
+      previewOverlay.classList.remove("open");
+      document.body.style.overflow = "";
+      previewIframe.srcdoc = "";
+      previewBtn.classList.remove("loading");
+    }
+
+    async function buildPreview() {
+      if (cachedHTML && cachedCSS && cachedJS) {
+        tagHTML.classList.add("loaded");
+        tagCSS.classList.add("loaded");
+        tagJS.classList.add("loaded");
+        injectPreview(cachedHTML, cachedCSS, cachedJS);
+        return;
+      }
+      try {
+        const fetches = [];
+        if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
+        if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
+        if (!cachedJS) fetches.push(fetch(jsUrl).then(r => r.text()).then(t => { cachedJS = t; tagJS.classList.add("loaded"); }));
+        if (cachedHTML) tagHTML.classList.add("loaded");
+        if (cachedCSS) tagCSS.classList.add("loaded");
+        if (cachedJS) tagJS.classList.add("loaded");
+        await Promise.all(fetches);
+        injectPreview(cachedHTML, cachedCSS, cachedJS);
+      } catch (e) {
+        previewLoading.innerHTML = '<i class="bx bx-error-circle" style="font-size:32px;color:var(--accent2);"></i><span class="preview-loading-text" style="color:var(--accent2);">Failed to load: ' + e.message + '</span>';
+        previewBtn.classList.remove("loading");
+      }
+    }
+
+    function injectPreview(html, css, js) {
+      var combined = html;
+      if (combined.includes('<link') && /style\.css/i.test(combined)) {
+        combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, '<style>' + css + '<\/style>');
+      } else if (combined.includes("</head>")) {
+        combined = combined.replace("</head>", '<style>' + css + '<\/style>\n</head>');
+      } else {
+        combined = '<style>' + css + '<\/style>\n' + combined;
+      }
+      if (combined.includes('<script') && /script\.js/i.test(combined)) {
+        combined = combined.replace(/<script[^>]*src=["'][^"']*script\.js["'][^>]*><\/script>/gi, '<script>' + js + '<\/script>');
+      } else if (combined.includes("</body>")) {
+        combined = combined.replace("</body>", '<script>' + js + '<\/script>\n</body>');
+      } else {
+        combined = combined + '\n<script>' + js + '<\/script>';
+      }
+      var bgStyle = '<style>body{margin:0;min-height:100vh;background:#000;}</style>';
+      combined = combined.includes("<head>") ? combined.replace("<head>", '<head>' + bgStyle) : bgStyle + combined;
+      previewIframe.srcdoc = combined;
+      previewIframe.addEventListener("load", function onLoad() {
+        previewLoading.classList.add("hidden");
+        previewBtn.classList.remove("loading");
+        setTimeout(() => {
+          previewHint.classList.add("show");
+          setTimeout(() => { previewHint.classList.remove("show"); }, 4000);
+        }, 300);
+        previewIframe.removeEventListener("load", onLoad);
+      });
+    }
+
+    previewBtn.addEventListener("click", openPreview);
+    previewCloseBtn.addEventListener("click", closePreview);
+    previewDotClose.addEventListener("click", closePreview);
+    previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
   </script>
+
 </body>
 
 </html>
-
-
