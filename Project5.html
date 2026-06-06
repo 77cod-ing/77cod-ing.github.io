@@ -1,236 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== PRIMARY SEO META ===== -->
+  <title>Animate Shape from Circle to Rectangle — HTML CSS JavaScript Tutorial 2026</title>
+  <meta name="description"
+    content="Learn how to animate a shape from circle to rectangle using HTML, CSS & JavaScript. Reveal product branding with a smooth border-radius transition — free source code included.">
+  <meta name="keywords"
+    content="circle to rectangle animation html css, shape morphing css, border-radius animation, logo reveal effect, interactive ui animation, product showcase effect, css transition animation 2026, JavaScript toggle class animation">
+  <meta name="author" content="77cod_ing">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://77cod-ing.github.io/Project5.html">
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Animate Shape from Circle to Rectangle — HTML CSS JavaScript Tutorial">
+  <meta property="og:description"
+    content="A smooth CSS border-radius transition transforms a circle logo badge into a product rectangle card. Interactive, mobile-friendly, and free source code included.">
+  <meta property="og:site_name" content="77cod_ing">
+
+  <!-- ===== SCHEMA: TechArticle ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Animate Shape from Circle to Rectangle using HTML, CSS & JavaScript",
+    "description": "A complete tutorial on creating a circle-to-rectangle CSS shape animation that reveals product branding on click. Uses border-radius transitions, CSS custom properties, and vanilla JavaScript class toggling.",
+    "datePublished": "2026-05-01",
+    "author": { "@type": "Person", "name": "77cod_ing", "url": "https://77cod-ing.github.io" },
+    "publisher": { "@type": "Organization", "name": "77cod_ing" },
+    "articleSection": "HTML CSS JavaScript Tutorials",
+    "keywords": "circle to rectangle animation, css shape morphing, border-radius transition, logo reveal effect, interactive product showcase",
+    "timeRequired": "PT10M",
+    "educationalLevel": "Beginner",
+    "teaches": ["HTML Structure", "CSS Transitions", "border-radius Animation", "JavaScript Class Toggle", "Responsive UI Design"]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: BreadcrumbList ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+      {"@type": "ListItem", "position": 3, "name": "Circle to Rectangle Animation", "item": "https://77cod-ing.github.io/circle-to-rectangle.html"}
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: FAQPage ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the circle to rectangle animation work?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The effect uses CSS border-radius transitioning from 50% (circle) to 8px (rectangle) combined with width and height transitions. A JavaScript class toggle on click switches between the two states, and CSS transition handles the smooth morphing animation." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need JavaScript frameworks for this animation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. The animation runs on pure HTML, CSS, and a few lines of vanilla JavaScript. No libraries, no build tools — just open the HTML file in any modern browser." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I customize the shape animation for other brands?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Replace the logo text or SVG inside the circle element, update the product name and image inside the rectangle state, and adjust the CSS color variables to match your brand palette." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the circle to rectangle animation mobile friendly?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The effect uses CSS transitions and a click/touch event, so it works on both desktop and mobile. Make sure the initial circle is large enough to tap comfortably on small screens — at least 60px in diameter." }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== ASSETS ===== -->
   <link rel="icon" type="image/png" href="Picture1.png">
-  <title>How to Animate Shape from Circle to Rectangle using HTML, CSS & JavaScript</title>
-    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
-     crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
+
   <style>
-    body {
-      background: linear-gradient(to right, #2c0e43 10%, #581c87);
-      font-family: Arial, sans-serif;
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
+    :root {
+      --accent3: #00e1ff;
+      --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+      --premcolo: #00d9ff;
+      --accent2: #ff6b35;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --surface: rgba(255, 255, 255, 0.04);
+      --surface-hover: rgba(0, 217, 255, 0.07);
+      --border: rgba(255, 255, 255, 0.08);
+      --font-head: 'Space Mono', monospace;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--back);
+      font-family: var(--font-body);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ===== NAVBAR ===== */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 50px;
-      padding: 0 2rem;
-      background-color: #0d1325;
+      height: 56px;
+      padding: 0 2.5rem;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      font-size: 22px;
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 2vw, 1.2rem);
       font-weight: bold;
       color: white;
       text-decoration: none;
+      gap: 8px;
     }
 
     .logo-icon {
-      color: #a855f7;
-      font-size: 26px;
-      margin-right: 8px;
-      letter-spacing: 2.5px;
+      color: var(--premcolo);
+      letter-spacing: 2px;
     }
 
     .nav-links {
       display: flex;
-      gap: 35px;
+      gap: clamp(1rem, 2vw, 2rem);
+      align-items: center;
     }
 
     .nav-links a {
-      color: #d1d5db;
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
+      font-size: 14px;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.25s;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--premcolo);
+      transition: width 0.3s ease;
     }
 
     .nav-links a:hover {
-      color: #a855f7;
-      transform: scale(1.2);
-    }
-    /*linke*/
-    .con1 {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin: auto 0;
-      height: 50vh;
-    }
-    .countdown {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00ffcc;
+      color: var(--premcolo);
     }
 
-    .link-box {
-      display: none;
-      padding: 20px 40px;
-      background: #1e2a47;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-      transition: 0.3s;
+    .nav-links a:hover::after {
+      width: 100%;
     }
 
-    .link-box a {
-      text-decoration: none;
-      color: #00ffcc;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    .link-box:hover {
-      background: #26385c;
-      transform: scale(1.05);
-    }
-    /**ret**/
-    .Ret{
-      margin: 5px 0 0 3rem;
-      width: max-content;
-    }
-    .Ret a {
-      font-size: 2rem;
-      text-decoration: none;
-      color: #ffffff;
-    }
-    .Ret a span{
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 38px;
-      height: 38px;
-      border: 2px solid #fff;
-      border-radius: 50%;
-    }
-    .Ret a:hover {
-  color: #00e1ff;
-}
-    .Ret a:hover span {
-  border-color: #00e1ff;
-}
-    /**img**/
-    .img{
-      display: flex;
-      justify-content: center;
-      margin: 2rem auto;
-    }
-    .img img{
-      border-radius: 8px;
-      max-width: 100vw;
-    width: 70vw;
-    height: 65vh;
-    }
-    /**par**/
-    .par{
-       font-family: Arial, sans-serif;
-      line-height: 1.7;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      color: #ffffff;
-    }
-    h1, h2, h3 {
-      color: #00c8ff;
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
-    h2 {
-      margin-top: 35px;
-      font-size: 1.6rem;
-    }
-    h3 {
-      margin-top: 25px;
-      font-size: 1.3rem;
-    }
-    p {
-      margin-bottom: 18px;
-    }
-    ul {
-      margin: 15px 0;
-      padding-left: 25px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .highlight {
-      background: #000000;
-      padding: 8px 12px;
-      border-left: 4px solid #0073e6;
-      margin: 20px 0;
-    }
-    /**respon**/
-    @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .img img{
-    max-width: 100vw;
-    width: 90vw;
-    }
-  }
-        /**respon1**/
+    /* ===== HAMBURGER ===== */
     .hamburger {
       display: none;
       flex-direction: column;
-      cursor: pointer;
       gap: 5px;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      padding: 6px;
+      z-index: 200;
     }
-    .hamburger .scrolled {
-      background: rgba(255, 255, 255, 0.7);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-}
 
     .hamburger span {
-      width: 28px;
-      height: 3px;
-      background: white;
-      transition: all 0.3s ease;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      transition: all 0.3s;
+      border-radius: 2px;
     }
 
-    /* ====== القائمة المنبثقة ====== */
     .mobile-menu {
       position: fixed;
-      top:0;
+      top: 0;
       left: -100%;
       width: 100%;
       height: 100vh;
-      padding-top: 0.5rem ;
-      background: rgb(53, 53, 53);
+      background: rgba(0, 8, 20, 0.97);
+      backdrop-filter: blur(20px);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 35px;
-      transition: left 0.5s ease;
+      transition: left 0.45s cubic-bezier(0.77, 0, 0.175, 1);
       z-index: 999;
     }
 
@@ -239,77 +235,1111 @@
     }
 
     .mobile-menu a {
-      color: white;
-      font-size: 22px;
-      width: 100%;
-      height: 3rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      color: var(--text-muted);
       text-decoration: none;
-      border-bottom: 0.5px solid #fff;
-      transition: color 0.3s;
+      width: 100%;
+      padding: 1.2rem 2rem;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.25s, background 0.25s;
+      letter-spacing: 1px;
+    }
+
+    .mobile-menu a:first-of-type {
+      border-top: 1px solid var(--border);
     }
 
     .mobile-menu a:hover {
-      color: #ffffff;
-      background: rgba(104, 104, 104, 0.508);
-      backdrop-filter: bulur(20px);
+      color: var(--premcolo);
+      background: var(--surface-hover);
     }
 
-    /* ====== زر الإغلاق (X) ====== */
     .close-btn {
       position: absolute;
-      top: 20px;
-      right: 25px;
-      font-size: 30px;
-      color: white;
+      top: 18px;
+      right: 22px;
+      font-size: 1.5rem;
+      color: var(--text-muted);
       cursor: pointer;
-      width: 35px;
-      height: 35px;
+      width: 36px;
+      height: 36px;
       display: flex;
-      justify-content: center;
       align-items: center;
-      border: 2px solid #fff;
-      background: rgb(88, 88, 88);
+      justify-content: center;
+      border: 1px solid var(--border);
       border-radius: 50%;
-      transition: transform 0.3s ease;
+      transition: color 0.25s, border-color 0.25s, transform 0.3s;
     }
 
     .close-btn:hover {
+      color: var(--premcolo);
+      border-color: var(--premcolo);
       transform: rotate(90deg);
-      color: #00e1ff;
     }
 
-    /* ====== استجابة الهاتف ====== */
-    @media (max-width: 910px) {
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      padding: 12px 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb ol {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .breadcrumb li+li::before {
+      content: "\203A";
+      color: var(--premcolo);
+      margin-right: 6px;
+      font-size: 1.1rem;
+    }
+
+    .breadcrumb a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--premcolo);
+    }
+
+    .breadcrumb [aria-current="page"] {
+      color: var(--premcolo);
+      font-weight: 600;
+    }
+
+    /* ===== BACK BUTTON ===== */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.2s;
+      margin: 1rem 2.5rem;
+    }
+
+    .back-link:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 3rem 2.5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-head);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .tag-tutorial {
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      border: 1px solid rgba(0, 217, 255, 0.3);
+    }
+
+    .tag-css {
+      background: rgba(192, 132, 252, 0.1);
+      color: #c084fc;
+      border: 1px solid rgba(192, 132, 252, 0.2);
+    }
+
+    .tag-html {
+      background: rgba(255, 102, 0, 0.1);
+      color: #ff6600;
+      border: 1px solid rgba(255, 102, 0, 0.2);
+    }
+
+    .tag-js {
+      background: rgba(250, 204, 21, 0.1);
+      color: #facc15;
+      border: 1px solid rgba(250, 204, 21, 0.2);
+    }
+
+    .tag-level {
+      background: rgba(124, 58, 237, 0.15);
+      color: #a78bfa;
+      border: 1px solid rgba(124, 58, 237, 0.3);
+    }
+
+    .read-time {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      color: var(--premcolo);
+    }
+
+    .hero-lead {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      color: var(--premcolo);
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      display: block;
+      box-shadow: 0 0 60px rgba(0, 217, 255, 0.10), 0 32px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem;
+      align-items: start;
+    }
+
+    /* ===== ARTICLE ===== */
+    .article-body h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: var(--premcolo);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 80px;
+    }
+
+    .article-body h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: #7dd3fc;
+      margin: 1.8rem 0 0.75rem;
+      scroll-margin-top: 80px;
+    }
+
+    .article-body p {
+      margin-bottom: 1.1rem;
+      color: var(--text);
+    }
+
+    .article-body code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.15);
+      color: var(--premcolo);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .article-body ul,
+    .article-body ol {
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .article-body li {
+      margin-bottom: 9px;
+    }
+
+    .article-body li strong {
+      color: #fff;
+    }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .toc-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--premcolo);
+      margin-bottom: 0.75rem;
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--premcolo);
+    }
+
+    /* ===== FEATURE CARDS ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(0, 217, 255, 0.4);
+      background: var(--surface-hover);
+    }
+
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .feature-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .feature-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ===== STEPS ===== */
+    .steps {
+      margin: 1.5rem 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      width: 44px;
+      height: 44px;
+      background: rgba(0, 217, 255, 0.1);
+      border: 1px solid rgba(0, 217, 255, 0.3);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      color: var(--premcolo);
+      font-size: 1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+
+    .step-content p {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* ===== INFO / WARN BOXES ===== */
+    .info-box {
+      background: rgba(0, 217, 255, 0.05);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-left: 4px solid var(--premcolo);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .info-box strong {
+      color: var(--premcolo);
+    }
+
+    .warn-box {
+      background: rgba(255, 107, 53, 0.06);
+      border: 1px solid rgba(255, 107, 53, 0.2);
+      border-left: 4px solid var(--accent2);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .warn-box strong {
+      color: var(--accent2);
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* ===== CODE SECTION ===== */
+    .code-section {
+      margin: 2rem 0;
+      width: 60vw;
+    }
+
+    .code-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .code-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .code-tab {
+      padding: 8px 20px;
+      border-radius: 8px 8px 0 0;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .code-tab.active {
+      background: #1e1e2f;
+      color: #fff;
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .code-tab[data-lang="html"].active {
+      color: #ff6600;
+    }
+
+    .code-tab[data-lang="css"].active {
+      color: #00d9ff;
+    }
+
+    .code-tab[data-lang="js"].active {
+      color: #facc15;
+    }
+
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .preview-btn:hover {
+      border-color: var(--premcolo);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+      transform: translateY(-1px);
+    }
+
+    .preview-btn.loading i {
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .code-panels {
+      position: relative;
+    }
+
+    .code-box {
+      background: #0c182af7;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 0 12px 12px 12px;
+      display: none;
+    }
+
+    .code-box.active {
+      display: block;
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-lang-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    .copy-btn.copied {
+      color: #4ade80;
+      border-color: #4ade80;
+    }
+
+    pre[class*="language-"] {
+      width: 100%;
+      max-width: 100%;
+      height: 50vh;
+      border-radius: 0 0 12px 12px;
+      overflow-y: auto;
+      overflow-x: auto;
+      margin: 0;
+      tab-size: 2;
+      white-space: pre;
+      background: #0c182af7 !important;
+    }
+
+    pre::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    pre::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    pre::-webkit-scrollbar-thumb {
+      background: var(--premcolo);
+      border-radius: 10px;
+    }
+
+    /* ===== PREVIEW MODAL ===== */
+    .preview-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 5, 15, 0.85);
+      backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+    }
+
+    .preview-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .preview-modal {
+      width: 92vw;
+      max-width: 85vw;
+      height: 100vh;
+      background: #0a0e1a;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(0, 217, 255, 0.06);
+      transform: scale(0.92) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .preview-overlay.open .preview-modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .preview-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+    }
+
+    .preview-modal-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-modal-title i {
+      color: var(--premcolo);
+      font-size: 16px;
+    }
+
+    .preview-modal-title strong {
+      color: #fff;
+    }
+
+    .preview-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .preview-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, filter 0.2s;
+    }
+
+    .preview-dot:hover {
+      transform: scale(1.2);
+      filter: brightness(1.3);
+    }
+
+    .preview-dot.red {
+      background: #ff5f57;
+    }
+
+    .preview-dot.yellow {
+      background: #febc2e;
+    }
+
+    .preview-dot.green {
+      background: #28c840;
+    }
+
+    .preview-close-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .preview-close-btn:hover {
+      border-color: var(--accent2);
+      color: var(--accent2);
+      background: rgba(255, 107, 53, 0.08);
+    }
+
+    .preview-iframe-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .preview-iframe-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .preview-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: #0a0e1a;
+      z-index: 2;
+      transition: opacity 0.4s;
+    }
+
+    .preview-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .preview-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(1, 217, 255, 0.15);
+      border-top-color: var(--premcolo);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    .preview-loading-text {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .preview-loading-files {
+      display: flex;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .preview-file-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      font-weight: 700;
+      opacity: 0.5;
+      transition: opacity 0.3s;
+    }
+
+    .preview-file-tag.loaded {
+      opacity: 1;
+    }
+
+    .preview-file-tag.html-tag {
+      background: rgba(255, 102, 0, 0.15);
+      color: #ff6600;
+      border: 1px solid rgba(255, 102, 0, 0.3);
+    }
+
+    .preview-file-tag.css-tag {
+      background: rgba(0, 255, 255, 0.1);
+      color: #00ffff;
+      border: 1px solid rgba(0, 255, 255, 0.25);
+    }
+
+    .preview-file-tag.js-tag {
+      background: rgba(247, 223, 30, 0.1);
+      color: #f7df1e;
+      border: 1px solid rgba(247, 223, 30, 0.25);
+    }
+
+    .preview-hint {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 16px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      color: var(--text-muted);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s 0.8s;
+      white-space: nowrap;
+      z-index: 3;
+    }
+
+    .preview-hint.show {
+      opacity: 1;
+    }
+
+    .preview-hint i {
+      color: var(--premcolo);
+      margin-right: 4px;
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      margin: 1.5rem 0;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      background: var(--surface);
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s;
+      list-style: none;
+      user-select: none;
+    }
+
+    .faq-question:hover {
+      background: var(--surface-hover);
+    }
+
+    .faq-question::after {
+      content: "+";
+      font-size: 1.3rem;
+      color: var(--premcolo);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    details[open] .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 1rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-answer code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.10);
+      color: var(--premcolo);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* ===== CONCLUSION ===== */
+    .conclusion {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.06), rgba(0, 180, 210, 0.03));
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .conclusion h2 {
+      border: none;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      position: sticky;
+      top: 72px;
+    }
+
+    .sidebar-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-header {
+      padding: 14px 16px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--premcolo);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .related-list {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .related-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/9;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 217, 255, 0.4);
+    }
+
+    .related-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .related-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    .related-card-title {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* ===== COUNTDOWN ===== */
+    .countdown-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .countdown-text {
+      font-family: var(--font-head);
+      font-size: 1.5rem;
+      color: var(--premcolo);
+      margin-bottom: 1rem;
+    }
+
+    .link-box {
+      display: none;
+      padding: 14px 28px;
+      background: rgba(0, 217, 255, 0.1);
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .link-box a {
+      text-decoration: none;
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .link-box:hover {
+      background: rgba(0, 217, 255, 0.18);
+      transform: translateY(-2px);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1300px) {
+      .code-section {
+        width: 90vw;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1.25rem;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .hero {
+        padding: 2rem 1.25rem 1.5rem;
+      }
+
+      .navbar {
+        padding: 0 1.25rem;
+      }
+
+      .breadcrumb {
+        padding: 10px 1.25rem;
+      }
+
+      .back-link {
+        margin: 0.75rem 1.25rem;
+      }
+    }
+
+    @media (max-width: 640px) {
       .nav-links {
         display: none;
       }
 
       .hamburger {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hamburger.scrolled {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      background: rgb(65, 65, 65);
-}
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .code-section {
+        width: 90vw;
+      }
     }
   </style>
 </head>
+
 <body>
-<header class="navbar">
-    <a href="#" class="logo">
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
       <span class="logo-icon">{ / }</span> 77cod_ing
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
@@ -317,188 +1347,658 @@
       <a href="Privacy Policy.html">Privacy Policy</a>
       <a href="Terms & Conditions.html">Terms & Conditions</a>
     </nav>
-  </header>
-  <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
     </div>
+  </header>
 
+  <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <span class="close-btn" id="closeBtn">&times;</span>
-    <a href="index.html"style="border-top: 2px solid #fff;height: 5rem;">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html" style="border-bottom: 2px solid #fff;">Terms & Conditions</a>
-  </div>
-  <div class="Ret">
-    <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
-  </div>
-  <div class="img">
-    <img src="image copy 15.png" alt="subscribe.box">
-  </div>
-  <div class="par">
-  <span>
-    <h1>How to Animate Shape from Circle to Rectangle using HTML, CSS & JavaScript</h1>
-<p>
-  The <strong>Circle to Rectangle Effect</strong> is a modern UI animation that transforms a simple circular shape into a rectangle when activated.
-  Inside the circle, you can display a logo (for example, the <strong>Dell</strong> logo).
-  Once clicked or interacted with, the circle expands into a rectangle, revealing both the product name and an image of the product.
-  This design is sleek, interactive, and a perfect way to highlight brands or products in a creative way.
-</p>
-
-<div class="highlight">
-  <p>
-    <strong>Quick Summary:</strong> In this guide, you’ll learn what the Circle to Rectangle effect is, how it works, why it’s important for modern UI,
-    and how to implement it using HTML & CSS animations.
-  </p>
-</div>
-
-<h2>What Is the Circle to Rectangle Effect?</h2>
-<p>
-  The Circle to Rectangle effect is a playful yet professional UI transformation.
-  A circular container initially displays only a brand logo (like Dell’s).
-  When the user clicks or hovers, the circle smoothly expands into a rectangle.
-  The rectangle then showcases additional details such as the product name and a product image, creating a dynamic presentation.
-</p>
-
-<h2>Why Use It on Your Website</h2>
-<ul>
-  <li><strong>Interactive Experience:</strong> Encourages users to click and explore more information.</li>
-  <li><strong>Modern Aesthetic:</strong> Adds a polished, futuristic feel to the site design.</li>
-  <li><strong>Highlight Products:</strong> Perfect for showcasing products alongside their logos.</li>
-  <li><strong>Brand Impact:</strong> Keeps the focus on your brand identity while revealing more content.</li>
-</ul>
-
-<h2>How to Implement the Circle to Rectangle Effect</h2>
-
-<h3>1. HTML Setup</h3>
-<p>
-  Create a container with two states: the default circle showing the logo, and the rectangle that appears after interaction.
-  Inside the rectangle, include the product text and product image.
-</p>
-
-<h3>2. CSS Styling & Animation</h3>
-<p>
-  Use <code>border-radius</code>, <code>transition</code>, and <code>box-shadow</code> to animate the circle into a rectangle.
-  Control visibility of the logo and product details with <code>display</code> or <code>opacity</code> transitions.
-</p>
-
-<h3>3. Responsive Design</h3>
-<p>
-  Make sure the effect adapts to different screen sizes. A mobile-friendly interaction is essential for good user experience.
-</p>
-
-<h2>Practical Example: Dell Logo</h2>
-<p>
-  Imagine a circle with the <strong>Dell</strong> logo in the center.
-  When clicked, it expands into a rectangle that reveals the text “Dell XPS Series” alongside an image of a sleek Dell laptop.
-  This effect not only promotes the product but also keeps the brand at the center of attention.
-</p>
-
-<h2>Benefits for SEO and User Engagement</h2>
-<ul>
-  <li><strong>Lower Bounce Rate:</strong> Interactive design keeps visitors engaged longer.</li>
-  <li><strong>Improved Usability:</strong> Clear visuals make product information easier to understand.</li>
-  <li><strong>Professional Design:</strong> A polished UI strengthens brand credibility.</li>
-</ul>
-
-<h2>Common Mistakes to Avoid</h2>
-<ul>
-  <li>Not optimizing images for fast loading.</li>
-  <li>Using harsh animations instead of smooth transitions.</li>
-  <li>Forgetting mobile responsiveness.</li>
-  <li>Overcomplicating the design with too much JavaScript when CSS is sufficient.</li>
-</ul>
-
-<h2>Conclusion</h2>
-<p>
-  The <strong>Circle to Rectangle Effect</strong> is a simple yet powerful UI animation that combines branding and product showcasing in one interaction.
-  Whether you’re highlighting laptops with a Dell logo or any other brand, this effect gives your website a modern, interactive edge.
-  Try implementing it to boost both engagement and design quality.
-</p>
-
-<div class="highlight">
-  <p>
-    <strong>SEO Keywords:</strong> circle to rectangle effect, logo animation HTML CSS, interactive UI design,
-    brand showcase animation, product reveal effect, Dell logo animation
-  </p>
-</div>
-  <div class="con1">
-    <div class="countdown" id="countdown">
-    <span id="number">10</span> wait...
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="Privacy Policy.html">Privacy Policy</a>
+    <a href="Terms & Conditions.html">Terms & Conditions</a>
   </div>
 
-  <div class="link-box" id="linkBox">
-    <a href="https://gist.github.com/77cod-ing/a10075de3a9db81afea4a7e30b38904f" target="_blank">Go to code</a>
-  </div>
+  <!-- ===== BREADCRUMB ===== -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
+      <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+      <li><span aria-current="page">Circle to Rectangle Animation</span></li>
+    </ol>
+  </nav>
+
+  <!-- ===== BACK BUTTON ===== -->
+  <a href="projects.html#subscribe" class="back-link" aria-label="Return to Projects">
+    <i class='bx bx-arrow-back'></i> Return to Projects
+  </a>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="main-heading">
+    <div class="hero-meta">
+      <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+      <span class="tag tag-html">HTML</span>
+      <span class="tag tag-css">CSS</span>
+      <span class="tag tag-js">JavaScript</span>
+      <span class="tag tag-level">Beginner</span>
+      <span class="read-time"><i class='bx bx-time'></i> ~10 min read</span>
+    </div>
+
+    <h1 id="main-heading">
+      <span>Circle to Rectangle</span> Animation<br>— HTML CSS JS
+    </h1>
+
+    <p class="hero-lead">
+      The <strong>Circle to Rectangle Effect</strong> is a modern UI animation that transforms a circular brand badge
+      into a full product card with a single click. Powered by <em>CSS border-radius transitions</em> and
+      a pinch of <em>vanilla JavaScript</em> — no libraries, no build tools, free source code included.
+    </p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value">CSS</span>
+        <span class="stat-label">Transition</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">0</span>
+        <span class="stat-label">Dependencies</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">60fps</span>
+        <span class="stat-label">Smooth Morph</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">Free</span>
+        <span class="stat-label">Source Code</span>
+      </div>
+    </div>
+
+    <img src="image copy 15.png"
+      alt="Circle to rectangle shape animation built with HTML CSS and JavaScript — brand logo reveals product card on click"
+      class="hero-img" width="1200" height="420" loading="eager">
+    <p class="img-caption">Final result: a CSS-powered shape morph that reveals a product card from a circular logo
+      badge — built with pure HTML, CSS &amp; JavaScript</p>
+  </section>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <div class="layout">
+
+    <main class="article-body" id="main-content">
+
+      <!-- TOC -->
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-title">📋 Contents</p>
+        <ol>
+          <li><a href="#overview">What You'll Build</a></li>
+          <li><a href="#features">Key Features</a></li>
+          <li><a href="#how-it-works">How It Works — Step by Step</a></li>
+          <li><a href="#source-code">Get the Source Code</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </nav>
+
+      <!-- OVERVIEW -->
+      <section id="overview">
+        <h2>What You'll Build</h2>
+        <p>
+          This tutorial walks you through creating a <strong>Circle to Rectangle shape animation</strong>
+          using only <em>HTML, CSS, and vanilla JavaScript</em>. The result is an interactive widget that
+          starts as a circular logo badge — displaying a brand mark like the <strong>Dell</strong> logo —
+          and smoothly morphs into a rectangular product card on click, revealing the product name and image.
+        </p>
+        <p>
+          The entire animation is driven by a single CSS <code>transition</code> on <code>border-radius</code>,
+          <code>width</code>, and <code>height</code>. JavaScript only adds or removes a class — making this
+          one of the lightest interactive effects you can add to any page.
+        </p>
+
+        <div class="info-box">
+          <strong>💡 Quick Summary:</strong> A container starts at <code>border-radius: 50%</code> with equal
+          width and height (circle). On click, a JavaScript class toggle changes it to <code>border-radius: 8px</code>
+          with a wider width (rectangle). CSS <code>transition</code> animates every property change smoothly.
+          No libraries required.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- FEATURES -->
+      <section id="features">
+        <h2>Key Features of This Shape Animation</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">⭕</div>
+            <div class="feature-title">Pure CSS Morph</div>
+            <div class="feature-desc">The entire shape transition is handled by <code>border-radius</code> and dimension
+              changes via CSS — GPU-accelerated and silky smooth.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <div class="feature-title">Click to Reveal</div>
+            <div class="feature-desc">One JavaScript class toggle on <code>click</code> drives the full transition —
+              from compact circular logo to expanded product card.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🏷️</div>
+            <div class="feature-title">Brand Focused</div>
+            <div class="feature-desc">Display a logo in circle state, then reveal product name and image in the
+              rectangle — perfect for product showcases and landing pages.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <div class="feature-title">Mobile Friendly</div>
+            <div class="feature-desc">Touch events work natively since the animation is triggered by a standard
+              <code>click</code> listener — no extra handling needed for mobile.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <div class="feature-title">Fully Customizable</div>
+            <div class="feature-desc">Swap the logo, product name, image, and colors via CSS variables — adapt the
+              effect to any brand in minutes.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <div class="feature-title">Zero Dependencies</div>
+            <div class="feature-desc">No CDN, no npm, no frameworks. Open <code>index.html</code> in any modern
+              browser and the animation runs instantly.</div>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- HOW IT WORKS -->
+      <section id="how-it-works">
+        <h2>How It Works — Step by Step</h2>
+        <p>Three layers power the circle-to-rectangle animation: HTML structure, CSS transitions, and a JavaScript class
+          toggle.</p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>Structure the HTML</h3>
+              <p>
+                Create a single container <code>div</code> with two child groups: one for the circle state (holds the
+                logo) and one for the rectangle state (holds the product name and image). Both children sit inside the
+                same element. Visibility switches are handled entirely by CSS — you never need to show or hide elements
+                manually with JavaScript. Add a <code>data-</code> attribute or a meaningful class name to the wrapper
+                so your JavaScript can target it cleanly.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>Write the CSS Transition</h3>
+              <p>
+                In the default (circle) state, set the container to equal <code>width</code> and <code>height</code>
+                with <code>border-radius: 50%</code>. Add <code>transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1)</code>
+                to smoothly animate every property. In the <code>.expanded</code> (rectangle) state, change
+                <code>border-radius</code> to a small value like <code>12px</code> and expand <code>width</code>
+                to the desired card width. Use <code>opacity</code> and <code>pointer-events</code> to toggle
+                content visibility inside each state without layout jumps.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>Toggle the Class with JavaScript</h3>
+              <p>
+                Select the container element and add a <code>click</code> event listener that calls
+                <code>element.classList.toggle('expanded')</code>. That single line is all the JavaScript this
+                effect needs. The class addition triggers the CSS transition which handles all the visual changes
+                automatically. To make it reversible, <code>toggle</code> removes the class on the second click,
+                morphing the shape back into a circle.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h3>Polish the Content Reveal</h3>
+              <p>
+                Inside the rectangle state, stagger the appearance of child elements using
+                <code>transition-delay</code> so the product name and image fade in after the shape expansion
+                completes. This creates a natural two-stage reveal that feels intentional and elegant.
+                Apply <code>overflow: hidden</code> on the container to ensure no content bleeds outside the
+                shape boundaries during the transition.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="warn-box">
+          <strong>⚠️ Performance tip:</strong> Always transition <code>border-radius</code>,
+          <code>opacity</code>, and <code>transform</code> instead of <code>width</code>/<code>height</code>
+          when possible — they're GPU-composited and cause no layout reflow. If you must animate dimensions,
+          wrap the content in an inner element and animate it with <code>transform: scaleX()</code> instead
+          for the smoothest possible result.
+        </div>
+
+        <h3>Understanding border-radius as a Shape Tool</h3>
+        <p>
+          The CSS <code>border-radius</code> property does far more than round corners — at <code>50%</code>
+          on an element with equal width and height it creates a perfect circle. Transitioning it to any
+          smaller value (like <code>8px</code> or <code>16px</code>) while simultaneously expanding the width
+          produces the circle-to-rectangle morph. Because <code>border-radius</code> is an animatable property,
+          CSS handles all the in-between frames automatically.
+        </p>
+
+        <h3>Best Practices for Shape Morph Animations</h3>
+        <p>
+          Keep the animation duration between 400ms and 700ms — fast enough to feel snappy, slow enough to
+          be legible. Use an ease-in-out or cubic-bezier curve rather than linear for a more natural physical
+          feel. Always provide a clear visual affordance (cursor pointer, subtle shadow, or hover scale) to
+          signal that the circle is interactive. For accessibility, respect <code>prefers-reduced-motion</code>
+          by wrapping your transition declarations in a media query that disables them when the user has
+          requested reduced motion.
+        </p>
+      </section>
+
+      <hr>
+
+      <!-- SOURCE CODE -->
+      <section id="source-code">
+        <h2>Get the Source Code</h2>
+        <p>
+          The full source code is available for free on GitHub Gist. Explore the code below, copy it directly,
+          or click <strong>Preview Result</strong> to see the live demo — then wait for the countdown to grab the full
+          Gist link.
+        </p>
+
+        <div class="code-section">
+          <div class="code-toolbar">
+            <div class="code-tabs" role="tablist" aria-label="Code files">
+              <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                aria-controls="panel-html">HTML</button>
+              <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+                aria-controls="panel-css">CSS</button>
+              <button class="code-tab" data-lang="js" role="tab" aria-selected="false"
+                aria-controls="panel-js">JS</button>
+            </div>
+            <button class="preview-btn" id="previewBtn" aria-label="Preview the neon cursor animation">
+              <i class='bx bx-play-circle'></i>
+              <span>Preview Result</span>
+            </button>
+          </div>
+
+          <div class="code-panels">
+            <div class="code-box active" id="panel-html" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code1" class="language-html"><!-- Loading source code... --></code></pre>
+            </div>
+
+            <div class="code-box" id="panel-css" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
+                <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code2" class="language-css">/* Loading source code... */</code></pre>
+            </div>
+
+            <div class="code-box" id="panel-js" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#f7df1e;">JS — script.js</span>
+                <button class="copy-btn" data-target="code3"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code3" class="language-javascript">// Loading source code...</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <strong>💡 Quick Start:</strong> Download <code>index.html</code>, <code>style.css</code>,
+          and <code>script.js</code>, place them in the same folder, and open <code>index.html</code>
+          in your browser. The Three.js Toys library loads from a CDN automatically —
+          no server or install step required.
+        </div>
+
+        <!-- COUNTDOWN -->
+        <div class="countdown-box">
+          <div class="countdown-text" id="countdown">
+            <span id="number">10</span> wait...
+          </div>
+          <div class="link-box" id="linkBox">
+            <a href="https://gist.githubusercontent.com/77cod-ing/51dfa71cd53d3330a661283800bda25e" target="_blank">
+              <i class='bx bxl-github'></i> View Full Code on GitHub Gist
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+      <hr>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+
+          <details class="faq-item">
+            <summary class="faq-question">How does the circle to rectangle animation work?</summary>
+            <div class="faq-answer">
+              The effect uses CSS <code>border-radius</code> transitioning from <code>50%</code> (perfect circle)
+              down to a small value like <code>12px</code> (rounded rectangle), combined with <code>width</code>
+              and <code>height</code> changes. A JavaScript <code>classList.toggle()</code> call on click switches
+              between the two states, and the CSS <code>transition</code> property animates all changes smoothly.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Do I need JavaScript frameworks for this animation?</summary>
+            <div class="faq-answer">
+              No. The entire effect runs on plain HTML, CSS, and two lines of vanilla JavaScript. There are no
+              npm packages, no CDN libraries, and no build tools — just open the HTML file in any modern browser
+              and it works immediately.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Can I customize the shape animation for other brands?</summary>
+            <div class="faq-answer">
+              Yes. Replace the logo text or SVG inside the <code>.circle-content</code> element, update the
+              product name and image inside <code>.rect-content</code>, and change the CSS color variables to
+              match your brand palette. The structure scales to any brand with minimal changes.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Is the circle to rectangle animation mobile friendly?</summary>
+            <div class="faq-answer">
+              Yes. The animation is triggered by a standard <code>click</code> event, which also fires on
+              tap on mobile devices. Ensure the initial circle is at least 60px in diameter for a comfortable
+              tap target, and test on real devices since viewport sizes and tap precision vary.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How do I add a hover effect to hint the shape is clickable?</summary>
+            <div class="faq-answer">
+              Add a <code>:hover</code> rule to <code>.shape-card</code> with a subtle
+              <code>transform: scale(1.05)</code>
+              and an increased <code>box-shadow</code> glow. Set <code>cursor: pointer</code> on the element so
+              the pointer cursor also signals interactivity. This combination makes the clickable intent immediately
+              obvious to users.
+            </div>
+          </details>
+
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- CONCLUSION -->
+      <section id="conclusion" class="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          The <strong>Circle to Rectangle Animation</strong> is a deceptively simple yet visually striking UI
+          technique. By transitioning <code>border-radius</code> and dimensions with CSS, you can transform a
+          compact circular logo badge into an expanding product card — all without touching a single animation
+          library.
+        </p>
+        <p>
+          Whether you're showcasing the Dell XPS, a sneaker drop, or your own product line, this morph effect
+          keeps the brand front-and-center in the circle state and delivers richer information in the rectangle —
+          a natural two-stage reveal that feels polished and intentional.
+        </p>
+        <p style="color:var(--text-muted); font-size:14px; margin-bottom:0;">
+          Found this useful? Explore more HTML, CSS &amp; JavaScript projects in the sidebar →
+        </p>
+      </section>
+
+    </main>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" aria-label="Related projects">
+      <div class="sidebar-box">
+        <div class="sidebar-header">🔗 Related Projects</div>
+        <div class="related-list">
+          <a class="related-card" href="Project13.html" aria-label="Neon Cursor Animation">
+            <img src="image copy 36.png" alt="Neon Cursor Animation HTML CSS JavaScript Three.js" loading="lazy"
+              width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Neon Cursor Animation — HTML CSS JS</div>
+          </a>
+          <a class="related-card" href="Project23.html" aria-label="Animated Login and Signup Page">
+            <img src="image copy 75.png" alt="Modern Animated Login Signup Page HTML CSS JS" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Login &amp; Signup Page — HTML CSS JS</div>
+          </a>
+          <a class="related-card" href="Project40.html" aria-label="CSS Neon Digital Clock">
+            <img src="https://i.suar.me/Ep114/m" alt="CSS Neon Digital Clock Animation" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">CSS Neon Digital Clock — HTML CSS JS</div>
+          </a>
+        </div>
+      </div>
+    </aside>
+
   </div>
 
+  <!-- ===== PREVIEW MODAL ===== -->
+  <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true" aria-label="Live preview">
+    <div class="preview-modal">
+      <div class="preview-modal-header">
+        <div class="preview-modal-title">
+          <i class='bx bx-show'></i>
+          <strong>Live Preview</strong> — Circle to Rectangle Animation
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="preview-dots">
+            <button class="preview-dot red" id="previewDotClose" aria-label="Close preview"></button>
+            <button class="preview-dot yellow" disabled></button>
+            <button class="preview-dot green" disabled></button>
+          </div>
+          <button class="preview-close-btn" id="previewCloseBtn"><i class='bx bx-x'></i> Close</button>
+        </div>
+      </div>
+      <div class="preview-iframe-wrap">
+        <div class="preview-loading" id="previewLoading">
+          <div class="preview-spinner"></div>
+          <span class="preview-loading-text">Loading preview...</span>
+          <div class="preview-loading-files">
+            <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+            <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+            <span class="preview-file-tag js-tag" id="tagJS">JS</span>
+          </div>
+        </div>
+        <iframe id="previewIframe" title="Live preview" sandbox="allow-scripts allow-same-origin"></iframe>
+        <div class="preview-hint" id="previewHint">
+          <i class='bx bx-info-circle'></i> This is a live rendered preview of the source code above
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SCRIPTS ===== -->
   <script>
-    let counter = 10;
-    let timer = null;
-    const countdownEl = document.getElementById("countdown");
+    /* ===== Hamburger menu ===== */
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const closeBtn = document.getElementById("closeBtn");
+    hamburger.addEventListener("click", () => mobileMenu.classList.add("active"));
+    closeBtn.addEventListener("click", () => mobileMenu.classList.remove("active"));
+
+    /* ===== Countdown ===== */
+    let count = 10;
     const numberEl = document.getElementById("number");
+    const countdownEl = document.getElementById("countdown");
     const linkBox = document.getElementById("linkBox");
 
-    function startCountdown() {
-      if (timer) return;
-      timer = setInterval(() => {
-        counter--;
-        numberEl.textContent = counter;
+    const timer = setInterval(() => {
+      count--;
+      if (numberEl) numberEl.textContent = count;
+      if (count <= 0) {
+        clearInterval(timer);
+        if (countdownEl) countdownEl.style.display = "none";
+        if (linkBox) linkBox.style.display = "inline-block";
+      }
+    }, 1000);
 
-        if (counter === 0) {
-          clearInterval(timer);
-          timer = null;
-          countdownEl.style.display = "none"; // يخفي العداد والكلمة
-          linkBox.style.display = "block";
-        }
-      }, 1000);
-    }
-
-    function stopCountdown() {
-      clearInterval(timer);
-      timer = null;
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          startCountdown();
-        } else {
-          stopCountdown();
-        }
+    /* ===== Code tabs ===== */
+    document.querySelectorAll(".code-tab").forEach(tab => {
+      tab.addEventListener("click", () => {
+        const lang = tab.dataset.lang;
+        document.querySelectorAll(".code-tab").forEach(t => { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
+        document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+        tab.classList.add("active");
+        tab.setAttribute("aria-selected", "true");
+        const panelMap = { html: "panel-html", css: "panel-css", js: "panel-js" };
+        document.getElementById(panelMap[lang]).classList.add("active");
       });
-    }, { threshold: 1.0 });
-
-    observer.observe(countdownEl);
-     /**hamburger**/
-
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeBtn = document.getElementById('closeBtn');
-
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.add('active');
     });
 
-    closeBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
+    /* ===== Copy buttons ===== */
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+        if (!code.trim()) return;
+        try {
+          await navigator.clipboard.writeText(code);
+          btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+          btn.classList.add("copied");
+          setTimeout(() => { btn.innerHTML = "<i class='bx bxs-copy'></i> Copy"; btn.classList.remove("copied"); }, 2000);
+        } catch { btn.textContent = "Error"; }
+      });
     });
-    
 
-    window.addEventListener("scroll", function() {
-  const hamburger = document.querySelector(".hamburger");
-  if (window.scrollY > 50) {
-    hamburger.classList.add("scrolled");
-  } else {
-    hamburger.classList.remove("scrolled");
-  }
-});
+    /* ===== Preview modal ===== */
+    const previewOverlay = document.getElementById("previewOverlay");
+    const previewIframe = document.getElementById("previewIframe");
+    const previewLoading = document.getElementById("previewLoading");
+    const previewHint = document.getElementById("previewHint");
+    const previewBtn = document.getElementById("previewBtn");
+    const previewCloseBtn = document.getElementById("previewCloseBtn");
+    const previewDotClose = document.getElementById("previewDotClose");
+    const tagHTML = document.getElementById("tagHTML");
+    const tagCSS = document.getElementById("tagCSS");
+    const tagJS = document.getElementById("tagJS");
+
+    const gistBase = "https://gist.githubusercontent.com/77cod-ing/51dfa71cd53d3330a661283800bda25e/raw/70f680b5495ac3742ed13fab54eec4232a659b21/";
+    const htmlUrl = gistBase + "index.html";
+    const cssUrl = gistBase + "style.css";
+    const jsUrl = gistBase + "script.js";
+
+    let cachedHTML = "", cachedCSS = "", cachedJS = "";
+
+    async function loadCode(url, elementId, lang) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const text = await res.text();
+        const el = document.getElementById(elementId);
+        el.textContent = text;
+        el.className = "language-" + lang;
+        if (window.Prism) Prism.highlightElement(el);
+        if (lang === "html") cachedHTML = text;
+        if (lang === "css") cachedCSS = text;
+        if (lang === "js") cachedJS = text;
+      } catch (e) {
+        const el = document.getElementById(elementId);
+        if (el) el.textContent = "/* Source code available via the GitHub Gist link below. */";
+      }
+    }
+
+    loadCode(htmlUrl, "code1", "html");
+    loadCode(cssUrl, "code2", "css");
+    loadCode(jsUrl, "code3", "js");
+
+    function openPreview() {
+      previewOverlay.classList.add("open");
+      document.body.style.overflow = "hidden";
+      previewLoading.classList.remove("hidden");
+      previewHint.classList.remove("show");
+      previewBtn.classList.add("loading");
+      tagHTML.classList.remove("loaded");
+      tagCSS.classList.remove("loaded");
+      tagJS.classList.remove("loaded");
+      buildPreview();
+    }
+
+    function closePreview() {
+      previewOverlay.classList.remove("open");
+      document.body.style.overflow = "";
+      previewIframe.srcdoc = "";
+      previewBtn.classList.remove("loading");
+    }
+
+    async function buildPreview() {
+      if (cachedHTML && cachedCSS && cachedJS) {
+        tagHTML.classList.add("loaded");
+        tagCSS.classList.add("loaded");
+        tagJS.classList.add("loaded");
+        injectPreview(cachedHTML, cachedCSS, cachedJS);
+        return;
+      }
+      try {
+        const fetches = [];
+        if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
+        if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
+        if (!cachedJS) fetches.push(fetch(jsUrl).then(r => r.text()).then(t => { cachedJS = t; tagJS.classList.add("loaded"); }));
+        if (cachedHTML) tagHTML.classList.add("loaded");
+        if (cachedCSS) tagCSS.classList.add("loaded");
+        if (cachedJS) tagJS.classList.add("loaded");
+        await Promise.all(fetches);
+        injectPreview(cachedHTML, cachedCSS, cachedJS);
+      } catch (e) {
+        previewLoading.innerHTML = '<i class="bx bx-error-circle" style="font-size:32px;color:var(--accent2);"></i><span class="preview-loading-text" style="color:var(--accent2);">Failed to load: ' + e.message + '</span>';
+        previewBtn.classList.remove("loading");
+      }
+    }
+
+    function injectPreview(html, css, js) {
+      var combined = html;
+      if (combined.includes('<link') && /style\.css/i.test(combined)) {
+        combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, '<style>' + css + '<\/style>');
+      } else if (combined.includes("</head>")) {
+        combined = combined.replace("</head>", '<style>' + css + '<\/style>\n</head>');
+      } else {
+        combined = '<style>' + css + '<\/style>\n' + combined;
+      }
+      if (combined.includes('<script') && /script\.js/i.test(combined)) {
+        combined = combined.replace(/<script[^>]*src=["'][^"']*script\.js["'][^>]*><\/script>/gi, '<script>' + js + '<\/script>');
+      } else if (combined.includes("</body>")) {
+        combined = combined.replace("</body>", '<script>' + js + '<\/script>\n</body>');
+      } else {
+        combined = combined + '\n<script>' + js + '<\/script>';
+      }
+      var bgStyle = '<style>body{margin:0;min-height:100vh;background:#000;}</style>';
+      combined = combined.includes("<head>") ? combined.replace("<head>", '<head>' + bgStyle) : bgStyle + combined;
+      previewIframe.srcdoc = combined;
+      previewIframe.addEventListener("load", function onLoad() {
+        previewLoading.classList.add("hidden");
+        previewBtn.classList.remove("loading");
+        setTimeout(() => {
+          previewHint.classList.add("show");
+          setTimeout(() => { previewHint.classList.remove("show"); }, 4000);
+        }, 300);
+        previewIframe.removeEventListener("load", onLoad);
+      });
+    }
+
+    previewBtn.addEventListener("click", openPreview);
+    previewCloseBtn.addEventListener("click", closePreview);
+    previewDotClose.addEventListener("click", closePreview);
+    previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
   </script>
+
 </body>
+
 </html>
-
-
