@@ -1,209 +1,1376 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== PRIMARY SEO META ===== -->
+  <title>Matrix Style Login Page with Rain Effect | HTML CSS JavaScript Tutorial 2025</title>
+  <meta name="description"
+    content="Learn how to build a Matrix style login page with falling code rain animation using HTML, CSS, and JavaScript canvas. Step-by-step tutorial with full free source code. Cyberpunk hacker-themed login form design.">
+  <meta name="keywords"
+    content="how to build a matrix style login page with HTML CSS and JavaScript, matrix rain effect login form tutorial step by step, animated matrix background login page with canvas JavaScript, futuristic cyberpunk login form design with falling code animation, hacker style login page with green neon glow effects CSS, matrix digital rain animation on login form JavaScript canvas, create a cyber security themed login page with matrix effect, how to add matrix rain background to HTML login form, best futuristic login page designs with CSS animations 2025, build a sci-fi login interface with matrix falling characters, matrix rain canvas animation JavaScript tutorial for beginners, green neon glowing login form with animated background, cyberpunk web design login page HTML CSS JS, advanced CSS glow effects for login forms, JavaScript canvas animation for website login background, how to make a hacker themed signup form with matrix code rain, dark futuristic login UI design tutorial free code, matrix style authentication page with falling green characters, responsive matrix login form with mobile support CSS">
+  <meta name="author" content="77cod_ing">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://77cod-ing.github.io/Project-subscribe.html">
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Matrix Style Login Page with Rain Effect — HTML CSS JavaScript Tutorial 2025">
+  <meta property="og:description"
+    content="Build a stunning Matrix style login page with falling code rain animation, neon green glow inputs, and canvas-based digital rain. Full free source code included.">
+  <meta property="og:image" content="https://77cod-ing.github.io/image%20copy%2086.png">
+  <meta property="og:url" content="https://77cod-ing.github.io/Project-subscribe.html">
+  <meta property="og:site_name" content="77cod_ing">
+  <meta property="article:published_time" content="2025-06-15T00:00:00Z">
+  <meta property="article:modified_time" content="2025-06-15T00:00:00Z">
+  <meta property="article:author" content="77cod_ing">
+  <meta property="article:section" content="JavaScript Tutorials">
+  <meta property="article:tag"
+    content="HTML, CSS, JavaScript, Matrix Rain, Login Page, Canvas Animation, Cyberpunk Design">
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Matrix Style Login Page with Rain Effect — HTML CSS JavaScript Tutorial">
+  <meta name="twitter:description"
+    content="Build a futuristic Matrix login page with falling code rain, neon glow, and canvas animation. HTML CSS JavaScript. Free source code.">
+  <meta name="twitter:image" content="https://77cod-ing.github.io/image%20copy%2086.png">
+
+  <!-- ===== SCHEMA: TechArticle ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "How to Build a Matrix Style Login Page with Falling Code Rain Effect — HTML CSS JavaScript Tutorial",
+    "description": "A complete step-by-step tutorial on building a Matrix-inspired login page with canvas-based digital rain animation, neon green glow effects on inputs, and a futuristic cyberpunk aesthetic using HTML, CSS, and vanilla JavaScript.",
+    "image": "https://77cod-ing.github.io/image%20copy%2086.png",
+    "datePublished": "2025-06-15",
+    "dateModified": "2025-06-15",
+    "author": {
+      "@type": "Person",
+      "name": "77cod_ing",
+      "url": "https://77cod-ing.github.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "77cod_ing",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Picture1.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://77cod-ing.github.io/Project-subscribe.html"
+    },
+    "articleSection": "JavaScript Tutorials",
+    "keywords": "matrix style login page, matrix rain effect canvas, cyberpunk login form, hacker style interface, animated login page JavaScript, falling code animation",
+    "timeRequired": "PT30M",
+    "educationalLevel": "Intermediate",
+    "teaches": ["Canvas API", "requestAnimationFrame", "CSS Glow Effects", "Form Accessibility", "Responsive Design", "CSS Custom Properties"]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: HowTo ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Build a Matrix Style Login Page with Falling Code Rain Animation",
+    "description": "Step-by-step guide to creating a futuristic Matrix-inspired login page with canvas digital rain, neon glow inputs, and cyberpunk styling.",
+    "image": "https://77cod-ing.github.io/image%20copy%2086.png",
+    "totalTime": "PT30M",
+    "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "0"},
+    "supply": [
+      {"@type": "HowToSupply", "name": "Text editor (VS Code recommended)"},
+      {"@type": "HowToSupply", "name": "A modern web browser (Chrome, Firefox, Edge)"}
+    ],
+    "tool": [
+      {"@type": "HowToTool", "name": "HTML5"},
+      {"@type": "HowToTool", "name": "CSS3"},
+      {"@type": "HowToTool", "name": "JavaScript (ES6+)"}
+    ],
+    "step": [
+      {"@type": "HowToStep", "name": "Build the HTML Form Structure", "text": "Create a semantic login form with labeled inputs for username/email and password. Wrap it in a centered container and add a full-screen canvas element behind it for the Matrix rain animation.", "position": 1},
+      {"@type": "HowToStep", "name": "Style with Dark Theme and Neon Glow", "text": "Apply a near-black background with neon green accents. Use box-shadow and text-shadow on inputs and buttons to create the glowing effect. Use monospace fonts for the Matrix aesthetic.", "position": 2},
+      {"@type": "HowToStep", "name": "Implement the Matrix Rain with Canvas", "text": "Create a full-screen canvas, define an array of characters, and animate vertical falling columns using requestAnimationFrame. Control speed, opacity, and density.", "position": 3},
+      {"@type": "HowToStep", "name": "Layer the Form Over the Animation", "text": "Use CSS z-index and positioning to place the login form above the canvas. Add a semi-transparent background or backdrop-filter blur to keep the form readable.", "position": 4},
+      {"@type": "HowToStep", "name": "Add Hover and Focus Animations", "text": "Enhance inputs with glow intensification on focus, button hover effects, and smooth transitions. Keep the animation subtle to avoid distracting from usability.", "position": 5},
+      {"@type": "HowToStep", "name": "Ensure Accessibility and Responsiveness", "text": "Add aria-label attributes, ensure keyboard navigation works, respect prefers-reduced-motion, and test on mobile devices with responsive breakpoints.", "position": 6}
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: FAQ ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I create a Matrix rain effect on a login page using JavaScript canvas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Create a full-screen <canvas> element positioned behind your login form with CSS. In JavaScript, define an array of columns, each tracking a Y-position. On each animation frame using requestAnimationFrame(), draw random characters (Katakana, numbers, symbols) at each column's position, then increment the Y value. When a column reaches the bottom, reset it to the top with a random delay. Apply green color with varying opacity to simulate the classic Matrix digital rain. Full source code is available in the tabs above."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the neon green glow effect work on login form inputs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The neon glow is created using multiple layered CSS box-shadow values on the input elements. For example: box-shadow: 0 0 5px #00ff00, 0 0 15px #00ff0088, 0 0 30px #00ff0044. Each layer has increasing blur radius and decreasing opacity, simulating how real neon light disperses. On :focus, additional shadow layers are added to intensify the glow, giving the user clear visual feedback."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the Matrix rain animation performance-friendly on mobile devices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, when optimized correctly. Key optimizations include: reducing the number of active columns on smaller screens, using a smaller font size for the rain characters, limiting the character set to fewer symbols, and using requestAnimationFrame instead of setInterval. You can also detect device performance and adjust the animation density dynamically. The code in this tutorial includes responsive adjustments for mobile viewports."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why use canvas instead of CSS for the Matrix falling code animation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Canvas is significantly more performant for this type of animation because it renders hundreds of moving characters per frame. CSS-based approaches would require creating and animating hundreds of DOM elements, which causes layout thrashing and high memory usage. Canvas draws directly to a bitmap, avoiding DOM overhead entirely. For a full-screen continuous animation like Matrix rain, canvas is the correct technical choice."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I keep the login form readable over the animated Matrix background?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Three techniques are used together: (1) The login form container has a semi-transparent dark background (e.g., rgba(0, 0, 0, 0.85)) that dims the animation behind it. (2) backdrop-filter: blur() adds a glass-morphism effect that softens the rain behind the form. (3) The form has a high z-index to sit above the canvas layer. This combination keeps the form fully readable while the animation remains visible around the edges."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I make a Matrix style login page accessible to screen readers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Add proper <label> elements linked to each input via for/id attributes. Use aria-label on the form itself describing its purpose. Ensure all interactive elements are keyboard-navigable with visible focus states. Add role='presentation' to the canvas element since it's purely decorative. Respect prefers-reduced-motion by pausing or simplifying the animation when the user has enabled reduced motion in their OS settings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I change the Matrix rain color from green to another neon color?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. The rain color is controlled by the fillStyle property in the JavaScript canvas drawing code and by CSS custom properties for the form glow. To change it to cyan, for example, replace #00ff00 with #00d9ff in both the JS fillStyle and the CSS box-shadow values. Using CSS custom properties (--glow-color: #00ff00) makes it a single-line change to retheme the entire page."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this Matrix login page project good for beginners learning JavaScript?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This project is labeled intermediate. It requires understanding of the Canvas API, requestAnimationFrame loops, CSS positioning with z-index layering, and form accessibility. It's an ideal third or fourth project for someone who has built basic forms and simple CSS animations, and wants to level up to canvas-based visual effects combined with real UI components."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: BreadcrumbList ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+      {"@type": "ListItem", "position": 3, "name": "Matrix Style Login Page", "item": "https://77cod-ing.github.io/Project-subscribe.html"}
+    ]
+  }
+  </script>
+
+  <!-- ===== ASSETS ===== -->
   <link rel="icon" type="image/png" href="Picture1.png">
-  <title>Why a Matrix Style Login Page Stands Out</title>
-    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+  <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
-     crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
+
   <style>
-    body {
-      background: linear-gradient(to right, #2c0e43 10%, #581c87);
-      font-family: Arial, sans-serif;
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
+    :root {
+      --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+      --premcolo: #00d9ff;
+      --accent2: #ff6b35;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --surface: rgba(255, 255, 255, 0.04);
+      --surface-hover: rgba(0, 217, 255, 0.07);
+      --border: rgba(255, 255, 255, 0.08);
+      --font-head: 'Space Mono', monospace;
+      --font-body: 'DM Sans', sans-serif;
+      --matrix-green: #00d9ff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--back);
+      font-family: var(--font-body);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    /* ===== NAVBAR ===== */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 50px;
-      padding: 0 2rem;
-      background-color: #0d1325;
+      height: 56px;
+      padding: 0 2.5rem;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      font-size: 22px;
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 2vw, 1.2rem);
       font-weight: bold;
       color: white;
       text-decoration: none;
+      gap: 8px;
     }
 
     .logo-icon {
-      color: #a855f7;
-      font-size: 26px;
-      margin-right: 8px;
-      letter-spacing: 2.5px;
+      color: var(--premcolo);
+      letter-spacing: 2px;
     }
 
     .nav-links {
       display: flex;
-      gap: 35px;
+      gap: clamp(1rem, 2vw, 2rem);
+      align-items: center;
     }
 
     .nav-links a {
-      color: #d1d5db;
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.25s;
     }
 
     .nav-links a:hover {
-      color: #a855f7;
-      transform: scale(1.2);
+      color: var(--premcolo);
     }
-    /*linke*/
-    .con1 {
-      font-family: Arial, sans-serif;
+
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      padding: 12px 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb ol {
       display: flex;
-      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      list-style: none;
       align-items: center;
-      flex-direction: column;
-      margin: auto 0;
-      height: 50vh;
-    }
-    .countdown {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00ffcc;
     }
 
-    .link-box {
-      display: none;
-      padding: 20px 40px;
-      background: #1e2a47;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-      transition: 0.3s;
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 13px;
     }
 
-    .link-box a {
+    .breadcrumb li+li::before {
+      content: "›";
+      color: var(--premcolo);
+      margin-right: 6px;
+      font-size: 1.1rem;
+    }
+
+    .breadcrumb a {
+      color: var(--text-muted);
       text-decoration: none;
-      color: #00ffcc;
-      font-size: 1.2rem;
-      font-weight: bold;
+      transition: color 0.2s;
     }
 
-    .link-box:hover {
-      background: #26385c;
-      transform: scale(1.05);
+    .breadcrumb a:hover {
+      color: var(--premcolo);
     }
-    /**ret**/
-    .Ret{
-      margin: 5px 0 0 3rem;
-      width: max-content;
+
+    .breadcrumb [aria-current="page"] {
+      color: var(--premcolo);
+      font-weight: 600;
     }
-    .Ret a {
-      font-size: 2rem;
-      text-decoration: none;
-      color: #ffffff;
-    }
-    .Ret a span{
+
+    /* ===== BACK BUTTON ===== */
+    .back-link {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
-      width: 38px;
-      height: 38px;
-      border: 2px solid #fff;
-      border-radius: 50%;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.2s;
+      margin: 1rem 2.5rem;
     }
-    .Ret a:hover {
-  color: #00e1ff;
-}
-    .Ret a:hover span {
-  border-color: #00e1ff;
-}
-    /**img**/
-    .img{
-      display: flex;
-      justify-content: center;
-      margin: 2rem auto;
+
+    .back-link:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
     }
-    .img img{
-      border-radius: 8px;
-      max-width: 100vw;
-    width: 70vw;
-    height: 65vh;
-    }
-    /**par**/
-    .par{
-       font-family: Arial, sans-serif;
-      line-height: 1.7;
-      max-width: 900px;
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 3rem 2.5rem 2rem;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 20px;
-      color: #ffffff;
     }
-    h1, h2, h3 {
-      color: #00c8ff;
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 255, 65, 0.06) 0%, transparent 70%);
+      pointer-events: none;
     }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.05) 0%, transparent 70%);
+      pointer-events: none;
     }
-    h2 {
-      margin-top: 35px;
-      font-size: 1.6rem;
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
     }
-    h3 {
-      margin-top: 25px;
-      font-size: 1.3rem;
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-head);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
     }
-    p {
-      margin-bottom: 18px;
+
+    .tag-tutorial {
+      background: rgba(0, 217, 255, 0.12);
+      color: var(--premcolo);
+      border: 1px solid rgba(0, 217, 255, 0.25);
     }
-    ul {
-      margin: 15px 0;
-      padding-left: 25px;
+
+    .tag-js {
+      background: rgba(235, 223, 0, 0.1);
+      color: #ebdf00;
+      border: 1px solid rgba(235, 223, 0, 0.2);
     }
-    li {
+
+    .tag-css {
+      background: rgba(0, 255, 65, 0.08);
+      color: var(--matrix-green);
+      border: 1px solid rgba(0, 255, 65, 0.2);
+    }
+
+    .tag-canvas {
+      background: rgba(255, 107, 53, 0.1);
+      color: var(--accent2);
+      border: 1px solid rgba(255, 107, 53, 0.2);
+    }
+
+    .tag-level {
+      background: rgba(0, 217, 255, 0.08);
+      color: #7dd3fc;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+    }
+
+    .read-time {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      color: var(--matrix-green);
+      text-shadow: 0 0 20px rgba(0, 255, 65, 0.4);
+    }
+
+    .hero-lead {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      color: var(--matrix-green);
+      font-weight: 700;
+      text-shadow: 0 0 12px rgba(0, 255, 65, 0.3);
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 440px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      display: block;
+      box-shadow: 0 0 60px rgba(0, 255, 65, 0.06), 0 32px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem;
+      align-items: start;
+    }
+
+    /* ===== ARTICLE ===== */
+    .article-body h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: var(--premcolo);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 80px;
+    }
+
+    .article-body h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: #7dd3fc;
+      margin: 1.8rem 0 0.75rem;
+      scroll-margin-top: 80px;
+    }
+
+    .article-body p {
+      margin-bottom: 1.1rem;
+      color: var(--text);
+    }
+
+    .article-body code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .article-body ul,
+    .article-body ol {
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .article-body li {
+      margin-bottom: 9px;
+    }
+
+    .article-body li strong {
+      color: #fff;
+    }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .toc-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--premcolo);
+      margin-bottom: 0.75rem;
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--premcolo);
+    }
+
+    /* ===== FEATURE CARDS ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(0, 255, 65, 0.3);
+      background: rgba(0, 255, 65, 0.03);
+    }
+
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .feature-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .feature-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ===== STEPS ===== */
+    .steps {
+      margin: 1.5rem 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      width: 44px;
+      height: 44px;
+      background: rgba(0, 255, 65, 0.1);
+      border: 1px solid rgba(0, 255, 65, 0.25);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      color: var(--matrix-green);
+      font-size: 1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+
+    .step-content p {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* ===== CODE SECTION ===== */
+    .code-section {
+      margin: 2rem 0;
+      width: 60vw;
+    }
+
+    .code-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .code-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .code-tab {
+      padding: 8px 20px;
+      border-radius: 8px 8px 0 0;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .code-tab.active {
+      background: #1e1e2f;
+      color: #fff;
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .code-tab[data-lang="html"].active {
+      color: #ff6600;
+    }
+
+    .code-tab[data-lang="css"].active {
+      color: #00ffff;
+    }
+
+    .code-tab[data-lang="js"].active {
+      color: #f7df1e;
+    }
+
+    /* ===== PREVIEW BUTTON ===== */
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.3px;
+    }
+
+    .preview-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .preview-btn:hover {
+      border-color: var(--premcolo);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .preview-btn:hover::before {
+      opacity: 1;
+    }
+
+    .preview-btn:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .preview-btn i {
+      font-size: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn.loading i {
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .code-panels {
+      position: relative;
+    }
+
+    .code-box {
+      background: #1e1e2f;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 0 12px 12px 12px;
+      position: relative;
+      display: none;
+    }
+
+    .code-box.active {
+      display: block;
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-lang-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    .copy-btn.copied {
+      color: #4ade80;
+      border-color: #4ade80;
+    }
+
+    :not(pre)>code[class*="language-"],
+    pre[class*="language-"] {
+      width: 100%;
+      max-width: 100%;
+      height: 50vh;
+      border-radius: 0 0 12px 12px;
+      overflow-y: auto;
+      overflow-x: auto;
+      margin: 0;
+    }
+
+    pre::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    pre::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    pre::-webkit-scrollbar-thumb {
+      background: var(--premcolo);
+      border-radius: 10px;
+    }
+
+    /* ===== INFO / WARN ===== */
+    .info-box {
+      background: rgba(0, 217, 255, 0.06);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-left: 4px solid var(--premcolo);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .info-box strong {
+      color: var(--premcolo);
+    }
+
+    .warn-box {
+      background: rgba(255, 107, 53, 0.06);
+      border: 1px solid rgba(255, 107, 53, 0.2);
+      border-left: 4px solid var(--accent2);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .warn-box strong {
+      color: var(--accent2);
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      margin: 1.5rem 0;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
       margin-bottom: 10px;
+      overflow: hidden;
     }
-    .highlight {
-      background: #000000;
-      padding: 8px 12px;
-      border-left: 4px solid #0073e6;
-      margin: 20px 0;
-    }
-    /**respon**/
-    @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
 
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .img img{
-    max-width: 100vw;
-    width: 90vw;
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      background: var(--surface);
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s;
+      list-style: none;
+      user-select: none;
     }
-  }
+
+    .faq-question:hover {
+      background: var(--surface-hover);
+    }
+
+    .faq-question::after {
+      content: "+";
+      font-size: 1.3rem;
+      color: var(--premcolo);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    details[open] .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 1rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-answer code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* ===== CONCLUSION ===== */
+    .conclusion {
+      background: linear-gradient(135deg, rgba(0, 255, 65, 0.06), rgba(0, 140, 160, 0.04));
+      border: 1px solid rgba(0, 255, 65, 0.15);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .conclusion h2 {
+      border: none;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      position: sticky;
+      top: 72px;
+    }
+
+    .sidebar-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-header {
+      padding: 14px 16px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--premcolo);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .related-list {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .related-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/9;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .related-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .related-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    .related-card-title {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* ===== PREVIEW MODAL ===== */
+    .preview-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 5, 15, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+    }
+
+    .preview-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .preview-modal {
+      width: 92vw;
+      max-width: 860px;
+      height: 75vh;
+      max-height: 580px;
+      background: #0a0e1a;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow:
+        0 0 0 1px rgba(0, 217, 255, 0.06),
+        0 24px 80px rgba(0, 0, 0, 0.7),
+        0 0 120px rgba(0, 217, 255, 0.06);
+      transform: scale(0.92) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .preview-overlay.open .preview-modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .preview-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+    }
+
+    .preview-modal-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-modal-title i {
+      color: var(--premcolo);
+      font-size: 16px;
+    }
+
+    .preview-modal-title strong {
+      color: #fff;
+    }
+
+    .preview-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .preview-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, filter 0.2s;
+    }
+
+    .preview-dot:hover {
+      transform: scale(1.2);
+      filter: brightness(1.3);
+    }
+
+    .preview-dot.red {
+      background: #ff5f57;
+    }
+
+    .preview-dot.yellow {
+      background: #febc2e;
+    }
+
+    .preview-dot.green {
+      background: #28c840;
+    }
+
+    .preview-close-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .preview-close-btn:hover {
+      border-color: var(--accent2);
+      color: var(--accent2);
+      background: rgba(255, 107, 53, 0.08);
+    }
+
+    .preview-iframe-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .preview-iframe-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      background: #000;
+    }
+
+    .preview-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: #0a0e1a;
+      z-index: 2;
+      transition: opacity 0.4s;
+    }
+
+    .preview-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .preview-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(0, 217, 255, 0.15);
+      border-top-color: var(--premcolo);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    .preview-loading-text {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .preview-loading-files {
+      display: flex;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .preview-file-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      font-weight: 700;
+      opacity: 0.5;
+      transition: opacity 0.3s;
+    }
+
+    .preview-file-tag.loaded {
+      opacity: 1;
+    }
+
+    .preview-file-tag.html-tag {
+      background: rgba(255, 102, 0, 0.15);
+      color: #ff6600;
+      border: 1px solid rgba(255, 102, 0, 0.3);
+    }
+
+    .preview-file-tag.css-tag {
+      background: rgba(0, 255, 255, 0.1);
+      color: #00ffff;
+      border: 1px solid rgba(0, 255, 255, 0.25);
+    }
+
+    .preview-file-tag.js-tag {
+      background: rgba(247, 223, 30, 0.1);
+      color: #f7df1e;
+      border: 1px solid rgba(247, 223, 30, 0.25);
+    }
+
+    .preview-hint {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 16px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      color: var(--text-muted);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s 0.8s;
+      white-space: nowrap;
+      z-index: 3;
+    }
+
+    .preview-hint.show {
+      opacity: 1;
+    }
+
+    .preview-hint i {
+      color: var(--premcolo);
+      margin-right: 4px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1.25rem;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .related-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .related-card {
+        flex: 1 1 calc(50% - 8px);
+      }
+
+      .hero {
+        padding: 2rem 1.25rem 1.5rem;
+      }
+
+      .navbar {
+        padding: 0 1.25rem;
+      }
+
+      .breadcrumb {
+        padding: 10px 1.25rem;
+      }
+
+      .back-link {
+        margin: 0.75rem 1.25rem;
+      }
+
+      .code-section {
+        width: 85vw;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-stats {
+        gap: 1.2rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .code-tab {
+        padding: 7px 13px;
+        font-size: 12px;
+      }
+
+      .related-card {
+        flex: 1 1 100%;
+      }
+    }
   </style>
 </head>
+
 <body>
-<header class="navbar">
-    <a href="#" class="logo">
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <a href="https://77cod-ing.github.io/" class="logo">
       <span class="logo-icon">{ / }</span> 77cod_ing
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Primary navigation">
       <a href="https://77cod-ing.github.io/">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
@@ -212,147 +1379,807 @@
       <a href="Terms & Conditions.html">Terms & Conditions</a>
     </nav>
   </header>
-  <div class="Ret">
-    <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="https://77cod-ing.github.io/"><i class='bx bx-home-alt-2'></i> Home</a></li>
+      <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+      <li><span aria-current="page">Matrix Style Login Page</span></li>
+    </ol>
+  </nav>
+
+  <!-- ===== BACK BUTTON ===== -->
+  <a href="projects.html#subscribe" class="back-link" aria-label="Return to Projects">
+    <i class='bx bx-arrow-back'></i> Return to Projects
+  </a>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="main-heading">
+    <div class="hero-meta">
+      <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+      <span class="tag tag-js">JavaScript</span>
+      <span class="tag tag-css">Canvas</span>
+      <span class="tag tag-canvas">Cyberpunk</span>
+      <span class="tag tag-level">Intermediate</span>
+      <span class="read-time"><i class='bx bx-time'></i> ~25 min read</span>
+    </div>
+
+    <h1 id="main-heading">
+      <span>Matrix Style Login Page</span> with<br>
+      Falling Code Rain Effect — HTML CSS JS
+    </h1>
+
+    <p class="hero-lead">
+      A complete tutorial to build a futuristic Matrix-inspired login page with canvas-based
+      digital rain animation, neon green glow effects on form inputs, and a cyberpunk hacker
+      aesthetic — using only HTML, CSS, and vanilla JavaScript. No libraries. Full free source code.
+    </p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value">6</span>
+        <span class="stat-label">Build Steps</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">0</span>
+        <span class="stat-label">Libraries</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">Canvas</span>
+        <span class="stat-label">Rain Animation</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">Free</span>
+        <span class="stat-label">Source Code</span>
+      </div>
+    </div>
+
+    <img src="image copy 86.png"
+      alt="Matrix style login page with falling green code rain animation, neon glow inputs, and cyberpunk design built with HTML CSS JavaScript"
+      class="hero-img" width="1200" height="440" loading="eager" fetchpriority="high">
+    <p class="img-caption">Final result: a Matrix-inspired login page with canvas digital rain, neon green glow on
+      inputs,
+      and a futuristic cyberpunk aesthetic — pure HTML, CSS & JavaScript</p>
+  </section>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <div class="layout">
+
+    <main class="article-body" id="main-content">
+
+      <!-- TOC -->
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-title">📋 Contents</p>
+        <ol>
+          <li><a href="#overview">What You'll Build</a></li>
+          <li><a href="#features">Key Features</a></li>
+          <li><a href="#source-code">Full Source Code</a></li>
+          <li><a href="#how-it-works">How It Works — Step by Step</a></li>
+          <li><a href="#concepts">Concepts Used</a></li>
+          <li><a href="#benefits">Benefits for UX & Branding</a></li>
+          <li><a href="#accessibility">Accessibility & Best Practices</a></li>
+          <li><a href="#mistakes">Common Mistakes to Avoid</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </nav>
+
+      <!-- OVERVIEW -->
+      <section id="overview">
+        <h2>What You'll Build</h2>
+        <p>
+          In this tutorial, you'll build a <strong>Matrix style login page</strong> entirely from scratch —
+          no libraries, no frameworks, just HTML, CSS, and vanilla JavaScript. The page features a
+          <strong>full-screen canvas-based digital rain animation</strong> inspired by The Matrix,
+          with a login form floating above it using neon green glow effects on inputs and buttons.
+        </p>
+        <p>
+          This project is ideal if you want to practice the <strong>HTML5 Canvas API</strong>,
+          <strong>requestAnimationFrame</strong> for smooth animations, <strong>CSS glow effects</strong>
+          with layered box-shadows, and <strong>z-index layering</strong> to combine animated backgrounds
+          with functional UI components — all in one visually striking project.
+        </p>
+      </section>
+
+      <hr>
+
+      <!-- FEATURES -->
+      <section id="features">
+        <h2>Key Features of This Matrix Login Page</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🟢</div>
+            <div class="feature-title">Canvas Digital Rain</div>
+            <div class="feature-desc">Full-screen falling code animation using the <code>Canvas API</code> and
+              <code>requestAnimationFrame</code> for smooth 60fps rendering.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💡</div>
+            <div class="feature-title">Neon Green Glow Inputs</div>
+            <div class="feature-desc">Multi-layered <code>box-shadow</code> and <code>text-shadow</code> create
+              realistic neon tube glow on form fields and buttons.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎭</div>
+            <div class="feature-title">Cyberpunk Aesthetic</div>
+            <div class="feature-desc">Dark background, monospace fonts, and green-on-black color scheme create an
+              authentic hacker-style atmosphere.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📐</div>
+            <div class="feature-title">Z-Index Layered Layout</div>
+            <div class="feature-desc">Canvas sits behind the form with proper stacking, plus a semi-transparent backdrop
+              for readability over the animation.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">✨</div>
+            <div class="feature-title">Hover & Focus Animations</div>
+            <div class="feature-desc">Inputs intensify their glow on focus, buttons scale on hover, and smooth CSS
+              transitions make every interaction feel alive.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <div class="feature-title">Responsive Design</div>
+            <div class="feature-desc">The rain density, form width, and font sizes adapt to smaller screens for a
+              consistent experience on all devices.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚙️</div>
+            <div class="feature-title">Configurable Rain Parameters</div>
+            <div class="feature-desc">Speed, character set, column density, and glow color are controlled by variables
+              at the top of the JS file for easy customization.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <div class="feature-title">Zero Dependencies</div>
+            <div class="feature-desc">Pure HTML, CSS, and JavaScript — no external libraries, no build tools, no CDN
+              scripts beyond the code highlighter.</div>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- SOURCE CODE -->
+      <section id="source-code">
+        <h2>Full Source Code (Free)</h2>
+        <p>
+          The project uses three files: <strong>HTML</strong> for the semantic form structure and canvas element,
+          <strong>CSS</strong> for the dark theme, neon glow effects, and form positioning,
+          and <strong>JavaScript</strong> for the canvas-based Matrix rain animation and form interactivity.
+          Use the tabs to switch between them.
+        </p>
+
+        <div class="code-section">
+          <div class="code-toolbar">
+            <div class="code-tabs" role="tablist" aria-label="Code files">
+              <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                aria-controls="panel-html">HTML</button>
+              <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+                aria-controls="panel-css">CSS</button>
+              <button class="code-tab" data-lang="js" role="tab" aria-selected="false"
+                aria-controls="panel-js">JS</button>
+            </div>
+            <button class="preview-btn" id="previewBtn" aria-label="Preview the Matrix login page">
+              <i class='bx bx-play-circle'></i>
+              <span>Preview Result</span>
+            </button>
+          </div>
+
+          <div class="code-panels">
+            <div class="code-box active" id="panel-html" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code1" class="language-html"><!-- Loading source code... --></code></pre>
+            </div>
+
+            <div class="code-box" id="panel-css" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
+                <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code2" class="language-css">/* Loading source code... */</code></pre>
+            </div>
+
+            <div class="code-box" id="panel-js" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#f7df1e;">JS — script.js</span>
+                <button class="copy-btn" data-target="code3"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code3" class="language-javascript">// Loading source code...</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <strong>💡 Quick Start:</strong> Copy all three files into the same folder and open <code>index.html</code> in
+          your browser. The Matrix rain animation starts immediately and the login form appears centered over it — no
+          server required.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- HOW IT WORKS -->
+      <section id="how-it-works">
+        <h2>How It Works — Step by Step</h2>
+        <p>
+          Here's a breakdown of the six core techniques behind this Matrix login page,
+          from the HTML structure to the canvas animation engine.
+        </p>
+
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>Semantic HTML Form Structure</h3>
+              <p>
+                Start with a clean, semantic <code>&lt;form&gt;</code> element containing labeled inputs
+                for username/email and password. Add a full-screen <code>&lt;canvas&gt;</code> element
+                positioned behind the form. Keep the markup minimal to ensure accessibility and
+                maintainability — the canvas is purely decorative and has <code>role="presentation"</code>.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>Dark Theme with Neon Glow CSS</h3>
+              <p>
+                Apply a near-black background (<code>#000</code> or <code>#0a0a0a</code>) combined with
+                neon green accents. Use multiple layered <code>box-shadow</code> values on inputs
+                (e.g., <code>0 0 5px #00ff00, 0 0 15px #00ff0088, 0 0 30px #00ff0044</code>) to simulate
+                neon tube light dispersion. Monospace fonts enhance the Matrix aesthetic while maintaining readability.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>Canvas-Based Matrix Rain Engine</h3>
+              <p>
+                JavaScript creates a full-screen canvas and divides it into vertical columns. Each column
+                tracks a Y-position that increments on every frame. Random characters (Katakana, numbers,
+                symbols) are drawn in green with varying opacity. <code>requestAnimationFrame()</code> drives
+                the loop for smooth 60fps animation. When a column reaches the bottom, it resets to the top
+                with a random delay.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h3>Z-Index Layering & Backdrop Blur</h3>
+              <p>
+                The canvas sits at <code>z-index: 0</code>, the login form at <code>z-index: 10</code>.
+                The form container uses a semi-transparent dark background
+                (<code>rgba(0, 0, 0, 0.85)</code>) and optionally <code>backdrop-filter: blur()</code>
+                to create a glass-morphism effect that keeps text readable while the rain remains visible
+                around the edges.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">05</div>
+            <div class="step-content">
+              <h3>Interactive Glow States</h3>
+              <p>
+                On <code>:focus</code>, inputs receive additional shadow layers to intensify the glow.
+                Buttons scale slightly on <code>:hover</code> with a transition. These micro-interactions
+                keep the form feeling responsive without distracting from the background animation.
+                All transitions use <code>cubic-bezier</code> easing for a polished feel.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">06</div>
+            <div class="step-content">
+              <h3>Responsive & Performance Optimized</h3>
+              <p>
+                On smaller screens, the column count is reduced, font sizes scale down, and the form
+                width adapts. The animation checks <code>window.innerWidth</code> on resize to recalculate
+                column spacing. For performance, the character set can be limited and the drawing operation
+                uses <code>fillRect</code> with low alpha to create a natural fade trail instead of clearing
+                the canvas each frame.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="warn-box">
+          <strong>⚠️ Performance Note:</strong> Drawing hundreds of characters per frame on canvas is GPU-intensive.
+          On low-end mobile devices, reduce the column count and font size. Avoid using <code>clearRect</code> every
+          frame —
+          instead, draw a semi-transparent black rectangle over the canvas to create the fade trail effect, which is
+          significantly more performant.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- CONCEPTS -->
+      <section id="concepts">
+        <h2>JavaScript & CSS Concepts Used</h2>
+        <p>This project covers these intermediate-to-advanced web development techniques:</p>
+        <ul>
+          <li><strong>HTML5 Canvas API</strong> — Creating a drawing surface, setting dimensions, and rendering text
+            characters frame by frame.</li>
+          <li><strong>requestAnimationFrame</strong> — Building a performant animation loop that syncs with the display
+            refresh rate and pauses when the tab is hidden.</li>
+          <li><strong>CSS Layered box-shadow</strong> — Multiple shadow values at increasing blur radii to simulate
+            realistic neon light dispersion.</li>
+          <li><strong>CSS z-index Stacking</strong> — Layering a decorative canvas behind a functional form while
+            maintaining click and focus behavior.</li>
+          <li><strong>backdrop-filter: blur()</strong> — Glass-morphism effect that softens the animation behind the
+            form for readability.</li>
+          <li><strong>CSS Custom Properties</strong> — Centralizing glow color, font family, and animation speed in
+            <code>:root</code> for easy theming.
+          </li>
+          <li><strong>Responsive Canvas Resizing</strong> — Recalculating canvas dimensions and column counts on
+            <code>window.resize</code> events.
+          </li>
+          <li><strong>Form Accessibility</strong> — Proper <code>&lt;label&gt;</code> elements, <code>aria-label</code>
+            attributes, and keyboard navigation support.</li>
+          <li><strong>prefers-reduced-motion</strong> — Pausing or simplifying animations for users who have enabled
+            reduced motion in their OS settings.</li>
+        </ul>
+      </section>
+
+      <hr>
+
+      <!-- BENEFITS -->
+      <section id="benefits">
+        <h2>Benefits for UX, Security Perception & Branding</h2>
+        <p>
+          A Matrix style login page does more than look cool — it actively influences how users
+          perceive your platform. Here's why this design choice matters beyond aesthetics.
+        </p>
+        <ul>
+          <li><strong>Improved First Impression:</strong> Users immediately recognize a premium, tech-focused interface
+            that stands out from generic login forms.</li>
+          <li><strong>Enhanced Security Perception:</strong> Advanced visuals are subconsciously associated with
+            advanced systems, increasing user trust when combined with proper HTTPS and security headers.</li>
+          <li><strong>Higher Memorability:</strong> Unique visual identities make your platform more recognizable and
+            shareable — users remember the "cool Matrix login" and talk about it.</li>
+          <li><strong>Brand Differentiation:</strong> In a sea of plain white login forms, a Matrix-themed page
+            instantly communicates that your brand is innovative and tech-savvy.</li>
+          <li><strong>Performance-Friendly:</strong> Canvas-based animations are GPU-accelerated and can be optimized to
+            run smoothly even on mid-range mobile devices.</li>
+          <li><strong>Target Audience Alignment:</strong> This style resonates strongly with tech, cybersecurity,
+            gaming, and developer communities — your core audience.</li>
+        </ul>
+      </section>
+
+      <hr>
+
+      <!-- ACCESSIBILITY -->
+      <section id="accessibility">
+        <h2>Accessibility & Best Practices</h2>
+        <ul>
+          <li>Ensure all inputs have visible <code>&lt;label&gt;</code> elements linked via
+            <code>for</code>/<code>id</code> attributes — no placeholder-only labels.
+          </li>
+          <li>Add <code>aria-label</code> on the <code>&lt;form&gt;</code> element describing its purpose (e.g., "Login
+            to your account").</li>
+          <li>Set <code>role="presentation"</code> on the canvas element since it's purely decorative and should be
+            ignored by screen readers.</li>
+          <li>Provide sufficient contrast between text and background — green on near-black passes WCAG AA for large
+            text.</li>
+          <li>Respect <code>prefers-reduced-motion</code> by disabling or significantly simplifying the rain animation
+            when the user has enabled reduced motion.</li>
+          <li>Allow full keyboard navigation with visible <code>:focus-visible</code> states on all form controls and
+            the submit button.</li>
+          <li>Ensure the form remains fully functional with JavaScript disabled — the rain is a progressive enhancement,
+            not a requirement.</li>
+        </ul>
+      </section>
+
+      <hr>
+
+      <!-- MISTAKES -->
+      <section id="mistakes">
+        <h2>Common Mistakes to Avoid</h2>
+        <ul>
+          <li><strong>Overloading animations:</strong> Too many simultaneous effects (rain + particles + glow pulses)
+            distract from the login action and hurt performance.</li>
+          <li><strong>Low contrast text:</strong> Green text that's too dim becomes unreadable over the animated
+            background — always test contrast ratios.</li>
+          <li><strong>Heavy JavaScript loops:</strong> Drawing thousands of characters per frame on low-end devices
+            causes frame drops. Cap the column count and use efficient drawing methods.</li>
+          <li><strong>Ignoring mobile responsiveness:</strong> A full desktop column count on a phone creates an
+            unreadable mess. Always reduce density on smaller screens.</li>
+          <li><strong>No reduced-motion fallback:</strong> Some users experience motion sickness or have vestibular
+            disorders. Always provide a static alternative.</li>
+          <li><strong>Using setInterval instead of rAF:</strong> <code>setInterval</code> doesn't sync with the display
+            refresh rate and keeps running when the tab is hidden, wasting resources.</li>
+          <li><strong>Forgetting form semantics:</strong> Wrapping inputs in <code>&lt;div&gt;</code> instead of
+            <code>&lt;form&gt;</code> breaks submit-on-Enter behavior and screen reader navigation.
+          </li>
+        </ul>
+      </section>
+
+      <hr>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+
+          <details class="faq-item">
+            <summary class="faq-question">How do I create a Matrix rain effect on a login page using JavaScript canvas?
+            </summary>
+            <div class="faq-answer">
+              Create a full-screen <code>&lt;canvas&gt;</code> element positioned behind your login form with CSS.
+              In JavaScript, define an array of columns, each tracking a Y-position. On each animation frame using
+              <code>requestAnimationFrame()</code>, draw random characters (Katakana, numbers, symbols) at each column's
+              position, then increment the Y value. When a column reaches the bottom, reset it to the top with a random
+              delay. Apply green color with varying opacity to simulate the classic Matrix digital rain. Full source
+              code
+              is available in the tabs above.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How does the neon green glow effect work on login form inputs?</summary>
+            <div class="faq-answer">
+              The neon glow is created using multiple layered CSS <code>box-shadow</code> values on the input elements.
+              For example: <code>box-shadow: 0 0 5px #00ff00, 0 0 15px #00ff0088, 0 0 30px #00ff0044</code>.
+              Each layer has increasing blur radius and decreasing opacity, simulating how real neon light disperses.
+              On <code>:focus</code>, additional shadow layers are added to intensify the glow, giving the user clear
+              visual feedback that the field is active.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Is the Matrix rain animation performance-friendly on mobile devices?</summary>
+            <div class="faq-answer">
+              Yes, when optimized correctly. Key optimizations include: reducing the number of active columns on smaller
+              screens, using a smaller font size for the rain characters, limiting the character set to fewer symbols,
+              and
+              using <code>requestAnimationFrame</code> instead of <code>setInterval</code>. You can also detect device
+              performance and adjust the animation density dynamically. Instead of clearing the canvas every frame, draw
+              a
+              semi-transparent black rectangle to create the fade trail — this is significantly more performant. The
+              code
+              in this tutorial includes responsive adjustments for mobile viewports.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Why use canvas instead of CSS for the Matrix falling code animation?</summary>
+            <div class="faq-answer">
+              Canvas is significantly more performant for this type of animation because it renders hundreds of moving
+              characters per frame directly to a bitmap. CSS-based approaches would require creating and animating
+              hundreds
+              of DOM elements, which causes layout thrashing, high memory usage, and janky scrolling. Canvas draws
+              independently of the DOM, avoiding all layout overhead. For a full-screen continuous animation like Matrix
+              rain, canvas is the correct technical choice — it's what the original Matrix film effect was built on.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How do I keep the login form readable over the animated Matrix background?
+            </summary>
+            <div class="faq-answer">
+              Three techniques work together: (1) The login form container has a semi-transparent dark background
+              (e.g., <code>rgba(0, 0, 0, 0.85)</code>) that dims the animation behind it. (2)
+              <code>backdrop-filter: blur()</code> adds a glass-morphism effect that softens the rain behind the form
+              edges. (3) The form has a higher <code>z-index</code> to sit above the canvas layer. This combination
+              keeps the form fully readable while the animation remains visible around the edges, creating depth without
+              sacrificing usability.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How do I make a Matrix style login page accessible to screen readers?
+            </summary>
+            <div class="faq-answer">
+              Add proper <code>&lt;label&gt;</code> elements linked to each input via <code>for</code>/<code>id</code>
+              attributes. Use <code>aria-label</code> on the form itself describing its purpose. Ensure all interactive
+              elements are keyboard-navigable with visible <code>:focus-visible</code> states. Add
+              <code>role="presentation"</code> to the canvas element since it's purely decorative. Most importantly,
+              respect <code>prefers-reduced-motion</code> by pausing or simplifying the animation when the user has
+              enabled reduced motion in their OS settings — this is critical for users with vestibular disorders.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Can I change the Matrix rain color from green to another neon color?</summary>
+            <div class="faq-answer">
+              Absolutely. The rain color is controlled by the <code>fillStyle</code> property in the JavaScript canvas
+              drawing code and by CSS custom properties for the form glow. To change it to cyan, for example, replace
+              <code>#00ff00</code> with <code>#00d9ff</code> in both the JS fillStyle and the CSS box-shadow values.
+              The best approach is to define a CSS custom property like <code>--glow-color: #00ff00</code> and reference
+              it everywhere — then it's a single-line change to retheme the entire page to any neon color.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Is this Matrix login page project good for beginners learning JavaScript?
+            </summary>
+            <div class="faq-answer">
+              This project is labeled intermediate. It requires understanding of the Canvas API,
+              <code>requestAnimationFrame</code>
+              loops, CSS positioning with z-index layering, and form accessibility. It's an ideal third or fourth
+              project
+              for someone who has built basic forms and simple CSS animations, and wants to level up to canvas-based
+              visual
+              effects combined with real UI components. If you're comfortable with basic DOM manipulation and CSS, you
+              can
+              follow along — each step is explained in detail above.
+            </div>
+          </details>
+
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- CONCLUSION -->
+      <section id="conclusion" class="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          This <strong>Matrix style login page</strong> demonstrates how canvas-based animations and CSS glow effects
+          can transform a simple authentication form into a memorable brand experience. By combining the
+          <strong>HTML5 Canvas API</strong> for the digital rain, <strong>layered CSS box-shadows</strong> for neon
+          glow,
+          <strong>z-index stacking</strong> for form-over-animation layout, and <strong>requestAnimationFrame</strong>
+          for performant rendering — you get a production-quality visual project with zero dependencies.
+        </p>
+        <p>
+          Whether you're building a cybersecurity product, a gaming platform, a developer tool, or just want
+          to master the Canvas API — this project covers the real-world techniques that make login pages
+          unforgettable. Copy the code, change the glow color, adjust the rain speed, and make it yours.
+        </p>
+        <p style="color:var(--text-muted); font-size:14px; margin-bottom:0;">
+          Found this useful? Explore more HTML CSS JavaScript projects in the sidebar.
+        </p>
+      </section>
+
+    </main>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" aria-label="Related projects">
+      <div class="sidebar-box">
+        <div class="sidebar-header">🔗 Related Projects</div>
+        <div class="related-list">
+          <a class="related-card" href="Project40.html" aria-label="CSS Neon Digital Clock Animation">
+            <img src="https://i.suar.me/Ep114/m"
+              alt="CSS Neon Digital Clock Animation with 3D perspective built with HTML CSS JavaScript" loading="lazy"
+              width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">CSS Neon Digital Clock — HTML CSS JavaScript</div>
+          </a>
+          <a class="related-card" href="Project37.html" aria-label="Glassmorphism Login Page">
+            <img src="https://i.suar.me/Np3EO/m" alt="Modern Glassmorphism Login Page Design with blur effects"
+              loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Modern Glassmorphism Login Page Design</div>
+          </a>
+          <a class="related-card" href="Project14.html" aria-label="Electric Neon Card Animation">
+            <img src="https://77cod-ing.github.io/image%20copy%2040.png" alt="Electric Neon Card Animation HTML CSS SVG"
+              loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Electric Neon Card Animation — HTML CSS SVG</div>
+          </a>
+          <a class="related-card" href="Project39.html" aria-label="Animated Button with Star Effects">
+            <img src="https://i.suar.me/jvZZv/m" alt="Creative Animated Button with Star Effects Using HTML & CSS"
+              loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Button with Star Effects — HTML & CSS</div>
+          </a>
+        </div>
+      </div>
+    </aside>
+
   </div>
-  <div class="img">
-    <img src="image copy 86.png" alt="subscribe.box">
-  </div>
-<div class="par">
-
-<h2>Why a Matrix Style Login Page Stands Out</h2>
-<ul>
-<li><strong>Strong Visual Identity:</strong> The Matrix-inspired green code instantly creates a futuristic, hacker-style atmosphere that captures attention.</li>
-<li><strong>User Engagement:</strong> Subtle animated effects (falling code, glowing inputs) keep users visually engaged without blocking usability.</li>
-<li><strong>Modern Appeal:</strong> This style resonates strongly with tech, cybersecurity, gaming, and developer-oriented audiences.</li>
-<li><strong>Brand Differentiation:</strong> A unique login page helps your platform stand out compared to generic form-based designs.</li>
-<li><strong>Flexible Implementation:</strong> Effects can be scaled from minimal glow to full animated backgrounds depending on performance needs.</li>
-</ul>
-
-<h2>How to Build a Matrix Style Login Page</h2>
-
-<h3>1. HTML Structure</h3>
-<p>
-Start with a clean, semantic structure using a <code>&lt;form&gt;</code> element containing labeled inputs for username/email and password.
-Wrap the form in a centered container and place a <code>&lt;canvas&gt;</code> or background <code>&lt;div&gt;</code> behind it for the Matrix animation.
-Keep the markup minimal to ensure accessibility and maintainability.
-</p>
-
-<h3>2. CSS Styling & Effects</h3>
-<p>
-Use dark backgrounds (<code>#000</code> or near-black) combined with neon green accents.
-Apply glow effects using <code>box-shadow</code> and <code>text-shadow</code> on inputs and buttons.
-Fonts like monospace or custom digital fonts enhance the Matrix aesthetic.
-Ensure contrast remains high so text stays readable despite visual effects.
-</p>
-
-<h3>3. JavaScript Matrix Animation</h3>
-<p>
-JavaScript drives the signature Matrix rain effect:
-<ol>
-<li>Create a full-screen <code>&lt;canvas&gt;</code> element.</li>
-<li>Use an array of characters (letters, numbers, symbols) drawn vertically.</li>
-<li>Animate falling characters using <code>requestAnimationFrame</code>.</li>
-<li>Control speed, opacity, and density to balance performance and visuals.</li>
-</ol>
-The animation should run independently of the login logic to avoid blocking user input.
-</p>
-
-<h2>Benefits for UX, Security Perception & Branding</h2>
-<p>
-A Matrix Style Login Page enhances perceived security and technical sophistication.
-Users often associate advanced visuals with advanced systems, which can increase trust when combined with proper security practices.
-When optimized correctly, these effects do not harm performance or usability.
-</p>
-
-<ul>
-<li><strong>Improved First Impression:</strong> Users immediately recognize a premium, tech-focused interface.</li>
-<li><strong>Higher Memorability:</strong> Unique visuals make your platform more recognizable.</li>
-<li><strong>Performance-Friendly:</strong> Canvas-based animations can be optimized to run smoothly even on mid-range devices.</li>
-</ul>
-
-<h2>Accessibility & Best Practices</h2>
-<ul>
-<li>Ensure all inputs have visible labels and proper <code>aria-label</code> attributes.</li>
-<li>Provide sufficient contrast between text and background despite neon effects.</li>
-<li>Respect <code>prefers-reduced-motion</code> by disabling or simplifying animations when requested.</li>
-<li>Allow keyboard navigation and visible focus states for all form controls.</li>
-</ul>
-
-<h2>Common Mistakes to Avoid</h2>
-<ul>
-<li>Overloading animations that distract from the login action.</li>
-<li>Low contrast text that becomes unreadable over animated backgrounds.</li>
-<li>Heavy JavaScript loops that reduce frame rate on low-end devices.</li>
-<li>Ignoring mobile responsiveness for smaller screens.</li>
-</ul>
-
-<h2>Conclusion</h2>
-<p>
-The <strong>Matrix Style Login Page</strong> combines advanced HTML, CSS, and JavaScript effects to create a visually striking yet functional authentication interface.
-By balancing animation, performance, and accessibility, you can deliver a login experience that feels modern, secure, and memorable.
-When implemented thoughtfully, this design becomes a powerful branding element rather than just a decorative effect.
-</p>
-
-<div class="highlight">
-<p><strong>SEO Keywords:</strong> Matrix style login page, animated login form, Matrix rain effect JavaScript, futuristic login UI, canvas animation login, cyberpunk web design, advanced CSS effects, JavaScript visual effects, hacker style interface</p>
-</div>
-
-</div>
 
 
-
-
-
-  <div class="con1">
-    <div class="countdown" id="countdown">
-    <span id="number">10</span> wait...
+  <!-- ===== PREVIEW MODAL ===== -->
+  <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+    aria-label="Live preview of the Matrix style login page">
+    <div class="preview-modal">
+      <div class="preview-modal-header">
+        <div class="preview-modal-title">
+          <i class='bx bx-show'></i>
+          <strong>Live Preview</strong> — Matrix Style Login Page
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="preview-dots">
+            <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+            <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+            <button class="preview-dot green" aria-label="Maximize" disabled></button>
+          </div>
+          <button class="preview-close-btn" id="previewCloseBtn">
+            <i class='bx bx-x'></i> Close
+          </button>
+        </div>
+      </div>
+      <div class="preview-iframe-wrap">
+        <div class="preview-loading" id="previewLoading">
+          <div class="preview-spinner"></div>
+          <span class="preview-loading-text">Loading preview...</span>
+          <div class="preview-loading-files">
+            <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+            <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+            <span class="preview-file-tag js-tag" id="tagJS">JS</span>
+          </div>
+        </div>
+        <iframe id="previewIframe" title="Preview of Matrix style login page with falling code rain"
+          sandbox="allow-scripts allow-same-origin"></iframe>
+        <div class="preview-hint" id="previewHint">
+          <i class='bx bx-cursor'></i> Matrix rain login effects
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="link-box" id="linkBox">
-    <a href="https://gist.github.com/77cod-ing/d4227093484796c36d265396b1314d83" target="_blank">Go to code</a>
-  </div>
-  </div>
-
+  <!-- ===== SCRIPTS ===== -->
   <script>
-    let counter = 10;
-    let timer = null;
-    const countdownEl = document.getElementById("countdown");
-    const numberEl = document.getElementById("number");
-    const linkBox = document.getElementById("linkBox");
+    /* ===== File URLs ===== */
+    const gistBase = "https://gist.githubusercontent.com/77cod-ing/d4227093484796c36d265396b1314d83/raw/9a517fc84db5271d944a00f7417ecce3af5ade5b/";
+    const htmlUrl = gistBase + "index.html";
+    const cssUrl = gistBase + "style.css";
+    const jsUrl = gistBase + "script.js";
 
-    function startCountdown() {
-      if (timer) return;
-      timer = setInterval(() => {
-        counter--;
-        numberEl.textContent = counter;
+    let cachedHTML = "", cachedCSS = "", cachedJS = "";
 
-        if (counter === 0) {
-          clearInterval(timer);
-          timer = null;
-          countdownEl.style.display = "none"; // يخفي العداد والكلمة
-          linkBox.style.display = "block";
-        }
-      }, 1000);
+    async function loadCode(url, elementId, lang) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const text = await res.text();
+        const el = document.getElementById(elementId);
+        el.textContent = text;
+        el.className = `language-${lang}`;
+        if (window.Prism) Prism.highlightElement(el);
+        if (lang === "html") cachedHTML = text;
+        if (lang === "css") cachedCSS = text;
+        if (lang === "js") cachedJS = text;
+      } catch (e) {
+        const el = document.getElementById(elementId);
+        if (el) el.textContent = `/* Failed to load: ${e.message} */`;
+      }
     }
 
-    function stopCountdown() {
-      clearInterval(timer);
-      timer = null;
-    }
+    loadCode(htmlUrl, "code1", "html");
+    loadCode(cssUrl, "code2", "css");
+    loadCode(jsUrl, "code3", "js");
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          startCountdown();
-        } else {
-          stopCountdown();
+    /* ===== Tabs ===== */
+    document.querySelectorAll(".code-tab").forEach(tab => {
+      tab.addEventListener("click", () => {
+        const lang = tab.dataset.lang;
+        document.querySelectorAll(".code-tab").forEach(t => {
+          t.classList.remove("active");
+          t.setAttribute("aria-selected", "false");
+        });
+        document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+        tab.classList.add("active");
+        tab.setAttribute("aria-selected", "true");
+        const panelMap = { html: "panel-html", css: "panel-css", js: "panel-js" };
+        document.getElementById(panelMap[lang]).classList.add("active");
+      });
+    });
+
+    /* ===== Copy ===== */
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+        if (!code.trim()) return;
+        try {
+          await navigator.clipboard.writeText(code);
+          btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+          btn.classList.add("copied");
+          setTimeout(() => {
+            btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
+            btn.classList.remove("copied");
+          }, 2000);
+        } catch {
+          btn.textContent = "Error";
         }
       });
-    }, { threshold: 1.0 });
+    });
 
-    observer.observe(countdownEl);
+    /* ===== Preview Modal ===== */
+    const previewOverlay = document.getElementById("previewOverlay");
+    const previewIframe = document.getElementById("previewIframe");
+    const previewLoading = document.getElementById("previewLoading");
+    const previewHint = document.getElementById("previewHint");
+    const previewBtn = document.getElementById("previewBtn");
+    const previewCloseBtn = document.getElementById("previewCloseBtn");
+    const previewDotClose = document.getElementById("previewDotClose");
+    const tagHTML = document.getElementById("tagHTML");
+    const tagCSS = document.getElementById("tagCSS");
+    const tagJS = document.getElementById("tagJS");
+
+    function openPreview() {
+      previewOverlay.classList.add("open");
+      document.body.style.overflow = "hidden";
+      previewLoading.classList.remove("hidden");
+      previewHint.classList.remove("show");
+      previewBtn.classList.add("loading");
+      tagHTML.classList.remove("loaded");
+      tagCSS.classList.remove("loaded");
+      tagJS.classList.remove("loaded");
+      buildPreview();
+    }
+
+    function closePreview() {
+      previewOverlay.classList.remove("open");
+      document.body.style.overflow = "";
+      previewIframe.srcdoc = "";
+      previewBtn.classList.remove("loading");
+    }
+
+    async function buildPreview() {
+      if (cachedHTML && cachedCSS && cachedJS) {
+        tagHTML.classList.add("loaded");
+        tagCSS.classList.add("loaded");
+        tagJS.classList.add("loaded");
+        injectPreview(cachedHTML, cachedCSS, cachedJS);
+        return;
+      }
+      try {
+        const fetches = [];
+        if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
+        if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
+        if (!cachedJS) fetches.push(fetch(jsUrl).then(r => r.text()).then(t => { cachedJS = t; tagJS.classList.add("loaded"); }));
+        if (cachedHTML) tagHTML.classList.add("loaded");
+        if (cachedCSS) tagCSS.classList.add("loaded");
+        if (cachedJS) tagJS.classList.add("loaded");
+        await Promise.all(fetches);
+        injectPreview(cachedHTML, cachedCSS, cachedJS);
+      } catch (e) {
+        previewLoading.innerHTML = `<i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i><span class="preview-loading-text" style="color:var(--accent2);">Failed to load: ${e.message}</span>`;
+        previewBtn.classList.remove("loading");
+      }
+    }
+
+    function injectPreview(html, css, js) {
+      let combined = html;
+      if (combined.includes('<link') && /style\.css/i.test(combined)) {
+        combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
+      } else if (combined.includes("</head>")) {
+        combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
+      } else { combined = `<style>${css}</style>\n${combined}`; }
+
+      if (combined.includes('<script') && /script\.js/i.test(combined)) {
+        combined = combined.replace(/<script[^>]*src=["'][^"']*script\.js["'][^>]*><\/script>/gi, `<script>${js}<\/script>`);
+      } else if (combined.includes("</body>")) {
+        combined = combined.replace("</body>", `<script>${js}<\/script>\n</body>`);
+      } else { combined = `${combined}\n<script>${js}<\/script>`; }
+
+      const bgStyle = `<style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#000;}</style>`;
+      combined = combined.includes("<head>") ? combined.replace("<head>", `<head>${bgStyle}`) : bgStyle + combined;
+
+      previewIframe.srcdoc = combined;
+      previewIframe.addEventListener("load", function onLoad() {
+        previewLoading.classList.add("hidden");
+        previewBtn.classList.remove("loading");
+        setTimeout(() => { previewHint.classList.add("show"); setTimeout(() => previewHint.classList.remove("show"), 4000); }, 300);
+        previewIframe.removeEventListener("load", onLoad);
+      });
+    }
+
+    previewBtn.addEventListener("click", openPreview);
+    previewCloseBtn.addEventListener("click", closePreview);
+    previewDotClose.addEventListener("click", closePreview);
+    previewOverlay.addEventListener("click", (e) => { if (e.target === previewOverlay) closePreview(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
   </script>
-</body>
-</html>
 
+</body>
+
+</html>
