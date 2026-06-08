@@ -1,0 +1,2304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== PRIMARY SEO META ===== -->
+    <title>Interactive Image Card Hover Animation with Custom Cursor — HTML CSS JavaScript Tutorial 2026</title>
+    <meta name="description"
+        content="Build a stunning interactive image card hover animation with a custom cursor text effect using HTML, CSS, and JavaScript. Step-by-step tutorial with full free source code. No libraries required.">
+    <meta name="keywords"
+        content="CSS hover effects, custom cursor CSS, interactive UI design, modern web design, CSS grid layout, JavaScript pointer events, frontend UI effects, creative CSS effects, CSS image hover, advanced CSS animation tutorial, custom cursor effect JavaScript, interactive hover animation CSS, modern card UI design HTML CSS, CSS grid responsive layout example, creative UI components HTML CSS, animated portfolio layout CSS, CSS blend mode effects, next level CSS animations, CSS hover zoom image effect, how to create custom cursor effect with JavaScript and CSS, interactive image card hover animation HTML CSS tutorial, modern responsive grid layout with hover effects CSS, advanced CSS UI design with blend mode and animations, animated article cards layout using pure CSS and JS, creative portfolio grid with hover animation effect, CSS custom cursor with text effect tutorial, how to build interactive UI cards with hover zoom effect, CSS grid gallery with animation and hover effects, stylish blog card design with CSS animations">
+    <meta name="author" content="77cod_ing">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://77cod-ing.github.io/Project-CSS-Card-Hover.html">
+
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:type" content="article">
+    <meta property="og:title"
+        content="Interactive Image Card Hover Animation with Custom Cursor — HTML CSS JavaScript 2026">
+    <meta property="og:description"
+        content="Build interactive image cards with a custom text cursor, hover zoom, CSS blend mode effects, and a staggered grid layout. Full free source code.">
+    <meta property="og:image" content="https://picsum.photos/1200/630?random=99">
+    <meta property="og:url" content="https://77cod-ing.github.io/Project-CSS-Card-Hover.html">
+    <meta property="og:site_name" content="77cod_ing">
+    <meta property="article:published_time" content="2026-06-08T00:00:00Z">
+    <meta property="article:modified_time" content="2026-06-08T00:00:00Z">
+    <meta property="article:author" content="77cod_ing">
+    <meta property="article:section" content="CSS Tutorials">
+    <meta property="article:tag" content="HTML, CSS, JavaScript, Hover Animation, Custom Cursor, CSS Grid, Blend Mode">
+
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Interactive Image Card Hover Animation with Custom Cursor — CSS JS Tutorial">
+    <meta name="twitter:description"
+        content="Build interactive image cards with custom cursor, hover zoom, CSS blend mode, and staggered grid layout. Free source code.">
+    <meta name="twitter:image" content="https://picsum.photos/1200/630?random=99">
+
+    <!-- ===== SCHEMA: TechArticle ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Interactive Image Card Hover Animation with Custom Cursor — HTML CSS JavaScript Project",
+    "description": "A complete tutorial on building interactive image cards with a custom CSS text cursor, hover zoom effects, CSS blend mode overlays, CSS grid staggered layout, and JavaScript pointer event tracking using pure HTML, CSS, and vanilla JavaScript.",
+    "image": "https://picsum.photos/1200/630?random=99",
+    "datePublished": "2026-06-08",
+    "dateModified": "2026-06-08",
+    "author": {
+      "@type": "Person",
+      "name": "77cod_ing",
+      "url": "https://77cod-ing.github.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "77cod_ing",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Picture1.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://77cod-ing.github.io/Project-CSS-Card-Hover.html"
+    },
+    "articleSection": "CSS Tutorials",
+    "keywords": "CSS hover effects, custom cursor JavaScript, CSS blend mode, interactive card UI, CSS grid layout, pointer events JavaScript, animated portfolio layout, CSS image zoom hover",
+    "timeRequired": "PT20M",
+    "educationalLevel": "Intermediate",
+    "teaches": ["CSS Custom Properties", "CSS Grid Layout", "CSS Blend Mode", "CSS Transitions", "JavaScript pointermove", "CSS :has() Selector", "CSS mix-blend-mode", "CSS scale transform", "CSS aspect-ratio"]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: HowTo ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Build Interactive Image Cards with Custom Cursor Effect Using HTML CSS JavaScript",
+    "description": "Step-by-step guide to creating an interactive card grid with a custom CSS cursor, hover zoom image effect, CSS blend mode overlays, and staggered layout using CSS Grid.",
+    "image": "https://picsum.photos/1200/630?random=99",
+    "totalTime": "PT20M",
+    "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "0"},
+    "supply": [
+      {"@type": "HowToSupply", "name": "Text editor (VS Code)"},
+      {"@type": "HowToSupply", "name": "A modern web browser"}
+    ],
+    "tool": [
+      {"@type": "HowToTool", "name": "HTML"},
+      {"@type": "HowToTool", "name": "CSS"},
+      {"@type": "HowToTool", "name": "JavaScript"}
+    ],
+    "step": [
+      {"@type": "HowToStep", "name": "Build the Card Grid HTML", "text": "Create article elements inside a CSS grid body. Each card contains an img and an anchor tag with two spans for the title and author name.", "position": 1},
+      {"@type": "HowToStep", "name": "Set Up CSS Grid Staggered Layout", "text": "Use grid-template-columns on the body and translate even cards downward with translate: 0 50% to create a staggered column effect.", "position": 2},
+      {"@type": "HowToStep", "name": "Create the Custom Cursor Elements", "text": "Add two fixed-position div elements to the DOM for the cursor circle and its text label. Use CSS custom properties --x and --y for real-time positioning.", "position": 3},
+      {"@type": "HowToStep", "name": "Track Pointer Position with JavaScript", "text": "Listen to the pointermove event on document.body and update --x and --y CSS variables on :root using style.setProperty().", "position": 4},
+      {"@type": "HowToStep", "name": "Apply CSS Blend Mode to the Cursor", "text": "Set mix-blend-mode: difference on the cursor element for a color-inverting effect that looks striking over both dark and light backgrounds.", "position": 5},
+      {"@type": "HowToStep", "name": "Implement Hover Zoom on Images", "text": "Use the CSS --hover custom property toggled by article:hover to scale images from 1 to 1.2 via scale: calc(1 + (var(--hover) / 5)) with a smooth transition.", "position": 6},
+      {"@type": "HowToStep", "name": "Add Animated Underline on Hover", "text": "Use a ::after pseudo-element on the card title span with scale: var(--hover, 0) 1 and transform-origin set to match even/odd card alignment.", "position": 7},
+      {"@type": "HowToStep", "name": "Use :has() for Context-Aware Hue Shifts", "text": "Apply :root:has(article:nth-of-type(even):hover) to change the --hue custom property, giving odd and even cards different colored cursor glows.", "position": 8}
+    ]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: FAQ ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I create a custom cursor effect with JavaScript and CSS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Create a fixed-position div element styled as a circle. Use JavaScript to listen to the pointermove event and update two CSS custom properties (--x and --y) on :root with the cursor's clientX and clientY coordinates. In CSS, use translate: calc((var(--x) * 1px) - 50%) calc((var(--y) * 1px) - 50%) to position the element. This gives you a smooth, hardware-accelerated cursor that follows the mouse precisely."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does CSS mix-blend-mode difference work on a custom cursor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "mix-blend-mode: difference inverts the colors underneath the cursor element based on the difference between the cursor color and the background color. A white cursor on a dark background appears white; on a light background, it inverts and appears dark. This creates a striking high-contrast effect that works on any background without requiring color adjustments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I make images zoom on hover using only CSS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Set overflow: hidden on the card container, then apply scale: calc(1 + (var(--hover) / 5)) with transition: scale 0.2s on the img element. Use article:hover { --hover: 1; } to toggle the custom property. This avoids layout shift because the overflow is clipped by the parent, and the transition gives a smooth zoom-in effect."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the CSS :has() selector and how is it used here?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The CSS :has() relational pseudo-class allows you to style a parent based on its children's state. In this project, :root:has(article:nth-of-type(even):hover) targets the root element when an even-numbered article is hovered, setting --hue: 210. This changes the cursor glow color contextually based on which card is being hovered, without any JavaScript."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I create a staggered CSS grid layout for cards?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Set grid-template-columns: auto auto on the body at a min-width breakpoint, then apply translate: 0 50% to even-indexed articles using article:nth-of-type(even). This shifts every second column down by half its height, creating a Pinterest-style staggered grid with no JavaScript required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I animate an underline from left to right on hover in CSS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Add an ::after pseudo-element to the text span with position: absolute, height: 4px, and scale: var(--hover, 0) 1 — this scales the width from 0 to 1 on hover. Set transform-origin: 0 50% for a left-to-right reveal (or 100% 50% for right-to-left on right-aligned cards). Add transition: scale 0.2s for a smooth animation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why use pointer-events: none on a custom cursor element?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Setting pointer-events: none on the custom cursor div prevents it from intercepting mouse events. Without this, the cursor element would block hover states and click events on the cards underneath it, breaking all interactions. pointer-events: none makes the element visually present but completely transparent to mouse interactions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this interactive card hover project suitable for a portfolio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. This project demonstrates mastery of several advanced CSS techniques: custom properties as reactive state, the :has() selector, mix-blend-mode, CSS Grid, and CSS transitions — plus JavaScript event handling. It shows a strong understanding of how CSS and JS interact for UI effects, making it an impressive portfolio piece for frontend developer roles."
+        }
+      }
+    ]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: BreadcrumbList ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+      {"@type": "ListItem", "position": 3, "name": "Interactive Card Hover Animation", "item": "https://77cod-ing.github.io/Project-CSS-Card-Hover.html"}
+    ]
+  }
+  </script>
+
+    <!-- ===== ASSETS ===== -->
+    <link rel="icon" type="image/png" href="Picture1.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+    <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+        crossorigin="anonymous"></script>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+            --premcolo: #00d9ff;
+            --accent2: #ff6b35;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --surface: rgba(255, 255, 255, 0.04);
+            --surface-hover: rgba(0, 217, 255, 0.07);
+            --border: rgba(255, 255, 255, 0.08);
+            --font-head: 'Space Mono', monospace;
+            --font-body: 'DM Sans', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--back);
+            font-family: var(--font-body);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 56px;
+            padding: 0 2.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            color: var(--premcolo);
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: clamp(1rem, 2vw, 2rem);
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: var(--premcolo);
+        }
+
+        /* BREADCRUMB */
+        .breadcrumb {
+            padding: 12px 2.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb ol {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .breadcrumb li {
+            display: flex;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .breadcrumb li+li::before {
+            content: "›";
+            color: var(--premcolo);
+            margin-right: 6px;
+            font-size: 1.1rem;
+        }
+
+        .breadcrumb a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--premcolo);
+        }
+
+        .breadcrumb [aria-current="page"] {
+            color: var(--premcolo);
+            font-weight: 600;
+        }
+
+        /* BACK BUTTON */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+            margin: 1rem 2.5rem;
+        }
+
+        .back-link:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo);
+        }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 3rem 2.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: var(--font-head);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .tag-tutorial {
+            background: rgba(0, 217, 255, 0.12);
+            color: var(--premcolo);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+        }
+
+        .tag-js {
+            background: rgba(235, 223, 0, 0.1);
+            color: #ebdf00;
+            border: 1px solid rgba(235, 223, 0, 0.2);
+        }
+
+        .tag-css {
+            background: rgba(0, 217, 255, 0.08);
+            color: #7dd3fc;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .tag-level {
+            background: rgba(255, 107, 53, 0.1);
+            color: var(--accent2);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+        }
+
+        .read-time {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-head);
+            font-size: clamp(1.6rem, 4vw, 2.6rem);
+            line-height: 1.25;
+            color: #fff;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 span {
+            color: var(--premcolo);
+        }
+
+        .hero-lead {
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            color: var(--text-muted);
+            max-width: 680px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .stat-value {
+            font-family: var(--font-head);
+            font-size: 1.4rem;
+            color: var(--premcolo);
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            display: block;
+            box-shadow: 0 0 60px rgba(0, 217, 255, 0.08), 0 32px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .img-caption {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* LAYOUT */
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2.5rem 4rem;
+            align-items: start;
+        }
+
+        /* ARTICLE BODY */
+        .article-body h2 {
+            font-family: var(--font-head);
+            font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+            color: var(--premcolo);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            scroll-margin-top: 80px;
+        }
+
+        .article-body h3 {
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            color: #7dd3fc;
+            margin: 1.8rem 0 0.75rem;
+            scroll-margin-top: 80px;
+        }
+
+        .article-body p {
+            margin-bottom: 1.1rem;
+            color: var(--text);
+        }
+
+        .article-body code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 7px;
+            border-radius: 5px;
+        }
+
+        .article-body ul,
+        .article-body ol {
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 1.1rem;
+        }
+
+        .article-body li {
+            margin-bottom: 9px;
+        }
+
+        .article-body li strong {
+            color: #fff;
+        }
+
+        /* TOC */
+        .toc {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .toc-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--premcolo);
+            margin-bottom: 0.75rem;
+        }
+
+        .toc ol {
+            padding-left: 1.2rem;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+        }
+
+        .toc a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: var(--premcolo);
+        }
+
+        /* FEATURES */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 1.5rem 0;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            transition: border-color 0.25s, background 0.25s;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(0, 217, 255, 0.3);
+            background: var(--surface-hover);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .feature-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* STEPS */
+        .steps {
+            margin: 1.5rem 0;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 44px 1fr;
+            gap: 1rem;
+            padding: 1.1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-num {
+            width: 44px;
+            height: 44px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-head);
+            color: var(--premcolo);
+            font-size: 1rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            margin-top: 0;
+            font-size: 1rem;
+        }
+
+        .step-content p {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* CODE SECTION */
+        .code-section {
+            margin: 2rem 0;
+            width: 60vw;
+        }
+
+        .code-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .code-tabs {
+            display: flex;
+            gap: 4px;
+        }
+
+        .code-tab {
+            padding: 8px 20px;
+            border-radius: 8px 8px 0 0;
+            border: 1px solid var(--border);
+            border-bottom: none;
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .code-tab.active {
+            background: #1e1e2f;
+            color: #fff;
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+
+        .code-tab[data-lang="html"].active {
+            color: #ff6600;
+        }
+
+        .code-tab[data-lang="css"].active {
+            color: #00ffff;
+        }
+
+        .code-tab[data-lang="js"].active {
+            color: #f7df1e;
+        }
+
+        .preview-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 22px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 217, 255, 0.4);
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.3px;
+        }
+
+        .preview-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .preview-btn:hover {
+            border-color: var(--premcolo);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .preview-btn:hover::before {
+            opacity: 1;
+        }
+
+        .preview-btn:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        .preview-btn i {
+            font-size: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .preview-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .preview-btn.loading i {
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .code-panels {
+            position: relative;
+        }
+
+        .code-box {
+            background: #1e1e2f;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+            border-radius: 0 12px 12px 12px;
+            position: relative;
+            display: none;
+        }
+
+        .code-box.active {
+            display: block;
+        }
+
+        .code-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .code-lang-label {
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .copy-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            border-radius: 7px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo);
+        }
+
+        .copy-btn.copied {
+            color: #4ade80;
+            border-color: #4ade80;
+        }
+
+        :not(pre)>code[class*="language-"],
+        pre[class*="language-"] {
+            width: 100%;
+            max-width: 100%;
+            height: 50vh;
+            border-radius: 0 0 12px 12px;
+            overflow-y: auto;
+            overflow-x: auto;
+            margin: 0;
+        }
+
+        pre::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        pre::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        pre::-webkit-scrollbar-thumb {
+            background: var(--premcolo);
+            border-radius: 10px;
+        }
+
+        /* INFO / WARN */
+        .info-box {
+            background: rgba(0, 217, 255, 0.06);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-left: 4px solid var(--premcolo);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .info-box strong {
+            color: var(--premcolo);
+        }
+
+        .warn-box {
+            background: rgba(255, 107, 53, 0.06);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-left: 4px solid var(--accent2);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .warn-box strong {
+            color: var(--accent2);
+        }
+
+        /* TECHNIQUE COMPARISON TABLE */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 14px;
+        }
+
+        .comparison-table th {
+            background: rgba(0, 217, 255, 0.08);
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 10px 14px;
+            text-align: left;
+            border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+        }
+
+        .comparison-table td {
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-muted);
+            vertical-align: top;
+        }
+
+        .comparison-table td:first-child {
+            color: #fff;
+            font-weight: 600;
+            font-family: var(--font-head);
+            font-size: 12px;
+        }
+
+        .comparison-table tr:hover td {
+            background: var(--surface);
+        }
+
+        /* FAQ */
+        .faq {
+            margin: 1.5rem 0;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            background: var(--surface);
+            font-weight: 600;
+            font-size: 15px;
+            transition: background 0.2s;
+            list-style: none;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background: var(--surface-hover);
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.3rem;
+            color: var(--premcolo);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        details[open] .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 1rem 1.25rem;
+            color: var(--text-muted);
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+        }
+
+        .faq-answer code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* CONCLUSION */
+        .conclusion {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.07), rgba(0, 140, 160, 0.05));
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 16px;
+            padding: 1.75rem 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .conclusion h2 {
+            border: none;
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 1.5rem 0;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            position: sticky;
+            top: 72px;
+        }
+
+        .sidebar-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-header {
+            padding: 14px 16px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--premcolo);
+            border-bottom: 1px solid var(--border);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .related-list {
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .related-card {
+            display: block;
+            text-decoration: none;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 16/9;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .related-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+
+        .related-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .related-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+        .related-card-title {
+            position: absolute;
+            bottom: 8px;
+            left: 10px;
+            right: 10px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* PREVIEW MODAL */
+        .preview-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 5, 15, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+        }
+
+        .preview-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .preview-modal {
+            width: 92vw;
+            max-width: 92vw;
+            height: 90vh;
+            max-height: 90vh;
+            background: #0a0e1a;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(0, 217, 255, 0.06);
+            transform: scale(0.92) translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .preview-overlay.open .preview-modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .preview-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
+        }
+
+        .preview-modal-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .preview-modal-title i {
+            color: var(--premcolo);
+            font-size: 16px;
+        }
+
+        .preview-modal-title strong {
+            color: #fff;
+        }
+
+        .preview-dots {
+            display: flex;
+            gap: 7px;
+        }
+
+        .preview-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, filter 0.2s;
+        }
+
+        .preview-dot:hover {
+            transform: scale(1.2);
+            filter: brightness(1.3);
+        }
+
+        .preview-dot.red {
+            background: #ff5f57;
+        }
+
+        .preview-dot.yellow {
+            background: #febc2e;
+        }
+
+        .preview-dot.green {
+            background: #28c840;
+        }
+
+        .preview-close-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .preview-close-btn:hover {
+            border-color: var(--accent2);
+            color: var(--accent2);
+            background: rgba(255, 107, 53, 0.08);
+        }
+
+        .preview-iframe-wrap {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .preview-iframe-wrap iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            background: #000;
+        }
+
+        .preview-loading {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            background: #0a0e1a;
+            z-index: 2;
+            transition: opacity 0.4s;
+        }
+
+        .preview-loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .preview-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(0, 217, 255, 0.15);
+            border-top-color: var(--premcolo);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
+        .preview-loading-text {
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .preview-loading-files {
+            display: flex;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .preview-file-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            font-weight: 700;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+
+        .preview-file-tag.loaded {
+            opacity: 1;
+        }
+
+        .preview-file-tag.html-tag {
+            background: rgba(255, 102, 0, 0.15);
+            color: #ff6600;
+            border: 1px solid rgba(255, 102, 0, 0.3);
+        }
+
+        .preview-file-tag.css-tag {
+            background: rgba(0, 255, 255, 0.1);
+            color: #00ffff;
+            border: 1px solid rgba(0, 255, 255, 0.25);
+        }
+
+        .preview-file-tag.js-tag {
+            background: rgba(247, 223, 30, 0.1);
+            color: #f7df1e;
+            border: 1px solid rgba(247, 223, 30, 0.25);
+        }
+
+        .preview-hint {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 6px 16px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            color: var(--text-muted);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.5s 0.8s;
+            white-space: nowrap;
+            z-index: 3;
+        }
+
+        .preview-hint.show {
+            opacity: 1;
+        }
+
+        .preview-hint i {
+            color: var(--premcolo);
+            margin-right: 4px;
+        }
+
+        /* INLINE DEMO */
+        .inline-demo {
+            margin: 2rem 0;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: #fff;
+            aspect-ratio: 16/7;
+        }
+
+        .inline-demo iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 1fr;
+                padding: 1.5rem 1.25rem;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .related-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .related-card {
+                flex: 1 1 calc(50% - 8px);
+            }
+
+            .hero {
+                padding: 2rem 1.25rem 1.5rem;
+            }
+
+            .navbar {
+                padding: 0 1.25rem;
+            }
+
+            .breadcrumb {
+                padding: 10px 1.25rem;
+            }
+
+            .back-link {
+                margin: 0.75rem 1.25rem;
+            }
+
+            .code-section {
+                width: 85vw;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-stats {
+                gap: 1.2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .code-tab {
+                padding: 7px 13px;
+                font-size: 12px;
+            }
+
+            .related-card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">{ / }</span> 77cod_ing
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="Privacy Policy.html">Privacy Policy</a>
+            <a href="Terms & Conditions.html">Terms & Conditions</a>
+        </nav>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
+            <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+            <li><span aria-current="page">Interactive Card Hover Animation</span></li>
+        </ol>
+    </nav>
+
+    <!-- BACK BUTTON -->
+    <a href="projects.html" class="back-link" aria-label="Return to Projects">
+        <i class='bx bx-arrow-back'></i> Return to Projects
+    </a>
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="main-heading">
+        <div class="hero-meta">
+            <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+            <span class="tag tag-js">JavaScript</span>
+            <span class="tag tag-css">CSS Grid</span>
+            <span class="tag tag-level">Intermediate</span>
+            <span class="read-time"><i class='bx bx-time'></i> ~18 min read</span>
+        </div>
+
+        <h1 id="main-heading">
+            <span>Interactive Image Card</span> Hover Animation<br>with Custom Cursor — HTML CSS JS
+        </h1>
+
+        <p class="hero-lead">
+            A complete tutorial on building interactive image cards with a <strong>custom CSS text cursor
+                effect</strong>,
+            hover zoom images, animated underlines, <strong>CSS blend mode overlays</strong>, staggered CSS Grid layout,
+            and context-aware hue shifts using the modern <strong>:has() selector</strong> —
+            pure HTML, CSS, and vanilla JavaScript. No libraries. Full free source code.
+        </p>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-value">8</span>
+                <span class="stat-label">Build Steps</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">0</span>
+                <span class="stat-label">Libraries</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">:has()</span>
+                <span class="stat-label">Modern CSS</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">Free</span>
+                <span class="stat-label">Source Code</span>
+            </div>
+        </div>
+
+        <img src='https://77cod-ing.github.io/Interactive_image_card_hover_animation.png'
+            alt="Interactive image card hover animation with custom cursor text effect, CSS blend mode, and CSS grid staggered layout built with HTML CSS JavaScript"
+            class="hero-img" width="1200" height="420" loading="eager" fetchpriority="high">
+        <p class="img-caption">Final result: staggered CSS Grid card layout with custom cursor, hover zoom, blend mode
+            glow,
+            and animated underline — pure HTML, CSS & JS</p>
+    </section>
+
+    <!-- MAIN LAYOUT -->
+    <div class="layout">
+        <main class="article-body" id="main-content">
+
+            <!-- TOC -->
+            <nav class="toc" aria-label="Table of contents">
+                <p class="toc-title">📋 Contents</p>
+                <ol>
+                    <li><a href="#overview">What You'll Build</a></li>
+                    <li><a href="#features">Key Features</a></li>
+                    <li><a href="#source-code">Full Source Code</a></li>
+                    <li><a href="#how-it-works">How It Works — Step by Step</a></li>
+                    <li><a href="#techniques">CSS Techniques Deep Dive</a></li>
+                    <li><a href="#concepts">Concepts Covered</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ol>
+            </nav>
+
+            <!-- OVERVIEW -->
+            <section id="overview">
+                <h2>What You'll Build</h2>
+                <p>
+                    In this tutorial, you'll build a <strong>modern interactive image card UI</strong> from scratch — no
+                    libraries,
+                    no frameworks, just pure HTML, CSS, and vanilla JavaScript. The result is a
+                    <strong>staggered CSS Grid gallery</strong> of article cards, each with a hover zoom image effect,
+                    animated overlay gradient, and a glowing animated underline that reveals on hover.
+                </p>
+                <p>
+                    The standout feature is a <strong>custom cursor with a text label</strong> ("Read") that follows the
+                    pointer
+                    across the entire page, styled with <code>mix-blend-mode: difference</code> for a color-inverting
+                    blend
+                    effect.
+                    The cursor changes hue dynamically depending on which card column is hovered — achieved entirely
+                    in CSS using the modern <strong>:has() relational selector</strong>, with no JavaScript logic beyond
+                    tracking pointer coordinates.
+                </p>
+                <p>
+                    This is an ideal <strong>advanced CSS animation tutorial</strong> for developers who want to push
+                    beyond basic hover states into interactive UI design that feels production-ready. It's
+                    also a great <strong>animated portfolio layout CSS</strong> project — the kind that makes
+                    visitors stop scrolling.
+                </p>
+            </section>
+
+            <hr>
+
+            <!-- FEATURES -->
+            <section id="features">
+                <h2>Key Features of This Interactive Card UI</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🖱️</div>
+                        <div class="feature-title">Custom Cursor + Text</div>
+                        <div class="feature-desc">A fixed CSS circle follows the pointer with a "Read" label via
+                            <code>pointermove</code> and CSS custom properties.
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <div class="feature-title">mix-blend-mode: difference</div>
+                        <div class="feature-desc">The cursor inverts colors underneath it, creating a striking contrast
+                            on any
+                            background with zero JS.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔳</div>
+                        <div class="feature-title">Staggered CSS Grid Layout</div>
+                        <div class="feature-desc">Even cards are offset downward with <code>translate: 0 50%</code> — a
+                            pure CSS
+                            stagger pattern, no JS.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <div class="feature-title">Hover Zoom Image Effect</div>
+                        <div class="feature-desc">Images scale smoothly inside <code>overflow: hidden</code> cards using
+                            a CSS
+                            custom property toggle.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌈</div>
+                        <div class="feature-title">Context-Aware Hue Shift</div>
+                        <div class="feature-desc">The cursor glow hue changes per card column using
+                            <code>:root:has(article:nth-of-type(even):hover)</code>.
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✍️</div>
+                        <div class="feature-title">Animated Underline Reveal</div>
+                        <div class="feature-desc">A pseudo-element underline scales from 0→1 on hover, with origin
+                            matching the
+                            card's text alignment.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⌨️</div>
+                        <div class="feature-title">Keyboard Focus Support</div>
+                        <div class="feature-desc">Cards respond to <code>:focus-within</code> for full keyboard
+                            accessibility with a
+                            colored outline.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <div class="feature-title">Zero Dependencies</div>
+                        <div class="feature-desc">Pure HTML, CSS, and JavaScript — no external libraries, build tools,
+                            or frameworks
+                            required.</div>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- SOURCE CODE -->
+            <section id="source-code">
+                <h2>Full Source Code (Free)</h2>
+                <p>
+                    The project is built in a single <strong>HTML file</strong>: the markup contains the card articles
+                    and cursor elements, the <code>&lt;style&gt;</code> block handles all animations and layout,
+                    and a small <code>&lt;script&gt;</code> at the bottom tracks pointer position.
+                    Use the tabs to explore each part.
+                </p>
+
+                <div class="code-section">
+                    <div class="code-toolbar">
+                        <div class="code-tabs" role="tablist" aria-label="Code files">
+                            <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                                aria-controls="panel-html">HTML</button>
+                            <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+                                aria-controls="panel-css">CSS</button>
+                            <button class="code-tab" data-lang="js" role="tab" aria-selected="false"
+                                aria-controls="panel-js">JS</button>
+                        </div>
+                        <button class="preview-btn" id="previewBtn" aria-label="Preview the final result">
+                            <i class='bx bx-play-circle'></i>
+                            <span>Preview Result</span>
+                        </button>
+                    </div>
+
+                    <div class="code-panels">
+                        <div class="code-box active" id="panel-html" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                                <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code1" class="language-html"></code></pre>
+                        </div>
+
+                        <div class="code-box" id="panel-css" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
+                                <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code2" class="language-css"></code></pre>
+                        </div>
+
+                        <div class="code-box" id="panel-js" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#f7df1e;">JS — script.js</span>
+                                <button class="copy-btn" data-target="code3"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code3" class="language-javascript"></code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <strong>💡 Quick Start:</strong> This is a single-file project. Copy the full HTML into an
+                    <code>index.html</code> file and open it in your browser — no server, no build step, no
+                    dependencies.
+                    The custom cursor activates immediately when you hover over any card.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- HOW IT WORKS -->
+            <section id="how-it-works">
+                <h2>How It Works — Step by Step</h2>
+                <p>
+                    Here's the full breakdown of the eight core techniques that power this
+                    <strong>interactive image card hover animation</strong>.
+                </p>
+
+                <div class="steps">
+
+                    <div class="step">
+                        <div class="step-num">01</div>
+                        <div class="step-content">
+                            <h3>Card HTML Structure</h3>
+                            <p>
+                                Each card is an <code>&lt;article&gt;</code> containing an <code>&lt;img&gt;</code>
+                                and an <code>&lt;a&gt;</code> with two <code>&lt;span&gt;</code> elements: the article
+                                title and the author name. Two fixed <code>&lt;div class="cursor"&gt;</code> elements
+                                are placed at the end of the body — one for the color circle, one for the blended text
+                                label.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">02</div>
+                        <div class="step-content">
+                            <h3>CSS Grid Staggered Layout</h3>
+                            <p>
+                                At 600px+, <code>body</code> becomes a two-column CSS grid with
+                                <code>grid-template-columns: auto auto</code>. Even-indexed articles receive
+                                <code>translate: 0 50%</code>, shifting them down by half their height. This creates
+                                the Pinterest-style offset grid with zero JavaScript — a pure
+                                <strong>CSS grid responsive layout</strong> pattern.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">03</div>
+                        <div class="step-content">
+                            <h3>Custom Cursor Positioning via CSS Variables</h3>
+                            <p>
+                                The cursor <code>div</code> uses <code>position: fixed</code> with
+                                <code>translate: calc((var(--x) * 1px) - 50%) calc((var(--y) * 1px) - 50%)</code>.
+                                JavaScript listens for <code>pointermove</code> on <code>document.body</code>
+                                and calls <code>document.documentElement.style.setProperty('--x', x)</code> on every
+                                frame. This is the entire JS for the <strong>custom cursor effect</strong> — 4 lines.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">04</div>
+                        <div class="step-content">
+                            <h3>CSS mix-blend-mode: difference</h3>
+                            <p>
+                                Setting <code>mix-blend-mode: difference</code> on the cursor makes it
+                                invert the colors of everything beneath it. A white cursor over a dark background
+                                appears white; over a light image, it appears dark. This is what creates the
+                                <strong>CSS blend mode effect</strong> that looks like an expensive design tool cursor —
+                                no JavaScript color detection needed.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">05</div>
+                        <div class="step-content">
+                            <h3>Context-Aware Hue with :has()</h3>
+                            <p>
+                                The cursor color is driven by a <code>--hue</code> CSS variable:
+                                <code>--color: hsl(var(--hue) 100% 80%)</code>. Two CSS rules —
+                                <code>:root:has(article:nth-of-type(odd):hover) { --hue: 320; }</code> and
+                                <code>:root:has(article:nth-of-type(even):hover) { --hue: 210; }</code> —
+                                change the hue depending on which column is active. This is the
+                                <strong>CSS :has() selector</strong> functioning as reactive state with no JS.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">06</div>
+                        <div class="step-content">
+                            <h3>Hover Zoom Image with --hover Property</h3>
+                            <p>
+                                <code>article:hover { --hover: 1; }</code> sets a custom property.
+                                The image reads it: <code>scale: calc(1 + (var(--hover) / 5))</code> —
+                                so at rest the scale is 1, on hover it becomes 1.2. Combined with
+                                <code>overflow: hidden</code> on the article, the zoom is clipped cleanly.
+                                This is the <strong>CSS hover zoom image effect</strong> pattern.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">07</div>
+                        <div class="step-content">
+                            <h3>Animated Underline on the Title Span</h3>
+                            <p>
+                                The title <code>&lt;span&gt;</code> gets an <code>::after</code> pseudo-element
+                                styled as a 4px high bar. Its scale is <code>var(--hover, 0) 1</code>:
+                                width 0 at rest, width 1 (full) on hover. For odd cards,
+                                <code>transform-origin: 0 50%</code>
+                                makes it animate left-to-right; for even cards, <code>transform-origin: 100% 50%</code>
+                                makes it animate right-to-left — matching each card's text alignment.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">08</div>
+                        <div class="step-content">
+                            <h3>Cursor Scale Transition with :has()</h3>
+                            <p>
+                                At rest, the cursor has <code>scale: var(--active, 0)</code> — invisible.
+                                <code>:root:has(article:hover) { --active: 1; }</code> makes it appear only
+                                when a card is hovered. Combined with <code>transition: scale 0.2s</code>,
+                                the cursor elegantly pops in when entering a card and fades out when leaving —
+                                all controlled by <strong>CSS :has()</strong> without a single JS event listener
+                                beyond the pointer position tracker.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="warn-box">
+                    <strong>⚠️ Browser Support Note:</strong> The CSS <code>:has()</code> selector is supported
+                    in all modern browsers as of 2023, but is not available in Firefox versions below 121 or
+                    any version of Internet Explorer. For projects targeting older Firefox versions, fall back
+                    to a JavaScript <code>mouseenter</code> listener to add/remove a class on <code>&lt;html&gt;</code>.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- TECHNIQUES DEEP DIVE -->
+            <section id="techniques">
+                <h2>CSS Techniques Deep Dive</h2>
+                <p>
+                    This project is a masterclass in using <strong>CSS custom properties as reactive state</strong>.
+                    Here's a comparison of the key techniques used and why each was chosen over alternatives.
+                </p>
+
+                <table class="comparison-table" aria-label="CSS techniques comparison">
+                    <thead>
+                        <tr>
+                            <th>Technique Used</th>
+                            <th>What It Does</th>
+                            <th>Why Not the Alternative?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CSS Custom Properties<br><code>--hover: 1</code></td>
+                            <td>Acts as a boolean state flag toggled by <code>:hover</code>, consumed by multiple child
+                                properties
+                                simultaneously.</td>
+                            <td>JavaScript classList would require an event listener per card and re-render logic. The
+                                CSS approach
+                                cascades automatically.</td>
+                        </tr>
+                        <tr>
+                            <td><code>:root:has(article:hover)</code></td>
+                            <td>Sets a root-level variable in response to a deeply nested state change — without any DOM
+                                traversal in
+                                JS.</td>
+                            <td>JS event delegation could do this, but :has() keeps animation logic entirely in CSS
+                                where it belongs.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>mix-blend-mode: difference</code></td>
+                            <td>Inverts the background color under the cursor automatically regardless of what's beneath
+                                it.</td>
+                            <td>A dynamically computed color in JS would require reading pixel values from a canvas —
+                                vastly more
+                                complex.</td>
+                        </tr>
+                        <tr>
+                            <td><code>translate</code> (CSS property, not transform)</td>
+                            <td>The standalone <code>translate</code> CSS property is GPU-composited and doesn't trigger
+                                layout —
+                                smoother than <code>transform: translate()</code> when combined with other transforms.
+                            </td>
+                            <td><code>transform</code> is still valid, but the standalone properties (translate, scale,
+                                rotate)
+                                compose better when multiple are active at once.</td>
+                        </tr>
+                        <tr>
+                            <td><code>scale: calc(1 + (var(--hover) / 5))</code></td>
+                            <td>Computes the zoom level mathematically from a 0/1 flag. Easy to adjust the intensity
+                                without rewriting
+                                the hover rule.</td>
+                            <td>Two separate rules (<code>scale: 1</code> rest, <code>scale: 1.2</code> hover) would
+                                work but are less
+                                expressive and harder to tweak.</td>
+                        </tr>
+                        <tr>
+                            <td><code>pointer-events: none</code> on cursor</td>
+                            <td>Makes the cursor div invisible to the mouse — it doesn't block hovers or clicks on cards
+                                underneath.
+                            </td>
+                            <td>Without this, the cursor div would intercept all pointer events, making it impossible to
+                                hover the
+                                cards.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Why This Approach Is "Next Level CSS"</h3>
+                <p>
+                    Most tutorials teach CSS hover effects as isolated rules: <em>add a background on :hover, scale an
+                        image on
+                        :hover</em>.
+                    This project demonstrates the more powerful pattern: <strong>CSS custom properties as reactive state
+                        variables</strong>
+                    that flow from parent context to child visuals. One hover event on an article sets
+                    <code>--hover: 1</code>, which is simultaneously consumed by the image scale, the underline width,
+                    the link overlay visibility, and the cursor appearance — all updating in perfect sync, zero JS.
+                    This is what separates intermediate CSS from <strong>advanced CSS UI design</strong>.
+                </p>
+
+                <p>
+                    Combined with <code>:has()</code> for parent-context awareness and <code>mix-blend-mode</code>
+                    for physics-based color blending, this is the kind of
+                    <strong>creative CSS effects</strong> stack used in award-winning web experiences.
+                    Projects like this one are what Awwwards-level agencies build — and you can reproduce
+                    the full pattern from the source code above.
+                </p>
+
+                <div class="info-box">
+                    <strong>💡 Learn More:</strong> If you enjoyed the blend mode cursor, check out the
+                    <a href="Project40.html" style="color:var(--premcolo);">CSS Neon Digital Clock</a> for another
+                    advanced CSS technique project using <code>drop-shadow</code> filters and 3D transforms.
+                    For button animation, see the
+                    <a href="Project39.html" style="color:var(--premcolo);">Animated Button with Star Effects</a>.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- CONCEPTS -->
+            <section id="concepts">
+                <h2>JavaScript & CSS Concepts Covered</h2>
+                <p>This project covers these intermediate-to-advanced web development techniques:</p>
+                <ul>
+                    <li><strong>CSS Custom Properties as State</strong> — Using <code>--hover</code> and
+                        <code>--active</code>
+                        variables as reactive flags consumed by multiple properties simultaneously.</li>
+                    <li><strong>CSS :has() Relational Selector</strong> — Styling parent/root elements based on the
+                        state of
+                        deeply nested children, enabling JS-free context awareness.</li>
+                    <li><strong>JavaScript pointermove Event</strong> — Tracking real-time pointer coordinates and
+                        injecting them
+                        into CSS via <code>style.setProperty()</code> on <code>:root</code>.</li>
+                    <li><strong>CSS mix-blend-mode</strong> — Applying blend modes to overlay elements for automatic
+                        color-adaptive effects without JS color detection.</li>
+                    <li><strong>CSS Grid Staggered Layout</strong> — Creating a Pinterest-style offset grid using
+                        <code>nth-of-type</code> selectors and the standalone <code>translate</code> property.
+                    </li>
+                    <li><strong>CSS Hover Zoom Image Effect</strong> — Scaling images inside overflow-hidden containers
+                        with
+                        custom property math for easy intensity control.</li>
+                    <li><strong>CSS ::after Pseudo-element Animations</strong> — Building animated underlines with
+                        <code>scale</code> and <code>transform-origin</code> that match card text alignment.
+                    </li>
+                    <li><strong>CSS :focus-within Accessibility</strong> — Mirroring hover effects for keyboard
+                        navigation using
+                        <code>:focus-within</code> on card containers.
+                    </li>
+                    <li><strong>CSS aspect-ratio</strong> — Maintaining consistent card proportions across all screen
+                        sizes with a
+                        single property.</li>
+                    <li><strong>CSS HSL Color Functions</strong> — Dynamic color theming using
+                        <code>hsl(var(--hue) 100% 80%)</code> for single-variable color control.
+                    </li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <!-- FAQ -->
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq">
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How do I create a custom cursor effect with JavaScript and CSS?
+                        </summary>
+                        <div class="faq-answer">
+                            Create a <code>position: fixed</code> div styled as a circle. In JavaScript, listen to
+                            <code>pointermove</code> on <code>document.body</code> and update two CSS variables:
+                            <code>document.documentElement.style.setProperty('--x', e.x)</code> and
+                            <code>document.documentElement.style.setProperty('--y', e.y)</code>.
+                            In CSS, position the cursor with
+                            <code>translate: calc((var(--x) * 1px) - 50%) calc((var(--y) * 1px) - 50%)</code>.
+                            That's all the JavaScript needed — the full source code is in the tabs above.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How does CSS mix-blend-mode difference work on a custom cursor?
+                        </summary>
+                        <div class="faq-answer">
+                            <code>mix-blend-mode: difference</code> subtracts the cursor's color from the background
+                            color at each pixel. A white (<code>255,255,255</code>) cursor on a dark background
+                            subtracts to produce near-white; on a bright area it subtracts to near-black.
+                            This auto-adapts the cursor contrast to any background — no JS color detection or
+                            media queries needed.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How do I make images zoom on hover using only CSS?</summary>
+                        <div class="faq-answer">
+                            Set <code>overflow: hidden</code> on the card container. On the <code>img</code>,
+                            add <code>scale: calc(1 + (var(--hover) / 5))</code> and
+                            <code>transition: scale 0.2s</code>. Set the <code>--hover</code> variable via
+                            <code>article:hover { --hover: 1; }</code>. The image zooms to 1.2× on hover and
+                            the overflow clip keeps it contained within the card bounds.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">What is the CSS :has() selector and how is it used for the cursor
+                            color?
+                        </summary>
+                        <div class="faq-answer">
+                            The <code>:has()</code> relational pseudo-class lets you style a parent based on its
+                            descendants' state. Here,
+                            <code>:root:has(article:nth-of-type(even):hover) { --hue: 210; }</code>
+                            changes a root-level CSS variable whenever an even card is hovered, which cascades
+                            into the cursor's <code>hsl(var(--hue) 100% 80%)</code> color — no JavaScript required.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How do I create a staggered CSS grid layout for cards?</summary>
+                        <div class="faq-answer">
+                            Set <code>grid-template-columns: auto auto</code> on the body at your breakpoint,
+                            then apply <code>article:nth-of-type(even) { translate: 0 50%; }</code>.
+                            This offsets every second column by 50% of the card height, creating the staggered
+                            effect. No JavaScript, no absolute positioning — pure CSS Grid.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How do I animate an underline from left to right on hover?
+                        </summary>
+                        <div class="faq-answer">
+                            Add an <code>::after</code> pseudo-element to the title span:
+                            set <code>height: 4px</code>, <code>position: absolute</code>, <code>inset: auto 0 0</code>,
+                            and <code>scale: var(--hover, 0) 1</code> with <code>transition: scale 0.2s</code>.
+                            The key is <code>transform-origin: 0 50%</code> for left-to-right animation.
+                            For right-aligned cards use <code>transform-origin: 100% 50%</code> to reverse the
+                            direction.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Why does the cursor disappear when not hovering a card?</summary>
+                        <div class="faq-answer">
+                            The cursor has <code>scale: var(--active, 0)</code> — scaling to 0 by default.
+                            <code>:root:has(article:hover) { --active: 1; }</code> only sets this to 1 when
+                            a card is being hovered. With <code>transition: scale 0.2s</code>, the cursor
+                            smoothly fades in on card entry and fades out on exit. This is intentional — the
+                            custom cursor is a card-specific affordance indicating a clickable element, so hiding
+                            it on the background reduces visual noise.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Is this interactive card project good for a developer portfolio?
+                        </summary>
+                        <div class="faq-answer">
+                            Absolutely. It demonstrates mastery of CSS custom properties as state, the modern
+                            <code>:has()</code> selector, <code>mix-blend-mode</code>, CSS Grid, standalone transform
+                            properties, and keyboard accessibility with <code>:focus-within</code> — plus clean
+                            pointer event handling in JavaScript. This is exactly the kind of
+                            <strong>creative frontend UI effects</strong> work that impresses hiring managers and
+                            clients at agencies. Copy the source, swap the images for your own work, and you have
+                            a polished portfolio section.
+                        </div>
+                    </details>
+
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- CONCLUSION -->
+            <section id="conclusion" class="conclusion">
+                <h2>Conclusion</h2>
+                <p>
+                    This <strong>interactive image card hover animation</strong> shows exactly how much you can do
+                    with modern CSS when you treat custom properties as reactive state. The entire interaction system —
+                    cursor appearance, hue shifts, zoom, underline animation — is driven by just two CSS variables
+                    (<code>--hover</code> and <code>--active</code>) and the four-line JavaScript pointer tracker.
+                </p>
+                <p>
+                    The <strong>CSS :has() selector</strong> eliminates whole categories of JavaScript event handling.
+                    <code>mix-blend-mode: difference</code> solves the cursor-contrast problem in one line.
+                    The staggered CSS Grid layout requires zero DOM manipulation. This is what
+                    <strong>next level CSS animations</strong> look like — not complexity for its own sake,
+                    but the right tool used precisely.
+                </p>
+                <p>
+                    Swap the images, change the cursor text, update the hue values — and you have a
+                    production-ready <strong>animated portfolio layout</strong> with a unique, memorable interaction
+                    that visitors won't forget. Then explore more projects below to keep building your skills.
+                </p>
+                <p style="color:var(--text-muted); font-size:14px; margin-bottom:0;">
+                    Found this useful? Explore more HTML CSS JavaScript projects in the sidebar.
+                </p>
+            </section>
+
+        </main>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" aria-label="Related projects">
+            <div class="sidebar-box">
+                <div class="sidebar-header">🔗 Related Projects</div>
+                <div class="related-list">
+                    <a class="related-card" href="Project40.html" aria-label="CSS Neon Digital Clock Animation">
+                        <img src="https://i.suar.me/Ep114/m" alt="CSS Neon Digital Clock Animation HTML CSS JavaScript"
+                            loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">CSS Neon Digital Clock Animation — HTML CSS JS</div>
+                    </a>
+                    <a class="related-card" href="Project39.html" aria-label="Animated Button with Star Effects">
+                        <img src="https://i.suar.me/jvZZv/m" alt="Animated Button with Star Effects HTML CSS"
+                            loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Animated Button with Star Effects — HTML & CSS</div>
+                    </a>
+                    <a class="related-card" href="Project14.html" aria-label="Electric Neon Card Animation">
+                        <img src="https://77cod-ing.github.io/image%20copy%2040.png"
+                            alt="Electric Neon Card Animation HTML CSS SVG" loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Electric Neon Card Animation — HTML CSS SVG</div>
+                    </a>
+                    <a class="related-card" href="Project37.html" aria-label="Glassmorphism Login Page">
+                        <img src="https://i.suar.me/Np3EO/m" alt="Modern Glassmorphism Login Page Design" loading="lazy"
+                            width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Modern Glassmorphism Login Page Design</div>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- PREVIEW MODAL -->
+    <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+        aria-label="Live preview of interactive card hover animation">
+        <div class="preview-modal">
+            <div class="preview-modal-header">
+                <div class="preview-modal-title">
+                    <i class='bx bx-show'></i>
+                    <strong>Live Preview</strong> — Interactive Card Hover Animation
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <div class="preview-dots">
+                        <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+                        <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+                        <button class="preview-dot green" aria-label="Maximize" disabled></button>
+                    </div>
+                    <button class="preview-close-btn" id="previewCloseBtn">
+                        <i class='bx bx-x'></i> Close
+                    </button>
+                </div>
+            </div>
+            <div class="preview-iframe-wrap">
+                <div class="preview-loading" id="previewLoading">
+                    <div class="preview-spinner"></div>
+                    <span class="preview-loading-text">Loading preview...</span>
+                    <div class="preview-loading-files">
+                        <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+                        <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+                        <span class="preview-file-tag js-tag" id="tagJS">JS</span>
+                    </div>
+                </div>
+                <iframe id="previewIframe" title="Preview of interactive card hover animation"
+                    sandbox="allow-scripts allow-same-origin"></iframe>
+                <div class="preview-hint" id="previewHint">
+                    <i class='bx bx-cursor'></i> Hover over the cards to see the cursor effect
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        /*
+          ============================================
+            IMPORTANT: Replace these Gist URLs with
+            your actual project's raw Gist URLs.
+          ============================================
+        */
+        const gistBase = "https://gist.githubusercontent.com/77cod-ing/c240049f323e7a979e3cd968a3b99a66/raw/8f7a4be8026214b24f12aff546330c9f7e7f68d9/";
+        const htmlUrl = gistBase + "index.html";
+        const cssUrl = gistBase + "style.css";
+        const jsUrl = gistBase + "script.js";
+
+        /* 
+          Since this is a single-file project, we inline the code directly.
+          Replace the strings below with your actual file contents,
+          or swap htmlUrl/cssUrl/jsUrl for your Gist raw URLs.
+        */
+
+        /* Cache */
+        let cachedHTML = "", cachedCSS = "", cachedJS = "";
+
+        async function loadCode(url, elementId, lang) {
+            try {
+                const res = await fetch(url);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const text = await res.text();
+                const el = document.getElementById(elementId);
+                el.textContent = text;
+                el.className = `language-${lang}`;
+                Prism.highlightElement(el);
+                if (lang === "html") cachedHTML = text;
+                if (lang === "css") cachedCSS = text;
+                if (lang === "js") cachedJS = text;
+            } catch (e) {
+                const el = document.getElementById(elementId);
+                if (el) el.textContent = `/* Failed to load: ${e.message} */`;
+            }
+        }
+
+        loadCode(htmlUrl, "code1", "html");
+        loadCode(cssUrl, "code2", "css");
+        loadCode(jsUrl, "code3", "js");
+
+        /* Tabs */
+        document.querySelectorAll(".code-tab").forEach(tab => {
+            tab.addEventListener("click", () => {
+                const lang = tab.dataset.lang;
+                document.querySelectorAll(".code-tab").forEach(t => { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
+                document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+                tab.classList.add("active"); tab.setAttribute("aria-selected", "true");
+                const panelMap = { html: "panel-html", css: "panel-css", js: "panel-js" };
+                document.getElementById(panelMap[lang]).classList.add("active");
+            });
+        });
+
+        /* Copy buttons */
+        document.querySelectorAll(".copy-btn").forEach(btn => {
+            btn.addEventListener("click", async () => {
+                const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+                if (!code) return;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+                    btn.classList.add("copied");
+                    setTimeout(() => { btn.innerHTML = "<i class='bx bxs-copy'></i> Copy"; btn.classList.remove("copied"); }, 2000);
+                } catch { btn.textContent = "Error"; }
+            });
+        });
+
+        /* Preview modal */
+        const previewOverlay = document.getElementById("previewOverlay");
+        const previewIframe = document.getElementById("previewIframe");
+        const previewLoading = document.getElementById("previewLoading");
+        const previewHint = document.getElementById("previewHint");
+        const previewBtn = document.getElementById("previewBtn");
+        const previewCloseBtn = document.getElementById("previewCloseBtn");
+        const previewDotClose = document.getElementById("previewDotClose");
+        const tagHTML = document.getElementById("tagHTML");
+        const tagCSS = document.getElementById("tagCSS");
+        const tagJS = document.getElementById("tagJS");
+
+        function openPreview() {
+            previewOverlay.classList.add("open");
+            document.body.style.overflow = "hidden";
+            previewLoading.classList.remove("hidden");
+            previewHint.classList.remove("show");
+            previewBtn.classList.add("loading");
+            tagHTML.classList.remove("loaded"); tagCSS.classList.remove("loaded"); tagJS.classList.remove("loaded");
+            buildPreview();
+        }
+
+        function closePreview() {
+            previewOverlay.classList.remove("open");
+            document.body.style.overflow = "";
+            previewIframe.srcdoc = "";
+            previewBtn.classList.remove("loading");
+        }
+
+        async function buildPreview() {
+            if (cachedHTML && cachedCSS && cachedJS) {
+                tagHTML.classList.add("loaded"); tagCSS.classList.add("loaded"); tagJS.classList.add("loaded");
+                injectPreview(cachedHTML, cachedCSS, cachedJS); return;
+            }
+            try {
+                const fetches = [];
+                if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
+                if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
+                if (!cachedJS) fetches.push(fetch(jsUrl).then(r => r.text()).then(t => { cachedJS = t; tagJS.classList.add("loaded"); }));
+                if (cachedHTML) tagHTML.classList.add("loaded");
+                if (cachedCSS) tagCSS.classList.add("loaded");
+                if (cachedJS) tagJS.classList.add("loaded");
+                await Promise.all(fetches);
+                injectPreview(cachedHTML, cachedCSS, cachedJS);
+            } catch (e) {
+                previewLoading.innerHTML = `<i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i><span class="preview-loading-text" style="color:var(--accent2);">Failed to load preview: ${e.message}</span>`;
+                previewBtn.classList.remove("loading");
+            }
+        }
+
+        function injectPreview(html, css, js) {
+            let combined = html;
+            if (combined.includes('<link') && /style\.css/i.test(combined)) {
+                combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
+            } else if (combined.includes("</head>")) {
+                combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
+            } else { combined = `<style>${css}</style>\n${combined}`; }
+
+            if (combined.includes('<script') && /script\.js/i.test(combined)) {
+                combined = combined.replace(/<script[^>]*src=["'][^"']*script\.js["'][^>]*><\/script>/gi, `<script>${js}<\/script>`);
+            } else if (combined.includes("</body>")) {
+                combined = combined.replace("</body>", `<script>${js}<\/script>\n</body>`);
+            } else { combined = `${combined}\n<script>${js}<\/script>`; }
+
+            const bgStyle = `<style>body{margin:0;}</style>`;
+            if (combined.includes("<head>")) { combined = combined.replace("<head>", `<head>${bgStyle}`); }
+            else { combined = bgStyle + combined; }
+
+            previewIframe.srcdoc = combined;
+            previewIframe.addEventListener("load", function onLoad() {
+                previewLoading.classList.add("hidden");
+                previewBtn.classList.remove("loading");
+                setTimeout(() => { previewHint.classList.add("show"); setTimeout(() => previewHint.classList.remove("show"), 5000); }, 300);
+                previewIframe.removeEventListener("load", onLoad);
+            });
+        }
+
+        previewBtn.addEventListener("click", openPreview);
+        previewCloseBtn.addEventListener("click", closePreview);
+        previewDotClose.addEventListener("click", closePreview);
+        previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+        document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
+    </script>
+</body>
+
+</html>
