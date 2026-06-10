@@ -1,0 +1,2252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== PRIMARY SEO META ===== -->
+    <title>CSS Expandable Navigation Bar with Gradient Icons — HTML & CSS Tutorial 2026 | Free Code</title>
+    <meta name="description"
+        content="Build a stunning expandable navigation bar with animated gradient icons using pure HTML and CSS. Step-by-step tutorial with full free source code. No JavaScript required.">
+    <meta name="keywords"
+        content="css expandable navigation bar, animated nav bar css, gradient icon hover effect, css hover expand animation, modern navigation menu design, interactive nav icons css, css transitions navbar, creative ui navigation, css hover animation menu, pill expand effect css">
+    <meta name="author" content="77cod-ing">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://77cod-ing.github.io/Project-expandable-nav.html">
+
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="CSS Expandable Navigation Bar with Gradient Icons — HTML & CSS Tutorial 2026">
+    <meta property="og:description"
+        content="Create a modern expandable navigation bar with glowing gradient icons using pure HTML and CSS. No JavaScript needed. Full free source code included.">
+    <meta property="og:image" content="https://77cod-ing.github.io/expandable-nav-bar.png">
+    <meta property="og:url" content="https://77cod-ing.github.io/Project-expandable-nav.html">
+    <meta property="og:site_name" content="77cod-ing">
+    <meta property="article:published_time" content="2026-06-01T00:00:00Z">
+    <meta property="article:modified_time" content="2026-06-10T00:00:00Z">
+    <meta property="article:author" content="77cod-ing">
+    <meta property="article:section" content="CSS Tutorials">
+    <meta property="article:tag" content="HTML, CSS, Navigation, Animation, UI Design">
+
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CSS Expandable Navigation Bar with Gradient Icons — Tutorial 2026">
+    <meta name="twitter:description"
+        content="Build an animated expandable nav bar with gradient hover glow icons using HTML & CSS only. Free source code.">
+    <meta name="twitter:image" content="https://77cod-ing.github.io/expandable-nav-bar.png">
+
+    <!-- ===== SCHEMA: TechArticle ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "CSS Expandable Navigation Bar with Animated Gradient Icons — HTML & CSS Tutorial",
+    "description": "A complete beginner-friendly tutorial on building an expandable pill-style navigation bar where each icon expands on hover to reveal a label, with a unique per-item gradient background and glowing drop-shadow.",
+    "image": "https://77cod-ing.github.io/expandable-nav-bar.png",
+    "datePublished": "2026-06-01",
+    "dateModified": "2026-06-10",
+    "author": {
+      "@type": "Person",
+      "name": "77cod-ing",
+      "url": "https://77cod-ing.github.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "77cod-ing",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Picture1.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://77cod-ing.github.io/Project-expandable-nav.html"
+    },
+    "articleSection": "CSS Tutorials",
+    "keywords": "css expandable navigation bar, animated nav bar css, gradient icon hover effect, pill expand css",
+    "timeRequired": "PT15M",
+    "educationalLevel": "Beginner",
+    "teaches": ["CSS Transitions", "CSS Custom Properties", "CSS Pseudo-elements", "CSS Hover Effects", "CSS Filter Drop Shadow", "Ionicons Integration"]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: HowTo ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Build a CSS Expandable Navigation Bar with Gradient Hover Icons",
+    "description": "Step-by-step guide to creating a pill-style expandable navigation bar using CSS custom properties, pseudo-elements, and smooth transitions.",
+    "image": "https://77cod-ing.github.io/expandable-nav-bar.png",
+    "totalTime": "PT15M",
+    "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "0"},
+    "supply": [
+      {"@type": "HowToSupply", "name": "Text editor (VS Code)"},
+      {"@type": "HowToSupply", "name": "A modern web browser"}
+    ],
+    "tool": [
+      {"@type": "HowToTool", "name": "HTML"},
+      {"@type": "HowToTool", "name": "CSS"},
+      {"@type": "HowToTool", "name": "Ionicons"}
+    ],
+    "step": [
+      {"@type": "HowToStep", "name": "Set Up CSS Custom Properties for Gradients", "text": "Define --i and --j CSS variables inline on each list item to give every nav icon its own unique two-stop gradient.", "position": 1},
+      {"@type": "HowToStep", "name": "Build the Base Pill Shape", "text": "Style each li as a 60×60px circle with white background, box-shadow, and border-radius: 60px to create the icon pill.", "position": 2},
+      {"@type": "HowToStep", "name": "Add Gradient Pseudo-elements", "text": "Use ::before (gradient fill) and ::after (glowing shadow) pseudo-elements with opacity: 0 at rest, revealed on hover.", "position": 3},
+      {"@type": "HowToStep", "name": "Expand the Pill on Hover", "text": "On :hover, transition width from 60px to 180px with transition: 0.5s to expand the pill and reveal the label.", "position": 4},
+      {"@type": "HowToStep", "name": "Animate the Icon and Label", "text": "Scale the icon to 0 and the label from scale(0) to scale(1) using staggered transition-delay so they swap smoothly.", "position": 5},
+      {"@type": "HowToStep", "name": "Apply Blur Glow Shadow", "text": "Use filter: blur(15px) on the ::after pseudo-element to create a glowing light bleed beneath each expanded pill.", "position": 6}
+    ]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: FAQ ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I build an expandable navigation bar without JavaScript?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. This entire navigation bar uses only HTML and CSS — the pill expand animation, gradient fill, icon swap, and glow effect are all driven by the CSS :hover pseudo-class and transition property. No JavaScript is needed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do per-item gradient colors work with CSS custom properties?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Each list item has inline style attributes that define --i and --j CSS custom properties with two hex color values. The ::before and ::after pseudo-elements reference these variables in their background: linear-gradient(45deg, var(--i), var(--j)) declarations, so every item can have a completely different gradient without duplicating any CSS rules."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I add a new navigation item?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Copy an existing li element, update its --i and --j inline color variables to any two hex colors you like, replace the ion-icon name attribute with the new icon name from the Ionicons library, and update the span.title text."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do the icon and the label swap instead of appearing at the same time?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The icon and label each have different transition-delay values. The icon collapses (scale 0) immediately on hover with no delay, while the label expands (scale 1) after a 0.25s delay. On mouse-out the reverse happens — the label collapses first, then the icon reappears. This staggering creates a clean read: one element exits before the other enters."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the blur glow under the pill hurt performance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The glow is applied with filter: blur() on a pseudo-element that is composited separately from the document layout. Because width expansion and the blur are animated using CSS transitions rather than JavaScript, the browser can schedule them on the compositor thread, avoiding main-thread layout recalculation and keeping the animation smooth."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use this navigation bar on mobile devices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The hover-expand effect is designed for pointer devices. On touch screens you can adapt it with a :focus-within or :active approach, or convert it to a tap-to-toggle pattern with a small amount of JavaScript. For production mobile use, consider displaying the labels permanently or stacking the items vertically."
+        }
+      }
+    ]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: BreadcrumbList ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+      {"@type": "ListItem", "position": 3, "name": "CSS Expandable Navigation Bar", "item": "https://77cod-ing.github.io/Project-expandable-nav.html"}
+    ]
+  }
+  </script>
+
+    <!-- ===== ASSETS ===== -->
+    <link rel="icon" type="image/png" href="Picture1.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+    <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+        crossorigin="anonymous"></script>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+            --premcolo: #00d9ff;
+            --accent2: #ff6b35;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --surface: rgba(255, 255, 255, 0.04);
+            --surface-hover: rgba(0, 217, 255, 0.07);
+            --border: rgba(255, 255, 255, 0.08);
+            --font-head: 'Space Mono', monospace;
+            --font-body: 'DM Sans', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--back);
+            font-family: var(--font-body);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 56px;
+            padding: 0 2.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            color: var(--premcolo);
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: clamp(1rem, 2vw, 2rem);
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: var(--premcolo);
+        }
+
+        /* ===== BREADCRUMB ===== */
+        .breadcrumb {
+            padding: 12px 2.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb ol {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .breadcrumb li {
+            display: flex;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .breadcrumb li+li::before {
+            content: "›";
+            color: var(--premcolo);
+            margin-right: 6px;
+            font-size: 1.1rem;
+        }
+
+        .breadcrumb a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--premcolo);
+        }
+
+        .breadcrumb [aria-current="page"] {
+            color: var(--premcolo);
+            font-weight: 600;
+        }
+
+        /* ===== BACK BUTTON ===== */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+            margin: 1rem 2.5rem;
+        }
+
+        .back-link:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 3rem 2.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: var(--font-head);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .tag-tutorial {
+            background: rgba(0, 217, 255, 0.12);
+            color: var(--premcolo);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+        }
+
+        .tag-css {
+            background: rgba(0, 217, 255, 0.08);
+            color: #7dd3fc;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .tag-nojs {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+        }
+
+        .tag-level {
+            background: rgba(255, 107, 53, 0.1);
+            color: var(--accent2);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+        }
+
+        .read-time {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-head);
+            font-size: clamp(1.6rem, 4vw, 2.6rem);
+            line-height: 1.25;
+            color: #fff;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 span {
+            color: var(--premcolo);
+        }
+
+        .hero-lead {
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            color: var(--text-muted);
+            max-width: 680px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .stat-value {
+            font-family: var(--font-head);
+            font-size: 1.4rem;
+            color: var(--premcolo);
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-img {
+            max-height: 400px;
+            max-width: 600px;
+            object-fit: contain;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            display: block;
+            box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5);
+            margin: 0 auto;
+        }
+
+        .img-caption {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* ===== LAYOUT ===== */
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2.5rem 4rem;
+            align-items: start;
+        }
+
+        /* ===== ARTICLE ===== */
+        .article-body h2 {
+            font-family: var(--font-head);
+            font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+            color: var(--premcolo);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            scroll-margin-top: 80px;
+        }
+
+        .article-body h3 {
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            color: #7dd3fc;
+            margin: 1.8rem 0 0.75rem;
+            scroll-margin-top: 80px;
+        }
+
+        .article-body p {
+            margin-bottom: 1.1rem;
+            color: var(--text);
+        }
+
+        .article-body code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 7px;
+            border-radius: 5px;
+        }
+
+        .article-body ul,
+        .article-body ol {
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 1.1rem;
+        }
+
+        .article-body li {
+            margin-bottom: 9px;
+        }
+
+        .article-body li strong {
+            color: #fff;
+        }
+
+        /* ===== TOC ===== */
+        .toc {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .toc-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--premcolo);
+            margin-bottom: 0.75rem;
+        }
+
+        .toc ol {
+            padding-left: 1.2rem;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+        }
+
+        .toc a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: var(--premcolo);
+        }
+
+        /* ===== FEATURE CARDS ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 1.5rem 0;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            transition: border-color 0.25s, background 0.25s;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(0, 217, 255, 0.3);
+            background: var(--surface-hover);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .feature-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* ===== STEPS ===== */
+        .steps {
+            margin: 1.5rem 0;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 44px 1fr;
+            gap: 1rem;
+            padding: 1.1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-num {
+            width: 44px;
+            height: 44px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-head);
+            color: var(--premcolo);
+            font-size: 1rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            margin-top: 0;
+            font-size: 1rem;
+        }
+
+        .step-content p {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* ===== PRACTICE GRID ===== */
+        .practice-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 1.5rem 0;
+        }
+
+        .practice-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1rem 1.2rem;
+        }
+
+        .practice-card-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+        }
+
+        .practice-card.do {
+            border-left: 3px solid #4ade80;
+        }
+
+        .practice-card.do .practice-card-title {
+            color: #4ade80;
+        }
+
+        .practice-card.dont {
+            border-left: 3px solid var(--accent2);
+        }
+
+        .practice-card.dont .practice-card-title {
+            color: var(--accent2);
+        }
+
+        .practice-card ul {
+            padding-left: 1.1rem;
+            margin: 0;
+        }
+
+        .practice-card li {
+            font-size: 13px;
+            margin-bottom: 6px;
+            color: var(--text-muted);
+        }
+
+        /* ===== COMPAT TABLE ===== */
+        .compat-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 14px;
+        }
+
+        .compat-table th {
+            font-family: var(--font-head);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--premcolo);
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border);
+            text-align: left;
+        }
+
+        .compat-table td {
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-muted);
+        }
+
+        .compat-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .badge-yes {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(74, 222, 128, 0.12);
+            color: #4ade80;
+            border: 1px solid rgba(74, 222, 128, 0.25);
+            border-radius: 99px;
+            padding: 2px 10px;
+            font-size: 12px;
+            font-family: var(--font-head);
+        }
+
+        /* ===== CODE SECTION ===== */
+        .code-section {
+            margin: 2rem 0;
+            width: 60vw;
+        }
+
+        .code-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .code-tabs {
+            display: flex;
+            gap: 4px;
+        }
+
+        .code-tab {
+            padding: 8px 20px;
+            border-radius: 8px 8px 0 0;
+            border: 1px solid var(--border);
+            border-bottom: none;
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .code-tab.active {
+            background: #1e1e2f;
+            color: #fff;
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+
+        .code-tab[data-lang="html"].active {
+            color: #ff6600;
+        }
+
+        .code-tab[data-lang="css"].active {
+            color: #00ffff;
+        }
+
+        /* ===== PREVIEW BUTTON ===== */
+        .preview-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 22px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 217, 255, 0.4);
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.3px;
+        }
+
+        .preview-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .preview-btn:hover {
+            border-color: var(--premcolo);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .preview-btn:hover::before {
+            opacity: 1;
+        }
+
+        .preview-btn:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        .preview-btn i {
+            font-size: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .preview-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .preview-btn.loading i {
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .code-panels {
+            position: relative;
+        }
+
+        .code-box {
+            background: #1e1e2f;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+            border-radius: 0 12px 12px 12px;
+            position: relative;
+            display: none;
+        }
+
+        .code-box.active {
+            display: block;
+        }
+
+        .code-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .code-lang-label {
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .copy-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            border-radius: 7px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo);
+        }
+
+        .copy-btn.copied {
+            color: #4ade80;
+            border-color: #4ade80;
+        }
+
+        :not(pre)>code[class*="language-"],
+        pre[class*="language-"] {
+            width: 100%;
+            max-width: 100%;
+            height: 50vh;
+            border-radius: 0 0 12px 12px;
+            overflow-y: auto;
+            overflow-x: auto;
+            margin: 0;
+        }
+
+        pre::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        pre::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        pre::-webkit-scrollbar-thumb {
+            background: var(--premcolo);
+            border-radius: 10px;
+        }
+
+        /* ===== INFO / WARN ===== */
+        .info-box {
+            background: rgba(0, 217, 255, 0.06);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-left: 4px solid var(--premcolo);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .info-box strong {
+            color: var(--premcolo);
+        }
+
+        .warn-box {
+            background: rgba(255, 107, 53, 0.06);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-left: 4px solid var(--accent2);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .warn-box strong {
+            color: var(--accent2);
+        }
+
+        /* ===== FAQ ===== */
+        .faq {
+            margin: 1.5rem 0;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            background: var(--surface);
+            font-weight: 600;
+            font-size: 15px;
+            transition: background 0.2s;
+            list-style: none;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background: var(--surface-hover);
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.3rem;
+            color: var(--premcolo);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        details[open] .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 1rem 1.25rem;
+            color: var(--text-muted);
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+        }
+
+        .faq-answer code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* ===== CONCLUSION ===== */
+        .conclusion {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.07), rgba(0, 140, 160, 0.05));
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 16px;
+            padding: 1.75rem 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .conclusion h2 {
+            border: none;
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 1.5rem 0;
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            position: sticky;
+            top: 72px;
+        }
+
+        .sidebar-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-header {
+            padding: 14px 16px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--premcolo);
+            border-bottom: 1px solid var(--border);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .related-list {
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .related-card {
+            display: block;
+            text-decoration: none;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 16/9;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .related-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+
+        .related-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .related-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+        .related-card-title {
+            position: absolute;
+            bottom: 8px;
+            left: 10px;
+            right: 10px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* ===== PREVIEW MODAL ===== */
+        .preview-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 5, 15, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+        }
+
+        .preview-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .preview-modal {
+            width: 92vw;
+            max-width: 860px;
+            height: 75vh;
+            max-height: 580px;
+            background: #0a0e1a;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(0, 217, 255, 0.06);
+            transform: scale(0.92) translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .preview-overlay.open .preview-modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .preview-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
+        }
+
+        .preview-modal-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .preview-modal-title i {
+            color: var(--premcolo);
+            font-size: 16px;
+        }
+
+        .preview-modal-title strong {
+            color: #fff;
+        }
+
+        .preview-dots {
+            display: flex;
+            gap: 7px;
+        }
+
+        .preview-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, filter 0.2s;
+        }
+
+        .preview-dot:hover {
+            transform: scale(1.2);
+            filter: brightness(1.3);
+        }
+
+        .preview-dot.red {
+            background: #ff5f57;
+        }
+
+        .preview-dot.yellow {
+            background: #febc2e;
+        }
+
+        .preview-dot.green {
+            background: #28c840;
+        }
+
+        .preview-close-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .preview-close-btn:hover {
+            border-color: var(--accent2);
+            color: var(--accent2);
+            background: rgba(255, 107, 53, 0.08);
+        }
+
+        .preview-iframe-wrap {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .preview-iframe-wrap iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            background: #000;
+        }
+
+        .preview-loading {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            background: #0a0e1a;
+            z-index: 2;
+            transition: opacity 0.4s;
+        }
+
+        .preview-loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .preview-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(0, 217, 255, 0.15);
+            border-top-color: var(--premcolo);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
+        .preview-loading-text {
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .preview-hint {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 6px 16px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            color: var(--text-muted);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.5s 0.8s;
+            white-space: nowrap;
+            z-index: 3;
+        }
+
+        .preview-hint.show {
+            opacity: 1;
+        }
+
+        .preview-hint i {
+            color: var(--premcolo);
+            margin-right: 4px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 1fr;
+                padding: 1.5rem 1.25rem;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .related-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .related-card {
+                flex: 1 1 calc(50% - 8px);
+            }
+
+            .hero {
+                padding: 2rem 1.25rem 1.5rem;
+            }
+
+            .navbar {
+                padding: 0 1.25rem;
+            }
+
+            .breadcrumb {
+                padding: 10px 1.25rem;
+            }
+
+            .back-link {
+                margin: 0.75rem 1.25rem;
+            }
+
+            .practice-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .code-section {
+                width: 85vw;
+            }
+
+            .preview-modal {
+                width: 96vw;
+                height: 70vh;
+                max-height: 500px;
+                border-radius: 14px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-stats {
+                gap: 1.2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .code-tab {
+                padding: 7px 13px;
+                font-size: 12px;
+            }
+
+            .related-card {
+                flex: 1 1 100%;
+            }
+
+            .code-toolbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .preview-modal {
+                width: 98vw;
+                height: 65vh;
+                border-radius: 12px;
+            }
+
+            .preview-modal-header {
+                padding: 10px 14px;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .preview-hint {
+                font-size: 10px;
+                padding: 5px 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">{ / }</span> 77cod-ing
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="Privacy Policy.html">Privacy Policy</a>
+            <a href="Terms & Conditions.html">Terms &amp; Conditions</a>
+        </nav>
+    </header>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
+            <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+            <li><span aria-current="page">CSS Expandable Navigation Bar</span></li>
+        </ol>
+    </nav>
+
+    <!-- ===== BACK BUTTON ===== -->
+    <a href="projects.html" class="back-link" aria-label="Return to Projects">
+        <i class='bx bx-arrow-back'></i> Return to Projects
+    </a>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-labelledby="main-heading">
+        <div class="hero-meta">
+            <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+            <span class="tag tag-css">CSS</span>
+            <span class="tag tag-nojs">No JavaScript</span>
+            <span class="tag tag-level">Beginner</span>
+            <span class="read-time"><i class='bx bx-time'></i> ~13 min read</span>
+        </div>
+
+        <h1 id="main-heading">
+            CSS <span>Expandable Navigation Bar</span><br>with Animated Gradient Icons
+        </h1>
+
+        <p class="hero-lead">
+            A complete beginner-friendly tutorial to build a pill-style expandable navigation bar where each icon
+            smoothly widens to reveal its label on hover, with a unique per-item gradient background and a glowing
+            blur shadow beneath. Pure HTML and CSS — no JavaScript, no libraries. Full free source code included.
+        </p>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-value">6</span>
+                <span class="stat-label">Build Steps</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">0 JS</span>
+                <span class="stat-label">Dependencies</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">5</span>
+                <span class="stat-label">Unique Gradients</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">Free</span>
+                <span class="stat-label">Source Code</span>
+            </div>
+        </div>
+
+        <img src="https://77cod-ing.github.io/Expandable_Navigation_Bar.png"
+            alt="CSS expandable navigation bar with animated gradient icons and glow hover effects" class="hero-img"
+            width="1200" height="420" loading="eager" fetchpriority="high">
+        <p class="img-caption">Final result: a pill-style expandable navigation bar with unique per-item gradients and
+            blur
+            glow — built with pure HTML &amp; CSS</p>
+    </section>
+
+    <!-- ===== MAIN LAYOUT ===== -->
+    <div class="layout">
+
+        <!-- ===== ARTICLE ===== -->
+        <main class="article-body" id="main-content">
+
+            <!-- TOC -->
+            <nav class="toc" aria-label="Table of contents">
+                <p class="toc-title">📋 Contents</p>
+                <ol>
+                    <li><a href="#overview">What You'll Build</a></li>
+                    <li><a href="#features">Key Features</a></li>
+                    <li><a href="#source-code">Full Source Code</a></li>
+                    <li><a href="#how-it-works">How It Works — Step by Step</a></li>
+                    <li><a href="#customization">Customization Options</a></li>
+                    <li><a href="#best-practices">Best Practices &amp; Mistakes to Avoid</a></li>
+                    <li><a href="#browser-compat">Browser Compatibility</a></li>
+                    <li><a href="#performance">Performance &amp; Responsiveness</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ol>
+            </nav>
+
+            <!-- OVERVIEW -->
+            <section id="overview">
+                <h2>What You'll Build</h2>
+                <p>
+                    In this tutorial you'll create a <strong>CSS expandable navigation bar with animated gradient
+                        icons</strong>
+                    — a row of circular pill buttons, each containing an Ionicon. When a user hovers, the pill smoothly
+                    expands from 60 px to 180 px, the icon scales away and a text label fades in, while a gradient
+                    background
+                    floods the pill and a matching glow bleeds underneath it. Every item carries its own two-color
+                    gradient
+                    defined with a pair of inline CSS custom properties.
+                </p>
+                <p>
+                    This project is ideal for anyone learning <strong>CSS transitions</strong>, <strong>CSS custom
+                        properties</strong>, <strong>pseudo-element layering</strong>, and the
+                    <code>:hover</code> pseudo-class. The skills transfer directly to toolbars, docks, sidebars,
+                    social media link lists, and any UI that needs a compact icon state paired with a readable label.
+                </p>
+                <p>
+                    If you enjoy effects that combine icon animations with glow, also check out the
+                    <a href="Project14.html" style="color: var(--premcolo);"><i class='bx bx-link-alt'></i> Electric
+                        Neon Card
+                        Animation</a> for another take on CSS-powered glow techniques.
+                </p>
+            </section>
+
+            <hr>
+
+            <!-- FEATURES -->
+            <section id="features">
+                <h2>Key Features of This Navigation Bar</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💊</div>
+                        <div class="feature-title">Pill Expand on Hover</div>
+                        <div class="feature-desc">Each nav item widens from a compact icon circle to a full labeled pill
+                            with a
+                            single CSS transition.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <div class="feature-title">Per-Item Gradient Colors</div>
+                        <div class="feature-desc">Two inline CSS variables (<code>--i</code> and <code>--j</code>) give
+                            every item
+                            its own unique two-stop gradient without duplicating any rules.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✨</div>
+                        <div class="feature-title">Blur Glow Shadow</div>
+                        <div class="feature-desc">A <code>::after</code> pseudo-element with
+                            <code>filter: blur(15px)</code> creates
+                            a soft colored light bleed below the expanded pill.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <div class="feature-title">Staggered Icon/Label Swap</div>
+                        <div class="feature-desc">The icon and label swap using opposite <code>transition-delay</code>
+                            values so
+                            they never overlap mid-animation.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🪶</div>
+                        <div class="feature-title">Zero JavaScript</div>
+                        <div class="feature-desc">The entire interaction is driven by the CSS <code>:hover</code>
+                            pseudo-class — no
+                            JS event listeners needed.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <div class="feature-title">GPU-Accelerated</div>
+                        <div class="feature-desc">Animates <code>transform</code>, <code>opacity</code>, and
+                            <code>width</code> —
+                            the browser compositor handles the smooth transitions.</div>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- SOURCE CODE -->
+            <section id="source-code">
+                <h2>Full Source Code (Free)</h2>
+                <p>
+                    The project is a single HTML file with an embedded <code>&lt;style&gt;</code> block and
+                    Ionicons loaded from a CDN. Use the tabs below to view the HTML structure and the CSS separately.
+                    Copy both and paste them into a single <code>index.html</code> file to run it instantly.
+                </p>
+
+                <div class="code-section">
+                    <div class="code-toolbar">
+                        <div class="code-tabs" role="tablist" aria-label="Code files">
+                            <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                                aria-controls="panel-html">HTML</button>
+                            <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+                                aria-controls="panel-css">CSS</button>
+                        </div>
+                        <button class="preview-btn" id="previewBtn" aria-label="Preview the final result">
+                            <i class='bx bx-play-circle'></i>
+                            <span>Preview Result</span>
+                        </button>
+                    </div>
+
+                    <div class="code-panels">
+                        <div class="code-box active" id="panel-html" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                                <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code1" class="language-html"></code></pre>
+                        </div>
+
+                        <div class="code-box" id="panel-css" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
+                                <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code2" class="language-css"></code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <strong>💡 Quick Start:</strong> Paste both blocks into one <code>index.html</code> file and
+                    open it in any modern browser. Hover each pill to see the expansion and glow instantly.
+                    Or click <strong>Preview Result</strong> above to see it live right here on the page.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- HOW IT WORKS -->
+            <section id="how-it-works">
+                <h2>How It Works — Step by Step</h2>
+                <p>
+                    Every visual layer of this navigation bar is intentional. Here is a precise breakdown of how
+                    each CSS rule contributes to the final effect.
+                </p>
+
+                <div class="steps">
+
+                    <div class="step">
+                        <div class="step-num">01</div>
+                        <div class="step-content">
+                            <h3>Per-Item Gradient via Inline CSS Variables</h3>
+                            <p>
+                                Each <code>&lt;li&gt;</code> has an inline <code>style</code> attribute defining
+                                <code>--i</code> (start color) and <code>--j</code> (end color). The CSS uses these
+                                in <code>background: linear-gradient(45deg, var(--i), var(--j))</code> on the
+                                <code>::before</code> pseudo-element. This way a single CSS rule drives five completely
+                                different gradients — purple-pink, sky-blue, orange-red, green-cyan, and rose-magenta.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">02</div>
+                        <div class="step-content">
+                            <h3>Base Pill Shape and Box Shadow</h3>
+                            <p>
+                                Each <code>li</code> starts as a 60 × 60 px circle: <code>border-radius: 60px</code>,
+                                white background, and a subtle <code>box-shadow</code>. The element uses
+                                <code>display: flex; justify-content: center; align-items: center</code> to center
+                                the icon. <code>overflow</code> is left at its default so the pseudo-elements can
+                                extend outside during the glow effect.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">03</div>
+                        <div class="step-content">
+                            <h3>Pseudo-element Layering: Gradient Fill and Glow</h3>
+                            <p>
+                                <code>::before</code> sits above the white background with <code>inset: 0</code>,
+                                matching the pill's border-radius, and holds the gradient fill. It starts at
+                                <code>opacity: 0</code> and transitions to 1 on hover. <code>::after</code> is
+                                offset downward (<code>top: 10px</code>), blurred with <code>filter: blur(15px)</code>,
+                                and set to <code>z-index: -1</code> so it appears as a glow shadow beneath the pill.
+                                It also starts transparent and fades to <code>opacity: 0.5</code> on hover.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">04</div>
+                        <div class="step-content">
+                            <h3>Width Expansion on Hover</h3>
+                            <p>
+                                On <code>li:hover</code>, <code>width</code> transitions from 60 px to 180 px with
+                                <code>transition: 0.5s</code>. Because the pill uses flexbox centering, the icon and
+                                label naturally stay centered as the element grows. The <code>box-shadow</code> is also
+                                removed on hover to let the glow pseudo-element be the only shadow source.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">05</div>
+                        <div class="step-content">
+                            <h3>Icon Scale-Out and Color Change</h3>
+                            <p>
+                                The <code>ion-icon</code> is colored <code>#777</code> at rest. On
+                                <code>li:hover ion-icon</code>, it transitions to <code>transform: scale(0)</code>
+                                with <code>color: #fff</code> — it disappears into a dot. Crucially, its
+                                <code>transition-delay</code> is <code>0s</code> on hover so it exits immediately,
+                                making room for the label before the expansion is halfway done.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">06</div>
+                        <div class="step-content">
+                            <h3>Label Scale-In with Staggered Delay</h3>
+                            <p>
+                                The <code>.title</code> span starts at <code>transform: scale(0)</code>.
+                                On <code>li:hover .title</code> it scales to 1, but with
+                                <code>transition-delay: 0.25s</code>. This 250 ms gap ensures the icon has
+                                already shrunk before the label appears, keeping the animation uncluttered.
+                                On mouse-out, the delays reverse: the label exits first, then the icon returns.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="warn-box">
+                    <strong>⚠️ Animating width:</strong> Unlike <code>transform</code>, animating
+                    <code>width</code> does trigger layout recalculation. For a navigation bar with a small
+                    number of items this is imperceptible, but avoid using this pattern on dozens of elements
+                    animating simultaneously. For high-performance scenarios, consider using
+                    <code>transform: scaleX()</code> combined with <code>transform-origin: left</code> instead.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- CUSTOMIZATION -->
+            <section id="customization">
+                <h2>Customization Options</h2>
+                <p>
+                    This navigation bar is designed to be remixed. Here are the most common adjustments and
+                    exactly where to make them.
+                </p>
+
+                <h3>Changing a gradient</h3>
+                <p>
+                    Every list item's two-stop gradient is controlled entirely by the inline
+                    <code>--i</code> and <code>--j</code> variables. To change the purple-pink item to a
+                    teal-lime gradient, update its opening tag from
+                    <code>style="--i:#a955ff;--j:#ea51ff"</code> to
+                    <code>style="--i:#14b8a6;--j:#84cc16"</code>. No CSS file changes needed.
+                </p>
+
+                <h3>Adding a new navigation item</h3>
+                <p>
+                    Copy any existing <code>&lt;li&gt;</code> block. Change its <code>--i</code> and
+                    <code>--j</code> color variables, update the <code>name</code> attribute on
+                    <code>&lt;ion-icon&gt;</code> to any icon from the
+                    <a href="https://ionic.io/ionicons" target="_blank" rel="noopener"
+                        style="color:var(--premcolo);">Ionicons
+                        library</a>, and set the <code>.title</code> text. The layout flex gap handles spacing
+                    automatically.
+                </p>
+
+                <h3>Adjusting expand width</h3>
+                <p>
+                    The expanded width is hardcoded to <code>180px</code> in <code>ul li:hover</code>.
+                    Increase it for longer labels (e.g. "Settings" needs around 200 px) or decrease it for
+                    short labels like "Go". Match the <code>font-size</code> and <code>letter-spacing</code>
+                    on <code>.title</code> accordingly.
+                </p>
+
+                <h3>Swap Ionicons for another icon set</h3>
+                <p>
+                    Replace the <code>&lt;ion-icon&gt;</code> elements with any icon system that renders via
+                    inline SVG, a <code>&lt;i&gt;</code> tag, or a <code>&lt;span&gt;</code>. The only
+                    CSS change required is updating the selector from <code>ul li ion-icon</code> to
+                    whatever tag your icon library uses.
+                </p>
+
+                <h3>Vertical layout</h3>
+                <p>
+                    Change <code>ul</code> from <code>display: flex</code> to
+                    <code>display: flex; flex-direction: column</code> and remove the fixed
+                    <code>width: 60px</code> from <code>li</code>. Set a <code>min-width: 60px</code>
+                    instead so the pill can expand horizontally in a sidebar context.
+                </p>
+            </section>
+
+            <hr>
+
+            <!-- BEST PRACTICES -->
+            <section id="best-practices">
+                <h2>Best Practices &amp; Common Mistakes</h2>
+
+                <div class="practice-grid">
+                    <div class="practice-card do">
+                        <div class="practice-card-title">✅ Do</div>
+                        <ul>
+                            <li>Keep <code>--i</code> and <code>--j</code> as inline variables per item for zero CSS
+                                duplication</li>
+                            <li>Use <code>transition-delay</code> to stagger icon and label swaps cleanly</li>
+                            <li>Set <code>z-index: -1</code> on the glow <code>::after</code> so it never obscures
+                                content</li>
+                            <li>Add <code>@media (prefers-reduced-motion: reduce)</code> to disable transitions for
+                                accessibility</li>
+                            <li>Test on a real device to confirm the hover state works as expected</li>
+                        </ul>
+                    </div>
+                    <div class="practice-card dont">
+                        <div class="practice-card-title">❌ Don't</div>
+                        <ul>
+                            <li>Animate more than 8–10 items simultaneously — layout cost from <code>width</code> grows
+                                linearly</li>
+                            <li>Forget to set <code>overflow: hidden</code> on a parent if you want glow clipped to a
+                                container</li>
+                            <li>Hardcode gradient colors in CSS when inline variables already handle per-item theming
+                            </li>
+                            <li>Rely on hover-only interactions for primary navigation on a touch-first product</li>
+                            <li>Use the same <code>--i</code> and <code>--j</code> colors on two adjacent items — the
+                                visual
+                                distinction is the whole point</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- BROWSER COMPAT -->
+            <section id="browser-compat">
+                <h2>Browser Compatibility</h2>
+                <p>
+                    Every CSS feature used in this project has been broadly supported for years. The table below
+                    covers the key techniques and their minimum browser support.
+                </p>
+
+                <table class="compat-table" aria-label="Browser compatibility for CSS features used">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Chrome</th>
+                            <th>Firefox</th>
+                            <th>Safari</th>
+                            <th>Edge</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CSS Custom Properties (<code>var()</code>)</td>
+                            <td><span class="badge-yes">✓ 49+</span></td>
+                            <td><span class="badge-yes">✓ 31+</span></td>
+                            <td><span class="badge-yes">✓ 9.1+</span></td>
+                            <td><span class="badge-yes">✓ 15+</span></td>
+                        </tr>
+                        <tr>
+                            <td>CSS <code>transition</code></td>
+                            <td><span class="badge-yes">✓ All</span></td>
+                            <td><span class="badge-yes">✓ All</span></td>
+                            <td><span class="badge-yes">✓ All</span></td>
+                            <td><span class="badge-yes">✓ All</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>::before</code> / <code>::after</code> pseudo-elements</td>
+                            <td><span class="badge-yes">✓ All</span></td>
+                            <td><span class="badge-yes">✓ All</span></td>
+                            <td><span class="badge-yes">✓ All</span></td>
+                            <td><span class="badge-yes">✓ All</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>filter: blur()</code></td>
+                            <td><span class="badge-yes">✓ 18+</span></td>
+                            <td><span class="badge-yes">✓ 35+</span></td>
+                            <td><span class="badge-yes">✓ 6+</span></td>
+                            <td><span class="badge-yes">✓ 12+</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>linear-gradient</code></td>
+                            <td><span class="badge-yes">✓ All</span></td>
+                            <td><span class="badge-yes">✓ All</span></td>
+                            <td><span class="badge-yes">✓ All</span></td>
+                            <td><span class="badge-yes">✓ All</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box">
+                    <strong>ℹ️ Ionicons note:</strong> Ionicons renders via a Web Component (<code>ion-icon</code>).
+                    Web Components are supported in all evergreen browsers. Internet Explorer 11 is not supported,
+                    but IE11's market share is effectively zero in 2026.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- PERFORMANCE & RESPONSIVENESS -->
+            <section id="performance">
+                <h2>Performance &amp; Responsiveness</h2>
+
+                <h3>Animation performance</h3>
+                <p>
+                    The most performance-sensitive operation here is the <code>width</code> transition on
+                    <code>&lt;li&gt;</code>. Changing <code>width</code> triggers a layout reflow, which is
+                    more expensive than a <code>transform</code>. However, with five small items this cost is
+                    negligible — browsers batch the reflow for a single frame and the result is visually
+                    indistinguishable from a transform-based approach for this number of elements.
+                </p>
+                <p>
+                    The <code>filter: blur()</code> on <code>::after</code> is GPU-composited in all major
+                    browsers and does not cause additional layout work. <code>transform: scale()</code> on the
+                    icon and label are also composited, keeping those transitions off the main thread.
+                </p>
+
+                <h3>Responsiveness</h3>
+                <p>
+                    The <code>&lt;ul&gt;</code> uses <code>display: flex</code> with <code>gap: 25px</code>.
+                    On narrow viewports the row will overflow if the items are all expanded simultaneously
+                    (unlikely in normal use, but worth noting). To make the bar responsive, wrap it in a
+                    container with <code>overflow-x: auto</code> and add <code>padding</code> so scrolling is
+                    comfortable on small screens. On touch devices, consider replacing the hover behavior with
+                    a tap-toggle using a small JavaScript click handler, since <code>:hover</code> does not
+                    persist on mobile.
+                </p>
+            </section>
+
+            <hr>
+
+            <!-- FAQ -->
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq">
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Can I build this expandable navigation bar without JavaScript?
+                        </summary>
+                        <div class="faq-answer">
+                            Yes — the expansion, gradient reveal, icon swap, and glow effect are all driven by the CSS
+                            <code>:hover</code> pseudo-class and <code>transition</code> property. You need only
+                            an HTML file; no JavaScript is involved at any step.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How do per-item gradient colors work with CSS custom properties?
+                        </summary>
+                        <div class="faq-answer">
+                            Each <code>&lt;li&gt;</code> carries two inline CSS variables — <code>--i</code> (gradient
+                            start)
+                            and <code>--j</code> (gradient end). The <code>::before</code> and <code>::after</code>
+                            pseudo-elements reference these with
+                            <code>linear-gradient(45deg, var(--i), var(--j))</code>.
+                            Because CSS custom properties cascade down into pseudo-elements, changing the inline values
+                            on
+                            a parent element automatically updates both pseudo-elements with no extra CSS rules.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How do I add a new navigation item?</summary>
+                        <div class="faq-answer">
+                            Copy any existing <code>&lt;li&gt;</code>, set its <code>--i</code> and <code>--j</code>
+                            inline colors to your chosen gradient stops, replace the <code>ion-icon name</code>
+                            attribute
+                            with any icon from the Ionicons library, and update the <code>span.title</code> text.
+                            The flexbox gap on <code>&lt;ul&gt;</code> handles the spacing automatically.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Why do the icon and label swap instead of appearing at the same
+                            time?
+                        </summary>
+                        <div class="faq-answer">
+                            Each element has a different <code>transition-delay</code>. On hover, the icon collapses
+                            immediately (<code>delay: 0s</code>) while the label expands after 250 ms
+                            (<code>delay: 0.25s</code>). On mouse-out the reverse happens. This staggering ensures
+                            that only one element is visible at any moment during the transition, producing a clean
+                            single-focus read rather than an overlapping jumble.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Does the blur glow under the pill hurt performance?</summary>
+                        <div class="faq-answer">
+                            No, not for a small bar of five items. The glow is applied with <code>filter: blur()</code>
+                            on a <code>::after</code> pseudo-element, which browsers composite on the GPU separately
+                            from the main document layout. For large numbers of items animating simultaneously,
+                            consider replacing the blur glow with a simpler <code>box-shadow</code> transition instead.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Can I use this navigation bar on mobile devices?</summary>
+                        <div class="faq-answer">
+                            The bar renders correctly on all screen sizes and the icons are touch-friendly at 60 × 60
+                            px.
+                            However, the hover-expand animation does not persist on touch screens — a tap activates
+                            the hover state briefly but it doesn't stay open. For a mobile-first deployment, add a small
+                            JavaScript click toggle, or display the labels permanently alongside the icons on narrow
+                            viewports using a media query.
+                        </div>
+                    </details>
+
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- CONCLUSION -->
+            <section id="conclusion" class="conclusion">
+                <h2>Conclusion</h2>
+                <p>
+                    This <strong>CSS expandable navigation bar</strong> demonstrates how a single CSS mechanic —
+                    the <code>:hover</code> pseudo-class combined with <code>transition</code> — can produce a
+                    layered, polished interaction with zero JavaScript. By stacking gradient pseudo-elements,
+                    staggering transition delays, and routing per-item colors through inline CSS variables, five
+                    visually distinct items share a single CSS rule set.
+                </p>
+                <p>
+                    The pattern scales naturally: swap the icons, change two hex values per item, adjust the
+                    expanded width, and you have a completely different navigation bar. Use it as a toolbar at
+                    the bottom of a dashboard, a social links row in a portfolio footer, or a quick-access dock
+                    for a web app. The underlying CSS technique — pill expand, pseudo-element gradient reveal,
+                    blur glow, staggered label swap — is reusable across dozens of UI components.
+                </p>
+                <p style="color:var(--text-muted); font-size:14px; margin-bottom:0;">
+                    Found this tutorial useful? Browse the related projects in the sidebar for more modern CSS
+                    interaction effects and animation techniques.
+                </p>
+            </section>
+
+        </main>
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar" aria-label="Related projects">
+            <div class="sidebar-box">
+                <div class="sidebar-header">🔗 Related Projects</div>
+                <div class="related-list">
+                    <a class="related-card" href="Project39.html" aria-label="Animated Button with Star Effects">
+                        <img src="https://77cod-ing.github.io/Animated.Button.with.Star.Effects.png"
+                            alt="Animated button with glowing star effects CSS" loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Animated Button with Star Effects — HTML &amp; CSS</div>
+                    </a>
+                    <a class="related-card" href="Project14.html" aria-label="Electric Neon Card Animation">
+                        <img src="https://77cod-ing.github.io/image%20copy%2040.png"
+                            alt="Electric Neon Card Animation HTML CSS SVG" loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Electric Neon Card Animation — HTML CSS SVG</div>
+                    </a>
+                    <a class="related-card" href="Project28.html" aria-label="Gooey Navigation Menu">
+                        <img src="image copy 82.png" alt="Gooey CSS JavaScript navigation menu liquid blob animation"
+                            loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Gooey Navigation Menu – CSS &amp; JavaScript Liquid Animation
+                        </div>
+                    </a>
+                    <a class="related-card" href="Project37.html" aria-label="Glassmorphism Login Page">
+                        <img src="https://i.suar.me/Np3EO/m" alt="Modern Glassmorphism Login Page Design" loading="lazy"
+                            width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Modern Glassmorphism Login Page Design</div>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- ===== PREVIEW MODAL ===== -->
+    <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+        aria-label="Live preview of the expandable navigation bar">
+        <div class="preview-modal">
+            <div class="preview-modal-header">
+                <div class="preview-modal-title">
+                    <i class='bx bx-show'></i>
+                    <strong>Live Preview</strong> — CSS Expandable Navigation Bar
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <div class="preview-dots">
+                        <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+                        <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+                        <button class="preview-dot green" aria-label="Maximize" disabled></button>
+                    </div>
+                    <button class="preview-close-btn" id="previewCloseBtn">
+                        <i class='bx bx-x'></i> Close
+                    </button>
+                </div>
+            </div>
+            <div class="preview-iframe-wrap">
+                <div class="preview-loading" id="previewLoading">
+                    <div class="preview-spinner"></div>
+                    <span class="preview-loading-text">Loading preview...</span>
+                </div>
+                <iframe id="previewIframe" title="Preview of CSS expandable navigation bar"
+                    sandbox="allow-scripts allow-same-origin"></iframe>
+                <div class="preview-hint" id="previewHint">
+                    <i class='bx bx-cursor'></i> Hover over each pill icon to see the expand animation
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // ── Replace these with your actual Gist raw URLs once uploaded ──────────────
+        const gistBase = "https://gist.githubusercontent.com/77cod-ing/c85320de722bd73ac358b9afebd5d298/raw/673ac22ead194562fb1f1a6d03183cb5682d9dc1/";
+        const htmlUrl = gistBase + "index.html";
+        const cssUrl = gistBase + "style.css";
+
+        let cachedHTML = "";
+        let cachedCSS = "";
+
+        async function loadCode(url, elementId, lang) {
+            try {
+                const res = await fetch(url);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const text = await res.text();
+                const el = document.getElementById(elementId);
+                el.textContent = text;
+                el.className = `language-${lang}`;
+                Prism.highlightElement(el);
+                if (lang === "html") cachedHTML = text;
+                if (lang === "css") cachedCSS = text;
+            } catch (e) {
+                const el = document.getElementById(elementId);
+                if (el) el.textContent = `/* Failed to load: ${e.message} */`;
+            }
+        }
+
+        loadCode(htmlUrl, "code1", "html");
+        loadCode(cssUrl, "code2", "css");
+
+        /* ── TABS ─────────────────────────────────────────────────────────────── */
+        document.querySelectorAll(".code-tab").forEach(tab => {
+            tab.addEventListener("click", () => {
+                const lang = tab.dataset.lang;
+                document.querySelectorAll(".code-tab").forEach(t => {
+                    t.classList.remove("active");
+                    t.setAttribute("aria-selected", "false");
+                });
+                document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+                tab.classList.add("active");
+                tab.setAttribute("aria-selected", "true");
+                const panelMap = { html: "panel-html", css: "panel-css" };
+                document.getElementById(panelMap[lang]).classList.add("active");
+            });
+        });
+
+        /* ── COPY BUTTONS ─────────────────────────────────────────────────────── */
+        document.querySelectorAll(".copy-btn").forEach(btn => {
+            btn.addEventListener("click", async () => {
+                const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+                if (!code) return;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+                    btn.classList.add("copied");
+                    setTimeout(() => {
+                        btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
+                        btn.classList.remove("copied");
+                    }, 2000);
+                } catch { btn.textContent = "Error"; }
+            });
+        });
+
+        /* ── PREVIEW MODAL ────────────────────────────────────────────────────── */
+        const previewOverlay = document.getElementById("previewOverlay");
+        const previewIframe = document.getElementById("previewIframe");
+        const previewLoading = document.getElementById("previewLoading");
+        const previewHint = document.getElementById("previewHint");
+        const previewBtn = document.getElementById("previewBtn");
+        const previewCloseBtn = document.getElementById("previewCloseBtn");
+        const previewDotClose = document.getElementById("previewDotClose");
+
+        function openPreview() {
+            previewOverlay.classList.add("open");
+            document.body.style.overflow = "hidden";
+            previewLoading.classList.remove("hidden");
+            previewHint.classList.remove("show");
+            previewBtn.classList.add("loading");
+            buildPreview();
+        }
+
+        function closePreview() {
+            previewOverlay.classList.remove("open");
+            document.body.style.overflow = "";
+            previewIframe.srcdoc = "";
+            previewBtn.classList.remove("loading");
+        }
+
+        async function buildPreview() {
+            if (cachedHTML && cachedCSS) { injectPreview(cachedHTML, cachedCSS); return; }
+            try {
+                const [hRes, cRes] = await Promise.all([fetch(htmlUrl), fetch(cssUrl)]);
+                const html = await hRes.text();
+                const css = await cRes.text();
+                cachedHTML = html; cachedCSS = css;
+                injectPreview(html, css);
+            } catch (e) {
+                previewLoading.innerHTML = `
+          <i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i>
+          <span class="preview-loading-text" style="color:var(--accent2);">Failed to load preview: ${e.message}</span>`;
+                previewBtn.classList.remove("loading");
+            }
+        }
+
+        function injectPreview(html, css) {
+            let combined = html.replace(
+                /<link[^>]*href=["']style\.css["'][^>]*>/gi,
+                `<style>${css}</style>`
+            );
+            if (!combined.includes("<style>")) {
+                combined = combined.includes("</head>")
+                    ? combined.replace("</head>", `<style>${css}</style>\n</head>`)
+                    : `<style>${css}</style>\n${combined}`;
+            }
+            const bgStyle = `<style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#f0f0f0;}</style>`;
+            combined = combined.includes("<head>")
+                ? combined.replace("<head>", `<head>${bgStyle}`)
+                : bgStyle + combined;
+
+            previewIframe.srcdoc = combined;
+            previewIframe.addEventListener("load", function onLoad() {
+                previewLoading.classList.add("hidden");
+                previewBtn.classList.remove("loading");
+                setTimeout(() => {
+                    previewHint.classList.add("show");
+                    setTimeout(() => previewHint.classList.remove("show"), 9000);
+                }, 300);
+                previewIframe.removeEventListener("load", onLoad);
+            });
+        }
+
+        previewBtn.addEventListener("click", openPreview);
+        previewCloseBtn.addEventListener("click", closePreview);
+        previewDotClose.addEventListener("click", closePreview);
+        previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+        document.addEventListener("keydown", e => {
+            if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview();
+        });
+    </script>
+
+</body>
+
+</html>
