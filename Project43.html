@@ -1,0 +1,2397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== PRIMARY SEO META ===== -->
+    <title>Advanced JavaScript Image Slider with GSAP Animation | HTML CSS JS Tutorial 2026</title>
+    <meta name="description"
+        content="Build a creative interactive image slider using vanilla JavaScript and GSAP animation. Step-by-step tutorial with full free source code. No frameworks required. Real-world frontend project for beginners and experts.">
+    <meta name="keywords"
+        content="advanced javascript image slider project with source code, interactive image gallery using vanilla javascript and gsap, modern javascript animation project for beginners and experts, creative frontend development project using javascript html css, how to build animated image slider using javascript step by step, real world javascript ui animation project tutorial, responsive javascript image transition effect tutorial, build interactive website animation using vanilla javascript, gsap animation tutorial javascript, javascript slider project, frontend project ideas 2026, vanilla javascript projects, gsap image gallery, smooth image transition javascript, fullscreen image slider css js">
+    <meta name="author" content="77cod_ing">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://77cod-ing.github.io/Project-GSAP-Image-Slider.html">
+
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:type" content="article">
+    <meta property="og:title"
+        content="Advanced JavaScript Image Slider with GSAP Animation — HTML CSS JS Tutorial 2026">
+    <meta property="og:description"
+        content="Build a creative interactive image slider using vanilla JavaScript and GSAP. Smooth split-panel transitions, custom cursor, keyboard &amp; swipe support. Full free source code.">
+    <meta property="og:image" content="https://i.suar.me/Ep114/m">
+    <meta property="og:url" content="https://77cod-ing.github.io/Project-GSAP-Image-Slider.html">
+    <meta property="og:site_name" content="77cod_ing">
+    <meta property="article:published_time" content="2026-06-09T00:00:00Z">
+    <meta property="article:modified_time" content="2026-06-09T00:00:00Z">
+    <meta property="article:author" content="77cod_ing">
+    <meta property="article:section" content="JavaScript Tutorials">
+    <meta property="article:tag" content="HTML, CSS, JavaScript, GSAP, Image Slider, Animation, Frontend">
+
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Advanced JavaScript Image Slider with GSAP Animation — Frontend Tutorial">
+    <meta name="twitter:description"
+        content="Build a creative interactive image gallery with split-panel GSAP transitions, custom cursor, and keyboard/swipe navigation. Full free source code.">
+    <meta name="twitter:image" content="https://i.suar.me/Ep114/m">
+
+    <!-- ===== SCHEMA: TechArticle ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Advanced JavaScript Image Slider with GSAP Animation — Interactive Image Gallery Project for Beginners and Experts",
+    "description": "A complete tutorial on building an advanced interactive image slider using vanilla JavaScript and GSAP. Features split-panel vertical transitions, a custom cursor with mix-blend-mode, smooth lerp-based following, keyboard and swipe navigation, and mouse wheel support.",
+    "image": "https://i.suar.me/Ep114/m",
+    "datePublished": "2026-06-09",
+    "dateModified": "2026-06-09",
+    "author": {
+      "@type": "Person",
+      "name": "77cod_ing",
+      "url": "https://77cod-ing.github.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "77cod_ing",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Picture1.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://77cod-ing.github.io/Project-GSAP-Image-Slider.html"
+    },
+    "articleSection": "JavaScript Tutorials",
+    "keywords": "advanced javascript image slider, interactive image gallery vanilla javascript gsap, gsap animation tutorial, frontend project javascript html css, responsive image transition effect",
+    "timeRequired": "PT30M",
+    "educationalLevel": "Intermediate",
+    "teaches": ["GSAP Power4 Easing", "CSS mix-blend-mode", "Linear Interpolation (lerp)", "requestAnimationFrame", "Touch & Swipe Events", "CSS overflow:hidden Clipping", "Dynamic DOM Generation", "Keyboard Navigation"]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: HowTo ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Build an Interactive Image Slider Using JavaScript and GSAP Step by Step",
+    "description": "Step-by-step guide to creating an advanced animated image slider with split-panel transitions, custom cursor, and multi-input navigation using vanilla JavaScript and GSAP.",
+    "image": "https://i.suar.me/Ep114/m",
+    "totalTime": "PT30M",
+    "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "0"},
+    "supply": [
+      {"@type": "HowToSupply", "name": "Text editor (VS Code)"},
+      {"@type": "HowToSupply", "name": "A modern web browser"}
+    ],
+    "tool": [
+      {"@type": "HowToTool", "name": "HTML"},
+      {"@type": "HowToTool", "name": "CSS"},
+      {"@type": "HowToTool", "name": "JavaScript"},
+      {"@type": "HowToTool", "name": "GSAP (CDN)"}
+    ],
+    "step": [
+      {"@type": "HowToStep", "name": "Set Up the HTML Structure", "text": "Create a #main container. JavaScript dynamically generates all part and section elements to keep the HTML minimal and the logic centralized.", "position": 1},
+      {"@type": "HowToStep", "name": "Configure Image Data Array", "text": "Store image URLs in a JavaScript array. Preload all images immediately using new Image() so transitions are instant with no visible loading delay.", "position": 2},
+      {"@type": "HowToStep", "name": "Generate Split-Panel Columns", "text": "Loop to create equal-width .part columns. Each column holds a .section div with an absolutely positioned image that extends the full viewport width, offset horizontally so all panels show the same image.", "position": 3},
+      {"@type": "HowToStep", "name": "Implement the GSAP Transition Logic", "text": "Write go(dir) function that animates panels vertically using GSAP with Power4.easeInOut. Alternate up/down direction per column for the split stagger effect. Use a playing flag to prevent overlapping animations.", "position": 4},
+      {"@type": "HowToStep", "name": "Add the Custom Cursor", "text": "Create two cursor elements: a sharp dot that snaps to the exact mouse position and a soft circular follower that uses lerp() for smooth lagging. Apply mix-blend-mode: difference for the inversion effect.", "position": 5},
+      {"@type": "HowToStep", "name": "Build the Lerp Animation Loop", "text": "Run requestAnimationFrame in a loop to continuously interpolate the follower cursor position toward the real mouse position. This creates the signature smooth drag effect.", "position": 6},
+      {"@type": "HowToStep", "name": "Wire Up All Navigation Inputs", "text": "Add event listeners for keyboard arrow keys, mouse wheel/scroll events, touch swipe gestures, and navigation button clicks. Throttle wheel events with clearTimeout to prevent double-fires.", "position": 7},
+      {"@type": "HowToStep", "name": "Apply Click & Touch Cursor Animation", "text": "On mousedown/touchstart, animate the dot cursor to scale:4.5 and the follower to scale:0.4 using GSAP. Reset on mouseup/touchend. Hide both cursors on touch devices.", "position": 8}
+    ]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: FAQPage ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I build an animated image slider using JavaScript and GSAP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Create a container with equal-width column panels. Each panel holds the full-width image offset by its column index. When navigating, use GSAP's gsap.to() to animate each panel's Y position by ±window.innerHeight with Power4.easeInOut easing. Alternate the direction (up vs down) between columns to achieve the staggered split effect. Full source code is available in the tabs above."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is GSAP and why use it for JavaScript animations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GSAP (GreenSock Animation Platform) is a high-performance JavaScript animation library. It handles complex easing curves (like Power4.easeInOut), chained animations, and cross-browser consistency far more reliably than CSS transitions alone. For smooth, professional UI transitions like the split-panel image slider effect, GSAP significantly reduces code complexity and guarantees 60fps performance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the custom cursor with mix-blend-mode work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Two cursor elements are created: a small sharp dot that tracks the exact mouse position, and a larger circular outline that follows with a smooth lag. Both use mix-blend-mode: difference in CSS, which inverts their color based on the background underneath — appearing white on dark images and dark on light images. The lag effect is created using a lerp() function inside a requestAnimationFrame loop."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is linear interpolation (lerp) and how is it used in cursor animation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Linear interpolation (lerp) calculates a point between two values by a given amount. The formula is: lerp(start, end, amount) = (1 - amount) * start + amount * end. In this project, the cursor follower moves 16% of the distance between its current position and the real mouse position on every frame. This creates an elastic, lagging motion — the closer it gets, the slower it moves, so it never quite catches up immediately."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the swipe and keyboard navigation work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Three input sources are wired to the same go(dir) function. Keyboard: ArrowUp/ArrowLeft call go(-1) and ArrowDown/ArrowRight call go(1). Touch: touchstart records the Y position, touchmove tracks it, and touchend fires go() if the swipe distance exceeds 40px. Mouse wheel: wheel events are debounced with clearTimeout to avoid double-fires, then deltaY determines direction."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this image slider project suitable for beginners?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The project is labeled intermediate — it involves dynamic DOM generation, GSAP animation API, linear interpolation math, and multi-input event handling. It's ideal as a third or fourth JavaScript project for someone who is comfortable with DOM manipulation and wants to learn real-world animation libraries. The full source code and step-by-step breakdown make it approachable with some patience."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use this image slider in a real website or portfolio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The slider handles keyboard navigation, touch swipe for mobile, and mouse wheel for desktop — making it fully accessible and production-ready as a portfolio or landing page hero. To customize it, replace the images array with your own image URLs, update the column count (cols variable), and adjust the GSAP duration and easing to match your brand's animation feel."
+        }
+      }
+    ]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: BreadcrumbList ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+      {"@type": "ListItem", "position": 3, "name": "Advanced JavaScript Image Slider", "item": "https://77cod-ing.github.io/Project-GSAP-Image-Slider.html"}
+    ]
+  }
+  </script>
+
+    <!-- ===== ASSETS ===== -->
+    <link rel="icon" type="image/png" href="Picture1.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+    <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+        crossorigin="anonymous"></script>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+            --premcolo: #00d9ff;
+            --accent2: #ff6b35;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --surface: rgba(255, 255, 255, 0.04);
+            --surface-hover: rgba(0, 217, 255, 0.07);
+            --border: rgba(255, 255, 255, 0.08);
+            --font-head: 'Space Mono', monospace;
+            --font-body: 'DM Sans', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--back);
+            font-family: var(--font-body);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 56px;
+            padding: 0 2.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            color: var(--premcolo);
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: clamp(1rem, 2vw, 2rem);
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: var(--premcolo);
+        }
+
+        /* ===== BREADCRUMB ===== */
+        .breadcrumb {
+            padding: 12px 2.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb ol {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .breadcrumb li {
+            display: flex;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .breadcrumb li+li::before {
+            content: "›";
+            color: var(--premcolo);
+            margin-right: 6px;
+            font-size: 1.1rem;
+        }
+
+        .breadcrumb a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--premcolo);
+        }
+
+        .breadcrumb [aria-current="page"] {
+            color: var(--premcolo);
+            font-weight: 600;
+        }
+
+        /* ===== BACK BUTTON ===== */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+            margin: 1rem 2.5rem;
+        }
+
+        .back-link:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 3rem 2.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: var(--font-head);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .tag-tutorial {
+            background: rgba(0, 217, 255, 0.12);
+            color: var(--premcolo);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+        }
+
+        .tag-js {
+            background: rgba(235, 223, 0, 0.1);
+            color: #ebdf00;
+            border: 1px solid rgba(235, 223, 0, 0.2);
+        }
+
+        .tag-css {
+            background: rgba(0, 217, 255, 0.08);
+            color: #7dd3fc;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .tag-level {
+            background: rgba(255, 107, 53, 0.1);
+            color: var(--accent2);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+        }
+
+        .tag-gsap {
+            background: rgba(136, 220, 0, 0.1);
+            color: #88dc00;
+            border: 1px solid rgba(136, 220, 0, 0.25);
+        }
+
+        .read-time {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-head);
+            font-size: clamp(1.6rem, 4vw, 2.6rem);
+            line-height: 1.25;
+            color: #fff;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 span {
+            color: var(--premcolo);
+        }
+
+        .hero-lead {
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            color: var(--text-muted);
+            max-width: 680px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .stat-value {
+            font-family: var(--font-head);
+            font-size: 1.4rem;
+            color: var(--premcolo);
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            display: block;
+            box-shadow: 0 0 60px rgba(0, 217, 255, 0.08), 0 32px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .img-caption {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* ===== LAYOUT ===== */
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2.5rem 4rem;
+            align-items: start;
+        }
+
+        /* ===== ARTICLE ===== */
+        .article-body h2 {
+            font-family: var(--font-head);
+            font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+            color: var(--premcolo);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            scroll-margin-top: 80px;
+        }
+
+        .article-body h3 {
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            color: #7dd3fc;
+            margin: 1.8rem 0 0.75rem;
+            scroll-margin-top: 80px;
+        }
+
+        .article-body p {
+            margin-bottom: 1.1rem;
+            color: var(--text);
+        }
+
+        .article-body code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 7px;
+            border-radius: 5px;
+        }
+
+        .article-body ul,
+        .article-body ol {
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 1.1rem;
+        }
+
+        .article-body li {
+            margin-bottom: 9px;
+        }
+
+        .article-body li strong {
+            color: #fff;
+        }
+
+        /* ===== TOC ===== */
+        .toc {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .toc-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--premcolo);
+            margin-bottom: 0.75rem;
+        }
+
+        .toc ol {
+            padding-left: 1.2rem;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+        }
+
+        .toc a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: var(--premcolo);
+        }
+
+        /* ===== FEATURE CARDS ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 1.5rem 0;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            transition: border-color 0.25s, background 0.25s;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(0, 217, 255, 0.3);
+            background: var(--surface-hover);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .feature-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* ===== STEPS ===== */
+        .steps {
+            margin: 1.5rem 0;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 44px 1fr;
+            gap: 1rem;
+            padding: 1.1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-num {
+            width: 44px;
+            height: 44px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-head);
+            color: var(--premcolo);
+            font-size: 1rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            margin-top: 0;
+            font-size: 1rem;
+        }
+
+        .step-content p {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* ===== CODE SECTION ===== */
+        .code-section {
+            margin: 2rem 0;
+            width: 60vw;
+        }
+
+        .code-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .code-tabs {
+            display: flex;
+            gap: 4px;
+        }
+
+        .code-tab {
+            padding: 8px 20px;
+            border-radius: 8px 8px 0 0;
+            border: 1px solid var(--border);
+            border-bottom: none;
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .code-tab.active {
+            background: #1e1e2f;
+            color: #fff;
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+
+        .code-tab[data-lang="html"].active {
+            color: #ff6600;
+        }
+
+        .code-tab[data-lang="css"].active {
+            color: #00ffff;
+        }
+
+        .code-tab[data-lang="js"].active {
+            color: #f7df1e;
+        }
+
+        /* ===== PREVIEW BUTTON ===== */
+        .preview-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 22px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 217, 255, 0.4);
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.3px;
+        }
+
+        .preview-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .preview-btn:hover {
+            border-color: var(--premcolo);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .preview-btn:hover::before {
+            opacity: 1;
+        }
+
+        .preview-btn:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        .preview-btn i {
+            font-size: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .preview-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .preview-btn.loading i {
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .code-panels {
+            position: relative;
+        }
+
+        .code-box {
+            background: #1e1e2f;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+            border-radius: 0 12px 12px 12px;
+            position: relative;
+            display: none;
+        }
+
+        .code-box.active {
+            display: block;
+        }
+
+        .code-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .code-lang-label {
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .copy-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            border-radius: 7px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo);
+        }
+
+        .copy-btn.copied {
+            color: #4ade80;
+            border-color: #4ade80;
+        }
+
+        :not(pre)>code[class*="language-"],
+        pre[class*="language-"] {
+            width: 100%;
+            max-width: 100%;
+            height: 50vh;
+            border-radius: 0 0 12px 12px;
+            overflow-y: auto;
+            overflow-x: auto;
+            margin: 0;
+        }
+
+        pre::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        pre::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        pre::-webkit-scrollbar-thumb {
+            background: var(--premcolo);
+            border-radius: 10px;
+        }
+
+        /* ===== INFO / WARN ===== */
+        .info-box {
+            background: rgba(0, 217, 255, 0.06);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-left: 4px solid var(--premcolo);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .info-box strong {
+            color: var(--premcolo);
+        }
+
+        .warn-box {
+            background: rgba(255, 107, 53, 0.06);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-left: 4px solid var(--accent2);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .warn-box strong {
+            color: var(--accent2);
+        }
+
+        /* ===== COMPARISON TABLE ===== */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 14px;
+        }
+
+        .comparison-table th {
+            font-family: var(--font-head);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 10px 14px;
+            background: rgba(0, 217, 255, 0.08);
+            color: var(--premcolo);
+            border: 1px solid var(--border);
+            text-align: left;
+        }
+
+        .comparison-table td {
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            vertical-align: top;
+        }
+
+        .comparison-table tr:hover td {
+            background: var(--surface-hover);
+        }
+
+        .comparison-table td strong {
+            color: #fff;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-family: var(--font-head);
+            font-weight: 700;
+        }
+
+        .badge-green {
+            background: rgba(74, 222, 128, 0.12);
+            color: #4ade80;
+            border: 1px solid rgba(74, 222, 128, 0.25);
+        }
+
+        .badge-orange {
+            background: rgba(255, 107, 53, 0.12);
+            color: var(--accent2);
+            border: 1px solid rgba(255, 107, 53, 0.25);
+        }
+
+        .badge-blue {
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+        }
+
+        /* ===== FAQ ===== */
+        .faq {
+            margin: 1.5rem 0;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            background: var(--surface);
+            font-weight: 600;
+            font-size: 15px;
+            transition: background 0.2s;
+            list-style: none;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background: var(--surface-hover);
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.3rem;
+            color: var(--premcolo);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        details[open] .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 1rem 1.25rem;
+            color: var(--text-muted);
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+        }
+
+        .faq-answer code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* ===== CONCLUSION ===== */
+        .conclusion {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.07), rgba(0, 140, 160, 0.05));
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 16px;
+            padding: 1.75rem 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .conclusion h2 {
+            border: none;
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 1.5rem 0;
+        }
+
+        /* ===== COUNTDOWN ===== */
+        .countdown-box {
+            background: rgba(0, 217, 255, 0.05);
+            border: 1px solid rgba(0, 217, 255, 0.18);
+            border-radius: 14px;
+            padding: 1.5rem 1.75rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        .countdown-label {
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .countdown-timer {
+            font-family: var(--font-head);
+            font-size: 2.5rem;
+            color: var(--premcolo);
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .gist-link-wrapper {
+            display: none;
+            margin-top: 12px;
+        }
+
+        .gist-link-wrapper.visible {
+            display: block;
+        }
+
+        .gist-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(0, 217, 255, 0.06));
+            border: 1px solid rgba(0, 217, 255, 0.35);
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .gist-link:hover {
+            background: rgba(0, 217, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            position: sticky;
+            top: 72px;
+        }
+
+        .sidebar-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-header {
+            padding: 14px 16px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--premcolo);
+            border-bottom: 1px solid var(--border);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .related-list {
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .related-card {
+            display: block;
+            text-decoration: none;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 16/9;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .related-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+
+        .related-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .related-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+        .related-card-title {
+            position: absolute;
+            bottom: 8px;
+            left: 10px;
+            right: 10px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* ===== PREVIEW MODAL ===== */
+        .preview-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 5, 15, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+        }
+
+        .preview-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .preview-modal {
+            width: 95vw;
+            max-width: 95vw;
+            height: 95vh;
+            max-height: 95vh;
+            background: #0a0e1a;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(0, 217, 255, 0.06);
+            transform: scale(0.92) translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .preview-overlay.open .preview-modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .preview-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
+        }
+
+        .preview-modal-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .preview-modal-title i {
+            color: var(--premcolo);
+            font-size: 16px;
+        }
+
+        .preview-modal-title strong {
+            color: #fff;
+        }
+
+        .preview-dots {
+            display: flex;
+            gap: 7px;
+        }
+
+        .preview-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, filter 0.2s;
+        }
+
+        .preview-dot:hover {
+            transform: scale(1.2);
+            filter: brightness(1.3);
+        }
+
+        .preview-dot.red {
+            background: #ff5f57;
+        }
+
+        .preview-dot.yellow {
+            background: #febc2e;
+        }
+
+        .preview-dot.green {
+            background: #28c840;
+        }
+
+        .preview-close-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .preview-close-btn:hover {
+            border-color: var(--accent2);
+            color: var(--accent2);
+            background: rgba(255, 107, 53, 0.08);
+        }
+
+        .preview-iframe-wrap {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .preview-iframe-wrap iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            background: #000;
+        }
+
+        .preview-loading {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            background: #0a0e1a;
+            z-index: 2;
+            transition: opacity 0.4s;
+        }
+
+        .preview-loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .preview-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(0, 217, 255, 0.15);
+            border-top-color: var(--premcolo);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
+        .preview-loading-text {
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .preview-loading-files {
+            display: flex;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .preview-file-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            font-weight: 700;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+
+        .preview-file-tag.loaded {
+            opacity: 1;
+        }
+
+        .preview-file-tag.html-tag {
+            background: rgba(255, 102, 0, 0.15);
+            color: #ff6600;
+            border: 1px solid rgba(255, 102, 0, 0.3);
+        }
+
+        .preview-file-tag.css-tag {
+            background: rgba(0, 255, 255, 0.1);
+            color: #00ffff;
+            border: 1px solid rgba(0, 255, 255, 0.25);
+        }
+
+        .preview-file-tag.js-tag {
+            background: rgba(247, 223, 30, 0.1);
+            color: #f7df1e;
+            border: 1px solid rgba(247, 223, 30, 0.25);
+        }
+
+        .preview-hint {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 6px 16px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            color: var(--text-muted);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.5s 0.8s;
+            white-space: nowrap;
+            z-index: 3;
+        }
+
+        .preview-hint.show {
+            opacity: 1;
+        }
+
+        .preview-hint i {
+            color: var(--premcolo);
+            margin-right: 4px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 1fr;
+                padding: 1.5rem 1.25rem;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .related-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .related-card {
+                flex: 1 1 calc(50% - 8px);
+            }
+
+            .hero {
+                padding: 2rem 1.25rem 1.5rem;
+            }
+
+            .navbar {
+                padding: 0 1.25rem;
+            }
+
+            .breadcrumb {
+                padding: 10px 1.25rem;
+            }
+
+            .back-link {
+                margin: 0.75rem 1.25rem;
+            }
+
+            .code-section {
+                width: 85vw;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-stats {
+                gap: 1.2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .code-tab {
+                padding: 7px 13px;
+                font-size: 12px;
+            }
+
+            .related-card {
+                flex: 1 1 100%;
+            }
+
+            .comparison-table {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">{ / }</span> 77cod_ing
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="Privacy Policy.html">Privacy Policy</a>
+            <a href="Terms & Conditions.html">Terms & Conditions</a>
+        </nav>
+    </header>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
+            <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+            <li><span aria-current="page">Advanced JavaScript Image Slider</span></li>
+        </ol>
+    </nav>
+
+    <!-- ===== BACK BUTTON ===== -->
+    <a href="projects.html" class="back-link" aria-label="Return to Projects">
+        <i class='bx bx-arrow-back'></i> Return to Projects
+    </a>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-labelledby="main-heading">
+        <div class="hero-meta">
+            <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+            <span class="tag tag-js">JavaScript</span>
+            <span class="tag tag-gsap">GSAP</span>
+            <span class="tag tag-css">CSS</span>
+            <span class="tag tag-level">Intermediate</span>
+            <span class="read-time"><i class='bx bx-time'></i> ~25 min read</span>
+        </div>
+
+        <h1 id="main-heading">
+            Advanced <span>JavaScript Image Slider</span><br>
+            with GSAP Animation — HTML CSS JS
+        </h1>
+
+        <p class="hero-lead">
+            A complete tutorial to build a creative interactive image gallery using vanilla JavaScript and GSAP.
+            Features split-panel vertical transitions with staggered easing, a lerp-based custom cursor
+            with <code>mix-blend-mode</code> inversion, and full multi-input navigation — keyboard, swipe, and
+            mouse wheel. No frameworks. Full free source code.
+        </p>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-value">8</span>
+                <span class="stat-label">Build Steps</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">1</span>
+                <span class="stat-label">Lib (GSAP)</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">3</span>
+                <span class="stat-label">Input Types</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">Free</span>
+                <span class="stat-label">Source Code</span>
+            </div>
+        </div>
+
+        <img src="https://77cod-ing.github.io/Slider_with_GSAP_Animation.png"
+            alt="Advanced JavaScript image slider with GSAP animation — split-panel vertical transition effect built with HTML CSS and vanilla JavaScript"
+            class="hero-img" width="1200" height="420" loading="eager" fetchpriority="high">
+        <p class="img-caption">Final result: a fullscreen interactive image gallery with GSAP split-panel transitions,
+            lerp
+            cursor, and multi-input navigation — pure HTML, CSS & JavaScript</p>
+    </section>
+
+    <!-- ===== MAIN LAYOUT ===== -->
+    <div class="layout">
+
+        <main class="article-body" id="main-content">
+
+            <!-- TOC -->
+            <nav class="toc" aria-label="Table of contents">
+                <p class="toc-title">📋 Contents</p>
+                <ol>
+                    <li><a href="#overview">What You'll Build</a></li>
+                    <li><a href="#features">Key Features</a></li>
+                    <li><a href="#source-code">Full Source Code</a></li>
+                    <li><a href="#how-it-works">How It Works — Step by Step</a></li>
+                    <li><a href="#techniques-comparison">Animation Technique Comparison</a></li>
+                    <li><a href="#concepts">JavaScript & CSS Concepts Used</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ol>
+            </nav>
+
+            <!-- OVERVIEW -->
+            <section id="overview">
+                <h2>What You'll Build</h2>
+                <p>
+                    In this tutorial, you'll build an <strong>advanced JavaScript image slider</strong> entirely from
+                    scratch —
+                    one external library (GSAP via CDN), no build tools, no frameworks. The result is a
+                    <strong>fullscreen interactive image gallery</strong> with cinematic split-panel transitions, a
+                    physics-inspired custom cursor, and support for keyboard arrows, touch swipe, and mouse wheel
+                    inputs.
+                </p>
+                <p>
+                    The design splits the viewport into three equal columns. When navigating to the next or previous
+                    image,
+                    each column animates vertically — some going up, some going down — creating a staggered checkerboard
+                    wipe that reveals the new image. This is a real-world <strong>JavaScript UI animation
+                        project</strong>
+                    that demonstrates the power of vanilla JS combined with GSAP's professional easing curves.
+                </p>
+                <p>
+                    This project is ideal if you want to practice <strong>GSAP Power4 easing</strong>,
+                    <strong>linear interpolation</strong> for smooth cursor motion,
+                    <strong>dynamic DOM generation</strong>, and <strong>multi-input event handling</strong>
+                    in one visually striking project.
+                </p>
+
+                <div class="info-box">
+                    <strong>💡 Who Is This For?</strong> This is a modern JavaScript animation project for both
+                    beginners
+                    looking to level up and experienced developers wanting a polished portfolio piece. If you've built
+                    basic JavaScript projects and are ready to tackle real-world UI animation techniques, this is your
+                    next challenge.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- FEATURES -->
+            <section id="features">
+                <h2>Key Features of This Image Slider</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎬</div>
+                        <div class="feature-title">Split-Panel Transitions</div>
+                        <div class="feature-desc">Viewport splits into columns animating in opposite directions using
+                            <code>Power4.easeInOut</code> for a cinematic wipe effect.
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🖱️</div>
+                        <div class="feature-title">Lerp Custom Cursor</div>
+                        <div class="feature-desc">Two-layer cursor: a sharp dot tracking exact mouse position, and a
+                            lagging
+                            follower using <code>lerp()</code> inside <code>requestAnimationFrame</code>.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌀</div>
+                        <div class="feature-title">mix-blend-mode Inversion</div>
+                        <div class="feature-desc"><code>mix-blend-mode: difference</code> makes the cursor automatically
+                            invert
+                            against any image color — always visible, always stylish.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⌨️</div>
+                        <div class="feature-title">Keyboard Navigation</div>
+                        <div class="feature-desc">Arrow keys (Up/Down/Left/Right) are wired to the slider. Fully
+                            accessible
+                            navigation without touching the mouse.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👆</div>
+                        <div class="feature-title">Touch & Swipe Support</div>
+                        <div class="feature-desc">Full touch event handling with swipe-up/down gesture detection. Works
+                            seamlessly
+                            on mobile and tablet devices.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🖱️</div>
+                        <div class="feature-title">Mouse Wheel Scrolling</div>
+                        <div class="feature-desc">Wheel events are debounced to prevent double-fires and mapped to
+                            slider navigation
+                            for intuitive desktop scrolling.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <div class="feature-title">Animation Lock</div>
+                        <div class="feature-desc">A <code>playing</code> boolean flag prevents new transitions from
+                            firing until the
+                            current GSAP animation completes.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <div class="feature-title">Preloaded Images</div>
+                        <div class="feature-desc">All images preloaded on page load using <code>new Image()</code> so
+                            every
+                            transition is instant with zero loading delay.</div>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- SOURCE CODE -->
+            <section id="source-code">
+                <h2>Full Source Code (Free)</h2>
+                <p>
+                    The project lives in a single HTML file. The CSS handles the layout, cursor styling, and
+                    <code>overflow: hidden</code> clipping for the panel animation. The JavaScript manages
+                    image data, DOM generation, GSAP transitions, and all input event listeners.
+                    Use the tabs to explore each section.
+                </p>
+
+                <div class="code-section">
+                    <div class="code-toolbar">
+                        <div class="code-tabs" role="tablist" aria-label="Code files">
+                            <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                                aria-controls="panel-html">HTML</button>
+                            <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+                                aria-controls="panel-css">CSS</button>
+                            <button class="code-tab" data-lang="js" role="tab" aria-selected="false"
+                                aria-controls="panel-js">JS</button>
+                        </div>
+                        <button class="preview-btn" id="previewBtn" aria-label="Preview the final result">
+                            <i class='bx bx-play-circle'></i>
+                            <span>Preview Result</span>
+                        </button>
+                    </div>
+
+                    <div class="code-panels">
+                        <div class="code-box active" id="panel-html" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                                <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code1" class="language-html"></code></pre>
+                        </div>
+
+                        <div class="code-box" id="panel-css" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
+                                <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code2" class="language-css"></code></pre>
+                        </div>
+
+                        <div class="code-box" id="panel-js" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#f7df1e;">JS — script.js</span>
+                                <button class="copy-btn" data-target="code3"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code3" class="language-javascript"></code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Countdown Gist reveal -->
+                <div class="countdown-box">
+                    <p class="countdown-label">🔓 Full Source Code unlocks in</p>
+                    <div class="countdown-timer" id="countdownDisplay">05</div>
+                    <p style="font-size:13px;color:var(--text-muted);">Hosted on GitHub Gist — free, no sign-up required
+                    </p>
+                    <div class="gist-link-wrapper" id="gistLinkWrapper">
+                        <a class="gist-link" href="https://gist.githubusercontent.com/77cod-ing/5ff06e7ed15253cc5cc6bbaadead0ced/" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class='bx bxl-github'></i> View Full Source Code on GitHub Gist
+                        </a>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <strong>💡 Quick Start:</strong> Copy all code into a single <code>index.html</code> file.
+                    The GSAP library is loaded via CDN — no npm, no build tools needed.
+                    Open the file in any modern browser and the slider runs immediately.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- HOW IT WORKS -->
+            <section id="how-it-works">
+                <h2>How It Works — Step by Step</h2>
+                <p>
+                    Here's a breakdown of the eight core techniques behind this interactive image slider,
+                    from image data setup to multi-input event handling.
+                </p>
+
+                <div class="steps">
+
+                    <div class="step">
+                        <div class="step-num">01</div>
+                        <div class="step-content">
+                            <h3>Minimal HTML + Dynamic DOM Generation</h3>
+                            <p>
+                                The HTML contains only a <code>#main</code> container. JavaScript dynamically
+                                generates all <code>.part</code> column divs, <code>.section</code> wrappers,
+                                and <code>&lt;img&gt;</code> elements. This keeps the markup clean and
+                                centralizes all slider logic in JavaScript — a scalable pattern for real-world projects.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">02</div>
+                        <div class="step-content">
+                            <h3>Image Preloading</h3>
+                            <p>
+                                All images are preloaded immediately on script execution using
+                                <code>new Image().src = url</code>. This forces the browser to cache each
+                                image so that when a transition fires, the new image appears instantly
+                                without any loading flicker or delay.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">03</div>
+                        <div class="step-content">
+                            <h3>Split-Panel Column Layout</h3>
+                            <p>
+                                Three equal-width <code>.part</code> columns are created via a loop.
+                                Each column's image is positioned absolutely at
+                                <code>left: calc(-100vw / cols * colIndex)</code>,
+                                making all columns show the same image. The <code>overflow: hidden</code> on
+                                <code>.section</code> clips each column independently, enabling the split wipe effect.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">04</div>
+                        <div class="step-content">
+                            <h3>GSAP Transition Logic with Stagger Direction</h3>
+                            <p>
+                                The <code>go(dir)</code> function drives all navigation. A new <code>.section</code>
+                                element with the next image is either appended (for upward) or prepended (for downward)
+                                to each column. GSAP then animates the column's Y position. The direction alternates
+                                per column based on <code>(colIndex - Math.max(0, dir)) % 2</code>, creating the
+                                checkerboard stagger that defines the visual signature of this slider.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">05</div>
+                        <div class="step-content">
+                            <h3>Custom Lerp Cursor</h3>
+                            <p>
+                                Two cursor elements are created: <code>.cursor</code> (sharp dot) and
+                                <code>.cursor-f</code> (circular follower). The dot snaps to the exact mouse
+                                position on every <code>mousemove</code> event. The follower position is
+                                updated via <code>lerp(current, target, 0.16)</code> inside a
+                                <code>requestAnimationFrame</code> loop — moving 16% of the remaining
+                                distance per frame for the characteristic elastic lag.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">06</div>
+                        <div class="step-content">
+                            <h3>mix-blend-mode: difference</h3>
+                            <p>
+                                Both cursor elements use <code>mix-blend-mode: difference</code> in CSS.
+                                This blending mode subtracts the cursor's white color from the background,
+                                producing an automatic inversion — appearing dark on light image areas and
+                                bright on dark areas. No JavaScript color detection is needed; CSS handles
+                                it entirely in the compositor.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">07</div>
+                        <div class="step-content">
+                            <h3>Click & Touch Cursor Scale Animation</h3>
+                            <p>
+                                On <code>mousedown</code> or <code>touchstart</code>, GSAP animates the dot
+                                cursor to <code>scale: 4.5</code> and the follower to <code>scale: 0.4</code>,
+                                creating a satisfying press animation. Both reset on <code>mouseup</code> /
+                                <code>touchend</code>. On touch devices, both cursors are hidden entirely via
+                                <code>'ontouchstart' in window</code> detection.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">08</div>
+                        <div class="step-content">
+                            <h3>Multi-Input Navigation Wiring</h3>
+                            <p>
+                                Three input types trigger <code>go()</code>: keyboard
+                                <code>keydown</code> events check for arrow keys; touch events record
+                                <code>startY</code> on <code>touchstart</code> and fire
+                                <code>go()</code> if the swipe distance exceeds 40px on <code>touchend</code>;
+                                wheel events use <code>clearTimeout</code> debouncing to fire only once
+                                per scroll gesture, mapped by <code>deltaY</code> sign.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="warn-box">
+                    <strong>⚠️ Animation Lock:</strong> The <code>playing</code> flag is critical. Without it, rapid
+                    keyboard or scroll inputs would stack multiple GSAP animations, causing columns to desync and
+                    the slider to break. Always check <code>if (!playing)</code> before starting a transition and
+                    set <code>playing = false</code> only after the last animation's <code>.then()</code> resolves.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- TECHNIQUE COMPARISON -->
+            <section id="techniques-comparison">
+                <h2>Animation Technique Comparison</h2>
+                <p>
+                    This project touches several powerful CSS and JavaScript animation techniques. Here's how they
+                    compare — helping you choose the right tool for your next responsive JavaScript image transition
+                    or interactive website animation project.
+                </p>
+
+                <table class="comparison-table" aria-label="JavaScript animation techniques comparison">
+                    <thead>
+                        <tr>
+                            <th>Technique</th>
+                            <th>Used In This Project</th>
+                            <th>Performance</th>
+                            <th>Use Case</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>GSAP gsap.to()</strong></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Excellent</span></td>
+                            <td>Complex multi-element timeline animations, professional easing curves</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CSS Transitions</strong></td>
+                            <td><span class="badge badge-orange">No</span></td>
+                            <td><span class="badge badge-green">Excellent</span></td>
+                            <td>Simple hover states, single-property changes; limited easing options</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CSS @keyframes</strong></td>
+                            <td><span class="badge badge-orange">No</span></td>
+                            <td><span class="badge badge-green">Excellent</span></td>
+                            <td>Looping ambient animations; less flexible for dynamic start/end values</td>
+                        </tr>
+                        <tr>
+                            <td><strong>requestAnimationFrame</strong></td>
+                            <td><span class="badge badge-green">Yes</span> (cursor lerp)</td>
+                            <td><span class="badge badge-green">Excellent</span></td>
+                            <td>Frame-by-frame custom math animations like lerp, spring physics</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Web Animations API</strong></td>
+                            <td><span class="badge badge-orange">No</span></td>
+                            <td><span class="badge badge-blue">Good</span></td>
+                            <td>Native browser animation without libraries; less browser support</td>
+                        </tr>
+                        <tr>
+                            <td><strong>setInterval / setTimeout</strong></td>
+                            <td><span class="badge badge-orange">Avoid</span></td>
+                            <td><span class="badge badge-orange">Poor</span></td>
+                            <td>Not synced to display refresh; causes jank; use rAF instead</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box">
+                    <strong>💡 Key Takeaway:</strong> GSAP and <code>requestAnimationFrame</code> complement each other
+                    perfectly.
+                    GSAP excels at orchestrated multi-element transitions with rich easing. <code>rAF</code> shines for
+                    continuous per-frame math like the lerp cursor — where you need full control over the interpolation
+                    formula.
+                    See the <a href="Project40.html" style="color:var(--premcolo)">Neon Digital Clock tutorial</a> for
+                    another
+                    deep
+                    dive into <code>requestAnimationFrame</code> patterns.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- CONCEPTS -->
+            <section id="concepts">
+                <h2>JavaScript & CSS Concepts Used</h2>
+                <p>This project covers these intermediate-to-advanced web development techniques:</p>
+                <ul>
+                    <li><strong>GSAP Power4.easeInOut</strong> — Professional cinematic easing for multi-element
+                        transitions that
+                        feel weighty and satisfying.</li>
+                    <li><strong>Linear Interpolation (lerp)</strong> — Mathematical formula <code>(1-t)*a + t*b</code>
+                        used to
+                        create smooth elastic cursor following without spring physics libraries.</li>
+                    <li><strong>Dynamic DOM Generation</strong> — All slider columns, sections, and images created
+                        programmatically from a data array — zero hardcoded HTML.</li>
+                    <li><strong>CSS mix-blend-mode: difference</strong> — GPU-composited blending that inverts the
+                        cursor color
+                        based on the background, always ensuring visibility.</li>
+                    <li><strong>CSS overflow: hidden Clipping</strong> — Each column clips its content independently,
+                        enabling the
+                        split-panel wipe without any JavaScript clip calculations.</li>
+                    <li><strong>requestAnimationFrame Loop</strong> — Smooth cursor animation loop that runs at display
+                        refresh
+                        rate (typically 60fps), ensuring buttery motion.</li>
+                    <li><strong>Event Handling: keydown, wheel, touch</strong> — Three distinct input paradigms unified
+                        into a
+                        single <code>go(dir)</code> API for clean, DRY navigation code.</li>
+                    <li><strong>Animation Lock Pattern</strong> — Boolean flag <code>playing</code> prevents animation
+                        stacking —
+                        a critical production pattern for any JavaScript slider or carousel.</li>
+                    <li><strong>Image Preloading</strong> — Proactive browser cache priming using
+                        <code>new Image()</code> for
+                        zero-delay transitions.</li>
+                </ul>
+
+                <p>
+                    For more JavaScript animation patterns, check out the
+                    <a href="Project40.html" style="color:var(--premcolo)">CSS Neon Digital Clock</a> tutorial
+                    (deep <code>requestAnimationFrame</code> usage) and the
+                    <a href="Project13.html" style="color:var(--premcolo)">Neon Cursor Animation</a> project
+                    (advanced cursor effects). For GSAP-powered button animations, see the
+                    <a href="Project39.html" style="color:var(--premcolo)">Animated Button with Star Effects</a>.
+                </p>
+            </section>
+
+            <hr>
+
+            <!-- FAQ -->
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq">
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How do I build an animated image slider using JavaScript and GSAP?
+                        </summary>
+                        <div class="faq-answer">
+                            Create equal-width column panels using a JavaScript loop. Each panel holds the full-width
+                            image
+                            offset horizontally by its column index. On navigation, create a new <code>.section</code>
+                            with the
+                            target image, append or prepend it to the column, then use <code>gsap.to()</code> to animate
+                            the column's Y position by <code>±window.innerHeight</code>. Alternate direction per column
+                            for the stagger effect. Full source code is in the tabs above.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">What is GSAP and why use it for JavaScript animations?</summary>
+                        <div class="faq-answer">
+                            GSAP (GreenSock Animation Platform) is a high-performance JavaScript animation library. It
+                            handles
+                            complex easing curves like <code>Power4.easeInOut</code>, promise-based completion callbacks
+                            via <code>.then()</code>, and cross-browser consistency far more reliably than CSS
+                            transitions.
+                            For the split-panel slider effect, GSAP reduces code complexity dramatically — what would
+                            require dozens of lines of manual rAF math is a single <code>gsap.to()</code> call.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How does the custom cursor with mix-blend-mode work?</summary>
+                        <div class="faq-answer">
+                            Two cursor elements are created: a small sharp dot that snaps to the exact mouse position
+                            via
+                            <code>mousemove</code>, and a larger circular follower with a smooth lag via
+                            <code>lerp()</code>
+                            in a <code>requestAnimationFrame</code> loop. Both use
+                            <code>mix-blend-mode: difference</code>
+                            in CSS — this inverts their white color against whatever background is underneath, appearing
+                            dark on white areas and bright on dark images automatically.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">What is linear interpolation (lerp) and how is it used in cursor
+                            animation?
+                        </summary>
+                        <div class="faq-answer">
+                            Linear interpolation (lerp) computes a point between two values using:
+                            <code>lerp(a, b, t) = (1 - t) * a + t * b</code>. In this project, on every animation frame
+                            the cursor follower moves 16% (<code>t = 0.16</code>) of the remaining distance to the real
+                            mouse
+                            position. Because the gap shrinks each frame, the follower decelerates as it approaches —
+                            creating a natural elastic drag effect without any physics library.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How does the swipe and keyboard navigation work?</summary>
+                        <div class="faq-answer">
+                            All three inputs call the same <code>go(dir)</code> function.
+                            <strong>Keyboard:</strong> <code>ArrowDown</code>/<code>ArrowRight</code> →
+                            <code>go(1)</code>;
+                            <code>ArrowUp</code>/<code>ArrowLeft</code> → <code>go(-1)</code>.
+                            <strong>Touch:</strong> <code>touchstart</code> records <code>startY</code>;
+                            <code>touchend</code>
+                            fires <code>go()</code> if the swipe delta exceeds 40px.
+                            <strong>Wheel:</strong> events are debounced with <code>clearTimeout</code> and direction
+                            is determined by the sign of <code>e.deltaY</code>.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Is this image slider project suitable for beginners?</summary>
+                        <div class="faq-answer">
+                            It's labeled intermediate — it involves GSAP animation API, dynamic DOM generation, linear
+                            interpolation math, and multi-input event handling. It's an ideal third or fourth JavaScript
+                            project for someone comfortable with the DOM who wants to tackle a real-world frontend
+                            animation.
+                            The step-by-step breakdown above and the full source code make it approachable with some
+                            patience.
+                            Start with the simpler
+                            <a href="Project40.html" style="color:var(--premcolo)">Neon Digital Clock</a> project
+                            first if you're brand new to JavaScript animation.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Can I use this image slider in a real website or portfolio?
+                        </summary>
+                        <div class="faq-answer">
+                            Yes — absolutely. The slider handles keyboard navigation, touch swipe for mobile, and mouse
+                            wheel for desktop, making it fully production-ready. To customize it: replace the
+                            <code>images</code> array with your own URLs, change the <code>cols</code> variable for a
+                            different number of panels, and adjust the GSAP <code>duration</code> and
+                            <code>ease</code> to match your brand's feel. The cursor can be disabled for traditional
+                            pointer interfaces by removing the cursor elements.
+                        </div>
+                    </details>
+
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- CONCLUSION -->
+            <section id="conclusion" class="conclusion">
+                <h2>Conclusion</h2>
+                <p>
+                    This <strong>advanced JavaScript image slider</strong> demonstrates what's possible when
+                    vanilla JavaScript and GSAP work together. By combining <strong>dynamic DOM generation</strong>
+                    for the split columns, <strong>GSAP Power4 easing</strong> for the cinematic wipe transitions,
+                    <strong>linear interpolation</strong> for the elastic cursor, and
+                    <strong>multi-input navigation</strong> for keyboard, touch, and scroll — you get a
+                    production-quality <strong>interactive image gallery</strong> with zero framework overhead.
+                </p>
+                <p>
+                    The techniques here — animation lock patterns, lerp-based motion, <code>mix-blend-mode</code>
+                    compositing, and input event abstraction — are the same tools used in real-world creative
+                    agency websites and award-winning frontend projects. Master them here, then apply them everywhere.
+                </p>
+                <p>
+                    Want to go deeper into JavaScript animation? Explore the
+                    <a href="Project40.html" style="color:var(--premcolo);">Neon Digital Clock</a> for
+                    <code>requestAnimationFrame</code> patterns, the
+                    <a href="Project13.html" style="color:var(--premcolo);">Neon Cursor</a> for advanced
+                    cursor effects, or the <a href="Project39.html" style="color:var(--premcolo);">Animated Button</a>
+                    for GSAP micro-interactions.
+                </p>
+                <p style="color:var(--text-muted); font-size:14px; margin-bottom:0;">
+                    Found this useful? Explore more HTML CSS JavaScript projects in the sidebar.
+                </p>
+            </section>
+
+        </main>
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar" aria-label="Related projects">
+            <div class="sidebar-box">
+                <div class="sidebar-header">🔗 Related Projects</div>
+                <div class="related-list">
+                    <a class="related-card" href="Project40.html" aria-label="CSS Neon Digital Clock Animation">
+                        <img src="https://i.suar.me/Ep114/m"
+                            alt="CSS Neon Digital Clock Animation with 3D perspective and glowing segments"
+                            loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">CSS Neon Digital Clock Animation — HTML CSS JavaScript</div>
+                    </a>
+                    <a class="related-card" href="Project13.html" aria-label="Neon Cursor Animation">
+                        <img src="https://77cod-ing.github.io/image%20copy%2036.png"
+                            alt="Neon Cursor Animation CSS JavaScript" loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Neon Cursor Animation — CSS & JavaScript</div>
+                    </a>
+                    <a class="related-card" href="Project39.html" aria-label="Animated Button with Star Effects">
+                        <img src="https://i.suar.me/jvZZv/m"
+                            alt="Creative Animated Button with Star Effects Using HTML CSS" loading="lazy" width="280"
+                            height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Animated Button with Star Effects — HTML & CSS</div>
+                    </a>
+                    <a class="related-card" href="Project23.html" aria-label="Animated Login and Signup Page">
+                        <img src="https://77cod-ing.github.io/image%20copy%2075.png"
+                            alt="Animated Login and Signup Page HTML CSS JavaScript" loading="lazy" width="280"
+                            height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Animated Login & Signup Page — HTML CSS JS</div>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- ===== PREVIEW MODAL ===== -->
+    <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+        aria-label="Live preview of the JavaScript image slider">
+        <div class="preview-modal">
+            <div class="preview-modal-header">
+                <div class="preview-modal-title">
+                    <i class='bx bx-show'></i>
+                    <strong>Live Preview</strong> — Advanced JavaScript Image Slider
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <div class="preview-dots">
+                        <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+                        <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+                        <button class="preview-dot green" aria-label="Maximize" disabled></button>
+                    </div>
+                    <button class="preview-close-btn" id="previewCloseBtn">
+                        <i class='bx bx-x'></i> Close
+                    </button>
+                </div>
+            </div>
+            <div class="preview-iframe-wrap">
+                <div class="preview-loading" id="previewLoading">
+                    <div class="preview-spinner"></div>
+                    <span class="preview-loading-text">Loading preview...</span>
+                    <div class="preview-loading-files">
+                        <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+                        <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+                        <span class="preview-file-tag js-tag" id="tagJS">JS</span>
+                    </div>
+                </div>
+                <iframe id="previewIframe" title="Preview of JavaScript image slider with GSAP"
+                    sandbox="allow-scripts allow-same-origin"></iframe>
+                <div class="preview-hint" id="previewHint">
+                    <i class='bx bx-cursor'></i> Scroll or press arrow keys to navigate
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        /*
+          ============================================
+            Gist URLs — update with the actual Gist raw URL for this project
+          ============================================
+        */
+        const gistBase = "https://gist.githubusercontent.com/77cod-ing/5ff06e7ed15253cc5cc6bbaadead0ced/raw/47f9959d01d0e497602323ade795cdf9e7b67447/";
+
+        const htmlUrl = gistBase + "index.html";
+        const cssUrl = gistBase + "style.css";
+        const jsUrl = gistBase + "script.js";
+
+        let cachedHTML = "";
+        let cachedCSS = "";
+        let cachedJS = "";
+
+        async function loadCode(url, elementId, lang) {
+            try {
+                const res = await fetch(url);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const text = await res.text();
+                const el = document.getElementById(elementId);
+                el.textContent = text;
+                el.className = `language-${lang}`;
+                Prism.highlightElement(el);
+                if (lang === "html") cachedHTML = text;
+                if (lang === "css") cachedCSS = text;
+                if (lang === "js") cachedJS = text;
+            } catch (e) {
+                const el = document.getElementById(elementId);
+                if (el) el.textContent = `/* Failed to load: ${e.message} */`;
+            }
+        }
+
+        loadCode(htmlUrl, "code1", "html");
+        loadCode(cssUrl, "code2", "css");
+        loadCode(jsUrl, "code3", "js");
+
+        /* ===== Tabs ===== */
+        document.querySelectorAll(".code-tab").forEach(tab => {
+            tab.addEventListener("click", () => {
+                const lang = tab.dataset.lang;
+                document.querySelectorAll(".code-tab").forEach(t => {
+                    t.classList.remove("active");
+                    t.setAttribute("aria-selected", "false");
+                });
+                document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+                tab.classList.add("active");
+                tab.setAttribute("aria-selected", "true");
+                const panelMap = { html: "panel-html", css: "panel-css", js: "panel-js" };
+                document.getElementById(panelMap[lang]).classList.add("active");
+            });
+        });
+
+        /* ===== Copy buttons ===== */
+        document.querySelectorAll(".copy-btn").forEach(btn => {
+            btn.addEventListener("click", async () => {
+                const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+                if (!code) return;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+                    btn.classList.add("copied");
+                    setTimeout(() => {
+                        btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
+                        btn.classList.remove("copied");
+                    }, 2000);
+                } catch { btn.textContent = "Error"; }
+            });
+        });
+
+        /* ===== Countdown timer ===== */
+        let seconds = 5;
+        const countdownDisplay = document.getElementById("countdownDisplay");
+        const gistLinkWrapper = document.getElementById("gistLinkWrapper");
+
+        const countdownInterval = setInterval(() => {
+            seconds--;
+            countdownDisplay.textContent = String(seconds).padStart(2, "0");
+            if (seconds <= 0) {
+                clearInterval(countdownInterval);
+                gistLinkWrapper.classList.add("visible");
+                countdownDisplay.style.display = "none";
+                document.querySelector(".countdown-label").textContent = "✅ Source Code Available";
+            }
+        }, 1000);
+
+        /* ===== Preview modal ===== */
+        const previewOverlay = document.getElementById("previewOverlay");
+        const previewIframe = document.getElementById("previewIframe");
+        const previewLoading = document.getElementById("previewLoading");
+        const previewHint = document.getElementById("previewHint");
+        const previewBtn = document.getElementById("previewBtn");
+        const previewCloseBtn = document.getElementById("previewCloseBtn");
+        const previewDotClose = document.getElementById("previewDotClose");
+        const tagHTML = document.getElementById("tagHTML");
+        const tagCSS = document.getElementById("tagCSS");
+        const tagJS = document.getElementById("tagJS");
+
+        function openPreview() {
+            previewOverlay.classList.add("open");
+            document.body.style.overflow = "hidden";
+            previewLoading.classList.remove("hidden");
+            previewHint.classList.remove("show");
+            previewBtn.classList.add("loading");
+            tagHTML.classList.remove("loaded");
+            tagCSS.classList.remove("loaded");
+            tagJS.classList.remove("loaded");
+            buildPreview();
+        }
+
+        function closePreview() {
+            previewOverlay.classList.remove("open");
+            document.body.style.overflow = "";
+            previewIframe.srcdoc = "";
+            previewBtn.classList.remove("loading");
+        }
+
+        async function buildPreview() {
+            if (cachedHTML && cachedCSS && cachedJS) {
+                tagHTML.classList.add("loaded");
+                tagCSS.classList.add("loaded");
+                tagJS.classList.add("loaded");
+                injectPreview(cachedHTML, cachedCSS, cachedJS);
+                return;
+            }
+            try {
+                const fetches = [];
+                if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
+                if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
+                if (!cachedJS) fetches.push(fetch(jsUrl).then(r => r.text()).then(t => { cachedJS = t; tagJS.classList.add("loaded"); }));
+                if (cachedHTML) tagHTML.classList.add("loaded");
+                if (cachedCSS) tagCSS.classList.add("loaded");
+                if (cachedJS) tagJS.classList.add("loaded");
+                await Promise.all(fetches);
+                injectPreview(cachedHTML, cachedCSS, cachedJS);
+            } catch (e) {
+                previewLoading.innerHTML = `
+          <i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i>
+          <span class="preview-loading-text" style="color:var(--accent2);">Failed to load preview: ${e.message}</span>
+        `;
+                previewBtn.classList.remove("loading");
+            }
+        }
+
+        function injectPreview(html, css, js) {
+            let combined = html;
+            if (combined.includes('<link') && /style\.css/i.test(combined)) {
+                combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
+            } else if (combined.includes("</head>")) {
+                combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
+            } else {
+                combined = `<style>${css}</style>\n${combined}`;
+            }
+            if (combined.includes('<script') && /script\.js/i.test(combined)) {
+                combined = combined.replace(/<script[^>]*src=["'][^"']*script\.js["'][^>]*><\/script>/gi, `<script>${js}<\/script>`);
+            } else if (combined.includes("</body>")) {
+                combined = combined.replace("</body>", `<script>${js}<\/script>\n</body>`);
+            } else {
+                combined = `${combined}\n<script>${js}<\/script>`;
+            }
+            previewIframe.srcdoc = combined;
+            previewIframe.addEventListener("load", function onLoad() {
+                previewLoading.classList.add("hidden");
+                previewBtn.classList.remove("loading");
+                setTimeout(() => {
+                    previewHint.classList.add("show");
+                    setTimeout(() => previewHint.classList.remove("show"), 4000);
+                }, 300);
+                previewIframe.removeEventListener("load", onLoad);
+            });
+        }
+
+        previewBtn.addEventListener("click", openPreview);
+        previewCloseBtn.addEventListener("click", closePreview);
+        previewDotClose.addEventListener("click", closePreview);
+        previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+        document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
+    </script>
+
+</body>
+
+</html>
