@@ -1,309 +1,1329 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== PRIMARY SEO META ===== -->
+  <title>Theater Search Bar with Floating Placeholder | HTML CSS Tutorial 2025</title>
+  <meta name="description"
+    content="Build a stunning theater-style search bar with a floating placeholder effect using only HTML and CSS. Step-by-step tutorial with full free source code. No JavaScript required.">
+  <meta name="keywords"
+    content="theater search bar, floating placeholder css, html css search bar, css floating label input, modern search bar design, css only floating placeholder, placeholder animation css, responsive search bar, dark theme search bar, cinematic ui design, css input focus effect, web design tutorial, frontend project ideas, css transitions input">
+  <meta name="author" content="77cod_ing">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://77cod-ing.github.io/theater-search-bar.html">
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Theater Search Bar with Floating Placeholder — HTML CSS Tutorial 2025">
+  <meta property="og:description"
+    content="Build a theater-style search bar with a floating placeholder effect using only HTML and CSS. Full free source code, no JavaScript needed.">
+  <meta property="og:image" content="https://77cod-ing.github.io/animition.png">
+  <meta property="og:url" content="https://77cod-ing.github.io/theater-search-bar.html">
+  <meta property="og:site_name" content="77cod_ing">
+  <meta property="article:published_time" content="2025-01-15T00:00:00Z">
+  <meta property="article:modified_time" content="2025-01-15T00:00:00Z">
+  <meta property="article:author" content="77cod_ing">
+  <meta property="article:section" content="CSS Tutorials">
+  <meta property="article:tag" content="HTML, CSS, Search Bar, Floating Placeholder, Animation, Frontend">
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Theater Search Bar with Floating Placeholder — HTML CSS Tutorial">
+  <meta name="twitter:description"
+    content="Build a theater-style search bar with a floating placeholder effect. HTML & CSS only. Free source code included.">
+  <meta name="twitter:image" content="https://77cod-ing.github.io/animition.png">
+
+  <!-- ===== SCHEMA: TechArticle ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Theater Search Bar with Floating Placeholder — HTML CSS Project for Beginners",
+    "description": "A complete tutorial on building a theater-style search bar with a floating placeholder effect, dark cinematic theme, glow accents, and smooth CSS transitions using only HTML and CSS.",
+    "image": "https://77cod-ing.github.io/animition.png",
+    "datePublished": "2025-01-15",
+    "dateModified": "2025-01-15",
+    "author": {
+      "@type": "Person",
+      "name": "77cod_ing",
+      "url": "https://77cod-ing.github.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "77cod_ing",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Picture1.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://77cod-ing.github.io/theater-search-bar.html"
+    },
+    "articleSection": "CSS Tutorials",
+    "keywords": "theater search bar, floating placeholder css, html css search input, css transitions, dark theme ui",
+    "timeRequired": "PT15M",
+    "educationalLevel": "Beginner",
+    "teaches": ["CSS Transitions", "CSS :focus Pseudo-class", ":not(:placeholder-shown)", "CSS Positioning", "CSS Custom Properties", "Responsive Design"]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: HowTo ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Build a Theater Search Bar with Floating Placeholder",
+    "description": "Step-by-step guide to creating a dark theater-style search bar with a floating placeholder animation using only HTML and CSS.",
+    "image": "https://77cod-ing.github.io/animition.png",
+    "totalTime": "PT15M",
+    "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "0"},
+    "supply": [
+      {"@type": "HowToSupply", "name": "Text editor (VS Code)"},
+      {"@type": "HowToSupply", "name": "A modern web browser"}
+    ],
+    "tool": [
+      {"@type": "HowToTool", "name": "HTML"},
+      {"@type": "HowToTool", "name": "CSS"}
+    ],
+    "step": [
+      {"@type": "HowToStep", "name": "Create the HTML Input Structure", "text": "Build a wrapper div containing an input field and a label element. The label will serve as the floating placeholder text.", "position": 1},
+      {"@type": "HowToStep", "name": "Style the Container with Dark Theme", "text": "Apply a dark background, border, and border-radius to the wrapper to create the theater-inspired container.", "position": 2},
+      {"@type": "HowToStep", "name": "Position the Label as Floating Placeholder", "text": "Use absolute positioning to place the label inside the input area. Set initial styles for the resting state.", "position": 3},
+      {"@type": "HowToStep", "name": "Add CSS Transitions for Float Animation", "text": "Apply transition properties to the label so it smoothly moves and resizes when triggered.", "position": 4},
+      {"@type": "HowToStep", "name": "Handle :focus and :not(:placeholder-shown) States", "text": "Use CSS pseudo-classes to detect when the input is focused or has content, then transform the label above the field.", "position": 5},
+      {"@type": "HowToStep", "name": "Add Glow Effects and Theater Styling", "text": "Apply box-shadow and text-shadow with cyan/blue tones to create the neon theater glow on focus.", "position": 6},
+      {"@type": "HowToStep", "name": "Make It Responsive", "text": "Use max-width and relative units so the search bar adapts cleanly to all screen sizes.", "position": 7},
+      {"@type": "HowToStep", "name": "Add Accessibility Features", "text": "Ensure proper focus-visible outlines, label associations, and sufficient color contrast for accessibility.", "position": 8}
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: FAQ ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a floating placeholder in a search bar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A floating placeholder is a UI technique where the placeholder text moves above the input field when the user focuses on it or starts typing, keeping the label always visible without taking up extra space. It combines the roles of a placeholder and a label into one animated element."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I build a floating placeholder search bar without JavaScript?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The floating effect can be achieved using only HTML and CSS with the :focus and :not(:placeholder-shown) pseudo-classes. When the input is focused or contains text, CSS transforms move the label above the field. No JavaScript is required for the core animation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the theater style in web design?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The theater style refers to a dark, cinematic design approach — often using deep backgrounds, glowing accents, spotlight-like focus effects, and dramatic contrast to create an immersive user experience reminiscent of a movie theater or stage lighting."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I add a search icon inside the search bar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Place an SVG or icon font element inside the search container and position it absolutely on the left side, then add left padding to the input field so the text doesn't overlap the icon. You can also add a search button on the right side using the same technique."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is a floating placeholder search bar responsive?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. By using relative units like percentages, em, or rem for sizing and max-width for the container, the search bar adapts smoothly to all screen sizes including mobile devices. The floating animation works identically regardless of container width."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this project good for beginner developers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — this is a beginner-friendly project. It uses fundamental HTML structure and core CSS concepts: positioning, transitions, pseudo-classes, and basic responsive design. It's an ideal first or second project for someone learning front-end development."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: BreadcrumbList ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+      {"@type": "ListItem", "position": 3, "name": "Theater Search Bar", "item": "https://77cod-ing.github.io/theater-search-bar.html"}
+    ]
+  }
+  </script>
+
+  <!-- ===== ASSETS ===== -->
   <link rel="icon" type="image/png" href="../Picture1.png">
-  <title>Build the Theater Search Bar — HTML/CSS</title>
-    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+  <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
-     crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
+
   <style>
-    body {
-      background: linear-gradient(to right, #2c0e43 10%, #581c87);
-      font-family: Arial, sans-serif;
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
+    :root {
+      --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+      --premcolo: #00d9ff;
+      --accent2: #ff6b35;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --surface: rgba(255, 255, 255, 0.04);
+      --surface-hover: rgba(0, 217, 255, 0.07);
+      --border: rgba(255, 255, 255, 0.08);
+      --font-head: 'Space Mono', monospace;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--back);
+      font-family: var(--font-body);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    /* ===== NAVBAR ===== */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 50px;
-      padding: 0 2rem;
-      background-color: #0d1325;
+      height: 56px;
+      padding: 0 2.5rem;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      font-size: 22px;
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 2vw, 1.2rem);
       font-weight: bold;
       color: white;
       text-decoration: none;
+      gap: 8px;
     }
 
     .logo-icon {
-      color: #a855f7;
-      font-size: 26px;
-      margin-right: 8px;
-      letter-spacing: 2.5px;
+      color: var(--premcolo);
+      letter-spacing: 2px;
     }
 
     .nav-links {
       display: flex;
-      gap: 35px;
+      gap: clamp(1rem, 2vw, 2rem);
+      align-items: center;
     }
 
     .nav-links a {
-      color: #d1d5db;
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.25s;
     }
 
     .nav-links a:hover {
-      color: #a855f7;
-      transform: scale(1.2);
+      color: var(--premcolo);
     }
-    /*linke*/
-    .con1 {
-      font-family: Arial, sans-serif;
+
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      padding: 12px 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb ol {
       display: flex;
-      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      list-style: none;
       align-items: center;
-      flex-direction: column;
-      margin: auto 0;
-      height: 50vh;
-    }
-    .countdown {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00ffcc;
     }
 
-    .link-box {
-      display: none;
-      padding: 20px 40px;
-      background: #1e2a47;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-      transition: 0.3s;
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 13px;
     }
 
-    .link-box a {
+    .breadcrumb li+li::before {
+      content: "›";
+      color: var(--premcolo);
+      margin-right: 6px;
+      font-size: 1.1rem;
+    }
+
+    .breadcrumb a {
+      color: var(--text-muted);
       text-decoration: none;
-      color: #00ffcc;
-      font-size: 1.2rem;
-      font-weight: bold;
+      transition: color 0.2s;
     }
 
-    .link-box:hover {
-      background: #26385c;
-      transform: scale(1.05);
+    .breadcrumb a:hover {
+      color: var(--premcolo);
     }
-    /**ret**/
-    .Ret{
-      margin: 5px 0 0 3rem;
-      width: max-content;
+
+    .breadcrumb [aria-current="page"] {
+      color: var(--premcolo);
+      font-weight: 600;
     }
-    .Ret a {
-      font-size: 2rem;
-      text-decoration: none;
-      color: #ffffff;
-    }
-    .Ret a span{
+
+    /* ===== BACK BUTTON ===== */
+    .back-link {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
-      width: 38px;
-      height: 38px;
-      border: 2px solid #fff;
-      border-radius: 50%;
-    }
-    .Ret a:hover {
-  color: #00e1ff;
-}
-    .Ret a:hover span {
-  border-color: #00e1ff;
-}
-    /**img**/
-    .img{
-      display: flex;
-      justify-content: center;
-      margin: 2rem auto;
-    }
-    .img img{
-      border-radius: 8px;
-    }
-    /**par**/
-    .par{
-       font-family: Arial, sans-serif;
-      line-height: 1.7;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      color: #ffffff;
-    }
-    h1, h2, h3 {
-      color: #00c8ff;
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
-    h2 {
-      margin-top: 35px;
-      font-size: 1.6rem;
-    }
-    h3 {
-      margin-top: 25px;
-      font-size: 1.3rem;
-    }
-    p {
-      margin-bottom: 18px;
-    }
-    ul {
-      margin: 15px 0;
-      padding-left: 25px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .highlight {
-      background: #000000;
-      padding: 8px 12px;
-      border-left: 4px solid #0073e6;
-      margin: 20px 0;
-    }
-    /**respon**/
-    @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  }
-        /**respon1**/
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hamburger .scrolled {
-      background: rgba(255, 255, 255, 0.7);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-}
-
-    .hamburger span {
-      width: 28px;
-      height: 3px;
-      background: white;
-      transition: all 0.3s ease;
-    }
-
-    /* ====== القائمة المنبثقة ====== */
-    .mobile-menu {
-      position: fixed;
-      top:0;
-      left: -100%;
-      width: 100%;
-      height: 100vh;
-      padding-top: 0.5rem ;
-      background: rgb(53, 53, 53);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 35px;
-      transition: left 0.5s ease;
-      z-index: 999;
-    }
-
-    .mobile-menu.active {
-      left: 0;
-    }
-
-    .mobile-menu a {
-      color: white;
-      font-size: 22px;
-      width: 100%;
-      height: 3rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      color: var(--text);
       text-decoration: none;
-      border-bottom: 0.5px solid #fff;
-      transition: color 0.3s;
+      font-size: 14px;
+      transition: all 0.2s;
+      margin: 1rem 2.5rem;
     }
 
-    .mobile-menu a:hover {
-      color: #ffffff;
-      background: rgba(104, 104, 104, 0.508);
-      backdrop-filter: bulur(20px);
+    .back-link:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
     }
 
-    /* ====== زر الإغلاق (X) ====== */
-    .close-btn {
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 3rem 2.5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero::before {
+      content: '';
       position: absolute;
-      top: 20px;
-      right: 25px;
-      font-size: 30px;
-      color: white;
-      cursor: pointer;
-      width: 35px;
-      height: 35px;
+      top: -80px;
+      right: -80px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-meta {
       display: flex;
-      justify-content: center;
       align-items: center;
-      border: 2px solid #fff;
-      background: rgb(88, 88, 88);
+      gap: 12px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-head);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .tag-tutorial {
+      background: rgba(0, 217, 255, 0.12);
+      color: var(--premcolo);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+    }
+
+    .tag-html {
+      background: rgba(255, 102, 0, 0.1);
+      color: #ff6600;
+      border: 1px solid rgba(255, 102, 0, 0.2);
+    }
+
+    .tag-css {
+      background: rgba(0, 217, 255, 0.08);
+      color: #7dd3fc;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+    }
+
+    .tag-level {
+      background: rgba(74, 222, 128, 0.1);
+      color: #4ade80;
+      border: 1px solid rgba(74, 222, 128, 0.2);
+    }
+
+    .read-time {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      color: var(--premcolo);
+    }
+
+    .hero-lead {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      color: var(--premcolo);
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      display: block;
+      box-shadow: 0 0 60px rgba(0, 217, 255, 0.08), 0 32px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem;
+      align-items: start;
+    }
+
+    /* ===== ARTICLE ===== */
+    .article-body h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: var(--premcolo);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 80px;
+    }
+
+    .article-body h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: #7dd3fc;
+      margin: 1.8rem 0 0.75rem;
+      scroll-margin-top: 80px;
+    }
+
+    .article-body p {
+      margin-bottom: 1.1rem;
+      color: var(--text);
+    }
+
+    .article-body code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .article-body ul,
+    .article-body ol {
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .article-body li {
+      margin-bottom: 9px;
+    }
+
+    .article-body li strong {
+      color: #fff;
+    }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .toc-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--premcolo);
+      margin-bottom: 0.75rem;
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--premcolo);
+    }
+
+    /* ===== FEATURE CARDS ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(0, 217, 255, 0.3);
+      background: var(--surface-hover);
+    }
+
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .feature-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .feature-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ===== STEPS ===== */
+    .steps {
+      margin: 1.5rem 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      width: 44px;
+      height: 44px;
+      background: rgba(0, 217, 255, 0.1);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      color: var(--premcolo);
+      font-size: 1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+
+    .step-content p {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* ===== CODE SECTION ===== */
+    .code-section {
+      margin: 2rem 0;
+      width: 60vw;
+    }
+
+    .code-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .code-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .code-tab {
+      padding: 8px 20px;
+      border-radius: 8px 8px 0 0;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .code-tab.active {
+      background: #1e1e2f;
+      color: #fff;
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .code-tab[data-lang="html"].active {
+      color: #ff6600;
+    }
+
+    .code-tab[data-lang="css"].active {
+      color: #00ffff;
+    }
+
+    /* ===== PREVIEW BUTTON ===== */
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.3px;
+    }
+
+    .preview-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .preview-btn:hover {
+      border-color: var(--premcolo);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .preview-btn:hover::before {
+      opacity: 1;
+    }
+
+    .preview-btn:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .preview-btn i {
+      font-size: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn.loading i {
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .code-panels {
+      position: relative;
+    }
+
+    .code-box {
+      background: #1e1e2f;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 0 12px 12px 12px;
+      position: relative;
+      display: none;
+    }
+
+    .code-box.active {
+      display: block;
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-lang-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    .copy-btn.copied {
+      color: #4ade80;
+      border-color: #4ade80;
+    }
+
+    :not(pre)>code[class*="language-"],
+    pre[class*="language-"] {
+      width: 100%;
+      max-width: 100%;
+      height: 50vh;
+      border-radius: 0 0 12px 12px;
+      overflow-y: auto;
+      overflow-x: auto;
+      margin: 0;
+    }
+
+    pre::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    pre::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    pre::-webkit-scrollbar-thumb {
+      background: var(--premcolo);
+      border-radius: 10px;
+    }
+
+    /* ===== INFO / WARN ===== */
+    .info-box {
+      background: rgba(0, 217, 255, 0.06);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-left: 4px solid var(--premcolo);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .info-box strong {
+      color: var(--premcolo);
+    }
+
+    .warn-box {
+      background: rgba(255, 107, 53, 0.06);
+      border: 1px solid rgba(255, 107, 53, 0.2);
+      border-left: 4px solid var(--accent2);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .warn-box strong {
+      color: var(--accent2);
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      margin: 1.5rem 0;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      background: var(--surface);
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s;
+      list-style: none;
+      user-select: none;
+    }
+
+    .faq-question:hover {
+      background: var(--surface-hover);
+    }
+
+    .faq-question::after {
+      content: "+";
+      font-size: 1.3rem;
+      color: var(--premcolo);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    details[open] .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 1rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-answer code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* ===== CONCLUSION ===== */
+    .conclusion {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.07), rgba(0, 140, 160, 0.05));
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .conclusion h2 {
+      border: none;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      position: sticky;
+      top: 72px;
+    }
+
+    .sidebar-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-header {
+      padding: 14px 16px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--premcolo);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .related-list {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .related-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/9;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .related-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .related-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    .related-card-title {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* ===== PREVIEW MODAL ===== */
+    .preview-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 5, 15, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+    }
+
+    .preview-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .preview-modal {
+      width: 92vw;
+      max-width: 860px;
+      height: 75vh;
+      max-height: 580px;
+      background: #0a0e1a;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow:
+        0 0 0 1px rgba(0, 217, 255, 0.06),
+        0 24px 80px rgba(0, 0, 0, 0.7),
+        0 0 120px rgba(0, 217, 255, 0.06);
+      transform: scale(0.92) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .preview-overlay.open .preview-modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .preview-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+    }
+
+    .preview-modal-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-modal-title i {
+      color: var(--premcolo);
+      font-size: 16px;
+    }
+
+    .preview-modal-title strong {
+      color: #fff;
+    }
+
+    .preview-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .preview-dot {
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
-      transition: transform 0.3s ease;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, filter 0.2s;
     }
 
-    .close-btn:hover {
-      transform: rotate(90deg);
-      color: #00e1ff;
+    .preview-dot:hover {
+      transform: scale(1.2);
+      filter: brightness(1.3);
     }
 
-    /* ====== استجابة الهاتف ====== */
-    @media (max-width: 910px) {
+    .preview-dot.red {
+      background: #ff5f57;
+    }
+
+    .preview-dot.yellow {
+      background: #febc2e;
+    }
+
+    .preview-dot.green {
+      background: #28c840;
+    }
+
+    .preview-close-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .preview-close-btn:hover {
+      border-color: var(--accent2);
+      color: var(--accent2);
+      background: rgba(255, 107, 53, 0.08);
+    }
+
+    .preview-iframe-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .preview-iframe-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      background: #000;
+    }
+
+    .preview-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: #0a0e1a;
+      z-index: 2;
+      transition: opacity 0.4s;
+    }
+
+    .preview-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .preview-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(0, 217, 255, 0.15);
+      border-top-color: var(--premcolo);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    .preview-loading-text {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .preview-loading-files {
+      display: flex;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .preview-file-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      font-weight: 700;
+      opacity: 0.5;
+      transition: opacity 0.3s;
+    }
+
+    .preview-file-tag.loaded {
+      opacity: 1;
+    }
+
+    .preview-file-tag.html-tag {
+      background: rgba(255, 102, 0, 0.15);
+      color: #ff6600;
+      border: 1px solid rgba(255, 102, 0, 0.3);
+    }
+
+    .preview-file-tag.css-tag {
+      background: rgba(0, 255, 255, 0.1);
+      color: #00ffff;
+      border: 1px solid rgba(0, 255, 255, 0.25);
+    }
+
+    .preview-hint {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 16px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      color: var(--text-muted);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s 0.8s;
+      white-space: nowrap;
+      z-index: 3;
+    }
+
+    .preview-hint.show {
+      opacity: 1;
+    }
+
+    .preview-hint i {
+      color: var(--premcolo);
+      margin-right: 4px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1.25rem;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .related-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .related-card {
+        flex: 1 1 calc(50% - 8px);
+      }
+
+      .hero {
+        padding: 2rem 1.25rem 1.5rem;
+      }
+
+      .navbar {
+        padding: 0 1.25rem;
+      }
+
+      .breadcrumb {
+        padding: 10px 1.25rem;
+      }
+
+      .back-link {
+        margin: 0.75rem 1.25rem;
+      }
+
+      .code-section {
+        width: 85vw;
+      }
+    }
+
+    @media (max-width: 640px) {
       .nav-links {
         display: none;
       }
 
-      .hamburger {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hamburger.scrolled {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      background: rgb(65, 65, 65);
-}
+      .hero-stats {
+        gap: 1.2rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .code-tab {
+        padding: 7px 13px;
+        font-size: 12px;
+      }
+
+      .related-card {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
+
 <body>
-<header class="navbar">
-    <a href="#" class="logo">
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <a href="../index.html" class="logo">
       <span class="logo-icon">{ / }</span> 77cod_ing
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Primary navigation">
       <a href="../index.html">Home</a>
       <a href="../about.html">About</a>
       <a href="../projects.html">Projects</a>
@@ -312,191 +1332,770 @@
       <a href="../Terms & Conditions.html">Terms & Conditions</a>
     </nav>
   </header>
-  <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="../index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
+      <li><a href="../projects.html"><i class='bx bx-data'></i> Projects</a></li>
+      <li><span aria-current="page">Theater Search Bar</span></li>
+    </ol>
+  </nav>
+
+  <!-- ===== BACK BUTTON ===== -->
+  <a href="../projects.html" class="back-link" aria-label="Return to Projects">
+    <i class='bx bx-arrow-back'></i> Return to Projects
+  </a>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="main-heading">
+    <div class="hero-meta">
+      <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+      <span class="tag tag-html">HTML</span>
+      <span class="tag tag-css">CSS Transitions</span>
+      <span class="tag tag-level">Beginner</span>
+      <span class="read-time"><i class='bx bx-time'></i> ~10 min read</span>
     </div>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <span class="close-btn" id="closeBtn">&times;</span>
-    <a href="index.html"style="border-top: 2px solid #fff;height: 5rem;">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html" style="border-bottom: 2px solid #fff;">Terms & Conditions</a>
-  </div>
-  <div class="Ret">
-    <a href="../projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
-  </div>
-  <div class="img">
-    <img src="../animition.png" alt="subscribe.box">
-  </div>
-<div class="par">
-  <span>
-    <h1>Build the Theater Search Bar — HTML/CSS (Floating Placeholder)</h1>
-    <p>
-      A search bar is one of the most essential elements of any website. In this guide, you’ll learn 
-      how to build a <strong>theater-style search bar</strong> with HTML and CSS, featuring a modern 
-      <em>floating placeholder effect</em>. This design is clean, responsive, and perfect for improving 
-      user experience.
+    <h1 id="main-heading">
+      Theater <span>Search Bar</span> with<br>Floating Placeholder — HTML CSS
+    </h1>
+
+    <p class="hero-lead">
+      A complete tutorial to build a theater-style search bar with a floating placeholder effect,
+      dark cinematic theme, glowing focus accents, and smooth CSS transitions —
+      using only HTML and CSS. No JavaScript required. Full free source code.
     </p>
 
-    <div class="highlight">
-      <p><strong>Quick Summary:</strong> Create a simple search bar with HTML, style it with CSS, and 
-      add a floating placeholder effect for a professional and modern UI component.</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value">8</span>
+        <span class="stat-label">Build Steps</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">0</span>
+        <span class="stat-label">Libraries</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">CSS</span>
+        <span class="stat-label">Only Animation</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">Free</span>
+        <span class="stat-label">Source Code</span>
+      </div>
     </div>
 
-    <h2>What Is a Floating Placeholder?</h2>
-    <p>
-      A floating placeholder is a design technique where the placeholder text moves above the input 
-      field when the user types or focuses on it. This approach improves usability and ensures the 
-      input label is always visible.
-    </p>
+    <img src="animition.png"
+      alt="Theater style search bar with floating placeholder effect built with HTML and CSS showing dark cinematic theme with glow"
+      class="hero-img" width="1200" height="420" loading="eager" fetchpriority="high">
+    <p class="img-caption">Final result: a theater-style search bar with floating placeholder animation, dark theme, and
+      glowing focus effect — pure HTML & CSS</p>
+  </section>
 
-    <h2>Why Use a Floating Placeholder Search Bar?</h2>
-    <ul>
-      <li><strong>Improved Usability:</strong> Users always know what the field represents.</li>
-      <li><strong>Modern UI:</strong> Floating placeholders give a sleek, app-like experience.</li>
-      <li><strong>Space-Saving:</strong> It replaces the need for a separate label above the input.</li>
-      <li><strong>Engagement:</strong> An attractive search bar encourages interaction.</li>
-    </ul>
+  <!-- ===== MAIN LAYOUT ===== -->
+  <div class="layout">
 
-    <h2>Steps to Build the Theater Search Bar</h2>
+    <main class="article-body" id="main-content">
 
-    <h3>1. Structure the Search Bar</h3>
-    <p>
-      Begin by setting up a simple HTML structure for the search box and its label. 
-      The label will act as the floating placeholder.
-    </p>
-    <div class="img"><img src="image copy 8.png" alt="Basic HTML structure for floating placeholder search bar"></div>
+      <!-- TOC -->
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-title">📋 Contents</p>
+        <ol>
+          <li><a href="#overview">What You'll Build</a></li>
+          <li><a href="#features">Key Features</a></li>
+          <li><a href="#source-code">Full Source Code</a></li>
+          <li><a href="#how-it-works">How It Works — Step by Step</a></li>
+          <li><a href="#concepts">Concepts Used</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </nav>
 
-    <h3>2. Add CSS Styling</h3>
-    <p>
-      Next, apply CSS to style the input box. Use transitions to animate the placeholder when the 
-      input is active or filled.
-    </p>
-    <div class="img"><img src="image copy 9.png" alt="CSS styling for floating placeholder effect"></div>
+      <!-- OVERVIEW -->
+      <section id="overview">
+        <h2>What You'll Build</h2>
+        <p>
+          In this tutorial, you'll build a <strong>theater-style search bar</strong> entirely from scratch —
+          no JavaScript, no libraries, just HTML and CSS. The search bar features a
+          <strong>floating placeholder effect</strong> where the label smoothly animates above the input
+          when the user focuses or types, all wrapped in a dark cinematic theme with glowing accents.
+        </p>
+        <p>
+          This project is perfect for <a href="../about.html"
+            style="color:var(--premcolo);text-decoration:none;">beginners</a>
+          who want to practice <strong>CSS positioning</strong>,
+          <strong>pseudo-classes</strong>, <strong>transitions</strong>, and
+          <strong>responsive design</strong> in one visually impressive, production-ready component.
+        </p>
+      </section>
 
-    <h3>3. Preview the Final Design</h3>
-    <p>
-      Once styled, the placeholder will smoothly float above the input field, creating a 
-      professional theater-style search bar.
-    </p>
-    <div class="img"><img src="image copy 10.png" alt="Final preview of theater search bar with floating placeholder"></div>
+      <hr>
 
-    <h2>Best Practices for Search Bar Design</h2>
-    <ul>
-      <li><strong>Keep It Clear:</strong> Use short and meaningful placeholder text.</li>
-      <li><strong>Ensure Accessibility:</strong> Maintain contrast for readability.</li>
-      <li><strong>Responsive Layout:</strong> Test on both desktop and mobile devices.</li>
-      <li><strong>Consistent Styling:</strong> Match the design with your website’s theme.</li>
-    </ul>
+      <!-- FEATURES -->
+      <section id="features">
+        <h2>Key Features of This Search Bar</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">✨</div>
+            <div class="feature-title">Floating Placeholder</div>
+            <div class="feature-desc">Label smoothly animates above the input on focus using pure CSS
+              <code>:focus</code> and <code>:not()</code> pseudo-classes.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎭</div>
+            <div class="feature-title">Theater Dark Theme</div>
+            <div class="feature-desc">Deep dark backgrounds with cyan glow accents create a cinematic, stage-like
+              atmosphere.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💡</div>
+            <div class="feature-title">Neon Glow on Focus</div>
+            <div class="feature-desc"><code>box-shadow</code> and <code>text-shadow</code> activate on focus to simulate
+              neon tube lighting.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <div class="feature-title">Fully Responsive</div>
+            <div class="feature-desc">Uses <code>max-width</code> and relative units so the bar scales cleanly on any
+              screen size.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <div class="feature-title">Zero Dependencies</div>
+            <div class="feature-desc">Pure HTML and CSS — no JavaScript, no external libraries, no CDN scripts needed.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">♿</div>
+            <div class="feature-title">Accessible</div>
+            <div class="feature-desc">Proper <code>&lt;label&gt;</code> association, focus-visible outlines, and
+              sufficient color contrast.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <div class="feature-title">Easy to Customize</div>
+            <div class="feature-desc">CSS custom properties for colors make it trivial to retheme — change one variable,
+              update everything.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <div class="feature-title">Smooth Transitions</div>
+            <div class="feature-desc">CSS <code>transition</code> on font-size, top position, and color creates a fluid
+              floating animation.</div>
+          </div>
+        </div>
+      </section>
 
-    <h2>Common Mistakes to Avoid</h2>
-    <ul>
-      <li>Using long placeholder text that gets cut off.</li>
-      <li>Not testing how the animation behaves on mobile screens.</li>
-      <li>Overusing effects that slow down the user experience.</li>
-      <li>Forgetting to provide focus states for accessibility.</li>
-    </ul>
+      <hr>
 
-    <h2>Conclusion</h2>
-    <p>
-      Building a <strong>theater search bar with a floating placeholder</strong> using HTML and CSS is 
-      simple yet effective. It improves the overall look of your site, enhances user interaction, 
-      and creates a polished design that feels modern and user-friendly. 
-      Add it to your next project and make your website more engaging.
-    </p>
+      <!-- SOURCE CODE -->
+      <section id="source-code">
+        <h2>Full Source Code (Free)</h2>
+        <p>
+          The project uses two files: <strong>HTML</strong> for the search bar structure
+          and <strong>CSS</strong> for the theater theme, floating animation, and glow effects.
+          Use the tabs to switch between them.
+        </p>
 
-    <div class="highlight">
-      <p><strong>SEO Keywords:</strong> HTML CSS search bar, floating placeholder, theater search bar, 
-      modern UI design, CSS input field, responsive search bar</p>
+        <div class="code-section">
+          <!-- ===== TOOLBAR: Tabs + Preview Button ===== -->
+          <div class="code-toolbar">
+            <div class="code-tabs" role="tablist" aria-label="Code files">
+              <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                aria-controls="panel-html">HTML</button>
+              <button class="code-tab" data-lang="css" role="tab" aria-selected="false" aria-controls="panel-css">CSS</button>
+              <button class="code-tab" data-lang="js" role="tab" aria-selected="false" aria-controls="panel-js">JS</button>
+            </div>
+            <button class="preview-btn" id="previewBtn" aria-label="Preview the final result">
+              <i class='bx bx-play-circle'></i>
+              <span>Preview Result</span>
+            </button>
+          </div>
+        
+          <div class="code-panels">
+            <div class="code-box active" id="panel-html" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code1" class="language-html"></code></pre>
+            </div>
+        
+            <div class="code-box" id="panel-css" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
+                <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code2" class="language-css"></code></pre>
+            </div>
+        
+            <div class="code-box" id="panel-js" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#f7df1e;">JS — script.js</span>
+                <button class="copy-btn" data-target="code3"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code3" class="language-javascript"></code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <strong>💡 Quick Start:</strong> Copy both files into the same folder and open <code>index.html</code> in
+          your browser. The floating placeholder animation works immediately — no server or build step required.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- HOW IT WORKS -->
+      <section id="how-it-works">
+        <h2>How It Works — Step by Step</h2>
+        <p>
+          Here's a breakdown of the eight core techniques behind this theater search bar,
+          from HTML structure to the final glow effect.
+        </p>
+
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>Create the HTML Input Structure</h3>
+              <p>
+                Build a wrapper <code>&lt;div&gt;</code> containing an <code>&lt;input&gt;</code>
+                field and a <code>&lt;label&gt;</code> element. The label serves double duty —
+                it's both the accessible label and the visual floating placeholder. A space character
+                in the <code>placeholder</code> attribute enables the
+                <code>:not(:placeholder-shown)</code> trick.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>Style the Container with Dark Theme</h3>
+              <p>
+                Apply a deep dark background, subtle border, and <code>border-radius</code>
+                to the wrapper. This creates the theater-inspired container that frames the
+                input field. A slight <code>padding</code> gives the floating label room to
+                animate above.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>Position the Label as Floating Placeholder</h3>
+              <p>
+                Use <code>position: absolute</code> to place the label inside the input area
+                at a vertical center point. Set initial styles — larger font-size, muted color,
+                and a <code>pointer-events: none</code> so clicks pass through to the input beneath.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h3>Add CSS Transitions for Float Animation</h3>
+              <p>
+                Apply <code>transition</code> properties to the label covering
+                <code>top</code>, <code>font-size</code>, <code>color</code>, and
+                <code>background</code>. A duration of <code>0.2s–0.3s</code> with
+                <code>ease</code> timing creates a smooth, natural float.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">05</div>
+            <div class="step-content">
+              <h3>Handle :focus and :not(:placeholder-shown)</h3>
+              <p>
+                Two CSS selectors trigger the float:
+                <code>input:focus + label</code> activates when the input gains focus, and
+                <code>input:not(:placeholder-shown) + label</code> activates when the input
+                has content. Both transform the label to a smaller size, positioned above the field.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">06</div>
+            <div class="step-content">
+              <h3>Add Glow Effects and Theater Styling</h3>
+              <p>
+                On <code>:focus</code>, apply <code>box-shadow</code> to the container with
+                cyan/blue tones at multiple blur levels. Add <code>text-shadow</code> to the
+                floating label. This creates the neon theater glow that makes the component
+                feel cinematic.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">07</div>
+            <div class="step-content">
+              <h3>Make It Responsive</h3>
+              <p>
+                Wrap the search bar in a container with <code>max-width: 600px</code> and
+                <code>width: 90%</code>. Use <code>rem</code> or <code>em</code> for font sizes
+                so the entire component scales proportionally on mobile, tablet, and desktop.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">08</div>
+            <div class="step-content">
+              <h3>Add Accessibility Features</h3>
+              <p>
+                Ensure the <code>&lt;label for="...">&lt;/label></code> matches the input's
+                <code>id</code>. Add <code>:focus-visible</code> outlines for keyboard navigation.
+                Verify that the label text contrast meets WCAG guidelines in both resting and
+                floating states.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="warn-box">
+          <strong>⚠️ Browser Note:</strong> The <code>:not(:placeholder-shown)</code> pseudo-class
+          is supported in all modern browsers (Chrome 47+, Firefox 51+, Safari 9+, Edge 14+).
+          If you need to support very old browsers, a tiny JavaScript fallback can toggle a class
+          on the input event — but for 2025, CSS-only is fully sufficient.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- CONCEPTS -->
+      <section id="concepts">
+        <h2>HTML & CSS Concepts Used</h2>
+        <p>This project covers these fundamental-to-intermediate web development techniques:</p>
+        <ul>
+          <li><strong>CSS Absolute Positioning</strong> — Placing the label inside the input area and controlling its
+            vertical position with <code>top</code>.</li>
+          <li><strong>CSS Transitions</strong> — Smoothly animating <code>top</code>, <code>font-size</code>, and
+            <code>color</code> properties when states change.</li>
+          <li><strong>:focus Pseudo-class</strong> — Detecting when the input is active and triggering the float effect.
+          </li>
+          <li><strong>:not(:placeholder-shown)</strong> — Detecting when the input has typed content to keep the label
+            floated.</li>
+          <li><strong>Adjacent Sibling Selector (+)</strong> — Targeting the label that immediately follows the input in
+            the DOM.</li>
+          <li><strong>CSS box-shadow & text-shadow</strong> — Layered shadow values to create the neon theater glow
+            effect.</li>
+          <li><strong>CSS Custom Properties</strong> — Using <code>var(--color)</code> for easy theming and color
+            changes.</li>
+          <li><strong>Responsive Design</strong> — <code>max-width</code>, percentage widths, and relative units for
+            cross-device compatibility.</li>
+        </ul>
+      </section>
+
+      <hr>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+
+          <details class="faq-item">
+            <summary class="faq-question">What is a floating placeholder in a search bar?</summary>
+            <div class="faq-answer">
+              A floating placeholder is a UI technique where the placeholder text moves above the input field
+              when the user focuses on it or starts typing, keeping the label always visible without taking
+              up extra space. It combines the roles of a placeholder and a label into one animated element,
+              making it both space-efficient and user-friendly.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Can I build a floating placeholder search bar without JavaScript?</summary>
+            <div class="faq-answer">
+              Yes. The floating effect is achieved using only HTML and CSS with the
+              <code>:focus</code> and <code>:not(:placeholder-shown)</code> pseudo-classes.
+              When the input is focused or contains text, CSS transforms move the label above the field.
+              No JavaScript is required for the core animation. Check out our other
+              <a href="../projects.html" style="color:var(--premcolo);text-decoration:underline;">CSS-only projects</a>
+              for more examples.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">What is the theater style in web design?</summary>
+            <div class="faq-answer">
+              The theater style refers to a dark, cinematic design approach — often using deep backgrounds,
+              glowing accents, spotlight-like focus effects, and dramatic contrast to create an immersive user
+              experience reminiscent of a movie theater or stage lighting. The key elements are dark surfaces,
+              colored glow on interaction, and a sense of depth.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How do I add a search icon inside the search bar?</summary>
+            <div class="faq-answer">
+              Place an SVG or icon font element (like <a href="https://boxicons.dev/" target="_blank" rel="noopener"
+                style="color:var(--premcolo);text-decoration:underline;">Boxicons</a>)
+              inside the search container and position it absolutely on the left side, then add left padding to
+              the input field so the text doesn't overlap the icon. You can also add a search button on the
+              right side using the same technique.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Is a floating placeholder search bar responsive?</summary>
+            <div class="faq-answer">
+              Absolutely. By using relative units like <code>em</code> or <code>rem</code> for sizing and
+              <code>max-width</code> for the container, the search bar adapts smoothly to all screen sizes
+              including mobile devices. The floating animation works identically regardless of container width
+              because it uses relative positioning values.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Is this project good for beginner developers?</summary>
+            <div class="faq-answer">
+              Yes — this is a beginner-friendly project. It uses fundamental HTML structure and core CSS concepts:
+              positioning, transitions, pseudo-classes, and basic responsive design. It's an ideal first or
+              second project for someone learning front-end development. If you're looking for more
+              challenges, check our <a href="../projects.html"
+                style="color:var(--premcolo);text-decoration:underline;">intermediate projects</a>.
+            </div>
+          </details>
+
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- CONCLUSION -->
+      <section id="conclusion" class="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          This <strong>theater search bar with floating placeholder</strong> demonstrates how much you can
+          achieve with pure HTML and CSS. By combining <strong>CSS positioning</strong> for label placement,
+          <strong>:focus and :not(:placeholder-shown) pseudo-classes</strong> for state detection,
+          <strong>transitions</strong> for smooth animation, and <strong>box-shadow</strong> for the neon
+          glow — you get a production-quality UI component with zero dependencies.
+        </p>
+        <p>
+          Whether you're building a portfolio, learning CSS animations, or just want a polished search
+          component for your next <a href="../projects.html"
+            style="color:var(--premcolo);text-decoration:underline;">project</a>
+          — this technique covers the real-world CSS skills that matter. Copy the code, change the glow
+          color, adjust the transition speed, and make it yours.
+        </p>
+        <p style="color:var(--text-muted); font-size:14px; margin-bottom:0;">
+          Found this useful? Explore more HTML & CSS projects in the sidebar or
+          <a href="../contact.html" style="color:var(--premcolo);text-decoration:underline;">get in touch</a> with
+          questions.
+        </p>
+      </section>
+
+    </main>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" aria-label="Related projects">
+      <div class="sidebar-box">
+        <div class="sidebar-header">🔗 Related Projects</div>
+        <div class="related-list">
+          <a class="related-card" href="Project40.html" aria-label="CSS Neon Digital Clock Animation">
+            <img src="https://i.suar.me/Ep114/m"
+              alt="CSS Neon Digital Clock Animation with 3D perspective and glowing segments" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">CSS Neon Digital Clock Animation — HTML CSS JavaScript</div>
+          </a>
+          <a class="related-card" href="Project13.html" aria-label="Neon Cursor Animation">
+            <img src="https://77cod-ing.github.io/image%20copy%2036.png" alt="Neon Cursor Animation CSS JavaScript"
+              loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Neon Cursor Animation — CSS & JavaScript</div>
+          </a>
+          <a class="related-card" href="Project23.html" aria-label="Animated Login and Signup Page">
+            <img src="https://77cod-ing.github.io/image%20copy%2075.png"
+              alt="Animated Login and Signup Page HTML CSS JavaScript" loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Login & Signup Page — HTML CSS JS</div>
+          </a>
+          <a class="related-card" href="Project14.html" aria-label="Electric Neon Card Animation">
+            <img src="https://77cod-ing.github.io/image%20copy%2040.png" alt="Electric Neon Card Animation HTML CSS SVG"
+              loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Electric Neon Card Animation — HTML CSS SVG</div>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ===== PREVIEW MODAL ===== -->
+  <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+    aria-label="Live preview of the animated button">
+    <div class="preview-modal">
+      <div class="preview-modal-header">
+        <div class="preview-modal-title">
+          <i class='bx bx-show'></i>
+          <strong>Live Preview</strong> — Theater Search Bar
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="preview-dots">
+            <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+            <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+            <button class="preview-dot green" aria-label="Maximize" disabled></button>
+          </div>
+          <button class="preview-close-btn" id="previewCloseBtn">
+            <i class='bx bx-x'></i> Close
+          </button>
+        </div>
+      </div>
+      <div class="preview-iframe-wrap">
+        <div class="preview-loading" id="previewLoading">
+          <div class="preview-spinner"></div>
+          <span class="preview-loading-text">Loading preview...</span>
+          <div class="preview-loading-files">
+            <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+            <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+            <span class="preview-file-tag js-tag" id="tagJS">JS</span>
+          </div>
+        </div>
+        <iframe id="previewIframe" title="Preview of animated button with star effects"
+          sandbox="allow-scripts allow-same-origin"></iframe>
+        <div class="preview-hint" id="previewHint">
+          <i class='bx bx-cursor'></i> Click the input to see the floating effect
+        </div>
+      </div>
     </div>
-  </span>
-</div>
-
-<div class="con1">
-  <div class="countdown" id="countdown">
-    <span id="number">10</span> wait...
   </div>
-  <div class="link-box" id="linkBox">
-    <a href="https://gist.github.com/77cod-ing/708702c3649e72ef52c3bb297a027d48" target="_blank">Go to code</a>
-  </div>
-</div>
 
+  <!-- ===== SCRIPTS ===== -->
+<script>
+  /*
+    ============================================
+      Three file URLs — change them according to your project
+    ============================================
+  */
+  const gistBase = "https://gist.githubusercontent.com/77cod-ing/708702c3649e72ef52c3bb297a027d48/raw/d2cf5a7c120194c1c1105ab830f685b82930c947/";
 
+  const htmlUrl = gistBase + "index.html";
+  const cssUrl = gistBase + "style.css";
+  const jsUrl = gistBase + "script.js";
 
-  <script>
-    let counter = 10;
-    let timer = null;
-    const countdownEl = document.getElementById("countdown");
-    const numberEl = document.getElementById("number");
-    const linkBox = document.getElementById("linkBox");
+  /* Cache storage for the three files */
+  let cachedHTML = "";
+  let cachedCSS = "";
+  let cachedJS = "";
 
-    function startCountdown() {
-      if (timer) return;
-      timer = setInterval(() => {
-        counter--;
-        numberEl.textContent = counter;
+  /* Load a single file and display it in its tab */
+  async function loadCode(url, elementId, lang) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const text = await res.text();
+      const el = document.getElementById(elementId);
+      el.textContent = text;
+      el.className = `language-${lang}`;
+      Prism.highlightElement(el);
 
-        if (counter === 0) {
-          clearInterval(timer);
-          timer = null;
-          countdownEl.style.display = "none"; // يخفي العداد والكلمة
-          linkBox.style.display = "block";
-        }
-      }, 1000);
+      /* Save to cache */
+      if (lang === "html") cachedHTML = text;
+      if (lang === "css") cachedCSS = text;
+      if (lang === "js") cachedJS = text;
+    } catch (e) {
+      const el = document.getElementById(elementId);
+      if (el) el.textContent = `/* Failed to load: ${e.message} */`;
     }
-
-    function stopCountdown() {
-      clearInterval(timer);
-      timer = null;
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          startCountdown();
-        } else {
-          stopCountdown();
-        }
-      });
-    }, { threshold: 1.0 });
-
-    observer.observe(countdownEl);
-     /**hamburger**/
-
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeBtn = document.getElementById('closeBtn');
-
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.add('active');
-    });
-
-    closeBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-    });
-    
-
-    window.addEventListener("scroll", function() {
-  const hamburger = document.querySelector(".hamburger");
-  if (window.scrollY > 50) {
-    hamburger.classList.add("scrolled");
-  } else {
-    hamburger.classList.remove("scrolled");
   }
-});
-  </script>
+
+  /* Load all three files on page start */
+  loadCode(htmlUrl, "code1", "html");
+  loadCode(cssUrl, "code2", "css");
+  loadCode(jsUrl, "code3", "js");
+
+  /* ===== Tabs system ===== */
+  document.querySelectorAll(".code-tab").forEach(tab => {
+    tab.addEventListener("click", () => {
+      const lang = tab.dataset.lang;
+      document.querySelectorAll(".code-tab").forEach(t => {
+        t.classList.remove("active");
+        t.setAttribute("aria-selected", "false");
+      });
+      document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+      tab.classList.add("active");
+      tab.setAttribute("aria-selected", "true");
+      const panelMap = { html: "panel-html", css: "panel-css", js: "panel-js" };
+      document.getElementById(panelMap[lang]).classList.add("active");
+    });
+  });
+
+  /* ===== Copy buttons ===== */
+  document.querySelectorAll(".copy-btn").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+      if (!code.trim()) return;
+      try {
+        await navigator.clipboard.writeText(code);
+        btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+        btn.classList.add("copied");
+        setTimeout(() => {
+          btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
+          btn.classList.remove("copied");
+        }, 2000);
+      } catch {
+        btn.textContent = "Error";
+      }
+    });
+  });
+
+  /* ===== Preview modal ===== */
+  const previewOverlay = document.getElementById("previewOverlay");
+  const previewIframe = document.getElementById("previewIframe");
+  const previewLoading = document.getElementById("previewLoading");
+  const previewHint = document.getElementById("previewHint");
+  const previewBtn = document.getElementById("previewBtn");
+  const previewCloseBtn = document.getElementById("previewCloseBtn");
+  const previewDotClose = document.getElementById("previewDotClose");
+  const tagHTML = document.getElementById("tagHTML");
+  const tagCSS = document.getElementById("tagCSS");
+  const tagJS = document.getElementById("tagJS");
+
+  function openPreview() {
+    previewOverlay.classList.add("open");
+    document.body.style.overflow = "hidden";
+    previewLoading.classList.remove("hidden");
+    previewHint.classList.remove("show");
+    previewBtn.classList.add("loading");
+
+    /* Reset file load indicators */
+    tagHTML.classList.remove("loaded");
+    tagCSS.classList.remove("loaded");
+    tagJS.classList.remove("loaded");
+
+    buildPreview();
+  }
+
+  function closePreview() {
+    previewOverlay.classList.remove("open");
+    document.body.style.overflow = "";
+    previewIframe.srcdoc = "";
+    previewBtn.classList.remove("loading");
+  }
+
+  /* Load files and combine them for preview */
+  async function buildPreview() {
+    /* If all files are already cached */
+    if (cachedHTML && cachedCSS && cachedJS) {
+      tagHTML.classList.add("loaded");
+      tagCSS.classList.add("loaded");
+      tagJS.classList.add("loaded");
+      injectPreview(cachedHTML, cachedCSS, cachedJS);
+      return;
+    }
+
+    /* Load missing files in parallel */
+    try {
+      const fetches = [];
+
+      if (!cachedHTML) fetches.push(
+        fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); })
+      );
+      if (!cachedCSS) fetches.push(
+        fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); })
+      );
+      if (!cachedJS) fetches.push(
+        fetch(jsUrl).then(r => r.text()).then(t => { cachedJS = t; tagJS.classList.add("loaded"); })
+      );
+
+      /* Mark already cached files */
+      if (cachedHTML) tagHTML.classList.add("loaded");
+      if (cachedCSS) tagCSS.classList.add("loaded");
+      if (cachedJS) tagJS.classList.add("loaded");
+
+      await Promise.all(fetches);
+      injectPreview(cachedHTML, cachedCSS, cachedJS);
+    } catch (e) {
+      previewLoading.innerHTML = `
+        <i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i>
+        <span class="preview-loading-text" style="color:var(--accent2);">
+          Failed to load preview: ${e.message}
+        </span>
+      `;
+      previewBtn.classList.remove("loading");
+    }
+  }
+
+  /* Inject HTML + CSS + JS into the iframe */
+  function injectPreview(html, css, js) {
+    let combined = html;
+
+    /* Inject CSS: replace style.css or insert it */
+    if (combined.includes('<link') && /style\.css/i.test(combined)) {
+      combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
+    } else if (combined.includes("</head>")) {
+      combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
+    } else if (combined.includes("</body>")) {
+      combined = combined.replace("</body>", `<style>${css}</style>\n</body>`);
+    } else {
+      combined = `<style>${css}</style>\n${combined}`;
+    }
+
+    /* Inject JS: replace script.js or insert it */
+    if (combined.includes('<script') && /script\.js/i.test(combined)) {
+      combined = combined.replace(/<script[^>]*src=["'][^"']*script\.js["'][^>]*><\/script>/gi, `<script>${js}<\/script>`);
+    } else if (combined.includes("</body>")) {
+      combined = combined.replace("</body>", `<script>${js}<\/script>\n</body>`);
+    } else {
+      combined = `${combined}\n<script>${js}<\/script>`;
+    }
+
+    /* Add a suitable preview background */
+    const bgStyle = `<style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#0a0e1a;}</style>`;
+    if (combined.includes("<head>")) {
+      combined = combined.replace("<head>", `<head>${bgStyle}`);
+    } else {
+      combined = bgStyle + combined;
+    }
+
+    previewIframe.srcdoc = combined;
+
+    previewIframe.addEventListener("load", function onLoad() {
+      previewLoading.classList.add("hidden");
+      previewBtn.classList.remove("loading");
+
+      setTimeout(() => {
+        previewHint.classList.add("show");
+        setTimeout(() => previewHint.classList.remove("show"), 4000);
+      }, 300);
+
+      previewIframe.removeEventListener("load", onLoad);
+    });
+  }
+
+  /* Open preview */
+  previewBtn.addEventListener("click", openPreview);
+
+  /* Close preview */
+  previewCloseBtn.addEventListener("click", closePreview);
+  previewDotClose.addEventListener("click", closePreview);
+
+  /* Close when clicking outside */
+  previewOverlay.addEventListener("click", (e) => {
+    if (e.target === previewOverlay) closePreview();
+  });
+
+  /* Close with Escape key */
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && previewOverlay.classList.contains("open")) {
+      closePreview();
+    }
+  });
+</script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
