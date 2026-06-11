@@ -11,7 +11,7 @@
     content="Learn how to build an interactive dragon cursor effect using SVG and JavaScript. Step-by-step tutorial with full free source code. Custom cursor animation, mouse tracking, and SVG path animation included.">
   <meta name="author" content="77cod_ing">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <link rel="canonical" href="https://77cod-ing.github.io/Project33.html">
+  <link rel="canonical" href="https://77cod-ing.github.io/Project-dragon.html">
 
   <!-- ===== OPEN GRAPH ===== -->
   <meta property="og:type" content="article">
@@ -182,6 +182,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
     rel="stylesheet">
+     <!-- === API FOR SPEED === -->
+  <script src="//instant.page/5.2.0" type="module"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
     crossorigin="anonymous"></script>
 
@@ -1134,6 +1136,22 @@
     .preview-hint i { color: var(--premcolo); margin-right: 4px; }
 
 
+
+        /* ===== INLINE LINK ===== */
+    .inline-link {
+      color: var(--premcolo);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 217, 255, 0.3);
+      transition: border-color 0.2s, color 0.2s;
+      font-weight: 500;
+    }
+
+    .inline-link:hover {
+      color: #fff;
+      border-color: var(--premcolo);
+    }
+
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 900px) {
       .layout {
@@ -1420,7 +1438,7 @@
         <h2>How It Works — Step by Step</h2>
         <p>
           Let's break down the seven core techniques that power this dragon cursor effect,
-          from SVG structure to the animation loop.
+          from SVG structure to the <a href="https://www.google.com/" class="inline-link">animation loop</a>.
         </p>
 
         <div class="steps">
@@ -1661,11 +1679,11 @@
       <div class="sidebar-box">
         <div class="sidebar-header">🔗 Related Projects</div>
         <div class="related-list">
-          <a class="related-card" href="Project40.html" aria-label="CSS Neon Digital Clock Animation">
-            <img src="https://i.suar.me/Ep114/m" alt="CSS Neon Digital Clock Animation" loading="lazy" width="280"
+          <a class="related-card" href="Project44.html" aria-label="CSS Expandable Navigation Bar — HTML & CSS">
+            <img src="https://77cod-ing.github.io/Expandable_Navigation_Bar.png" alt="Expandable Navigation Bar" loading="lazy" width="280"
               height="158">
             <div class="related-card-overlay"></div>
-            <div class="related-card-title">CSS Neon Digital Clock Animation</div>
+            <div class="related-card-title">CSS Expandable Navigation Bar — HTML & CSS</div>
           </a>
           <a class="related-card" href="Project39.html" aria-label="Animated Button with Star Effects">
             <img src="https://i.suar.me/jvZZv/m" alt="Animated Button with Star Effects Using HTML & CSS" loading="lazy"
@@ -1777,7 +1795,7 @@
     /* ===== COPY BUTTONS ===== */
     document.querySelectorAll(".copy-btn").forEach(btn => {
       btn.addEventListener("click", async () => {
-        const code = document.getElementById(btn.dataset.target)?.innerText || "";
+        const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
         if (!code.trim()) return;
         try {
           await navigator.clipboard.writeText(code);
