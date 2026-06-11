@@ -4,16 +4,17 @@
 
         var CATEGORIES = [
         {slug: 'all', label: 'All Projects' },
-        {slug: 'featured', label: '\u2605 Featured' },
+        {slug: 'landing-page', label: '\u2605 Landing page' },
         {slug: 'login-forms', label: 'Login Forms' },
         {slug: 'buttons', label: 'Buttons' },
         {slug: 'cards', label: 'Cards' },
         {slug: 'navigation', label: 'Navigation' },
         {slug: 'animations', label: 'Animations' },
-        {slug: 'ui-components', label: 'UI Components' },
+          { slug: 'input', label: 'Input' },
         {slug: 'neon-effects', label: 'Neon Effects' },
-        {slug: 'file-upload', label: 'File Upload' },
-        {slug: 'tutorials', label: 'Tutorials' }
+          { slug: 'file-upload', label: 'File Upload' },
+          { slug: 'tutorials', label: 'Tutorials' },
+        { slug: 'checkbox', label: 'Checkbox' }
         ];
 
         var activeCategory = 'all';
