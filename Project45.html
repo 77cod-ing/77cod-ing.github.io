@@ -1,0 +1,2399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== PRIMARY SEO META ===== -->
+    <title>Animated Floating Action Button Menu with CSS | HTML CSS Tutorial 2026</title>
+    <meta name="description"
+        content="Build an animated floating action button menu using pure CSS and a few lines of JavaScript. Step-by-step tutorial with full free source code. Perfect for dashboards and mobile UIs.">
+    <meta name="keywords"
+        content="animated floating action button menu css, css expandable circle menu tutorial, fab button with dropdown list css, css pulse animation button, animated menu icon css, hamburger to close icon animation css, css only popup menu tutorial, frontend project ideas 2026, floating action button html css, expandable list menu css js, mobile fab menu design, css staggered list animation, settings copy share delete menu ui">
+    <meta name="author" content="77cod_ing">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://77cod-ing.github.io/Project-Floating-Action-Menu-Button.html">
+
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Animated Floating Action Button Menu with CSS — HTML CSS Tutorial 2026">
+    <meta property="og:description"
+        content="Build an animated circular floating action button that expands into a staggered list menu using pure CSS keyframes and minimal JavaScript. Full free source code.">
+    <meta property="og:image" content="https://77cod-ing.github.io/button-list-item.png">
+    <meta property="og:url" content="https://77cod-ing.github.io/Project-Floating-Action-Menu-Button.html">
+    <meta property="og:site_name" content="77cod_ing">
+    <meta property="article:published_time" content="2026-06-12T00:00:00Z">
+    <meta property="article:modified_time" content="2026-06-12T00:00:00Z">
+    <meta property="article:author" content="77cod_ing">
+    <meta property="article:section" content="CSS Tutorials">
+    <meta property="article:tag" content="HTML, CSS, JavaScript, Animation, FAB Menu, UI Components, Frontend">
+
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Animated Floating Action Button Menu with CSS — Frontend Tutorial">
+    <meta name="twitter:description"
+        content="Build a staggered, animated circular floating action menu with pure CSS keyframes and a tiny JS toggle. Full free source code.">
+    <meta name="twitter:image" content="https://77cod-ing.github.io/button-list-item.png">
+
+    <!-- ===== SCHEMA: TechArticle ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Animated Floating Action Button Menu with CSS — Expandable Circular Menu for Beginners and Experts",
+    "description": "A complete tutorial on building an animated floating action button (FAB) that expands into a staggered list menu using pure CSS keyframes, transforms, and a single line of vanilla JavaScript.",
+    "image": "https://77cod-ing.github.io/button-list-item.png",
+    "datePublished": "2026-06-12",
+    "dateModified": "2026-06-12",
+    "author": {
+      "@type": "Person",
+      "name": "77cod_ing",
+      "url": "https://77cod-ing.github.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "77cod_ing",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Picture1.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://77cod-ing.github.io/Project-Floating-Action-Menu-Button.html"
+    },
+    "articleSection": "CSS Tutorials",
+    "keywords": "animated floating action button menu css, css expandable circle menu, fab button dropdown list css, css pulse animation, hamburger to close icon animation",
+    "timeRequired": "PT15M",
+    "educationalLevel": "Beginner",
+    "teaches": ["CSS Keyframe Animations", "CSS Transform & Transform Origin", "Staggered Animation Delays", "Hamburger to X Icon Morph", "Pseudo-elements", "CSS Pulse Effects", "Vanilla JS Class Toggling"]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: HowTo ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Build an Animated Floating Action Button Menu Using CSS Step by Step",
+    "description": "Step-by-step guide to creating a circular floating action button that expands into a staggered list menu using pure CSS animations and a single JavaScript toggle.",
+    "image": "https://77cod-ing.github.io/button-list-item.png",
+    "totalTime": "PT15M",
+    "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "0"},
+    "supply": [
+      {"@type": "HowToSupply", "name": "Text editor (VS Code)"},
+      {"@type": "HowToSupply", "name": "A modern web browser"}
+    ],
+    "tool": [
+      {"@type": "HowToTool", "name": "HTML"},
+      {"@type": "HowToTool", "name": "CSS"},
+      {"@type": "HowToTool", "name": "JavaScript"},
+      {"@type": "HowToTool", "name": "Feather Icons (inline SVG)"}
+    ],
+    "step": [
+      {"@type": "HowToStep", "name": "Set Up the Container & Trigger Button", "text": "Wrap everything in a .list-container and add a circular .more-button with three stacked lines forming a menu icon.", "position": 1},
+      {"@type": "HowToStep", "name": "Build the Hidden List Menu", "text": "Create an absolutely positioned ul.more-button-list anchored to the button with transform-origin set to bottom right, scaled to zero and hidden by default.", "position": 2},
+      {"@type": "HowToStep", "name": "Add the Active State Toggle", "text": "Toggle an 'active' class on the container with one line of JavaScript when the button is clicked.", "position": 3},
+      {"@type": "HowToStep", "name": "Animate the Menu Reveal", "text": "When active, scale the list from 0 to 1 and fade it in with a CSS transition on the .more-button-list element.", "position": 4},
+      {"@type": "HowToStep", "name": "Stagger the List Items", "text": "Apply the fadeInItem keyframe animation to each list item with increasing animation-delay values via nth-child selectors.", "position": 5},
+      {"@type": "HowToStep", "name": "Morph the Icon into an X", "text": "Rotate the wrapper -45deg and rotate the first/last lines -90deg with translateX offsets so the three lines form an X (close icon).", "position": 6},
+      {"@type": "HowToStep", "name": "Add the Pulse Ring Effect", "text": "Apply the onePulse keyframe animation to the button on activation, expanding and fading a box-shadow ring outward.", "position": 7},
+      {"@type": "HowToStep", "name": "Style the Destructive Action", "text": "Give the Delete list item a red hover background with a smooth width and color transition to visually separate it from safe actions.", "position": 8}
+    ]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: FAQPage ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I create a floating action button that expands into a menu using CSS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Position a circular button inside a relatively positioned container, then place an absolutely positioned list next to it with transform: scale(0) and opacity: 0 by default. Toggle an 'active' class on the container with JavaScript when the button is clicked, and target .active .more-button-list in CSS to set transform: scale(1) and opacity: 1 with a transition. Full source code is available in the tabs above."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the hamburger icon morph into a close (X) icon?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The menu icon is built from three short divs (lines) inside a wrapper. On the active state, the wrapper rotates -45deg, the first line rotates -90deg and shifts slightly via translateX, and the last line rotates -90deg in the opposite translateX direction. Combined, the three lines visually rearrange into an X shape, giving the classic hamburger-to-close animation without swapping icons."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the staggered fade-in animation for the list items and how does it work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Each list item starts with opacity: 0 and is shifted -10px horizontally via transform: translateX(-10px). When the container becomes active, the fadeInItem keyframe animation runs on every item, animating it to translateX(0) and opacity: 1. By giving each nth-child item a longer animation-delay (0.2s, 0.4s, 0.6s, 0.8s), the items appear to cascade in one after another rather than all at once."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What creates the pulsing ring effect around the button?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The onePulse keyframe animation runs once on the .more-button when the container becomes active. It animates the box-shadow from the button's resting glow, out to a much larger, more transparent ring at the 50% mark, and back to the resting glow at 100%. Because box-shadow is animatable, this creates a quick radar-style pulse that draws attention to the button as the menu opens."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this floating action button menu suitable for beginners?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The entire interaction relies on a single JavaScript line that toggles a CSS class — everything else is CSS transitions, transforms, and keyframes. It's an excellent project for beginners who already understand basic CSS positioning and want to practice transform-origin, transitions, and animation-delay in a real, reusable UI component."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use this floating action button menu in a real project?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. This pattern is common in mobile apps and admin dashboards for quick actions like Settings, Copy, Share, and Delete. To customize it, change the SVG icons, adjust the .more-button-list width/height to fit more or fewer items, update the color variables (#5c67ff for the primary color and the red hover for destructive actions), and reposition the .list-container using fixed positioning to anchor it to a corner of the viewport."
+        }
+      }
+    ]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: BreadcrumbList ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+      {"@type": "ListItem", "position": 3, "name": "Animated Floating Action Button Menu", "item": "https://77cod-ing.github.io/Project-Floating-Action-Menu-Button.html"}
+    ]
+  }
+  </script>
+
+    <!-- ===== ASSETS ===== -->
+    <link rel="icon" type="image/png" href="Picture1.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+    <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+        crossorigin="anonymous"></script>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+            --premcolo: #00d9ff;
+            --accent2: #ff6b35;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --surface: rgba(255, 255, 255, 0.04);
+            --surface-hover: rgba(0, 217, 255, 0.07);
+            --border: rgba(255, 255, 255, 0.08);
+            --font-head: 'Space Mono', monospace;
+            --font-body: 'DM Sans', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--back);
+            font-family: var(--font-body);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 56px;
+            padding: 0 2.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            color: var(--premcolo);
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: clamp(1rem, 2vw, 2rem);
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: var(--premcolo);
+        }
+
+        /* ===== BREADCRUMB ===== */
+        .breadcrumb {
+            padding: 12px 2.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb ol {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .breadcrumb li {
+            display: flex;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .breadcrumb li+li::before {
+            content: "›";
+            color: var(--premcolo);
+            margin-right: 6px;
+            font-size: 1.1rem;
+        }
+
+        .breadcrumb a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--premcolo);
+        }
+
+        .breadcrumb [aria-current="page"] {
+            color: var(--premcolo);
+            font-weight: 600;
+        }
+
+        /* ===== BACK BUTTON ===== */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+            margin: 1rem 2.5rem;
+        }
+
+        .back-link:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 3rem 2.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: var(--font-head);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .tag-tutorial {
+            background: rgba(0, 217, 255, 0.12);
+            color: var(--premcolo);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+        }
+
+        .tag-js {
+            background: rgba(235, 223, 0, 0.1);
+            color: #ebdf00;
+            border: 1px solid rgba(235, 223, 0, 0.2);
+        }
+
+        .tag-css {
+            background: rgba(0, 217, 255, 0.08);
+            color: #7dd3fc;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .tag-level {
+            background: rgba(255, 107, 53, 0.1);
+            color: var(--accent2);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+        }
+
+        .read-time {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-head);
+            font-size: clamp(1.6rem, 4vw, 2.6rem);
+            line-height: 1.25;
+            color: #fff;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 span {
+            color: var(--premcolo);
+        }
+
+        .hero-lead {
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            color: var(--text-muted);
+            max-width: 680px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .stat-value {
+            font-family: var(--font-head);
+            font-size: 1.4rem;
+            color: var(--premcolo);
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            display: block;
+            box-shadow: 0 0 60px rgba(0, 217, 255, 0.08), 0 32px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .img-caption {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* ===== LAYOUT ===== */
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2.5rem 4rem;
+            align-items: start;
+        }
+
+        /* ===== ARTICLE ===== */
+        .article-body h2 {
+            font-family: var(--font-head);
+            font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+            color: var(--premcolo);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            scroll-margin-top: 80px;
+        }
+
+        .article-body h3 {
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            color: #7dd3fc;
+            margin: 1.8rem 0 0.75rem;
+            scroll-margin-top: 80px;
+        }
+
+        .article-body p {
+            margin-bottom: 1.1rem;
+            color: var(--text);
+        }
+
+        .article-body code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 7px;
+            border-radius: 5px;
+        }
+
+        .article-body ul,
+        .article-body ol {
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 1.1rem;
+        }
+
+        .article-body li {
+            margin-bottom: 9px;
+        }
+
+        .article-body li strong {
+            color: #fff;
+        }
+
+        /* ===== TOC ===== */
+        .toc {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .toc-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--premcolo);
+            margin-bottom: 0.75rem;
+        }
+
+        .toc ol {
+            padding-left: 1.2rem;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+        }
+
+        .toc a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: var(--premcolo);
+        }
+
+        /* ===== FEATURE CARDS ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 1.5rem 0;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            transition: border-color 0.25s, background 0.25s;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(0, 217, 255, 0.3);
+            background: var(--surface-hover);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .feature-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* ===== STEPS ===== */
+        .steps {
+            margin: 1.5rem 0;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 44px 1fr;
+            gap: 1rem;
+            padding: 1.1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-num {
+            width: 44px;
+            height: 44px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-head);
+            color: var(--premcolo);
+            font-size: 1rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            margin-top: 0;
+            font-size: 1rem;
+        }
+
+        .step-content p {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* ===== CODE SECTION ===== */
+        .code-section {
+            margin: 2rem 0;
+            width: 60vw;
+        }
+
+        .code-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .code-tabs {
+            display: flex;
+            gap: 4px;
+        }
+
+        .code-tab {
+            padding: 8px 20px;
+            border-radius: 8px 8px 0 0;
+            border: 1px solid var(--border);
+            border-bottom: none;
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .code-tab.active {
+            background: #1e1e2f;
+            color: #fff;
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+
+        .code-tab[data-lang="html"].active {
+            color: #ff6600;
+        }
+
+        .code-tab[data-lang="css"].active {
+            color: #00ffff;
+        }
+
+        .code-tab[data-lang="js"].active {
+            color: #f7df1e;
+        }
+
+        /* ===== PREVIEW BUTTON ===== */
+        .preview-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 22px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 217, 255, 0.4);
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.3px;
+        }
+
+        .preview-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .preview-btn:hover {
+            border-color: var(--premcolo);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .preview-btn:hover::before {
+            opacity: 1;
+        }
+
+        .preview-btn:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        .preview-btn i {
+            font-size: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .preview-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .preview-btn.loading i {
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .code-panels {
+            position: relative;
+        }
+
+        .code-box {
+            background: #1e1e2f;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+            border-radius: 0 12px 12px 12px;
+            position: relative;
+            display: none;
+        }
+
+        .code-box.active {
+            display: block;
+        }
+
+        .code-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .code-lang-label {
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .copy-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            border-radius: 7px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo);
+        }
+
+        .copy-btn.copied {
+            color: #4ade80;
+            border-color: #4ade80;
+        }
+
+        :not(pre)>code[class*="language-"],
+        pre[class*="language-"] {
+            width: 100%;
+            max-width: 100%;
+            height: 50vh;
+            border-radius: 0 0 12px 12px;
+            overflow-y: auto;
+            overflow-x: auto;
+            margin: 0;
+        }
+
+        pre::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        pre::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        pre::-webkit-scrollbar-thumb {
+            background: var(--premcolo);
+            border-radius: 10px;
+        }
+
+        /* ===== INFO / WARN ===== */
+        .info-box {
+            background: rgba(0, 217, 255, 0.06);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-left: 4px solid var(--premcolo);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .info-box strong {
+            color: var(--premcolo);
+        }
+
+        .warn-box {
+            background: rgba(255, 107, 53, 0.06);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-left: 4px solid var(--accent2);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .warn-box strong {
+            color: var(--accent2);
+        }
+
+        /* ===== COMPARISON TABLE ===== */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 14px;
+        }
+
+        .comparison-table th {
+            font-family: var(--font-head);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 10px 14px;
+            background: rgba(0, 217, 255, 0.08);
+            color: var(--premcolo);
+            border: 1px solid var(--border);
+            text-align: left;
+        }
+
+        .comparison-table td {
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            vertical-align: top;
+        }
+
+        .comparison-table tr:hover td {
+            background: var(--surface-hover);
+        }
+
+        .comparison-table td strong {
+            color: #fff;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-family: var(--font-head);
+            font-weight: 700;
+        }
+
+        .badge-green {
+            background: rgba(74, 222, 128, 0.12);
+            color: #4ade80;
+            border: 1px solid rgba(74, 222, 128, 0.25);
+        }
+
+        .badge-orange {
+            background: rgba(255, 107, 53, 0.12);
+            color: var(--accent2);
+            border: 1px solid rgba(255, 107, 53, 0.25);
+        }
+
+        .badge-blue {
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+        }
+
+        /* ===== FAQ ===== */
+        .faq {
+            margin: 1.5rem 0;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            background: var(--surface);
+            font-weight: 600;
+            font-size: 15px;
+            transition: background 0.2s;
+            list-style: none;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background: var(--surface-hover);
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.3rem;
+            color: var(--premcolo);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        details[open] .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 1rem 1.25rem;
+            color: var(--text-muted);
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+        }
+
+        .faq-answer code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* ===== CONCLUSION ===== */
+        .conclusion {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.07), rgba(0, 140, 160, 0.05));
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 16px;
+            padding: 1.75rem 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .conclusion h2 {
+            border: none;
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 1.5rem 0;
+        }
+
+        /* ===== COUNTDOWN ===== */
+        .countdown-box {
+            background: rgba(0, 217, 255, 0.05);
+            border: 1px solid rgba(0, 217, 255, 0.18);
+            border-radius: 14px;
+            padding: 1.5rem 1.75rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        .countdown-label {
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .countdown-timer {
+            font-family: var(--font-head);
+            font-size: 2.5rem;
+            color: var(--premcolo);
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .gist-link-wrapper {
+            display: none;
+            margin-top: 12px;
+        }
+
+        .gist-link-wrapper.visible {
+            display: block;
+        }
+
+        .gist-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(0, 217, 255, 0.06));
+            border: 1px solid rgba(0, 217, 255, 0.35);
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .gist-link:hover {
+            background: rgba(0, 217, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            position: sticky;
+            top: 72px;
+        }
+
+        .sidebar-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-header {
+            padding: 14px 16px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--premcolo);
+            border-bottom: 1px solid var(--border);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .related-list {
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .related-card {
+            display: block;
+            text-decoration: none;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 16/9;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .related-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+
+        .related-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .related-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+        .related-card-title {
+            position: absolute;
+            bottom: 8px;
+            left: 10px;
+            right: 10px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* ===== PREVIEW MODAL ===== */
+        .preview-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 5, 15, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+        }
+
+        .preview-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .preview-modal {
+            width: 95vw;
+            max-width: 95vw;
+            height: 95vh;
+            max-height: 95vh;
+            background: #0a0e1a;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(0, 217, 255, 0.06);
+            transform: scale(0.92) translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .preview-overlay.open .preview-modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .preview-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
+        }
+
+        .preview-modal-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .preview-modal-title i {
+            color: var(--premcolo);
+            font-size: 16px;
+        }
+
+        .preview-modal-title strong {
+            color: #fff;
+        }
+
+        .preview-dots {
+            display: flex;
+            gap: 7px;
+        }
+
+        .preview-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, filter 0.2s;
+        }
+
+        .preview-dot:hover {
+            transform: scale(1.2);
+            filter: brightness(1.3);
+        }
+
+        .preview-dot.red {
+            background: #ff5f57;
+        }
+
+        .preview-dot.yellow {
+            background: #febc2e;
+        }
+
+        .preview-dot.green {
+            background: #28c840;
+        }
+
+        .preview-close-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .preview-close-btn:hover {
+            border-color: var(--accent2);
+            color: var(--accent2);
+            background: rgba(255, 107, 53, 0.08);
+        }
+
+        .preview-iframe-wrap {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .preview-iframe-wrap iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            background: #000;
+        }
+
+        .preview-loading {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            background: #0a0e1a;
+            z-index: 2;
+            transition: opacity 0.4s;
+        }
+
+        .preview-loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .preview-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(0, 217, 255, 0.15);
+            border-top-color: var(--premcolo);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
+        .preview-loading-text {
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .preview-loading-files {
+            display: flex;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .preview-file-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            font-weight: 700;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+
+        .preview-file-tag.loaded {
+            opacity: 1;
+        }
+
+        .preview-file-tag.html-tag {
+            background: rgba(255, 102, 0, 0.15);
+            color: #ff6600;
+            border: 1px solid rgba(255, 102, 0, 0.3);
+        }
+
+        .preview-file-tag.css-tag {
+            background: rgba(0, 255, 255, 0.1);
+            color: #00ffff;
+            border: 1px solid rgba(0, 255, 255, 0.25);
+        }
+
+        .preview-file-tag.js-tag {
+            background: rgba(247, 223, 30, 0.1);
+            color: #f7df1e;
+            border: 1px solid rgba(247, 223, 30, 0.25);
+        }
+
+        .preview-hint {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 6px 16px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            color: var(--text-muted);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.5s 0.8s;
+            white-space: nowrap;
+            z-index: 3;
+        }
+
+        .preview-hint.show {
+            opacity: 1;
+        }
+
+        .preview-hint i {
+            color: var(--premcolo);
+            margin-right: 4px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 1fr;
+                padding: 1.5rem 1.25rem;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .related-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .related-card {
+                flex: 1 1 calc(50% - 8px);
+            }
+
+            .hero {
+                padding: 2rem 1.25rem 1.5rem;
+            }
+
+            .navbar {
+                padding: 0 1.25rem;
+            }
+
+            .breadcrumb {
+                padding: 10px 1.25rem;
+            }
+
+            .back-link {
+                margin: 0.75rem 1.25rem;
+            }
+
+            .code-section {
+                width: 85vw;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-stats {
+                gap: 1.2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .code-tab {
+                padding: 7px 13px;
+                font-size: 12px;
+            }
+
+            .related-card {
+                flex: 1 1 100%;
+            }
+
+            .comparison-table {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">{ / }</span> 77cod_ing
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="Privacy Policy.html">Privacy Policy</a>
+            <a href="Terms & Conditions.html">Terms & Conditions</a>
+        </nav>
+    </header>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
+            <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+            <li><span aria-current="page">Animated Floating Action Button Menu</span></li>
+        </ol>
+    </nav>
+
+    <!-- ===== BACK BUTTON ===== -->
+    <a href="projects.html" class="back-link" aria-label="Return to Projects">
+        <i class='bx bx-arrow-back'></i> Return to Projects
+    </a>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-labelledby="main-heading">
+        <div class="hero-meta">
+            <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+            <span class="tag tag-css">CSS</span>
+            <span class="tag tag-js">JavaScript</span>
+            <span class="tag tag-level">Beginner</span>
+            <span class="read-time"><i class='bx bx-time'></i> ~12 min read</span>
+        </div>
+
+        <h1 id="main-heading">
+            Animated <span>Floating Action Button Menu</span><br>
+            with CSS Keyframes &amp; JS Toggle
+        </h1>
+
+        <p class="hero-lead">
+            A complete tutorial to build a circular floating action button (FAB) that morphs its icon into a
+            close (X), pulses outward with a glowing ring, and expands into a staggered list menu —
+            all powered by pure CSS keyframe animations and a single line of vanilla JavaScript.
+        </p>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-value">8</span>
+                <span class="stat-label">Build Steps</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">1</span>
+                <span class="stat-label">Line of JS</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">4</span>
+                <span class="stat-label">Menu Items</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">Free</span>
+                <span class="stat-label">Source Code</span>
+            </div>
+        </div>
+
+        <img src="https://77cod-ing.github.io/button-list-item.png"
+            alt="Animated floating action button menu expanding into a list of settings, copy, share, and delete options built with CSS"
+            class="hero-img" width="1200" height="420" loading="eager" fetchpriority="high">
+        <p class="img-caption">Final result: a circular FAB that morphs into a close icon, pulses, and reveals a
+            staggered list menu — pure HTML, CSS &amp; a touch of JavaScript</p>
+    </section>
+
+    <!-- ===== MAIN LAYOUT ===== -->
+    <div class="layout">
+
+        <main class="article-body" id="main-content">
+
+            <!-- TOC -->
+            <nav class="toc" aria-label="Table of contents">
+                <p class="toc-title">📋 Contents</p>
+                <ol>
+                    <li><a href="#overview">What You'll Build</a></li>
+                    <li><a href="#features">Key Features</a></li>
+                    <li><a href="#source-code">Full Source Code</a></li>
+                    <li><a href="#how-it-works">How It Works — Step by Step</a></li>
+                    <li><a href="#customization">Customization Ideas</a></li>
+                    <li><a href="#browser-support">Browser Compatibility</a></li>
+                    <li><a href="#performance">Performance &amp; Responsiveness</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ol>
+            </nav>
+
+            <!-- OVERVIEW -->
+            <section id="overview">
+                <h2>What You'll Build</h2>
+                <p>
+                    In this tutorial, you'll build an <strong>animated floating action button (FAB) menu</strong>
+                    using nothing but HTML, CSS, and a single line of JavaScript. The button sits in the
+                    corner of the screen as a glowing circle with a hamburger-style icon. When clicked, the icon
+                    smoothly morphs into a close (X) symbol, a pulsing ring radiates outward, and a card-style
+                    list of actions — Settings, Copy, Share, and Delete — scales and fades into view with a
+                    staggered cascade effect.
+                </p>
+                <p>
+                    This is a classic <strong>CSS expandable circle menu</strong> pattern used widely in mobile
+                    apps, admin dashboards, and design systems for quick contextual actions. The entire
+                    interaction state — open or closed — is controlled by toggling a single <code>active</code>
+                    class on the parent container, while CSS transitions, transforms, and keyframes handle
+                    every visual change.
+                </p>
+                <p>
+                    It's an excellent project for practicing <strong>transform-origin</strong>,
+                    <strong>animation-delay staggering</strong>, <strong>icon morphing with rotation</strong>,
+                    and <strong>box-shadow pulse effects</strong> — all without reaching for a JavaScript
+                    animation library.
+                </p>
+
+                <div class="info-box">
+                    <strong>💡 Who Is This For?</strong> This project is ideal for beginners who want a
+                    real, reusable UI component to add to their portfolio, and for intermediate developers
+                    looking to sharpen their understanding of CSS transitions, transforms, and keyframe
+                    sequencing without any external dependencies.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- FEATURES -->
+            <section id="features">
+                <h2>Key Features of This Floating Action Button Menu</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔵</div>
+                        <div class="feature-title">Circular FAB Button</div>
+                        <div class="feature-desc">A glowing circular button with a soft <code>box-shadow</code> halo
+                            that intensifies on hover and focus for clear interactive feedback.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✖️</div>
+                        <div class="feature-title">Hamburger-to-X Morph</div>
+                        <div class="feature-desc">Three stacked lines rotate and shift using CSS
+                            <code>transform</code> to seamlessly turn into a close icon when active.
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💫</div>
+                        <div class="feature-title">Pulse Ring Animation</div>
+                        <div class="feature-desc">A one-shot <code>onePulse</code> keyframe animates the
+                            button's <code>box-shadow</code> outward and back, drawing the eye on activation.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📜</div>
+                        <div class="feature-title">Scale &amp; Fade Reveal</div>
+                        <div class="feature-desc">The menu list scales from <code>0</code> to <code>1</code> with
+                            <code>transform-origin: bottom right</code>, anchoring it visually to the button.
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🪄</div>
+                        <div class="feature-title">Staggered List Items</div>
+                        <div class="feature-desc">Each menu item fades in and slides from the left with
+                            progressively longer <code>animation-delay</code> values for a cascading effect.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <div class="feature-title">Single JS Toggle</div>
+                        <div class="feature-desc">Only one event listener is used — it simply toggles the
+                            <code>active</code> class on the container, leaving all visuals to CSS.
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🗑️</div>
+                        <div class="feature-title">Destructive Action Styling</div>
+                        <div class="feature-desc">The Delete item has its own hover transition — expanding to full
+                            width with a red background to visually flag a dangerous action.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🪶</div>
+                        <div class="feature-title">Lightweight Feather Icons</div>
+                        <div class="feature-desc">Inline SVG icons (Feather-style) for Settings, Copy, Share, and
+                            Delete — no icon font or extra HTTP request needed.</div>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- SOURCE CODE -->
+            <section id="source-code">
+                <h2>Full Source Code (Free)</h2>
+                <p>
+                    The project lives in a single HTML file. The CSS handles the FAB's glow, the icon morph,
+                    the pulse ring, and the staggered list reveal. The JavaScript is a single
+                    <code>click</code> listener that toggles the <code>active</code> class — every visual
+                    change is then driven entirely by CSS selectors targeting <code>.active</code>.
+                    Use the tabs to explore each section.
+                </p>
+
+                <div class="code-section">
+                    <div class="code-toolbar">
+                        <div class="code-tabs" role="tablist" aria-label="Code files">
+                            <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                                aria-controls="panel-html">HTML</button>
+                            <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+                                aria-controls="panel-css">CSS</button>
+                            <button class="code-tab" data-lang="js" role="tab" aria-selected="false"
+                                aria-controls="panel-js">JS</button>
+                        </div>
+                        <button class="preview-btn" id="previewBtn" aria-label="Preview the final result">
+                            <i class='bx bx-play-circle'></i>
+                            <span>Preview Result</span>
+                        </button>
+                    </div>
+
+                    <div class="code-panels">
+                        <div class="code-box active" id="panel-html" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                                <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code1" class="language-html"></code></pre>
+                        </div>
+
+                        <div class="code-box" id="panel-css" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
+                                <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code2" class="language-css"></code></pre>
+                        </div>
+
+                        <div class="code-box" id="panel-js" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#f7df1e;">JS — script.js</span>
+                                <button class="copy-btn" data-target="code3"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code3" class="language-javascript"></code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Countdown Gist reveal -->
+                <div class="countdown-box">
+                    <p class="countdown-label">🔓 Full Source Code unlocks in</p>
+                    <div class="countdown-timer" id="countdownDisplay">05</div>
+                    <p style="font-size:13px;color:var(--text-muted);">Hosted on GitHub Gist — free, no sign-up required
+                    </p>
+                    <div class="gist-link-wrapper" id="gistLinkWrapper">
+                        <a class="gist-link"
+                            href="https://gist.githubusercontent.com/77cod-ing/floating-action-menu-button/"
+                            target="_blank" rel="noopener noreferrer">
+                            <i class='bx bxl-github'></i> View Full Source Code on GitHub Gist
+                        </a>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <strong>💡 Quick Start:</strong> Copy all code into a single <code>index.html</code> file.
+                    No libraries, no build tools — open the file in any modern browser and the menu works
+                    immediately.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- HOW IT WORKS -->
+            <section id="how-it-works">
+                <h2>How It Works — Step by Step</h2>
+                <p>
+                    Here's a breakdown of the eight core techniques behind this animated floating action
+                    button menu, from the base markup to the staggered reveal animation.
+                </p>
+
+                <div class="steps">
+
+                    <div class="step">
+                        <div class="step-num">01</div>
+                        <div class="step-content">
+                            <h3>Container &amp; Trigger Button Structure</h3>
+                            <p>
+                                A <code>.list-container</code> with <code>position: relative</code> wraps the
+                                whole component. Inside it sits the circular <code>.more-button</code>, which
+                                contains a <code>.menu-icon-wrapper</code> with three short
+                                <code>.menu-icon-line</code> divs — the classic hamburger icon built from
+                                pure CSS rectangles.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">02</div>
+                        <div class="step-content">
+                            <h3>Hidden List Menu Positioning</h3>
+                            <p>
+                                The <code>ul.more-button-list</code> is positioned absolutely with
+                                <code>right: 24px; bottom: 0;</code>, anchoring it next to the button. By
+                                default it's invisible: <code>opacity: 0</code> and
+                                <code>transform: scale(0)</code>, with
+                                <code>transform-origin: bottom right</code> so it grows outward from the
+                                button's corner rather than from its own center.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">03</div>
+                        <div class="step-content">
+                            <h3>The Single JavaScript Toggle</h3>
+                            <p>
+                                A click listener on <code>.more-button</code> simply calls
+                                <code>classList.toggle('active')</code> on <code>.list-container</code>.
+                                That's the only JavaScript in the entire project — every visual state change
+                                from here on is driven purely by the presence or absence of the
+                                <code>active</code> class.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">04</div>
+                        <div class="step-content">
+                            <h3>Revealing the Menu with Scale &amp; Opacity</h3>
+                            <p>
+                                When <code>.list-container.active</code> is present, the
+                                <code>.more-button-list</code> rule sets <code>opacity: 1</code> and
+                                <code>transform: scale(1)</code>. Combined with the
+                                <code>transition: all 0.3s ease 0.1s</code> defined on the base class, the
+                                menu smoothly grows from a single point into a full card.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">05</div>
+                        <div class="step-content">
+                            <h3>Staggering the List Items with fadeInItem</h3>
+                            <p>
+                                Each <code>.more-button-list-item</code> starts at <code>opacity: 0</code> and
+                                <code>transform: translateX(-10px)</code>. When active, the
+                                <code>fadeInItem</code> keyframe animation runs on every item with a base
+                                delay of <code>0.2s</code>, while <code>nth-child(2)</code> through
+                                <code>nth-child(4)</code> override the delay to <code>0.4s</code>,
+                                <code>0.6s</code>, and <code>0.8s</code> — producing the cascading entrance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">06</div>
+                        <div class="step-content">
+                            <h3>Morphing the Hamburger into an X</h3>
+                            <p>
+                                On activation, <code>.menu-icon-wrapper</code> rotates
+                                <code>-45deg</code>. At the same time,
+                                <code>.menu-icon-line.first</code> rotates <code>-90deg</code> with
+                                <code>translateX(1px)</code>, and
+                                <code>.menu-icon-line.last</code> rotates <code>-90deg</code> with
+                                <code>translateX(-1px)</code>. The combined rotations realign the three
+                                short lines into a clean X shape.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">07</div>
+                        <div class="step-content">
+                            <h3>The onePulse Glow Animation</h3>
+                            <p>
+                                The <code>onePulse</code> keyframe animates the button's
+                                <code>box-shadow</code> in three stages: it starts at the resting glow,
+                                expands to a much larger and more transparent ring at <code>50%</code>, then
+                                settles back to the resting glow at <code>100%</code>. It runs once,
+                                <code>forwards linear</code>, only when <code>.active</code> is applied —
+                                giving a satisfying "ping" feedback when the menu opens.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">08</div>
+                        <div class="step-content">
+                            <h3>Hover States &amp; the Delete Action</h3>
+                            <p>
+                                Regular menu items change <code>color</code> to the brand blue on hover and
+                                use an <code>::after</code> pseudo-element as a subtle divider line between
+                                items (hidden on the last item). The <code>#Delete</code> item gets its own
+                                <code>300ms</code> transition, growing to <code>width: 100%</code> with a
+                                translucent red background on hover to clearly mark it as a destructive
+                                action.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="warn-box">
+                    <strong>⚠️ Transform Origin Matters:</strong> If you change the position of
+                    <code>.more-button-list</code> (for example, anchoring it to the top-left instead of the
+                    bottom-right of the button), make sure to update <code>transform-origin</code> to match.
+                    Otherwise the scale animation will grow from the wrong corner and look visually broken.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- CUSTOMIZATION -->
+            <section id="customization">
+                <h2>Customization Ideas</h2>
+                <p>
+                    This floating action button menu is intentionally simple at its core, which makes it
+                    easy to adapt. Here are some practical ways to extend it for your own projects.
+                </p>
+                <ul>
+                    <li><strong>Change the accent color</strong> — Replace <code>#5c67ff</code> in
+                        <code>.more-button</code> and its <code>box-shadow</code> rules with your own brand
+                        color to instantly re-theme the component.
+                    </li>
+                    <li><strong>Add or remove menu items</strong> — Each
+                        <code>.more-button-list-item</code> is independent. Add new <code>&lt;li&gt;</code>
+                        elements with an icon and label, and increase
+                        <code>.more-button-list</code>'s <code>height</code> to fit them. Remember to add a
+                        matching <code>:nth-child()</code> delay rule for the new item to keep the stagger
+                        smooth.
+                    </li>
+                    <li><strong>Anchor the FAB to the viewport</strong> — Wrap
+                        <code>.list-container</code> in a wrapper with
+                        <code>position: fixed; bottom: 24px; right: 24px;</code> to pin the button to the
+                        corner of the screen like a true mobile FAB.
+                    </li>
+                    <li><strong>Swap the icons</strong> — The inline SVGs use the Feather icon style.
+                        Replace the <code>&lt;path&gt;</code> data with icons from Boxicons or any other
+                        SVG icon set while keeping the same <code>width</code>, <code>height</code>, and
+                        <code>stroke</code> attributes.
+                    </li>
+                    <li><strong>Adjust the pulse intensity</strong> — Tweak the spread values inside the
+                        <code>onePulse</code> keyframe (e.g. <code>0px 0px 0px 12px</code>) to make the ring
+                        larger, smaller, or more/less transparent.
+                    </li>
+                    <li><strong>Slow down or speed up the stagger</strong> — Increase or decrease the
+                        <code>animation-delay</code> values on each <code>:nth-child()</code> selector to
+                        make the cascade feel snappier or more dramatic.
+                    </li>
+                    <li><strong>Style the destructive action differently</strong> — Instead of an expanding
+                        red background on <code>#Delete</code>, try a shake animation or an icon color
+                        change to signal danger.</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Tip:</strong> Because the entire open/close state lives in one CSS class,
+                    you can reuse this exact pattern for tooltips, dropdown filters, or notification panels —
+                    just change what's inside <code>.more-button-list</code>.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- BROWSER COMPATIBILITY -->
+            <section id="browser-support">
+                <h2>Browser Compatibility</h2>
+                <p>
+                    Every technique used in this floating action button menu — CSS transforms, transitions,
+                    keyframe animations, pseudo-elements, and <code>classList.toggle()</code> — is
+                    well-established and supported across all modern browsers.
+                </p>
+
+                <table class="comparison-table" aria-label="Browser compatibility table">
+                    <thead>
+                        <tr>
+                            <th>Browser</th>
+                            <th>CSS Transforms &amp; Transitions</th>
+                            <th>Keyframe Animations</th>
+                            <th>Overall Support</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Chrome / Edge</strong></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Full</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Firefox</strong></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Full</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Safari (macOS &amp; iOS)</strong></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Full</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Samsung Internet</strong></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Full</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Internet Explorer 11</strong></td>
+                            <td><span class="badge badge-blue">Partial</span></td>
+                            <td><span class="badge badge-orange">No</span></td>
+                            <td><span class="badge badge-orange">Limited</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box">
+                    <strong>💡 Note:</strong> The project relies on standard CSS3 properties only — no
+                    vendor prefixes are needed for any current browser version. Internet Explorer 11 is
+                    effectively obsolete and not a practical target for new projects in 2026.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- PERFORMANCE & RESPONSIVENESS -->
+            <section id="performance">
+                <h2>Performance &amp; Responsiveness</h2>
+                <p>
+                    Because every animation in this component is handled by CSS — and specifically by
+                    properties the browser can composite on the GPU — it remains smooth even on lower-end
+                    devices.
+                </p>
+                <ul>
+                    <li><strong>GPU-friendly properties:</strong> <code>transform</code> and
+                        <code>opacity</code> drive the scale, fade, and rotation animations. These don't
+                        trigger layout recalculation or repaint, so the menu opens and closes at a
+                        consistent frame rate.
+                    </li>
+                    <li><strong>Minimal JavaScript:</strong> A single event listener with one line of code
+                        means there's virtually no scripting overhead — the browser's CSS engine does all
+                        the heavy lifting.</li>
+                    <li><strong>Small footprint:</strong> No external animation libraries or icon fonts are
+                        loaded; the icons are inline SVG, keeping the total page weight tiny.</li>
+                    <li><strong>Responsive by design:</strong> Because the component is sized in pixels
+                        relative to its container and anchored with absolute positioning, it scales
+                        predictably across mobile, tablet, and desktop viewports without extra media
+                        queries — though you can add a <code>position: fixed</code> wrapper for true
+                        mobile FAB behavior as described in the customization section.</li>
+                    <li><strong>Touch-friendly target size:</strong> The 50×50px button meets common
+                        accessibility guidelines for minimum touch target sizes, making it comfortable to
+                        tap on mobile screens.</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Key Takeaway:</strong> Sticking to <code>transform</code>,
+                    <code>opacity</code>, and <code>box-shadow</code> for animations — instead of properties
+                    like <code>width</code>, <code>height</code>, or <code>top</code>/<code>left</code> — is
+                    one of the most reliable ways to keep CSS animations smooth across devices.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- FAQ -->
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq">
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How do I create a floating action button that expands into a menu
+                            using CSS?
+                        </summary>
+                        <div class="faq-answer">
+                            Position a circular button inside a relatively positioned container, then place an
+                            absolutely positioned list next to it with <code>transform: scale(0)</code> and
+                            <code>opacity: 0</code> by default. Toggle an <code>active</code> class on the
+                            container with JavaScript when the button is clicked, and target
+                            <code>.active .more-button-list</code> in CSS to set
+                            <code>transform: scale(1)</code> and <code>opacity: 1</code> with a transition.
+                            Full source code is in the tabs above.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How does the hamburger icon morph into a close (X) icon?</summary>
+                        <div class="faq-answer">
+                            The menu icon is built from three short divs (lines) inside a wrapper. On the
+                            active state, the wrapper rotates <code>-45deg</code>, the first line rotates
+                            <code>-90deg</code> and shifts slightly via <code>translateX</code>, and the
+                            last line rotates <code>-90deg</code> in the opposite <code>translateX</code>
+                            direction. Combined, the three lines visually rearrange into an X shape — the
+                            classic hamburger-to-close animation, without swapping icons.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">What is the staggered fade-in animation for the list items and how
+                            does it
+                            work?
+                        </summary>
+                        <div class="faq-answer">
+                            Each list item starts with <code>opacity: 0</code> and is shifted
+                            <code>-10px</code> horizontally via <code>transform: translateX(-10px)</code>.
+                            When the container becomes active, the <code>fadeInItem</code> keyframe animation
+                            runs on every item, animating it to <code>translateX(0)</code> and
+                            <code>opacity: 1</code>. By giving each <code>nth-child</code> item a longer
+                            <code>animation-delay</code> (<code>0.2s</code>, <code>0.4s</code>,
+                            <code>0.6s</code>, <code>0.8s</code>), the items appear to cascade in one after
+                            another rather than all at once.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">What creates the pulsing ring effect around the button?</summary>
+                        <div class="faq-answer">
+                            The <code>onePulse</code> keyframe animation runs once on
+                            <code>.more-button</code> when the container becomes active. It animates the
+                            <code>box-shadow</code> from the button's resting glow, out to a much larger,
+                            more transparent ring at the <code>50%</code> mark, and back to the resting glow
+                            at <code>100%</code>. Because <code>box-shadow</code> is animatable, this creates
+                            a quick radar-style pulse that draws attention to the button as the menu opens.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Is this floating action button menu suitable for beginners?
+                        </summary>
+                        <div class="faq-answer">
+                            Yes. The entire interaction relies on a single JavaScript line that toggles a
+                            CSS class — everything else is CSS transitions, transforms, and keyframes. It's
+                            an excellent project for beginners who already understand basic CSS positioning
+                            and want to practice <code>transform-origin</code>, transitions, and
+                            <code>animation-delay</code> in a real, reusable UI component.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Can I use this floating action button menu in a real project?
+                        </summary>
+                        <div class="faq-answer">
+                            Absolutely. This pattern is common in mobile apps and admin dashboards for quick
+                            actions like Settings, Copy, Share, and Delete. To customize it, change the SVG
+                            icons, adjust the <code>.more-button-list</code> width/height to fit more or
+                            fewer items, update the color variables (<code>#5c67ff</code> for the primary
+                            color and the red hover for destructive actions), and reposition
+                            <code>.list-container</code> using <code>position: fixed</code> to anchor it to
+                            a corner of the viewport.
+                        </div>
+                    </details>
+
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- CONCLUSION -->
+            <section id="conclusion" class="conclusion">
+                <h2>Conclusion</h2>
+                <p>
+                    This <strong>animated floating action button menu</strong> proves how far pure CSS can go
+                    with just a single line of JavaScript as a trigger. By combining
+                    <strong>transform-based icon morphing</strong>, a <strong>box-shadow pulse</strong>,
+                    <strong>scale-and-fade reveals</strong>, and <strong>staggered keyframe delays</strong>,
+                    you get a polished, production-ready UI component that feels every bit as smooth as one
+                    built with a JavaScript animation library.
+                </p>
+                <p>
+                    The patterns here — toggling a single state class, anchoring transforms with
+                    <code>transform-origin</code>, and layering <code>animation-delay</code> for cascading
+                    effects — are reusable building blocks for dropdowns, tooltips, notification trays, and
+                    countless other small interactive components.
+                </p>
+                <p>
+                    Want to keep exploring CSS animation techniques? Check out the
+                    <a href="Project13.html" style="color:var(--premcolo);">Neon Cursor Animation</a> for
+                    advanced pointer effects, or the
+                    <a href="Project39.html" style="color:var(--premcolo);">Animated Button with Star Effects</a>
+                    for more GSAP-powered micro-interactions.
+                </p>
+                <p style="color:var(--text-muted); font-size:14px; margin-bottom:0;">
+                    Found this useful? Explore more HTML CSS JavaScript projects in the sidebar.
+                </p>
+            </section>
+
+        </main>
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar" aria-label="Related projects">
+            <div class="sidebar-box">
+                <div class="sidebar-header">🔗 Related Projects</div>
+                <div class="related-list">
+                    <a class="related-card" href="Project40.html"
+                        aria-label="Advanced JavaScript Image Slider with GSAP">
+                        <img src="https://i.suar.me/Ep114/m"
+                            alt="Advanced JavaScript image slider with GSAP split-panel animation" loading="lazy"
+                            width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Advanced JavaScript Image Slider — GSAP Animation</div>
+                    </a>
+                    <a class="related-card" href="Project13.html" aria-label="Neon Cursor Animation">
+                        <img src="https://77cod-ing.github.io/image%20copy%2036.png"
+                            alt="Neon Cursor Animation CSS JavaScript" loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Neon Cursor Animation — CSS &amp; JavaScript</div>
+                    </a>
+                    <a class="related-card" href="Project39.html" aria-label="Animated Button with Star Effects">
+                        <img src="https://i.suar.me/jvZZv/m"
+                            alt="Creative Animated Button with Star Effects Using HTML CSS" loading="lazy" width="280"
+                            height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Animated Button with Star Effects — HTML &amp; CSS</div>
+                    </a>
+                    <a class="related-card" href="Project23.html" aria-label="Animated Login and Signup Page">
+                        <img src="https://77cod-ing.github.io/image%20copy%2075.png"
+                            alt="Animated Login and Signup Page HTML CSS JavaScript" loading="lazy" width="280"
+                            height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Animated Login &amp; Signup Page — HTML CSS JS</div>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- ===== PREVIEW MODAL ===== -->
+    <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+        aria-label="Live preview of the floating action button menu">
+        <div class="preview-modal">
+            <div class="preview-modal-header">
+                <div class="preview-modal-title">
+                    <i class='bx bx-show'></i>
+                    <strong>Live Preview</strong> — Animated Floating Action Button Menu
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <div class="preview-dots">
+                        <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+                        <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+                        <button class="preview-dot green" aria-label="Maximize" disabled></button>
+                    </div>
+                    <button class="preview-close-btn" id="previewCloseBtn">
+                        <i class='bx bx-x'></i> Close
+                    </button>
+                </div>
+            </div>
+            <div class="preview-iframe-wrap">
+                <div class="preview-loading" id="previewLoading">
+                    <div class="preview-spinner"></div>
+                    <span class="preview-loading-text">Loading preview...</span>
+                    <div class="preview-loading-files">
+                        <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+                        <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+                        <span class="preview-file-tag js-tag" id="tagJS">JS</span>
+                    </div>
+                </div>
+                <iframe id="previewIframe" title="Preview of animated floating action button menu"
+                    sandbox="allow-scripts allow-same-origin"></iframe>
+                <div class="preview-hint" id="previewHint">
+                    <i class='bx bx-cursor'></i> Click the round button to open the menu
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        /*
+          ============================================
+            Gist URLs — update with the actual Gist raw URL for this project
+          ============================================
+        */
+        const gistBase = "https://gist.githubusercontent.com/77cod-ing/010820ead0f3fa1994bc66965e82296b/raw/";
+
+        const htmlUrl = gistBase + "index.html";
+        const cssUrl = gistBase + "style.css";
+        const jsUrl = gistBase + "script.js";
+
+        let cachedHTML = "";
+        let cachedCSS = "";
+        let cachedJS = "";
+
+        async function loadCode(url, elementId, lang) {
+            try {
+                const res = await fetch(url);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const text = await res.text();
+                const el = document.getElementById(elementId);
+                el.textContent = text;
+                el.className = `language-${lang}`;
+                Prism.highlightElement(el);
+                if (lang === "html") cachedHTML = text;
+                if (lang === "css") cachedCSS = text;
+                if (lang === "js") cachedJS = text;
+            } catch (e) {
+                const el = document.getElementById(elementId);
+                if (el) el.textContent = `/* Failed to load: ${e.message} */`;
+            }
+        }
+
+        loadCode(htmlUrl, "code1", "html");
+        loadCode(cssUrl, "code2", "css");
+        loadCode(jsUrl, "code3", "js");
+
+        /* ===== Tabs ===== */
+        document.querySelectorAll(".code-tab").forEach(tab => {
+            tab.addEventListener("click", () => {
+                const lang = tab.dataset.lang;
+                document.querySelectorAll(".code-tab").forEach(t => {
+                    t.classList.remove("active");
+                    t.setAttribute("aria-selected", "false");
+                });
+                document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+                tab.classList.add("active");
+                tab.setAttribute("aria-selected", "true");
+                const panelMap = { html: "panel-html", css: "panel-css", js: "panel-js" };
+                document.getElementById(panelMap[lang]).classList.add("active");
+            });
+        });
+
+        /* ===== Copy buttons ===== */
+        document.querySelectorAll(".copy-btn").forEach(btn => {
+            btn.addEventListener("click", async () => {
+                const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+                if (!code) return;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+                    btn.classList.add("copied");
+                    setTimeout(() => {
+                        btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
+                        btn.classList.remove("copied");
+                    }, 2000);
+                } catch { btn.textContent = "Error"; }
+            });
+        });
+
+        /* ===== Countdown timer ===== */
+        let seconds = 5;
+        const countdownDisplay = document.getElementById("countdownDisplay");
+        const gistLinkWrapper = document.getElementById("gistLinkWrapper");
+
+        const countdownInterval = setInterval(() => {
+            seconds--;
+            countdownDisplay.textContent = String(seconds).padStart(2, "0");
+            if (seconds <= 0) {
+                clearInterval(countdownInterval);
+                gistLinkWrapper.classList.add("visible");
+                countdownDisplay.style.display = "none";
+                document.querySelector(".countdown-label").textContent = "✅ Source Code Available";
+            }
+        }, 1000);
+
+        /* ===== Preview modal ===== */
+        const previewOverlay = document.getElementById("previewOverlay");
+        const previewIframe = document.getElementById("previewIframe");
+        const previewLoading = document.getElementById("previewLoading");
+        const previewHint = document.getElementById("previewHint");
+        const previewBtn = document.getElementById("previewBtn");
+        const previewCloseBtn = document.getElementById("previewCloseBtn");
+        const previewDotClose = document.getElementById("previewDotClose");
+        const tagHTML = document.getElementById("tagHTML");
+        const tagCSS = document.getElementById("tagCSS");
+        const tagJS = document.getElementById("tagJS");
+
+        function openPreview() {
+            previewOverlay.classList.add("open");
+            document.body.style.overflow = "hidden";
+            previewLoading.classList.remove("hidden");
+            previewHint.classList.remove("show");
+            previewBtn.classList.add("loading");
+            tagHTML.classList.remove("loaded");
+            tagCSS.classList.remove("loaded");
+            tagJS.classList.remove("loaded");
+            buildPreview();
+        }
+
+        function closePreview() {
+            previewOverlay.classList.remove("open");
+            document.body.style.overflow = "";
+            previewIframe.srcdoc = "";
+            previewBtn.classList.remove("loading");
+        }
+
+        async function buildPreview() {
+            if (cachedHTML && cachedCSS && cachedJS) {
+                tagHTML.classList.add("loaded");
+                tagCSS.classList.add("loaded");
+                tagJS.classList.add("loaded");
+                injectPreview(cachedHTML, cachedCSS, cachedJS);
+                return;
+            }
+            try {
+                const fetches = [];
+                if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
+                if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
+                if (!cachedJS) fetches.push(fetch(jsUrl).then(r => r.text()).then(t => { cachedJS = t; tagJS.classList.add("loaded"); }));
+                if (cachedHTML) tagHTML.classList.add("loaded");
+                if (cachedCSS) tagCSS.classList.add("loaded");
+                if (cachedJS) tagJS.classList.add("loaded");
+                await Promise.all(fetches);
+                injectPreview(cachedHTML, cachedCSS, cachedJS);
+            } catch (e) {
+                previewLoading.innerHTML = `
+          <i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i>
+          <span class="preview-loading-text" style="color:var(--accent2);">Failed to load preview: ${e.message}</span>
+        `;
+                previewBtn.classList.remove("loading");
+            }
+        }
+
+        function injectPreview(html, css, js) {
+            let combined = html;
+            if (combined.includes('<link') && /style\.css/i.test(combined)) {
+                combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
+            } else if (combined.includes("</head>")) {
+                combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
+            } else {
+                combined = `<style>${css}</style>\n${combined}`;
+            }
+            if (combined.includes('<script') && /script\.js/i.test(combined)) {
+                combined = combined.replace(/<script[^>]*src=["'][^"']*script\.js["'][^>]*><\/script>/gi, `<script>${js}<\/script>`);
+            } else if (combined.includes("</body>")) {
+                combined = combined.replace("</body>", `<script>${js}<\/script>\n</body>`);
+            } else {
+                combined = `${combined}\n<script>${js}<\/script>`;
+            }
+            previewIframe.srcdoc = combined;
+            previewIframe.addEventListener("load", function onLoad() {
+                previewLoading.classList.add("hidden");
+                previewBtn.classList.remove("loading");
+                setTimeout(() => {
+                    previewHint.classList.add("show");
+                    setTimeout(() => previewHint.classList.remove("show"), 4000);
+                }, 300);
+                previewIframe.removeEventListener("load", onLoad);
+            });
+        }
+
+        previewBtn.addEventListener("click", openPreview);
+        previewCloseBtn.addEventListener("click", closePreview);
+        previewDotClose.addEventListener("click", closePreview);
+        previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+        document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
+    </script>
+
+</body>
+
+</html>
