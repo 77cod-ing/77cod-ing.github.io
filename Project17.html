@@ -1,321 +1,1375 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== PRIMARY SEO META ===== -->
+  <title>Skewed Navigation Menu — HTML & CSS Tutorial 2026 | Free Code</title>
+  <meta name="description"
+    content="Learn how to create a modern skewed navigation menu with 3D hover effects using pure HTML and CSS. Step-by-step tutorial with full free source code. No JavaScript required.">
+  <meta name="keywords"
+    content="skewed navigation menu, CSS skew transform, 3D navigation bar, CSS hover animation, modern UI menu design, interactive navigation CSS, CSS transform skewX skewY, angled menu items, creative web navigation, responsive CSS menu">
+  <meta name="author" content="77cod-ing">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://77cod-ing.github.io/Project50.html">
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Skewed Navigation Menu — HTML & CSS Tutorial 2026">
+  <meta property="og:description"
+    content="Build a modern skewed navigation menu with 3D tilt hover effects using pure HTML and CSS. No JavaScript needed. Full free source code included.">
+  <meta property="og:image" content="https://77cod-ing.github.io/Skewed.Navigation.Menu.png">
+  <meta property="og:url" content="https://77cod-ing.github.io/Project50.html">
+  <meta property="og:site_name" content="77cod-ing">
+  <meta property="article:published_time" content="2026-04-28T00:00:00Z">
+  <meta property="article:modified_time" content="2026-05-10T00:00:00Z">
+  <meta property="article:author" content="77cod-ing">
+  <meta property="article:section" content="CSS Tutorials">
+  <meta property="article:tag" content="HTML, CSS, Navigation, Transform, UI Design">
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Skewed Navigation Menu — HTML & CSS Tutorial">
+  <meta name="twitter:description"
+    content="Create a modern skewed navigation menu with 3D hover effects using HTML & CSS only. Free source code.">
+  <meta name="twitter:image" content="https://77cod-ing.github.io/Skewed.Navigation.Menu.png">
+
+  <!-- ===== SCHEMA: TechArticle ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Skewed Navigation Menu with 3D Hover Effects Using HTML & CSS",
+    "description": "A complete step-by-step tutorial on building a modern skewed navigation menu with CSS transform skew and 3D hover effects — no JavaScript required.",
+    "image": "https://77cod-ing.github.io/Skewed.Navigation.Menu.png",
+    "datePublished": "2026-04-28",
+    "dateModified": "2026-05-10",
+    "author": {
+      "@type": "Person",
+      "name": "77cod-ing",
+      "url": "https://77cod-ing.github.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "77cod-ing",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Picture1.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://77cod-ing.github.io/Project50.html"
+    },
+    "articleSection": "CSS Tutorials",
+    "keywords": "skewed navigation menu, CSS skew transform, 3D navigation bar, CSS hover animation, modern UI menu",
+    "timeRequired": "PT15M",
+    "educationalLevel": "Beginner",
+    "teaches": ["CSS Transforms", "CSS Skew", "CSS Transitions", "CSS Hover Effects", "CSS Box Shadow", "Responsive Navigation"]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: HowTo ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Create a Skewed Navigation Menu Using HTML & CSS",
+    "description": "Step-by-step guide to building a modern skewed navigation menu with angled backgrounds and 3D hover tilt effects.",
+    "image": "https://77cod-ing.github.io/Skewed.Navigation.Menu.png",
+    "totalTime": "PT15M",
+    "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "0"},
+    "supply": [
+      {"@type": "HowToSupply", "name": "Text editor (VS Code)"},
+      {"@type": "HowToSupply", "name": "A modern web browser"}
+    ],
+    "tool": [
+      {"@type": "HowToTool", "name": "HTML"},
+      {"@type": "HowToTool", "name": "CSS"}
+    ],
+    "step": [
+      {"@type": "HowToStep", "name": "Set Up the Navigation HTML", "text": "Create a <nav> element containing a list of links, each wrapped in a container div that will receive the skew transform.", "position": 1},
+      {"@type": "HowToStep", "name": "Apply Skew Transform", "text": "Use transform: skewX(-15deg) on each menu item container to angle the background, then apply the inverse skew to the text inside so it remains readable.", "position": 2},
+      {"@type": "HowToStep", "name": "Style the Base Menu", "text": "Set background colors, padding, font styling, and box-shadow for the resting state of each menu item.", "position": 3},
+      {"@type": "HowToStep", "name": "Add Hover Animation", "text": "On :hover, reset the skew to 0deg and add a translateY(-3px) lift with an enhanced box-shadow for a 3D pop effect.", "position": 4},
+      {"@type": "HowToStep", "name": "Add Smooth Transitions", "text": "Apply CSS transitions with cubic-bezier timing to each menu item for a smooth, springy hover animation.", "position": 5},
+      {"@type": "HowToStep", "name": "Make It Responsive", "text": "Use media queries to stack menu items vertically on smaller screens and adjust skew angles for better mobile readability.", "position": 6}
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: FAQ ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I create a skewed navigation menu without JavaScript?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. This tutorial uses only HTML and CSS — no JavaScript at all. The entire skew effect and 3D hover animation is powered by CSS transform: skew() combined with transition and :hover pseudo-class."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does CSS skew work on navigation items?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The transform: skewX() or skewY() function tilts an element along the X or Y axis. When applied to a menu item container, it angles the background. The text inside receives the inverse skew (e.g., skewX(15deg) to counter a parent skewX(-15deg)) so the text stays upright and readable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I change the skew angle of the menu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Adjust the value inside skewX() or skewY(). For example, skewX(-20deg) creates a steeper angle. Remember to update the inverse skew on the inner text element to match, so the text remains straight."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will skewed menus affect my page's Core Web Vitals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. CSS transforms including skew are GPU-composited and do not trigger layout recalculation. They have virtually no impact on CLS, LCP, or INP when used correctly on navigation elements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this skewed navigation work on mobile devices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The menu is fully responsive. On smaller screens, media queries adjust the layout to a vertical stack and may reduce or remove the skew angle for better tap target alignment and readability on touch devices."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I add prefers-reduced-motion support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wrap your transition declarations inside a @media (prefers-reduced-motion: no-preference) block. This disables hover animations for users who have requested reduced motion in their operating system accessibility settings."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: BreadcrumbList ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+      {"@type": "ListItem", "position": 3, "name": "Skewed Navigation Menu", "item": "https://77cod-ing.github.io/Project50.html"}
+    ]
+  }
+  </script>
+
+  <!-- ===== ASSETS ===== -->
   <link rel="icon" type="image/png" href="Picture1.png">
-  <title>Create a Skewed Navigation Menu — HTML/CSS</title>
-  <meta name="description" content="Skewed navigation menu, interactive menu design, CSS 3D effects, hover animation, responsive web design, modern UI navigation.">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+  <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
-     crossorigin="anonymous"></script>
-   <style>
-     *{
+    crossorigin="anonymous"></script>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      overflow-x: hidden;
-    }
-    body {
-      background: linear-gradient(to right, #2c0e43 10%, #581c87);
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
     }
 
+    :root {
+      --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+      --premcolo: #00d9ff;
+      --accent2: #ff6b35;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --surface: rgba(255, 255, 255, 0.04);
+      --surface-hover: rgba(0, 217, 255, 0.07);
+      --border: rgba(255, 255, 255, 0.08);
+      --font-head: 'Space Mono', monospace;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--back);
+      font-family: var(--font-body);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    /* ===== NAVBAR ===== */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 50px;
-      padding: 0 2rem;
-      background-color: #0d1325;
+      height: 56px;
+      padding: 0 2.5rem;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      font-size: 22px;
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 2vw, 1.2rem);
       font-weight: bold;
       color: white;
       text-decoration: none;
+      gap: 8px;
     }
 
     .logo-icon {
-      color: #a855f7;
-      font-size: 26px;
-      margin-right: 8px;
-      letter-spacing: 2.5px;
+      color: var(--premcolo);
+      letter-spacing: 2px;
     }
 
     .nav-links {
       display: flex;
-      gap: 35px;
+      gap: clamp(1rem, 2vw, 2rem);
+      align-items: center;
     }
 
     .nav-links a {
-      color: #d1d5db;
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.25s;
     }
 
     .nav-links a:hover {
-      color: #a855f7;
-      transform: scale(1.2);
+      color: var(--premcolo);
     }
-    /*linke*/
-    .con1 {
-      font-family: Arial, sans-serif;
+
+
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      padding: 12px 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb ol {
       display: flex;
-      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      list-style: none;
       align-items: center;
-      flex-direction: column;
-      margin: auto 0;
-      height: 50vh;
-    }
-    .countdown {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00ffcc;
     }
 
-    .link-box {
-      display: none;
-      padding: 20px 40px;
-      background: #1e2a47;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-      transition: 0.3s;
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 13px;
     }
 
-    .link-box a {
+    .breadcrumb li+li::before {
+      content: "›";
+      color: var(--premcolo);
+      margin-right: 6px;
+      font-size: 1.1rem;
+    }
+
+    .breadcrumb a {
+      color: var(--text-muted);
       text-decoration: none;
-      color: #00ffcc;
-      font-size: 1.2rem;
-      font-weight: bold;
+      transition: color 0.2s;
     }
 
-    .link-box:hover {
-      background: #26385c;
-      transform: scale(1.05);
+    .breadcrumb a:hover {
+      color: var(--premcolo);
     }
-    /**ret**/
-    .Ret{
-      margin: 5px 0 0 3rem;
-      width: max-content;
+
+    .breadcrumb [aria-current="page"] {
+      color: var(--premcolo);
+      font-weight: 600;
     }
-    .Ret a {
-      font-size: 2rem;
-      text-decoration: none;
-      color: #ffffff;
-    }
-    .Ret a span{
+
+    /* ===== BACK BUTTON ===== */
+    .back-link {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
-      width: 38px;
-      height: 38px;
-      border: 2px solid #fff;
-      border-radius: 50%;
-    }
-    .Ret a:hover {
-  color: #00e1ff;
-}
-    .Ret a:hover span {
-  border-color: #00e1ff;
-}
-    /**img**/
-    .img{
-      display: flex;
-      justify-content: center;
-      margin: 2rem auto;
-    }
-    .img img{
-      border-radius: 8px;
-      max-width: 100vw;
-    width: 70vw;
-    height: 65vh;
-    }
-    /**par**/
-    .par{
-       font-family: Arial, sans-serif;
-      line-height: 1.7;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      color: #ffffff;
-    }
-    h1, h2, h3 {
-      color: #00c8ff;
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
-    h2 {
-      margin-top: 35px;
-      font-size: 1.6rem;
-    }
-    h3 {
-      margin-top: 25px;
-      font-size: 1.3rem;
-    }
-    p {
-      margin-bottom: 18px;
-    }
-    ul {
-      margin: 15px 0;
-      padding-left: 25px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .highlight {
-      background: #000000;
-      padding: 8px 12px;
-      border-left: 4px solid #0073e6;
-      margin: 20px 0;
-    }
-    /**respon**/
-    @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .img img{
-    max-width: 100vw;
-    width: 90vw;
-    }
-  }
-         /**respon1**/
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hamburger .scrolled {
-      background: rgba(255, 255, 255, 0.7);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-}
-
-    .hamburger span {
-      width: 28px;
-      height: 3px;
-      background: white;
-      transition: all 0.3s ease;
-    }
-
-    /* ====== القائمة المنبثقة ====== */
-    .mobile-menu {
-      position: fixed;
-      top:0;
-      left: -100%;
-      width: 100%;
-      height: 100vh;
-      padding-top: 0.5rem ;
-      background: rgb(53, 53, 53);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 35px;
-      transition: left 0.5s ease;
-      z-index: 999;
-    }
-
-    .mobile-menu.active {
-      left: 0;
-    }
-
-    .mobile-menu a {
-      color: white;
-      font-size: 22px;
-      width: 100%;
-      height: 3rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      color: var(--text);
       text-decoration: none;
-      border-bottom: 0.5px solid #fff;
-      transition: color 0.3s;
+      font-size: 14px;
+      transition: all 0.2s;
+      margin: 1rem 2.5rem;
     }
 
-    .mobile-menu a:hover {
-      color: #ffffff;
-      background: rgba(104, 104, 104, 0.508);
-      backdrop-filter: bulur(20px);
+    .back-link:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
     }
 
-    /* ====== زر الإغلاق (X) ====== */
-    .close-btn {
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 3rem 2.5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero::before {
+      content: '';
       position: absolute;
-      top: 20px;
-      right: 25px;
-      font-size: 30px;
-      color: white;
-      cursor: pointer;
-      width: 35px;
-      height: 35px;
+      top: -80px;
+      right: -80px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-meta {
       display: flex;
-      justify-content: center;
       align-items: center;
-      border: 2px solid #fff;
-      background: rgb(88, 88, 88);
+      gap: 12px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-head);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .tag-tutorial {
+      background: rgba(0, 217, 255, 0.12);
+      color: var(--premcolo);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+    }
+
+    .tag-css {
+      background: rgba(0, 217, 255, 0.08);
+      color: #7dd3fc;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+    }
+
+    .tag-nojs {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    .tag-level {
+      background: rgba(255, 107, 53, 0.1);
+      color: var(--accent2);
+      border: 1px solid rgba(255, 107, 53, 0.2);
+    }
+
+    .read-time {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      color: var(--premcolo);
+    }
+
+    .hero-lead {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      color: var(--premcolo);
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      display: block;
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem;
+      align-items: start;
+    }
+
+    /* ===== ARTICLE ===== */
+    .article-body h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: var(--premcolo);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 80px;
+    }
+
+    .article-body h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: #7dd3fc;
+      margin: 1.8rem 0 0.75rem;
+      scroll-margin-top: 80px;
+    }
+
+    .article-body p {
+      margin-bottom: 1.1rem;
+      color: var(--text);
+    }
+
+    .article-body code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .article-body ul,
+    .article-body ol {
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .article-body li {
+      margin-bottom: 9px;
+    }
+
+    .article-body li strong {
+      color: #fff;
+    }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .toc-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--premcolo);
+      margin-bottom: 0.75rem;
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--premcolo);
+    }
+
+    /* ===== FEATURE CARDS ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(0, 217, 255, 0.3);
+      background: var(--surface-hover);
+    }
+
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .feature-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .feature-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ===== STEPS ===== */
+    .steps {
+      margin: 1.5rem 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      width: 44px;
+      height: 44px;
+      background: rgba(0, 217, 255, 0.1);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      color: var(--premcolo);
+      font-size: 1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+
+    .step-content p {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* ===== PRACTICE GRID ===== */
+    .practice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .practice-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+    }
+
+    .practice-card-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+    }
+
+    .practice-card.do {
+      border-left: 3px solid #4ade80;
+    }
+
+    .practice-card.do .practice-card-title {
+      color: #4ade80;
+    }
+
+    .practice-card.dont {
+      border-left: 3px solid var(--accent2);
+    }
+
+    .practice-card.dont .practice-card-title {
+      color: var(--accent2);
+    }
+
+    .practice-card ul {
+      padding-left: 1.1rem;
+      margin: 0;
+    }
+
+    .practice-card li {
+      font-size: 13px;
+      margin-bottom: 6px;
+      color: var(--text-muted);
+    }
+
+    /* ===== CODE SECTION ===== */
+    .code-section {
+      margin: 2rem 0;
+      width: 60vw;
+    }
+
+    .code-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .code-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .code-tab {
+      padding: 8px 20px;
+      border-radius: 8px 8px 0 0;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .code-tab.active {
+      background: #1e1e2f;
+      color: #fff;
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .code-tab[data-lang="html"].active {
+      color: #ff6600;
+    }
+
+    .code-tab[data-lang="css"].active {
+      color: #00ffff;
+    }
+
+    /* ===== PREVIEW BUTTON ===== */
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.3px;
+    }
+
+    .preview-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .preview-btn:hover {
+      border-color: var(--premcolo);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .preview-btn:hover::before {
+      opacity: 1;
+    }
+
+    .preview-btn:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .preview-btn i {
+      font-size: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn.loading i {
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .code-panels {
+      position: relative;
+    }
+
+    .code-box {
+      background: #1e1e2f;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 0 12px 12px 12px;
+      position: relative;
+      display: none;
+    }
+
+    .code-box.active {
+      display: block;
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-lang-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    .copy-btn.copied {
+      color: #4ade80;
+      border-color: #4ade80;
+    }
+
+    :not(pre)>code[class*="language-"],
+    pre[class*="language-"] {
+      width: 100%;
+      max-width: 100%;
+      height: 50vh;
+      border-radius: 0 0 12px 12px;
+      overflow-y: auto;
+      overflow-x: auto;
+      margin: 0;
+    }
+
+    pre::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    pre::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    pre::-webkit-scrollbar-thumb {
+      background: var(--premcolo);
+      border-radius: 10px;
+    }
+
+    /* ===== INFO / WARN ===== */
+    .info-box {
+      background: rgba(0, 217, 255, 0.06);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-left: 4px solid var(--premcolo);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .info-box strong {
+      color: var(--premcolo);
+    }
+
+    .warn-box {
+      background: rgba(255, 107, 53, 0.06);
+      border: 1px solid rgba(255, 107, 53, 0.2);
+      border-left: 4px solid var(--accent2);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .warn-box strong {
+      color: var(--accent2);
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      margin: 1.5rem 0;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      background: var(--surface);
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s;
+      list-style: none;
+      user-select: none;
+    }
+
+    .faq-question:hover {
+      background: var(--surface-hover);
+    }
+
+    .faq-question::after {
+      content: "+";
+      font-size: 1.3rem;
+      color: var(--premcolo);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    details[open] .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 1rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-answer code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* ===== CONCLUSION ===== */
+    .conclusion {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.07), rgba(0, 140, 160, 0.05));
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .conclusion h2 {
+      border: none;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      position: sticky;
+      top: 72px;
+    }
+
+    .sidebar-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-header {
+      padding: 14px 16px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--premcolo);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .related-list {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .related-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/9;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .related-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .related-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    .related-card-title {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* ===== PREVIEW MODAL ===== */
+    .preview-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 5, 15, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+    }
+
+    .preview-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .preview-modal {
+      width: 92vw;
+      max-width: 860px;
+      height: 75vh;
+      max-height: 580px;
+      background: #0a0e1a;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow:
+        0 0 0 1px rgba(0, 217, 255, 0.06),
+        0 24px 80px rgba(0, 0, 0, 0.7),
+        0 0 120px rgba(0, 217, 255, 0.06);
+      transform: scale(0.92) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .preview-overlay.open .preview-modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .preview-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+    }
+
+    .preview-modal-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-modal-title i {
+      color: var(--premcolo);
+      font-size: 16px;
+    }
+
+    .preview-modal-title strong {
+      color: #fff;
+    }
+
+    .preview-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .preview-dot {
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
-      transition: transform 0.3s ease;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, filter 0.2s;
     }
 
-    .close-btn:hover {
-      transform: rotate(90deg);
-      color: #00e1ff;
+    .preview-dot:hover {
+      transform: scale(1.2);
+      filter: brightness(1.3);
     }
 
-    /* ====== استجابة الهاتف ====== */
-    @media (max-width: 910px) {
+    .preview-dot.red {
+      background: #ff5f57;
+    }
+
+    .preview-dot.yellow {
+      background: #febc2e;
+    }
+
+    .preview-dot.green {
+      background: #28c840;
+    }
+
+    .preview-close-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .preview-close-btn:hover {
+      border-color: var(--accent2);
+      color: var(--accent2);
+      background: rgba(255, 107, 53, 0.08);
+    }
+
+    .preview-iframe-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .preview-iframe-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      background: #000;
+    }
+
+    .preview-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: #0a0e1a;
+      z-index: 2;
+      transition: opacity 0.4s;
+    }
+
+    .preview-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .preview-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(0, 217, 255, 0.15);
+      border-top-color: var(--premcolo);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    .preview-loading-text {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .preview-hint {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 16px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      color: var(--text-muted);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s 0.8s;
+      white-space: nowrap;
+      z-index: 3;
+    }
+
+    .preview-hint.show {
+      opacity: 1;
+    }
+
+    .preview-hint i {
+      color: var(--premcolo);
+      margin-right: 4px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1.25rem;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .related-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .related-card {
+        flex: 1 1 calc(50% - 8px);
+      }
+
+      .hero {
+        padding: 2rem 1.25rem 1.5rem;
+      }
+
+      .navbar {
+        padding: 0 1.25rem;
+      }
+
+      .breadcrumb {
+        padding: 10px 1.25rem;
+      }
+
+      .back-link {
+        margin: 0.75rem 1.25rem;
+      }
+
+      .practice-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .code-section {
+        width: 85vw;
+      }
+
+      .preview-modal {
+        width: 96vw;
+        height: 70vh;
+        max-height: 500px;
+        border-radius: 14px;
+      }
+    }
+
+    @media (max-width: 640px) {
       .nav-links {
         display: none;
       }
 
-      .hamburger {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hamburger.scrolled {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      background: rgb(65, 65, 65);
-}
+
+      .hero-stats {
+        gap: 1.2rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .code-tab {
+        padding: 7px 13px;
+        font-size: 12px;
+      }
+
+      .related-card {
+        flex: 1 1 100%;
+      }
+
+      .code-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .preview-modal {
+        width: 98vw;
+        height: 65vh;
+        border-radius: 12px;
+      }
+
+      .preview-modal-header {
+        padding: 10px 14px;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .preview-hint {
+        font-size: 10px;
+        padding: 5px 12px;
+      }
     }
   </style>
 </head>
+
 <body>
-<header class="navbar">
-    <a href="#" class="logo">
-      <span class="logo-icon">{ / }</span> 77cod_ing
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">{ / }</span> 77cod-ing
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
@@ -324,173 +1378,677 @@
       <a href="Terms & Conditions.html">Terms & Conditions</a>
     </nav>
   </header>
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+
+
+
+
+
+  <!-- ===== BREADCRUMB ===== -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
+      <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+      <li><span aria-current="page">Skewed Navigation Menu</span></li>
+    </ol>
+  </nav>
+
+  <!-- ===== BACK BUTTON ===== -->
+  <a href="projects.html#menu" class="back-link" aria-label="Return to Projects">
+    <i class='bx bx-arrow-back'></i> Return to Projects
+  </a>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="main-heading">
+    <div class="hero-meta">
+      <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+      <span class="tag tag-css">CSS</span>
+      <span class="tag tag-nojs">No JavaScript</span>
+      <span class="tag tag-level">Beginner</span>
+      <span class="read-time"><i class='bx bx-time'></i> ~12 min read</span>
     </div>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <span class="close-btn" id="closeBtn">&times;</span>
-    <a href="index.html"style="border-top: 2px solid #fff;height: 5rem;">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html" style="border-bottom: 2px solid #fff;">Terms & Conditions</a>
+    <h1 id="main-heading">
+      Create a <span>Skewed Navigation</span><br>Menu — HTML & CSS
+    </h1>
+
+    <p class="hero-lead">
+      A complete beginner-friendly tutorial to build a modern skewed navigation menu with angled backgrounds
+      and 3D hover tilt effects using only HTML and CSS. No JavaScript, no libraries. Pure CSS transform
+      and transition powered. Full free source code included.
+    </p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value">6</span>
+        <span class="stat-label">Build Steps</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">0 JS</span>
+        <span class="stat-label">Dependencies</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">CSS</span>
+        <span class="stat-label">Only</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">Free</span>
+        <span class="stat-label">Source Code</span>
+      </div>
+    </div>
+
+    <img src="image copy 50.png"
+      alt="Skewed navigation menu with angled backgrounds and 3D hover effects built using HTML and CSS"
+      class="hero-img" width="1200" height="420" loading="eager" fetchpriority="high">
+    <p class="img-caption">Final result: a skewed navigation menu with 3D hover tilt effects — pure HTML & CSS, no
+      JavaScript</p>
+  </section>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <div class="layout">
+
+    <!-- ===== ARTICLE ===== -->
+    <main class="article-body" id="main-content">
+
+      <!-- TOC -->
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-title">📋 Contents</p>
+        <ol>
+          <li><a href="#overview">What You'll Build</a></li>
+          <li><a href="#features">Key Features</a></li>
+          <li><a href="#source-code">Full Source Code</a></li>
+          <li><a href="#how-it-works">How It Works — Step by Step</a></li>
+          <li><a href="#best-practices">Best Practices & Mistakes to Avoid</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </nav>
+
+      <!-- OVERVIEW -->
+      <section id="overview">
+        <h2>What You'll Build</h2>
+        <p>
+          In this tutorial, you'll create a <strong><a href="Project50.html" style="color: rgb(0, 255, 255);"><i
+                class='bx bx-link-alt'></i> modern skewed navigation menu</a></strong> using
+          only HTML and CSS — no JavaScript required. Each menu item has an angled background created
+          with <code>transform: skew()</code>, and hovering over an item triggers a smooth 3D tilt-back
+          animation with enhanced box-shadow for a pop effect.
+        </p>
+        <p>
+          This is a perfect beginner project for mastering <strong>CSS transforms</strong>,
+          <strong>CSS transitions</strong>, <strong>inverse skew technique</strong>, and the
+          <code>:hover</code> pseudo-class — skills that apply directly to real-world UI components
+          like website headers, landing page navigation, and dashboard sidebars.
+        </p>
+        <div class="info-box">
+          <strong>💡 Quick Summary:</strong> Each menu item container is styled with <code>transform: skewX()</code>
+          to tilt its background. The text inside receives the inverse skew so it remains upright and readable.
+          On hover, the skew resets to <code>0deg</code> with a <code>translateY(-3px)</code> lift for a 3D
+          interactive feel — all achieved with pure HTML and CSS.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- FEATURES -->
+      <section id="features">
+        <h2>Key Features of This Skewed Menu</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📐</div>
+            <div class="feature-title">Angled Backgrounds</div>
+            <div class="feature-desc">Each menu item uses <code>transform: skewX()</code> to create a slanted, modern
+              look.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <div class="feature-title">Inverse Skew Text</div>
+            <div class="feature-desc">Text stays perfectly upright inside skewed containers using the inverse transform
+              technique.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">✨</div>
+            <div class="feature-title">3D Hover Lift</div>
+            <div class="feature-desc">Hovering resets the skew and adds <code>translateY()</code> with enhanced
+              box-shadow for depth.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🪶</div>
+            <div class="feature-title">Zero JavaScript</div>
+            <div class="feature-desc">Pure CSS animation — no JS required, no render-blocking scripts.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <div class="feature-title">GPU Accelerated</div>
+            <div class="feature-desc">Uses <code>transform</code> only — the fastest CSS property to animate, composited
+              on the GPU.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <div class="feature-title">Fully Responsive</div>
+            <div class="feature-desc">Works on all screen sizes. Skew adjusts or removes on mobile for better
+              readability.</div>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+            <!-- SOURCE CODE -->
+            <section id="source-code">
+              <h2>Full Source Code (Free)</h2>
+              <p>
+                The entire project lives in a single HTML file — no external CSS or JS files required.
+                The HTML sets up the card structure and links images from <code>picsum.photos</code>
+                for demonstration. The CSS drives every animation, transition, and responsive breakpoint.
+                A four-line script at the bottom removes the shimmer placeholder once each image has
+                loaded. Use the tabs below to explore the HTML and CSS sections separately.
+              </p>
+            
+              <div class="code-section">
+                <div class="code-toolbar">
+                  <div class="code-tabs" role="tablist" aria-label="Code files">
+                    <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                      aria-controls="panel-html">HTML</button>
+                    <button class="code-tab" data-lang="css" role="tab" aria-selected="false" aria-controls="panel-css">CSS</button>
+                  </div>
+                  <button class="preview-btn" id="previewBtn" aria-label="Preview the final result">
+                    <i class='bx bx-play-circle'></i>
+                    <span>Preview Result</span>
+                  </button>
+                </div>
+            
+                <div class="code-panels">
+                  <div class="code-box active" id="panel-html" role="tabpanel">
+                    <div class="code-header">
+                      <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                      <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+                    </div>
+                    <pre><code id="code1" class="language-html"></code></pre>
+                  </div>
+            
+                  <div class="code-box" id="panel-css" role="tabpanel">
+                    <div class="code-header">
+                      <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
+                      <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+                    </div>
+                    <pre><code id="code2" class="language-css"></code></pre>
+                  </div>
+                </div>
+              </div>
+            
+
+            
+              <div class="info-box">
+                <strong>💡 Quick Start:</strong> Copy the full code into a single <code>index.html</code> file.
+                No build tools, no npm, no libraries — open it in any modern browser and the accordion
+                gallery works immediately. Swap the <code>picsum.photos</code> URLs with your own images
+                to customize it instantly.
+              </div>
+            </section>
+
+      <hr>
+
+      <!-- HOW IT WORKS -->
+      <section id="how-it-works">
+        <h2>How It Works — Step by Step</h2>
+        <p>
+          Here's exactly how each layer of this skewed navigation menu is built, from the CSS custom
+          properties down to the hover 3D lift effect.
+        </p>
+
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>Set Up the Navigation HTML</h3>
+              <p>
+                Create a <code>&lt;nav&gt;</code> element containing a <code>&lt;ul&gt;</code> list.
+                Each list item (<code>&lt;li class="menu-item"&gt;</code>) wraps an anchor link. This
+                two-level structure — item container + inner link — is essential because the skew is
+                applied to the outer container while the inner link receives the inverse skew.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>Apply Skew Transform to Containers</h3>
+              <p>
+                Use <code>transform: skewX(var(--skew-angle))</code> on each <code>.menu-item</code>.
+                This tilts the entire list item — background, padding, and all — along the X axis.
+                The angle is stored in a CSS custom property (<code>--skew-angle: -15deg</code>) so
+                you can change it in one place and retheme the entire menu.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>Counter-Skew the Text</h3>
+              <p>
+                The text inside each item receives <code>transform: skewX(calc(var(--skew-angle) * -1))</code>,
+                which is the exact mathematical inverse of the parent skew. This keeps the text perfectly
+                upright and readable while the background remains angled — the core trick behind skewed menus.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h3>Style the Base Menu</h3>
+              <p>
+                Apply background colors, padding, font styling, and subtle <code>border-radius</code>
+                to each menu item for the resting state. The parent <code>&lt;ul&gt;</code> gets a dark
+                background with <code>box-shadow</code> to ground the menu visually against the page.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">05</div>
+            <div class="step-content">
+              <h3>Hover: Reset Skew + 3D Lift</h3>
+              <p>
+                On <code>.menu-item:hover</code>, reset the skew to <code>skewX(0deg)</code> and add
+                <code>translateY(-3px)</code> to lift the item upward. Combine this with an enhanced
+                <code>box-shadow</code> using the accent color to create a convincing 3D pop effect.
+                The inner link simultaneously changes its background and text color for a complete
+                visual state change.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">06</div>
+            <div class="step-content">
+              <h3>Responsive &amp; Reduced Motion</h3>
+              <p>
+                On screens below 768px, a media query switches the menu to a vertical stack and
+                removes the skew entirely for better tap target alignment. A
+                <code>@media (prefers-reduced-motion: reduce)</code> block disables all transitions
+                for users who have requested reduced motion in their OS accessibility settings.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="warn-box">
+          <strong>⚠️ Performance tip:</strong> Always animate <code>transform</code> and <code>opacity</code> — never
+          <code>width</code>, <code>height</code>, <code>margin</code>, or <code>padding</code> directly. The former are
+          composited on the GPU and skip the layout/paint phases entirely. The latter trigger expensive layout
+          recalculations on every frame.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- BEST PRACTICES -->
+      <section id="best-practices">
+        <h2>Best Practices & Common Mistakes</h2>
+
+        <div class="practice-grid">
+          <div class="practice-card do">
+            <div class="practice-card-title">✅ Do</div>
+            <ul>
+              <li>Use CSS variables for the skew angle so one change rethemes everything</li>
+              <li>Apply the inverse skew to the inner text element, not the outer container</li>
+              <li>Keep skew angles moderate (10–20deg) for readability</li>
+              <li>Add <code>@media (prefers-reduced-motion)</code> support</li>
+              <li>Test on real mobile devices before deploying</li>
+              <li>Use <code>overflow: hidden</code> on skewed items to clip background edges</li>
+            </ul>
+          </div>
+          <div class="practice-card dont">
+            <div class="practice-card-title">❌ Don't</div>
+            <ul>
+              <li>Over-skew items past 25deg — text becomes hard to read even with inverse skew</li>
+              <li>Forget to counter-skew the text — it will render at an angle</li>
+              <li>Animate <code>top</code>, <code>left</code>, or <code>margin</code> for hover effects</li>
+              <li>Use incompatible color combinations — skew looks best with strong contrast</li>
+              <li>Skip transitions — items will jump abruptly without smooth animation</li>
+              <li>Ignore mobile — skewed items can overlap or misalign on small screens</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+
+          <details class="faq-item">
+            <summary class="faq-question">Can I create a skewed navigation menu without JavaScript?</summary>
+            <div class="faq-answer">
+              Yes. This tutorial uses only HTML and CSS — no JavaScript at all. The entire skew effect and 3D
+              hover animation is powered by <code>transform: skew()</code> combined with <code>transition</code>
+              and the <code>:hover</code> pseudo-class.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How does CSS skew work on navigation items?</summary>
+            <div class="faq-answer">
+              The <code>transform: skewX()</code> or <code>skewY()</code> function tilts an element along the
+              X or Y axis. When applied to a menu item container, it angles the background. The text inside
+              receives the inverse skew (e.g., <code>skewX(15deg)</code> to counter a parent
+              <code>skewX(-15deg)</code>) so the text stays upright and readable.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How do I change the skew angle of the menu?</summary>
+            <div class="faq-answer">
+              Adjust the <code>--skew-angle</code> CSS custom property value in the <code>:root</code> block.
+              For example, <code>--skew-angle: -20deg</code> creates a steeper angle. The inverse skew on the
+              inner text element uses <code>calc()</code> to automatically match, so the text remains straight.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Will skewed menus affect my page's Core Web Vitals?</summary>
+            <div class="faq-answer">
+              No. CSS transforms including skew are GPU-composited and do not trigger layout recalculation.
+              They have virtually no impact on <strong>CLS</strong>, <strong>LCP</strong>, or <strong>INP</strong>
+              when used correctly on navigation elements.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Does this skewed navigation work on mobile devices?</summary>
+            <div class="faq-answer">
+              Yes. The menu is fully responsive. On smaller screens, media queries adjust the layout to a
+              vertical stack and remove the skew angle for better tap target alignment and readability on
+              touch devices.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How do I add prefers-reduced-motion support?</summary>
+            <div class="faq-answer">
+              Wrap your <code>transition</code> declarations inside a
+              <code>@media (prefers-reduced-motion: no-preference)</code> block. Add a parallel
+              <code>@media (prefers-reduced-motion: reduce)</code> block that sets
+              <code>transition: none</code> on all animated elements. This disables hover animations for
+              users who have requested reduced motion in their OS accessibility settings.
+            </div>
+          </details>
+
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- CONCLUSION -->
+      <section id="conclusion" class="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          Skewed navigation menus provide a modern, visually striking approach to website navigation design.
+          Using only HTML and CSS, you can create interactive menus with angled backgrounds and 3D hover
+          tilt effects that dramatically improve the visual appeal of any website.
+        </p>
+        <p>
+          The key technique — applying <code>skewX()</code> to the container and the inverse skew to
+          the inner text — is a fundamental CSS pattern that extends far beyond navigation. You can
+          apply the same approach to cards, buttons, banners, and any UI element that benefits from
+          a dynamic, angled aesthetic.
+        </p>
+        <p>
+          Remember to keep skew angles moderate, always provide smooth transitions, support reduced motion
+          preferences, and test thoroughly on mobile devices. With these practices in place, your skewed
+          navigation will look polished and professional on every screen size.
+        </p>
+      </section>
+
+    </main>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <div class="sidebar-header"><i class='bx bx-star'></i> Related Projects</div>
+        <div class="related-list">
+          <a href="Project39.html" class="related-card">
+            <img src="https://77cod-ing.github.io/Animated.Button.with.Star.Effects.png"
+              alt="Animated Button with Star Effects" loading="lazy" width="256" height="144">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Button with Star Effects</div>
+          </a>
+          <a class="related-card" href="Project45.html" aria-label="Animated Floating Action Button Menu with CSS">
+            <img src="https://77cod-ing.github.io/button-list-item.png"
+              alt="Animated floating action button menu expanding into a staggered list built with CSS" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Floating Action Button Menu — CSS &amp; JS</div>
+          </a>
+          <a class="related-card" href="Project46.html" aria-label="CSS Flexible Accordion Cards">
+            <img src="https://77cod-ing.github.io/Flexible_Accordion_Cards.png"
+              alt="CSS Flexible Accordion Cards" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">CSS Flexible Accordion Cards HTML - SCC & JS</div>
+          </a>
+          <a class="related-card" href="Project23.html" aria-label="Animated Login and Signup Page">
+            <img src="https://77cod-ing.github.io/image%20copy%2075.png" alt="Animated Login and Signup Page HTML CSS JavaScript"
+              loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Login &amp; Signup Page — HTML CSS JS</div>
+          </a>
+        </div>
+      </div>
+    </aside>
+
   </div>
-<div class="Ret">
-  <a href="projects.html#menu"><pre><span>&lt;</span> Return</pre></a>
-</div>
 
-<div class="img">
-  <img src="image copy 50.png" alt="Skewed Menu Example">
-</div>
+    <!-- ===== PREVIEW MODAL ===== -->
+    <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+      aria-label="Live preview of the CSS flexible accordion image card gallery">
+      <div class="preview-modal">
+        <div class="preview-modal-header">
+          <div class="preview-modal-title">
+            <i class='bx bx-show'></i>
+            <strong>Live Preview</strong> — CSS Flexible Accordion Cards
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div class="preview-dots">
+              <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+              <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+              <button class="preview-dot green" aria-label="Maximize" disabled></button>
+            </div>
+            <button class="preview-close-btn" id="previewCloseBtn">
+              <i class='bx bx-x'></i> Close
+            </button>
+          </div>
+        </div>
+        <div class="preview-iframe-wrap">
+          <div class="preview-loading" id="previewLoading">
+            <div class="preview-spinner"></div>
+            <span class="preview-loading-text">Loading preview...</span>
+            <div class="preview-loading-files">
+              <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+              <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+            </div>
+          </div>
+          <iframe id="previewIframe" title="Preview of CSS flexible accordion image card gallery"
+            sandbox="allow-scripts allow-same-origin"></iframe>
+          <div class="preview-hint" id="previewHint">
+            <i class='bx bx-cursor'></i> Hover over any card to expand it
+          </div>
+        </div>
+      </div>
+    </div>
 
-<div class="par">
-<h1>Create a Skewed Navigation Menu — HTML/CSS</h1>
-<p>
-  Skewed navigation menus add a dynamic, modern look to your website. Using <strong>CSS transforms</strong>, you can create menus with angled backgrounds and hover effects that enhance user interaction.
-</p>
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+      /*
+        ============================================
+          Gist URLs — update with the actual Gist raw URL for this project
+        ============================================
+      */
+      const gistBase = "https://gist.githubusercontent.com/77cod-ing/8866c175d96fcd5abc60e5956cb1a8c3/raw/";
 
-<div class="highlight">
-  <p><strong>Quick Summary:</strong> Each menu item is styled with a skew transform to tilt the background. Hovering on an item slightly animates it back to neutral for a 3D interactive feel. This effect is achieved with only HTML and CSS.</p>
-</div>
+      const htmlUrl = gistBase + "index.html";
+      const cssUrl = gistBase + "style.css";
 
-<h2>What Is a Skewed Navigation Menu?</h2>
-<p>
-  A skewed menu is a navigation bar where the background of each menu item is angled, creating a sense of depth. This modern design adds visual interest compared to flat horizontal menus.
-</p>
+      let cachedHTML = "";
+      let cachedCSS = "";
 
-<h2>Why Use Skewed Menus?</h2>
-<ul>
-  <li><strong>Stylish Design:</strong> Angled backgrounds provide a modern, eye-catching effect.</li>
-  <li><strong>Interactive Feedback:</strong> Hover animations make navigation feel dynamic.</li>
-  <li><strong>Pure CSS:</strong> No JavaScript required for animation.</li>
-  <li><strong>Customizable:</strong> Skew angles, colors, and hover effects are fully adjustable.</li>
-</ul>
-
-<h2>How It Works</h2>
-<p>
-  The menu items use <code>transform: skew()</code> to angle the background. On hover, a transition resets the skew slightly or changes the background color for a subtle 3D effect. Additional <code>box-shadow</code> can enhance depth perception.
-</p>
-
-<div class="img"><img src="image copy 51.png" alt="CSS skewed menu styling"></div>
-
-<h3>1. Set Up the HTML</h3>
-<p>
-  Each menu link is wrapped in a container div with a class like <code>.menu</code>. This container holds the anchor element that will be skewed.
-</p>
-
-<h3>2. Add CSS Styling</h3>
-<p>
-  Use <code>transform: skew(0deg, 10deg);</code> to tilt the menu container. Add <code>transition</code> for smooth hover animation. Customize colors, padding, and border-radius to your design needs.
-</p>
-
-<h3>3. Enhance Interactivity</h3>
-<p>
-  On <code>:hover</code>, reset the skew to <code>0deg</code> or adjust shadow for a subtle 3D “lift” effect. Combine with <code>box-shadow</code> to enhance depth.
-</p>
-
-<h2>Tips for Better Results</h2>
-<ul>
-  <li><strong>Angle Choice:</strong> Keep skew angles moderate to avoid readability issues.</li>
-  <li><strong>Hover Feedback:</strong> Slight movements are better than drastic changes.</li>
-  <li><strong>Consistent Design:</strong> Use the same skew angle for all menu items.</li>
-  <li><strong>Responsive:</strong> Test on smaller screens to maintain alignment and readability.</li>
-</ul>
-
-<h2>Common Mistakes to Avoid</h2>
-<ul>
-  <li>Over-skewing menu items — text may become hard to read.</li>
-  <li>Neglecting transitions — items jump abruptly without smooth animation.</li>
-  <li>Using incompatible colors — skew effect looks best with contrast between text and background.</li>
-</ul>
-
-<h2>Conclusion</h2>
-<p>
-  Skewed navigation menus provide a modern, stylish approach to website design. Using only HTML and CSS, you can create interactive menus with tilt and hover effects that improve user experience and visual appeal.
-</p>
-
-<div class="highlight">
-  <p><strong>SEO Keywords:</strong> skewed menu, CSS skew transform, 3D navigation menu, hover animation, HTML CSS menu, modern navigation bar</p>
-</div>
-
-<div class="con1">
-  <div class="countdown" id="countdown">
-    <span id="number">10</span> wait...
-  </div>
-
-  <div class="link-box" id="linkBox">
-    <a href="https://gist.github.com/77cod-ing/8866c175d96fcd5abc60e5956cb1a8c3" target="_blank">Go to code</a>
-  </div>
-</div>
-</div>
-
-<script>
-  let counter = 10;
-  let timer = null;
-  const countdownEl = document.getElementById("countdown");
-  const numberEl = document.getElementById("number");
-  const linkBox = document.getElementById("linkBox");
-
-  function startCountdown() {
-    if (timer) return;
-    timer = setInterval(() => {
-      counter--;
-      numberEl.textContent = counter;
-
-      if (counter === 0) {
-        clearInterval(timer);
-        timer = null;
-        countdownEl.style.display = "none"; 
-        linkBox.style.display = "block";
+      async function loadCode(url, elementId, lang) {
+        try {
+          const res = await fetch(url);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const text = await res.text();
+          const el = document.getElementById(elementId);
+          el.textContent = text;
+          el.className = `language-${lang}`;
+          Prism.highlightElement(el);
+          if (lang === "html") cachedHTML = text;
+          if (lang === "css") cachedCSS = text;
+        } catch (e) {
+          const el = document.getElementById(elementId);
+          if (el) el.textContent = `/* Failed to load: ${e.message} */`;
+        }
       }
-    }, 1000);
-  }
 
-  function stopCountdown() {
-    clearInterval(timer);
-    timer = null;
-  }
+      loadCode(htmlUrl, "code1", "html");
+      loadCode(cssUrl, "code2", "css");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        startCountdown();
-      } else {
-        stopCountdown();
+      /* ===== Tabs ===== */
+      document.querySelectorAll(".code-tab").forEach(tab => {
+        tab.addEventListener("click", () => {
+          const lang = tab.dataset.lang;
+          document.querySelectorAll(".code-tab").forEach(t => {
+            t.classList.remove("active");
+            t.setAttribute("aria-selected", "false");
+          });
+          document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+          tab.classList.add("active");
+          tab.setAttribute("aria-selected", "true");
+          const panelMap = { html: "panel-html", css: "panel-css" };
+          document.getElementById(panelMap[lang]).classList.add("active");
+        });
+      });
+
+      /* ===== Copy buttons ===== */
+      document.querySelectorAll(".copy-btn").forEach(btn => {
+        btn.addEventListener("click", async () => {
+          const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+          if (!code) return;
+          try {
+            await navigator.clipboard.writeText(code);
+            btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+            btn.classList.add("copied");
+            setTimeout(() => {
+              btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
+              btn.classList.remove("copied");
+            }, 2000);
+          } catch { btn.textContent = "Error"; }
+        });
+      });
+
+      /* ===== Countdown timer ===== */
+      let seconds = 5;
+      const countdownDisplay = document.getElementById("countdownDisplay");
+      const gistLinkWrapper = document.getElementById("gistLinkWrapper");
+
+      const countdownInterval = setInterval(() => {
+        seconds--;
+        countdownDisplay.textContent = String(seconds).padStart(2, "0");
+        if (seconds <= 0) {
+          clearInterval(countdownInterval);
+          gistLinkWrapper.classList.add("visible");
+          countdownDisplay.style.display = "none";
+          document.querySelector(".countdown-label").textContent = "✅ Source Code Available";
+        }
+      }, 1000);
+
+      /* ===== Preview modal ===== */
+      const previewOverlay = document.getElementById("previewOverlay");
+      const previewIframe = document.getElementById("previewIframe");
+      const previewLoading = document.getElementById("previewLoading");
+      const previewHint = document.getElementById("previewHint");
+      const previewBtn = document.getElementById("previewBtn");
+      const previewCloseBtn = document.getElementById("previewCloseBtn");
+      const previewDotClose = document.getElementById("previewDotClose");
+      const tagHTML = document.getElementById("tagHTML");
+      const tagCSS = document.getElementById("tagCSS");
+
+      function openPreview() {
+        previewOverlay.classList.add("open");
+        document.body.style.overflow = "hidden";
+        previewLoading.classList.remove("hidden");
+        previewHint.classList.remove("show");
+        previewBtn.classList.add("loading");
+        tagHTML.classList.remove("loaded");
+        tagCSS.classList.remove("loaded");
+        buildPreview();
       }
-    });
-  }, { threshold: 1.0 });
 
-  observer.observe(countdownEl);
-  /**hamburger**/
+      function closePreview() {
+        previewOverlay.classList.remove("open");
+        document.body.style.overflow = "";
+        previewIframe.srcdoc = "";
+        previewBtn.classList.remove("loading");
+      }
 
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeBtn = document.getElementById('closeBtn');
+      async function buildPreview() {
+        if (cachedHTML && cachedCSS) {
+          tagHTML.classList.add("loaded");
+          tagCSS.classList.add("loaded");
+          injectPreview(cachedHTML, cachedCSS);
+          return;
+        }
+        try {
+          const fetches = [];
+          if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
+          if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
+          if (cachedHTML) tagHTML.classList.add("loaded");
+          if (cachedCSS) tagCSS.classList.add("loaded");
+          await Promise.all(fetches);
+          injectPreview(cachedHTML, cachedCSS);
+        } catch (e) {
+          previewLoading.innerHTML = `
+              <i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i>
+              <span class="preview-loading-text" style="color:var(--accent2);">Failed to load preview: ${e.message}</span>
+            `;
+          previewBtn.classList.remove("loading");
+        }
+      }
 
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.add('active');
-    });
+      function injectPreview(html, css) {
+        let combined = html;
+        if (combined.includes('<link') && /style\.css/i.test(combined)) {
+          combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
+        } else if (combined.includes("</head>")) {
+          combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
+        } else {
+          combined = `<style>${css}</style>\n${combined}`;
+        }
+        previewIframe.srcdoc = combined;
+        previewIframe.addEventListener("load", function onLoad() {
+          previewLoading.classList.add("hidden");
+          previewBtn.classList.remove("loading");
+          setTimeout(() => {
+            previewHint.classList.add("show");
+            setTimeout(() => previewHint.classList.remove("show"), 4000);
+          }, 300);
+          previewIframe.removeEventListener("load", onLoad);
+        });
+      }
 
-    closeBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-    });
-    
+      previewBtn.addEventListener("click", openPreview);
+      previewCloseBtn.addEventListener("click", closePreview);
+      previewDotClose.addEventListener("click", closePreview);
+      previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+      document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
+    </script>
 
-    window.addEventListener("scroll", function() {
-  const hamburger = document.querySelector(".hamburger");
-  if (window.scrollY > 50) {
-    hamburger.classList.add("scrolled");
-  } else {
-    hamburger.classList.remove("scrolled");
-  }
-});
-</script>
 </body>
+
 </html>
-
-
-
