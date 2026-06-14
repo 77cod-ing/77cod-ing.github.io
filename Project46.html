@@ -1,0 +1,2436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== PRIMARY SEO META ===== -->
+    <title>CSS Only Accordion Cards — Flexible Hover Expand Image Gallery Tutorial 2026</title>
+    <meta name="description"
+        content="Build a CSS-only flexible accordion image card gallery with smooth hover expand, grayscale-to-color effects, and staggered descriptions. Free source code.">
+    <meta name="keywords"
+        content="css accordion cards, flexible image cards css hover expand, css only expandable cards tutorial, accordion image gallery css, css hover flex expand, grayscale to color hover css, css card reveal animation, image gallery hover effect html css, frontend project ideas 2026, css flex accordion gallery, responsive image cards css, css staggered image reveal, hover expand card layout, pure css interactive gallery">
+    <meta name="author" content="77cod_ing">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://77cod-ing.github.io/Project-Flexible-Accordion-Cards.html">
+
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="CSS Only Accordion Cards — Flexible Hover Expand Image Gallery Tutorial 2026">
+    <meta property="og:description"
+        content="Build a pure CSS flexible accordion image card gallery that expands on hover, transitions from grayscale to full color, and reveals a sliding description. Free source code included.">
+    <meta property="og:image" content="https://77cod-ing.github.io/accordion-cards-preview.png">
+    <meta property="og:url" content="https://77cod-ing.github.io/Project-Flexible-Accordion-Cards.html">
+    <meta property="og:site_name" content="77cod_ing">
+    <meta property="article:published_time" content="2026-06-14T00:00:00Z">
+    <meta property="article:modified_time" content="2026-06-14T00:00:00Z">
+    <meta property="article:author" content="77cod_ing">
+    <meta property="article:section" content="CSS Tutorials">
+    <meta property="article:tag" content="HTML, CSS, Flexbox, Animation, Image Gallery, UI Components, Frontend">
+
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CSS Only Accordion Cards — Flexible Hover Expand Image Gallery Tutorial">
+    <meta name="twitter:description"
+        content="Learn to build a flexible accordion image gallery in pure CSS — smooth hover expand, grayscale-to-color, sliding description overlay, and full mobile responsiveness.">
+    <meta name="twitter:image" content="https://77cod-ing.github.io/accordion-cards-preview.png">
+
+    <!-- ===== SCHEMA: TechArticle ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "CSS Only Accordion Cards — Flexible Hover Expand Image Gallery for Beginners and Experts",
+    "description": "A complete tutorial on building a pure CSS flexible accordion image card gallery using CSS Flexbox, transitions, keyframe animations, grayscale filters, and responsive design — zero JavaScript required.",
+    "image": "https://77cod-ing.github.io/accordion-cards-preview.png",
+    "datePublished": "2026-06-14",
+    "dateModified": "2026-06-14",
+    "author": {
+      "@type": "Person",
+      "name": "77cod_ing",
+      "url": "https://77cod-ing.github.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "77cod_ing",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Picture1.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://77cod-ing.github.io/Project-Flexible-Accordion-Cards.html"
+    },
+    "articleSection": "CSS Tutorials",
+    "keywords": "css accordion cards, flexible image cards hover expand, css only expandable gallery, grayscale to color hover css, css flex accordion, responsive image card layout",
+    "timeRequired": "PT12M",
+    "educationalLevel": "Beginner",
+    "teaches": ["CSS Flexbox", "CSS Transitions", "CSS Filter (Grayscale)", "CSS Keyframe Animations", "CSS Transform", "Responsive Design with Media Queries", "CSS Pseudo-elements", "Image Loading Shimmer Effect"]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: HowTo ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Build a CSS Flexible Accordion Image Card Gallery Step by Step",
+    "description": "Step-by-step guide to creating a pure CSS flexible accordion image card layout where cards expand on hover, transition from grayscale to color, and reveal a sliding description overlay.",
+    "image": "https://77cod-ing.github.io/accordion-cards-preview.png",
+    "totalTime": "PT12M",
+    "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "0"},
+    "supply": [
+      {"@type": "HowToSupply", "name": "Text editor (VS Code)"},
+      {"@type": "HowToSupply", "name": "A modern web browser"}
+    ],
+    "tool": [
+      {"@type": "HowToTool", "name": "HTML"},
+      {"@type": "HowToTool", "name": "CSS"}
+    ],
+    "step": [
+      {"@type": "HowToStep", "name": "Build the Card Container with Flexbox", "text": "Create a .cards wrapper using display: flex with a fixed height and overflow: hidden. Set each .card to flex: 1 1 0 so they divide the space equally by default.", "position": 1},
+      {"@type": "HowToStep", "name": "Set Up the Hover Expand Transition", "text": "On .card:hover set flex: 3.5 and add a transition: flex 0.6s cubic-bezier(0.4, 0, 0.2, 1) to the base .card rule for a smooth accordion expand effect.", "position": 2},
+      {"@type": "HowToStep", "name": "Add and Style the Card Images", "text": "Place an <img> inside each card with object-fit: cover and will-change: transform, filter. Apply filter: grayscale(100%) brightness(0.8) by default so each image appears muted.", "position": 3},
+      {"@type": "HowToStep", "name": "Animate the Image on Hover", "text": "On .card:hover img transition to filter: grayscale(0%) brightness(1) and transform: scale(1.15) so the image zooms in and bursts into full color as the card expands.", "position": 4},
+      {"@type": "HowToStep", "name": "Build the Title Badge", "text": "Absolutely position a .card-title badge centered on the card using top/left 50% and translate(-50%, -50%). On hover, lighten its background and scale it up slightly for emphasis.", "position": 5},
+      {"@type": "HowToStep", "name": "Create the Sliding Description Overlay", "text": "Add a .card-desc paragraph anchored to the bottom of the card with transform: translateY(100%) by default. On hover, animate it to translateY(0) so it slides up into view over a gradient backdrop.", "position": 6},
+      {"@type": "HowToStep", "name": "Add the Shimmer Loading Animation", "text": "Apply a CSS shimmer keyframe animation as the background of each img element. Remove it by adding a .loaded class in JavaScript once the image's load event fires.", "position": 7},
+      {"@type": "HowToStep", "name": "Make It Fully Responsive", "text": "Add media queries to reduce card height at 768px, and at 520px switch to flex-direction: column, disable hover transforms, and show the description and overlay permanently so mobile users see the content without hovering.", "position": 8}
+    ]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: FAQPage ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the accordion expand effect work using only CSS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The accordion effect relies entirely on CSS Flexbox. Each .card is given flex: 1 1 0 so all cards share the container's width equally. On hover, the targeted card receives flex: 3.5, which tells the flex algorithm to allocate it 3.5 times as much space as its siblings. Combined with a transition: flex 0.6s on the base .card rule, this produces a smooth, animated expand-and-compress accordion effect — no JavaScript needed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is the grayscale-to-color hover effect achieved?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Each card image starts with filter: grayscale(100%) brightness(0.8), which drains all color and slightly darkens the image. When the card is hovered, CSS transitions the filter property to grayscale(0%) brightness(1), restoring full color and normal brightness. Because filter is an animatable CSS property, the browser smoothly interpolates between the two states over 0.6 seconds using the cubic-bezier easing defined in the transition."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the shimmer loading animation and how does it work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The shimmer is a CSS background animation that makes a light gradient sweep across the image placeholder while the actual image file loads over the network. It's created using a linear-gradient background with background-size: 200% 100% and a @keyframes shimmer rule that animates background-position from its starting point to -200% 0. A tiny JavaScript snippet listens for each image's load event and adds a .loaded class to the element, which the CSS uses to remove the shimmer animation once the image is ready."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the sliding description overlay appear on hover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The .card-desc paragraph is absolutely positioned at the bottom of the card with transform: translateY(100%), which pushes it fully below the card's visible area. It also sits inside a gradient background that fades from a semi-opaque dark color at the bottom to transparent at the top, so it blends naturally with the image. On hover, CSS transitions .card-desc to transform: translateY(0), causing it to slide up into view from the bottom edge of the card."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does this accordion card gallery behave on mobile devices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At screen widths below 520px, a media query switches the .cards container to flex-direction: column, turning the horizontal strip into a vertical stack. Each card is given a fixed height of 220px instead of stretching to fill the row, and the hover-based flex expansion is disabled. Since mobile users cannot hover, the images are shown in full color, the gradient overlay is made visible by default, and the description is set to translateY(0) so it appears without any interaction. The decorative hint text is also hidden on mobile."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this accordion card gallery accessible for keyboard users?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Each card wraps its image in an anchor tag, which means it's naturally focusable via the Tab key. The CSS includes :focus-visible styles on the anchor that display a visible outline on the card, apply the full-color image filter, and update the title badge styling — mirroring the hover state for keyboard and assistive-technology users. The card images also include descriptive alt attributes for screen reader support."
+        }
+      }
+    ]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: BreadcrumbList ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+      {"@type": "ListItem", "position": 3, "name": "CSS Flexible Accordion Cards", "item": "https://77cod-ing.github.io/Project-Flexible-Accordion-Cards.html"}
+    ]
+  }
+  </script>
+
+<!-- ===== ASSETS ===== -->
+<link rel="icon" type="image/png" href="Picture1.png">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+<link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+    crossorigin="anonymous"></script>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+            --premcolo: #00d9ff;
+            --accent2: #ff6b35;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --surface: rgba(255, 255, 255, 0.04);
+            --surface-hover: rgba(0, 217, 255, 0.07);
+            --border: rgba(255, 255, 255, 0.08);
+            --font-head: 'Space Mono', monospace;
+            --font-body: 'DM Sans', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--back);
+            font-family: var(--font-body);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 56px;
+            padding: 0 2.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            color: var(--premcolo);
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: clamp(1rem, 2vw, 2rem);
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: var(--premcolo);
+        }
+
+        /* ===== BREADCRUMB ===== */
+        .breadcrumb {
+            padding: 12px 2.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb ol {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .breadcrumb li {
+            display: flex;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .breadcrumb li+li::before {
+            content: "›";
+            color: var(--premcolo);
+            margin-right: 6px;
+            font-size: 1.1rem;
+        }
+
+        .breadcrumb a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--premcolo);
+        }
+
+        .breadcrumb [aria-current="page"] {
+            color: var(--premcolo);
+            font-weight: 600;
+        }
+
+        /* ===== BACK BUTTON ===== */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+            margin: 1rem 2.5rem;
+        }
+
+        .back-link:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 3rem 2.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: var(--font-head);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .tag-tutorial {
+            background: rgba(0, 217, 255, 0.12);
+            color: var(--premcolo);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+        }
+
+        .tag-css {
+            background: rgba(0, 217, 255, 0.08);
+            color: #7dd3fc;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .tag-html {
+            background: rgba(255, 102, 0, 0.1);
+            color: #ff9966;
+            border: 1px solid rgba(255, 102, 0, 0.2);
+        }
+
+        .tag-level {
+            background: rgba(255, 107, 53, 0.1);
+            color: var(--accent2);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+        }
+
+        .read-time {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-head);
+            font-size: clamp(1.6rem, 4vw, 2.6rem);
+            line-height: 1.25;
+            color: #fff;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 span {
+            color: var(--premcolo);
+        }
+
+        .hero-lead {
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            color: var(--text-muted);
+            max-width: 680px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .stat-value {
+            font-family: var(--font-head);
+            font-size: 1.4rem;
+            color: var(--premcolo);
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-height: 500px;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            display: block;
+            box-shadow: 0 0 60px rgba(0, 217, 255, 0.08), 0 32px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .img-caption {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* ===== LAYOUT ===== */
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2.5rem 4rem;
+            align-items: start;
+        }
+
+        /* ===== ARTICLE ===== */
+        .article-body h2 {
+            font-family: var(--font-head);
+            font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+            color: var(--premcolo);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            scroll-margin-top: 80px;
+        }
+
+        .article-body h3 {
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            color: #7dd3fc;
+            margin: 1.8rem 0 0.75rem;
+            scroll-margin-top: 80px;
+        }
+
+        .article-body p {
+            margin-bottom: 1.1rem;
+            color: var(--text);
+        }
+
+        .article-body code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 7px;
+            border-radius: 5px;
+        }
+
+        .article-body ul,
+        .article-body ol {
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 1.1rem;
+        }
+
+        .article-body li {
+            margin-bottom: 9px;
+        }
+
+        .article-body li strong {
+            color: #fff;
+        }
+
+        /* ===== TOC ===== */
+        .toc {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .toc-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--premcolo);
+            margin-bottom: 0.75rem;
+        }
+
+        .toc ol {
+            padding-left: 1.2rem;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+        }
+
+        .toc a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: var(--premcolo);
+        }
+
+        /* ===== FEATURE CARDS ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 1.5rem 0;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            transition: border-color 0.25s, background 0.25s;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(0, 217, 255, 0.3);
+            background: var(--surface-hover);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .feature-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* ===== STEPS ===== */
+        .steps {
+            margin: 1.5rem 0;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 44px 1fr;
+            gap: 1rem;
+            padding: 1.1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-num {
+            width: 44px;
+            height: 44px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-head);
+            color: var(--premcolo);
+            font-size: 1rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            margin-top: 0;
+            font-size: 1rem;
+        }
+
+        .step-content p {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* ===== CODE SECTION ===== */
+        .code-section {
+            margin: 2rem 0;
+            width: 60vw;
+        }
+
+        .code-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .code-tabs {
+            display: flex;
+            gap: 4px;
+        }
+
+        .code-tab {
+            padding: 8px 20px;
+            border-radius: 8px 8px 0 0;
+            border: 1px solid var(--border);
+            border-bottom: none;
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .code-tab.active {
+            background: #1e1e2f;
+            color: #fff;
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+
+        .code-tab[data-lang="html"].active {
+            color: #ff6600;
+        }
+
+        .code-tab[data-lang="css"].active {
+            color: #00ffff;
+        }
+
+        /* ===== PREVIEW BUTTON ===== */
+        .preview-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 22px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 217, 255, 0.4);
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.3px;
+        }
+
+        .preview-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .preview-btn:hover {
+            border-color: var(--premcolo);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .preview-btn:hover::before {
+            opacity: 1;
+        }
+
+        .preview-btn:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        .preview-btn i {
+            font-size: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .preview-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .preview-btn.loading i {
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .code-panels {
+            position: relative;
+        }
+
+        .code-box {
+            background: #1e1e2f;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+            border-radius: 0 12px 12px 12px;
+            position: relative;
+            display: none;
+        }
+
+        .code-box.active {
+            display: block;
+        }
+
+        .code-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .code-lang-label {
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .copy-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            border-radius: 7px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo);
+        }
+
+        .copy-btn.copied {
+            color: #4ade80;
+            border-color: #4ade80;
+        }
+
+        :not(pre)>code[class*="language-"],
+        pre[class*="language-"] {
+            width: 100%;
+            max-width: 100%;
+            height: 50vh;
+            border-radius: 0 0 12px 12px;
+            overflow-y: auto;
+            overflow-x: auto;
+            margin: 0;
+        }
+
+        pre::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        pre::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        pre::-webkit-scrollbar-thumb {
+            background: var(--premcolo);
+            border-radius: 10px;
+        }
+
+        /* ===== INFO / WARN ===== */
+        .info-box {
+            background: rgba(0, 217, 255, 0.06);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-left: 4px solid var(--premcolo);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .info-box strong {
+            color: var(--premcolo);
+        }
+
+        .warn-box {
+            background: rgba(255, 107, 53, 0.06);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-left: 4px solid var(--accent2);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .warn-box strong {
+            color: var(--accent2);
+        }
+
+        /* ===== COMPARISON TABLE ===== */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 14px;
+        }
+
+        .comparison-table th {
+            font-family: var(--font-head);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 10px 14px;
+            background: rgba(0, 217, 255, 0.08);
+            color: var(--premcolo);
+            border: 1px solid var(--border);
+            text-align: left;
+        }
+
+        .comparison-table td {
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            vertical-align: top;
+        }
+
+        .comparison-table tr:hover td {
+            background: var(--surface-hover);
+        }
+
+        .comparison-table td strong {
+            color: #fff;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-family: var(--font-head);
+            font-weight: 700;
+        }
+
+        .badge-green {
+            background: rgba(74, 222, 128, 0.12);
+            color: #4ade80;
+            border: 1px solid rgba(74, 222, 128, 0.25);
+        }
+
+        .badge-orange {
+            background: rgba(255, 107, 53, 0.12);
+            color: var(--accent2);
+            border: 1px solid rgba(255, 107, 53, 0.25);
+        }
+
+        .badge-blue {
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+        }
+
+        /* ===== FAQ ===== */
+        .faq {
+            margin: 1.5rem 0;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            background: var(--surface);
+            font-weight: 600;
+            font-size: 15px;
+            transition: background 0.2s;
+            list-style: none;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background: var(--surface-hover);
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.3rem;
+            color: var(--premcolo);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        details[open] .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 1rem 1.25rem;
+            color: var(--text-muted);
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+        }
+
+        .faq-answer code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* ===== CONCLUSION ===== */
+        .conclusion {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.07), rgba(0, 140, 160, 0.05));
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 16px;
+            padding: 1.75rem 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .conclusion h2 {
+            border: none;
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 1.5rem 0;
+        }
+
+        /* ===== COUNTDOWN ===== */
+        .countdown-box {
+            background: rgba(0, 217, 255, 0.05);
+            border: 1px solid rgba(0, 217, 255, 0.18);
+            border-radius: 14px;
+            padding: 1.5rem 1.75rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        .countdown-label {
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .countdown-timer {
+            font-family: var(--font-head);
+            font-size: 2.5rem;
+            color: var(--premcolo);
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .gist-link-wrapper {
+            display: none;
+            margin-top: 12px;
+        }
+
+        .gist-link-wrapper.visible {
+            display: block;
+        }
+
+        .gist-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(0, 217, 255, 0.06));
+            border: 1px solid rgba(0, 217, 255, 0.35);
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .gist-link:hover {
+            background: rgba(0, 217, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            position: sticky;
+            top: 72px;
+        }
+
+        .sidebar-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-header {
+            padding: 14px 16px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--premcolo);
+            border-bottom: 1px solid var(--border);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .related-list {
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .related-card {
+            display: block;
+            text-decoration: none;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 16/9;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .related-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+
+        .related-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .related-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+        .related-card-title {
+            position: absolute;
+            bottom: 8px;
+            left: 10px;
+            right: 10px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* ===== PREVIEW MODAL ===== */
+        .preview-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 5, 15, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+        }
+
+        .preview-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .preview-modal {
+            width: 95vw;
+            max-width: 95vw;
+            height: 95vh;
+            max-height: 95vh;
+            background: #0a0e1a;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(0, 217, 255, 0.06);
+            transform: scale(0.92) translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .preview-overlay.open .preview-modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .preview-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
+        }
+
+        .preview-modal-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .preview-modal-title i {
+            color: var(--premcolo);
+            font-size: 16px;
+        }
+
+        .preview-modal-title strong {
+            color: #fff;
+        }
+
+        .preview-dots {
+            display: flex;
+            gap: 7px;
+        }
+
+        .preview-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, filter 0.2s;
+        }
+
+        .preview-dot:hover {
+            transform: scale(1.2);
+            filter: brightness(1.3);
+        }
+
+        .preview-dot.red {
+            background: #ff5f57;
+        }
+
+        .preview-dot.yellow {
+            background: #febc2e;
+        }
+
+        .preview-dot.green {
+            background: #28c840;
+        }
+
+        .preview-close-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .preview-close-btn:hover {
+            border-color: var(--accent2);
+            color: var(--accent2);
+            background: rgba(255, 107, 53, 0.08);
+        }
+
+        .preview-iframe-wrap {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .preview-iframe-wrap iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            background: #000;
+        }
+
+        .preview-loading {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            background: #0a0e1a;
+            z-index: 2;
+            transition: opacity 0.4s;
+        }
+
+        .preview-loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .preview-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(0, 217, 255, 0.15);
+            border-top-color: var(--premcolo);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
+        .preview-loading-text {
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .preview-loading-files {
+            display: flex;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .preview-file-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            font-weight: 700;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+
+        .preview-file-tag.loaded {
+            opacity: 1;
+        }
+
+        .preview-file-tag.html-tag {
+            background: rgba(255, 102, 0, 0.15);
+            color: #ff6600;
+            border: 1px solid rgba(255, 102, 0, 0.3);
+        }
+
+        .preview-file-tag.css-tag {
+            background: rgba(0, 255, 255, 0.1);
+            color: #00ffff;
+            border: 1px solid rgba(0, 255, 255, 0.25);
+        }
+
+        .preview-hint {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 6px 16px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            color: var(--text-muted);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.5s 0.8s;
+            white-space: nowrap;
+            z-index: 3;
+        }
+
+        .preview-hint.show {
+            opacity: 1;
+        }
+
+        .preview-hint i {
+            color: var(--premcolo);
+            margin-right: 4px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 1fr;
+                padding: 1.5rem 1.25rem;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .related-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .related-card {
+                flex: 1 1 calc(50% - 8px);
+            }
+
+            .hero {
+                padding: 2rem 1.25rem 1.5rem;
+            }
+
+            .navbar {
+                padding: 0 1.25rem;
+            }
+
+            .breadcrumb {
+                padding: 10px 1.25rem;
+            }
+
+            .back-link {
+                margin: 0.75rem 1.25rem;
+            }
+
+            .code-section {
+                width: 85vw;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-stats {
+                gap: 1.2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .code-tab {
+                padding: 7px 13px;
+                font-size: 12px;
+            }
+
+            .related-card {
+                flex: 1 1 100%;
+            }
+
+            .comparison-table {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">{ / }</span> 77cod_ing
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="Privacy Policy.html">Privacy Policy</a>
+            <a href="Terms & Conditions.html">Terms & Conditions</a>
+        </nav>
+    </header>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
+            <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+            <li><span aria-current="page">CSS Flexible Accordion Cards</span></li>
+        </ol>
+    </nav>
+
+    <!-- ===== BACK BUTTON ===== -->
+    <a href="projects.html" class="back-link" aria-label="Return to Projects">
+        <i class='bx bx-arrow-back'></i> Return to Projects
+    </a>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-labelledby="main-heading">
+        <div class="hero-meta">
+            <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+            <span class="tag tag-html">HTML</span>
+            <span class="tag tag-css">CSS</span>
+            <span class="tag tag-level">Beginner</span>
+            <span class="read-time"><i class='bx bx-time'></i> ~12 min read</span>
+        </div>
+
+        <h1 id="main-heading">
+            CSS <span>Flexible Accordion Cards</span><br>
+            Hover Expand Image Gallery — With JavaScript
+        </h1>
+
+        <p class="hero-lead">
+            A complete tutorial on building a pure CSS accordion image gallery where cards stretch and compress
+            on hover using Flexbox, images transition from grayscale to full color, and a description overlay
+            slides up from the bottom — all without a single line of JavaScript.
+        </p>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-value">8</span>
+                <span class="stat-label">Build Steps</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">0</span>
+                <span class="stat-label">Lines of JS</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">5</span>
+                <span class="stat-label">Cards</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">Free</span>
+                <span class="stat-label">Source Code</span>
+            </div>
+        </div>
+
+        <img src="https://77cod-ing.github.io/Flexible_Accordion_Cards.png"
+            alt="CSS flexible accordion image cards showing hover expand effect with grayscale to color transition and sliding description overlay"
+            class="hero-img" width="1200" height="420" loading="eager" fetchpriority="high">
+        <p class="img-caption">Final result: a horizontal strip of image cards that expand on hover, reveal full color,
+            and slide in a description — built with pure HTML &amp; CSS</p>
+    </section>
+
+    <!-- ===== MAIN LAYOUT ===== -->
+    <div class="layout">
+
+        <main class="article-body" id="main-content">
+
+            <!-- TOC -->
+            <nav class="toc" aria-label="Table of contents">
+                <p class="toc-title">📋 Contents</p>
+                <ol>
+                    <li><a href="#overview">What You'll Build</a></li>
+                    <li><a href="#features">Key Features</a></li>
+                    <li><a href="#source-code">Full Source Code</a></li>
+                    <li><a href="#how-it-works">How It Works — Step by Step</a></li>
+                    <li><a href="#customization">Customization Ideas</a></li>
+                    <li><a href="#best-practices">Best Practices</a></li>
+                    <li><a href="#browser-support">Browser Compatibility</a></li>
+                    <li><a href="#performance">Performance &amp; Responsiveness</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ol>
+            </nav>
+
+            <!-- OVERVIEW -->
+            <section id="overview">
+                <h2>What You'll Build</h2>
+                <p>
+                    In this tutorial you'll create a <strong>CSS-only flexible accordion image card gallery</strong>
+                    — a horizontal strip of five image cards that each expand smoothly when hovered, compressing
+                    the rest to make room. The effect is achieved entirely through CSS Flexbox by manipulating
+                    the <code>flex</code> property on the hovered card, driven by a single <code>transition</code>
+                    rule using a custom <code>cubic-bezier</code> easing for a buttery-smooth feel.
+                </p>
+                <p>
+                    Beyond the core accordion mechanic, each card also transitions its image from muted
+                    <strong>grayscale to full color</strong> as it expands, scales the image with a subtle
+                    zoom, and reveals a <strong>sliding description overlay</strong> that rises up from the
+                    card's bottom edge. A decorative numbered badge sits in the corner of each card, and a
+                    centered title badge flips between dark and light styling on hover to reinforce the
+                    interaction.
+                </p>
+                <p>
+                    This is a popular pattern for <strong>image showcase sections</strong>, portfolio galleries,
+                    destination sliders, and feature comparisons. It requires no JavaScript libraries, no frameworks,
+                    and no build tools — just clean, well-structured HTML and CSS that works in every modern browser.
+                </p>
+
+                <div class="info-box">
+                    <strong>💡 Who Is This For?</strong> This project is perfect for beginners who understand
+                    CSS basics and want to explore the power of Flexbox for interactive layouts, and for
+                    intermediate developers looking to master CSS transitions, filter animations, and
+                    pseudo-element overlays in a single, polished component.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- FEATURES -->
+            <section id="features">
+                <h2>Key Features of This Accordion Card Gallery</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📐</div>
+                        <div class="feature-title">Flexbox Accordion</div>
+                        <div class="feature-desc">Cards share space equally via <code>flex: 1 1 0</code>. Hovering a
+                            card
+                            sets <code>flex: 3.5</code> — the flex algorithm redistributes the remaining space
+                            automatically with no manual width calculations.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <div class="feature-title">Grayscale-to-Color</div>
+                        <div class="feature-desc">Every image starts at
+                            <code>filter: grayscale(100%) brightness(0.8)</code>
+                            and transitions to full color on hover — a clean visual cue that this card is the active
+                            focus.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <div class="feature-title">Image Zoom on Hover</div>
+                        <div class="feature-desc">The image simultaneously scales to <code>1.15</code> using CSS
+                            <code>transform</code>, giving a subtle Ken Burns–style zoom that adds depth and energy
+                            without JavaScript.
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📄</div>
+                        <div class="feature-title">Sliding Description</div>
+                        <div class="feature-desc">A <code>.card-desc</code> paragraph starts below the card's visible
+                            area at <code>translateY(100%)</code> and slides into view on hover, floating over a soft
+                            gradient backdrop for legibility.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏷️</div>
+                        <div class="feature-title">Flip-Style Title Badge</div>
+                        <div class="feature-desc">A centered title badge inverts its palette on hover — from a dark
+                            frosted-glass style to a bright near-white background — with a subtle scale transform
+                            for tactile feedback.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✨</div>
+                        <div class="feature-title">Shimmer Loading Effect</div>
+                        <div class="feature-desc">While images load over the network, an animated shimmer gradient
+                            plays on the image element as a skeleton placeholder. A tiny JS snippet removes it
+                            once the image fires its <code>load</code> event.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">♿</div>
+                        <div class="feature-title">Keyboard Accessible</div>
+                        <div class="feature-desc">Each card's content is wrapped in a focusable anchor tag with
+                            <code>:focus-visible</code> styles, so keyboard and assistive-technology users experience
+                            the same visual feedback as mouse users.
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <div class="feature-title">Fully Responsive</div>
+                        <div class="feature-desc">At tablet width the gallery shrinks gracefully. On mobile it flips
+                            to a vertical stack, disables hover logic, and reveals all content statically — a
+                            complete touch-friendly fallback with no extra JavaScript.</div>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- SOURCE CODE -->
+            <section id="source-code">
+                <h2>Full Source Code (Free)</h2>
+                <p>
+                    The entire project lives in a single HTML file — no external CSS or JS files required.
+                    The HTML sets up the card structure and links images from <code>picsum.photos</code>
+                    for demonstration. The CSS drives every animation, transition, and responsive breakpoint.
+                    A four-line script at the bottom removes the shimmer placeholder once each image has
+                    loaded. Use the tabs below to explore the HTML and CSS sections separately.
+                </p>
+
+                <div class="code-section">
+                    <div class="code-toolbar">
+                        <div class="code-tabs" role="tablist" aria-label="Code files">
+                            <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                                aria-controls="panel-html">HTML</button>
+                            <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+                                aria-controls="panel-css">CSS</button>
+                        </div>
+                        <button class="preview-btn" id="previewBtn" aria-label="Preview the final result">
+                            <i class='bx bx-play-circle'></i>
+                            <span>Preview Result</span>
+                        </button>
+                    </div>
+
+                    <div class="code-panels">
+                        <div class="code-box active" id="panel-html" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                                <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code1" class="language-html"></code></pre>
+                        </div>
+
+                        <div class="code-box" id="panel-css" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
+                                <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code2" class="language-css"></code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Countdown Gist reveal -->
+                <div class="countdown-box">
+                    <p class="countdown-label">🔓 Full Source Code unlocks in</p>
+                    <div class="countdown-timer" id="countdownDisplay">05</div>
+                    <p style="font-size:13px;color:var(--text-muted);">Hosted on GitHub Gist — free, no sign-up required
+                    </p>
+                    <div class="gist-link-wrapper" id="gistLinkWrapper">
+                        <a class="gist-link"
+                            href="https://gist.githubusercontent.com/77cod-ing/be04f46d35409ee0ca4b265c5ca8e809"
+                            target="_blank" rel="noopener noreferrer">
+                            <i class='bx bxl-github'></i> View Full Source Code on GitHub Gist
+                        </a>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <strong>💡 Quick Start:</strong> Copy the full code into a single <code>index.html</code> file.
+                    No build tools, no npm, no libraries — open it in any modern browser and the accordion
+                    gallery works immediately. Swap the <code>picsum.photos</code> URLs with your own images
+                    to customize it instantly.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- HOW IT WORKS -->
+            <section id="how-it-works">
+                <h2>How It Works — Step by Step</h2>
+                <p>
+                    Here is a walkthrough of the eight core techniques that make this CSS accordion card
+                    gallery tick, from the Flexbox foundation to the mobile fallback strategy.
+                </p>
+
+                <div class="steps">
+
+                    <div class="step">
+                        <div class="step-num">01</div>
+                        <div class="step-content">
+                            <h3>Flexbox Container Foundation</h3>
+                            <p>
+                                The <code>.cards</code> wrapper uses <code>display: flex</code> with
+                                <code>flex-wrap: nowrap</code> so all five cards always appear in a single row.
+                                A fixed <code>height: 420px</code> and <code>overflow: hidden</code> keep the
+                                strip constrained. <code>border-radius: 1.2rem</code> clips the corners of the
+                                entire group for a unified, card-like appearance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">02</div>
+                        <div class="step-content">
+                            <h3>Equal-Split Flex and Smooth Expansion</h3>
+                            <p>
+                                Each <code>.card</code> receives <code>flex: 1 1 0</code>, which tells the flex
+                                algorithm to treat all cards as identical in size, splitting the container's width
+                                five ways equally. The critical rule is
+                                <code>transition: flex 0.6s cubic-bezier(0.4, 0, 0.2, 1)</code>
+                                on the base card. When <code>.card:hover</code> sets <code>flex: 3.5</code>,
+                                the browser smoothly interpolates the flex value over 600ms, expanding the hovered
+                                card and proportionally compressing the others.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">03</div>
+                        <div class="step-content">
+                            <h3>Image Grayscale Filter and Zoom</h3>
+                            <p>
+                                Each card's <code>img</code> starts with
+                                <code>filter: grayscale(100%) brightness(0.8)</code>, visually muting the image.
+                                A <code>transition</code> on both <code>filter</code> and <code>transform</code>
+                                means that when <code>.card:hover img</code> applies
+                                <code>filter: grayscale(0%) brightness(1)</code> and
+                                <code>transform: scale(1.15)</code>, both changes animate together — the image
+                                blooms into color while gently zooming in.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">04</div>
+                        <div class="step-content">
+                            <h3>The Dark Gradient Overlay</h3>
+                            <p>
+                                A <code>::after</code> pseudo-element on each card provides the dark overlay that
+                                makes the description text legible against the image. It uses
+                                <code>background: linear-gradient(to top, rgba(20,15,10,0.7) 0%, transparent 55%)</code>
+                                and starts at <code>opacity: 0</code>. On hover its opacity transitions to
+                                <code>1</code>, revealing the gradient only when the card is active and the
+                                description is visible.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">05</div>
+                        <div class="step-content">
+                            <h3>The Title Badge Flip</h3>
+                            <p>
+                                The <code>.card-title</code> badge is positioned with
+                                <code>top: 50%; left: 50%; transform: translate(-50%, -50%)</code> to center
+                                it on the card. By default it has a dark frosted-glass background. On hover,
+                                <code>background</code> transitions to a near-white value and
+                                <code>color</code> to a dark tone — effectively flipping its palette —
+                                while <code>transform</code> adds a subtle <code>scale(1.08)</code> to make
+                                it feel "pop" toward the viewer.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">06</div>
+                        <div class="step-content">
+                            <h3>Sliding Description Overlay</h3>
+                            <p>
+                                The <code>.card-desc</code> paragraph is absolutely positioned at the card's
+                                bottom with <code>left: 0; right: 0; bottom: 0</code> and
+                                <code>transform: translateY(100%)</code>, pushing it just below the visible
+                                clipped area. A gradient <code>background</code> fades from opaque at the
+                                base to transparent higher up so it blends seamlessly. On hover,
+                                <code>transition</code> animates it to <code>translateY(0)</code> so it
+                                slides up into view like a caption rising from below.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">07</div>
+                        <div class="step-content">
+                            <h3>Shimmer Skeleton Loading Effect</h3>
+                            <p>
+                                While each image is fetching over the network, a CSS <code>@keyframes shimmer</code>
+                                animation sweeps a moving gradient highlight across the element's
+                                <code>background</code>, mimicking a skeleton loader. A small JavaScript snippet
+                                checks <code>img.complete</code> on page load and also listens for each image's
+                                <code>load</code> event, adding a <code>.loaded</code> class that the CSS uses
+                                to disable the shimmer animation once the real image has painted.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">08</div>
+                        <div class="step-content">
+                            <h3>Responsive Breakpoints and Mobile Fallback</h3>
+                            <p>
+                                At <code>768px</code>, the container height is reduced to <code>360px</code> and
+                                the expand ratio drops slightly for a tighter fit. At <code>520px</code>, the cards
+                                switch to <code>flex-direction: column</code> and a fixed <code>height: 220px</code>
+                                each, stacking them vertically. Because there is no hover on touch screens,
+                                the grayscale filter is removed, the overlay opacity is set to 1, and
+                                <code>.card-desc</code> is forced to <code>translateY(0)</code> — making all content
+                                permanently visible without any interaction.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="warn-box">
+                    <strong>⚠️ Overflow Is Essential:</strong> The <code>overflow: hidden</code> on
+                    <code>.cards</code> is what clips the <code>.card-desc</code> overlay below the
+                    visible area before the hover. If you remove it, the description will be visible at
+                    all times regardless of the CSS <code>translateY</code> state. Similarly, each
+                    individual <code>.card</code> needs its own <code>overflow: hidden</code> to clip
+                    the image zoom without the image escaping its card boundaries.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- CUSTOMIZATION -->
+            <section id="customization">
+                <h2>Customization Ideas</h2>
+                <p>
+                    The accordion card gallery is deliberately lean at its core, which makes it easy to
+                    adapt to a wide range of real-world use cases. Here are practical starting points.
+                </p>
+                <ul>
+                    <li><strong>Change the number of cards</strong> — Add or remove <code>.card</code>
+                        elements freely. Flexbox recalculates the space split automatically. If you add
+                        more than six cards, consider reducing the <code>flex: 3.5</code> hover value
+                        to something like <code>2.5</code> so the expanded card doesn't crowd others
+                        to invisibility.
+                    </li>
+                    <li><strong>Swap the images</strong> — Replace the <code>picsum.photos</code> URLs
+                        with your own images. Keep <code>object-fit: cover</code> on the <code>img</code>
+                        elements so any aspect ratio fills the card without distortion.
+                    </li>
+                    <li><strong>Adjust the expand ratio</strong> — The <code>flex: 3.5</code> on
+                        <code>.card:hover</code> controls how much larger the active card becomes relative
+                        to its siblings. A value of <code>2</code> gives a subtler expansion; <code>5</code>
+                        gives a more dramatic one.
+                    </li>
+                    <li><strong>Try a vertical layout</strong> — Change <code>flex-direction</code> to
+                        <code>column</code> on <code>.cards</code> and give it a fixed <code>width</code>
+                        instead of <code>height</code>. The accordion will then expand cards vertically
+                        — a great fit for sidebar or mobile-first layouts.
+                    </li>
+                    <li><strong>Keep cards always in color</strong> — Remove the
+                        <code>filter: grayscale(100%) brightness(0.8)</code> rule from the base
+                        <code>.card img</code> selector if you prefer full color at all times and
+                        just want the zoom and description reveal effects.
+                    </li>
+                    <li><strong>Add a click-to-lock state with minimal JavaScript</strong> — Toggle an
+                        <code>active</code> class on the clicked card to keep it expanded even after the
+                        cursor leaves, useful for touch-screen environments or when each card links to
+                        a detail view.
+                    </li>
+                    <li><strong>Customize the description content</strong> — The <code>.card-desc</code>
+                        paragraph can hold any HTML: buttons, tags, ratings, or icon + text combos. Just
+                        ensure the <code>padding-top</code> on the description is large enough to clear
+                        the gradient's opaque zone so text remains readable.
+                    </li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Tip:</strong> Because the accordion state is driven entirely by CSS
+                    hover, you can combine it with the <code>:focus-within</code> pseudo-class on the
+                    container to keep the card expanded as long as any child element (like a button
+                    inside the description) is focused — keeping accessibility seamless without any
+                    JavaScript.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- BEST PRACTICES -->
+            <section id="best-practices">
+                <h2>Best Practices</h2>
+                <p>
+                    Following these guidelines will help you ship the accordion gallery in production
+                    with confidence and keep it maintainable as your project grows.
+                </p>
+                <ul>
+                    <li><strong>Always write descriptive <code>alt</code> text</strong> on every card image.
+                        Screen readers announce the <code>alt</code> attribute when a user navigates to
+                        the card's anchor — a vague or missing <code>alt</code> breaks the experience
+                        for visually impaired visitors.
+                    </li>
+                    <li><strong>Use <code>loading="lazy"</code> on off-screen images</strong> — All cards
+                        except the first visible one should defer loading so the page's initial paint is
+                        not blocked by large image files. The first card's image can use
+                        <code>fetchpriority="high"</code> to load it as a priority resource.
+                    </li>
+                    <li><strong>Respect <code>prefers-reduced-motion</code></strong> — Wrap transition
+                        and animation declarations in a media query that sets
+                        <code>transition: none !important</code> for users who have enabled the operating
+                        system's reduced-motion preference. This is both an accessibility requirement and
+                        a performance optimization on lower-end devices.
+                    </li>
+                    <li><strong>Keep image dimensions consistent</strong> — Cards look cleanest when all
+                        images share the same aspect ratio. Use an image host or CDN that supports
+                        on-the-fly resizing (like <code>picsum.photos/id/N/800/600</code>) to enforce
+                        a uniform size across all cards.
+                    </li>
+                    <li><strong>Avoid animating <code>width</code> directly</strong> — The accordion
+                        effect works by transitioning the <code>flex</code> shorthand, not raw
+                        <code>width</code>. Flex transitions are composited much more efficiently by the
+                        browser's layout engine than direct width changes, especially when multiple
+                        sibling elements resize simultaneously.
+                    </li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <!-- BROWSER COMPATIBILITY -->
+            <section id="browser-support">
+                <h2>Browser Compatibility</h2>
+                <p>
+                    This accordion gallery uses only well-established CSS features — Flexbox, CSS filters,
+                    CSS transitions, <code>@keyframes</code>, and pseudo-elements — all of which have had
+                    broad support across every major browser for years.
+                </p>
+
+                <table class="comparison-table" aria-label="Browser compatibility table">
+                    <thead>
+                        <tr>
+                            <th>Browser</th>
+                            <th>Flexbox &amp; Transitions</th>
+                            <th>CSS filter</th>
+                            <th>Overall Support</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Chrome / Edge</strong></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Full</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Firefox</strong></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Full</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Safari (macOS &amp; iOS)</strong></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Full</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Samsung Internet</strong></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Full</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Internet Explorer 11</strong></td>
+                            <td><span class="badge badge-blue">Partial</span></td>
+                            <td><span class="badge badge-orange">No</span></td>
+                            <td><span class="badge badge-orange">Limited</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box">
+                    <strong>💡 Note:</strong> CSS <code>filter</code> (used for the grayscale effect) is
+                    not supported in Internet Explorer 11, meaning images will always appear in full color
+                    there. All other aspects of the layout still function. IE11 is effectively obsolete
+                    for new projects in 2026 and is not a practical target.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- PERFORMANCE & RESPONSIVENESS -->
+            <section id="performance">
+                <h2>Performance &amp; Responsiveness</h2>
+                <p>
+                    Despite being a visually rich component with multiple simultaneous animations, this
+                    accordion gallery is exceptionally lightweight because every effect is CSS-driven and
+                    uses GPU-compositable properties.
+                </p>
+                <ul>
+                    <li><strong>GPU-accelerated properties:</strong> <code>transform</code> (for the image
+                        zoom and description slide) and <code>opacity</code> (for the overlay) are both
+                        handled entirely on the GPU compositor thread. They never trigger a layout
+                        recalculation or paint step, so the animations remain smooth even on mid-range
+                        mobile hardware.
+                    </li>
+                    <li><strong>CSS <code>filter</code> compositing:</strong> The
+                        <code>filter: grayscale()</code> transition is hardware-accelerated on all modern
+                        browsers. Declaring <code>will-change: transform, filter</code> on the
+                        <code>img</code> element hints to the browser to promote these elements to their
+                        own compositor layer in advance, preventing any frame drops during the transition.
+                    </li>
+                    <li><strong>JavaScript animations:</strong> Because every visual state — expansion,
+                        zoom, color reveal, overlay fade, description slide — is handled by CSS
+                        <code>transition</code> rules, there is no JavaScript animation loop, no
+                        <code>requestAnimationFrame</code>, and no risk of dropped frames from script
+                        execution.
+                    </li>
+                    <li><strong>Lazy image loading:</strong> The <code>loading="lazy"</code> attribute on
+                        non-primary images defers their network requests until they are near the viewport,
+                        improving initial page load time and reducing bandwidth on slower connections.
+                    </li>
+                    <li><strong>Responsive without JavaScript:</strong> The mobile breakpoint is achieved
+                        entirely through CSS media queries. Switching the stack from horizontal to vertical,
+                        forcing images into color, and revealing descriptions permanently are all handled
+                        in CSS — no resize event listeners or layout recalculation in script.
+                    </li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Key Takeaway:</strong> Whenever multiple elements animate simultaneously
+                    — as they do when one card expands and four compress at once — reaching for
+                    <code>transform</code> and <code>opacity</code> (plus <code>filter</code> where
+                    supported) instead of <code>width</code>, <code>height</code>, or <code>left</code>
+                    is what keeps multi-element CSS transitions smooth across the full performance
+                    spectrum of devices.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- FAQ -->
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq">
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How does the accordion expand effect work using only CSS?
+                        </summary>
+                        <div class="faq-answer">
+                            The accordion effect relies entirely on CSS Flexbox. Each <code>.card</code> is given
+                            <code>flex: 1 1 0</code> so all cards share the container's width equally. On hover,
+                            the targeted card receives <code>flex: 3.5</code>, which tells the flex algorithm to
+                            allocate it 3.5 times as much space as its siblings. Combined with a
+                            <code>transition: flex 0.6s</code> on the base <code>.card</code> rule, this produces
+                            a smooth, animated expand-and-compress accordion effect — no JavaScript needed.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How is the grayscale-to-color hover effect achieved?</summary>
+                        <div class="faq-answer">
+                            Each card image starts with <code>filter: grayscale(100%) brightness(0.8)</code>,
+                            which drains all color and slightly darkens the image. When the card is hovered,
+                            CSS transitions the filter to <code>grayscale(0%) brightness(1)</code>, restoring
+                            full color and normal brightness. Because <code>filter</code> is an animatable CSS
+                            property, the browser smoothly interpolates between the two states over 0.6 seconds
+                            using the <code>cubic-bezier</code> easing defined in the transition.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">What is the shimmer loading animation and how does it work?
+                        </summary>
+                        <div class="faq-answer">
+                            The shimmer is a CSS background animation that makes a light gradient sweep across
+                            the image placeholder while the actual image file loads over the network. It uses a
+                            <code>linear-gradient</code> background with <code>background-size: 200% 100%</code>
+                            and a <code>@keyframes shimmer</code> rule that animates <code>background-position</code>
+                            from its starting point to <code>-200% 0</code>. A small JavaScript snippet listens
+                            for each image's <code>load</code> event and adds a <code>.loaded</code> class, which
+                            the CSS uses to disable the shimmer once the image is ready.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How does the sliding description overlay appear on hover?
+                        </summary>
+                        <div class="faq-answer">
+                            The <code>.card-desc</code> paragraph is absolutely positioned at the bottom of the
+                            card with <code>transform: translateY(100%)</code>, pushing it fully below the card's
+                            clipped visible area. It also sits inside a gradient background that fades from a
+                            semi-opaque dark color at the bottom to transparent at the top. On hover, CSS
+                            transitions it to <code>transform: translateY(0)</code>, causing it to slide up
+                            into view from the card's bottom edge.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How does this accordion card gallery behave on mobile devices?
+                        </summary>
+                        <div class="faq-answer">
+                            At screen widths below 520px, a media query switches the <code>.cards</code>
+                            container to <code>flex-direction: column</code>, turning the horizontal strip into
+                            a vertical stack. Each card is given a fixed <code>height: 220px</code> and the
+                            hover-based flex expansion is disabled. Since mobile users cannot hover, images are
+                            shown in full color, the gradient overlay is visible by default, and
+                            <code>.card-desc</code> is forced to <code>translateY(0)</code> so all content
+                            appears without any interaction.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Is this accordion card gallery accessible for keyboard users?
+                        </summary>
+                        <div class="faq-answer">
+                            Yes. Each card wraps its image in an anchor tag, which is naturally focusable via
+                            the Tab key. The CSS includes <code>:focus-visible</code> styles on the anchor
+                            that show a visible outline, apply the full-color image filter, and update the
+                            title badge styling — mirroring the hover state for keyboard and assistive-technology
+                            users. The card images also include descriptive <code>alt</code> attributes for
+                            screen reader support.
+                        </div>
+                    </details>
+
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- CONCLUSION -->
+            <section id="conclusion" class="conclusion">
+                <h2>Conclusion</h2>
+                <p>
+                    This <strong>CSS flexible accordion image card gallery</strong> is a compelling demonstration
+                    of just how much a modern browser can do with nothing but Flexbox, transitions, and CSS
+                    filters. By leveraging the flex algorithm's proportional space distribution, a
+                    <strong>single hover rule</strong> drives an entire accordion — no JavaScript toggle, no
+                    width math, no animation library.
+                </p>
+                <p>
+                    The techniques here — transitioning <code>flex</code> for layout animation,
+                    combining <code>grayscale</code> filters with <code>transform</code> for image
+                    reveal, and using <code>translateY</code> for slide-in overlays — are reusable
+                    building blocks you'll reach for across countless future projects: hero sections,
+                    team galleries, destination showcases, and feature comparison strips.
+                </p>
+                <p>
+                    Ready to keep exploring pure CSS interactions? Check out the
+                    <a href="Project45.html" style="color:var(--premcolo);">Animated Floating
+                        Action Button Menu</a>
+                    for CSS keyframe animations with a JS toggle, or the
+                    <a href="Project13.html" style="color:var(--premcolo);">Neon Cursor Animation</a>
+                    for advanced pointer-tracking effects.
+                </p>
+                <p style="color:var(--text-muted); font-size:14px; margin-bottom:0;">
+                    Found this useful? Explore more HTML &amp; CSS projects in the sidebar or browse the full
+                    project library.
+                </p>
+            </section>
+
+        </main>
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar" aria-label="Related projects">
+            <div class="sidebar-box">
+                <div class="sidebar-header">🔗 Related Projects</div>
+                <div class="related-list">
+                    <a class="related-card" href="Project45.html"
+                        aria-label="Animated Floating Action Button Menu with CSS">
+                        <img src="https://77cod-ing.github.io/button-list-item.png"
+                            alt="Animated floating action button menu expanding into a staggered list built with CSS"
+                            loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Animated Floating Action Button Menu — CSS &amp; JS</div>
+                    </a>
+                    <a class="related-card" href="Project40.html"
+                        aria-label="Advanced JavaScript Image Slider with GSAP">
+                        <img src="https://i.suar.me/Ep114/m"
+                            alt="Advanced JavaScript image slider with GSAP split-panel animation" loading="lazy"
+                            width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Advanced JavaScript Image Slider — GSAP Animation</div>
+                    </a>
+                    <a class="related-card" href="Project13.html" aria-label="Neon Cursor Animation">
+                        <img src="https://77cod-ing.github.io/image%20copy%2036.png"
+                            alt="Neon Cursor Animation CSS JavaScript" loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Neon Cursor Animation — CSS &amp; JavaScript</div>
+                    </a>
+                    <a class="related-card" href="Project23.html" aria-label="Animated Login and Signup Page">
+                        <img src="https://77cod-ing.github.io/image%20copy%2075.png"
+                            alt="Animated Login and Signup Page HTML CSS JavaScript" loading="lazy" width="280"
+                            height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Animated Login &amp; Signup Page — HTML CSS JS</div>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- ===== PREVIEW MODAL ===== -->
+    <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+        aria-label="Live preview of the CSS flexible accordion image card gallery">
+        <div class="preview-modal">
+            <div class="preview-modal-header">
+                <div class="preview-modal-title">
+                    <i class='bx bx-show'></i>
+                    <strong>Live Preview</strong> — CSS Flexible Accordion Cards
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <div class="preview-dots">
+                        <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+                        <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+                        <button class="preview-dot green" aria-label="Maximize" disabled></button>
+                    </div>
+                    <button class="preview-close-btn" id="previewCloseBtn">
+                        <i class='bx bx-x'></i> Close
+                    </button>
+                </div>
+            </div>
+            <div class="preview-iframe-wrap">
+                <div class="preview-loading" id="previewLoading">
+                    <div class="preview-spinner"></div>
+                    <span class="preview-loading-text">Loading preview...</span>
+                    <div class="preview-loading-files">
+                        <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+                        <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+                    </div>
+                </div>
+                <iframe id="previewIframe" title="Preview of CSS flexible accordion image card gallery"
+                    sandbox="allow-scripts allow-same-origin"></iframe>
+                <div class="preview-hint" id="previewHint">
+                    <i class='bx bx-cursor'></i> Hover over any card to expand it
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        /*
+          ============================================
+            Gist URLs — update with the actual Gist raw URL for this project
+          ============================================
+        */
+        const gistBase = "https://gist.githubusercontent.com/77cod-ing/be04f46d35409ee0ca4b265c5ca8e809/raw/";
+
+        const htmlUrl = gistBase + "index.html";
+        const cssUrl = gistBase + "style.css";
+
+        let cachedHTML = "";
+        let cachedCSS = "";
+
+        async function loadCode(url, elementId, lang) {
+            try {
+                const res = await fetch(url);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const text = await res.text();
+                const el = document.getElementById(elementId);
+                el.textContent = text;
+                el.className = `language-${lang}`;
+                Prism.highlightElement(el);
+                if (lang === "html") cachedHTML = text;
+                if (lang === "css") cachedCSS = text;
+            } catch (e) {
+                const el = document.getElementById(elementId);
+                if (el) el.textContent = `/* Failed to load: ${e.message} */`;
+            }
+        }
+
+        loadCode(htmlUrl, "code1", "html");
+        loadCode(cssUrl, "code2", "css");
+
+        /* ===== Tabs ===== */
+        document.querySelectorAll(".code-tab").forEach(tab => {
+            tab.addEventListener("click", () => {
+                const lang = tab.dataset.lang;
+                document.querySelectorAll(".code-tab").forEach(t => {
+                    t.classList.remove("active");
+                    t.setAttribute("aria-selected", "false");
+                });
+                document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+                tab.classList.add("active");
+                tab.setAttribute("aria-selected", "true");
+                const panelMap = { html: "panel-html", css: "panel-css" };
+                document.getElementById(panelMap[lang]).classList.add("active");
+            });
+        });
+
+        /* ===== Copy buttons ===== */
+        document.querySelectorAll(".copy-btn").forEach(btn => {
+            btn.addEventListener("click", async () => {
+                const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+                if (!code) return;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+                    btn.classList.add("copied");
+                    setTimeout(() => {
+                        btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
+                        btn.classList.remove("copied");
+                    }, 2000);
+                } catch { btn.textContent = "Error"; }
+            });
+        });
+
+        /* ===== Countdown timer ===== */
+        let seconds = 5;
+        const countdownDisplay = document.getElementById("countdownDisplay");
+        const gistLinkWrapper = document.getElementById("gistLinkWrapper");
+
+        const countdownInterval = setInterval(() => {
+            seconds--;
+            countdownDisplay.textContent = String(seconds).padStart(2, "0");
+            if (seconds <= 0) {
+                clearInterval(countdownInterval);
+                gistLinkWrapper.classList.add("visible");
+                countdownDisplay.style.display = "none";
+                document.querySelector(".countdown-label").textContent = "✅ Source Code Available";
+            }
+        }, 1000);
+
+        /* ===== Preview modal ===== */
+        const previewOverlay = document.getElementById("previewOverlay");
+        const previewIframe = document.getElementById("previewIframe");
+        const previewLoading = document.getElementById("previewLoading");
+        const previewHint = document.getElementById("previewHint");
+        const previewBtn = document.getElementById("previewBtn");
+        const previewCloseBtn = document.getElementById("previewCloseBtn");
+        const previewDotClose = document.getElementById("previewDotClose");
+        const tagHTML = document.getElementById("tagHTML");
+        const tagCSS = document.getElementById("tagCSS");
+
+        function openPreview() {
+            previewOverlay.classList.add("open");
+            document.body.style.overflow = "hidden";
+            previewLoading.classList.remove("hidden");
+            previewHint.classList.remove("show");
+            previewBtn.classList.add("loading");
+            tagHTML.classList.remove("loaded");
+            tagCSS.classList.remove("loaded");
+            buildPreview();
+        }
+
+        function closePreview() {
+            previewOverlay.classList.remove("open");
+            document.body.style.overflow = "";
+            previewIframe.srcdoc = "";
+            previewBtn.classList.remove("loading");
+        }
+
+        async function buildPreview() {
+            if (cachedHTML && cachedCSS) {
+                tagHTML.classList.add("loaded");
+                tagCSS.classList.add("loaded");
+                injectPreview(cachedHTML, cachedCSS);
+                return;
+            }
+            try {
+                const fetches = [];
+                if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
+                if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
+                if (cachedHTML) tagHTML.classList.add("loaded");
+                if (cachedCSS) tagCSS.classList.add("loaded");
+                await Promise.all(fetches);
+                injectPreview(cachedHTML, cachedCSS);
+            } catch (e) {
+                previewLoading.innerHTML = `
+          <i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i>
+          <span class="preview-loading-text" style="color:var(--accent2);">Failed to load preview: ${e.message}</span>
+        `;
+                previewBtn.classList.remove("loading");
+            }
+        }
+
+        function injectPreview(html, css) {
+            let combined = html;
+            if (combined.includes('<link') && /style\.css/i.test(combined)) {
+                combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
+            } else if (combined.includes("</head>")) {
+                combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
+            } else {
+                combined = `<style>${css}</style>\n${combined}`;
+            }
+            previewIframe.srcdoc = combined;
+            previewIframe.addEventListener("load", function onLoad() {
+                previewLoading.classList.add("hidden");
+                previewBtn.classList.remove("loading");
+                setTimeout(() => {
+                    previewHint.classList.add("show");
+                    setTimeout(() => previewHint.classList.remove("show"), 4000);
+                }, 300);
+                previewIframe.removeEventListener("load", onLoad);
+            });
+        }
+
+        previewBtn.addEventListener("click", openPreview);
+        previewCloseBtn.addEventListener("click", closePreview);
+        previewDotClose.addEventListener("click", closePreview);
+        previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+        document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
+    </script>
+
+</body>
+
+</html>
