@@ -1,0 +1,2098 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== PRIMARY SEO META ===== -->
+  <title>Day Night Toggle Switch + Animated Logout Button CSS JS | Tutorial 2026</title>
+  <meta name="description"
+    content="Build a smooth day/night theme toggle switch and an animated logout button with a walking figure using pure CSS and vanilla JavaScript. Free source code.">
+  <meta name="keywords"
+    content="day night toggle switch css, dark light mode toggle javascript, animated logout button css, walking figure button animation, theme switcher html css js, css toggle switch tutorial, dark mode toggle animation, sun moon toggle css, animated button javascript, frontend project ideas 2026, css custom toggle switch, logout button animation css, light dark mode switch tutorial, css mode transition animation">
+  <meta name="author" content="77cod_ing">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://77cod-ing.github.io/Project-DayNight-Toggle-Logout-Button.html">
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Day Night Toggle Switch + Animated Logout Button CSS JS — Tutorial 2026">
+  <meta property="og:description"
+    content="Build a sleek day/night mode toggle with sun/moon icon swap and a delightful animated logout button featuring a walking stick figure — pure CSS and vanilla JavaScript. Free source code.">
+  <meta property="og:image" content="https://77cod-ing.github.io/day-night-toggle-preview.png">
+  <meta property="og:url" content="https://77cod-ing.github.io/Project-DayNight-Toggle-Logout-Button.html">
+  <meta property="og:site_name" content="77cod_ing">
+  <meta property="article:published_time" content="2026-06-17T00:00:00Z">
+  <meta property="article:modified_time" content="2026-06-17T00:00:00Z">
+  <meta property="article:author" content="77cod_ing">
+  <meta property="article:section" content="CSS Tutorials">
+  <meta property="article:tag" content="HTML, CSS, JavaScript, Toggle Switch, Dark Mode, Animation, UI Components, Frontend">
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Day Night Toggle Switch + Animated Logout Button — CSS JS Tutorial">
+  <meta name="twitter:description"
+    content="Build a sun/moon day night toggle and a walking-figure logout button animation using pure CSS transitions and vanilla JavaScript. Full free source code.">
+  <meta name="twitter:image" content="https://77cod-ing.github.io/day-night-toggle-preview.png">
+
+  <!-- ===== SCHEMA: TechArticle ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Day Night Toggle Switch and Animated Logout Button with CSS and JavaScript — Complete UI Tutorial",
+    "description": "A complete tutorial on building a smooth day/night theme toggle switch with animated sun and moon icon swap, and an animated logout button featuring a walking stick-figure character — all using pure CSS transitions, keyframes, and vanilla JavaScript.",
+    "image": "https://77cod-ing.github.io/day-night-toggle-preview.png",
+    "datePublished": "2026-06-17",
+    "dateModified": "2026-06-17",
+    "author": {
+      "@type": "Person",
+      "name": "77cod_ing",
+      "url": "https://77cod-ing.github.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "77cod_ing",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Picture1.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://77cod-ing.github.io/Project-DayNight-Toggle-Logout-Button.html"
+    },
+    "articleSection": "CSS Tutorials",
+    "keywords": "day night toggle switch css, dark light mode toggle javascript, animated logout button css, walking figure button animation, theme switcher html css js",
+    "timeRequired": "PT20M",
+    "educationalLevel": "Beginner",
+    "teaches": ["CSS Transitions", "CSS Custom Properties", "CSS Keyframe Animations", "SVG Animation", "Vanilla JavaScript Class Toggling", "Theme Switching", "CSS Transform & Opacity", "Animation Sequencing"]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: HowTo ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Build a Day Night Toggle Switch and Animated Logout Button Using CSS and JavaScript",
+    "description": "Step-by-step guide to creating a smooth light/dark mode toggle with animated sun/moon icon swap, and a logout button featuring a walking stick figure animation — pure CSS and vanilla JavaScript.",
+    "image": "https://77cod-ing.github.io/day-night-toggle-preview.png",
+    "totalTime": "PT20M",
+    "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "0"},
+    "supply": [
+      {"@type": "HowToSupply", "name": "Text editor (VS Code)"},
+      {"@type": "HowToSupply", "name": "A modern web browser"},
+      {"@type": "HowToSupply", "name": "Boxicons icon library (CDN)"}
+    ],
+    "tool": [
+      {"@type": "HowToTool", "name": "HTML"},
+      {"@type": "HowToTool", "name": "CSS"},
+      {"@type": "HowToTool", "name": "JavaScript"},
+      {"@type": "HowToTool", "name": "Inline SVG"}
+    ],
+    "step": [
+      {"@type": "HowToStep", "name": "Build the Scene Container", "text": "Create a .scene wrapper that fills the viewport and transitions its background color between light and dark mode using a CSS transition on the background property.", "position": 1},
+      {"@type": "HowToStep", "name": "Create the Toggle Switch", "text": "Build a pill-shaped .theme-btn with a circular .thumb that slides between positions using translateX. Add sun and moon icons inside the thumb that cross-fade using CSS opacity and scale transitions.", "position": 2},
+      {"@type": "HowToStep", "name": "Implement the Mode Class Toggle", "text": "Use a click listener on the toggle button to swap .light-mode and .dark-mode classes on the .scene element. All visual changes cascade from this single class change via CSS selectors.", "position": 3},
+      {"@type": "HowToStep", "name": "Style the Background Transition", "text": "Define .scene.light-mode and .scene.dark-mode background colors and add transition: background 0.5s ease on the .scene class so the background smoothly blends between themes.", "position": 4},
+      {"@type": "HowToStep", "name": "Build the SVG Logout Button Structure", "text": "Construct the logout button from three layered SVGs: a doorway backdrop, an animated stick figure, and a door with a handle. Use absolute positioning and CSS z-index to layer them correctly.", "position": 5},
+      {"@type": "HowToStep", "name": "Animate the Stick Figure Walk", "text": "Define walking state objects with CSS custom property values for arm, wrist, leg, and calf transforms. Apply them sequentially on click using JavaScript setTimeout chains to simulate a walking gait.", "position": 6},
+      {"@type": "HowToStep", "name": "Add the Door Open and Slam Sequence", "text": "On click, add CSS classes that open the door with a rotateY transform, then slam it shut after the figure walks through using timed class additions and transition-delay.", "position": 7},
+      {"@type": "HowToStep", "name": "Trigger the Falling Animation", "text": "After the door slams, animate the figure falling off-screen with a bottom offset transition, a spin keyframe, and reduced opacity — creating the comedic exit effect.", "position": 8}
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: FAQPage ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the day/night toggle switch work with CSS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The toggle switch is a pill-shaped button containing a circular thumb. When clicked, a JavaScript listener toggles between the .light-mode and .dark-mode classes on the parent .scene element. CSS selectors like .dark-mode .thumb then change the thumb's translateX position from 0 to 26px, the scene background color, and the opacity/scale of the sun and moon icons — all driven by CSS transitions, with no extra JavaScript needed for the visuals."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do the sun and moon icons animate when switching themes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both icons sit stacked inside the .thumb element. In light mode, the sun icon has opacity: 1 and scale(1) while the moon has opacity: 0 and scale(0.5) with a rotation offset. When dark mode activates, the CSS rules reverse: the sun fades and shrinks away while the moon scales up and rotates into position. Both transitions run simultaneously via CSS transition: opacity 0.3s, transform 0.4s on each icon, creating a smooth cross-fade swap."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is the animated logout button built without a JavaScript animation library?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The logout button uses three inline SVG layers — a static doorway, an animated stick figure, and an interactive door — all stacked with absolute positioning. The stick figure's limb movements are controlled by CSS custom properties like --transform-arm1 and --transform-leg1. JavaScript updates these properties in sequence via a states object and setTimeout chains, simulating a walking cycle, door interaction, and falling exit — no animation library required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use this day/night toggle in a real project to switch themes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. The toggle is designed as a drop-in component. To use it for full-page theming, move the .light-mode and .dark-mode class swap from .scene to the <body> or :root element and define your CSS custom properties (colors, backgrounds, borders) under each class. The toggle button's logic remains identical — just one class swap drives every visual change across the entire page."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What CSS techniques are used to animate the stick figure's limbs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Each limb group (arm, wrist, leg, calf) is a <g> element in the SVG with a class like .arm1 or .leg2. A CSS transition on transform is applied to each group using the --transform-* custom property as the transform value. JavaScript simply updates the custom property value by calling button.style.setProperty(). Because CSS transitions watch for changes to the computed transform value, the limb smoothly animates to its new position without any Web Animations API or GSAP calls."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this project beginner-friendly?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The theme toggle is one of the best beginner CSS exercises — it teaches class toggling, CSS transitions, and the cascade in a very visual way. The logout button is more advanced due to its SVG structure and sequential animation states, but the core pattern (updating CSS custom properties with JavaScript) is straightforward once understood. Both components are fully self-contained in a single HTML file with no build tools required."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: BreadcrumbList ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+      {"@type": "ListItem", "position": 3, "name": "Day Night Toggle & Animated Logout Button", "item": "https://77cod-ing.github.io/Project-DayNight-Toggle-Logout-Button.html"}
+    ]
+  }
+  </script>
+
+<!-- ===== ASSETS ===== -->
+<link rel="icon" type="image/png" href="Picture1.png">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+<link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+    crossorigin="anonymous"></script>
+
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+      --premcolo: #00d9ff;
+      --accent2: #ff6b35;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --surface: rgba(255, 255, 255, 0.04);
+      --surface-hover: rgba(0, 217, 255, 0.07);
+      --border: rgba(255, 255, 255, 0.08);
+      --font-head: 'Space Mono', monospace;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--back);
+      font-family: var(--font-body);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 56px;
+      padding: 0 2.5rem;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      gap: 8px;
+    }
+
+    .logo-icon { color: var(--premcolo); letter-spacing: 2px; }
+
+    .nav-links {
+      display: flex;
+      gap: clamp(1rem, 2vw, 2rem);
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.25s;
+    }
+
+    .nav-links a:hover { color: var(--premcolo); }
+
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      padding: 12px 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb ol {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .breadcrumb li+li::before {
+      content: "›";
+      color: var(--premcolo);
+      margin-right: 6px;
+      font-size: 1.1rem;
+    }
+
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--premcolo); }
+    .breadcrumb [aria-current="page"] { color: var(--premcolo); font-weight: 600; }
+
+    /* ===== BACK BUTTON ===== */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.2s;
+      margin: 1rem 2.5rem;
+    }
+
+    .back-link:hover { border-color: var(--premcolo); color: var(--premcolo); }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 3rem 2.5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-head);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .tag-tutorial { background: rgba(0,217,255,0.12); color: var(--premcolo); border: 1px solid rgba(0,217,255,0.25); }
+    .tag-js { background: rgba(235,223,0,0.1); color: #ebdf00; border: 1px solid rgba(235,223,0,0.2); }
+    .tag-css { background: rgba(0,217,255,0.08); color: #7dd3fc; border: 1px solid rgba(0,217,255,0.15); }
+    .tag-level { background: rgba(255,107,53,0.1); color: var(--accent2); border: 1px solid rgba(255,107,53,0.2); }
+    .read-time { color: var(--text-muted); font-size: 13px; }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span { color: var(--premcolo); }
+
+    .hero-lead {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .stat { display: flex; flex-direction: column; align-items: flex-start; }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      color: var(--premcolo);
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      display: block;
+      box-shadow: 0 0 60px rgba(0,217,255,0.08), 0 32px 80px rgba(0,0,0,0.5);
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem;
+      align-items: start;
+    }
+
+    /* ===== ARTICLE ===== */
+    .article-body h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: var(--premcolo);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 80px;
+    }
+
+    .article-body h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: #7dd3fc;
+      margin: 1.8rem 0 0.75rem;
+      scroll-margin-top: 80px;
+    }
+
+    .article-body p { margin-bottom: 1.1rem; color: var(--text); }
+
+    .article-body code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0,217,255,0.1);
+      color: var(--premcolo);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .article-body ul,
+    .article-body ol {
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .article-body li { margin-bottom: 9px; }
+    .article-body li strong { color: #fff; }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .toc-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--premcolo);
+      margin-bottom: 0.75rem;
+    }
+
+    .toc ol { padding-left: 1.2rem; }
+    .toc li { margin-bottom: 6px; }
+    .toc a { color: var(--text-muted); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+    .toc a:hover { color: var(--premcolo); }
+
+    /* ===== FEATURE CARDS ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(0,217,255,0.3);
+      background: var(--surface-hover);
+    }
+
+    .feature-icon { font-size: 1.5rem; margin-bottom: 8px; }
+    .feature-title { font-family: var(--font-head); font-size: 0.85rem; color: #fff; margin-bottom: 5px; }
+    .feature-desc { font-size: 13px; color: var(--text-muted); }
+
+    /* ===== STEPS ===== */
+    .steps { margin: 1.5rem 0; }
+
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:last-child { border-bottom: none; }
+
+    .step-num {
+      width: 44px;
+      height: 44px;
+      background: rgba(0,217,255,0.1);
+      border: 1px solid rgba(0,217,255,0.25);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      color: var(--premcolo);
+      font-size: 1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 { margin-top: 0; font-size: 1rem; }
+    .step-content p { margin-bottom: 0; font-size: 14px; color: var(--text-muted); }
+
+    /* ===== CODE SECTION ===== */
+    .code-section { margin: 2rem 0; width: 60vw; }
+
+    .code-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .code-tabs { display: flex; gap: 4px; }
+
+    .code-tab {
+      padding: 8px 20px;
+      border-radius: 8px 8px 0 0;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      background: rgba(255,255,255,0.02);
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .code-tab.active { background: #1e1e2f; color: #fff; border-color: rgba(0,217,255,0.3); }
+    .code-tab[data-lang="html"].active { color: #ff6600; }
+    .code-tab[data-lang="css"].active { color: #00ffff; }
+    .code-tab[data-lang="js"].active { color: #f7df1e; }
+
+    /* ===== PREVIEW BUTTON ===== */
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: 1px solid rgba(0,217,255,0.4);
+      background: linear-gradient(135deg, rgba(0,217,255,0.12), rgba(0,217,255,0.04));
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.3px;
+    }
+
+    .preview-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,217,255,0.2), rgba(0,217,255,0.05));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .preview-btn:hover {
+      border-color: var(--premcolo);
+      box-shadow: 0 0 20px rgba(0,217,255,0.2), 0 0 40px rgba(0,217,255,0.08);
+      transform: translateY(-1px);
+    }
+
+    .preview-btn:hover::before { opacity: 1; }
+    .preview-btn:active { transform: translateY(0) scale(0.98); }
+    .preview-btn i { font-size: 16px; position: relative; z-index: 1; }
+    .preview-btn span { position: relative; z-index: 1; }
+
+    .preview-btn.loading i { animation: spin 0.8s linear infinite; }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .code-panels { position: relative; }
+
+    .code-box {
+      background: #1e1e2f;
+      border: 1px solid rgba(0,217,255,0.15);
+      border-radius: 0 12px 12px 12px;
+      position: relative;
+      display: none;
+    }
+
+    .code-box.active { display: block; }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-lang-label { font-family: var(--font-head); font-size: 13px; font-weight: 700; }
+
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover { border-color: var(--premcolo); color: var(--premcolo); }
+    .copy-btn.copied { color: #4ade80; border-color: #4ade80; }
+
+    :not(pre)>code[class*="language-"],
+    pre[class*="language-"] {
+      width: 100%;
+      max-width: 100%;
+      height: 50vh;
+      border-radius: 0 0 12px 12px;
+      overflow-y: auto;
+      overflow-x: auto;
+      margin: 0;
+    }
+
+    pre::-webkit-scrollbar { width: 6px; height: 6px; }
+    pre::-webkit-scrollbar-track { background: transparent; }
+    pre::-webkit-scrollbar-thumb { background: var(--premcolo); border-radius: 10px; }
+
+    /* ===== INFO / WARN ===== */
+    .info-box {
+      background: rgba(0,217,255,0.06);
+      border: 1px solid rgba(0,217,255,0.2);
+      border-left: 4px solid var(--premcolo);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .info-box strong { color: var(--premcolo); }
+
+    .warn-box {
+      background: rgba(255,107,53,0.06);
+      border: 1px solid rgba(255,107,53,0.2);
+      border-left: 4px solid var(--accent2);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .warn-box strong { color: var(--accent2); }
+
+    /* ===== COMPARISON TABLE ===== */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 14px;
+    }
+
+    .comparison-table th {
+      font-family: var(--font-head);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 10px 14px;
+      background: rgba(0,217,255,0.08);
+      color: var(--premcolo);
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+
+    .comparison-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      vertical-align: top;
+    }
+
+    .comparison-table tr:hover td { background: var(--surface-hover); }
+    .comparison-table td strong { color: #fff; }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-family: var(--font-head);
+      font-weight: 700;
+    }
+
+    .badge-green { background: rgba(74,222,128,0.12); color: #4ade80; border: 1px solid rgba(74,222,128,0.25); }
+    .badge-orange { background: rgba(255,107,53,0.12); color: var(--accent2); border: 1px solid rgba(255,107,53,0.25); }
+    .badge-blue { background: rgba(0,217,255,0.1); color: var(--premcolo); border: 1px solid rgba(0,217,255,0.25); }
+
+    /* ===== FAQ ===== */
+    .faq { margin: 1.5rem 0; }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      background: var(--surface);
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s;
+      list-style: none;
+      user-select: none;
+    }
+
+    .faq-question:hover { background: var(--surface-hover); }
+
+    .faq-question::after {
+      content: "+";
+      font-size: 1.3rem;
+      color: var(--premcolo);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    details[open] .faq-question::after { transform: rotate(45deg); }
+
+    .faq-answer {
+      padding: 1rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-answer code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0,217,255,0.1);
+      color: var(--premcolo);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* ===== CONCLUSION ===== */
+    .conclusion {
+      background: linear-gradient(135deg, rgba(0,217,255,0.07), rgba(0,140,160,0.05));
+      border: 1px solid rgba(0,217,255,0.2);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .conclusion h2 { border: none; margin-top: 0; padding-bottom: 0; }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+
+    /* ===== COUNTDOWN ===== */
+    .countdown-box {
+      background: rgba(0,217,255,0.05);
+      border: 1px solid rgba(0,217,255,0.18);
+      border-radius: 14px;
+      padding: 1.5rem 1.75rem;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+
+    .countdown-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .countdown-timer {
+      font-family: var(--font-head);
+      font-size: 2.5rem;
+      color: var(--premcolo);
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .gist-link-wrapper { display: none; margin-top: 12px; }
+    .gist-link-wrapper.visible { display: block; }
+
+    .gist-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(0,217,255,0.15), rgba(0,217,255,0.06));
+      border: 1px solid rgba(0,217,255,0.35);
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .gist-link:hover { background: rgba(0,217,255,0.2); box-shadow: 0 0 20px rgba(0,217,255,0.2); }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar { position: sticky; top: 72px; }
+
+    .sidebar-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-header {
+      padding: 14px 16px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--premcolo);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .related-list {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .related-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/9;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .related-card:hover { transform: translateY(-2px); border-color: rgba(0,217,255,0.3); }
+
+    .related-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .related-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.8) 100%);
+    }
+
+    .related-card-title {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* ===== PREVIEW MODAL ===== */
+    .preview-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0,5,15,0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s cubic-bezier(0.4,0,0.2,1), visibility 0.35s;
+    }
+
+    .preview-overlay.open { opacity: 1; visibility: visible; }
+
+    .preview-modal {
+      width: 95vw;
+      max-width: 95vw;
+      height: 95vh;
+      max-height: 95vh;
+      background: #0a0e1a;
+      border: 1px solid rgba(0,217,255,0.2);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 0 1px rgba(0,217,255,0.06), 0 24px 80px rgba(0,0,0,0.7), 0 0 120px rgba(0,217,255,0.06);
+      transform: scale(0.92) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
+    }
+
+    .preview-overlay.open .preview-modal { transform: scale(1) translateY(0); }
+
+    .preview-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0,0,0,0.3);
+      flex-shrink: 0;
+    }
+
+    .preview-modal-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-modal-title i { color: var(--premcolo); font-size: 16px; }
+    .preview-modal-title strong { color: #fff; }
+
+    .preview-dots { display: flex; gap: 7px; }
+
+    .preview-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, filter 0.2s;
+    }
+
+    .preview-dot:hover { transform: scale(1.2); filter: brightness(1.3); }
+    .preview-dot.red { background: #ff5f57; }
+    .preview-dot.yellow { background: #febc2e; }
+    .preview-dot.green { background: #28c840; }
+
+    .preview-close-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .preview-close-btn:hover {
+      border-color: var(--accent2);
+      color: var(--accent2);
+      background: rgba(255,107,53,0.08);
+    }
+
+    .preview-iframe-wrap { flex: 1; position: relative; overflow: hidden; background: #000; }
+    .preview-iframe-wrap iframe { width: 100%; height: 100%; border: none; display: block; background: #000; }
+
+    .preview-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: #0a0e1a;
+      z-index: 2;
+      transition: opacity 0.4s;
+    }
+
+    .preview-loading.hidden { opacity: 0; pointer-events: none; }
+
+    .preview-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(0,217,255,0.15);
+      border-top-color: var(--premcolo);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    .preview-loading-text { font-family: var(--font-head); font-size: 13px; color: var(--text-muted); letter-spacing: 0.5px; }
+
+    .preview-loading-files { display: flex; gap: 8px; margin-top: 4px; }
+
+    .preview-file-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      font-weight: 700;
+      opacity: 0.5;
+      transition: opacity 0.3s;
+    }
+
+    .preview-file-tag.loaded { opacity: 1; }
+    .preview-file-tag.html-tag { background: rgba(255,102,0,0.15); color: #ff6600; border: 1px solid rgba(255,102,0,0.3); }
+    .preview-file-tag.css-tag { background: rgba(0,255,255,0.1); color: #00ffff; border: 1px solid rgba(0,255,255,0.25); }
+    .preview-file-tag.js-tag { background: rgba(247,223,30,0.1); color: #f7df1e; border: 1px solid rgba(247,223,30,0.25); }
+
+    .preview-hint {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 16px;
+      background: rgba(0,0,0,0.7);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      color: var(--text-muted);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s 0.8s;
+      white-space: nowrap;
+      z-index: 3;
+    }
+
+    .preview-hint.show { opacity: 1; }
+    .preview-hint i { color: var(--premcolo); margin-right: 4px; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; padding: 1.5rem 1.25rem; }
+      .sidebar { position: static; }
+      .related-list { flex-direction: row; flex-wrap: wrap; }
+      .related-card { flex: 1 1 calc(50% - 8px); }
+      .hero { padding: 2rem 1.25rem 1.5rem; }
+      .navbar { padding: 0 1.25rem; }
+      .breadcrumb { padding: 10px 1.25rem; }
+      .back-link { margin: 0.75rem 1.25rem; }
+      .code-section { width: 85vw; }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hero-stats { gap: 1.2rem; }
+      .features-grid { grid-template-columns: 1fr 1fr; }
+      .code-tab { padding: 7px 13px; font-size: 12px; }
+      .related-card { flex: 1 1 100%; }
+      .comparison-table { font-size: 12px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">{ / }</span> 77cod_ing
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="Terms & Conditions.html">Terms &amp; Conditions</a>
+    </nav>
+  </header>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
+      <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+      <li><span aria-current="page">Day Night Toggle &amp; Animated Logout Button</span></li>
+    </ol>
+  </nav>
+
+  <!-- ===== BACK BUTTON ===== -->
+  <a href="projects.html" class="back-link" aria-label="Return to Projects">
+    <i class='bx bx-arrow-back'></i> Return to Projects
+  </a>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="main-heading">
+    <div class="hero-meta">
+      <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+      <span class="tag tag-css">CSS</span>
+      <span class="tag tag-js">JavaScript</span>
+      <span class="tag tag-level">Beginner–Intermediate</span>
+      <span class="read-time"><i class='bx bx-time'></i> ~15 min read</span>
+    </div>
+
+    <h1 id="main-heading">
+      <span>Day / Night Toggle Switch</span> &amp;<br>
+      Animated Logout Button with CSS &amp; JS
+    </h1>
+
+    <p class="hero-lead">
+      A complete tutorial covering two polished UI components in a single file: a pill-shaped
+      <strong>day/night theme toggle</strong> with an animated sun-to-moon icon swap, and an
+      <strong>animated logout button</strong> featuring a walking stick figure, a door that opens and slams
+      shut, and a comedic falling exit — all built with pure CSS transitions, keyframe animations, and
+      vanilla JavaScript.
+    </p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value">2</span>
+        <span class="stat-label">Components</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">8</span>
+        <span class="stat-label">Build Steps</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">3</span>
+        <span class="stat-label">SVG Layers</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">Free</span>
+        <span class="stat-label">Source Code</span>
+      </div>
+    </div>
+
+    <img src="https://77cod-ing.github.io/Animated_Logout_Button.png"
+      alt="Day night toggle switch with animated sun and moon icons alongside an animated logout button with a walking stick figure built using CSS and JavaScript"
+      class="hero-img" width="1200" height="420" loading="eager" fetchpriority="high">
+    <p class="img-caption">Final result: a smooth day/night toggle with icon crossfade and an animated logout button
+      whose stick figure character walks through the door, which slams behind them — pure HTML, CSS &amp; JavaScript</p>
+  </section>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <div class="layout">
+
+    <main class="article-body" id="main-content">
+
+      <!-- TOC -->
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-title">📋 Contents</p>
+        <ol>
+          <li><a href="#overview">What You'll Build</a></li>
+          <li><a href="#features">Key Features</a></li>
+          <li><a href="#source-code">Full Source Code</a></li>
+          <li><a href="#how-it-works">How It Works — Step by Step</a></li>
+          <li><a href="#customization">Customization Ideas</a></li>
+          <li><a href="#browser-support">Browser Compatibility</a></li>
+          <li><a href="#performance">Performance &amp; Responsiveness</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </nav>
+
+      <!-- OVERVIEW -->
+      <section id="overview">
+        <h2>What You'll Build</h2>
+        <p>
+          In this tutorial you'll build two complementary UI components that demonstrate a wide range of
+          CSS and JavaScript animation techniques in one compact, single-file project. The first component
+          is a <strong>day/night theme toggle switch</strong> — a smooth, pill-shaped button with a sliding
+          circular thumb. As the thumb travels across the track, a sun icon fades and shrinks out while a
+          crescent moon icon scales and rotates in, giving the appearance of one icon morphing into the
+          other. Meanwhile, the entire background of the scene transitions between a soft near-white and a
+          deep navy, producing an immersive day-to-night feel.
+        </p>
+        <p>
+          The second component takes UI micro-interaction to a playful extreme: an <strong>animated logout
+          button</strong>. When clicked, a stick figure character walks toward a door rendered in SVG,
+          the door swings open, the figure passes through, the door slams shut, and — in a final comic
+          flourish — the figure falls off screen while spinning. Every limb movement (arms, wrists, legs,
+          calves) is driven by CSS custom properties that JavaScript updates in a carefully timed sequence,
+          turning SVG groups into a surprisingly expressive walking puppet.
+        </p>
+        <p>
+          Together, these two components cover a foundational web animation skillset: <strong>CSS class-based
+          theme switching</strong>, <strong>opacity and transform crossfades</strong>, <strong>CSS custom
+          property animation</strong>, <strong>SVG layering and z-index composition</strong>, and
+          <strong>sequential animation state machines in vanilla JavaScript</strong>.
+        </p>
+
+        <div class="info-box">
+          <strong>💡 Who Is This For?</strong> The toggle switch is ideal for beginners who want their
+          first taste of practical theme switching. The logout button is well-suited for intermediate
+          developers who want to explore CSS custom property animation and JavaScript-driven SVG state
+          sequencing — no animation library required.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- FEATURES -->
+      <section id="features">
+        <h2>Key Features of This Toggle &amp; Logout Button UI</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🌗</div>
+            <div class="feature-title">Smooth Day / Night Toggle</div>
+            <div class="feature-desc">A pill-shaped switch whose thumb slides between two positions with a
+              <code>cubic-bezier</code> spring easing for a satisfying snap feel.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">☀️</div>
+            <div class="feature-title">Sun / Moon Icon Crossfade</div>
+            <div class="feature-desc">Two Boxicons icons stacked in the thumb — the sun fades and spins out while
+              the moon scales and rotates in using independent CSS <code>opacity</code> and
+              <code>transform</code> transitions.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <div class="feature-title">Full Scene Background Transition</div>
+            <div class="feature-desc">The entire <code>.scene</code> container smoothly shifts between a light
+              near-white (<code>#f4f7ff</code>) and a deep navy (<code>#1f2335</code>) over
+              <code>0.5s</code> with a single CSS transition.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🚶</div>
+            <div class="feature-title">Walking Stick Figure Animation</div>
+            <div class="feature-desc">An inline SVG figure whose arms, wrists, legs, and calves are animated
+              through two distinct walking poses via CSS custom properties updated by JavaScript.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🚪</div>
+            <div class="feature-title">Door Open &amp; Slam Sequence</div>
+            <div class="feature-desc">The door SVG rotates open with <code>rotateY</code> on click, waits for
+              the figure to walk through, then snaps shut with a timed CSS class addition and
+              <code>transition-delay</code>.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">😵</div>
+            <div class="feature-title">Comedic Falling Exit</div>
+            <div class="feature-desc">After the door slams, the figure transitions its <code>bottom</code>
+              position off-screen, runs a <code>spin</code> keyframe, and fades out — a three-stage falling
+              animation that delights users.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎭</div>
+            <div class="feature-title">Theme-Aware Button Colors</div>
+            <div class="feature-desc">The logout button, door, and doorway SVG fills invert automatically
+              between themes using <code>.light-mode</code> and <code>.dark-mode</code> CSS selectors,
+              so the component always looks correct in both states.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚙️</div>
+            <div class="feature-title">CSS Custom Property State Machine</div>
+            <div class="feature-desc">A <code>states</code> object in JavaScript maps named animation states
+              to CSS custom property values. Switching states is one function call — clean, readable, and
+              trivially extensible.</div>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- SOURCE CODE -->
+      <section id="source-code">
+        <h2>Full Source Code (Free)</h2>
+        <p>
+          Both components live together in a single <code>index.html</code> file. The CSS defines all
+          transitions and animation states. The JavaScript consists of two independent blocks: one
+          <code>click</code> listener for the theme toggle, and one state-machine-style sequence of
+          <code>setTimeout</code> calls for the logout button animation. Use the tabs below to
+          explore the HTML structure, CSS styles, and JavaScript logic separately.
+        </p>
+
+        <div class="code-section">
+          <div class="code-toolbar">
+            <div class="code-tabs" role="tablist" aria-label="Code files">
+              <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                aria-controls="panel-html">HTML</button>
+              <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+                aria-controls="panel-css">CSS</button>
+              <button class="code-tab" data-lang="js" role="tab" aria-selected="false"
+                aria-controls="panel-js">JS</button>
+            </div>
+            <button class="preview-btn" id="previewBtn" aria-label="Preview the final result">
+              <i class='bx bx-play-circle'></i>
+              <span>Preview Result</span>
+            </button>
+          </div>
+
+          <div class="code-panels">
+            <div class="code-box active" id="panel-html" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code1" class="language-html"></code></pre>
+            </div>
+
+            <div class="code-box" id="panel-css" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
+                <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code2" class="language-css"></code></pre>
+            </div>
+
+            <div class="code-box" id="panel-js" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#f7df1e;">JS — script.js</span>
+                <button class="copy-btn" data-target="code3"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code3" class="language-javascript"></code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Countdown Gist reveal -->
+        <div class="countdown-box">
+          <p class="countdown-label">🔓 Full Source Code unlocks in</p>
+          <div class="countdown-timer" id="countdownDisplay">05</div>
+          <p style="font-size:13px;color:var(--text-muted);">Hosted on GitHub Gist — free, no sign-up required</p>
+          <div class="gist-link-wrapper" id="gistLinkWrapper">
+            <a class="gist-link"
+              href="https://gist.githubusercontent.com/77cod-ing/11c0f9dadd8f1e3d60ae815c732f33a7"
+              target="_blank" rel="noopener noreferrer">
+              <i class='bx bxl-github'></i> View Full Source Code on GitHub Gist
+            </a>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <strong>💡 Quick Start:</strong> Copy all code into a single <code>index.html</code> file and
+          add a Boxicons CDN link in the <code>&lt;head&gt;</code>. Open it in any modern browser — no
+          build tools, no npm, no configuration needed.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- HOW IT WORKS -->
+      <section id="how-it-works">
+        <h2>How It Works — Step by Step</h2>
+        <p>
+          Here's a deep dive into the eight core techniques powering both the theme toggle and the animated
+          logout button, from the scene setup to the stick figure's dramatic exit.
+        </p>
+
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>The Scene Container &amp; Theme Classes</h3>
+              <p>
+                A <code>.scene</code> div wraps both components and starts with the
+                <code>light-mode</code> class applied. A <code>transition: background 0.5s ease</code>
+                on <code>.scene</code> ensures that every time the class swaps between
+                <code>light-mode</code> and <code>dark-mode</code>, the background color blends
+                smoothly rather than cutting instantly. This single container-level class is the
+                control point for both the toggle visuals and the button color inversions.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>The Toggle Switch — Track &amp; Thumb</h3>
+              <p>
+                The toggle is a <code>&lt;button&gt;</code> with a fixed pill shape
+                (<code>width: 54px; height: 28px; border-radius: 14px</code>). Inside it, a
+                <code>.thumb</code> div acts as the sliding indicator. In light mode,
+                <code>.light-mode .thumb</code> sets <code>transform: translateX(0)</code>; in dark
+                mode, <code>.dark-mode .thumb</code> sets <code>transform: translateX(26px)</code>.
+                The <code>transition: all 0.4s cubic-bezier(.34, 1.56, .64, 1)</code> on the thumb
+                gives the slide a slight overshoot that feels springy and tactile.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>Sun / Moon Icon Crossfade Inside the Thumb</h3>
+              <p>
+                Two <code>&lt;span&gt;</code> elements — <code>.icon-sun</code> and
+                <code>.icon-moon</code> — are positioned absolutely on top of each other inside the
+                thumb. Each gets its own <code>transition: opacity 0.3s, transform 0.4s</code>.
+                In light mode the sun is at <code>opacity: 1; transform: scale(1) rotate(0deg)</code>
+                and the moon is hidden at <code>opacity: 0; transform: scale(0.5) rotate(-90deg)</code>.
+                In dark mode these values flip. The result is a smooth icon morph that looks like
+                one animated icon rather than two swapping images.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h3>The JavaScript Theme Toggle — One Line of Logic</h3>
+              <p>
+                A <code>click</code> listener on <code>#themeBtn</code> flips a local
+                <code>dark</code> boolean and sets <code>scene.className</code> to either
+                <code>'scene dark-mode'</code> or <code>'scene light-mode'</code>. That's the
+                entirety of the JavaScript for the toggle — every visual change cascades from CSS
+                selectors targeting the theme class. Storing the boolean in JavaScript (rather than
+                checking the DOM class) makes it easy to read, extend, or connect to
+                <code>localStorage</code> for persistence.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">05</div>
+            <div class="step-content">
+              <h3>SVG Layering for the Logout Button</h3>
+              <p>
+                The logout button contains three inline SVG elements, all absolutely positioned and
+                stacked by <code>z-index</code>. The first (<code>.doorway</code>, z-index 3) is
+                the static doorframe background. The second (<code>.figure</code>, z-index 4) is
+                the animated stick figure. The third (<code>.door</code>, z-index 5) sits in front
+                of the figure by default so it visually "covers" the figure when closed — then the
+                figure appears to step behind it and through it as the door opens.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">06</div>
+            <div class="step-content">
+              <h3>CSS Custom Properties as Animation Targets</h3>
+              <p>
+                Each limb group in the SVG figure — <code>.arm1</code>, <code>.wrist1</code>,
+                <code>.leg2</code>, <code>.calf2</code>, and so on — has
+                <code>transform: var(--transform-arm1)</code> and a matching
+                <code>transition: transform calc(var(--walking-duration)*1ms) ease-in-out</code>.
+                JavaScript defines a <code>states</code> object where each key is a named animation
+                state and each value is a map of CSS custom property names to target values. The
+                <code>update(s)</code> function iterates that map and calls
+                <code>button.style.setProperty(k, v)</code>, which triggers all the CSS transitions
+                simultaneously.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">07</div>
+            <div class="step-content">
+              <h3>The Click Sequence — Walk, Door, and Slam</h3>
+              <p>
+                Clicking the button while in the default or hover state begins a
+                <code>setTimeout</code> chain. First, <code>'clicked'</code> is added and the
+                figure advances to the <code>walking1</code> state. After its
+                <code>--figure-duration</code> elapses, <code>'door-slammed'</code> is added and
+                the figure transitions to <code>walking2</code>. The door's
+                <code>rotateY(35deg)</code> open state then snaps back to
+                <code>rotateY(0)</code> via a delayed transition, simulating a slam. Finally the
+                <code>falling</code> sequence begins.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">08</div>
+            <div class="step-content">
+              <h3>The Falling Exit Animation</h3>
+              <p>
+                When the <code>falling</code> class is added, the figure transitions from
+                <code>bottom: 5px</code> to <code>bottom: -1080px</code> over the
+                <code>--figure-duration</code> with a <code>cubic-bezier(0.7, 0.1, 1, 1)</code>
+                acceleration curve — mimicking gravity. At the same time,
+                <code>animation: spin 1000ms infinite linear</code> makes the figure tumble.
+                Opacity fades to <code>0</code> at 75% of the duration. After a final 1-second
+                wait, all classes are removed and the component resets to its default state ready
+                for the next click.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="warn-box">
+          <strong>⚠️ Timing Chain Tip:</strong> The <code>setTimeout</code> durations in the click
+          handler are derived from the CSS custom property values defined in the <code>states</code>
+          object (e.g. <code>states['walking1']['--figure-duration'] * 1</code>). If you adjust the
+          walking speed, always update the value in the <code>states</code> object — the timer will
+          follow automatically. Never hard-code the delay separately or the animation will desync.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- CUSTOMIZATION -->
+      <section id="customization">
+        <h2>Customization Ideas</h2>
+        <p>
+          Both components are deliberately minimal at their core, making them easy to drop into existing
+          projects or extend with new behavior. Here are practical ideas for both the toggle and the
+          logout button.
+        </p>
+
+        <h3>Theming the Toggle Switch</h3>
+        <ul>
+          <li><strong>Persist the preference</strong> — After toggling, save the current mode to
+            <code>localStorage.setItem('theme', dark ? 'dark' : 'light')</code> and read it on page
+            load to restore the user's last choice automatically.
+          </li>
+          <li><strong>Extend to CSS custom properties</strong> — Move the theme change from the
+            <code>.scene</code> element to <code>document.documentElement</code> (the
+            <code>:root</code>) and define color tokens like <code>--bg</code>, <code>--text</code>,
+            and <code>--border</code> under both theme classes. Every styled element on the page will
+            then automatically recolor on toggle.
+          </li>
+          <li><strong>System preference detection</strong> — Initialize the <code>dark</code> variable
+            using <code>window.matchMedia('(prefers-color-scheme: dark)').matches</code> so the
+            component respects the user's OS-level setting on first load.
+          </li>
+          <li><strong>Change the accent colors</strong> — The light scene uses <code>#f4f7ff</code>
+            and the dark scene uses <code>#1f2335</code>. Swap these for any two contrasting colors to
+            theme the toggle for your own brand palette.
+          </li>
+        </ul>
+
+        <h3>Extending the Logout Button</h3>
+        <ul>
+          <li><strong>Replace the label text</strong> — Change "Log Out" to any action label like
+            "Exit", "Leave Room", or "Disconnect". The figure animation is content-agnostic and will
+            work with any verb.
+          </li>
+          <li><strong>Add a confirmation step</strong> — On first click, show a small tooltip or
+            popover asking "Are you sure?" and only begin the walk animation on a second confirmation
+            click. This keeps the comedic exit for the final action.
+          </li>
+          <li><strong>Change the figure fill color</strong> — The stick figure uses
+            <code>fill: #4371f7</code>. Replace this with any brand color, a gradient defined in an
+            SVG <code>&lt;defs&gt;</code>, or even an animated color via a CSS keyframe on the
+            <code>fill</code> property.
+          </li>
+          <li><strong>Add more walking states</strong> — Insert additional entries into the
+            <code>states</code> object to make the figure pause, wave, or stumble before reaching
+            the door. The <code>--figure-duration</code> custom property controls how long the
+            transition takes, so you can make intermediate states as brief or dramatic as you want.
+          </li>
+          <li><strong>Swap the exit animation</strong> — Instead of falling, make the figure shrink
+            to zero with <code>transform: scale(0)</code> or teleport away with a flash keyframe
+            on the <code>.bang</code> SVG paths already included in the markup.
+          </li>
+        </ul>
+
+        <div class="info-box">
+          <strong>💡 Tip:</strong> The hover and mouse-leave states on the logout button already
+          provide a subtle "ready to walk" pose. This pattern — previewing the upcoming animation
+          on hover — is a UX technique called an <em>anticipation animation</em> and is widely used
+          in game UI and interactive product design to hint that something interesting will happen.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- BROWSER COMPATIBILITY -->
+      <section id="browser-support">
+        <h2>Browser Compatibility</h2>
+        <p>
+          Every technique in this project — CSS transitions, keyframe animations, CSS custom properties,
+          <code>transform</code> on SVG elements, and <code>classList</code> manipulation — is fully
+          supported across all modern browsers with no vendor prefixes required.
+        </p>
+
+        <table class="comparison-table" aria-label="Browser compatibility table">
+          <thead>
+            <tr>
+              <th>Browser</th>
+              <th>CSS Transitions &amp; Custom Props</th>
+              <th>SVG Transform Animation</th>
+              <th>Overall Support</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Chrome / Edge</strong></td>
+              <td><span class="badge badge-green">Yes</span></td>
+              <td><span class="badge badge-green">Yes</span></td>
+              <td><span class="badge badge-green">Full</span></td>
+            </tr>
+            <tr>
+              <td><strong>Firefox</strong></td>
+              <td><span class="badge badge-green">Yes</span></td>
+              <td><span class="badge badge-green">Yes</span></td>
+              <td><span class="badge badge-green">Full</span></td>
+            </tr>
+            <tr>
+              <td><strong>Safari (macOS &amp; iOS)</strong></td>
+              <td><span class="badge badge-green">Yes</span></td>
+              <td><span class="badge badge-green">Yes</span></td>
+              <td><span class="badge badge-green">Full</span></td>
+            </tr>
+            <tr>
+              <td><strong>Samsung Internet</strong></td>
+              <td><span class="badge badge-green">Yes</span></td>
+              <td><span class="badge badge-green">Yes</span></td>
+              <td><span class="badge badge-green">Full</span></td>
+            </tr>
+            <tr>
+              <td><strong>Internet Explorer 11</strong></td>
+              <td><span class="badge badge-orange">No (custom props)</span></td>
+              <td><span class="badge badge-blue">Partial</span></td>
+              <td><span class="badge badge-orange">Not supported</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="info-box">
+          <strong>💡 Note:</strong> Internet Explorer 11 does not support CSS custom properties
+          (CSS variables), which are central to both the theme switching and the logout button's
+          limb animation system. As IE11 is effectively retired as of 2022, this is not a
+          practical concern for any new project in 2026.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- PERFORMANCE & RESPONSIVENESS -->
+      <section id="performance">
+        <h2>Performance &amp; Responsiveness</h2>
+        <p>
+          Both components are exceptionally lightweight. There are no external animation libraries,
+          no CSS preprocessors, and no runtime dependencies beyond a Boxicons CDN link for the
+          sun and moon icons.
+        </p>
+        <ul>
+          <li><strong>GPU-composited properties only:</strong> The toggle thumb uses
+            <code>transform: translateX()</code> and the icons use <code>opacity</code> and
+            <code>transform</code> — the browser promotes these to their own compositor layer
+            and animates them entirely on the GPU, avoiding layout recalculation entirely.</li>
+          <li><strong>SVG over raster:</strong> The logout button figure and door are inline SVG,
+            meaning they scale crisply to any display density (including HiDPI / Retina screens)
+            with zero additional HTTP requests and zero image file weight.</li>
+          <li><strong>Minimal scripting footprint:</strong> The entire JavaScript for both
+            components is under 60 lines. There are two event listeners and a handful of
+            <code>setTimeout</code> calls — essentially no CPU overhead during idle states.</li>
+          <li><strong>Instant first paint:</strong> Both components render with CSS only (no JS
+            needed for their initial visual state), so they appear correctly even before the
+            JavaScript event listeners are attached.</li>
+          <li><strong>Responsive by default:</strong> The toggle and button are sized in fixed
+            pixels that work well across viewports. For mobile use, wrap them in a flex or grid
+            container to reflow as needed. The <code>-webkit-tap-highlight-color: transparent</code>
+            property is already set on both interactive elements to remove the default mobile
+            tap flash.</li>
+        </ul>
+
+        <div class="info-box">
+          <strong>💡 Key Takeaway:</strong> Using CSS custom properties as the animation target
+          instead of directly animating SVG attributes means the browser handles interpolation
+          natively via CSS transitions — this is significantly more performant than updating SVG
+          attributes frame by frame with JavaScript and <code>requestAnimationFrame</code>.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+
+          <details class="faq-item">
+            <summary class="faq-question">How does the day/night toggle switch work with CSS?</summary>
+            <div class="faq-answer">
+              The toggle switch is a pill-shaped button containing a circular thumb. When clicked, a
+              JavaScript listener toggles between the <code>light-mode</code> and
+              <code>dark-mode</code> classes on the parent <code>.scene</code> element. CSS selectors
+              like <code>.dark-mode .thumb</code> then change the thumb's <code>translateX</code>
+              position from <code>0</code> to <code>26px</code>, the scene background color, and the
+              opacity and scale of the sun and moon icons — all driven by CSS transitions, with no
+              extra JavaScript needed for the visuals.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How do the sun and moon icons animate when switching themes?</summary>
+            <div class="faq-answer">
+              Both icons sit stacked inside the <code>.thumb</code> element using
+              <code>position: absolute</code>. In light mode, the sun has <code>opacity: 1</code> and
+              <code>scale(1) rotate(0deg)</code> while the moon has <code>opacity: 0</code> and
+              <code>scale(0.5) rotate(-90deg)</code>. When dark mode activates, the CSS rules reverse:
+              the sun fades out and rotates away while the moon scales up and rotates into position.
+              Both transitions run simultaneously via <code>transition: opacity 0.3s, transform
+              0.4s</code> on each icon, creating a seamless cross-fade swap effect.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How is the animated logout button built without a JavaScript animation library?</summary>
+            <div class="faq-answer">
+              The logout button uses three inline SVG layers — a static doorway, an animated stick
+              figure, and an interactive door — all stacked with absolute positioning. The figure's
+              limb movements are controlled by CSS custom properties like
+              <code>--transform-arm1</code> and <code>--transform-leg1</code>. JavaScript updates
+              these properties in sequence via a <code>states</code> object and
+              <code>setTimeout</code> chains, simulating a walking cycle, door interaction, and
+              falling exit — no animation library required. The CSS <code>transition</code> on each
+              limb's <code>transform</code> handles all the smooth interpolation automatically.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Can I use this day/night toggle in a real project to switch themes?</summary>
+            <div class="faq-answer">
+              Absolutely. To use it for full-page theming, move the <code>light-mode</code> and
+              <code>dark-mode</code> class swap from <code>.scene</code> to
+              <code>document.documentElement</code> (the <code>html</code> element) and define your
+              CSS custom properties — colors, backgrounds, borders — under <code>.dark-mode</code>
+              and <code>.light-mode</code> selectors. The toggle button logic stays identical. Add a
+              <code>localStorage</code> read on page load to remember the user's preference between
+              visits.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">What CSS techniques are used to animate the stick figure's limbs?</summary>
+            <div class="faq-answer">
+              Each limb group (<code>.arm1</code>, <code>.wrist1</code>, <code>.leg2</code>, etc.)
+              is an SVG <code>&lt;g&gt;</code> element with
+              <code>transform: var(--transform-arm1)</code> and a corresponding
+              <code>transition: transform calc(var(--walking-duration)*1ms) ease-in-out</code>.
+              JavaScript updates the custom property value via
+              <code>button.style.setProperty(k, v)</code>. Because CSS transitions watch for changes
+              to the computed <code>transform</code> value, each limb smoothly animates to its new
+              position without any Web Animations API or GSAP calls. Every pose is defined as a
+              named entry in the <code>states</code> object, making it easy to add or modify poses.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Is this project beginner-friendly?</summary>
+            <div class="faq-answer">
+              The theme toggle is one of the best beginner CSS exercises — it teaches class toggling,
+              CSS transitions, and the cascade in a visual and immediately satisfying way. The logout
+              button is more advanced due to its SVG structure and sequential animation states, but
+              the core pattern (setting CSS custom properties with JavaScript to drive transitions)
+              is easy to grasp once you've traced through the <code>states</code> object and the
+              <code>update()</code> function. Both components are fully self-contained in a single
+              HTML file with no build tools, so beginners can open the file directly in a browser
+              and see results instantly.
+            </div>
+          </details>
+
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- CONCLUSION -->
+      <section id="conclusion" class="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          This project packs two complete, production-quality UI components into a single HTML file and
+          demonstrates just how expressive pure CSS and vanilla JavaScript can be without reaching for a
+          framework. The <strong>day/night toggle</strong> shows how a single class swap cascades into
+          a full-page visual transformation — a pattern that scales from simple prototypes to complex
+          design systems. The <strong>animated logout button</strong> pushes further, turning inline SVG
+          and CSS custom properties into a mini animation engine capable of sequenced, character-driven
+          motion.
+        </p>
+        <p>
+          The underlying patterns here — theme-class cascades, CSS custom property animation, SVG
+          z-index layering, and timed state transitions — are reusable building blocks. You'll find
+          variations of all of them in dark mode toggles for full apps, animated onboarding sequences,
+          interactive data visualizations, and character-driven loading screens.
+        </p>
+        <p>
+          Want to go deeper into CSS animation? Check out the
+          <a href="Project45.html" style="color:var(--premcolo);">Animated Floating
+          Action Button Menu</a> for staggered keyframe sequencing, or the
+          <a href="Project40.html" style="color:var(--premcolo);">Advanced JavaScript Image Slider</a> for
+          GSAP-powered transitions.
+        </p>
+        <p style="color:var(--text-muted); font-size:14px; margin-bottom:0;">
+          Found this useful? Explore more HTML CSS JavaScript projects in the sidebar →
+        </p>
+      </section>
+
+    </main>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" aria-label="Related projects">
+      <div class="sidebar-box">
+        <div class="sidebar-header">🔗 Related Projects</div>
+        <div class="related-list">
+          <a class="related-card" href="Project45.html"
+            aria-label="Animated Floating Action Button Menu">
+            <img src="https://77cod-ing.github.io/button-list-item.png"
+              alt="Animated floating action button menu CSS JavaScript" loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Floating Action Button Menu — CSS &amp; JS</div>
+          </a>
+          <a class="related-card" href="Project40.html"
+            aria-label="Advanced JavaScript Image Slider with GSAP">
+            <img src="https://i.suar.me/Ep114/m"
+              alt="Advanced JavaScript image slider with GSAP split-panel animation" loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Advanced JavaScript Image Slider — GSAP Animation</div>
+          </a>
+          <a class="related-card" href="Project13.html" aria-label="Neon Cursor Animation">
+            <img src="https://77cod-ing.github.io/image%20copy%2036.png"
+              alt="Neon Cursor Animation CSS JavaScript" loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Neon Cursor Animation — CSS &amp; JavaScript</div>
+          </a>
+          <a class="related-card" href="Project39.html" aria-label="Animated Button with Star Effects">
+            <img src="https://i.suar.me/jvZZv/m"
+              alt="Creative Animated Button with Star Effects Using HTML CSS" loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Button with Star Effects — HTML &amp; CSS</div>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ===== PREVIEW MODAL ===== -->
+  <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+    aria-label="Live preview of the day night toggle and animated logout button">
+    <div class="preview-modal">
+      <div class="preview-modal-header">
+        <div class="preview-modal-title">
+          <i class='bx bx-show'></i>
+          <strong>Live Preview</strong> — Day Night Toggle &amp; Animated Logout Button
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="preview-dots">
+            <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+            <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+            <button class="preview-dot green" aria-label="Maximize" disabled></button>
+          </div>
+          <button class="preview-close-btn" id="previewCloseBtn">
+            <i class='bx bx-x'></i> Close
+          </button>
+        </div>
+      </div>
+      <div class="preview-iframe-wrap">
+        <div class="preview-loading" id="previewLoading">
+          <div class="preview-spinner"></div>
+          <span class="preview-loading-text">Loading preview...</span>
+          <div class="preview-loading-files">
+            <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+            <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+            <span class="preview-file-tag js-tag" id="tagJS">JS</span>
+          </div>
+        </div>
+        <iframe id="previewIframe" title="Preview of day night toggle and animated logout button"
+          sandbox="allow-scripts allow-same-origin"></iframe>
+        <div class="preview-hint" id="previewHint">
+          <i class='bx bx-cursor'></i> Click the toggle to switch themes — then try the Log Out button!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    /*
+      ============================================
+        Gist URLs — update with actual Gist raw URL for this project
+      ============================================
+    */
+    const gistBase = "https://gist.githubusercontent.com/77cod-ing/11c0f9dadd8f1e3d60ae815c732f33a7/raw/";
+
+    const htmlUrl = gistBase + "index.html";
+    const cssUrl  = gistBase + "style.css";
+    const jsUrl   = gistBase + "script.js";
+
+    let cachedHTML = "";
+    let cachedCSS  = "";
+    let cachedJS   = "";
+
+    async function loadCode(url, elementId, lang) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const text = await res.text();
+        const el = document.getElementById(elementId);
+        el.textContent = text;
+        el.className = `language-${lang}`;
+        Prism.highlightElement(el);
+        if (lang === "html") cachedHTML = text;
+        if (lang === "css")  cachedCSS  = text;
+        if (lang === "js")   cachedJS   = text;
+      } catch (e) {
+        const el = document.getElementById(elementId);
+        if (el) el.textContent = `/* Failed to load: ${e.message} */`;
+      }
+    }
+
+    loadCode(htmlUrl, "code1", "html");
+    loadCode(cssUrl,  "code2", "css");
+    loadCode(jsUrl,   "code3", "js");
+
+    /* ===== Tabs ===== */
+    document.querySelectorAll(".code-tab").forEach(tab => {
+      tab.addEventListener("click", () => {
+        const lang = tab.dataset.lang;
+        document.querySelectorAll(".code-tab").forEach(t => {
+          t.classList.remove("active");
+          t.setAttribute("aria-selected", "false");
+        });
+        document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+        tab.classList.add("active");
+        tab.setAttribute("aria-selected", "true");
+        const panelMap = { html: "panel-html", css: "panel-css", js: "panel-js" };
+        document.getElementById(panelMap[lang]).classList.add("active");
+      });
+    });
+
+    /* ===== Copy buttons ===== */
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+        if (!code) return;
+        try {
+          await navigator.clipboard.writeText(code);
+          btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+          btn.classList.add("copied");
+          setTimeout(() => {
+            btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
+            btn.classList.remove("copied");
+          }, 2000);
+        } catch { btn.textContent = "Error"; }
+      });
+    });
+
+    /* ===== Countdown timer ===== */
+    let seconds = 5;
+    const countdownDisplay  = document.getElementById("countdownDisplay");
+    const gistLinkWrapper   = document.getElementById("gistLinkWrapper");
+
+    const countdownInterval = setInterval(() => {
+      seconds--;
+      countdownDisplay.textContent = String(seconds).padStart(2, "0");
+      if (seconds <= 0) {
+        clearInterval(countdownInterval);
+        gistLinkWrapper.classList.add("visible");
+        countdownDisplay.style.display = "none";
+        document.querySelector(".countdown-label").textContent = "✅ Source Code Available";
+      }
+    }, 1000);
+
+    /* ===== Preview modal ===== */
+    const previewOverlay  = document.getElementById("previewOverlay");
+    const previewIframe   = document.getElementById("previewIframe");
+    const previewLoading  = document.getElementById("previewLoading");
+    const previewHint     = document.getElementById("previewHint");
+    const previewBtn      = document.getElementById("previewBtn");
+    const previewCloseBtn = document.getElementById("previewCloseBtn");
+    const previewDotClose = document.getElementById("previewDotClose");
+    const tagHTML         = document.getElementById("tagHTML");
+    const tagCSS          = document.getElementById("tagCSS");
+    const tagJS           = document.getElementById("tagJS");
+
+    function openPreview() {
+      previewOverlay.classList.add("open");
+      document.body.style.overflow = "hidden";
+      previewLoading.classList.remove("hidden");
+      previewHint.classList.remove("show");
+      previewBtn.classList.add("loading");
+      tagHTML.classList.remove("loaded");
+      tagCSS.classList.remove("loaded");
+      tagJS.classList.remove("loaded");
+      buildPreview();
+    }
+
+    function closePreview() {
+      previewOverlay.classList.remove("open");
+      document.body.style.overflow = "";
+      previewIframe.srcdoc = "";
+      previewBtn.classList.remove("loading");
+    }
+
+    async function buildPreview() {
+      if (cachedHTML && cachedCSS && cachedJS) {
+        tagHTML.classList.add("loaded");
+        tagCSS.classList.add("loaded");
+        tagJS.classList.add("loaded");
+        injectPreview(cachedHTML, cachedCSS, cachedJS);
+        return;
+      }
+      try {
+        const fetches = [];
+        if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
+        if (!cachedCSS)  fetches.push(fetch(cssUrl).then(r => r.text()).then(t  => { cachedCSS  = t; tagCSS.classList.add("loaded");  }));
+        if (!cachedJS)   fetches.push(fetch(jsUrl).then(r => r.text()).then(t   => { cachedJS   = t; tagJS.classList.add("loaded");   }));
+        if (cachedHTML) tagHTML.classList.add("loaded");
+        if (cachedCSS)  tagCSS.classList.add("loaded");
+        if (cachedJS)   tagJS.classList.add("loaded");
+        await Promise.all(fetches);
+        injectPreview(cachedHTML, cachedCSS, cachedJS);
+      } catch (e) {
+        previewLoading.innerHTML = `
+          <i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i>
+          <span class="preview-loading-text" style="color:var(--accent2);">Failed to load preview: ${e.message}</span>
+        `;
+        previewBtn.classList.remove("loading");
+      }
+    }
+
+    function injectPreview(html, css, js) {
+      let combined = html;
+      if (combined.includes('<link') && /style\.css/i.test(combined)) {
+        combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
+      } else if (combined.includes("</head>")) {
+        combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
+      } else {
+        combined = `<style>${css}</style>\n${combined}`;
+      }
+      if (combined.includes('<script') && /script\.js/i.test(combined)) {
+        combined = combined.replace(/<script[^>]*src=["'][^"']*script\.js["'][^>]*><\/script>/gi, `<script>${js}<\/script>`);
+      } else if (combined.includes("</body>")) {
+        combined = combined.replace("</body>", `<script>${js}<\/script>\n</body>`);
+      } else {
+        combined = `${combined}\n<script>${js}<\/script>`;
+      }
+      previewIframe.srcdoc = combined;
+      previewIframe.addEventListener("load", function onLoad() {
+        previewLoading.classList.add("hidden");
+        previewBtn.classList.remove("loading");
+        setTimeout(() => {
+          previewHint.classList.add("show");
+          setTimeout(() => previewHint.classList.remove("show"), 5000);
+        }, 300);
+        previewIframe.removeEventListener("load", onLoad);
+      });
+    }
+
+    previewBtn.addEventListener("click", openPreview);
+    previewCloseBtn.addEventListener("click", closePreview);
+    previewDotClose.addEventListener("click", closePreview);
+    previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
+  </script>
+
+</body>
+</html>
