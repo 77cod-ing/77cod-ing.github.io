@@ -1,0 +1,2484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== PRIMARY SEO META ===== -->
+    <title>Magic Animated Motion Button with CSS Hover Effects | HTML CSS Tutorial 2026</title>
+    <meta name="description"
+        content="Build a magic animated motion button with floating 3D shapes using pure CSS hover transitions and transform effects. Step-by-step tutorial with free source code.">
+    <meta name="keywords"
+        content="css animated button hover effect, css 3d shapes button animation, magic motion button css, css floating objects button, css transform hover animation, interactive button css tutorial, css button with 3d elements, frontend project ideas 2026, css hover scale effect button, animated play button css, css geometric shapes animation, button glow shadow css, css pointer events none trick, css button transition effect">
+    <meta name="author" content="77cod_ing">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://77cod-ing.github.io/Project-Magic-Animated-Motion-Button.html">
+
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Magic Animated Motion Button with CSS Hover Effects — HTML CSS Tutorial 2026">
+    <meta property="og:description"
+        content="Learn how to build a stunning animated button that reveals floating 3D geometric shapes on hover using pure CSS transitions, transforms, and blur filters. Free source code included.">
+    <meta property="og:image" content="https://77cod-ing.github.io/Animated_Motion_Button.png">
+    <meta property="og:url" content="https://77cod-ing.github.io/Project48.html">
+    <meta property="og:site_name" content="77cod_ing">
+    <meta property="article:published_time" content="2026-06-17T00:00:00Z">
+    <meta property="article:modified_time" content="2026-06-17T00:00:00Z">
+    <meta property="article:author" content="77cod_ing">
+    <meta property="article:section" content="CSS Tutorials">
+    <meta property="article:tag" content="HTML, CSS, Animation, Button, 3D Shapes, Hover Effects, Frontend">
+
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Magic Animated Motion Button with CSS Hover Effects — Frontend Tutorial">
+    <meta name="twitter:description"
+        content="Build a magical animated button that explodes with floating 3D geometric shapes on hover — pure CSS transitions, transforms, and blur. Free source code.">
+    <meta name="twitter:image" content="https://77cod-ing.github.io/motion-button-preview.png">
+
+    <!-- ===== SCHEMA: TechArticle ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Magic Animated Motion Button with CSS Hover Effects — Floating 3D Shapes for Beginners and Experts",
+      "description": "A complete tutorial on building a magic animated button that reveals floating 3D geometric objects (cone, torus, icosahedron, sphere) on hover using pure CSS transitions, transforms, filter blur, and a glowing gradient shadow.",
+      "image": "https://77cod-ing.github.io/motion-button-preview.png",
+      "datePublished": "2026-06-17",
+      "dateModified": "2026-06-17",
+      "author": {
+        "@type": "Person",
+        "name": "77cod_ing",
+        "url": "https://77cod-ing.github.io"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "77cod_ing",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://77cod-ing.github.io/Picture1.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://77cod-ing.github.io/Project-Magic-Animated-Motion-Button.html"
+      },
+      "articleSection": "CSS Tutorials",
+      "keywords": "css animated button hover effect, css 3d shapes button animation, magic motion button css, css floating objects button, css transform hover animation",
+      "timeRequired": "PT12M",
+      "educationalLevel": "Beginner",
+      "teaches": ["CSS Transitions", "CSS Transform & Translate", "CSS Filter Blur", "CSS Pseudo-elements for Glow Effects", "CSS Opacity Animation", "CSS Scale on Hover", "Absolute Positioning with Inset", "Pointer Events Control"]
+    }
+    </script>
+
+    <!-- ===== SCHEMA: HowTo ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Build a Magic Animated Motion Button with Floating 3D Shapes Using CSS",
+      "description": "Step-by-step guide to creating an animated button that reveals floating 3D geometric shape images with smooth CSS transitions, blur filters, and a glowing gradient shadow on hover.",
+      "image": "https://77cod-ing.github.io/motion-button-preview.png",
+      "totalTime": "PT12M",
+      "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "0"},
+      "supply": [
+        {"@type": "HowToSupply", "name": "Text editor (VS Code)"},
+        {"@type": "HowToSupply", "name": "A modern web browser"},
+        {"@type": "HowToSupply", "name": "3D shape PNG images (cone, torus, icosahedron, sphere, control)"}
+      ],
+      "tool": [
+        {"@type": "HowToTool", "name": "HTML"},
+        {"@type": "HowToTool", "name": "CSS"},
+        {"@type": "HowToTool", "name": "Google Fonts (Montserrat Alternates)"}
+      ],
+      "step": [
+        {"@type": "HowToStep", "name": "Set Up the HTML Anchor Button", "text": "Create an anchor tag with the class 'button' and add a span for the text label. Embed all 3D shape image assets as img tags inside the button.", "position": 1},
+        {"@type": "HowToStep", "name": "Style the Base Button Layout", "text": "Apply a pill-shaped border radius, background color, padding, and a smooth transition to the button. Center it on screen using CSS Grid.", "position": 2},
+        {"@type": "HowToStep", "name": "Create the Glow Shadow with ::after", "text": "Use a ::after pseudo-element with a blurred linear-gradient positioned below the button to create the floating glow shadow effect visible on hover.", "position": 3},
+        {"@type": "HowToStep", "name": "Position Images Absolutely Inside the Button", "text": "Set all img elements inside the button to position: absolute with inset: 0 and margin: auto so they start centered. Set opacity: 0 and pointer-events: none.", "position": 4},
+        {"@type": "HowToStep", "name": "Pre-position Each Shape with Transform", "text": "Give each geometric shape image its resting transform position using translate() and rotate() so they have a starting point that differs from where they'll land on hover.", "position": 5},
+        {"@type": "HowToStep", "name": "Add the Hover Scale Effect", "text": "On .button:hover, apply transform: scale(1.3) to make the whole button enlarge smoothly, adding visual drama to the interaction.", "position": 6},
+        {"@type": "HowToStep", "name": "Reveal Shapes and Glow on Hover", "text": "On hover, set opacity: 1 on all images and opacity: 1 on the ::after glow. Each shape moves to its final position via a new transform value.", "position": 7},
+        {"@type": "HowToStep", "name": "Apply Depth with Filter Blur", "text": "Add filter: blur() to certain shapes (cone and icosahedron) to simulate a depth-of-field effect, making foreground and background objects feel three-dimensional.", "position": 8}
+      ]
+    }
+    </script>
+
+    <!-- ===== SCHEMA: FAQPage ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I make images appear around a button on hover using CSS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Position the images absolutely inside the button using position: absolute; inset: 0; margin: auto. Set them to opacity: 0 by default with a CSS transition. On the button's :hover state, set opacity: 1 and change each image's transform value to move it to its final position. The transition handles the smooth animation between states."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the CSS technique used to create the glowing shadow below the button?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A ::after pseudo-element is placed behind the button using z-index: -1. It has a blurred linear-gradient background (using filter: blur(12px)) sized to about 80% of the button width and 40% of its height, positioned just below the button with bottom: -4px. On hover, its opacity transitions from 0 to 1, creating a soft glowing halo effect."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the depth-of-field (blur) effect work on the 3D shapes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CSS filter: blur() is applied directly to specific shape images. The cone gets blur(0.5px) and the icosahedron gets blur(0.9px), making them appear slightly out of focus as if they're on a different depth plane than the torus and sphere which remain sharp. This layering trick simulates a camera's depth-of-field effect using only CSS."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is pointer-events: none used on the images inside the button?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The floating shape images are decorative and should not interfere with the button's clickability. Setting pointer-events: none on each image ensures that mouse events (hover, click) pass through the images to the parent button element. Without this, hovering over one of the floating shapes would not register as hovering over the button itself."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I replace the 3D shape images with my own custom images or icons?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. The images are standard img tags with specific class names (.button__cone, .button__torus, etc.). You can replace the src attribute with any PNG, SVG, or WebP image you like. Just adjust the width values and transform offsets on each class to match your new assets' sizes and desired final positions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I change the button's color theme?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The button color is controlled by the CSS custom property --first-color (set to hsl(217, 75%, 80%) by default). Change this value in the :root block to any color you prefer. The ::after glow shadow also references similar hsl values — update those gradient stops to match your new color for a fully cohesive theme."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this animated button accessible for keyboard users?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The button is built as an anchor tag, meaning it receives focus naturally when tabbing. The hover animations also trigger on :focus for keyboard users in most browsers since :hover and :focus share styles. For best practice, you can explicitly add :focus-visible styles mirroring the :hover state so keyboard users always see the geometric shape explosion."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this animated button work without JavaScript?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — this entire project is pure HTML and CSS with zero JavaScript. The hover animation, shape reveal, glow shadow, and scale effect are all handled entirely by CSS :hover pseudo-class selectors and transitions. This makes it extremely lightweight and perfect for embedding into any project without adding scripting dependencies."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- ===== SCHEMA: BreadcrumbList ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+        {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+        {"@type": "ListItem", "position": 3, "name": "Magic Animated Motion Button", "item": "https://77cod-ing.github.io/Project-Magic-Animated-Motion-Button.html"}
+      ]
+    }
+    </script>
+
+    <!-- ===== ASSETS ===== -->
+    <link rel="icon" type="image/png" href="Picture1.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+    <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+        crossorigin="anonymous"></script>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+            --premcolo: #00d9ff;
+            --accent2: #ff6b35;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --surface: rgba(255, 255, 255, 0.04);
+            --surface-hover: rgba(0, 217, 255, 0.07);
+            --border: rgba(255, 255, 255, 0.08);
+            --font-head: 'Space Mono', monospace;
+            --font-body: 'DM Sans', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--back);
+            font-family: var(--font-body);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 56px;
+            padding: 0 2.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            color: var(--premcolo);
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: clamp(1rem, 2vw, 2rem);
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: var(--premcolo);
+        }
+
+        /* ===== BREADCRUMB ===== */
+        .breadcrumb {
+            padding: 12px 2.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb ol {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .breadcrumb li {
+            display: flex;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .breadcrumb li+li::before {
+            content: "›";
+            color: var(--premcolo);
+            margin-right: 6px;
+            font-size: 1.1rem;
+        }
+
+        .breadcrumb a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--premcolo);
+        }
+
+        .breadcrumb [aria-current="page"] {
+            color: var(--premcolo);
+            font-weight: 600;
+        }
+
+        /* ===== BACK BUTTON ===== */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+            margin: 1rem 2.5rem;
+        }
+
+        .back-link:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 3rem 2.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: var(--font-head);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .tag-tutorial {
+            background: rgba(0, 217, 255, 0.12);
+            color: var(--premcolo);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+        }
+
+        .tag-css {
+            background: rgba(0, 217, 255, 0.08);
+            color: #7dd3fc;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .tag-level {
+            background: rgba(255, 107, 53, 0.1);
+            color: var(--accent2);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+        }
+
+        .read-time {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-head);
+            font-size: clamp(1.6rem, 4vw, 2.6rem);
+            line-height: 1.25;
+            color: #fff;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 span {
+            color: var(--premcolo);
+        }
+
+        .hero-lead {
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            color: var(--text-muted);
+            max-width: 680px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .stat-value {
+            font-family: var(--font-head);
+            font-size: 1.4rem;
+            color: var(--premcolo);
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            display: block;
+            box-shadow: 0 0 60px rgba(0, 217, 255, 0.08), 0 32px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .img-caption {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* ===== LAYOUT ===== */
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2.5rem 4rem;
+            align-items: start;
+        }
+
+        /* ===== ARTICLE ===== */
+        .article-body h2 {
+            font-family: var(--font-head);
+            font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+            color: var(--premcolo);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            scroll-margin-top: 80px;
+        }
+
+        .article-body h3 {
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            color: #7dd3fc;
+            margin: 1.8rem 0 0.75rem;
+            scroll-margin-top: 80px;
+        }
+
+        .article-body p {
+            margin-bottom: 1.1rem;
+            color: var(--text);
+        }
+
+        .article-body code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 7px;
+            border-radius: 5px;
+        }
+
+        .article-body ul,
+        .article-body ol {
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 1.1rem;
+        }
+
+        .article-body li {
+            margin-bottom: 9px;
+        }
+
+        .article-body li strong {
+            color: #fff;
+        }
+
+        /* ===== TOC ===== */
+        .toc {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .toc-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--premcolo);
+            margin-bottom: 0.75rem;
+        }
+
+        .toc ol {
+            padding-left: 1.2rem;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+        }
+
+        .toc a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: var(--premcolo);
+        }
+
+        /* ===== FEATURE CARDS ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 1.5rem 0;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            transition: border-color 0.25s, background 0.25s;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(0, 217, 255, 0.3);
+            background: var(--surface-hover);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .feature-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* ===== STEPS ===== */
+        .steps {
+            margin: 1.5rem 0;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 44px 1fr;
+            gap: 1rem;
+            padding: 1.1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-num {
+            width: 44px;
+            height: 44px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-head);
+            color: var(--premcolo);
+            font-size: 1rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            margin-top: 0;
+            font-size: 1rem;
+        }
+
+        .step-content p {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* ===== ASSET CARDS ===== */
+        .asset-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 14px;
+            margin: 1.5rem 0;
+        }
+
+        .asset-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            transition: border-color 0.25s, background 0.25s;
+        }
+
+        .asset-card:hover {
+            border-color: rgba(0, 217, 255, 0.3);
+            background: var(--surface-hover);
+        }
+
+        .asset-name {
+            font-family: var(--font-head);
+            font-size: 0.8rem;
+            color: var(--premcolo);
+            margin-bottom: 6px;
+        }
+
+        .asset-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .asset-alt {
+            font-size: 12px;
+            color: #7dd3fc;
+            font-style: italic;
+            margin-top: 6px;
+        }
+
+        /* ===== CODE SECTION ===== */
+        .code-section {
+            margin: 2rem 0;
+            width: 60vw;
+        }
+
+        .code-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .code-tabs {
+            display: flex;
+            gap: 4px;
+        }
+
+        .code-tab {
+            padding: 8px 20px;
+            border-radius: 8px 8px 0 0;
+            border: 1px solid var(--border);
+            border-bottom: none;
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .code-tab.active {
+            background: #1e1e2f;
+            color: #fff;
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+
+        .code-tab[data-lang="html"].active {
+            color: #ff6600;
+        }
+
+        .code-tab[data-lang="css"].active {
+            color: #00ffff;
+        }
+
+        /* ===== PREVIEW BUTTON ===== */
+        .preview-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 22px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 217, 255, 0.4);
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.3px;
+        }
+
+        .preview-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .preview-btn:hover {
+            border-color: var(--premcolo);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .preview-btn:hover::before {
+            opacity: 1;
+        }
+
+        .preview-btn:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        .preview-btn i {
+            font-size: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .preview-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .preview-btn.loading i {
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .code-panels {
+            position: relative;
+        }
+
+        .code-box {
+            background: #1e1e2f;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+            border-radius: 0 12px 12px 12px;
+            position: relative;
+            display: none;
+        }
+
+        .code-box.active {
+            display: block;
+        }
+
+        .code-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .code-lang-label {
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .copy-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            border-radius: 7px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo);
+        }
+
+        .copy-btn.copied {
+            color: #4ade80;
+            border-color: #4ade80;
+        }
+
+        :not(pre)>code[class*="language-"],
+        pre[class*="language-"] {
+            width: 100%;
+            max-width: 100%;
+            height: 50vh;
+            border-radius: 0 0 12px 12px;
+            overflow-y: auto;
+            overflow-x: auto;
+            margin: 0;
+        }
+
+        pre::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        pre::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        pre::-webkit-scrollbar-thumb {
+            background: var(--premcolo);
+            border-radius: 10px;
+        }
+
+        /* ===== INFO / WARN ===== */
+        .info-box {
+            background: rgba(0, 217, 255, 0.06);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-left: 4px solid var(--premcolo);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .info-box strong {
+            color: var(--premcolo);
+        }
+
+        .warn-box {
+            background: rgba(255, 107, 53, 0.06);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-left: 4px solid var(--accent2);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .warn-box strong {
+            color: var(--accent2);
+        }
+
+        /* ===== COMPARISON TABLE ===== */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 14px;
+        }
+
+        .comparison-table th {
+            font-family: var(--font-head);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 10px 14px;
+            background: rgba(0, 217, 255, 0.08);
+            color: var(--premcolo);
+            border: 1px solid var(--border);
+            text-align: left;
+        }
+
+        .comparison-table td {
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            vertical-align: top;
+        }
+
+        .comparison-table tr:hover td {
+            background: var(--surface-hover);
+        }
+
+        .comparison-table td strong {
+            color: #fff;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-family: var(--font-head);
+            font-weight: 700;
+        }
+
+        .badge-green {
+            background: rgba(74, 222, 128, 0.12);
+            color: #4ade80;
+            border: 1px solid rgba(74, 222, 128, 0.25);
+        }
+
+        .badge-orange {
+            background: rgba(255, 107, 53, 0.12);
+            color: var(--accent2);
+            border: 1px solid rgba(255, 107, 53, 0.25);
+        }
+
+        .badge-blue {
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+        }
+
+        /* ===== FAQ ===== */
+        .faq {
+            margin: 1.5rem 0;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            background: var(--surface);
+            font-weight: 600;
+            font-size: 15px;
+            transition: background 0.2s;
+            list-style: none;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background: var(--surface-hover);
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.3rem;
+            color: var(--premcolo);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        details[open] .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 1rem 1.25rem;
+            color: var(--text-muted);
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+        }
+
+        .faq-answer code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* ===== CONCLUSION ===== */
+        .conclusion {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.07), rgba(0, 140, 160, 0.05));
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 16px;
+            padding: 1.75rem 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .conclusion h2 {
+            border: none;
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 1.5rem 0;
+        }
+
+        /* ===== COUNTDOWN ===== */
+        .countdown-box {
+            background: rgba(0, 217, 255, 0.05);
+            border: 1px solid rgba(0, 217, 255, 0.18);
+            border-radius: 14px;
+            padding: 1.5rem 1.75rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        .countdown-label {
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .countdown-timer {
+            font-family: var(--font-head);
+            font-size: 2.5rem;
+            color: var(--premcolo);
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .gist-link-wrapper {
+            display: none;
+            margin-top: 12px;
+        }
+
+        .gist-link-wrapper.visible {
+            display: block;
+        }
+
+        .gist-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(0, 217, 255, 0.06));
+            border: 1px solid rgba(0, 217, 255, 0.35);
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .gist-link:hover {
+            background: rgba(0, 217, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            position: sticky;
+            top: 72px;
+        }
+
+        .sidebar-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-header {
+            padding: 14px 16px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--premcolo);
+            border-bottom: 1px solid var(--border);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .related-list {
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .related-card {
+            display: block;
+            text-decoration: none;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 16/9;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .related-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+
+        .related-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .related-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+        .related-card-title {
+            position: absolute;
+            bottom: 8px;
+            left: 10px;
+            right: 10px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* ===== PREVIEW MODAL ===== */
+        .preview-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 5, 15, 0.85);
+            backdrop-filter: blur(16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+        }
+
+        .preview-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .preview-modal {
+            width: 95vw;
+            max-width: 95vw;
+            height: 95vh;
+            max-height: 95vh;
+            background: #0a0e1a;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(0, 217, 255, 0.06);
+            transform: scale(0.92) translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .preview-overlay.open .preview-modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .preview-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
+        }
+
+        .preview-modal-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .preview-modal-title i {
+            color: var(--premcolo);
+            font-size: 16px;
+        }
+
+        .preview-modal-title strong {
+            color: #fff;
+        }
+
+        .preview-dots {
+            display: flex;
+            gap: 7px;
+        }
+
+        .preview-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, filter 0.2s;
+        }
+
+        .preview-dot:hover {
+            transform: scale(1.2);
+            filter: brightness(1.3);
+        }
+
+        .preview-dot.red {
+            background: #ff5f57;
+        }
+
+        .preview-dot.yellow {
+            background: #febc2e;
+        }
+
+        .preview-dot.green {
+            background: #28c840;
+        }
+
+        .preview-close-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .preview-close-btn:hover {
+            border-color: var(--accent2);
+            color: var(--accent2);
+            background: rgba(255, 107, 53, 0.08);
+        }
+
+        .preview-iframe-wrap {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .preview-iframe-wrap iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            background: #000;
+        }
+
+        .preview-loading {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            background: #0a0e1a;
+            z-index: 2;
+            transition: opacity 0.4s;
+        }
+
+        .preview-loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .preview-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(0, 217, 255, 0.15);
+            border-top-color: var(--premcolo);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
+        .preview-loading-text {
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .preview-loading-files {
+            display: flex;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .preview-file-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            font-weight: 700;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+
+        .preview-file-tag.loaded {
+            opacity: 1;
+        }
+
+        .preview-file-tag.html-tag {
+            background: rgba(255, 102, 0, 0.15);
+            color: #ff6600;
+            border: 1px solid rgba(255, 102, 0, 0.3);
+        }
+
+        .preview-file-tag.css-tag {
+            background: rgba(0, 255, 255, 0.1);
+            color: #00ffff;
+            border: 1px solid rgba(0, 255, 255, 0.25);
+        }
+
+        .preview-hint {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 6px 16px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            color: var(--text-muted);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.5s 0.8s;
+            white-space: nowrap;
+            z-index: 3;
+        }
+
+        .preview-hint.show {
+            opacity: 1;
+        }
+
+        .preview-hint i {
+            color: var(--premcolo);
+            margin-right: 4px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 1fr;
+                padding: 1.5rem 1.25rem;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .related-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .related-card {
+                flex: 1 1 calc(50% - 8px);
+            }
+
+            .hero {
+                padding: 2rem 1.25rem 1.5rem;
+            }
+
+            .navbar {
+                padding: 0 1.25rem;
+            }
+
+            .breadcrumb {
+                padding: 10px 1.25rem;
+            }
+
+            .back-link {
+                margin: 0.75rem 1.25rem;
+            }
+
+            .code-section {
+                width: 85vw;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-stats {
+                gap: 1.2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .asset-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .code-tab {
+                padding: 7px 13px;
+                font-size: 12px;
+            }
+
+            .related-card {
+                flex: 1 1 100%;
+            }
+
+            .comparison-table {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">{ / }</span> 77cod_ing
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="Privacy Policy.html">Privacy Policy</a>
+            <a href="Terms & Conditions.html">Terms &amp; Conditions</a>
+        </nav>
+    </header>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
+            <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+            <li><span aria-current="page">Magic Animated Motion Button</span></li>
+        </ol>
+    </nav>
+
+    <!-- ===== BACK BUTTON ===== -->
+    <a href="projects.html" class="back-link" aria-label="Return to Projects">
+        <i class='bx bx-arrow-back'></i> Return to Projects
+    </a>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-labelledby="main-heading">
+        <div class="hero-meta">
+            <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+            <span class="tag tag-css">CSS</span>
+            <span class="tag tag-css" style="color:#a5b4fc;border-color:rgba(165,180,252,0.2);">No JS</span>
+            <span class="tag tag-level">Beginner</span>
+            <span class="read-time"><i class='bx bx-time'></i> ~10 min read</span>
+        </div>
+
+        <h1 id="main-heading">
+            Magic <span>Animated Motion Button</span><br>
+            with Floating 3D Shapes &amp; CSS Hover Effects
+        </h1>
+
+        <p class="hero-lead">
+            A complete tutorial to build a pill-shaped button that explodes into life on hover — floating
+            geometric 3D objects orbit the label with smooth CSS transitions, depth-of-field blur, and a
+            glowing gradient shadow beneath it. Zero JavaScript required.
+        </p>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-value">8</span>
+                <span class="stat-label">Build Steps</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">0</span>
+                <span class="stat-label">Lines of JS</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">5</span>
+                <span class="stat-label">Shape Assets</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">Free</span>
+                <span class="stat-label">Source Code</span>
+            </div>
+        </div>
+
+        <img src="https://77cod-ing.github.io/Animated_Motion_Button.png"
+            alt="Magic animated CSS button with floating 3D geometric shapes including cone, torus, icosahedron, sphere, and control icons on hover"
+            class="hero-img" width="1200" height="420" loading="eager" fetchpriority="high">
+        <p class="img-caption">Final result: a pill button that reveals five floating 3D geometric shapes on hover —
+            pure HTML &amp; CSS, no JavaScript at all</p>
+    </section>
+
+    <!-- ===== MAIN LAYOUT ===== -->
+    <div class="layout">
+
+        <main class="article-body" id="main-content">
+
+            <!-- TOC -->
+            <nav class="toc" aria-label="Table of contents">
+                <p class="toc-title">📋 Contents</p>
+                <ol>
+                    <li><a href="#overview">What You'll Build</a></li>
+                    <li><a href="#features">Key Features</a></li>
+                    <li><a href="#source-code">Full Source Code</a></li>
+                    <li><a href="#assets">Project Assets &amp; Images</a></li>
+                    <li><a href="#how-it-works">How It Works — Step by Step</a></li>
+                    <li><a href="#customization">Customization Ideas</a></li>
+                    <li><a href="#browser-support">Browser Compatibility</a></li>
+                    <li><a href="#performance">Performance &amp; Responsiveness</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ol>
+            </nav>
+
+            <!-- OVERVIEW -->
+            <section id="overview">
+                <h2>What You'll Build</h2>
+                <p>
+                    In this tutorial you'll create a <strong>magic animated motion button</strong> that uses nothing
+                    but HTML and CSS. At rest it looks like a simple, elegant pill-shaped link with a single word
+                    label. The moment you hover over it, the button scales up and five floating 3D geometric objects —
+                    a cone, a torus, an icosahedron, a sphere, and a control pad icon — materialize around it from
+                    hidden positions, each traveling to a unique final orbit with smooth transitions and individual
+                    rotation angles.
+                </p>
+                <p>
+                    Beneath the button, a blurred <strong>gradient glow shadow</strong> fades in at the same moment,
+                    making the entire element appear to lift off the page. Two of the shapes also carry a subtle
+                    <code>filter: blur()</code> value, creating a convincing depth-of-field effect where some objects
+                    look closer and others feel slightly out of focus in the background.
+                </p>
+                <p>
+                    This is a polished example of how <strong>CSS transforms, transitions, opacity, and filter
+                        effects</strong> can be layered together without a single line of JavaScript to produce a
+                    visually rich, interactive UI component.
+                </p>
+
+                <div class="info-box">
+                    <strong>💡 Who Is This For?</strong> This project suits beginners who understand basic CSS
+                    positioning and want to push into transforms and transitions with a real, showstopper component,
+                    as well as intermediate developers looking for a clean reference on layering multiple animated
+                    elements from a single hover trigger.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- FEATURES -->
+            <section id="features">
+                <h2>Key Features of This Animated Motion Button</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💊</div>
+                        <div class="feature-title">Pill-Shaped Button</div>
+                        <div class="feature-desc">A soft <code>border-radius: 3rem</code> creates the classic pill shape
+                            that scales up to <code>1.3×</code> on hover for a satisfying pop.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔮</div>
+                        <div class="feature-title">5 Floating 3D Shapes</div>
+                        <div class="feature-desc">Cone, torus, icosahedron, sphere, and a control pad orbit the button
+                            from hidden starting positions using <code>transform: translate() rotate()</code>.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✨</div>
+                        <div class="feature-title">Gradient Glow Shadow</div>
+                        <div class="feature-desc">A <code>::after</code> pseudo-element with a blurred
+                            <code>linear-gradient</code> and <code>filter: blur(12px)</code> creates a soft halo
+                            beneath the button on hover.
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌫️</div>
+                        <div class="feature-title">Depth-of-Field Blur</div>
+                        <div class="feature-desc">The cone and icosahedron carry a slight <code>filter: blur()</code>
+                            value, making them appear on a different depth plane from the sharp foreground shapes.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <div class="feature-title">Pointer Events Control</div>
+                        <div class="feature-desc"><code>pointer-events: none</code> on all images ensures the floating
+                            shapes never intercept mouse events — hover always registers on the button itself.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🪶</div>
+                        <div class="feature-title">Zero JavaScript</div>
+                        <div class="feature-desc">The entire effect — scale, shape reveal, glow, and depth — is driven
+                            exclusively by the CSS <code>:hover</code> pseudo-class and transitions.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <div class="feature-title">Google Fonts Typography</div>
+                        <div class="feature-desc">Montserrat Alternates Bold gives the button label a distinctive,
+                            geometric character that complements the 3D shape aesthetic perfectly.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <div class="feature-title">GPU-Composited Animation</div>
+                        <div class="feature-desc">Every animated property — <code>transform</code>,
+                            <code>opacity</code> — runs on the GPU compositing layer, delivering silky-smooth
+                            60 fps transitions on any device.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- SOURCE CODE -->
+            <section id="source-code">
+                <h2>Full Source Code (Free)</h2>
+                <p>
+                    The project is split across two files: <code>index.html</code> for the markup and
+                    <code>styles.css</code> for all the animation logic. The HTML is a single anchor tag containing the
+                    text label and five image assets. All motion, hover effects, and glow are handled entirely in CSS.
+                    Use the tabs below to browse each file.
+                </p>
+
+                <div class="code-section">
+                    <div class="code-toolbar">
+                        <div class="code-tabs" role="tablist" aria-label="Code files">
+                            <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                                aria-controls="panel-html">HTML</button>
+                            <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+                                aria-controls="panel-css">CSS</button>
+                        </div>
+                        <button class="preview-btn" id="previewBtn" aria-label="Preview the final result">
+                            <i class='bx bx-play-circle'></i>
+                            <span>Preview Result</span>
+                        </button>
+                    </div>
+
+                    <div class="code-panels">
+                        <div class="code-box active" id="panel-html" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                                <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code1" class="language-html"></code></pre>
+                        </div>
+
+                        <div class="code-box" id="panel-css" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#00ffff;">CSS — styles.css</span>
+                                <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code2" class="language-css"></code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Countdown Gist reveal -->
+                <div class="countdown-box">
+                    <p class="countdown-label">🔓 Full Source Code unlocks in</p>
+                    <div class="countdown-timer" id="countdownDisplay">05</div>
+                    <p style="font-size:13px;color:var(--text-muted);">Hosted on GitHub Gist — free, no sign-up required
+                    </p>
+                    <div class="gist-link-wrapper" id="gistLinkWrapper">
+                        <a class="gist-link" href="https://gist.github.com/77cod-ing/magic-animated-motion-button"
+                            target="_blank" rel="noopener noreferrer">
+                            <i class='bx bxl-github'></i> View Full Source Code on GitHub Gist
+                        </a>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <strong>💡 Quick Start:</strong> Drop <code>index.html</code> and <code>styles.css</code> into the
+                    same folder alongside the <code>img/</code> folder containing all five shape PNG files. Open in any
+                    modern browser and hover the button to see the magic.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- ASSETS -->
+            <section id="assets">
+                <h2>Project Assets &amp; Images</h2>
+                <p>
+                    This project relies on five PNG image files stored in an <code>img/</code> folder. Each one
+                    represents a distinct 3D geometric object rendered against a transparent background, allowing them
+                    to float freely over the button without visible boundaries. Together they form the animated
+                    constellation that orbits the label on hover.
+                </p>
+
+                <div class="asset-grid">
+                    <div class="asset-card">
+                        <div class="asset-name">img/cone.png</div>
+                        <p class="asset-desc">A rendered 3D cone shape. Positioned to the upper-left of the button and
+                            rotated 55° in its resting state. On hover it shifts further left and upward while scaling
+                            up slightly. A <code>filter: blur(0.5px)</code> pushes it visually into the background.</p>
+                        <p class="asset-alt">Suggested Alt: "Floating 3D cone shape orbiting an animated CSS button"</p>
+                    </div>
+                    <div class="asset-card">
+                        <div class="asset-name">img/torus.png</div>
+                        <p class="asset-desc">A rendered 3D donut/ring (torus) shape. The largest of the floating
+                            objects at 38px wide. It sits above the button label and travels upward on hover, acting as
+                            a visual crown for the animation. Remains fully sharp — no blur applied.</p>
+                        <p class="asset-alt">Suggested Alt: "3D torus ring floating above animated CSS motion button"
+                        </p>
+                    </div>
+                    <div class="asset-card">
+                        <div class="asset-name">img/icosahedron.png</div>
+                        <p class="asset-desc">A 3D twenty-faced polygon. Positioned to the right side of the button with
+                            a <code>filter: blur(0.9px)</code> — the most out-of-focus shape, implying it sits furthest
+                            in the background. Moves to the upper-right on hover.</p>
+                        <p class="asset-alt">Suggested Alt: "Blurred 3D icosahedron shape in CSS button hover animation"
+                        </p>
+                    </div>
+                    <div class="asset-card">
+                        <div class="asset-name">img/sphere.png</div>
+                        <p class="asset-desc">A 3D sphere rendered at 30px. Placed below the button in its resting state
+                            and drops further down on hover while remaining crisp and in-focus, providing a strong
+                            visual
+                            anchor at the bottom of the effect.</p>
+                        <p class="asset-alt">Suggested Alt: "3D sphere floating below animated CSS hover button"</p>
+                    </div>
+                    <div class="asset-card">
+                        <div class="asset-name">img/control.png</div>
+                        <p class="asset-desc">The largest asset at 90px — a rendered 3D game controller or control pad
+                            icon. It anchors to the lower-right of the button and stays in that zone on hover, scaling
+                            up in place. Its large size adds visual weight and balances the lighter geometric shapes.
+                        </p>
+                        <p class="asset-alt">Suggested Alt: "3D control pad icon in animated magic CSS button effect"
+                        </p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <strong>💡 Asset Tip:</strong> All five images use transparent PNG backgrounds, which is essential
+                    for the floating effect to work. If you substitute your own images, make sure they're also exported
+                    as transparent PNGs or SVGs — opaque backgrounds will cover the button text and break the illusion.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- HOW IT WORKS -->
+            <section id="how-it-works">
+                <h2>How It Works — Step by Step</h2>
+                <p>
+                    Here's a breakdown of the eight core techniques behind this magic animated motion button, from
+                    the base markup structure down to the depth-of-field blur layering.
+                </p>
+
+                <div class="steps">
+
+                    <div class="step">
+                        <div class="step-num">01</div>
+                        <div class="step-content">
+                            <h3>Anchor Tag as the Button Container</h3>
+                            <p>
+                                The button is an <code>&lt;a&gt;</code> tag with <code>class="button"</code> and
+                                <code>position: relative</code>. This establishes the positioning context for all five
+                                absolutely positioned shape images inside it, so each one's <code>inset: 0</code> and
+                                <code>margin: auto</code> starts them centered inside the button before the hover
+                                transforms move them outward.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">02</div>
+                        <div class="step-content">
+                            <h3>Pill Shape, Color, and Base Transition</h3>
+                            <p>
+                                The button gets <code>background-color: var(--first-color)</code> — a soft blue-grey
+                                hsl value — with <code>border-radius: 3rem</code> for the pill shape and
+                                <code>padding: .9rem 2.20rem</code> for comfortable proportions. A single
+                                <code>transition: .4s</code> applies to all properties, so the scale and any color
+                                changes animate smoothly on hover.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">03</div>
+                        <div class="step-content">
+                            <h3>The Glow Shadow with ::after</h3>
+                            <p>
+                                A <code>::after</code> pseudo-element sits behind the button at
+                                <code>z-index: -1</code>. It's sized to 80% of the button's width and 40% of its
+                                height, positioned just below via <code>bottom: -4px</code>, and carries a blurred
+                                <code>linear-gradient</code> using <code>filter: blur(12px)</code>. By default its
+                                <code>opacity</code> is <code>0</code>; on hover it transitions to <code>1</code>,
+                                making the glow appear to emanate from beneath the lifting button.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">04</div>
+                        <div class="step-content">
+                            <h3>Hiding the Shapes with Opacity and Pointer Events</h3>
+                            <p>
+                                All <code>img</code> elements inside <code>.button</code> share the rules:
+                                <code>position: absolute; inset: 0; margin: auto; pointer-events: none; opacity: 0;
+                                transition: .6s</code>. The <code>pointer-events: none</code> is critical — it ensures
+                                that even when shapes are visible on hover, mouse events pass through them to the parent
+                                anchor, keeping the <code>:hover</code> state active.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">05</div>
+                        <div class="step-content">
+                            <h3>Pre-Positioning Each Shape at Rest</h3>
+                            <p>
+                                Each shape class gets an individual <code>transform: translate() rotate()</code> rule
+                                that defines its hidden starting position. For example, the cone starts at
+                                <code>translate(-25px, -6px) rotate(55deg)</code> and the control starts at
+                                <code>translate(60px, 30px) rotate(10deg)</code>. These resting positions are the
+                                same on hover — which means the animation is the <em>reveal</em> traveling from opacity
+                                0 to 1 plus a simultaneous <em>scale</em> change.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">06</div>
+                        <div class="step-content">
+                            <h3>Scaling the Button on Hover</h3>
+                            <p>
+                                <code>.button:hover</code> applies <code>transform: scale(1.3)</code>. Because the
+                                images are children positioned relative to the button, they scale with it — so the
+                                entire constellation of shapes expands outward naturally when the button grows, without
+                                needing separate scale rules on each image.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">07</div>
+                        <div class="step-content">
+                            <h3>Revealing and Moving Shapes on Hover</h3>
+                            <p>
+                                <code>.button:hover img</code> sets <code>opacity: 1</code> to make all shapes visible.
+                                Then each individual class gets an updated <code>transform</code> value on hover — for
+                                example, the torus moves from <code>translate(7px, -14px)</code> to
+                                <code>translate(7px, -32px) scale(1.1)</code>, traveling upward and slightly enlarging.
+                                The <code>.6s</code> transition on the base image rule ensures this travel animates
+                                smoothly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">08</div>
+                        <div class="step-content">
+                            <h3>Depth of Field via CSS Filter Blur</h3>
+                            <p>
+                                The cone receives <code>filter: blur(0.5px)</code> at its base state and the
+                                icosahedron gets <code>filter: blur(0.9px)</code>. These values persist on hover.
+                                Because the torus, sphere, and control are unblurred, the eye reads the blurred shapes
+                                as being further away, creating a layered 3D scene from what is actually a flat 2D
+                                element.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="warn-box">
+                    <strong>⚠️ z-index and Stacking Context:</strong> The <code>.button__text</code> span uses
+                    <code>position: relative; z-index: 10</code> to stay above the images. If you add more children to
+                    the button, make sure they don't accidentally create a new stacking context that pushes the label
+                    behind the shape images.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- CUSTOMIZATION -->
+            <section id="customization">
+                <h2>Customization Ideas</h2>
+                <p>
+                    The motion button is structured so that virtually every visual decision is easy to override.
+                    Here are practical ways to make it your own.
+                </p>
+                <ul>
+                    <li><strong>Change the color theme</strong> — Update <code>--first-color</code> in the
+                        <code>:root</code> block and adjust the hsl values inside the <code>::after</code> gradient
+                        to match. A warm amber, neon green, or deep purple all work beautifully with the 3D shape
+                        aesthetic.
+                    </li>
+                    <li><strong>Replace the shape images</strong> — Swap any of the five PNGs for your own
+                        transparent PNG or SVG assets. Emojis rendered as images, product icons, or mascots all
+                        work. Adjust each class's <code>width</code> and <code>transform</code> values to match
+                        your new asset sizes.
+                    </li>
+                    <li><strong>Adjust travel distance</strong> — Increase the <code>translate()</code> values on
+                        each shape's hover state to make objects fly further from the button for a more explosive
+                        effect, or reduce them for a subtler float.
+                    </li>
+                    <li><strong>Change the button label</strong> — The span contains a single word "play". Replace it
+                        with any call-to-action text. Keep it short — one or two words — so the pill proportions
+                        remain visually balanced.
+                    </li>
+                    <li><strong>Add more shapes</strong> — The pattern is infinitely extensible. Add more
+                        <code>img</code> tags inside <code>.button</code> with new classes, set their resting
+                        <code>transform</code> positions, and define where they travel on <code>:hover</code>.
+                    </li>
+                    <li><strong>Increase the blur intensity</strong> — Raise <code>filter: blur(12px)</code> on the
+                        <code>::after</code> glow for a softer, dreamier halo, or lower it for a tighter, crisper
+                        shadow.
+                    </li>
+                    <li><strong>Make it a real button element</strong> — Swap the <code>&lt;a&gt;</code> tag for a
+                        <code>&lt;button&gt;</code> element and add a <code>click</code> event listener to trigger
+                        any action. All the CSS classes remain identical.
+                    </li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Tip:</strong> Because the entire effect is CSS-only, you can drop this button into
+                    any framework — React, Vue, Svelte, or plain HTML — with no dependency concerns. Just copy the
+                    markup and stylesheet rules.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- BROWSER COMPATIBILITY -->
+            <section id="browser-support">
+                <h2>Browser Compatibility</h2>
+                <p>
+                    Every CSS property used in this project — <code>transform</code>, <code>transition</code>,
+                    <code>opacity</code>, <code>filter</code>, CSS custom properties, and
+                    <code>position: absolute</code>
+                    — has been universally supported across all modern browsers for several years.
+                </p>
+
+                <table class="comparison-table" aria-label="Browser compatibility table">
+                    <thead>
+                        <tr>
+                            <th>Browser</th>
+                            <th>CSS Transforms &amp; Transitions</th>
+                            <th>CSS Filter (blur)</th>
+                            <th>Overall Support</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Chrome / Edge</strong></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Full</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Firefox</strong></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Full</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Safari (macOS &amp; iOS)</strong></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Full</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Samsung Internet</strong></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Yes</span></td>
+                            <td><span class="badge badge-green">Full</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Internet Explorer 11</strong></td>
+                            <td><span class="badge badge-blue">Partial</span></td>
+                            <td><span class="badge badge-orange">No</span></td>
+                            <td><span class="badge badge-orange">Limited</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box">
+                    <strong>💡 Note:</strong> <code>filter: blur()</code> is not supported in Internet Explorer 11,
+                    which
+                    means the depth-of-field blur on the cone and icosahedron will simply not render — the shapes will
+                    still appear and animate, just without the blur. IE11 is effectively retired and not a practical
+                    target for projects in 2026.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- PERFORMANCE & RESPONSIVENESS -->
+            <section id="performance">
+                <h2>Performance &amp; Responsiveness</h2>
+                <p>
+                    Despite the dramatic visual effect, this button has an extremely small performance footprint
+                    because every animation property is handled by the browser's GPU compositing layer.
+                </p>
+                <ul>
+                    <li><strong>GPU-friendly properties:</strong> <code>transform</code> and <code>opacity</code>
+                        drive every shape's motion and reveal. These are composited on the GPU without triggering layout
+                        recalculation or repaint cycles, keeping the animation consistently smooth even on mobile
+                        hardware.</li>
+                    <li><strong>Zero JavaScript overhead:</strong> With no event listeners, no DOM manipulation, and
+                        no animation libraries, the scripting cost of this component is literally zero.</li>
+                    <li><strong>Optimized image loading:</strong> The five PNG assets are small, transparent-background
+                        files. Once they're downloaded (typically on first page load) they're cached and don't affect
+                        subsequent hover performance.</li>
+                    <li><strong>Touch-screen behavior:</strong> On touch devices, the <code>:hover</code> state
+                        typically
+                        fires on tap-and-hold or on a tap that navigates the link. For a touch-optimized experience
+                        consider pairing this with a <code>:focus-visible</code> or JavaScript-driven class toggle to
+                        control the reveal on tap.</li>
+                    <li><strong>Viewport centering:</strong> The body uses <code>display: grid; place-items: center;
+                        height: 100vh</code> to center the button perfectly in any viewport, from mobile to ultrawide
+                        desktop. No media queries are required for the core button layout.</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Key Takeaway:</strong> Animating <code>transform</code> and <code>opacity</code> instead
+                    of layout-triggering properties like <code>width</code>, <code>top</code>, or <code>left</code>
+                    is the single most impactful habit for building smooth CSS animations. This project is a clean
+                    example of that principle applied across five simultaneous animated elements.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- FAQ -->
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq">
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How do I make images appear around a button on hover using CSS?
+                        </summary>
+                        <div class="faq-answer">
+                            Position the images absolutely inside the button with <code>position: absolute; inset: 0;
+                            margin: auto</code> and set <code>opacity: 0</code> plus a <code>transition</code> on the
+                            base state. On <code>.button:hover img</code>, set <code>opacity: 1</code> and update each
+                            image's <code>transform</code> value to move it to its final position. The transition
+                            handles the smooth travel between states automatically.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">What is the CSS technique used to create the glowing shadow below
+                            the button?</summary>
+                        <div class="faq-answer">
+                            A <code>::after</code> pseudo-element with <code>z-index: -1</code> sits behind the button.
+                            It has a <code>linear-gradient</code> background matching the button's color and a
+                            <code>filter: blur(12px)</code> that spreads it into a soft halo. Its <code>opacity</code>
+                            starts at <code>0</code> and transitions to <code>1</code> on <code>:hover</code>,
+                            making the glow appear to emanate from beneath the button as it scales up.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How does the depth-of-field (blur) effect work on the 3D shapes?
+                        </summary>
+                        <div class="faq-answer">
+                            <code>filter: blur()</code> is applied directly on specific shape images — the cone gets
+                            <code>blur(0.5px)</code> and the icosahedron gets <code>blur(0.9px)</code>. Because the
+                            torus, sphere, and control remain unblurred, the human eye reads the blurred shapes as
+                            being on a different depth plane, creating a convincing 3D layering effect from a
+                            completely flat 2D element.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Why is pointer-events: none used on the images inside the button?
+                        </summary>
+                        <div class="faq-answer">
+                            The shape images are decorative overlays and should never intercept mouse events. Without
+                            <code>pointer-events: none</code>, hovering over a shape image would count as leaving the
+                            button, causing the <code>:hover</code> state to toggle on and off rapidly as the cursor
+                            moves across visible shapes. Setting it on every image ensures the parent anchor always
+                            receives all mouse events.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Can I replace the 3D shape images with my own custom images or
+                            icons?</summary>
+                        <div class="faq-answer">
+                            Absolutely. Each image uses a dedicated class (<code>.button__cone</code>,
+                            <code>.button__torus</code>, etc.) with its own <code>width</code> and
+                            <code>transform</code> values. Swap the <code>src</code> attribute to any transparent PNG
+                            or SVG, then update that class's <code>width</code> and the <code>translate()</code> values
+                            in both the resting and hover states to match your new asset's dimensions and desired orbit.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How do I change the button's color theme?</summary>
+                        <div class="faq-answer">
+                            The button's background is controlled by <code>--first-color</code> in the
+                            <code>:root</code> block (default: <code>hsl(217, 75%, 80%)</code>). Update this value to
+                            any color. The <code>::after</code> glow gradient also references similar hsl values inline
+                            — update both gradient color stops to match your new <code>--first-color</code> for a
+                            cohesive result.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Is this animated button accessible for keyboard users?</summary>
+                        <div class="faq-answer">
+                            Because the button is an <code>&lt;a&gt;</code> tag, it receives keyboard focus naturally
+                            when tabbing. The <code>:hover</code> state does not automatically apply to focused
+                            elements in all browsers. For full keyboard accessibility, duplicate the hover rules under a
+                            <code>:focus-visible</code> selector so that tabbing to the button also reveals the
+                            floating shapes for sighted keyboard users.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Does this animated button work without JavaScript?</summary>
+                        <div class="faq-answer">
+                            Yes — this is a 100% JavaScript-free project. The entire hover animation, shape reveal,
+                            glow shadow, and scale effect are driven exclusively by CSS <code>:hover</code>
+                            pseudo-class selectors combined with <code>transition</code>, <code>transform</code>, and
+                            <code>opacity</code> rules. This makes it extremely lightweight and embeddable in any
+                            project or framework without adding scripting dependencies.
+                        </div>
+                    </details>
+
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- CONCLUSION -->
+            <section id="conclusion" class="conclusion">
+                <h2>Conclusion</h2>
+                <p>
+                    This <strong>magic animated motion button</strong> is a great demonstration of how much personality
+                    pure CSS can inject into a single UI element. By combining <strong>absolute positioning</strong>,
+                    <strong>opacity transitions</strong>, <strong>transform-based movement</strong>,
+                    <strong>filter blur for depth</strong>, and a <strong>blurred pseudo-element glow</strong>, you
+                    get a production-ready button that feels genuinely magical — and the JavaScript line count stays
+                    at zero.
+                </p>
+                <p>
+                    The techniques here transfer directly to other components: any element can have decorative
+                    children that appear on <code>:hover</code> using this same pattern of absolute positioning plus
+                    opacity and transform toggling. Product cards, navigation links, and call-to-action sections all
+                    benefit from this kind of layered hover choreography.
+                </p>
+                <p>
+                    Want to keep exploring animated buttons and CSS micro-interactions? Check out the
+                    <a href="Project-Floating-Action-Menu-Button.html" style="color:var(--premcolo);">Animated Floating
+                        Action Button Menu</a>
+                    for a FAB that expands into a full action list, or the
+                    <a href="Project39.html" style="color:var(--premcolo);">Animated Button with Star Effects</a>
+                    for particle-style CSS button animations.
+                </p>
+                <p style="color:var(--text-muted); font-size:14px; margin-bottom:0;">
+                    Found this useful? Explore more HTML CSS projects in the sidebar or browse all projects in the
+                    collection.
+                </p>
+            </section>
+
+        </main>
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar" aria-label="Related projects">
+            <div class="sidebar-box">
+                <div class="sidebar-header">🔗 Related Projects</div>
+                <div class="related-list">
+                    <a class="related-card" href="Project45.html"
+                        aria-label="Animated Floating Action Button Menu with CSS">
+                        <img src="https://77cod-ing.github.io/button-list-item.png"
+                            alt="Animated floating action button menu expanding into a list built with CSS"
+                            loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Animated Floating Action Button Menu — CSS &amp; JS</div>
+                    </a>
+                    <a class="related-card" href="Project39.html" aria-label="Animated Button with Star Effects">
+                        <img src="https://i.suar.me/jvZZv/m"
+                            alt="Creative Animated Button with Star Effects Using HTML CSS" loading="lazy" width="280"
+                            height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Animated Button with Star Effects — HTML &amp; CSS</div>
+                    </a>
+                    <a class="related-card" href="Project40.html"
+                        aria-label="Advanced JavaScript Image Slider with GSAP">
+                        <img src="https://i.suar.me/Ep114/m"
+                            alt="Advanced JavaScript image slider with GSAP split-panel animation" loading="lazy"
+                            width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Advanced JavaScript Image Slider — GSAP Animation</div>
+                    </a>
+                    <a class="related-card" href="Project13.html" aria-label="Neon Cursor Animation CSS JavaScript">
+                        <img src="https://77cod-ing.github.io/image%20copy%2036.png"
+                            alt="Neon Cursor Animation CSS JavaScript" loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Neon Cursor Animation — CSS &amp; JavaScript</div>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- ===== PREVIEW MODAL ===== -->
+    <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+        aria-label="Live preview of the magic animated motion button">
+        <div class="preview-modal">
+            <div class="preview-modal-header">
+                <div class="preview-modal-title">
+                    <i class='bx bx-show'></i>
+                    <strong>Live Preview</strong> — Magic Animated Motion Button
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <div class="preview-dots">
+                        <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+                        <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+                        <button class="preview-dot green" aria-label="Maximize" disabled></button>
+                    </div>
+                    <button class="preview-close-btn" id="previewCloseBtn">
+                        <i class='bx bx-x'></i> Close
+                    </button>
+                </div>
+            </div>
+            <div class="preview-iframe-wrap">
+                <div class="preview-loading" id="previewLoading">
+                    <div class="preview-spinner"></div>
+                    <span class="preview-loading-text">Loading preview...</span>
+                    <div class="preview-loading-files">
+                        <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+                        <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+                    </div>
+                </div>
+                <iframe id="previewIframe" title="Preview of magic animated motion button"
+                    sandbox="allow-scripts allow-same-origin"></iframe>
+                <div class="preview-hint" id="previewHint">
+                    <i class='bx bx-cursor'></i> Hover over the button to see the magic
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        /*
+          ============================================
+            Gist URLs — update with the actual Gist raw URL for this project
+          ============================================
+        */
+        const gistBase = "https://gist.githubusercontent.com/77cod-ing/cf8f38c2d59b0ce6efc5091104ac7937/raw/";
+
+        const htmlUrl = gistBase + "index.html";
+        const cssUrl = gistBase + "style.css";
+
+        let cachedHTML = "";
+        let cachedCSS = "";
+
+        async function loadCode(url, elementId, lang) {
+            try {
+                const res = await fetch(url);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const text = await res.text();
+                const el = document.getElementById(elementId);
+                el.textContent = text;
+                el.className = `language-${lang}`;
+                Prism.highlightElement(el);
+                if (lang === "html") cachedHTML = text;
+                if (lang === "css") cachedCSS = text;
+            } catch (e) {
+                const el = document.getElementById(elementId);
+                if (el) el.textContent = `/* Failed to load: ${e.message} */`;
+            }
+        }
+
+        loadCode(htmlUrl, "code1", "html");
+        loadCode(cssUrl, "code2", "css");
+
+        /* ===== Tabs ===== */
+        document.querySelectorAll(".code-tab").forEach(tab => {
+            tab.addEventListener("click", () => {
+                const lang = tab.dataset.lang;
+                document.querySelectorAll(".code-tab").forEach(t => {
+                    t.classList.remove("active");
+                    t.setAttribute("aria-selected", "false");
+                });
+                document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+                tab.classList.add("active");
+                tab.setAttribute("aria-selected", "true");
+                const panelMap = { html: "panel-html", css: "panel-css" };
+                document.getElementById(panelMap[lang]).classList.add("active");
+            });
+        });
+
+        /* ===== Copy buttons ===== */
+        document.querySelectorAll(".copy-btn").forEach(btn => {
+            btn.addEventListener("click", async () => {
+                const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+                if (!code) return;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+                    btn.classList.add("copied");
+                    setTimeout(() => {
+                        btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
+                        btn.classList.remove("copied");
+                    }, 2000);
+                } catch { btn.textContent = "Error"; }
+            });
+        });
+
+        /* ===== Countdown timer ===== */
+        let seconds = 5;
+        const countdownDisplay = document.getElementById("countdownDisplay");
+        const gistLinkWrapper = document.getElementById("gistLinkWrapper");
+
+        const countdownInterval = setInterval(() => {
+            seconds--;
+            countdownDisplay.textContent = String(seconds).padStart(2, "0");
+            if (seconds <= 0) {
+                clearInterval(countdownInterval);
+                gistLinkWrapper.classList.add("visible");
+                countdownDisplay.style.display = "none";
+                document.querySelector(".countdown-label").textContent = "✅ Source Code Available";
+            }
+        }, 1000);
+
+        /* ===== Preview modal ===== */
+        const previewOverlay = document.getElementById("previewOverlay");
+        const previewIframe = document.getElementById("previewIframe");
+        const previewLoading = document.getElementById("previewLoading");
+        const previewHint = document.getElementById("previewHint");
+        const previewBtn = document.getElementById("previewBtn");
+        const previewCloseBtn = document.getElementById("previewCloseBtn");
+        const previewDotClose = document.getElementById("previewDotClose");
+        const tagHTML = document.getElementById("tagHTML");
+        const tagCSS = document.getElementById("tagCSS");
+
+        function openPreview() {
+            previewOverlay.classList.add("open");
+            document.body.style.overflow = "hidden";
+            previewLoading.classList.remove("hidden");
+            previewHint.classList.remove("show");
+            previewBtn.classList.add("loading");
+            tagHTML.classList.remove("loaded");
+            tagCSS.classList.remove("loaded");
+            buildPreview();
+        }
+
+        function closePreview() {
+            previewOverlay.classList.remove("open");
+            document.body.style.overflow = "";
+            previewIframe.srcdoc = "";
+            previewBtn.classList.remove("loading");
+        }
+
+        async function buildPreview() {
+            if (cachedHTML && cachedCSS) {
+                tagHTML.classList.add("loaded");
+                tagCSS.classList.add("loaded");
+                injectPreview(cachedHTML, cachedCSS);
+                return;
+            }
+            try {
+                const fetches = [];
+                if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
+                if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
+                if (cachedHTML) tagHTML.classList.add("loaded");
+                if (cachedCSS) tagCSS.classList.add("loaded");
+                await Promise.all(fetches);
+                injectPreview(cachedHTML, cachedCSS);
+            } catch (e) {
+                previewLoading.innerHTML = `
+                    <i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i>
+                    <span class="preview-loading-text" style="color:var(--accent2);">Failed to load preview: ${e.message}</span>
+                `;
+                previewBtn.classList.remove("loading");
+            }
+        }
+
+        function injectPreview(html, css) {
+            let combined = html;
+            if (combined.includes('<link') && /styles\.css/i.test(combined)) {
+                combined = combined.replace(/<link[^>]*href=["'][^"']*styles\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
+            } else if (combined.includes("</head>")) {
+                combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
+            } else {
+                combined = `<style>${css}</style>\n${combined}`;
+            }
+            previewIframe.srcdoc = combined;
+            previewIframe.addEventListener("load", function onLoad() {
+                previewLoading.classList.add("hidden");
+                previewBtn.classList.remove("loading");
+                setTimeout(() => {
+                    previewHint.classList.add("show");
+                    setTimeout(() => previewHint.classList.remove("show"), 4000);
+                }, 300);
+                previewIframe.removeEventListener("load", onLoad);
+            });
+        }
+
+        previewBtn.addEventListener("click", openPreview);
+        previewCloseBtn.addEventListener("click", closePreview);
+        previewDotClose.addEventListener("click", closePreview);
+        previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+        document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
+    </script>
+
+</body>
+
+</html>
