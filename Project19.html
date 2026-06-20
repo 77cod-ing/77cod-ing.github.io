@@ -1,321 +1,1449 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== PRIMARY SEO META ===== -->
+  <title>CSS 3D Flipping Card with Glowing Animation — Pure HTML/CSS Tutorial 2026</title>
+  <meta name="description"
+    content="Build a stunning CSS 3D flipping card with glowing edges, animated gradient lines, and smooth hover effects. Complete step-by-step tutorial with free source code.">
+  <meta name="keywords"
+    content="css 3d flipping card, glowing card animation css, css flip card hover effect, 3d card transform css, css glow animation, pure css 3d card, css rotateY flip, animated card design css, frontend card tutorial 2026, css card effects no javascript">
+  <meta name="author" content="77cod_ing">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://77cod-ing.github.io/Project19.html">
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="CSS 3D Flipping Card with Glowing Animation — Pure HTML/CSS Tutorial">
+  <meta property="og:description"
+    content="Learn to build a pure CSS 3D flipping card with glowing gradient edges, smooth hover flip animation, and floating particle effects. Zero JavaScript required.">
+  <meta property="og:image" content="https://77cod-ing.github.io/3d-flipping-card-preview.png">
+  <meta property="og:url" content="https://77cod-ing.github.io/Project19.html">
+  <meta property="og:site_name" content="77cod_ing">
+  <meta property="article:published_time" content="2026-06-14T00:00:00Z">
+  <meta property="article:modified_time" content="2026-06-14T00:00:00Z">
+  <meta property="article:author" content="77cod_ing">
+  <meta property="article:section" content="CSS Tutorials">
+  <meta property="article:tag" content="HTML, CSS, 3D Transforms, Animation, Card Effects, UI Components, Frontend">
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CSS 3D Flipping Card with Glowing Animation Tutorial">
+  <meta name="twitter:description"
+    content="Build a futuristic 3D flipping card with glowing edges using only HTML and CSS. Step-by-step guide with free source code.">
+  <meta name="twitter:image" content="https://77cod-ing.github.io/3d-flipping-card-preview.png">
+
+  <!-- ===== SCHEMA: TechArticle ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "CSS 3D Flipping Card with Glowing Animation — Complete HTML/CSS Tutorial",
+    "description": "A comprehensive tutorial on building a pure CSS 3D flipping card with glowing gradient edges, smooth hover flip animation, floating particle effects, and responsive design — zero JavaScript required.",
+    "image": "https://77cod-ing.github.io/3d-flipping-card-preview.png",
+    "datePublished": "2026-06-14",
+    "dateModified": "2026-06-14",
+    "author": {
+      "@type": "Person",
+      "name": "77cod_ing",
+      "url": "https://77cod-ing.github.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "77cod_ing",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Picture1.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://77cod-ing.github.io/Project19.html"
+    },
+    "articleSection": "CSS Tutorials",
+    "keywords": "css 3d flipping card, glowing card animation, css flip hover effect, 3d transform css, pure css card",
+    "timeRequired": "PT15M",
+    "educationalLevel": "Beginner",
+    "teaches": ["CSS 3D Transforms", "transform-style: preserve-3d", "CSS Keyframe Animations", "CSS Gradients", "CSS Filters (blur, brightness)", "CSS Transitions", "Flexbox Centering", "Responsive Design"]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: HowTo ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Build a CSS 3D Flipping Card with Glowing Animation Step by Step",
+    "description": "Step-by-step guide to creating a pure CSS 3D flipping card with glowing gradient edges, smooth hover flip animation, and floating particle effects.",
+    "image": "https://77cod-ing.github.io/3d-flipping-card-preview.png",
+    "totalTime": "PT15M",
+    "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "0"},
+    "supply": [
+      {"@type": "HowToSupply", "name": "Text editor (VS Code recommended)"},
+      {"@type": "HowToSupply", "name": "A modern web browser"}
+    ],
+    "tool": [
+      {"@type": "HowToTool", "name": "HTML5"},
+      {"@type": "HowToTool", "name": "CSS3"}
+    ],
+    "step": [
+      {"@type": "HowToStep", "name": "Create the Card HTML Structure", "text": "Build a .card container with a .content wrapper inside. Within .content, add two child divs: .front and .back. The front holds your static content and the back contains the hidden content revealed on flip.", "position": 1},
+      {"@type": "HowToStep", "name": "Center the Card with Flexbox", "text": "Apply display: flex, justify-content: center, and align-items: center to the body element. Set a dark background color to make the glowing effects visible.", "position": 2},
+      {"@type": "HowToStep", "name": "Apply 3D Perspective and Transform Style", "text": "Add perspective: 1000px to the .card element and transform-style: preserve-3d to .content. This enables true 3D transformation on child elements.", "position": 3},
+      {"@type": "HowToStep", "name": "Position Front and Back Faces", "text": "Set both .front and .back to position: absolute, width: 100%, height: 100%. Apply backface-visibility: hidden to both. Rotate the .back face with transform: rotateY(180deg).", "position": 4},
+      {"@type": "HowToStep", "name": "Add Floating Glow Circles to Front Face", "text": "Create circular divs with border-radius: 50%, apply box-shadow for the glow effect, and use @keyframes floating animation to create smooth up-and-down motion.", "position": 5},
+      {"@type": "HowToStep", "name": "Create Rotating Gradient Line on Back Face", "text": "Add a pseudo-element or div with a linear-gradient background. Apply @keyframes rotation animation to spin it continuously, creating a dynamic glowing border effect.", "position": 6},
+      {"@type": "HowToStep", "name": "Trigger the Flip on Hover", "text": "Add the CSS rule .card:hover .content { transform: rotateY(180deg); } with a transition for smooth animation. The card will flip 180 degrees to reveal the back face.", "position": 7}
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: FAQPage ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the CSS 3D flip effect work without JavaScript?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The 3D flip effect uses CSS transform-style: preserve-3d on the parent element, which allows child elements to exist in 3D space. The front face has no rotation while the back face is pre-rotated 180 degrees with transform: rotateY(180deg). Both faces have backface-visibility: hidden so only the visible side renders. On hover, the parent rotates 180 degrees, hiding the front and revealing the back — all purely with CSS."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the purpose of perspective in CSS 3D transforms?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The perspective property defines how far the viewer is from the z-plane. A lower value (like 500px) creates a more dramatic, distorted 3D effect, while a higher value (like 1500px) makes the 3D effect more subtle and natural. Without perspective, 3D transforms appear flat. It must be applied to the parent of the element being transformed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is the glowing animation effect created?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The glow effect is achieved using multiple box-shadows with rgba colors and the CSS blur filter. For animated glow, @keyframes animations cycle through different box-shadow values and filter: blur() amounts. The rotating gradient line uses a linear-gradient background animated with transform: rotate() keyframes, creating a sweeping light effect around the card edges."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can this 3D card work on mobile devices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, but hover doesn't work well on touch devices. For mobile, you can add a media query that either: 1) Uses :active pseudo-class instead of :hover, 2) Adds a JavaScript touch event listener to toggle a class, or 3) Shows both sides stacked vertically. The 3D transforms are well-supported on all modern mobile browsers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is backface-visibility and why is it important?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The backface-visibility property determines whether the back side of an element is visible when it's rotated away from the viewer. Setting it to hidden ensures that when an element is rotated 180 degrees, it becomes invisible rather than showing a mirrored version of its front face. This is essential for flip card effects to work correctly — without it, both faces would be visible simultaneously during the flip animation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I customize the glow colors and animation speed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To change glow colors, modify the box-shadow rgba values and the linear-gradient color stops. For animation speed, adjust the duration in the transition property (e.g., transition: transform 0.6s for a slower flip) and the @keyframes animation-duration (e.g., animation: glow 2s for a slower pulse). You can also change the cubic-bezier timing function to alter the animation easing."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: BreadcrumbList ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+      {"@type": "ListItem", "position": 3, "name": "3D Flipping Card", "item": "https://77cod-ing.github.io/Project19.html"}
+    ]
+  }
+  </script>
+
+  <!-- ===== ASSETS ===== -->
   <link rel="icon" type="image/png" href="Picture1.png">
-  <title>Create a Skewed Navigation Menu — HTML/CSS</title>
-  <meta name="description" content="Skewed navigation menu, interactive menu design, CSS 3D effects, hover animation, responsive web design, modern UI navigation.">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+  <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
-     crossorigin="anonymous"></script>
-   <style>
-     *{
+    crossorigin="anonymous"></script>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      overflow-x: hidden;
-    }
-    body {
-      background: linear-gradient(to right, #2c0e43 10%, #581c87);
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
     }
 
+    :root {
+      --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+      --premcolo: #00d9ff;
+      --accent2: #ff6b35;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --surface: rgba(255, 255, 255, 0.04);
+      --surface-hover: rgba(0, 217, 255, 0.07);
+      --border: rgba(255, 255, 255, 0.08);
+      --font-head: 'Space Mono', monospace;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--back);
+      font-family: var(--font-body);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    /* ===== NAVBAR ===== */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 50px;
-      padding: 0 2rem;
-      background-color: #0d1325;
+      height: 56px;
+      padding: 0 2.5rem;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      font-size: 22px;
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 2vw, 1.2rem);
       font-weight: bold;
       color: white;
       text-decoration: none;
+      gap: 8px;
     }
 
     .logo-icon {
-      color: #a855f7;
-      font-size: 26px;
-      margin-right: 8px;
-      letter-spacing: 2.5px;
+      color: var(--premcolo);
+      letter-spacing: 2px;
     }
 
     .nav-links {
       display: flex;
-      gap: 35px;
+      gap: clamp(1rem, 2vw, 2rem);
+      align-items: center;
     }
 
     .nav-links a {
-      color: #d1d5db;
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.25s;
     }
 
     .nav-links a:hover {
-      color: #a855f7;
-      transform: scale(1.2);
+      color: var(--premcolo);
     }
-    /*linke*/
-    .con1 {
-      font-family: Arial, sans-serif;
+
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      padding: 12px 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb ol {
       display: flex;
-      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      list-style: none;
       align-items: center;
-      flex-direction: column;
-      margin: auto 0;
-      height: 50vh;
-    }
-    .countdown {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00ffcc;
     }
 
-    .link-box {
-      display: none;
-      padding: 20px 40px;
-      background: #1e2a47;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-      transition: 0.3s;
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 13px;
     }
 
-    .link-box a {
+    .breadcrumb li+li::before {
+      content: "›";
+      color: var(--premcolo);
+      margin-right: 6px;
+      font-size: 1.1rem;
+    }
+
+    .breadcrumb a {
+      color: var(--text-muted);
       text-decoration: none;
-      color: #00ffcc;
-      font-size: 1.2rem;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--premcolo);
+    }
+
+    .breadcrumb [aria-current="page"] {
+      color: var(--premcolo);
+      font-weight: 600;
+    }
+
+    /* ===== BACK BUTTON ===== */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.2s;
+      margin: 1rem 2.5rem;
+    }
+
+    .back-link:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 3rem 2.5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255, 107, 53, 0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-head);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .tag-tutorial {
+      background: rgba(0, 217, 255, 0.12);
+      color: var(--premcolo);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+    }
+
+    .tag-css {
+      background: rgba(0, 217, 255, 0.08);
+      color: #7dd3fc;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+    }
+
+    .tag-html {
+      background: rgba(255, 107, 53, 0.1);
+      color: #ff9966;
+      border: 1px solid rgba(255, 107, 53, 0.2);
+    }
+
+    .tag-level {
+      background: rgba(255, 107, 53, 0.1);
+      color: var(--accent2);
+      border: 1px solid rgba(255, 107, 53, 0.2);
+    }
+
+    .tag-nojs {
+      background: rgba(74, 222, 128, 0.1);
+      color: #4ade80;
+      border: 1px solid rgba(74, 222, 128, 0.2);
+    }
+
+    .read-time {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      color: var(--premcolo);
+    }
+
+    .hero-lead {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      color: var(--premcolo);
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 500px;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      display: block;
+      box-shadow: 0 0 60px rgba(0, 217, 255, 0.08), 0 32px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem;
+      align-items: start;
+    }
+
+    /* ===== ARTICLE ===== */
+    .article-body h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: var(--premcolo);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 80px;
+    }
+
+    .article-body h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: #7dd3fc;
+      margin: 1.8rem 0 0.75rem;
+      scroll-margin-top: 80px;
+    }
+
+    .article-body p {
+      margin-bottom: 1.1rem;
+      color: var(--text);
+    }
+
+    .article-body code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .article-body ul,
+    .article-body ol {
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .article-body li {
+      margin-bottom: 9px;
+    }
+
+    .article-body li strong {
+      color: #fff;
+    }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .toc-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--premcolo);
+      margin-bottom: 0.75rem;
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--premcolo);
+    }
+
+    /* ===== FEATURE CARDS ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(0, 217, 255, 0.3);
+      background: var(--surface-hover);
+    }
+
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .feature-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .feature-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ===== STEPS ===== */
+    .steps {
+      margin: 1.5rem 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      width: 44px;
+      height: 44px;
+      background: rgba(0, 217, 255, 0.1);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      color: var(--premcolo);
+      font-size: 1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+
+    .step-content p {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* ===== CODE SECTION ===== */
+    .code-section {
+      margin: 2rem 0;
+      width: 60vw;
+      max-width: 100%;
+    }
+
+    .code-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .code-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .code-tab {
+      padding: 8px 20px;
+      border-radius: 8px 8px 0 0;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .code-tab.active {
+      background: #1e1e2f;
+      color: #fff;
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .code-tab[data-lang="html"].active {
+      color: #ff6600;
+    }
+
+    .code-tab[data-lang="css"].active {
+      color: var(--premcolo);
+    }
+
+    /* ===== PREVIEW BUTTON ===== */
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.3px;
+    }
+
+    .preview-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .preview-btn:hover {
+      border-color: var(--premcolo);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .preview-btn:hover::before {
+      opacity: 1;
+    }
+
+    .preview-btn:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .preview-btn i {
+      font-size: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn.loading i {
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .code-panels {
+      position: relative;
+    }
+
+    .code-box {
+      background: #1e1e2f;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 0 12px 12px 12px;
+      position: relative;
+      display: none;
+    }
+
+    .code-box.active {
+      display: block;
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-lang-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    .copy-btn.copied {
+      color: #4ade80;
+      border-color: #4ade80;
+    }
+
+    :not(pre)>code[class*="language-"],
+    pre[class*="language-"] {
+      width: 100%;
+      max-width: 100%;
+      height: 50vh;
+      border-radius: 0 0 12px 12px;
+      overflow-y: auto;
+      overflow-x: auto;
+      margin: 0;
+    }
+
+    pre::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    pre::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    pre::-webkit-scrollbar-thumb {
+      background: var(--premcolo);
+      border-radius: 10px;
+    }
+
+    /* ===== INFO / WARN / SUCCESS BOXES ===== */
+    .info-box {
+      background: rgba(0, 217, 255, 0.06);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-left: 4px solid var(--premcolo);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .info-box strong {
+      color: var(--premcolo);
+    }
+
+    .warn-box {
+      background: rgba(255, 107, 53, 0.06);
+      border: 1px solid rgba(255, 107, 53, 0.2);
+      border-left: 4px solid var(--accent2);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .warn-box strong {
+      color: var(--accent2);
+    }
+
+    .success-box {
+      background: rgba(74, 222, 128, 0.06);
+      border: 1px solid rgba(74, 222, 128, 0.2);
+      border-left: 4px solid #4ade80;
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .success-box strong {
+      color: #4ade80;
+    }
+
+    /* ===== COMPARISON TABLE ===== */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 14px;
+    }
+
+    .comparison-table th {
+      font-family: var(--font-head);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 10px 14px;
+      background: rgba(0, 217, 255, 0.08);
+      color: var(--premcolo);
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+
+    .comparison-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      vertical-align: top;
+    }
+
+    .comparison-table tr:hover td {
+      background: var(--surface-hover);
+    }
+
+    .comparison-table td strong {
+      color: #fff;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-family: var(--font-head);
+      font-weight: 700;
+    }
+
+    .badge-cyan {
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+    }
+
+    .badge-green {
+      background: rgba(74, 222, 128, 0.12);
+      color: #4ade80;
+      border: 1px solid rgba(74, 222, 128, 0.25);
+    }
+
+    .badge-orange {
+      background: rgba(255, 107, 53, 0.12);
+      color: var(--accent2);
+      border: 1px solid rgba(255, 107, 53, 0.25);
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      margin: 1.5rem 0;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      background: var(--surface);
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s;
+      list-style: none;
+      user-select: none;
+    }
+
+    .faq-question:hover {
+      background: var(--surface-hover);
+    }
+
+    .faq-question::after {
+      content: "+";
+      font-size: 1.3rem;
+      color: var(--premcolo);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    details[open] .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 1rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-answer code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* ===== CONCLUSION ===== */
+    .conclusion {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.07), rgba(255, 107, 53, 0.04));
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .conclusion h2 {
+      border: none;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    .conclusion ul {
+      color: var(--text);
+    }
+
+    .conclusion li::before {
+      content: "✓ ";
+      color: var(--accent2);
       font-weight: bold;
     }
 
-    .link-box:hover {
-      background: #26385c;
-      transform: scale(1.05);
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
     }
-    /**ret**/
-    .Ret{
-      margin: 5px 0 0 3rem;
-      width: max-content;
+
+    /* ===== SOURCE CODE BOX ===== */
+    .source-box {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.06), rgba(255, 107, 53, 0.04));
+      border: 1px solid rgba(0, 217, 255, 0.18);
+      border-radius: 14px;
+      padding: 1.5rem 1.75rem;
+      margin: 2rem 0;
+      text-align: center;
     }
-    .Ret a {
-      font-size: 2rem;
-      text-decoration: none;
-      color: #ffffff;
+
+    .source-box-title {
+      font-family: var(--font-head);
+      font-size: 14px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
     }
-    .Ret a span{
+
+    .source-link {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
-      width: 38px;
-      height: 38px;
-      border: 2px solid #fff;
-      border-radius: 50%;
-    }
-    .Ret a:hover {
-  color: #00e1ff;
-}
-    .Ret a:hover span {
-  border-color: #00e1ff;
-}
-    /**img**/
-    .img{
-      display: flex;
-      justify-content: center;
-      margin: 2rem auto;
-    }
-    .img img{
-      border-radius: 8px;
-      max-width: 100vw;
-    width: 70vw;
-    height: 65vh;
-    }
-    /**par**/
-    .par{
-       font-family: Arial, sans-serif;
-      line-height: 1.7;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      color: #ffffff;
-    }
-    h1, h2, h3 {
-      color: #00c8ff;
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
-    h2 {
-      margin-top: 35px;
-      font-size: 1.6rem;
-    }
-    h3 {
-      margin-top: 25px;
-      font-size: 1.3rem;
-    }
-    p {
-      margin-bottom: 18px;
-    }
-    ul {
-      margin: 15px 0;
-      padding-left: 25px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .highlight {
-      background: #000000;
-      padding: 8px 12px;
-      border-left: 4px solid #0073e6;
-      margin: 20px 0;
-    }
-    /**respon**/
-    @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .img img{
-    max-width: 100vw;
-    width: 90vw;
-    }
-  }
-         /**respon1**/
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hamburger .scrolled {
-      background: rgba(255, 255, 255, 0.7);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-}
-
-    .hamburger span {
-      width: 28px;
-      height: 3px;
-      background: white;
-      transition: all 0.3s ease;
-    }
-
-    /* ====== القائمة المنبثقة ====== */
-    .mobile-menu {
-      position: fixed;
-      top:0;
-      left: -100%;
-      width: 100%;
-      height: 100vh;
-      padding-top: 0.5rem ;
-      background: rgb(53, 53, 53);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 35px;
-      transition: left 0.5s ease;
-      z-index: 999;
-    }
-
-    .mobile-menu.active {
-      left: 0;
-    }
-
-    .mobile-menu a {
-      color: white;
-      font-size: 22px;
-      width: 100%;
-      height: 3rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      gap: 10px;
+      padding: 12px 28px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(0, 217, 255, 0.06));
+      border: 1px solid rgba(0, 217, 255, 0.35);
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 15px;
+      font-weight: 700;
       text-decoration: none;
-      border-bottom: 0.5px solid #fff;
-      transition: color 0.3s;
+      transition: all 0.3s;
     }
 
-    .mobile-menu a:hover {
-      color: #ffffff;
-      background: rgba(104, 104, 104, 0.508);
-      backdrop-filter: bulur(20px);
+    .source-link:hover {
+      background: rgba(0, 217, 255, 0.2);
+      box-shadow: 0 0 30px rgba(0, 217, 255, 0.2);
+      transform: translateY(-2px);
     }
 
-    /* ====== زر الإغلاق (X) ====== */
-    .close-btn {
-      position: absolute;
-      top: 20px;
-      right: 25px;
-      font-size: 30px;
-      color: white;
-      cursor: pointer;
-      width: 35px;
-      height: 35px;
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      position: sticky;
+      top: 72px;
+    }
+
+    .sidebar-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-header {
+      padding: 14px 16px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--premcolo);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .related-list {
+      padding: 12px;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .related-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/9;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .related-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .related-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.85) 100%);
+    }
+
+    .related-card-title {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* ===== PREVIEW MODAL ===== */
+    .preview-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 5, 15, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: flex;
       align-items: center;
-      border: 2px solid #fff;
-      background: rgb(88, 88, 88);
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+    }
+
+    .preview-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .preview-modal {
+      width: 95vw;
+      max-width: 95vw;
+      height: 95vh;
+      max-height: 95vh;
+      background: #0a0e1a;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(0, 217, 255, 0.06);
+      transform: scale(0.92) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .preview-overlay.open .preview-modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .preview-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+    }
+
+    .preview-modal-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-modal-title i {
+      color: var(--premcolo);
+      font-size: 16px;
+    }
+
+    .preview-modal-title strong {
+      color: #fff;
+    }
+
+    .preview-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .preview-dot {
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
-      transition: transform 0.3s ease;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, filter 0.2s;
     }
 
-    .close-btn:hover {
-      transform: rotate(90deg);
-      color: #00e1ff;
+    .preview-dot:hover {
+      transform: scale(1.2);
+      filter: brightness(1.3);
     }
 
-    /* ====== استجابة الهاتف ====== */
-    @media (max-width: 910px) {
+    .preview-dot.red {
+      background: #ff5f57;
+    }
+
+    .preview-dot.yellow {
+      background: #febc2e;
+    }
+
+    .preview-dot.green {
+      background: #28c840;
+    }
+
+    .preview-close-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .preview-close-btn:hover {
+      border-color: var(--accent2);
+      color: var(--accent2);
+      background: rgba(255, 107, 53, 0.08);
+    }
+
+    .preview-iframe-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .preview-iframe-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      background: #000;
+    }
+
+    .preview-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: #0a0e1a;
+      z-index: 2;
+      transition: opacity 0.4s;
+    }
+
+    .preview-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .preview-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(0, 217, 255, 0.15);
+      border-top-color: var(--premcolo);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    .preview-loading-text {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .preview-hint {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 16px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      color: var(--text-muted);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s 0.8s;
+      white-space: nowrap;
+      z-index: 3;
+    }
+
+    .preview-hint.show {
+      opacity: 1;
+    }
+
+    .preview-hint i {
+      color: var(--accent2);
+      margin-right: 4px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1.25rem;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .related-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .related-card {
+        flex: 1 1 calc(50% - 8px);
+      }
+
+      .hero {
+        padding: 2rem 1.25rem 1.5rem;
+      }
+
+      .navbar {
+        padding: 0 1.25rem;
+      }
+
+      .breadcrumb {
+        padding: 10px 1.25rem;
+      }
+
+      .back-link {
+        margin: 0.75rem 1.25rem;
+      }
+
+      .code-section {
+        width: 85vw;
+      }
+    }
+
+    @media (max-width: 640px) {
       .nav-links {
         display: none;
       }
 
-      .hamburger {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hamburger.scrolled {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      background: rgb(65, 65, 65);
-}
+      .hero-stats {
+        gap: 1.2rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .code-tab {
+        padding: 7px 13px;
+        font-size: 12px;
+      }
+
+      .related-card {
+        flex: 1 1 100%;
+      }
+
+      .comparison-table {
+        font-size: 12px;
+      }
+
+      .step {
+        grid-template-columns: 36px 1fr;
+      }
+
+      .step-num {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+      }
     }
   </style>
 </head>
+
 <body>
-<header class="navbar">
-    <a href="#" class="logo">
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
       <span class="logo-icon">{ / }</span> 77cod_ing
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
@@ -324,184 +1452,719 @@
       <a href="Terms & Conditions.html">Terms & Conditions</a>
     </nav>
   </header>
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
+      <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+      <li><span aria-current="page">3D Flipping Card</span></li>
+    </ol>
+  </nav>
+
+  <!-- ===== BACK BUTTON ===== -->
+  <a href="projects.html#cards" class="back-link" aria-label="Return to Projects">
+    <i class='bx bx-arrow-back'></i> Return to Projects
+  </a>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="main-heading">
+    <div class="hero-meta">
+      <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+      <span class="tag tag-html">HTML</span>
+      <span class="tag tag-css">CSS</span>
+      <span class="tag tag-level">Beginner</span>
+      <span class="tag tag-nojs"><i class='bx bx-code-block'></i> No JS</span>
+      <span class="read-time"><i class='bx bx-time'></i> ~15 min read</span>
     </div>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <span class="close-btn" id="closeBtn">&times;</span>
-    <a href="index.html"style="border-top: 2px solid #fff;height: 5rem;">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html" style="border-bottom: 2px solid #fff;">Terms & Conditions</a>
+    <h1 id="main-heading">
+      CSS <span>3D Flipping Card</span><br>
+      Glowing Animation — Pure HTML & CSS
+    </h1>
+
+    <p class="hero-lead">
+      Build a futuristic 3D flipping card with glowing gradient edges, smooth hover flip animation,
+      and floating particle effects using only HTML and CSS. Zero JavaScript required.
+    </p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value">7</span>
+        <span class="stat-label">Build Steps</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">0</span>
+        <span class="stat-label">Lines of JS</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">2</span>
+        <span class="stat-label">Card Faces</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">Free</span>
+        <span class="stat-label">Source Code</span>
+      </div>
+    </div>
+
+    <img src="image copy 58.png"
+      alt="3D flipping card with glowing cyan and orange edges showing front face with floating circles" width="1200"
+      height="500" loading="eager">
+    <p class="img-caption">Final result: A 3D card that flips on hover, revealing animated glowing effects</p>
+  </section>
+
+  <!-- ===== LAYOUT ===== -->
+  <div class="layout">
+    <main class="article-body" role="main">
+
+      <!-- ===== TABLE OF CONTENTS ===== -->
+      <div class="toc" aria-label="Table of contents">
+        <div class="toc-title"><i class='bx bx-list-ul'></i> Table of Contents</div>
+        <ol>
+          <li><a href="#features">What You'll Build</a></li>
+          <li><a href="#step-1">HTML Structure</a></li>
+          <li><a href="#step-2">Flexbox Centering</a></li>
+          <li><a href="#step-3">3D Perspective Setup</a></li>
+          <li><a href="#step-4">Front Face Design</a></li>
+          <li><a href="#step-5">Back Face Animation</a></li>
+          <li><a href="#step-6">Hover Flip Trigger</a></li>
+          <li><a href="#step-7">Final Customization</a></li>
+          <li><a href="#properties">CSS Properties Reference</a></li>
+          <li><a href="#faq">Frequently Asked Questions</a></li>
+        </ol>
+      </div>
+
+      <!-- ===== FEATURES ===== -->
+      <section id="features" aria-labelledby="features-heading">
+        <h2 id="features-heading">What You'll Build</h2>
+        <p>
+          This tutorial walks you through creating a premium 3D flipping card component that's perfect for
+          <a href="projects.html#cards" style="color: var(--premcolo);">portfolio projects</a>,
+          profile cards, or product showcases. Here's what makes it special:
+        </p>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🔄</div>
+            <div class="feature-title">3D Flip Effect</div>
+            <div class="feature-desc">Smooth Y-axis rotation using CSS transforms and preserve-3d</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">✨</div>
+            <div class="feature-title">Glowing Edges</div>
+            <div class="feature-desc">Animated gradient lines that rotate around the card borders</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔮</div>
+            <div class="feature-title">Floating Particles</div>
+            <div class="feature-desc">Glowing circles with smooth up-and-down keyframe animations</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <div class="feature-title">Fully Responsive</div>
+            <div class="feature-desc">Scales beautifully on all screen sizes with media queries</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <div class="feature-title">Zero JavaScript</div>
+            <div class="feature-desc">Pure CSS solution — no JS libraries or dependencies needed</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <div class="feature-title">Easy Customization</div>
+            <div class="feature-desc">Change colors, speed, and effects with simple CSS variables</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== STEPS ===== -->
+      <section aria-labelledby="steps-heading">
+        <h2 id="steps-heading">Step-by-Step Build Guide</h2>
+
+        <div class="steps">
+          <div class="step" id="step-1">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h3>Create the HTML Structure</h3>
+              <p>
+                Start by creating a <code>.card</code> container with a <code>.content</code> wrapper inside.
+                Within <code>.content</code>, add two child divs: <code>.front</code> and <code>.back</code>.
+                The front holds your static content, while the back contains the hidden content revealed on flip.
+              </p>
+              <img src="image copy 59.png" alt="HTML structure showing card, content, front, and back divs"
+                style="width:100%; border-radius:10px; margin-top:12px; border:1px solid var(--border);">
+              <p class="img-caption">The nested structure enables proper 3D transform inheritance</p>
+            </div>
+          </div>
+
+          <div class="step" id="step-2">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h3>Center the Card with Flexbox</h3>
+              <p>
+                Apply <code>display: flex</code>, <code>justify-content: center</code>, and
+                <code>align-items: center</code> to the body. Set a dark background to make the
+                glowing effects visible against the page.
+              </p>
+              <div class="info-box">
+                <strong>💡 Pro Tip:</strong> Using <code>min-height: 100vh</code> on the body ensures
+                the card stays centered even with minimal content.
+              </div>
+            </div>
+          </div>
+
+          <div class="step" id="step-3">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h3>Apply 3D Perspective and Transform Style</h3>
+              <p>
+                Add <code>perspective: 1000px</code> to the <code>.card</code> element and
+                <code>transform-style: preserve-3d</code> to <code>.content</code>. This enables
+                true 3D transformation on child elements.
+              </p>
+              <img src="image copy 61.png" alt="CSS showing perspective and transform-style properties"
+                style="width:100%; border-radius:10px; margin-top:12px; border:1px solid var(--border);">
+              <p class="img-caption">Perspective creates depth; preserve-3d enables child 3D transforms</p>
+            </div>
+          </div>
+
+          <div class="step" id="step-4">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h3>Design the Front Face with Floating Glow</h3>
+              <p>
+                The front side includes animated glowing circles and your main content.
+                Create circular elements with <code>border-radius: 50%</code>, apply
+                <code>box-shadow</code> for the glow, and use <code>@keyframes floating</code>
+                for smooth vertical motion.
+              </p>
+              <img src="image copy 62.png" alt="Front face showing floating glowing circles"
+                style="width:100%; border-radius:10px; margin-top:12px; border:1px solid var(--border);">
+            </div>
+          </div>
+
+          <div class="step" id="step-5">
+            <div class="step-num">5</div>
+            <div class="step-content">
+              <h3>Create the Animated Back Face</h3>
+              <p>
+                The <code>.back</code> features a gradient line that rotates infinitely using
+                <code>@keyframes rotation</code>. The <code>.back-content</code> sits above
+                this animation, holding your logo and call-to-action text.
+              </p>
+              <img src="image copy 63.png" alt="Back face showing rotating gradient glow line"
+                style="width:100%; border-radius:10px; margin-top:12px; border:1px solid var(--border);">
+              <div class="warn-box">
+                <strong>⚠️ Important:</strong> Both <code>.front</code> and <code>.back</code> must have
+                <code>backface-visibility: hidden</code>, and the back needs
+                <code>transform: rotateY(180deg)</code> to be pre-positioned correctly.
+              </div>
+            </div>
+          </div>
+
+          <div class="step" id="step-6">
+            <div class="step-num">6</div>
+            <div class="step-content">
+              <h3>Trigger the Flip on Hover</h3>
+              <p>
+                Add this single CSS rule to complete the flip effect:
+              </p>
+              <pre
+                style="background:#1e1e2f; padding:16px; border-radius:10px; overflow-x:auto; border:1px solid var(--border);"><code style="background:transparent; padding:0;">.card:hover .content {
+    transform: rotateY(180deg);
+}</code></pre>
+              <p>
+                Combined with a transition on <code>.content</code>, this creates the smooth
+                180-degree rotation that reveals the back face.
+              </p>
+              <img src="image copy 64.png" alt="Card mid-flip showing both faces during transition"
+                style="width:100%; border-radius:10px; margin-top:12px; border:1px solid var(--border);">
+            </div>
+          </div>
+
+          <div class="step" id="step-7">
+            <div class="step-num">7</div>
+            <div class="step-content">
+              <h3>Final Customization</h3>
+              <p>
+                Adjust these key properties to match your design:
+              </p>
+              <ul>
+                <li><strong>Colors:</strong> Modify <code>box-shadow</code> and <code>linear-gradient</code> values</li>
+                <li><strong>Speed:</strong> Change <code>transition-duration</code> and <code>animation-duration</code>
+                </li>
+                <li><strong>Depth:</strong> Adjust <code>perspective</code> (lower = more dramatic)</li>
+                <li><strong>Glow intensity:</strong> Modify <code>filter: blur()</code> amounts</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+            <!-- SOURCE CODE -->
+            <section id="source-code">
+              <h2>Full Source Code (Free)</h2>
+              <p>
+                The entire project lives in a single HTML file — no external CSS or JS files required.
+                The HTML sets up the card structure and links images from <code>picsum.photos</code>
+                for demonstration. The CSS drives every animation, transition, and responsive breakpoint.
+                A four-line script at the bottom removes the shimmer placeholder once each image has
+                loaded. Use the tabs below to explore the HTML and CSS sections separately.
+              </p>
+            
+              <div class="code-section">
+                <div class="code-toolbar">
+                  <div class="code-tabs" role="tablist" aria-label="Code files">
+                    <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                      aria-controls="panel-html">HTML</button>
+                    <button class="code-tab" data-lang="css" role="tab" aria-selected="false" aria-controls="panel-css">CSS</button>
+                  </div>
+                  <button class="preview-btn" id="previewBtn" aria-label="Preview the final result">
+                    <i class='bx bx-play-circle'></i>
+                    <span>Preview Result</span>
+                  </button>
+                </div>
+            
+                <div class="code-panels">
+                  <div class="code-box active" id="panel-html" role="tabpanel">
+                    <div class="code-header">
+                      <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                      <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+                    </div>
+                    <pre><code id="code1" class="language-html"></code></pre>
+                  </div>
+            
+                  <div class="code-box" id="panel-css" role="tabpanel">
+                    <div class="code-header">
+                      <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
+                      <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+                    </div>
+                    <pre><code id="code2" class="language-css"></code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Countdown Gist reveal -->
+              <div class="countdown-box">
+                <p class="countdown-label">🔓 Full Source Code unlocks in</p>
+                <div class="countdown-timer" id="countdownDisplay">05</div>
+                <p style="font-size:13px;color:var(--text-muted);">Hosted on GitHub Gist — free, no sign-up required
+                </p>
+                <div class="gist-link-wrapper" id="gistLinkWrapper">
+                  <a class="gist-link" href="https://gist.githubusercontent.com/77cod-ing/be04f46d35409ee0ca4b265c5ca8e809"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class='bx bxl-github'></i> View Full Source Code on GitHub Gist
+                  </a>
+                </div>
+              </div>
+            
+              <div class="info-box">
+                <strong>💡 Quick Start:</strong> Copy the full code into a single <code>index.html</code> file.
+                No build tools, no npm, no libraries — open it in any modern browser and the accordion
+                gallery works immediately. Swap the <code>picsum.photos</code> URLs with your own images
+                to customize it instantly.
+              </div>
+            </section>
+
+      <!-- ===== CSS PROPERTIES REFERENCE ===== -->
+      <section id="properties" aria-labelledby="props-heading">
+        <h2 id="props-heading">CSS Properties Reference</h2>
+        <p>Quick reference for the key CSS properties used in this project:</p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Purpose</th>
+              <th>Value Used</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>perspective</code></td>
+              <td>Sets 3D viewing distance</td>
+              <td><span class="badge badge-cyan">1000px</span></td>
+            </tr>
+            <tr>
+              <td><code>transform-style</code></td>
+              <td>Enables 3D for children</td>
+              <td><span class="badge badge-green">preserve-3d</span></td>
+            </tr>
+            <tr>
+              <td><code>backface-visibility</code></td>
+              <td>Hides element when rotated away</td>
+              <td><span class="badge badge-green">hidden</span></td>
+            </tr>
+            <tr>
+              <td><code>transform: rotateY()</code></td>
+              <td>Rotates element on Y-axis</td>
+              <td><span class="badge badge-orange">180deg</span></td>
+            </tr>
+            <tr>
+              <td><code>filter: blur()</code></td>
+              <td>Creates glow/blur effect</td>
+              <td><span class="badge badge-cyan">15px</span></td>
+            </tr>
+            <tr>
+              <td><code>conic-gradient()</code></td>
+              <td>Creates rotating color gradient</td>
+              <td><span class="badge badge-orange">custom</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="info-box">
+          <strong>📖 Browser Support:</strong> All properties used have <strong>97%+ browser support</strong>
+          including Chrome, Firefox, Safari, and Edge. The <code>backface-visibility</code> property
+          may need <code>-webkit-</code> prefix for older Safari versions.
+        </div>
+      </section>
+
+      <!-- ===== FAQ ===== -->
+      <section id="faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">Frequently Asked Questions</h2>
+
+        <div class="faq">
+          <details class="faq-item">
+            <summary class="faq-question">How does the 3D flip work without JavaScript?</summary>
+            <div class="faq-answer">
+              The flip uses <code>transform-style: preserve-3d</code> to enable 3D space for children.
+              The front face has no rotation while the back is pre-rotated 180 degrees. Both have
+              <code>backface-visibility: hidden</code>. On hover, the parent rotates 180 degrees,
+              hiding the front and revealing the back — all in pure CSS.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">What is the purpose of perspective?</summary>
+            <div class="faq-answer">
+              The <code>perspective</code> property defines how far the viewer is from the z-plane.
+              A lower value (like 500px) creates a more dramatic, distorted 3D effect, while a higher
+              value (like 1500px) makes it more subtle. Without perspective, 3D transforms appear flat.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How is the glowing effect created?</summary>
+            <div class="faq-answer">
+              The glow uses multiple <code>box-shadow</code> values with rgba colors and
+              <code>filter: blur()</code>. For animated glow, <code>@keyframes</code> cycle through
+              different shadow values. The rotating gradient line uses <code>conic-gradient()</code>
+              animated with <code>transform: rotate()</code>.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Can this work on mobile/touch devices?</summary>
+            <div class="faq-answer">
+              Yes, but hover doesn't work well on touch. Options include: using <code>:active</code>
+              instead of <code>:hover</code>, adding a JS touch listener to toggle a class, or
+              showing both sides stacked vertically on mobile via media queries.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">What is backface-visibility and why is it important?</summary>
+            <div class="faq-answer">
+              <code>backface-visibility: hidden</code> makes an element invisible when rotated away
+              from the viewer. Without it, both faces would show simultaneously during the flip,
+              creating a mirrored effect. This property is essential for flip card effects.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How do I change the glow colors and animation speed?</summary>
+            <div class="faq-answer">
+              Modify <code>box-shadow</code> rgba values and <code>linear-gradient</code> color stops
+              for colors. Adjust <code>transition-duration</code> for flip speed and
+              <code>animation-duration</code> in <code>@keyframes</code> for glow/particle speed.
+              Change <code>cubic-bezier</code> timing to alter animation easing.
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- ===== SOURCE CODE ===== -->
+      <div class="source-box">
+        <div class="source-box-title"><i class='bx bx-code-alt'></i> Get the Complete Source Code</div>
+        <a href="https://gist.githubusercontent.com/77cod-ing/a881da94566b720843694d07dd8e01b3" target="_blank" rel="noopener"
+          class="source-link">
+          <i class='bx bx-download'></i>
+          Download Full Code from GitHub Gist
+        </a>
+      </div>
+
+      <!-- ===== CONCLUSION ===== -->
+      <div class="conclusion">
+        <h2>Conclusion</h2>
+        <p>You've successfully built a premium 3D flipping card with these features:</p>
+        <ul>
+          <li>Smooth 180-degree Y-axis flip animation on hover</li>
+          <li>Animated glowing edges with rotating gradient lines</li>
+          <li>Floating particle effects with keyframe animations</li>
+          <li>Zero JavaScript — pure HTML and CSS solution</li>
+          <li>Fully responsive design for all screen sizes</li>
+          <li>Easy to customize colors, speed, and effects</li>
+        </ul>
+        <p style="margin-top:1rem; margin-bottom:0;">
+          This component is perfect for <a href="projects.html#cards" style="color: var(--premcolo);">portfolio
+            cards</a>,
+          team member profiles, product showcases, or any interactive UI element that needs a modern,
+          futuristic touch.
+        </p>
+      </div>
+
+    </main>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" aria-label="Related content">
+      <div class="sidebar-box">
+        <div class="sidebar-header"><i class='bx bx-star'></i> Related Projects</div>
+        <div class="related-list">
+          <a class="related-card" href="Project45.html" aria-label="Animated Floating Action Button Menu with CSS">
+            <img src="https://77cod-ing.github.io/button-list-item.png"
+              alt="Animated floating action button menu expanding into a staggered list built with CSS" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Floating Action Button Menu — CSS &amp; JS</div>
+          </a>
+          <a class="related-card" href="Project40.html" aria-label="Advanced JavaScript Image Slider with GSAP">
+            <img src="https://i.suar.me/Ep114/m" alt="Advanced JavaScript image slider with GSAP split-panel animation"
+              loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Advanced JavaScript Image Slider — GSAP Animation</div>
+          </a>
+          <a class="related-card" href="Project13.html" aria-label="Neon Cursor Animation">
+            <img src="https://77cod-ing.github.io/image%20copy%2036.png" alt="Neon Cursor Animation CSS JavaScript" loading="lazy"
+              width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Neon Cursor Animation — CSS &amp; JavaScript</div>
+          </a>
+          <a class="related-card" href="Project23.html" aria-label="Animated Login and Signup Page">
+            <img src="https://77cod-ing.github.io/image%20copy%2075.png" alt="Animated Login and Signup Page HTML CSS JavaScript"
+              loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Login &amp; Signup Page — HTML CSS JS</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sidebar-box" style="padding: 16px;">
+        <div style="font-family: var(--font-head); font-size: 13px; color: var(--premcolo); margin-bottom: 12px;">
+          <i class='bx bx-info-circle'></i> Quick Info
+        </div>
+        <div style="font-size: 13px; color: var(--text-muted); line-height: 1.8;">
+          <div><strong style="color:#fff;">Difficulty:</strong> Beginner</div>
+          <div><strong style="color:#fff;">Time:</strong> 15 minutes</div>
+          <div><strong style="color:#fff;">Files:</strong> HTML + CSS</div>
+          <div><strong style="color:#fff;">JavaScript:</strong> None</div>
+        </div>
+      </div>
+    </aside>
   </div>
-<div class="Ret">
-  <a href="projects.html#menu"><pre><span>&lt;</span> Return</pre></a>
-</div>
 
-<div class="img">
-  <img src="image copy 58.png" alt="Skewed Menu Example">
-</div>
-
-<div class="par">
-  <h1>How to Create a 3D Flipping Card with Glowing Animation Using HTML and CSS</h1>
-
-  <p>
-    Interactive cards add life and style to modern websites.  
-    In this tutorial, you’ll learn <strong>how to build a 3D flipping card with glowing edges and smooth hover animation</strong> using only HTML and CSS — no JavaScript required.
-  </p>
-
-  <div class="highlight">
-    <p><strong>Quick Summary:</strong> Build a 3D card with front and back sides, apply the <code>transform: rotateY()</code> property for flipping, and animate gradient lines for a glowing effect.</p>
-  </div>
-
-  <h2>Step 1: Structure the HTML</h2>
-  <p>
-    Start by creating the main container <code>.card</code> and a <code>.content</code> div inside it.  
-    Within <code>.content</code>, add two sides — the <code>.front</code> and the <code>.back</code>.  
-    The front will show the static content, while the back will appear after the card flips.
-  </p>
-  <div class="img"><img src="image copy 59.png" alt="HTML structure of the flipping card"></div>
-
-  <h2>Step 2: Center the Card with Flexbox</h2>
-  <p>
-    Use Flexbox to center your card perfectly on the screen.  
-    Apply <code>display: flex;</code>, <code>justify-content: center;</code>, and <code>align-items: center;</code> to the body, and set a dark background to make the glow stand out.
-  </p>
-  <div class="img"><img src="image copy 60.png" alt="Centered card with dark background"></div>
-
-  <h2>Step 3: Style the Card and Apply 3D Perspective</h2>
-  <p>
-    The <code>.content</code> element uses <strong>transform-style: preserve-3d</strong> and a rotation transition.
-    When hovered, it rotates 180 degrees on the Y-axis, revealing the back side.  
-    Add a soft shadow to make it pop from the background.
-  </p>
-  <div class="img"><img src="image copy 61.png" alt="3D perspective CSS card"></div>
-
-  <h2>Step 4: Design the Front Face</h2>
-  <p>
-    The front side includes animated glowing circles and a message section.
-    The floating circles are achieved using the <code>@keyframes floating</code> animation, creating a smooth up-and-down motion that feels alive.
-  </p>
-  <div class="img"><img src="image copy 62.png" alt="Front side of 3D flipping card"></div>
-
-  <h2>Step 5: Create the Animated Back Side</h2>
-  <p>
-    The back side (<code>.back</code>) features a gradient line that rotates infinitely using the <code>@keyframes rotation_481</code> animation.
-    The <code>.back-content</code> section sits on top of this animation, holding your logo and a call-to-action like “Hover Me”.
-  </p>
-  <div class="img"><img src="image copy 63.png" alt="Back side glowing animation"></div>
-
-  <h2>Step 6: Add the Flip Effect on Hover</h2>
-  <p>
-    Use this simple CSS rule:
-    <pre><code>.card:hover .content { transform: rotateY(180deg); }</code></pre>
-    This triggers the rotation, smoothly flipping the card to reveal its back.
-  </p>
-  <div class="img"><img src="image copy 64.png" alt="Card flipping on hover"></div>
-
-  <h2>Step 7: Final Touches</h2>
-  <p>
-    Adjust colors, blur levels, and animation speed to match your website’s style.
-    You can also replace the logo with your own image by updating the <code>&lt;img src="Picture1(1).png"&gt;</code> line.
-  </p>
-  <div class="img"><img src="image copy 58.png" alt="Final 3D card design with glowing animation"></div>
-
-  <h2>Conclusion</h2>
-  <p>
-    You’ve now created a professional 3D flipping card that looks amazing on any modern website.
-    It’s responsive, lightweight, and adds a futuristic touch to your portfolio, profile, or landing page.
-    Experiment with different gradients and timings to make your version unique.
-  </p>
-
-  <div class="highlight">
-    <p><strong>SEO Keywords:</strong> CSS 3D card, HTML flip animation, glowing card design, hover animation, front-end effects</p>
-  </div>
-</div>
-
-
-
-<div class="con1">
-  <div class="countdown" id="countdown">
-    <span id="number">10</span> wait...
-  </div>
-
-  <div class="link-box" id="linkBox">
-    <a href="https://gist.github.com/77cod-ing/a881da94566b720843694d07dd8e01b3" target="_blank">Go to code</a>
-  </div>
-</div>
-
-<script>
-  let counter = 10;
-  let timer = null;
-  const countdownEl = document.getElementById("countdown");
-  const numberEl = document.getElementById("number");
-  const linkBox = document.getElementById("linkBox");
-
-  function startCountdown() {
-    if (timer) return;
-    timer = setInterval(() => {
-      counter--;
-      numberEl.textContent = counter;
-
-      if (counter === 0) {
-        clearInterval(timer);
-        timer = null;
-        countdownEl.style.display = "none"; 
-        linkBox.style.display = "block";
-      }
-    }, 1000);
-  }
-
-  function stopCountdown() {
-    clearInterval(timer);
-    timer = null;
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        startCountdown();
-      } else {
-        stopCountdown();
-      }
-    });
-  }, { threshold: 1.0 });
-
-  observer.observe(countdownEl);
-
-  /**hamburger**/
-
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeBtn = document.getElementById('closeBtn');
-
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.add('active');
-    });
-
-    closeBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-    });
+    <!-- ===== PREVIEW MODAL ===== -->
+    <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+      aria-label="Live preview of the CSS flexible accordion image card gallery">
+      <div class="preview-modal">
+        <div class="preview-modal-header">
+          <div class="preview-modal-title">
+            <i class='bx bx-show'></i>
+            <strong>Live Preview</strong> — 3D Flipping Card
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div class="preview-dots">
+              <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+              <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+              <button class="preview-dot green" aria-label="Maximize" disabled></button>
+            </div>
+            <button class="preview-close-btn" id="previewCloseBtn">
+              <i class='bx bx-x'></i> Close
+            </button>
+          </div>
+        </div>
+        <div class="preview-iframe-wrap">
+          <div class="preview-loading" id="previewLoading">
+            <div class="preview-spinner"></div>
+            <span class="preview-loading-text">Loading preview...</span>
+            <div class="preview-loading-files">
+              <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+              <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+            </div>
+          </div>
+          <iframe id="previewIframe" title="Preview of CSS flexible accordion image card gallery"
+            sandbox="allow-scripts allow-same-origin"></iframe>
+          <div class="preview-hint" id="previewHint">
+            <i class='bx bx-cursor'></i> Hover over the card to see the flip effect
+          </div>
+        </div>
+      </div>
+    </div>
     
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+      /*
+        ============================================
+          Gist URLs — update with the actual Gist raw URL for this project
+        ============================================
+      */
+      const gistBase = "https://gist.githubusercontent.com/77cod-ing/a881da94566b720843694d07dd8e01b3/raw/";
 
-    window.addEventListener("scroll", function() {
-  const hamburger = document.querySelector(".hamburger");
-  if (window.scrollY > 50) {
-    hamburger.classList.add("scrolled");
-  } else {
-    hamburger.classList.remove("scrolled");
-  }
-});
-</script>
+      const htmlUrl = gistBase + "index.html";
+      const cssUrl = gistBase + "style.css";
+
+      let cachedHTML = "";
+      let cachedCSS = "";
+
+      async function loadCode(url, elementId, lang) {
+        try {
+          const res = await fetch(url);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const text = await res.text();
+          const el = document.getElementById(elementId);
+          el.textContent = text;
+          el.className = `language-${lang}`;
+          Prism.highlightElement(el);
+          if (lang === "html") cachedHTML = text;
+          if (lang === "css") cachedCSS = text;
+        } catch (e) {
+          const el = document.getElementById(elementId);
+          if (el) el.textContent = `/* Failed to load: ${e.message} */`;
+        }
+      }
+
+      loadCode(htmlUrl, "code1", "html");
+      loadCode(cssUrl, "code2", "css");
+
+      /* ===== Tabs ===== */
+      document.querySelectorAll(".code-tab").forEach(tab => {
+        tab.addEventListener("click", () => {
+          const lang = tab.dataset.lang;
+          document.querySelectorAll(".code-tab").forEach(t => {
+            t.classList.remove("active");
+            t.setAttribute("aria-selected", "false");
+          });
+          document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+          tab.classList.add("active");
+          tab.setAttribute("aria-selected", "true");
+          const panelMap = { html: "panel-html", css: "panel-css" };
+          document.getElementById(panelMap[lang]).classList.add("active");
+        });
+      });
+
+      /* ===== Copy buttons ===== */
+      document.querySelectorAll(".copy-btn").forEach(btn => {
+        btn.addEventListener("click", async () => {
+          const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+          if (!code) return;
+          try {
+            await navigator.clipboard.writeText(code);
+            btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+            btn.classList.add("copied");
+            setTimeout(() => {
+              btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
+              btn.classList.remove("copied");
+            }, 2000);
+          } catch { btn.textContent = "Error"; }
+        });
+      });
+
+      /* ===== Countdown timer ===== */
+      let seconds = 5;
+      const countdownDisplay = document.getElementById("countdownDisplay");
+      const gistLinkWrapper = document.getElementById("gistLinkWrapper");
+
+      const countdownInterval = setInterval(() => {
+        seconds--;
+        countdownDisplay.textContent = String(seconds).padStart(2, "0");
+        if (seconds <= 0) {
+          clearInterval(countdownInterval);
+          gistLinkWrapper.classList.add("visible");
+          countdownDisplay.style.display = "none";
+          document.querySelector(".countdown-label").textContent = "✅ Source Code Available";
+        }
+      }, 1000);
+
+      /* ===== Preview modal ===== */
+      const previewOverlay = document.getElementById("previewOverlay");
+      const previewIframe = document.getElementById("previewIframe");
+      const previewLoading = document.getElementById("previewLoading");
+      const previewHint = document.getElementById("previewHint");
+      const previewBtn = document.getElementById("previewBtn");
+      const previewCloseBtn = document.getElementById("previewCloseBtn");
+      const previewDotClose = document.getElementById("previewDotClose");
+      const tagHTML = document.getElementById("tagHTML");
+      const tagCSS = document.getElementById("tagCSS");
+
+      function openPreview() {
+        previewOverlay.classList.add("open");
+        document.body.style.overflow = "hidden";
+        previewLoading.classList.remove("hidden");
+        previewHint.classList.remove("show");
+        previewBtn.classList.add("loading");
+        tagHTML.classList.remove("loaded");
+        tagCSS.classList.remove("loaded");
+        buildPreview();
+      }
+
+      function closePreview() {
+        previewOverlay.classList.remove("open");
+        document.body.style.overflow = "";
+        previewIframe.srcdoc = "";
+        previewBtn.classList.remove("loading");
+      }
+
+      async function buildPreview() {
+        if (cachedHTML && cachedCSS) {
+          tagHTML.classList.add("loaded");
+          tagCSS.classList.add("loaded");
+          injectPreview(cachedHTML, cachedCSS);
+          return;
+        }
+        try {
+          const fetches = [];
+          if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
+          if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
+          if (cachedHTML) tagHTML.classList.add("loaded");
+          if (cachedCSS) tagCSS.classList.add("loaded");
+          await Promise.all(fetches);
+          injectPreview(cachedHTML, cachedCSS);
+        } catch (e) {
+          previewLoading.innerHTML = `
+              <i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i>
+              <span class="preview-loading-text" style="color:var(--accent2);">Failed to load preview: ${e.message}</span>
+            `;
+          previewBtn.classList.remove("loading");
+        }
+      }
+
+      function injectPreview(html, css) {
+        let combined = html;
+        if (combined.includes('<link') && /style\.css/i.test(combined)) {
+          combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
+        } else if (combined.includes("</head>")) {
+          combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
+        } else {
+          combined = `<style>${css}</style>\n${combined}`;
+        }
+        previewIframe.srcdoc = combined;
+        previewIframe.addEventListener("load", function onLoad() {
+          previewLoading.classList.add("hidden");
+          previewBtn.classList.remove("loading");
+          setTimeout(() => {
+            previewHint.classList.add("show");
+            setTimeout(() => previewHint.classList.remove("show"), 4000);
+          }, 300);
+          previewIframe.removeEventListener("load", onLoad);
+        });
+      }
+
+      previewBtn.addEventListener("click", openPreview);
+      previewCloseBtn.addEventListener("click", closePreview);
+      previewDotClose.addEventListener("click", closePreview);
+      previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+      document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
+    </script>
 </body>
+
 </html>
-
-
-
-
-
