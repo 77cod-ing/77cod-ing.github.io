@@ -1,0 +1,2484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== PRIMARY SEO META ===== -->
+  <title>CSS World Cup 2026 Logo Animation with sibling-index() | HTML CSS Tutorial 2026</title>
+  <meta name="description"
+    content="Build an animated CSS-only World Cup 2026 logo using sibling-index(), shape(), and @property — stacked numeral layers with zero JavaScript. Free source code.">
+  <meta name="keywords"
+    content="css world cup 2026 logo animation, sibling-index() css, sibling-count() css, css shape() clip-path tutorial, css @property animation, css stacked numbers animation, css only logo no javascript, css custom property animation tutorial, css container query units example, modern css 2026 techniques, css numeral clip-path shape, css tree counting functions">
+  <meta name="author" content="77cod_ing">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://77cod-ing.github.io/Project50.html">
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="CSS World Cup 2026 Logo Animation with sibling-index() — HTML CSS Tutorial 2026">
+  <meta property="og:description"
+    content="Learn how to build a stacked, rippling World Cup 2026 logo using only CSS — sibling-index(), sibling-count(), the shape() function, and an animatable @property custom property. Free source code included.">
+  <meta property="og:image" content="https://77cod-ing.github.io/World-Cup-2026-CSS-Logo-Animation.png">
+  <meta property="og:url" content="https://77cod-ing.github.io/Project50.html">
+  <meta property="og:site_name" content="77cod_ing">
+  <meta property="article:published_time" content="2026-06-20T00:00:00Z">
+  <meta property="article:modified_time" content="2026-06-20T00:00:00Z">
+  <meta property="article:author" content="77cod_ing">
+  <meta property="article:section" content="CSS Tutorials">
+  <meta property="article:tag" content="HTML, CSS, Animation, sibling-index, @property, shape(), Modern CSS, Frontend">
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CSS World Cup 2026 Logo Animation — Stacked Numerals, Zero JavaScript">
+  <meta name="twitter:description"
+    content="A pure CSS World Cup 2026 logo built from 47 stacked layers, rippling with sibling-index(), sibling-count(), shape(), and @property. Free source code.">
+  <meta name="twitter:image" content="https://77cod-ing.github.io/World-Cup-2026-CSS-Logo-Animation.png">
+
+  <!-- ===== SCHEMA: TechArticle ===== -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "CSS World Cup 2026 Logo Animation — Stacked Numerals with sibling-index(), shape(), and @property",
+      "description": "A complete tutorial on building a pure CSS, JavaScript-free animated World Cup 2026 logo made of 47 stacked layers, using the modern CSS tree-counting functions sibling-index() and sibling-count(), the shape() clip-path function, an animatable @property custom property, and container query units.",
+      "image": "https://77cod-ing.github.io/World-Cup-2026-CSS-Logo-Animation.png",
+      "datePublished": "2026-06-20",
+      "dateModified": "2026-06-20",
+      "author": {
+        "@type": "Person",
+        "name": "77cod_ing",
+        "url": "https://77cod-ing.github.io"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "77cod_ing",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://77cod-ing.github.io/Picture1.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://77cod-ing.github.io/Project50.html"
+      },
+      "articleSection": "CSS Tutorials",
+      "keywords": "css world cup 2026 logo animation, sibling-index() css, sibling-count() css, css shape() clip-path tutorial, css @property animation, css stacked numbers animation",
+      "timeRequired": "PT14M",
+      "educationalLevel": "Intermediate",
+      "teaches": ["CSS @property Custom Properties", "CSS Tree-Counting Functions (sibling-index, sibling-count)", "CSS clip-path shape() Function", "CSS Grid Stacking", "Container Query Units", "CSS text-box-trim", "calc() with Custom Properties", "Animatable Custom Property Keyframes"]
+    }
+    </script>
+
+  <!-- ===== SCHEMA: HowTo ===== -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Build an Animated CSS-Only World Cup 2026 Logo with Stacked Numeral Layers",
+      "description": "Step-by-step guide to building a rippling, layered World Cup 2026 logo using pure CSS — no JavaScript, no SVG, no canvas — powered by sibling-index(), sibling-count(), shape(), and a registered @property custom property.",
+      "image": "https://77cod-ing.github.io/World-Cup-2026-CSS-Logo-Animation.png",
+      "totalTime": "PT14M",
+      "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "0"},
+      "supply": [
+        {"@type": "HowToSupply", "name": "Text editor (VS Code)"},
+        {"@type": "HowToSupply", "name": "A Chromium-based browser (Chrome or Edge) for full sibling-index() support"},
+        {"@type": "HowToSupply", "name": "One transparent PNG logo overlay image"}
+      ],
+      "tool": [
+        {"@type": "HowToTool", "name": "HTML"},
+        {"@type": "HowToTool", "name": "CSS (Values and Units Module Level 5)"}
+      ],
+      "step": [
+        {"@type": "HowToStep", "name": "Build Two Grid-Stacked Digit Groups", "text": "Create a .logo container with two child divs, .num-two and .num-six, each holding a repeated run of empty span elements that represent layered depth.", "position": 1},
+        {"@type": "HowToStep", "name": "Register the --scale Custom Property with @property", "text": "Use @property to register --scale as a typed <number> with an initial value, which makes it possible to smoothly animate the property inside @keyframes.", "position": 2},
+        {"@type": "HowToStep", "name": "Stack Every Span on the Same Grid Cell", "text": "Place every span at grid-row: 1 and grid-column: 1 so they overlap exactly, then compute z-index from sibling-count() minus sibling-index() to order the stack.", "position": 3},
+        {"@type": "HowToStep", "name": "Draw the Numerals with clip-path: shape()", "text": "Use the CSS shape() function with arc and line commands on each span's ::before pseudo-element to draw the flat outline of the numeral '2' or '6' without any image or SVG file.", "position": 4},
+        {"@type": "HowToStep", "name": "Compute Scale and Delay with sibling-index()", "text": "Apply scale: calc((sibling-index() - 1) * var(--scale)) and an animation-delay based on sibling-index() so every stacked span offsets itself automatically with no manual nth-child rules.", "position": 5},
+        {"@type": "HowToStep", "name": "Animate --scale Through Keyframes", "text": "Define @keyframes scaleIt that changes the --scale value at several percentages, producing a pulsing ripple that cascades through the stack because each layer started its loop at a different negative delay.", "position": 6},
+        {"@type": "HowToStep", "name": "Cycle Layer Colors with nth-child", "text": "Apply a ten-color repeating palette using :nth-child(10n + 1) through :nth-child(10n + 10) so the stacked depth reads as a rainbow gradient of layers.", "position": 7},
+        {"@type": "HowToStep", "name": "Size the Trademark Mark with Container Query Units", "text": "Give the first span its own container-type: size context and size the generated 'TM' content in cqb units so it always scales correctly relative to that single span, independent of the viewport.", "position": 8}
+      ]
+    }
+    </script>
+
+  <!-- ===== SCHEMA: FAQPage ===== -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are sibling-index() and sibling-count() in CSS, and how are they used in this logo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "sibling-index() returns an element's 1-based position among its siblings, and sibling-count() returns the total number of siblings. In this project they replace manual nth-child math: z-index is computed as sibling-count() minus sibling-index(), and each span's scale and animation-delay are derived directly from sibling-index(), so adding or removing stacked layers never requires rewriting any rules."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does @property make the --scale animation work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ordinary CSS custom properties are treated as untyped strings, so the browser cannot smoothly interpolate between values inside @keyframes. The @property rule registers --scale with syntax '<number>', inherits: true, and an initial-value, which tells the browser it is a real animatable number. That registration is what allows the scaleIt keyframes to produce a smooth pulsing motion instead of an instant jump."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the CSS shape() function do, and why draw the numerals instead of using an image?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "clip-path: shape() lets you describe a custom outline directly in CSS using commands like 'arc to' and 'line to', similar to an SVG path but written with native CSS units. Drawing the '2' and '6' outlines with shape() means no PNG or SVG asset is needed for the digits themselves, the shape stays crisp at any size, and it can be restyled per layer using only CSS."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will this animated logo work in all browsers right now?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mostly, but not perfectly everywhere yet. @property, the shape() function, and container query units are well supported across current Chrome, Edge, Firefox, and Safari. sibling-index() and sibling-count() currently run natively in Chromium browsers, with Firefox and Safari support still rolling out, so the stacking math falls back to a flatter, non-staggered layout in browsers that don't yet recognize those functions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I reuse this technique to animate other numbers or text?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The pattern is generic: any group of stacked, identically positioned elements can use sibling-index() and sibling-count() to compute depth, scale, and timing automatically. Swap the shape() coordinates for a different digit or letter outline, adjust --char-size and the color list, and the same staggering logic applies to a completely different glyph."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the logo use container query units (cqb) for the 'TM' mark?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The first span in the six group is given container-type: size, which turns it into its own sizing context. The generated 'TM' content is then sized in cqb (container query block) units, so its font size always scales relative to that one span's own dimensions rather than the viewport, keeping the trademark mark proportionally correct no matter how --char-size changes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this project use any JavaScript at all?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The entire logo, including the layered stacking, the rippling scale animation, the numeral outlines, the color cycling, and the trademark mark sizing, is built and animated with pure CSS. The only non-CSS asset is a single transparent PNG overlay placed on top of the CSS-drawn numerals for the final brand mark."
+          }
+        }
+      ]
+    }
+    </script>
+
+  <!-- ===== SCHEMA: BreadcrumbList ===== -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+        {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+        {"@type": "ListItem", "position": 3, "name": "CSS World Cup 2026 Logo Animation", "item": "https://77cod-ing.github.io/Project50.html"}
+      ]
+    }
+    </script>
+
+  <!-- ===== ASSETS ===== -->
+  <link rel="icon" type="image/png" href="Picture1.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+  <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+    crossorigin="anonymous"></script>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+      --premcolo: #00d9ff;
+      --accent2: #ff6b35;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --surface: rgba(255, 255, 255, 0.04);
+      --surface-hover: rgba(0, 217, 255, 0.07);
+      --border: rgba(255, 255, 255, 0.08);
+      --font-head: 'Space Mono', monospace;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--back);
+      font-family: var(--font-body);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 56px;
+      padding: 0 2.5rem;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      gap: 8px;
+    }
+
+    .logo-icon {
+      color: var(--premcolo);
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: clamp(1rem, 2vw, 2rem);
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--premcolo);
+    }
+
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      padding: 12px 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb ol {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .breadcrumb li+li::before {
+      content: "›";
+      color: var(--premcolo);
+      margin-right: 6px;
+      font-size: 1.1rem;
+    }
+
+    .breadcrumb a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--premcolo);
+    }
+
+    .breadcrumb [aria-current="page"] {
+      color: var(--premcolo);
+      font-weight: 600;
+    }
+
+    /* ===== BACK BUTTON ===== */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.2s;
+      margin: 1rem 2.5rem;
+    }
+
+    .back-link:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 3rem 2.5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-head);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .tag-tutorial {
+      background: rgba(0, 217, 255, 0.12);
+      color: var(--premcolo);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+    }
+
+    .tag-css {
+      background: rgba(0, 217, 255, 0.08);
+      color: #7dd3fc;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+    }
+
+    .tag-level {
+      background: rgba(255, 107, 53, 0.1);
+      color: var(--accent2);
+      border: 1px solid rgba(255, 107, 53, 0.2);
+    }
+
+    .read-time {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      color: var(--premcolo);
+    }
+
+    .hero-lead {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      color: var(--premcolo);
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      display: block;
+      box-shadow: 0 0 60px rgba(0, 217, 255, 0.08), 0 32px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem;
+      align-items: start;
+    }
+
+    /* ===== ARTICLE ===== */
+    .article-body h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: var(--premcolo);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 80px;
+    }
+
+    .article-body h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: #7dd3fc;
+      margin: 1.8rem 0 0.75rem;
+      scroll-margin-top: 80px;
+    }
+
+    .article-body p {
+      margin-bottom: 1.1rem;
+      color: var(--text);
+    }
+
+    .article-body code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .article-body ul,
+    .article-body ol {
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .article-body li {
+      margin-bottom: 9px;
+    }
+
+    .article-body li strong {
+      color: #fff;
+    }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .toc-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--premcolo);
+      margin-bottom: 0.75rem;
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--premcolo);
+    }
+
+    /* ===== FEATURE CARDS ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(0, 217, 255, 0.3);
+      background: var(--surface-hover);
+    }
+
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .feature-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .feature-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ===== STEPS ===== */
+    .steps {
+      margin: 1.5rem 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      width: 44px;
+      height: 44px;
+      background: rgba(0, 217, 255, 0.1);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      color: var(--premcolo);
+      font-size: 1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+
+    .step-content p {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* ===== ASSET CARDS ===== */
+    .asset-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .asset-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .asset-card:hover {
+      border-color: rgba(0, 217, 255, 0.3);
+      background: var(--surface-hover);
+    }
+
+    .asset-name {
+      font-family: var(--font-head);
+      font-size: 0.8rem;
+      color: var(--premcolo);
+      margin-bottom: 6px;
+    }
+
+    .asset-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .asset-alt {
+      font-size: 12px;
+      color: #7dd3fc;
+      font-style: italic;
+      margin-top: 6px;
+    }
+
+    /* ===== CODE SECTION ===== */
+    .code-section {
+      margin: 2rem 0;
+      width: 60vw;
+    }
+
+    .code-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .code-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .code-tab {
+      padding: 8px 20px;
+      border-radius: 8px 8px 0 0;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .code-tab.active {
+      background: #1e1e2f;
+      color: #fff;
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .code-tab[data-lang="html"].active {
+      color: #ff6600;
+    }
+
+    .code-tab[data-lang="css"].active {
+      color: #00ffff;
+    }
+
+    /* ===== PREVIEW BUTTON ===== */
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.3px;
+    }
+
+    .preview-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .preview-btn:hover {
+      border-color: var(--premcolo);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .preview-btn:hover::before {
+      opacity: 1;
+    }
+
+    .preview-btn:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .preview-btn i {
+      font-size: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn.loading i {
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .code-panels {
+      position: relative;
+    }
+
+    .code-box {
+      background: #1e1e2f;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 0 12px 12px 12px;
+      position: relative;
+      display: none;
+    }
+
+    .code-box.active {
+      display: block;
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-lang-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    .copy-btn.copied {
+      color: #4ade80;
+      border-color: #4ade80;
+    }
+
+    :not(pre)>code[class*="language-"],
+    pre[class*="language-"] {
+      width: 100%;
+      max-width: 100%;
+      height: 50vh;
+      border-radius: 0 0 12px 12px;
+      overflow-y: auto;
+      overflow-x: auto;
+      margin: 0;
+    }
+
+    pre::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    pre::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    pre::-webkit-scrollbar-thumb {
+      background: var(--premcolo);
+      border-radius: 10px;
+    }
+
+    /* ===== INFO / WARN ===== */
+    .info-box {
+      background: rgba(0, 217, 255, 0.06);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-left: 4px solid var(--premcolo);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .info-box strong {
+      color: var(--premcolo);
+    }
+
+    .warn-box {
+      background: rgba(255, 107, 53, 0.06);
+      border: 1px solid rgba(255, 107, 53, 0.2);
+      border-left: 4px solid var(--accent2);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .warn-box strong {
+      color: var(--accent2);
+    }
+
+    /* ===== COMPARISON TABLE ===== */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 14px;
+    }
+
+    .comparison-table th {
+      font-family: var(--font-head);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 10px 14px;
+      background: rgba(0, 217, 255, 0.08);
+      color: var(--premcolo);
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+
+    .comparison-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      vertical-align: top;
+    }
+
+    .comparison-table tr:hover td {
+      background: var(--surface-hover);
+    }
+
+    .comparison-table td strong {
+      color: #fff;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-family: var(--font-head);
+      font-weight: 700;
+    }
+
+    .badge-green {
+      background: rgba(74, 222, 128, 0.12);
+      color: #4ade80;
+      border: 1px solid rgba(74, 222, 128, 0.25);
+    }
+
+    .badge-orange {
+      background: rgba(255, 107, 53, 0.12);
+      color: var(--accent2);
+      border: 1px solid rgba(255, 107, 53, 0.25);
+    }
+
+    .badge-blue {
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      margin: 1.5rem 0;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      background: var(--surface);
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s;
+      list-style: none;
+      user-select: none;
+    }
+
+    .faq-question:hover {
+      background: var(--surface-hover);
+    }
+
+    .faq-question::after {
+      content: "+";
+      font-size: 1.3rem;
+      color: var(--premcolo);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    details[open] .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 1rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-answer code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* ===== CONCLUSION ===== */
+    .conclusion {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.07), rgba(0, 140, 160, 0.05));
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .conclusion h2 {
+      border: none;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* ===== COUNTDOWN ===== */
+    .countdown-box {
+      background: rgba(0, 217, 255, 0.05);
+      border: 1px solid rgba(0, 217, 255, 0.18);
+      border-radius: 14px;
+      padding: 1.5rem 1.75rem;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+
+    .countdown-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .countdown-timer {
+      font-family: var(--font-head);
+      font-size: 2.5rem;
+      color: var(--premcolo);
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .gist-link-wrapper {
+      display: none;
+      margin-top: 12px;
+    }
+
+    .gist-link-wrapper.visible {
+      display: block;
+    }
+
+    .gist-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(0, 217, 255, 0.06));
+      border: 1px solid rgba(0, 217, 255, 0.35);
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .gist-link:hover {
+      background: rgba(0, 217, 255, 0.2);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      position: sticky;
+      top: 72px;
+    }
+
+    .sidebar-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-header {
+      padding: 14px 16px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--premcolo);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .related-list {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .related-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/9;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .related-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .related-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    .related-card-title {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* ===== PREVIEW MODAL ===== */
+    .preview-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 5, 15, 0.85);
+      backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+    }
+
+    .preview-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .preview-modal {
+      width: 95vw;
+      max-width: 95vw;
+      height: 95vh;
+      max-height: 95vh;
+      background: #0a0e1a;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(0, 217, 255, 0.06);
+      transform: scale(0.92) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .preview-overlay.open .preview-modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .preview-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+    }
+
+    .preview-modal-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-modal-title i {
+      color: var(--premcolo);
+      font-size: 16px;
+    }
+
+    .preview-modal-title strong {
+      color: #fff;
+    }
+
+    .preview-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .preview-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, filter 0.2s;
+    }
+
+    .preview-dot:hover {
+      transform: scale(1.2);
+      filter: brightness(1.3);
+    }
+
+    .preview-dot.red {
+      background: #ff5f57;
+    }
+
+    .preview-dot.yellow {
+      background: #febc2e;
+    }
+
+    .preview-dot.green {
+      background: #28c840;
+    }
+
+    .preview-close-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .preview-close-btn:hover {
+      border-color: var(--accent2);
+      color: var(--accent2);
+      background: rgba(255, 107, 53, 0.08);
+    }
+
+    .preview-iframe-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .preview-iframe-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      background: #000;
+    }
+
+    .preview-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: #0a0e1a;
+      z-index: 2;
+      transition: opacity 0.4s;
+    }
+
+    .preview-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .preview-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(0, 217, 255, 0.15);
+      border-top-color: var(--premcolo);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    .preview-loading-text {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .preview-loading-files {
+      display: flex;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .preview-file-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      font-weight: 700;
+      opacity: 0.5;
+      transition: opacity 0.3s;
+    }
+
+    .preview-file-tag.loaded {
+      opacity: 1;
+    }
+
+    .preview-file-tag.html-tag {
+      background: rgba(255, 102, 0, 0.15);
+      color: #ff6600;
+      border: 1px solid rgba(255, 102, 0, 0.3);
+    }
+
+    .preview-file-tag.css-tag {
+      background: rgba(0, 255, 255, 0.1);
+      color: #00ffff;
+      border: 1px solid rgba(0, 255, 255, 0.25);
+    }
+
+    .preview-hint {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 16px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      color: var(--text-muted);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s 0.8s;
+      white-space: nowrap;
+      z-index: 3;
+    }
+
+    .preview-hint.show {
+      opacity: 1;
+    }
+
+    .preview-hint i {
+      color: var(--premcolo);
+      margin-right: 4px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1.25rem;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .related-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .related-card {
+        flex: 1 1 calc(50% - 8px);
+      }
+
+      .hero {
+        padding: 2rem 1.25rem 1.5rem;
+      }
+
+      .navbar {
+        padding: 0 1.25rem;
+      }
+
+      .breadcrumb {
+        padding: 10px 1.25rem;
+      }
+
+      .back-link {
+        margin: 0.75rem 1.25rem;
+      }
+
+      .code-section {
+        width: 85vw;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-stats {
+        gap: 1.2rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .asset-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .code-tab {
+        padding: 7px 13px;
+        font-size: 12px;
+      }
+
+      .related-card {
+        flex: 1 1 100%;
+      }
+
+      .comparison-table {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">{ / }</span> 77cod_ing
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="Terms & Conditions.html">Terms &amp; Conditions</a>
+    </nav>
+  </header>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
+      <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+      <li><span aria-current="page">CSS World Cup 2026 Logo Animation</span></li>
+    </ol>
+  </nav>
+
+  <!-- ===== BACK BUTTON ===== -->
+  <a href="projects.html" class="back-link" aria-label="Return to Projects">
+    <i class='bx bx-arrow-back'></i> Return to Projects
+  </a>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="main-heading">
+    <div class="hero-meta">
+      <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+      <span class="tag tag-css">CSS</span>
+      <span class="tag tag-css" style="color:#a5b4fc;border-color:rgba(165,180,252,0.2);">No JS</span>
+      <span class="tag tag-level">Advanced</span>
+      <span class="read-time"><i class='bx bx-time'></i> ~9 min read</span>
+    </div>
+
+    <h1 id="main-heading">
+      CSS <span>World Cup 2026 Logo</span> Animation<br>
+      with sibling-index(), shape() &amp; @property
+    </h1>
+
+    <p class="hero-lead">
+      A deep-dive build of a stacked, rippling World Cup 2026 logo made entirely from CSS — 47 layered
+      <code>span</code> elements drawn into numeral outlines with <code>clip-path: shape()</code>, staggered
+      automatically with the new tree-counting functions <code>sibling-index()</code> and
+      <code>sibling-count()</code>, and pulsed with a custom property that's actually animatable. Zero
+      JavaScript, zero SVG, zero images for the digits themselves.
+    </p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value">47</span>
+        <span class="stat-label">Stacked Layers</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">0</span>
+        <span class="stat-label">Lines of JS</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">4</span>
+        <span class="stat-label">Bleeding-Edge CSS APIs</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">Free</span>
+        <span class="stat-label">Source Code</span>
+      </div>
+    </div>
+
+    <img src="https://77cod-ing.github.io/World-Cup-2026-CSS-Logo-Animation.png"
+      alt="Animated CSS World Cup 2026 logo built from 47 stacked span layers forming the numerals 2 and 6, with a rainbow color cascade and a centered logo overlay"
+      class="hero-img" width="1200" height="420" loading="eager" fetchpriority="high">
+    <p class="img-caption">Final result: two stacked numeral groups rippling in CSS-only depth, with the official
+      mark overlaid on top — no JavaScript, no SVG path data</p>
+  </section>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <div class="layout">
+
+    <main class="article-body" id="main-content">
+
+      <!-- TOC -->
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-title">📋 Contents</p>
+        <ol>
+          <li><a href="#overview">What You'll Build</a></li>
+          <li><a href="#features">Key Features</a></li>
+          <li><a href="#source-code">Full Source Code</a></li>
+          <li><a href="#assets">Project Structure &amp; Assets</a></li>
+          <li><a href="#how-it-works">How It Works — Step by Step</a></li>
+          <li><a href="#customization">Customization Ideas</a></li>
+          <li><a href="#browser-support">Browser Compatibility</a></li>
+          <li><a href="#performance">Performance &amp; Responsiveness</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </nav>
+
+      <!-- OVERVIEW -->
+      <section id="overview">
+        <h2>What You'll Build</h2>
+        <p>
+          In this tutorial you'll build a <strong>CSS-only World Cup 2026 logo animation</strong> made of
+          two stacked digit groups — a "2" built from 21 layered spans and a "6" built from 26 — where
+          every layer pulses outward and back in a continuous, staggered ripple. There is no JavaScript
+          counting siblings, no preprocessor generating dozens of <code>nth-child</code> rules, and no SVG
+          file defining the numeral shapes.
+        </p>
+        <p>
+          Instead, the entire effect runs on four CSS features that only recently became practical to use
+          together: <code>@property</code> to register a genuinely animatable custom number, the new
+          <code>sibling-index()</code> and <code>sibling-count()</code> tree-counting functions to give
+          every layer awareness of its own position in the stack, the <code>clip-path: shape()</code>
+          function to draw each numeral's outline with arcs and lines, and container query units to size a
+          trademark mark relative to its own box instead of the viewport.
+        </p>
+        <p>
+          The result reads as a deep, almost 3D cascade of color and depth — but it's two HTML elements,
+          47 empty <code>span</code> tags, and one overlay image. This is a great reference for anyone
+          who wants to see what "next-generation CSS" looks like in a real, finished component rather than
+          a spec example.
+        </p>
+
+        <div class="info-box">
+          <strong>💡 Who Is This For?</strong> This project is best suited to developers who are already
+          comfortable with CSS Grid, custom properties, and <code>clip-path</code>, and who want a guided,
+          practical introduction to the very newest CSS tree-counting functions and the <code>shape()</code>
+          clip-path syntax — all explained from the ground up, so no prior experience with either is
+          required to follow along.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- FEATURES -->
+      <section id="features">
+        <h2>Key Features of This Animated Logo</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🧮</div>
+            <div class="feature-title">sibling-index() Driven Stacking</div>
+            <div class="feature-desc">Every layer's <code>z-index</code>, <code>scale</code>, and
+              <code>animation-delay</code> are computed from its own position among its siblings — no
+              manual <code>nth-child</code> chains.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔢</div>
+            <div class="feature-title">Animatable @property</div>
+            <div class="feature-desc">The <code>--scale</code> custom property is registered as a typed
+              <code>&lt;number&gt;</code> with <code>@property</code>, making it smoothly animatable
+              inside <code>@keyframes</code> for the first time.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">✏️</div>
+            <div class="feature-title">Numerals Drawn with shape()</div>
+            <div class="feature-desc">The "2" and "6" outlines are drawn entirely with
+              <code>clip-path: shape()</code> arc and line commands — no image, font, or SVG path data
+              required.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🌈</div>
+            <div class="feature-title">10-Color Layer Cascade</div>
+            <div class="feature-desc">A repeating <code>:nth-child(10n + x)</code> palette cycles through
+              ten brand colors across the stacked spans, producing the rainbow depth effect.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📐</div>
+            <div class="feature-title">Container Query Sized Mark</div>
+            <div class="feature-desc">The "TM" trademark text uses <code>container-type: size</code> and
+              <code>cqb</code> units so it scales relative to its own span, not the viewport.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🪞</div>
+            <div class="feature-title">CSS Grid Layer Stacking</div>
+            <div class="feature-desc">All spans share <code>grid-row: 1; grid-column: 1</code> so every
+              layer overlaps perfectly, with depth ordering handled purely through computed
+              <code>z-index</code>.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🪶</div>
+            <div class="feature-title">Zero JavaScript</div>
+            <div class="feature-desc">No counting, no class toggling, no animation library. Every moving
+              part — stacking, scale, color, timing — is resolved entirely by the CSS engine.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <div class="feature-title">vmin-Based Responsive Sizing</div>
+            <div class="feature-desc">A single <code>--char-size: 20vmin</code> custom property drives
+              every dimension in the logo, so it scales proportionally on any screen with zero media
+              queries.</div>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- SOURCE CODE -->
+      <section id="source-code">
+        <h2>Full Source Code (Free)</h2>
+        <p>
+          The project is split across two files: <code>index.html</code> for the two stacked digit groups
+          and the logo overlay image, and <code>style.css</code> for every layer, color, shape, and
+          animation rule. There is no build step and no dependency — open the HTML file directly in a
+          Chromium-based browser to see the full effect. Use the tabs below to browse each file.
+        </p>
+
+        <div class="code-section">
+          <div class="code-toolbar">
+            <div class="code-tabs" role="tablist" aria-label="Code files">
+              <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                aria-controls="panel-html">HTML</button>
+              <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+                aria-controls="panel-css">CSS</button>
+            </div>
+            <button class="preview-btn" id="previewBtn" aria-label="Preview the final result">
+              <i class='bx bx-play-circle'></i>
+              <span>Preview Result</span>
+            </button>
+          </div>
+
+          <div class="code-panels">
+            <div class="code-box active" id="panel-html" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code1" class="language-html"></code></pre>
+            </div>
+
+            <div class="code-box" id="panel-css" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
+                <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code2" class="language-css"></code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Countdown Gist reveal -->
+        <div class="countdown-box">
+          <p class="countdown-label">🔓 Full Source Code unlocks in</p>
+          <div class="countdown-timer" id="countdownDisplay">05</div>
+          <p style="font-size:13px;color:var(--text-muted);">Hosted on GitHub Gist — free, no sign-up required
+          </p>
+          <div class="gist-link-wrapper" id="gistLinkWrapper">
+            <a class="gist-link" href="https://gist.github.com/77cod-ing/css-world-cup-2026-logo-animation"
+              target="_blank" rel="noopener noreferrer">
+              <i class='bx bxl-github'></i> View Full Source Code on GitHub Gist
+            </a>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <strong>💡 Quick Start:</strong> Drop <code>index.html</code> and <code>style.css</code> into the
+          same folder and open <code>index.html</code> in Chrome or Edge for the full staggered ripple
+          effect. Other browsers will still render the logo, just with a flatter, less staggered stacking
+          until <code>sibling-index()</code> support lands.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- ASSETS -->
+      <section id="assets">
+        <h2>Project Structure &amp; Assets</h2>
+        <p>
+          Unlike many animated CSS projects, this build doesn't rely on a folder of PNGs to create its
+          visual shapes — both numerals are computed entirely in CSS. Only a single external asset is
+          used, and the rest of the "assets" are really just structural HTML elements doing the work that
+          images would normally do.
+        </p>
+
+        <div class="asset-grid">
+          <div class="asset-card">
+            <div class="asset-name">index.html</div>
+            <p class="asset-desc">Contains the <code>.logo</code> wrapper with two child groups,
+              <code>.num-two</code> (21 empty spans) and <code>.num-six</code> (26 empty spans), plus a
+              single overlay <code>&lt;img&gt;</code> tag for the final brand mark. No data attributes,
+              no inline styles, no scripts.
+            </p>
+          </div>
+          <div class="asset-card">
+            <div class="asset-name">style.css</div>
+            <p class="asset-desc">Every visual result — the numeral outlines, the stacking depth, the
+              color cascade, the pulsing animation, and the trademark sizing — is generated from this
+              single stylesheet using <code>@property</code>, <code>sibling-index()</code>,
+              <code>sibling-count()</code>, and <code>clip-path: shape()</code>.
+            </p>
+          </div>
+          <div class="asset-card">
+            <div class="asset-name">Logo overlay PNG</div>
+            <p class="asset-desc">One transparent-background image, centered with
+              <code>position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)</code> and
+              stacked above everything else with <code>z-index: 99</code>, providing the finished
+              wordmark on top of the CSS-drawn numerals beneath it.
+            </p>
+            <p class="asset-alt">Suggested Alt: "World Cup 2026 logo overlay centered above animated CSS
+              stacked numerals"</p>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <strong>💡 Asset Tip:</strong> Because the "2" and "6" shapes are pure CSS, you can change the
+          overlay image to literally anything — a different competition mark, your own logo, or nothing at
+          all — without touching the geometry that creates the animated stack underneath it.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- HOW IT WORKS -->
+      <section id="how-it-works">
+        <h2>How It Works — Step by Step</h2>
+        <p>
+          Here's a breakdown of the eight core techniques behind this animated logo, from the base markup
+          structure down to the container-query-sized trademark mark.
+        </p>
+
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>Two Grid-Stacked Digit Groups in HTML</h3>
+              <p>
+                The markup is just a <code>.logo</code> wrapper containing <code>.num-two</code> and
+                <code>.num-six</code>, each filled with a run of empty <code>&lt;span&gt;</code>
+                elements (21 and 26 of them respectively). Each group is its own CSS Grid container,
+                with <code>.num-two</code> aligned to the bottom row of the logo grid and
+                <code>.num-six</code> aligned to the top, stacking "2" above "6" without any extra
+                markup for layout.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>Registering --scale with @property</h3>
+              <p>
+                <code>@property --scale</code> declares <code>syntax: '&lt;number&gt;'</code>,
+                <code>inherits: true</code>, and <code>initial-value: .8</code>. Without this
+                registration, <code>--scale</code> would just be an opaque string token to the
+                browser, and animating it in <code>@keyframes</code> would jump instantly between
+                values instead of interpolating smoothly. Registering it as a real
+                <code>&lt;number&gt;</code> type is what unlocks the smooth pulsing animation later.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>Stacking Every Span on the Same Grid Cell</h3>
+              <p>
+                Every <code>span</code> inside <code>.num</code> is placed at
+                <code>grid-row: 1; grid-column: 1</code>, so all 21 or 26 layers overlap exactly on
+                top of one another instead of flowing into separate cells. Depth ordering then comes
+                from <code>z-index: calc(sibling-count() - sibling-index())</code> — the first span
+                gets the highest <code>z-index</code> and sits on top, with each subsequent sibling
+                sliding one layer further back automatically.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h3>Drawing the Numerals with clip-path: shape()</h3>
+              <p>
+                Each span's <code>::before</code> pseudo-element is a full-size colored block clipped
+                into the outline of a flat "2" or "6" using <code>clip-path: shape()</code>. The
+                <code>shape()</code> function reads like an SVG path but is written in native CSS
+                with <code>from</code>, <code>line to</code>, and <code>arc to</code> commands and
+                CSS length units — for example, the "2" path starts at <code>0 var(--r)</code>, arcs
+                up into the rounded top, runs a straight top edge, and arcs back down into the tail.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">05</div>
+            <div class="step-content">
+              <h3>Scale and Delay from sibling-index()</h3>
+              <p>
+                Every span except the first gets
+                <code>scale: calc((sibling-index() - 1) * var(--scale))</code>, so the deeper a layer
+                sits in the stack, the larger its resting scale becomes. The same span also gets
+                <code>animation: scaleIt var(--speed) calc(sibling-index() * -100ms) ease-in-out
+                                infinite</code> — that negative delay, also computed from
+                <code>sibling-index()</code>, is what makes each layer enter its pulse loop at a
+                different point in time instead of all 47 layers moving in lockstep.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">06</div>
+            <div class="step-content">
+              <h3>Animating --scale Through Keyframes</h3>
+              <p>
+                <code>@keyframes scaleIt</code> changes <code>--scale</code> to <code>2</code> at 20%,
+                <code>.6</code> at 40%, and <code>1.4</code> at 70% of the loop. Because
+                <code>--scale</code> is registered as an animatable number and every span's
+                <code>scale</code> formula references it, the same keyframes rule produces a
+                continuous ripple that cascades visibly through the stack — purely because each layer
+                started its loop on a different negative delay.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">07</div>
+            <div class="step-content">
+              <h3>Cycling Colors with nth-child Modulo Selectors</h3>
+              <p>
+                <code>.num span:nth-child(10n + 1)</code> through <code>10n + 10</code> assign ten
+                distinct brand colors that repeat every ten layers, while
+                <code>.num span:nth-child(1)</code> is forced to white so the topmost, frontmost layer
+                always reads cleanly. Combined with the depth-based scale from step 5, this produces
+                the rainbow "depth cascade" visible behind the logo overlay.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">08</div>
+            <div class="step-content">
+              <h3>Container Query Units for the Trademark Mark</h3>
+              <p>
+                The first span in <code>.num-six</code> gets <code>container-type: size</code>,
+                turning it into a sizing context for its own content. Its <code>::after</code>
+                pseudo-element then adds <code>content: 'TM'</code> sized in <code>8cqb</code>
+                (container query block) units, rotated <code>-90deg</code> around its bottom-left
+                corner, and trimmed tightly with <code>text-box: trim-both cap alphabetic</code> so the
+                glyph sits flush against its container with no stray leading space above or below it.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="warn-box">
+          <strong>⚠️ Tree-Counting Functions Are Still New:</strong> <code>sibling-index()</code> and
+          <code>sibling-count()</code> are part of the CSS Values and Units Module Level 5 draft and are not
+          yet Baseline. Always test the actual ripple/stagger behavior in your target browsers before
+          shipping this to production, and wrap the relevant rules in <code>@supports
+                    (z-index: sibling-index())</code> if you need a defined fallback for browsers that don't
+          understand the functions yet.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- CUSTOMIZATION -->
+      <section id="customization">
+        <h2>Customization Ideas</h2>
+        <p>
+          Almost every visual decision in this logo is controlled by a small number of custom properties
+          and selectors, which makes it easy to retarget for a different brand, year, or two-character
+          mark.
+        </p>
+        <ul>
+          <li><strong>Resize the whole logo</strong> — Change <code>--char-size</code> in the
+            <code>:root</code> block. Every dimension in the project, including <code>--r</code> and
+            <code>--gap</code>, is derived from this one value using <code>calc()</code>, so the entire
+            composition scales proportionally.
+          </li>
+          <li><strong>Change the pulse speed</strong> — Adjust <code>--speed</code> (default
+            <code>10s</code>) to make the ripple ride faster for a punchier effect or slower for a calmer,
+            more ambient one.
+          </li>
+          <li><strong>Swap the color palette</strong> — Update the ten <code>nth-child(10n + x)</code> color
+            rules to any palette you like. Because the colors cycle by stack position rather than fixed
+            index, the cascade pattern stays consistent no matter how many layers you add.
+          </li>
+          <li><strong>Add or remove stacked layers</strong> — Add or delete <code>&lt;span&gt;</code>
+            elements inside <code>.num-two</code> or <code>.num-six</code>. Because depth, scale, and
+            timing are all computed from <code>sibling-index()</code> and <code>sibling-count()</code>,
+            no CSS rule needs to change — the stack simply gets deeper or shallower automatically.
+          </li>
+          <li><strong>Draw a different numeral</strong> — Replace the <code>clip-path: shape()</code>
+            coordinates in <code>.num-two span:before</code> or <code>.num-six span:before</code> with a
+            new outline. Any digit, letter, or simple glyph can be described the same way using
+            <code>line to</code> and <code>arc to</code> commands.
+          </li>
+          <li><strong>Adjust the ripple curve</strong> — Edit the percentages and <code>--scale</code>
+            values inside <code>@keyframes scaleIt</code> to make the pulse sharper, gentler, or
+            multi-peaked.
+          </li>
+          <li><strong>Replace or remove the overlay image</strong> — Swap the <code>img</code> source for
+            any other transparent PNG or SVG, or delete the tag entirely to show only the raw CSS-drawn
+            numeral stack.
+          </li>
+          <li><strong>Remove the trademark mark</strong> — Delete the
+            <code>.num-six span:first-child::after</code> rule if you don't need the "TM" glyph, or
+            replace its <code>content</code> with different generated text sized the same way using
+            container query units.
+          </li>
+        </ul>
+
+        <div class="info-box">
+          <strong>💡 Tip:</strong> Because every measurement flows from <code>--char-size</code> and every
+          stacking calculation flows from <code>sibling-index()</code>/<code>sibling-count()</code>, this
+          logo can be dropped into a hero section, a loading screen, or a footer mark at any size without
+          rewriting a single selector.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- BROWSER COMPATIBILITY -->
+      <section id="browser-support">
+        <h2>Browser Compatibility</h2>
+        <p>
+          This project deliberately leans on some of the newest functions in the CSS specification, so
+          support is uneven across engines in a way that's worth understanding before you ship it. Here's
+          where each feature stands as of mid-2026.
+        </p>
+
+        <table class="comparison-table" aria-label="Browser compatibility table">
+          <thead>
+            <tr>
+              <th>Browser</th>
+              <th>@property &amp; shape()</th>
+              <th>Container Query Units</th>
+              <th>sibling-index() / sibling-count()</th>
+              <th>text-box-trim</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Chrome / Edge</strong></td>
+              <td><span class="badge badge-green">Yes</span></td>
+              <td><span class="badge badge-green">Yes</span></td>
+              <td><span class="badge badge-green">Yes</span></td>
+              <td><span class="badge badge-green">Yes</span></td>
+            </tr>
+            <tr>
+              <td><strong>Safari (macOS &amp; iOS)</strong></td>
+              <td><span class="badge badge-green">Yes</span></td>
+              <td><span class="badge badge-green">Yes</span></td>
+              <td><span class="badge badge-orange">In development</span></td>
+              <td><span class="badge badge-green">Yes</span></td>
+            </tr>
+            <tr>
+              <td><strong>Firefox</strong></td>
+              <td><span class="badge badge-green">Yes</span></td>
+              <td><span class="badge badge-green">Yes</span></td>
+              <td><span class="badge badge-orange">In development</span></td>
+              <td><span class="badge badge-orange">No</span></td>
+            </tr>
+            <tr>
+              <td><strong>Samsung Internet</strong></td>
+              <td><span class="badge badge-green">Yes</span></td>
+              <td><span class="badge badge-green">Yes</span></td>
+              <td><span class="badge badge-green">Yes</span></td>
+              <td><span class="badge badge-green">Yes</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="info-box">
+          <strong>💡 What Actually Breaks Without Support:</strong> <code>@property</code>,
+          <code>shape()</code>, and container query units are Baseline-level stable across all major
+          engines, so the numeral outlines and trademark sizing render correctly everywhere. Where
+          <code>sibling-index()</code> or <code>sibling-count()</code> isn't recognized, the browser falls
+          back to the property's initial value — the stack still appears, just without the per-layer
+          scale and delay staggering, so the ripple looks flatter and more uniform instead of failing
+          outright.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- PERFORMANCE & RESPONSIVENESS -->
+      <section id="performance">
+        <h2>Performance &amp; Responsiveness</h2>
+        <p>
+          Despite having 47 separately animated layers, this logo stays light because the browser is doing
+          work it would already be doing anyway — it's simply exposing tree position data and compositing
+          a typed custom property, rather than running any external layout or measurement code.
+        </p>
+        <ul>
+          <li><strong>No JavaScript measurement cost:</strong> Because <code>sibling-index()</code> and
+            <code>sibling-count()</code> are resolved natively during the CSS cascade, there's no
+            <code>ResizeObserver</code>, no DOM query loop, and no inline style injection — the
+            computation happens before layout and paint, not in response to them.
+          </li>
+          <li><strong>Single composited property:</strong> Every layer's motion is driven by one registered
+            custom property, <code>--scale</code>, feeding into <code>scale()</code>. The browser only
+            needs to track one animated value type across the whole stack rather than 47 independent
+            animations.</li>
+          <li><strong>clip-path is computed once:</strong> The <code>shape()</code> outlines on each
+            <code>::before</code> are static — they're never animated — so the cost of drawing the
+            numeral geometry is paid once per layer, not on every animation frame.
+          </li>
+          <li><strong>Scoped container queries:</strong> <code>container-type: size</code> is applied only
+            to the single span that needs it for the trademark mark, keeping the container query's
+            recalculation scope as small as possible instead of containing the whole logo.</li>
+          <li><strong>vmin-based full responsiveness:</strong> The single <code>--char-size: 20vmin</code>
+            variable means the entire 47-layer composition reflows correctly at any viewport size with
+            zero media queries — from a small phone screen to an ultrawide monitor.</li>
+        </ul>
+
+        <div class="info-box">
+          <strong>💡 Key Takeaway:</strong> Letting the browser answer "where am I in this list?" natively,
+          instead of answering that question in JavaScript and writing the result back into inline styles
+          or generated stylesheets, removes an entire category of layout thrashing. That's the real
+          performance story behind <code>sibling-index()</code> and <code>sibling-count()</code>, not just
+          the convenience of shorter code.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+
+          <details class="faq-item">
+            <summary class="faq-question">What are sibling-index() and sibling-count() in CSS, and how
+              are they used in this logo?</summary>
+            <div class="faq-answer">
+              <code>sibling-index()</code> returns an element's 1-based position among its siblings, and
+              <code>sibling-count()</code> returns the total number of siblings. In this project they
+              replace manual <code>nth-child</code> math: <code>z-index</code> is computed as
+              <code>sibling-count() - sibling-index()</code>, and each span's scale and
+              <code>animation-delay</code> are derived directly from <code>sibling-index()</code>, so
+              adding or removing stacked layers never requires rewriting any rules.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How does @property make the --scale animation work?</summary>
+            <div class="faq-answer">
+              Ordinary CSS custom properties are treated as untyped strings, so the browser can't
+              smoothly interpolate between values inside <code>@keyframes</code>. The
+              <code>@property</code> rule registers <code>--scale</code> with
+              <code>syntax: '&lt;number&gt;'</code>, <code>inherits: true</code>, and an
+              <code>initial-value</code>, which tells the browser it's a real animatable number. That
+              registration is what allows the <code>scaleIt</code> keyframes to produce a smooth
+              pulsing motion instead of an instant jump.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">What does the CSS shape() function do, and why draw the
+              numerals instead of using an image?</summary>
+            <div class="faq-answer">
+              <code>clip-path: shape()</code> lets you describe a custom outline directly in CSS using
+              commands like <code>arc to</code> and <code>line to</code>, similar to an SVG path but
+              written with native CSS units. Drawing the "2" and "6" outlines with <code>shape()</code>
+              means no PNG or SVG asset is needed for the digits themselves, the shape stays crisp at
+              any size, and it can be restyled per layer using only CSS.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Will this animated logo work in all browsers right now?
+            </summary>
+            <div class="faq-answer">
+              Mostly, but not perfectly everywhere yet. <code>@property</code>, the
+              <code>shape()</code> function, and container query units are well supported across
+              current Chrome, Edge, Firefox, and Safari. <code>sibling-index()</code> and
+              <code>sibling-count()</code> currently run natively in Chromium browsers, with Firefox and
+              Safari support still rolling out, so the stacking math falls back to a flatter,
+              non-staggered layout in browsers that don't yet recognize those functions.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Can I reuse this technique to animate other numbers or text?
+            </summary>
+            <div class="faq-answer">
+              Yes. The pattern is generic: any group of stacked, identically positioned elements can use
+              <code>sibling-index()</code> and <code>sibling-count()</code> to compute depth, scale,
+              and timing automatically. Swap the <code>shape()</code> coordinates for a different digit
+              or letter outline, adjust <code>--char-size</code> and the color list, and the same
+              staggering logic applies to a completely different glyph.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Why does the logo use container query units (cqb) for the
+              "TM" mark?</summary>
+            <div class="faq-answer">
+              The first span in the six group is given <code>container-type: size</code>, which turns
+              it into its own sizing context. The generated "TM" content is then sized in
+              <code>cqb</code> (container query block) units, so its font size always scales relative to
+              that one span's own dimensions rather than the viewport, keeping the trademark mark
+              proportionally correct no matter how <code>--char-size</code> changes.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Does this project use any JavaScript at all?</summary>
+            <div class="faq-answer">
+              No. The entire logo, including the layered stacking, the rippling scale animation, the
+              numeral outlines, the color cycling, and the trademark mark sizing, is built and animated
+              with pure CSS. The only non-CSS asset is a single transparent PNG overlay placed on top of
+              the CSS-drawn numerals for the final brand mark.
+            </div>
+          </details>
+
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- CONCLUSION -->
+      <section id="conclusion" class="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          This <strong>CSS World Cup 2026 logo animation</strong> is a showcase of how far pure CSS has
+          come. <strong>@property</strong> turns a custom property into a real animatable type,
+          <strong>sibling-index() and sibling-count()</strong> give every layer self-awareness about its
+          position in a stack, <strong>clip-path: shape()</strong> draws complex outlines without a single
+          image file, and <strong>container query units</strong> size generated content relative to its own
+          box instead of the viewport. Combined, they replace what used to require JavaScript loops,
+          manually-numbered selectors, and SVG path data — with four CSS rules.
+        </p>
+        <p>
+          The staggering pattern here generalizes well beyond logos: any deck of stacked cards, a list of
+          repeating decorative shapes, a loading spinner made of layered rings, or a typographic flourish
+          can use the same <code>sibling-index()</code>/<code>sibling-count()</code> approach to stagger
+          itself automatically, with no element count hardcoded anywhere in the stylesheet.
+        </p>
+        <p>
+          Want to keep exploring modern CSS-only animation? Check out the
+          <a href="Project-Magic-Animated-Motion-Button.html" style="color:var(--premcolo);">Magic Animated
+            Motion Button</a>
+          for a hover-driven reveal built from absolute positioning and transforms, or the
+          <a href="Project39.html" style="color:var(--premcolo);">Animated Button with Star Effects</a>
+          for a different take on layered, particle-style CSS motion.
+        </p>
+        <p style="color:var(--text-muted); font-size:14px; margin-bottom:0;">
+          Found this useful? Explore more HTML CSS projects in the sidebar or browse all projects in the
+          collection.
+        </p>
+      </section>
+
+    </main>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" aria-label="Related projects">
+      <div class="sidebar-box">
+        <div class="sidebar-header">🔗 Related Projects</div>
+        <div class="related-list">
+          <a class="related-card" href="Project49.html"
+            aria-label="Magic Animated Motion Button with CSS Hover Effects">
+            <img src="https://77cod-ing.github.io/Animated_Motion_Button.png"
+              alt="Magic animated CSS button with floating 3D geometric shapes on hover" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Magic Animated Motion Button — CSS Hover Effects</div>
+          </a>
+          <a class="related-card" href="Project39.html" aria-label="Animated Button with Star Effects">
+            <img src="https://i.suar.me/jvZZv/m" alt="Creative Animated Button with Star Effects Using HTML CSS"
+              loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Button with Star Effects — HTML &amp; CSS</div>
+          </a>
+          <a class="related-card" href="Project45.html" aria-label="Animated Floating Action Button Menu with CSS">
+            <img src="https://77cod-ing.github.io/button-list-item.png"
+              alt="Animated floating action button menu expanding into a list built with CSS" loading="lazy" width="280"
+              height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Floating Action Button Menu — CSS &amp; JS</div>
+          </a>
+          <a class="related-card" href="Project13.html" aria-label="Neon Cursor Animation CSS JavaScript">
+            <img src="https://77cod-ing.github.io/image%20copy%2036.png" alt="Neon Cursor Animation CSS JavaScript"
+              loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Neon Cursor Animation — CSS &amp; JavaScript</div>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ===== PREVIEW MODAL ===== -->
+  <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+    aria-label="Live preview of the CSS World Cup 2026 logo animation">
+    <div class="preview-modal">
+      <div class="preview-modal-header">
+        <div class="preview-modal-title">
+          <i class='bx bx-show'></i>
+          <strong>Live Preview</strong> — CSS World Cup 2026 Logo Animation
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="preview-dots">
+            <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+            <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+            <button class="preview-dot green" aria-label="Maximize" disabled></button>
+          </div>
+          <button class="preview-close-btn" id="previewCloseBtn">
+            <i class='bx bx-x'></i> Close
+          </button>
+        </div>
+      </div>
+      <div class="preview-iframe-wrap">
+        <div class="preview-loading" id="previewLoading">
+          <div class="preview-spinner"></div>
+          <span class="preview-loading-text">Loading preview...</span>
+          <div class="preview-loading-files">
+            <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+            <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+          </div>
+        </div>
+        <iframe id="previewIframe" title="Preview of CSS World Cup 2026 logo animation"
+          sandbox="allow-scripts allow-same-origin"></iframe>
+        <div class="preview-hint" id="previewHint">
+          <i class='bx bx-cursor'></i> Watch the layers ripple automatically
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    /*
+      ============================================
+        Gist URLs — update with the actual Gist raw URL for this project
+      ============================================
+    */
+    const gistBase = "https://gist.githubusercontent.com/77cod-ing/f3d5d53bdf63966d00ea07457a0acca3/raw/";
+
+    const htmlUrl = gistBase + "index.html";
+    const cssUrl = gistBase + "d13609e2fe1e2d2012f84a1f69db19bc5f4f2087/style.css";
+
+    let cachedHTML = "";
+    let cachedCSS = "";
+
+    async function loadCode(url, elementId, lang) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const text = await res.text();
+        const el = document.getElementById(elementId);
+        el.textContent = text;
+        el.className = `language-${lang}`;
+        Prism.highlightElement(el);
+        if (lang === "html") cachedHTML = text;
+        if (lang === "css") cachedCSS = text;
+      } catch (e) {
+        const el = document.getElementById(elementId);
+        if (el) el.textContent = `/* Failed to load: ${e.message} */`;
+      }
+    }
+
+    loadCode(htmlUrl, "code1", "html");
+    loadCode(cssUrl, "code2", "css");
+
+    /* ===== Tabs ===== */
+    document.querySelectorAll(".code-tab").forEach(tab => {
+      tab.addEventListener("click", () => {
+        const lang = tab.dataset.lang;
+        document.querySelectorAll(".code-tab").forEach(t => {
+          t.classList.remove("active");
+          t.setAttribute("aria-selected", "false");
+        });
+        document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+        tab.classList.add("active");
+        tab.setAttribute("aria-selected", "true");
+        const panelMap = { html: "panel-html", css: "panel-css" };
+        document.getElementById(panelMap[lang]).classList.add("active");
+      });
+    });
+
+    /* ===== Copy buttons ===== */
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+        if (!code) return;
+        try {
+          await navigator.clipboard.writeText(code);
+          btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+          btn.classList.add("copied");
+          setTimeout(() => {
+            btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
+            btn.classList.remove("copied");
+          }, 2000);
+        } catch { btn.textContent = "Error"; }
+      });
+    });
+
+    /* ===== Countdown timer ===== */
+    let seconds = 5;
+    const countdownDisplay = document.getElementById("countdownDisplay");
+    const gistLinkWrapper = document.getElementById("gistLinkWrapper");
+
+    const countdownInterval = setInterval(() => {
+      seconds--;
+      countdownDisplay.textContent = String(seconds).padStart(2, "0");
+      if (seconds <= 0) {
+        clearInterval(countdownInterval);
+        gistLinkWrapper.classList.add("visible");
+        countdownDisplay.style.display = "none";
+        document.querySelector(".countdown-label").textContent = "✅ Source Code Available";
+      }
+    }, 1000);
+
+    /* ===== Preview modal ===== */
+    const previewOverlay = document.getElementById("previewOverlay");
+    const previewIframe = document.getElementById("previewIframe");
+    const previewLoading = document.getElementById("previewLoading");
+    const previewHint = document.getElementById("previewHint");
+    const previewBtn = document.getElementById("previewBtn");
+    const previewCloseBtn = document.getElementById("previewCloseBtn");
+    const previewDotClose = document.getElementById("previewDotClose");
+    const tagHTML = document.getElementById("tagHTML");
+    const tagCSS = document.getElementById("tagCSS");
+
+    function openPreview() {
+      previewOverlay.classList.add("open");
+      document.body.style.overflow = "hidden";
+      previewLoading.classList.remove("hidden");
+      previewHint.classList.remove("show");
+      previewBtn.classList.add("loading");
+      tagHTML.classList.remove("loaded");
+      tagCSS.classList.remove("loaded");
+      buildPreview();
+    }
+
+    function closePreview() {
+      previewOverlay.classList.remove("open");
+      document.body.style.overflow = "";
+      previewIframe.srcdoc = "";
+      previewBtn.classList.remove("loading");
+    }
+
+    async function buildPreview() {
+      if (cachedHTML && cachedCSS) {
+        tagHTML.classList.add("loaded");
+        tagCSS.classList.add("loaded");
+        injectPreview(cachedHTML, cachedCSS);
+        return;
+      }
+      try {
+        const fetches = [];
+        if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
+        if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
+        if (cachedHTML) tagHTML.classList.add("loaded");
+        if (cachedCSS) tagCSS.classList.add("loaded");
+        await Promise.all(fetches);
+        injectPreview(cachedHTML, cachedCSS);
+      } catch (e) {
+        previewLoading.innerHTML = `
+                    <i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i>
+                    <span class="preview-loading-text" style="color:var(--accent2);">Failed to load preview: ${e.message}</span>
+                `;
+        previewBtn.classList.remove("loading");
+      }
+    }
+
+    function injectPreview(html, css) {
+      let combined = html;
+      if (combined.includes('<link') && /style\.css/i.test(combined)) {
+        combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
+      } else if (combined.includes("</head>")) {
+        combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
+      } else {
+        combined = `<style>${css}</style>\n${combined}`;
+      }
+      previewIframe.srcdoc = combined;
+      previewIframe.addEventListener("load", function onLoad() {
+        previewLoading.classList.add("hidden");
+        previewBtn.classList.remove("loading");
+        setTimeout(() => {
+          previewHint.classList.add("show");
+          setTimeout(() => previewHint.classList.remove("show"), 4000);
+        }, 300);
+        previewIframe.removeEventListener("load", onLoad);
+      });
+    }
+
+    previewBtn.addEventListener("click", openPreview);
+    previewCloseBtn.addEventListener("click", closePreview);
+    previewDotClose.addEventListener("click", closePreview);
+    previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
+  </script>
+
+</body>
+
+</html>
