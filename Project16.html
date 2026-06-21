@@ -1,516 +1,2270 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== PRIMARY SEO META ===== -->
+  <title>Skewed Menu with Expanding Hover Effects — Pure HTML/CSS Tutorial 2026</title>
+  <meta name="description"
+    content="Build a futuristic skewed navigation menu with expanding hover effects using only HTML and CSS. No JavaScript required. Smooth animations, glowing borders, and sliding labels. Free source code.">
+  <meta name="keywords"
+    content="skewed menu css, css skewed navigation, hover expand menu, pure css skewed menu, css transform skew, css menu hover animation, glowing menu css, futuristic navigation css, html css menu tutorial, flexbox skewed menu, css only interactive menu, skewed navbar design, css 3d menu effect, expandable icon menu css, frontend project 2026">
+  <meta name="author" content="77cod_ing">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://77cod-ing.github.io/Project16">
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Skewed Menu with Expanding Hover Effects — Pure HTML/CSS Tutorial 2026">
+  <meta property="og:description"
+    content="Learn how to build a futuristic skewed navigation menu with expanding hover effects, glowing borders, and sliding labels using only HTML and CSS. Zero JavaScript. Free source code included.">
+  <meta property="og:image" content="https://77cod-ing.github.io/skewed-menu-preview.png">
+  <meta property="og:url" content="https://77cod-ing.github.io/Project16">
+  <meta property="og:site_name" content="77cod_ing">
+  <meta property="article:published_time" content="2026-06-14T00:00:00Z">
+  <meta property="article:modified_time" content="2026-06-14T00:00:00Z">
+  <meta property="article:author" content="77cod_ing">
+  <meta property="article:section" content="CSS Tutorials">
+  <meta property="article:tag"
+    content="HTML, CSS, Transform, Skew, Hover Animation, Navigation, UI Components, Frontend">
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Skewed Menu with Expanding Hover Effects — Pure HTML/CSS Tutorial">
+  <meta name="twitter:description"
+    content="Build a futuristic skewed navigation menu that expands on hover with smooth CSS animations, glowing effects, and sliding labels. No JavaScript needed.">
+  <meta name="twitter:image" content="https://77cod-ing.github.io/skewed-menu-preview.png">
+
+  <!-- ===== SCHEMA: TechArticle ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Skewed Menu with Expanding Hover Effects — Pure HTML/CSS Tutorial for Beginners",
+    "description": "A complete tutorial on building a futuristic skewed navigation menu using CSS transforms, transitions, flexbox, and pseudo-elements — zero JavaScript required.",
+    "image": "https://77cod-ing.github.io/skewed-menu-preview.png",
+    "datePublished": "2026-06-14",
+    "dateModified": "2026-06-14",
+    "author": {
+      "@type": "Person",
+      "name": "77cod_ing",
+      "url": "https://77cod-ing.github.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "77cod_ing",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Picture1.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://77cod-ing.github.io/Project16"
+    },
+    "articleSection": "CSS Tutorials",
+    "keywords": "skewed menu css, hover expand menu, pure css navigation, css transform skew, glowing menu design",
+    "timeRequired": "PT10M",
+    "educationalLevel": "Beginner",
+    "teaches": ["CSS Transform (skew)", "CSS Transitions", "CSS Flexbox", "CSS Pseudo-elements", "CSS Box-Shadow (Glow)", "CSS Overflow Hidden", "Responsive Design"]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: HowTo ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Build a Skewed Navigation Menu with Expanding Hover Effects",
+    "description": "Step-by-step guide to creating a pure CSS skewed navigation menu where icons expand on hover to reveal sliding labels with a glowing futuristic design.",
+    "image": "https://77cod-ing.github.io/skewed-menu-preview.png",
+    "totalTime": "PT10M",
+    "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "0"},
+    "supply": [
+      {"@type": "HowToSupply", "name": "Text editor (VS Code)"},
+      {"@type": "HowToSupply", "name": "A modern web browser"}
+    ],
+    "tool": [
+      {"@type": "HowToTool", "name": "HTML"},
+      {"@type": "HowToTool", "name": "CSS"}
+    ],
+    "step": [
+      {"@type": "HowToStep", "name": "Create the Menu Container", "text": "Build a .menu wrapper using display: flex with a fixed height. Apply transform: skewX(-15deg) to tilt the entire bar and add a glowing border with box-shadow.", "position": 1},
+      {"@type": "HowToStep", "name": "Add Navigation Links with Icons", "text": "Inside the .menu container, add <a> elements each containing a <span class='link-icon'> with an SVG icon and a <span class='link-title'> with the label text.", "position": 2},
+      {"@type": "HowToStep", "name": "Style the Default Link State", "text": "Set each link to flex: 1, overflow: hidden, and a fixed width that expands on hover. Apply the skewed background color and center the icon vertically.", "position": 3},
+      {"@type": "HowToStep", "name": "Build the Hover Expand Animation", "text": "On .link:hover, increase the width using flex or a fixed pixel value. Add transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) for smooth expansion.", "position": 4},
+      {"@type": "HowToStep", "name": "Animate the Sliding Label", "text": "Position .link-title with transform: translateX(20px) and opacity: 0 by default. On hover, transition to translateX(0) and opacity: 1 so the text slides in from the right.", "position": 5},
+      {"@type": "HowToStep", "name": "Add the Glowing Background Effect", "text": "Use a ::before pseudo-element on each link with a gradient background that slides from left to right on hover using transform: translateX(-100%) to translateX(0).", "position": 6},
+      {"@type": "HowToStep", "name": "Counter-Skew the Content", "text": "Apply transform: skewX(15deg) to the inner content (icon and text) so it appears straight while the container remains tilted.", "position": 7},
+      {"@type": "HowToStep", "name": "Make It Responsive", "text": "Add media queries to reduce the skew angle or switch to a vertical layout on smaller screens. Ensure touch targets are at least 44px for mobile accessibility.", "position": 8}
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: FAQPage ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the skew effect work in CSS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The skew effect is achieved using the CSS transform property with the skewX() function. Applying transform: skewX(-15deg) to the menu container tilts the entire element along the X-axis by -15 degrees. To keep text and icons readable, a counter-skew of skewX(15deg) is applied to the inner content, effectively canceling out the distortion for text while keeping the container visually tilted."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the expanding hover effect work without JavaScript?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The expansion relies on CSS transitions. Each link has a default width (e.g., 70px) and on :hover, it transitions to a wider value (e.g., 220px). The transition property with a cubic-bezier easing function creates the smooth animated expansion. The label text uses a separate transition for opacity and transform, creating a staggered reveal effect."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the glowing border effect and how is it created?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The glow is created using multiple box-shadow layers on the .menu container. A combination of inset and outer shadows with the accent color at low opacity produces the neon-like glow. For example: box-shadow: 0 0 15px rgba(0, 217, 255, 0.3), inset 0 0 15px rgba(0, 217, 255, 0.1). The shadow intensity can be increased on hover for an interactive feel."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I change the skew angle and still keep the design working?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can adjust the skewX() value on the container and apply the exact opposite value to the inner content. For example, if you change the container to skewX(-20deg), set the inner content to skewX(20deg). However, extreme angles (beyond ±25deg) may cause layout issues and reduce text readability, so it's best to stay within a moderate range."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does this skewed menu behave on mobile devices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On screens below 768px, a media query reduces or removes the skew angle to prevent horizontal overflow issues. The menu can switch to a vertical layout or reduce the number of visible items. Since mobile users rely on tap instead of hover, you may use :active or :focus states to trigger the expand effect, or use a small JavaScript snippet for touch support."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this skewed menu accessible for keyboard and screen reader users?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The menu uses semantic <nav> and <a> elements, which are naturally keyboard-focusable via Tab. Adding :focus-visible styles that mirror the :hover expansion ensures keyboard users get the same experience. Each link should include an aria-label attribute describing its destination, and the hidden label text should use aria-hidden or be structured so screen readers announce the link purpose correctly."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: BreadcrumbList ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+      {"@type": "ListItem", "position": 3, "name": "Skewed Menu with Expanding Hover Effects", "item": "https://77cod-ing.github.io/Project16"}
+    ]
+  }
+  </script>
+
+  <!-- ===== ASSETS ===== -->
   <link rel="icon" type="image/png" href="Picture1.png">
-  <title>Create Interactive Social Media Icons with Tooltips — HTML/CSS</title>
-    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+  <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
-     crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
+
   <style>
-    *{
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      overflow-x: hidden;
-    }
-    body {
-      background: linear-gradient(to right, #2c0e43 10%, #581c87);
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
     }
 
+    :root {
+      --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+      --premcolo: #00d9ff;
+      --accent2: #ff6b35;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --surface: rgba(255, 255, 255, 0.04);
+      --surface-hover: rgba(0, 217, 255, 0.07);
+      --border: rgba(255, 255, 255, 0.08);
+      --font-head: 'Space Mono', monospace;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--back);
+      font-family: var(--font-body);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    /* ===== NAVBAR ===== */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 50px;
-      padding: 0 2rem;
-      background-color: #0d1325;
+      height: 56px;
+      padding: 0 2.5rem;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      font-size: 22px;
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 2vw, 1.2rem);
       font-weight: bold;
       color: white;
       text-decoration: none;
+      gap: 8px;
     }
 
     .logo-icon {
-      color: #a855f7;
-      font-size: 26px;
-      margin-right: 8px;
-      letter-spacing: 2.5px;
+      color: var(--premcolo);
+      letter-spacing: 2px;
     }
 
     .nav-links {
       display: flex;
-      gap: 35px;
+      gap: clamp(1rem, 2vw, 2rem);
+      align-items: center;
     }
 
     .nav-links a {
-      color: #d1d5db;
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.25s;
     }
 
     .nav-links a:hover {
-      color: #a855f7;
-      transform: scale(1.2);
+      color: var(--premcolo);
     }
-    /*linke*/
-    .con1 {
-      font-family: Arial, sans-serif;
+
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      padding: 12px 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb ol {
       display: flex;
-      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      list-style: none;
       align-items: center;
-      flex-direction: column;
-      margin: auto 0;
-      height: 50vh;
-    }
-    .countdown {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00ffcc;
     }
 
-    .link-box {
-      display: none;
-      padding: 20px 40px;
-      background: #1e2a47;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-      transition: 0.3s;
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 13px;
     }
 
-    .link-box a {
+    .breadcrumb li+li::before {
+      content: "\203A";
+      color: var(--premcolo);
+      margin-right: 6px;
+      font-size: 1.1rem;
+    }
+
+    .breadcrumb a {
+      color: var(--text-muted);
       text-decoration: none;
-      color: #00ffcc;
-      font-size: 1.2rem;
-      font-weight: bold;
+      transition: color 0.2s;
     }
 
-    .link-box:hover {
-      background: #26385c;
-      transform: scale(1.05);
+    .breadcrumb a:hover {
+      color: var(--premcolo);
     }
-    /**ret**/
-    .Ret{
-      margin: 5px 0 0 3rem;
-      width: max-content;
+
+    .breadcrumb [aria-current="page"] {
+      color: var(--premcolo);
+      font-weight: 600;
     }
-    .Ret a {
-      font-size: 2rem;
-      text-decoration: none;
-      color: #ffffff;
-    }
-    .Ret a span{
+
+    /* ===== BACK BUTTON ===== */
+    .back-link {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
-      width: 38px;
-      height: 38px;
-      border: 2px solid #fff;
-      border-radius: 50%;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.2s;
+      margin: 1rem 2.5rem;
     }
-    .Ret a:hover {
-  color: #00e1ff;
-}
-    .Ret a:hover span {
-  border-color: #00e1ff;
-}
-    /**img**/
-    .img{
-      display: flex;
-      justify-content: center;
-      margin: 2rem auto;
+
+    .back-link:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
     }
-    .img img{
-      border-radius: 8px;
-      max-width: 100vw;
-    width: 70vw;
-    height: 65vh;
-    }
-    /**par**/
-    .par{
-       font-family: Arial, sans-serif;
-      line-height: 1.7;
-      max-width: 900px;
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 3rem 2.5rem 2rem;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 20px;
-      color: #ffffff;
     }
-    h1, h2, h3 {
-      color: #00c8ff;
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+      pointer-events: none;
     }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
     }
-    h2 {
-      margin-top: 35px;
-      font-size: 1.6rem;
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-head);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
     }
-    h3 {
-      margin-top: 25px;
+
+    .tag-tutorial {
+      background: rgba(0, 217, 255, 0.12);
+      color: var(--premcolo);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+    }
+
+    .tag-css {
+      background: rgba(0, 217, 255, 0.08);
+      color: #7dd3fc;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+    }
+
+    .tag-html {
+      background: rgba(255, 102, 0, 0.1);
+      color: #ff9966;
+      border: 1px solid rgba(255, 102, 0, 0.2);
+    }
+
+    .tag-level {
+      background: rgba(255, 107, 53, 0.1);
+      color: var(--accent2);
+      border: 1px solid rgba(255, 107, 53, 0.2);
+    }
+
+    .read-time {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      color: var(--premcolo);
+    }
+
+    .hero-lead {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      color: var(--premcolo);
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 500px;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      display: block;
+      box-shadow: 0 0 60px rgba(0, 217, 255, 0.08), 0 32px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem;
+      align-items: start;
+    }
+
+    /* ===== ARTICLE ===== */
+    .article-body h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: var(--premcolo);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 80px;
+    }
+
+    .article-body h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: #7dd3fc;
+      margin: 1.8rem 0 0.75rem;
+      scroll-margin-top: 80px;
+    }
+
+    .article-body p {
+      margin-bottom: 1.1rem;
+      color: var(--text);
+    }
+
+    .article-body code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .article-body ul,
+    .article-body ol {
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .article-body li {
+      margin-bottom: 9px;
+    }
+
+    .article-body li strong {
+      color: #fff;
+    }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .toc-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--premcolo);
+      margin-bottom: 0.75rem;
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--premcolo);
+    }
+
+    /* ===== FEATURE CARDS ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(0, 217, 255, 0.3);
+      background: var(--surface-hover);
+    }
+
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .feature-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .feature-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ===== STEPS ===== */
+    .steps {
+      margin: 1.5rem 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      width: 44px;
+      height: 44px;
+      background: rgba(0, 217, 255, 0.1);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      color: var(--premcolo);
+      font-size: 1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+
+    .step-content p {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* ===== CODE SECTION ===== */
+    .code-section {
+      margin: 2rem 0;
+      width: 60vw;
+    }
+
+    .code-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .code-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .code-tab {
+      padding: 8px 20px;
+      border-radius: 8px 8px 0 0;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .code-tab.active {
+      background: #1e1e2f;
+      color: #fff;
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .code-tab[data-lang="html"].active {
+      color: #ff6600;
+    }
+
+    .code-tab[data-lang="css"].active {
+      color: #00ffff;
+    }
+
+    /* ===== PREVIEW BUTTON ===== */
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.3px;
+    }
+
+    .preview-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .preview-btn:hover {
+      border-color: var(--premcolo);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .preview-btn:hover::before {
+      opacity: 1;
+    }
+
+    .preview-btn:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .preview-btn i {
+      font-size: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn.loading i {
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .code-panels {
+      position: relative;
+    }
+
+    .code-box {
+      background: #1e1e2f;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 0 12px 12px 12px;
+      position: relative;
+      display: none;
+    }
+
+    .code-box.active {
+      display: block;
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-lang-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    .copy-btn.copied {
+      color: #4ade80;
+      border-color: #4ade80;
+    }
+
+    :not(pre)>code[class*="language-"],
+    pre[class*="language-"] {
+      width: 100%;
+      max-width: 100%;
+      height: 50vh;
+      border-radius: 0 0 12px 12px;
+      overflow-y: auto;
+      overflow-x: auto;
+      margin: 0;
+    }
+
+    pre::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    pre::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    pre::-webkit-scrollbar-thumb {
+      background: var(--premcolo);
+      border-radius: 10px;
+    }
+
+    /* ===== INFO / WARN ===== */
+    .info-box {
+      background: rgba(0, 217, 255, 0.06);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-left: 4px solid var(--premcolo);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .info-box strong {
+      color: var(--premcolo);
+    }
+
+    .warn-box {
+      background: rgba(255, 107, 53, 0.06);
+      border: 1px solid rgba(255, 107, 53, 0.2);
+      border-left: 4px solid var(--accent2);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .warn-box strong {
+      color: var(--accent2);
+    }
+
+    /* ===== COMPARISON TABLE ===== */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 14px;
+    }
+
+    .comparison-table th {
+      font-family: var(--font-head);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 10px 14px;
+      background: rgba(0, 217, 255, 0.08);
+      color: var(--premcolo);
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+
+    .comparison-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      vertical-align: top;
+    }
+
+    .comparison-table tr:hover td {
+      background: var(--surface-hover);
+    }
+
+    .comparison-table td strong {
+      color: #fff;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-family: var(--font-head);
+      font-weight: 700;
+    }
+
+    .badge-green {
+      background: rgba(74, 222, 128, 0.12);
+      color: #4ade80;
+      border: 1px solid rgba(74, 222, 128, 0.25);
+    }
+
+    .badge-orange {
+      background: rgba(255, 107, 53, 0.12);
+      color: var(--accent2);
+      border: 1px solid rgba(255, 107, 53, 0.25);
+    }
+
+    .badge-blue {
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      margin: 1.5rem 0;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      background: var(--surface);
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s;
+      list-style: none;
+      user-select: none;
+    }
+
+    .faq-question:hover {
+      background: var(--surface-hover);
+    }
+
+    .faq-question::after {
+      content: "+";
       font-size: 1.3rem;
+      color: var(--premcolo);
+      transition: transform 0.3s;
+      flex-shrink: 0;
     }
-    p {
-      margin-bottom: 18px;
+
+    details[open] .faq-question::after {
+      transform: rotate(45deg);
     }
-    ul {
-      margin: 15px 0;
-      padding-left: 25px;
+
+    .faq-answer {
+      padding: 1rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
     }
-    li {
+
+    .faq-answer code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* ===== CONCLUSION ===== */
+    .conclusion {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.07), rgba(0, 140, 160, 0.05));
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .conclusion h2 {
+      border: none;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* ===== COUNTDOWN ===== */
+    .countdown-box {
+      background: rgba(0, 217, 255, 0.05);
+      border: 1px solid rgba(0, 217, 255, 0.18);
+      border-radius: 14px;
+      padding: 1.5rem 1.75rem;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+
+    .countdown-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
       margin-bottom: 10px;
     }
-    .highlight {
-      background: #000000;
-      padding: 8px 12px;
-      border-left: 4px solid #0073e6;
-      margin: 20px 0;
-    }
-    /**respon**/
-    @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
 
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .img img{
-    max-width: 100vw;
-    width: 90vw;
+    .countdown-timer {
+      font-family: var(--font-head);
+      font-size: 2.5rem;
+      color: var(--premcolo);
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
     }
-  }
-        /**respon1**/
-    .hamburger {
+
+    .gist-link-wrapper {
       display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hamburger .scrolled {
-      background: rgba(255, 255, 255, 0.7);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-}
-
-    .hamburger span {
-      width: 28px;
-      height: 3px;
-      background: white;
-      transition: all 0.3s ease;
+      margin-top: 12px;
     }
 
-    /* ====== القائمة المنبثقة ====== */
-    .mobile-menu {
-      position: fixed;
-      top:0;
-      left: -100%;
-      width: 100%;
-      height: 100vh;
-      padding-top: 0.5rem ;
-      background: rgb(53, 53, 53);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    .gist-link-wrapper.visible {
+      display: block;
+    }
+
+    .gist-link {
+      display: inline-flex;
       align-items: center;
-      gap: 35px;
-      transition: left 0.5s ease;
-      z-index: 999;
-    }
-
-    .mobile-menu.active {
-      left: 0;
-    }
-
-    .mobile-menu a {
-      color: white;
-      font-size: 22px;
-      width: 100%;
-      height: 3rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(0, 217, 255, 0.06));
+      border: 1px solid rgba(0, 217, 255, 0.35);
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 14px;
+      font-weight: 700;
       text-decoration: none;
-      border-bottom: 0.5px solid #fff;
-      transition: color 0.3s;
+      transition: all 0.2s;
     }
 
-    .mobile-menu a:hover {
-      color: #ffffff;
-      background: rgba(104, 104, 104, 0.508);
-      backdrop-filter: bulur(20px);
+    .gist-link:hover {
+      background: rgba(0, 217, 255, 0.2);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
     }
 
-    /* ====== زر الإغلاق (X) ====== */
-    .close-btn {
-      position: absolute;
-      top: 20px;
-      right: 25px;
-      font-size: 30px;
-      color: white;
-      cursor: pointer;
-      width: 35px;
-      height: 35px;
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      position: sticky;
+      top: 72px;
+    }
+
+    .sidebar-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-header {
+      padding: 14px 16px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--premcolo);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .related-list {
+      padding: 12px;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 2px solid #fff;
-      background: rgb(88, 88, 88);
-      border-radius: 50%;
-      transition: transform 0.3s ease;
+      flex-direction: column;
+      gap: 10px;
     }
 
-    .close-btn:hover {
-      transform: rotate(90deg);
-      color: #00e1ff;
+    .related-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/9;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, border-color 0.2s;
     }
 
-    /* ====== استجابة الهاتف ====== */
-    @media (max-width: 910px) {
+    .related-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .related-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .related-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    .related-card-title {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+            /* ===== PREVIEW MODAL ===== */
+        .preview-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 5, 15, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+        }
+
+        .preview-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .preview-modal {
+            width: 95vw;
+            max-width: 95vw;
+            height: 95vh;
+            max-height: 95vh;
+            background: #0a0e1a;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(0, 217, 255, 0.06);
+            transform: scale(0.92) translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .preview-overlay.open .preview-modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .preview-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
+        }
+
+        .preview-modal-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .preview-modal-title i {
+            color: var(--premcolo);
+            font-size: 16px;
+        }
+
+        .preview-modal-title strong {
+            color: #fff;
+        }
+
+        .preview-dots {
+            display: flex;
+            gap: 7px;
+        }
+
+        .preview-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, filter 0.2s;
+        }
+
+        .preview-dot:hover {
+            transform: scale(1.2);
+            filter: brightness(1.3);
+        }
+
+        .preview-dot.red {
+            background: #ff5f57;
+        }
+
+        .preview-dot.yellow {
+            background: #febc2e;
+        }
+
+        .preview-dot.green {
+            background: #28c840;
+        }
+
+        .preview-close-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .preview-close-btn:hover {
+            border-color: var(--accent2);
+            color: var(--accent2);
+            background: rgba(255, 107, 53, 0.08);
+        }
+
+        .preview-iframe-wrap {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .preview-iframe-wrap iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            background: #000;
+        }
+
+        .preview-loading {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            background: #0a0e1a;
+            z-index: 2;
+            transition: opacity 0.4s;
+        }
+
+        .preview-loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .preview-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(0, 217, 255, 0.15);
+            border-top-color: var(--premcolo);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
+        .preview-loading-text {
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .preview-loading-files {
+            display: flex;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .preview-file-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            font-weight: 700;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+
+        .preview-file-tag.loaded {
+            opacity: 1;
+        }
+
+        .preview-file-tag.html-tag {
+            background: rgba(255, 102, 0, 0.15);
+            color: #ff6600;
+            border: 1px solid rgba(255, 102, 0, 0.3);
+        }
+
+        .preview-file-tag.css-tag {
+            background: rgba(0, 255, 255, 0.1);
+            color: #00ffff;
+            border: 1px solid rgba(0, 255, 255, 0.25);
+        }
+
+        .preview-hint {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 6px 16px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            color: var(--text-muted);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.5s 0.8s;
+            white-space: nowrap;
+            z-index: 3;
+        }
+
+        .preview-hint.show {
+            opacity: 1;
+        }
+
+        .preview-hint i {
+            color: var(--premcolo);
+            margin-right: 4px;
+        }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1.25rem;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .related-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .related-card {
+        flex: 1 1 calc(50% - 8px);
+      }
+
+      .hero {
+        padding: 2rem 1.25rem 1.5rem;
+      }
+
+      .navbar {
+        padding: 0 1.25rem;
+      }
+
+      .breadcrumb {
+        padding: 10px 1.25rem;
+      }
+
+      .back-link {
+        margin: 0.75rem 1.25rem;
+      }
+
+      .code-section {
+        width: 85vw;
+      }
+    }
+
+    @media (max-width: 640px) {
       .nav-links {
         display: none;
       }
 
-      .hamburger {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hamburger.scrolled {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      background: rgb(65, 65, 65);
-}
+      .hero-stats {
+        gap: 1.2rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .code-tab {
+        padding: 7px 13px;
+        font-size: 12px;
+      }
+
+      .related-card {
+        flex: 1 1 100%;
+      }
+
+      .comparison-table {
+        font-size: 12px;
+      }
     }
   </style>
 </head>
+
 <body>
-<header class="navbar">
-    <a href="#" class="logo">
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
       <span class="logo-icon">{ / }</span> 77cod_ing
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
       <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html">Terms & Conditions</a>
+      <a href="Terms & Conditions.html">Terms &amp; Conditions</a>
     </nav>
   </header>
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><i class='bx bx-home-alt-2'></i> <span itemprop="name">Home</span></a>
+        <meta itemprop="position" content="1">
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="projects.html"><i class='bx bx-data'></i> <span itemprop="name">Projects</span></a>
+        <meta itemprop="position" content="2">
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name" aria-current="page">Skewed Menu with Expanding Hover</span>
+        <meta itemprop="position" content="3">
+      </li>
+    </ol>
+  </nav>
+
+  <!-- ===== BACK BUTTON ===== -->
+  <a href="projects.html" class="back-link" aria-label="Return to Projects">
+    <i class='bx bx-arrow-back'></i> Return to Projects
+  </a>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="main-heading">
+    <div class="hero-meta">
+      <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+      <span class="tag tag-html">HTML</span>
+      <span class="tag tag-css">CSS</span>
+      <span class="tag tag-level">Beginner</span>
+      <span class="read-time"><i class='bx bx-time'></i> ~10 min read</span>
     </div>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <span class="close-btn" id="closeBtn">&times;</span>
-    <a href="index.html"style="border-top: 2px solid #fff;height: 5rem;">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html" style="border-bottom: 2px solid #fff;">Terms & Conditions</a>
-  </div>
-  <div class="Ret">
-    <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
-  </div>
-  <div class="img">
-    <img src="image copy 47.png" alt="subscribe.box">
-  </div>
-  <div class="par">
-  <span>
-<h1>Create Interactive Social Media Icons with Tooltips — HTML/CSS</h1>
-<p>
-  Interactive social media icons enhance user engagement by providing a visually appealing 
-  and responsive interface. In this tutorial, you’ll learn how to create 
-  <strong>circular social icons</strong> with <em>hover animations and tooltips</em> 
-  using <strong>HTML and CSS</strong>. The result is a sleek set of icons that highlight 
-  on hover and display tooltip labels.
-</p>
+    <h1 id="main-heading">
+      <span>Skewed Menu</span> with Expanding<br>
+      Hover Effects — Pure HTML/CSS
+    </h1>
 
-<div class="highlight">
-  <p><strong>Quick Summary:</strong> Each social icon is wrapped in a container that displays a tooltip on hover. CSS transitions animate the icon's color, background, and tooltip position, creating an interactive effect without any JavaScript.</p>
-</div>
+    <p class="hero-lead">
+      A complete tutorial on building a futuristic skewed navigation menu where each icon expands
+      on hover to reveal a sliding label, the background animates with a glow effect, and the entire
+      bar is tilted using CSS transforms — zero JavaScript required.
+    </p>
 
-<h2>What Are Interactive Social Media Icons?</h2>
-<p>
-  These are circular icons representing different social platforms such as LinkedIn, 
-  GitHub, Instagram, and YouTube. They respond to user interaction with hover effects, 
-  including color changes, background animations, and tooltip displays that identify 
-  the platform.
-</p>
-
-<h2>Why Use Hover Animations and Tooltips?</h2>
-<ul>
-  <li><strong>Enhanced UX:</strong> Users can easily identify each social platform.</li>
-  <li><strong>Visual Appeal:</strong> Smooth hover effects make the website look modern and dynamic.</li>
-  <li><strong>No JavaScript Needed:</strong> Pure HTML and CSS achieve professional interaction.</li>
-  <li><strong>Customizable:</strong> Colors, sizes, and animations can be changed via CSS.</li>
-</ul>
-
-<h2>How It Works</h2>
-<p>
-  The structure uses an unordered list (<code>&lt;ul&gt;</code>) with list items for 
-  each icon. Each icon contains a link (<code>&lt;a&gt;</code>), an SVG for the platform 
-  logo, and a <code>div</code> for the tooltip. CSS handles the hover animation, 
-  background fill, and tooltip display using <code>:hover</code> selectors and 
-  <code>transition</code> properties.
-</p>
-<div class="img"><img src="image copy 48.png" alt="Social media icons with tooltip animation"></div>
-
-<h3>1. Set Up the HTML</h3>
-<p>
-  Create a <code>&lt;ul&gt;</code> with class <code>example-2</code>. Each list item 
-  has a <code>div</code> container with the icon link and tooltip. Assign data attributes 
-  like <code>data-social="linkedin"</code> to target specific platforms in CSS.
-</p>
-<div class="img"><img src="image copy 48.png" alt="HTML structure for social media icons"></div>
-
-<h3>2. Add CSS Styling</h3>
-<p>
-  CSS styles the icon size, shape, and colors. The <code>.filled</code> div animates 
-  background fill from bottom to top on hover. Tooltip visibility and position are 
-  managed with <code>opacity</code>, <code>visibility</code>, and <code>transition</code>.
-</p>
-<div class="img"><img src="image copy 49.png" alt="CSS styling for social media icons"></div>
-
-<h3>3. Customize for Different Platforms</h3>
-<p>
-  Use <code>[data-social="platform"]</code> selectors to assign unique colors for 
-  LinkedIn, GitHub, Instagram, and YouTube. Each icon has a matching tooltip color 
-  for a cohesive design.
-</p>
-
-<h2>Tips for Better Results</h2>
-<ul>
-  <li><strong>Contrast:</strong> Ensure the icon color stands out from the background.</li>
-  <li><strong>Accessibility:</strong> Add <code>aria-label</code> for screen readers.</li>
-  <li><strong>Consistency:</strong> Keep all icons the same size and spacing for balance.</li>
-  <li><strong>Performance:</strong> Pure CSS hover animations are lightweight and fast.</li>
-</ul>
-
-<h2>Common Mistakes to Avoid</h2>
-<ul>
-  <li>Not wrapping each icon in a container — hover effects may break.</li>
-  <li>Forgetting to use <code>transition</code> — animations will be abrupt.</li>
-  <li>Using too many colors — keep a consistent palette for a professional look.</li>
-</ul>
-
-<h2>Conclusion</h2>
-<p>
-  The <strong>Interactive Social Media Icons</strong> provide a modern, professional 
-  way to link to your platforms. With just HTML and CSS, you can create visually 
-  appealing icons with hover animations and tooltips that improve user engagement.
-</p>
-
-<div class="highlight">
-  <p><strong>SEO Keywords:</strong> social media icons, hover animation, tooltip CSS, interactive icons, HTML CSS SVG, circular icons design</p>
-</div>
-
-
-
-  <div class="con1">
-    <div class="countdown" id="countdown">
-      <span id="number">10</span> wait...
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value">8</span>
+        <span class="stat-label">Build Steps</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">0</span>
+        <span class="stat-label">Lines of JS</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">5</span>
+        <span class="stat-label">Menu Icons</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">Free</span>
+        <span class="stat-label">Source Code</span>
+      </div>
     </div>
 
-    <div class="link-box" id="linkBox">
-      <a href="https://gist.github.com/77cod-ing/5bfee8e50711538221e250260cbe3377" target="_blank">Go to code</a>
-    </div>
-  </div>
+    <img src="image copy 47.png"
+      alt="Skewed navigation menu with expanding hover effects showing five icons — Home, Games, Chat, Search, and Profile — on a dark glowing background"
+      class="hero-img" width="1200" height="500" loading="eager">
+    <p class="img-caption">Final result: a tilted menu bar that expands and glows on hover</p>
+  </section>
 
-  <script>
-    let counter = 10;
-    let timer = null;
-    const countdownEl = document.getElementById("countdown");
-    const numberEl = document.getElementById("number");
-    const linkBox = document.getElementById("linkBox");
+  <!-- ===== MAIN LAYOUT ===== -->
+  <div class="layout">
 
-    function startCountdown() {
-      if (timer) return;
-      timer = setInterval(() => {
-        counter--;
-        numberEl.textContent = counter;
+    <!-- ===== ARTICLE BODY ===== -->
+    <article class="article-body" itemscope itemtype="https://schema.org/TechArticle">
 
-        if (counter === 0) {
-          clearInterval(timer);
-          timer = null;
-          countdownEl.style.display = "none"; 
-          linkBox.style.display = "block";
-        }
-      }, 1000);
-    }
+      <!-- TOC -->
+      <nav class="toc" aria-label="Table of contents">
+        <div class="toc-title"><i class='bx bx-list-ul'></i> Table of Contents</div>
+        <ol>
+          <li><a href="#what-is">What Is a Skewed Menu?</a></li>
+          <li><a href="#why-use">Why Use This Design?</a></li>
+          <li><a href="#features">Key Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#step-1">Step 1: Set Up the HTML</a></li>
+          <li><a href="#step-2">Step 2: Skew the Menu Container</a></li>
+          <li><a href="#step-3">Step 3: Style the Links and Icons</a></li>
+          <li><a href="#step-4">Step 4: Add Hover Expand Animation</a></li>
+          <li><a href="#step-5">Step 5: Build the Sliding Label</a></li>
+          <li><a href="#step-6">Step 6: Add the Glowing Background</a></li>
+          <li><a href="#step-7">Step 7: Counter-Skew the Content</a></li>
+          <li><a href="#step-8">Step 8: Make It Responsive</a></li>
+          <li><a href="#comparison">CSS Properties Comparison</a></li>
+          <li><a href="#tips">Tips for Better Results</a></li>
+          <li><a href="#mistakes">Common Mistakes to Avoid</a></li>
+          <li><a href="#faq">Frequently Asked Questions</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </nav>
 
-    function stopCountdown() {
-      clearInterval(timer);
-      timer = null;
-    }
+      <!-- What Is -->
+      <section id="what-is">
+        <h2>What Is a Skewed Menu?</h2>
+        <p>
+          A <strong>skewed menu</strong> is a creative navigation design that applies
+          <code>transform: skewX()</code> to tilt the entire menu bar, creating a visually dynamic,
+          3D-like appearance. Each icon represents a navigation destination — such as Home, Games,
+          Chat, Search, and Profile — and responds to the user's hover with smooth horizontal expansion
+          and a sliding label reveal.
+        </p>
+        <p>
+          Unlike traditional horizontal navbars, the skewed menu breaks the rectangular mold by
+          introducing angular geometry, which immediately draws the eye and signals a modern,
+          forward-thinking design language.
+        </p>
+      </section>
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          startCountdown();
-        } else {
-          stopCountdown();
-        }
-      });
-    }, { threshold: 1.0 });
+      <!-- Why Use -->
+      <section id="why-use">
+        <h2>Why Use This Design?</h2>
+        <ul>
+          <li><strong>Visual Uniqueness:</strong> The tilted shape adds motion and creativity to standard navigation
+            patterns, helping your site stand out.</li>
+          <li><strong>Interactivity:</strong> Expanding hover effects make the interface feel alive and responsive to
+            user input.</li>
+          <li><strong>Pure CSS:</strong> Achieves a complex, animated look without any JavaScript, frameworks, or
+            libraries — resulting in faster load times.</li>
+          <li><strong>Easy to Customize:</strong> You can freely adjust the skew angle, colors, icon set, glow
+            intensity, and animation speed.</li>
+          <li><strong>Lightweight:</strong> SVG icons and CSS-only animations mean minimal file size with maximum visual
+            impact.</li>
+        </ul>
+      </section>
 
-    observer.observe(countdownEl);
-    /**hamburger**/
+      <!-- Features -->
+      <section id="features">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon" style="color: var(--premcolo);"><i class='bx bx-shape-triangle'></i></div>
+            <div class="feature-title">Skewed Transform</div>
+            <div class="feature-desc">The entire menu tilts using CSS skewX, creating a dynamic angular layout.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon" style="color: var(--accent2);"><i class='bx bx-expand-horizontal'></i></div>
+            <div class="feature-title">Hover Expand</div>
+            <div class="feature-desc">Each link smoothly expands in width on hover, revealing hidden label text.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon" style="color: #7dd3fc;"><i class='bx bx-text-shadow'></i></div>
+            <div class="feature-title">Sliding Labels</div>
+            <div class="feature-desc">Text labels slide in from the side with opacity transition for a staggered reveal.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon" style="color: #4ade80;"><i class='bx bx-bolt-circle'></i></div>
+            <div class="feature-title">Glow Effect</div>
+            <div class="feature-desc">Box-shadow layers create a neon-like glow around the menu container.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon" style="color: #fbbf24;"><i class='bx bx-code-alt'></i></div>
+            <div class="feature-title">Zero JavaScript</div>
+            <div class="feature-desc">Everything is achieved with HTML structure and CSS transitions — no JS needed.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon" style="color: #c084fc;"><i class='bx bx-mobile-alt'></i></div>
+            <div class="feature-title">Responsive</div>
+            <div class="feature-desc">Media queries adjust skew angle and layout for tablets and mobile devices.</div>
+          </div>
+        </div>
+      </section>
 
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeBtn = document.getElementById('closeBtn');
+      <!-- How It Works -->
+      <section id="how-it-works">
+        <h2>How It Works</h2>
+        <p>
+          The structure uses a <code>&lt;div class="menu"&gt;</code> container with multiple
+          <code>&lt;a&gt;</code> elements inside. Each link contains two child spans:
+        </p>
+        <ul>
+          <li><code>&lt;span class="link-icon"&gt;</code> — holds the SVG icon, always visible.</li>
+          <li><code>&lt;span class="link-title"&gt;</code> — holds the text label, hidden by default and revealed on
+            hover.</li>
+        </ul>
+        <p>
+          CSS transitions control the width expansion of each link and the sliding animation of the label.
+          A <code>::before</code> pseudo-element on each link creates the animated background that sweeps
+          in from the left on hover. The container's <code>skewX()</code> is counteracted on child
+          elements so icons and text remain upright.
+        </p>
 
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.add('active');
-    });
+        <div class="info-box">
+          <strong><i class='bx bx-info-circle'></i> Quick Summary:</strong> Each button is a flexible
+          link containing an icon and a hidden text label. When hovered, the link expands horizontally,
+          a background animation slides in, and the label becomes visible. The entire menu is slightly
+          skewed using CSS transforms for a unique, 3D-like look.
+        </div>
+      </section>
 
-    closeBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-    });
+      <!-- Build Steps -->
+      <h2>Build Steps</h2>
+
+      <div class="steps">
+        <div class="step" id="step-1">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h3>Set Up the HTML Structure</h3>
+            <p>Create the menu container and links. Each link contains the icon SVG and the label text. The SVGs used
+              here are lightweight and scalable, keeping the design crisp on all screen sizes.</p>
+          </div>
+        </div>
+
+        <div class="step" id="step-2">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h3>Skew the Menu Container</h3>
+            <p>Apply <code>transform: skewX(-15deg)</code> to the <code>.menu</code> class. Add a glowing border using
+              multiple <code>box-shadow</code> layers with your accent color at low opacity.</p>
+          </div>
+        </div>
+
+        <div class="step" id="step-3">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h3>Style the Links and Icons</h3>
+            <p>Set each <code>.link</code> to <code>flex: 1</code>, <code>overflow: hidden</code>, and a base width.
+              Center the icon vertically using flexbox alignment properties.</p>
+          </div>
+        </div>
+
+        <div class="step" id="step-4">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h3>Add the Hover Expand Animation</h3>
+            <p>On <code>.link:hover</code>, increase the width to the expanded value. Add
+              <code>transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1)</code> to the base rule for smooth expansion.</p>
+          </div>
+        </div>
+
+        <div class="step" id="step-5">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <h3>Build the Sliding Label</h3>
+            <p>Position <code>.link-title</code> with <code>transform: translateX(20px)</code> and
+              <code>opacity: 0</code> by default. On hover, transition to <code>translateX(0)</code> and
+              <code>opacity: 1</code>.</p>
+          </div>
+        </div>
+
+        <div class="step" id="step-6">
+          <div class="step-num">6</div>
+          <div class="step-content">
+            <h3>Add the Glowing Background Effect</h3>
+            <p>Use a <code>::before</code> pseudo-element on each link with a gradient background. Animate it from
+              <code>translateX(-100%)</code> to <code>translateX(0)</code> on hover.</p>
+          </div>
+        </div>
+
+        <div class="step" id="step-7">
+          <div class="step-num">7</div>
+          <div class="step-content">
+            <h3>Counter-Skew the Content</h3>
+            <p>Apply <code>transform: skewX(15deg)</code> to the inner content (icon and text) so it appears straight
+              while the container remains tilted.</p>
+          </div>
+        </div>
+
+        <div class="step" id="step-8">
+          <div class="step-num">8</div>
+          <div class="step-content">
+            <h3>Make It Responsive</h3>
+            <p>Add media queries to reduce the skew angle or switch to a vertical layout on smaller screens. Ensure
+              touch targets are at least 44px for mobile accessibility.</p>
+          </div>
+        </div>
+      </div>
+
+            <!-- SOURCE CODE -->
+            <section id="source-code">
+              <h2>Full Source Code (Free)</h2>
+              <p>
+                The entire project lives in a single HTML file — no external CSS or JS files required.
+                The HTML sets up the card structure and links images from <code>picsum.photos</code>
+                for demonstration. The CSS drives every animation, transition, and responsive breakpoint.
+                A four-line script at the bottom removes the shimmer placeholder once each image has
+                loaded. Use the tabs below to explore the HTML and CSS sections separately.
+              </p>
+            
+              <div class="code-section">
+                <div class="code-toolbar">
+                  <div class="code-tabs" role="tablist" aria-label="Code files">
+                    <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                      aria-controls="panel-html">HTML</button>
+                    <button class="code-tab" data-lang="css" role="tab" aria-selected="false" aria-controls="panel-css">CSS</button>
+                  </div>
+                  <button class="preview-btn" id="previewBtn" aria-label="Preview the final result">
+                    <i class='bx bx-play-circle'></i>
+                    <span>Preview Result</span>
+                  </button>
+                </div>
+            
+                <div class="code-panels">
+                  <div class="code-box active" id="panel-html" role="tabpanel">
+                    <div class="code-header">
+                      <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                      <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+                    </div>
+                    <pre><code id="code1" class="language-html"></code></pre>
+                  </div>
+            
+                  <div class="code-box" id="panel-css" role="tabpanel">
+                    <div class="code-header">
+                      <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
+                      <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+                    </div>
+                    <pre><code id="code2" class="language-css"></code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Countdown Gist reveal -->
+              <div class="countdown-box">
+                <p class="countdown-label">🔓 Full Source Code unlocks in</p>
+                <div class="countdown-timer" id="countdownDisplay">05</div>
+                <p style="font-size:13px;color:var(--text-muted);">Hosted on GitHub Gist — free, no sign-up required
+                </p>
+                <div class="gist-link-wrapper" id="gistLinkWrapper">
+                  <a class="gist-link" href="https://gist.github.com/77cod-ing/5bfee8e50711538221e250260cbe3377"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class='bx bxl-github'></i> View Full Source Code on GitHub Gist
+                  </a>
+                </div>
+              </div>
+            
+              <div class="info-box">
+                <strong>💡 Quick Start:</strong> Copy the full code into a single <code>index.html</code> file.
+                No build tools, no npm, no libraries — open it in any modern browser and the accordion
+                gallery works immediately. Swap the <code>picsum.photos</code> URLs with your own images
+                to customize it instantly.
+              </div>
+            </section>
+
+      <!-- Comparison Table -->
+      <section id="comparison">
+        <h2>CSS Properties Comparison</h2>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Role</th>
+              <th>Applied To</th>
+              <th>Importance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>transform: skewX()</code></td>
+              <td>Tilts the menu container</td>
+              <td><strong>.menu</strong></td>
+              <td><span class="badge badge-blue">Core</span></td>
+            </tr>
+            <tr>
+              <td><code>transition: all 0.4s</code></td>
+              <td>Smooth width expansion</td>
+              <td><strong>.link</strong></td>
+              <td><span class="badge badge-blue">Core</span></td>
+            </tr>
+            <tr>
+              <td><code>overflow: hidden</code></td>
+              <td>Clips label during animation</td>
+              <td><strong>.link</strong></td>
+              <td><span class="badge badge-blue">Core</span></td>
+            </tr>
+            <tr>
+              <td><code>transform: translateX()</code></td>
+              <td>Slides label in/out</td>
+              <td><strong>.link-title</strong></td>
+              <td><span class="badge badge-blue">Core</span></td>
+            </tr>
+            <tr>
+              <td><code>box-shadow</code></td>
+              <td>Neon glow effect</td>
+              <td><strong>.menu</strong></td>
+              <td><span class="badge badge-green">Visual</span></td>
+            </tr>
+            <tr>
+              <td><code>::before pseudo-element</code></td>
+              <td>Animated background sweep</td>
+              <td><strong>.link</strong></td>
+              <td><span class="badge badge-green">Visual</span></td>
+            </tr>
+            <tr>
+              <td><code>cubic-bezier()</code></td>
+              <td>Custom easing curve</td>
+              <td><strong>.link, .link-title</strong></td>
+              <td><span class="badge badge-orange">Polish</span></td>
+            </tr>
+            <tr>
+              <td><code>skewX(15deg) counter</code></td>
+              <td>Keeps text upright</td>
+              <td><strong>.link-icon, .link-title</strong></td>
+              <td><span class="badge badge-blue">Core</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Tips -->
+      <section id="tips">
+        <h2>Tips for Better Results</h2>
+        <ul>
+          <li><strong>Contrast:</strong> Use bright accent colors like <code>#00d9ff</code> on dark backgrounds for the
+            most striking glow effects.</li>
+          <li><strong>Readability:</strong> Keep label text short (one word ideally) to avoid overflow or overlap when
+            the link expands.</li>
+          <li><strong>Accessibility:</strong> Add <code>aria-label</code> attributes to each link so screen readers
+            announce the destination even when the text label is hidden.</li>
+          <li><strong>Responsiveness:</strong> Reduce the skew angle progressively on smaller screens — or remove it
+            entirely below 480px.</li>
+          <li><strong>Performance:</strong> Use <code>will-change: transform</code> on animated elements to hint the
+            browser for GPU acceleration.</li>
+          <li><strong>Easing:</strong> The <code>cubic-bezier(0.4, 0, 0.2, 1)</code> easing gives a natural deceleration
+            feel. Experiment with different curves for unique personalities.</li>
+        </ul>
+
+        <div class="info-box">
+          <strong><i class='bx bx-lightbulb'></i> Pro Tip:</strong> Add a subtle
+          <code>box-shadow: 0 0 20px rgba(0, 217, 255, 0.3)</code> on
+          <code>.link:hover</code> to make the expanded item glow brighter than its neighbors.
+        </div>
+      </section>
+
+      <!-- Mistakes -->
+      <section id="mistakes">
+        <h2>Common Mistakes to Avoid</h2>
+        <ul>
+          <li><strong>Inconsistent icon sizes:</strong> Using SVGs of different sizes breaks alignment. Ensure all icons
+            share the same <code>viewBox</code> and container dimensions.</li>
+          <li><strong>Forgetting <code>overflow: hidden</code>:</strong> Without it, the sliding label and background
+            animation leak outside the link boundaries, breaking the visual effect.</li>
+          <li><strong>Skipping transition properties:</strong> Without <code>transition</code>, the expansion and label
+            reveal happen instantly, resulting in a choppy, unpolished feel.</li>
+          <li><strong>Too steep a skew angle:</strong> Angles beyond ±25deg distort text readability and can cause
+            horizontal scrollbar issues on smaller viewports.</li>
+          <li><strong>Missing counter-skew:</strong> Forgetting to apply the opposite <code>skewX()</code> to inner
+            content results in tilted, hard-to-read text.</li>
+          <li><strong>No keyboard styles:</strong> Adding only <code>:hover</code> without <code>:focus-visible</code>
+            means keyboard users never see the expand effect.</li>
+        </ul>
+
+        <div class="warn-box">
+          <strong><i class='bx bx-error-circle'></i> Warning:</strong> If you use
+          <code>transform: skewX()</code> on a container with <code>overflow: visible</code>,
+          the skewed corners may clip or overlap adjacent page elements. Always pair the skew
+          with <code>overflow: hidden</code> on the container or add sufficient margin around it.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+          <details class="faq-item">
+            <summary class="faq-question">How does the skew effect work in CSS?</summary>
+            <div class="faq-answer">
+              The skew effect is achieved using the CSS <code>transform</code> property with the <code>skewX()</code>
+              function.
+              Applying <code>transform: skewX(-15deg)</code> to the menu container tilts the entire element along the
+              X-axis
+              by -15 degrees. To keep text and icons readable, a counter-skew of <code>skewX(15deg)</code> is applied to
+              the inner content, effectively canceling out the distortion for text while keeping the container visually
+              tilted.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How does the expanding hover effect work without JavaScript?</summary>
+            <div class="faq-answer">
+              The expansion relies on CSS transitions. Each link has a default width (e.g., 70px) and on
+              <code>:hover</code>,
+              it transitions to a wider value (e.g., 220px). The <code>transition</code> property with a
+              <code>cubic-bezier</code>
+              easing function creates the smooth animated expansion. The label text uses a separate transition for
+              opacity and
+              transform, creating a staggered reveal effect — all without any JavaScript.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">What is the glowing border effect and how is it created?</summary>
+            <div class="faq-answer">
+              The glow is created using multiple <code>box-shadow</code> layers on the <code>.menu</code> container.
+              A combination of inset and outer shadows with the accent color at low opacity produces the neon-like glow.
+              For example:
+              <code>box-shadow: 0 0 15px rgba(0, 217, 255, 0.3), inset 0 0 15px rgba(0, 217, 255, 0.1)</code>.
+              The shadow intensity can be increased on hover for an interactive feel.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Can I change the skew angle and still keep the design working?</summary>
+            <div class="faq-answer">
+              Yes. You can adjust the <code>skewX()</code> value on the container and apply the exact opposite value
+              to the inner content. For example, if you change the container to <code>skewX(-20deg)</code>, set the
+              inner
+              content to <code>skewX(20deg)</code>. However, extreme angles (beyond ±25deg) may cause layout issues and
+              reduce text readability, so it's best to stay within a moderate range.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How does this skewed menu behave on mobile devices?</summary>
+            <div class="faq-answer">
+              On screens below 768px, a media query reduces the skew angle to prevent horizontal overflow issues.
+              Below 480px, the skew is removed entirely and the menu switches to a vertical layout. Since mobile users
+              rely on tap instead of hover, labels are shown by default (<code>opacity: 1</code>) and the expand
+              effect is disabled to ensure all navigation items are immediately visible.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Is this skewed menu accessible for keyboard and screen reader users?</summary>
+            <div class="faq-answer">
+              The menu uses semantic <code>&lt;nav&gt;</code> and <code>&lt;a&gt;</code> elements, which are naturally
+              keyboard-focusable via Tab. Adding <code>:focus-visible</code> styles that mirror the <code>:hover</code>
+              expansion ensures keyboard users get the same experience. Each link includes an <code>aria-label</code>
+              attribute describing its destination, so screen readers can announce the purpose even when the visual
+              label is hidden.
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- Conclusion -->
+      <section id="conclusion" class="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          The <strong>Skewed Expanding Menu</strong> is a creative and modern navigation component that blends
+          geometry with motion. With nothing more than HTML and CSS, you can craft a dynamic interface that
+          impresses users and enhances your website's design language. The combination of <code>skewX()</code>
+          transforms, flexbox layout, sliding pseudo-elements, and cubic-bezier transitions creates a polished,
+          futuristic effect — all at zero JavaScript cost.
+        </p>
+        <p>
+          Whether you're building a gaming portal, a creative portfolio, or an experimental landing page,
+          this skewed menu pattern adds that extra layer of visual sophistication that separates good design
+          from great design.
+        </p>
+      </section>
+
+
+
+    </article>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" aria-label="Related content">
+      <div class="sidebar-box">
+        <div class="sidebar-header"><i class='bx bx-star'></i> Related Projects</div>
+        <div class="related-list">
+          <a class="related-card" href="Project45.html" aria-label="Animated Floating Action Button Menu with CSS">
+            <img src="https://77cod-ing.github.io/button-list-item.png"
+              alt="Animated floating action button menu expanding into a staggered list built with CSS" loading="lazy"
+              width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Floating Action Button Menu — CSS &amp; JS</div>
+          </a>
+          <a class="related-card" href="Project40.html" aria-label="Advanced JavaScript Image Slider with GSAP">
+            <img src="https://i.suar.me/Ep114/m" alt="Advanced JavaScript image slider with GSAP split-panel animation"
+              loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Advanced JavaScript Image Slider — GSAP Animation</div>
+          </a>
+          <a class="related-card" href="Project13.html" aria-label="Neon Cursor Animation">
+            <img src="https://77cod-ing.github.io/image%20copy%2036.png" alt="Neon Cursor Animation CSS JavaScript"
+              loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Neon Cursor Animation — CSS &amp; JavaScript</div>
+          </a>
+          <a class="related-card" href="Project23.html" aria-label="Animated Login and Signup Page">
+            <img src="https://77cod-ing.github.io/image%20copy%2075.png"
+              alt="Animated Login and Signup Page HTML CSS JavaScript" loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Login &amp; Signup Page — HTML CSS JS</div>
+          </a>
+        </div>
+      </div>
     
+      <div class="sidebar-box" style="padding: 16px;">
+        <div style="font-family: var(--font-head); font-size: 13px; color: var(--premcolo); margin-bottom: 12px;">
+          <i class='bx bx-info-circle'></i> Quick Info
+        </div>
+        <div style="font-size: 13px; color: var(--text-muted); line-height: 1.8;">
+          <div><strong style="color:#fff;">Difficulty:</strong> Beginner</div>
+          <div><strong style="color:#fff;">Time:</strong> 15 minutes</div>
+          <div><strong style="color:#fff;">Files:</strong> HTML + CSS</div>
+          <div><strong style="color:#fff;">JavaScript:</strong> None</div>
+        </div>
+      </div>
+    </aside>
 
-    window.addEventListener("scroll", function() {
-  const hamburger = document.querySelector(".hamburger");
-  if (window.scrollY > 50) {
-    hamburger.classList.add("scrolled");
-  } else {
-    hamburger.classList.remove("scrolled");
-  }
-});
-  </script>
+  </div>
+
+    <!-- ===== PREVIEW MODAL ===== -->
+    <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+        aria-label="Live preview of the CSS flexible accordion image card gallery">
+        <div class="preview-modal">
+            <div class="preview-modal-header">
+                <div class="preview-modal-title">
+                    <i class='bx bx-show'></i>
+                    <strong>Live Preview</strong> — Skewed Menu
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <div class="preview-dots">
+                        <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+                        <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+                        <button class="preview-dot green" aria-label="Maximize" disabled></button>
+                    </div>
+                    <button class="preview-close-btn" id="previewCloseBtn">
+                        <i class='bx bx-x'></i> Close
+                    </button>
+                </div>
+            </div>
+            <div class="preview-iframe-wrap">
+                <div class="preview-loading" id="previewLoading">
+                    <div class="preview-spinner"></div>
+                    <span class="preview-loading-text">Loading preview...</span>
+                    <div class="preview-loading-files">
+                        <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+                        <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+                    </div>
+                </div>
+                <iframe id="previewIframe" title="Preview of CSS flexible accordion image card gallery"
+                    sandbox="allow-scripts allow-same-origin"></iframe>
+                <div class="preview-hint" id="previewHint">
+                    <i class='bx bx-cursor'></i> Hover over the menu items to see the expand effect
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        /*
+          ============================================
+            Gist URLs — update with the actual Gist raw URL for this project
+          ============================================
+        */
+        const gistBase = "https://gist.githubusercontent.com/77cod-ing/5bfee8e50711538221e250260cbe3377/raw/a4df04a925be499d9669ed53936cdb596f108fbb/";
+
+        const htmlUrl = gistBase + "index.html";
+        const cssUrl = gistBase + "style.css";
+
+        let cachedHTML = "";
+        let cachedCSS = "";
+
+        async function loadCode(url, elementId, lang) {
+            try {
+                const res = await fetch(url);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const text = await res.text();
+                const el = document.getElementById(elementId);
+                el.textContent = text;
+                el.className = `language-${lang}`;
+                Prism.highlightElement(el);
+                if (lang === "html") cachedHTML = text;
+                if (lang === "css") cachedCSS = text;
+            } catch (e) {
+                const el = document.getElementById(elementId);
+                if (el) el.textContent = `/* Failed to load: ${e.message} */`;
+            }
+        }
+
+        loadCode(htmlUrl, "code1", "html");
+        loadCode(cssUrl, "code2", "css");
+
+        /* ===== Tabs ===== */
+        document.querySelectorAll(".code-tab").forEach(tab => {
+            tab.addEventListener("click", () => {
+                const lang = tab.dataset.lang;
+                document.querySelectorAll(".code-tab").forEach(t => {
+                    t.classList.remove("active");
+                    t.setAttribute("aria-selected", "false");
+                });
+                document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+                tab.classList.add("active");
+                tab.setAttribute("aria-selected", "true");
+                const panelMap = { html: "panel-html", css: "panel-css" };
+                document.getElementById(panelMap[lang]).classList.add("active");
+            });
+        });
+
+        /* ===== Copy buttons ===== */
+        document.querySelectorAll(".copy-btn").forEach(btn => {
+            btn.addEventListener("click", async () => {
+                const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+                if (!code) return;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+                    btn.classList.add("copied");
+                    setTimeout(() => {
+                        btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
+                        btn.classList.remove("copied");
+                    }, 2000);
+                } catch { btn.textContent = "Error"; }
+            });
+        });
+
+        /* ===== Countdown timer ===== */
+        let seconds = 5;
+        const countdownDisplay = document.getElementById("countdownDisplay");
+        const gistLinkWrapper = document.getElementById("gistLinkWrapper");
+
+        const countdownInterval = setInterval(() => {
+            seconds--;
+            countdownDisplay.textContent = String(seconds).padStart(2, "0");
+            if (seconds <= 0) {
+                clearInterval(countdownInterval);
+                gistLinkWrapper.classList.add("visible");
+                countdownDisplay.style.display = "none";
+                document.querySelector(".countdown-label").textContent = "✅ Source Code Available";
+            }
+        }, 1000);
+
+        /* ===== Preview modal ===== */
+        const previewOverlay = document.getElementById("previewOverlay");
+        const previewIframe = document.getElementById("previewIframe");
+        const previewLoading = document.getElementById("previewLoading");
+        const previewHint = document.getElementById("previewHint");
+        const previewBtn = document.getElementById("previewBtn");
+        const previewCloseBtn = document.getElementById("previewCloseBtn");
+        const previewDotClose = document.getElementById("previewDotClose");
+        const tagHTML = document.getElementById("tagHTML");
+        const tagCSS = document.getElementById("tagCSS");
+
+        function openPreview() {
+            previewOverlay.classList.add("open");
+            document.body.style.overflow = "hidden";
+            previewLoading.classList.remove("hidden");
+            previewHint.classList.remove("show");
+            previewBtn.classList.add("loading");
+            tagHTML.classList.remove("loaded");
+            tagCSS.classList.remove("loaded");
+            buildPreview();
+        }
+
+        function closePreview() {
+            previewOverlay.classList.remove("open");
+            document.body.style.overflow = "";
+            previewIframe.srcdoc = "";
+            previewBtn.classList.remove("loading");
+        }
+
+        async function buildPreview() {
+            if (cachedHTML && cachedCSS) {
+                tagHTML.classList.add("loaded");
+                tagCSS.classList.add("loaded");
+                injectPreview(cachedHTML, cachedCSS);
+                return;
+            }
+            try {
+                const fetches = [];
+                if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
+                if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
+                if (cachedHTML) tagHTML.classList.add("loaded");
+                if (cachedCSS) tagCSS.classList.add("loaded");
+                await Promise.all(fetches);
+                injectPreview(cachedHTML, cachedCSS);
+            } catch (e) {
+                previewLoading.innerHTML = `
+          <i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i>
+          <span class="preview-loading-text" style="color:var(--accent2);">Failed to load preview: ${e.message}</span>
+        `;
+                previewBtn.classList.remove("loading");
+            }
+        }
+
+        function injectPreview(html, css) {
+            let combined = html;
+            if (combined.includes('<link') && /style\.css/i.test(combined)) {
+                combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
+            } else if (combined.includes("</head>")) {
+                combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
+            } else {
+                combined = `<style>${css}</style>\n${combined}`;
+            }
+            previewIframe.srcdoc = combined;
+            previewIframe.addEventListener("load", function onLoad() {
+                previewLoading.classList.add("hidden");
+                previewBtn.classList.remove("loading");
+                setTimeout(() => {
+                    previewHint.classList.add("show");
+                    setTimeout(() => previewHint.classList.remove("show"), 4000);
+                }, 300);
+                previewIframe.removeEventListener("load", onLoad);
+            });
+        }
+
+        previewBtn.addEventListener("click", openPreview);
+        previewCloseBtn.addEventListener("click", closePreview);
+        previewDotClose.addEventListener("click", closePreview);
+        previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+        document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
+    </script>
+
 </body>
 
 </html>
-
-
