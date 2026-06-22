@@ -1,222 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== PRIMARY SEO META ===== -->
+  <title>Glowing Animated Text Button — Pure HTML/CSS Tutorial 2026</title>
+  <meta name="description"
+    content="Build a stunning glowing animated text button with neon hover effects, text stroke fill animation, and drop-shadow glow using only HTML and CSS. Complete step-by-step tutorial with free source code.">
+  <meta name="keywords"
+    content="glowing button css, neon text effect css, animated hover button, html css glowing text, text stroke fill animation, drop shadow glow css, pure css animation button, modern ui button design, frontend button tutorial 2026, css glow effect no javascript, futuristic button css, text fill animation on hover">
+  <meta name="author" content="77cod_ing">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://77cod-ing.github.io/Project21.html">
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Glowing Animated Text Button — Pure HTML/CSS Tutorial">
+  <meta property="og:description"
+    content="Learn to build a futuristic glowing animated text button with neon hover effects, text stroke fill animation, and drop-shadow glow using only HTML and CSS. Zero JavaScript required.">
+  <meta property="og:image" content="https://77cod-ing.github.io/image%20copy%2068.png">
+  <meta property="og:url" content="https://77cod-ing.github.io/Project21.html">
+  <meta property="og:site_name" content="77cod_ing">
+  <meta property="article:published_time" content="2026-06-14T00:00:00Z">
+  <meta property="article:modified_time" content="2026-06-14T00:00:00Z">
+  <meta property="article:author" content="77cod_ing">
+  <meta property="article:section" content="CSS Tutorials">
+  <meta property="article:tag"
+    content="HTML, CSS, Text Stroke, Glow Animation, Drop Shadow, Hover Effects, UI Components, Frontend">
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Glowing Animated Text Button — Pure HTML/CSS Tutorial">
+  <meta name="twitter:description"
+    content="Build a futuristic glowing text button with neon hover effects using only HTML and CSS. Step-by-step guide with free source code.">
+  <meta name="twitter:image" content="https://77cod-ing.github.io/image%20copy%2068.png">
+
+  <!-- ===== SCHEMA: TechArticle ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Glowing Animated Text Button — Complete HTML/CSS Tutorial",
+    "description": "A comprehensive tutorial on building a pure CSS glowing animated text button with neon hover effects, text stroke fill animation, drop-shadow glow, and responsive design — zero JavaScript required.",
+    "image": "https://77cod-ing.github.io/image%20copy%2068.png",
+    "datePublished": "2026-06-14",
+    "dateModified": "2026-06-14",
+    "author": {
+      "@type": "Person",
+      "name": "77cod_ing",
+      "url": "https://77cod-ing.github.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "77cod_ing",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Picture1.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://77cod-ing.github.io/Project21.html"
+    },
+    "articleSection": "CSS Tutorials",
+    "keywords": "glowing button css, neon text effect, text stroke animation, drop shadow glow, pure css button",
+    "timeRequired": "PT10M",
+    "educationalLevel": "Beginner",
+    "teaches": ["CSS Text Stroke (-webkit-text-stroke)", "CSS filter: drop-shadow()", "CSS @keyframes Animations", "CSS Transitions", "CSS Hover States", "Background-clip Text", "Responsive Button Design"]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: HowTo ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Build a Glowing Animated Text Button with HTML and CSS Step by Step",
+    "description": "Step-by-step guide to creating a pure CSS glowing animated text button with neon hover effects, text stroke fill animation, and drop-shadow glow.",
+    "image": "https://77cod-ing.github.io/image%20copy%2068.png",
+    "totalTime": "PT10M",
+    "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "0"},
+    "supply": [
+      {"@type": "HowToSupply", "name": "Text editor (VS Code recommended)"},
+      {"@type": "HowToSupply", "name": "A modern web browser"}
+    ],
+    "tool": [
+      {"@type": "HowToTool", "name": "HTML5"},
+      {"@type": "HowToTool", "name": "CSS3"}
+    ],
+    "step": [
+      {"@type": "HowToStep", "name": "Create the Button HTML Structure", "text": "Build a <button> element containing two <span> elements — one for the outlined stroke text and another for the filled glowing text that appears on hover.", "position": 1},
+      {"@type": "HowToStep", "name": "Apply Text Stroke and Transparent Fill", "text": "Use -webkit-text-stroke to create the outlined text effect. Set color to transparent so only the stroke is visible initially.", "position": 2},
+      {"@type": "HowToStep", "name": "Create the Glowing Fill Span", "text": "Style the second span with a solid color and set its width to 0%. Use overflow: hidden on the parent to clip it.", "position": 3},
+      {"@type": "HowToStep", "name": "Add Hover Transition for Text Fill", "text": "On button hover, animate the inner span width from 0% to 100% using CSS transition, creating a left-to-right fill effect.", "position": 4},
+      {"@type": "HowToStep", "name": "Apply Drop-Shadow for Neon Glow", "text": "Use filter: drop-shadow() on the button to create the neon glow effect. Multiple drop-shadows can be stacked for a more intense glow.", "position": 5},
+      {"@type": "HowToStep", "name": "Fine-Tune Animation Timing and Colors", "text": "Adjust the transition duration (3-5s recommended), easing function, and glow color to match your site's theme.", "position": 6}
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: FAQPage ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the CSS text stroke effect work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The -webkit-text-stroke property draws an outline around text characters. When combined with color: transparent, only the stroke outline is visible, creating a hollow text effect. On hover, a second span with a solid color fills in from left to right, creating the animation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between text-shadow and drop-shadow for button glow?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "text-shadow only applies to the text itself and doesn't follow transparent areas. filter: drop-shadow() creates a shadow based on the actual rendered shape including text stroke, making it ideal for glowing outlined text where you want the glow to follow the stroke path."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I change the glow color and animation speed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. To change the glow color, modify the drop-shadow color values. For animation speed, adjust the transition-duration property on the button (e.g., transition: all 3s ease for a 3-second fill). You can also change the cubic-bezier timing function for different easing effects."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this glowing button work on all browsers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The -webkit-text-stroke property works in all modern browsers including Chrome, Firefox, Safari, and Edge. The filter: drop-shadow() is also widely supported. For older browsers, the button will still function but without the stroke and glow effects — it degrades gracefully."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use this effect on links or div elements instead of buttons?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. The effect uses standard CSS properties that work on any HTML element. You can apply the same classes to <a>, <div>, or <span> elements. Just ensure you add cursor: pointer and appropriate ARIA attributes for accessibility on non-button elements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I make the glow animation more subtle or more intense?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For a subtler glow, reduce the spread radius in drop-shadow() and lower the opacity. For more intensity, stack multiple drop-shadow filters with increasing blur radius (e.g., filter: drop-shadow(0 0 5px cyan) drop-shadow(0 0 15px cyan) drop-shadow(0 0 30px cyan)). You can also add a pulsing keyframe animation for a breathing glow effect."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: BreadcrumbList ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+      {"@type": "ListItem", "position": 3, "name": "Glowing Text Button", "item": "https://77cod-ing.github.io/Project21.html"}
+    ]
+  }
+  </script>
+
+  <!-- ===== ASSETS ===== -->
   <link rel="icon" type="image/png" href="Picture1.png">
-  <title>Create a Skewed Navigation Menu — HTML/CSS</title>
-  <meta name="description" content="Skewed navigation menu, interactive menu design, CSS 3D effects, hover animation, responsive web design, modern UI navigation.">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
-     crossorigin="anonymous"></script>
-   <style>
-    *{
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+  <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+    crossorigin="anonymous"></script>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      overflow-x: hidden;
-    }
-    body {
-      background: linear-gradient(to right, #2c0e43 10%, #581c87);
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
     }
 
+    :root {
+      --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+      --premcolo: #00d9ff;
+      --accent2: #ff6b35;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --surface: rgba(255, 255, 255, 0.04);
+      --surface-hover: rgba(0, 217, 255, 0.07);
+      --border: rgba(255, 255, 255, 0.08);
+      --font-head: 'Space Mono', monospace;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--back);
+      font-family: var(--font-body);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    /* ===== NAVBAR ===== */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 50px;
-      padding: 0 2rem;
-      background-color: #0d1325;
+      height: 56px;
+      padding: 0 2.5rem;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      font-size: 22px;
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 2vw, 1.2rem);
       font-weight: bold;
       color: white;
       text-decoration: none;
+      gap: 8px;
     }
 
     .logo-icon {
-      color: #a855f7;
-      font-size: 26px;
-      margin-right: 8px;
-      letter-spacing: 2.5px;
+      color: var(--premcolo);
+      letter-spacing: 2px;
     }
 
     .nav-links {
       display: flex;
-      gap: 35px;
+      gap: clamp(1rem, 2vw, 2rem);
+      align-items: center;
     }
 
     .nav-links a {
-      color: #d1d5db;
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.25s;
     }
 
     .nav-links a:hover {
-      color: #a855f7;
-      transform: scale(1.2);
-    }
-    /*linke*/
-    .con1 {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin: auto 0;
-      height: 50vh;
-    }
-    .countdown {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00ffcc;
+      color: var(--premcolo);
     }
 
-    .link-box {
-      display: none;
-      padding: 20px 40px;
-      background: #1e2a47;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-      transition: 0.3s;
-    }
-
-    .link-box a {
-      text-decoration: none;
-      color: #00ffcc;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    .link-box:hover {
-      background: #26385c;
-      transform: scale(1.05);
-    }
-    /**ret**/
-    .Ret{
-      margin: 5px 0 0 3rem;
-      width: max-content;
-    }
-    .Ret a {
-      font-size: 2rem;
-      text-decoration: none;
-      color: #ffffff;
-    }
-    .Ret a span{
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 38px;
-      height: 38px;
-      border: 2px solid #fff;
-      border-radius: 50%;
-    }
-    .Ret a:hover {
-  color: #00e1ff;
-}
-    .Ret a:hover span {
-  border-color: #00e1ff;
-}
-    /**img**/
-    .img{
-      display: flex;
-      justify-content: center;
-      margin: 2rem auto;
-    }
-    .img img{
-      border-radius: 8px;
-      max-width: 100vw;
-    width: 70vw;
-    height: 65vh;
-    }
-    /**par**/
-    .par{
-       font-family: Arial, sans-serif;
-      line-height: 1.7;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      color: #ffffff;
-    }
-    h1, h2, h3 {
-      color: #00c8ff;
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
-    h2 {
-      margin-top: 35px;
-      font-size: 1.6rem;
-    }
-    h3 {
-      margin-top: 25px;
-      font-size: 1.3rem;
-    }
-    p {
-      margin-bottom: 18px;
-    }
-    ul {
-      margin: 15px 0;
-      padding-left: 25px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .highlight {
-      background: #000000;
-      padding: 8px 12px;
-      border-left: 4px solid #0073e6;
-      margin: 20px 0;
-    }
-
-    /**respon1**/
+    /* ===== HAMBURGER ===== */
     .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
       gap: 5px;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
+      padding: 8px;
+      border-radius: 8px;
+      transition: background 0.3s;
+      z-index: 200;
     }
-    .hamburger .scrolled {
-      background: rgba(255, 255, 255, 0.7);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-}
 
     .hamburger span {
-      width: 28px;
-      height: 3px;
+      width: 24px;
+      height: 2.5px;
       background: white;
+      border-radius: 2px;
       transition: all 0.3s ease;
     }
 
-    /* ====== القائمة المنبثقة ====== */
+    .hamburger:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    /* ===== MOBILE MENU ===== */
     .mobile-menu {
       position: fixed;
-      top:0;
+      top: 0;
       left: -100%;
       width: 100%;
       height: 100vh;
-      padding-top: 0.5rem ;
-      background: rgb(53, 53, 53);
+      background: rgba(0, 13, 31, 0.97);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 35px;
-      transition: left 0.5s ease;
+      gap: 0;
+      transition: left 0.45s cubic-bezier(0.4, 0, 0.2, 1);
       z-index: 999;
     }
 
@@ -225,323 +317,2252 @@
     }
 
     .mobile-menu a {
-      color: white;
-      font-size: 22px;
-      width: 100%;
-      height: 3rem;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 18px;
+      width: 80%;
+      height: 3.5rem;
       display: flex;
       justify-content: center;
       align-items: center;
       text-decoration: none;
-      border-bottom: 0.5px solid #fff;
-      transition: color 0.3s;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.3s, background 0.3s;
+    }
+
+    .mobile-menu a:first-child {
+      border-top: 1px solid var(--border);
     }
 
     .mobile-menu a:hover {
-      color: #ffffff;
-      background: rgba(104, 104, 104, 0.508);
-      backdrop-filter: bulur(20px);
+      color: var(--premcolo);
+      background: var(--surface-hover);
     }
 
-    /* ====== زر الإغلاق (X) ====== */
     .close-btn {
       position: absolute;
-      top: 20px;
-      right: 25px;
-      font-size: 30px;
-      color: white;
+      top: 16px;
+      right: 20px;
+      font-size: 28px;
+      color: var(--text-muted);
       cursor: pointer;
-      width: 35px;
-      height: 35px;
+      width: 40px;
+      height: 40px;
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 2px solid #fff;
-      background: rgb(88, 88, 88);
+      border: 1px solid var(--border);
+      background: var(--surface);
       border-radius: 50%;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s, color 0.3s, border-color 0.3s;
     }
 
     .close-btn:hover {
       transform: rotate(90deg);
-      color: #00e1ff;
+      color: var(--accent2);
+      border-color: var(--accent2);
     }
 
-    /* ====== استجابة الهاتف ====== */
-    @media (max-width: 910px) {
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      padding: 12px 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb ol {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .breadcrumb li+li::before {
+      content: "\203A";
+      color: var(--premcolo);
+      margin-right: 6px;
+      font-size: 1.1rem;
+    }
+
+    .breadcrumb a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--premcolo);
+    }
+
+    .breadcrumb [aria-current="page"] {
+      color: var(--premcolo);
+      font-weight: 600;
+    }
+
+    /* ===== BACK BUTTON ===== */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.2s;
+      margin: 1rem 2.5rem;
+    }
+
+    .back-link:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 3rem 2.5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255, 107, 53, 0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-head);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .tag-tutorial {
+      background: rgba(0, 217, 255, 0.12);
+      color: var(--premcolo);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+    }
+
+    .tag-css {
+      background: rgba(0, 217, 255, 0.08);
+      color: #7dd3fc;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+    }
+
+    .tag-html {
+      background: rgba(255, 107, 53, 0.1);
+      color: #ff9966;
+      border: 1px solid rgba(255, 107, 53, 0.2);
+    }
+
+    .tag-level {
+      background: rgba(255, 107, 53, 0.1);
+      color: var(--accent2);
+      border: 1px solid rgba(255, 107, 53, 0.2);
+    }
+
+    .tag-nojs {
+      background: rgba(74, 222, 128, 0.1);
+      color: #4ade80;
+      border: 1px solid rgba(74, 222, 128, 0.2);
+    }
+
+    .read-time {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      color: var(--premcolo);
+    }
+
+    .hero-lead {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      color: var(--premcolo);
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 500px;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      display: block;
+      box-shadow: 0 0 60px rgba(0, 217, 255, 0.08), 0 32px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem;
+      align-items: start;
+    }
+
+    /* ===== ARTICLE ===== */
+    .article-body h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: var(--premcolo);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 80px;
+    }
+
+    .article-body h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: #7dd3fc;
+      margin: 1.8rem 0 0.75rem;
+      scroll-margin-top: 80px;
+    }
+
+    .article-body p {
+      margin-bottom: 1.1rem;
+      color: var(--text);
+    }
+
+    .article-body code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .article-body ul,
+    .article-body ol {
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .article-body li {
+      margin-bottom: 9px;
+    }
+
+    .article-body li strong {
+      color: #fff;
+    }
+
+    .article-body img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 12px;
+      border: 1px solid var(--border);
+    }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .toc-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--premcolo);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--premcolo);
+    }
+
+    /* ===== FEATURE CARDS ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(0, 217, 255, 0.3);
+      background: var(--surface-hover);
+    }
+
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .feature-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .feature-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ===== STEPS ===== */
+    .steps {
+      margin: 1.5rem 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      width: 44px;
+      height: 44px;
+      background: rgba(0, 217, 255, 0.1);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      color: var(--premcolo);
+      font-size: 1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+
+    .step-content p {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* ===== INFO / WARN / SUCCESS BOXES ===== */
+    .info-box {
+      background: rgba(0, 217, 255, 0.06);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-left: 4px solid var(--premcolo);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .info-box strong {
+      color: var(--premcolo);
+    }
+
+    .warn-box {
+      background: rgba(255, 107, 53, 0.06);
+      border: 1px solid rgba(255, 107, 53, 0.2);
+      border-left: 4px solid var(--accent2);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .warn-box strong {
+      color: var(--accent2);
+    }
+
+    .success-box {
+      background: rgba(74, 222, 128, 0.06);
+      border: 1px solid rgba(74, 222, 128, 0.2);
+      border-left: 4px solid #4ade80;
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .success-box strong {
+      color: #4ade80;
+    }
+
+    /* ===== COMPARISON TABLE ===== */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 14px;
+    }
+
+    .comparison-table th {
+      font-family: var(--font-head);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 10px 14px;
+      background: rgba(0, 217, 255, 0.08);
+      color: var(--premcolo);
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+
+    .comparison-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      vertical-align: top;
+    }
+
+    .comparison-table tr:hover td {
+      background: var(--surface-hover);
+    }
+
+    .comparison-table td strong {
+      color: #fff;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-family: var(--font-head);
+      font-weight: 700;
+    }
+
+    .badge-cyan {
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+    }
+
+    .badge-green {
+      background: rgba(74, 222, 128, 0.12);
+      color: #4ade80;
+      border: 1px solid rgba(74, 222, 128, 0.25);
+    }
+
+    .badge-orange {
+      background: rgba(255, 107, 53, 0.12);
+      color: var(--accent2);
+      border: 1px solid rgba(255, 107, 53, 0.25);
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      margin: 1.5rem 0;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      background: var(--surface);
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s;
+      list-style: none;
+      user-select: none;
+      color: var(--text);
+    }
+
+    .faq-question:hover {
+      background: var(--surface-hover);
+    }
+
+    .faq-question::after {
+      content: "+";
+      font-size: 1.3rem;
+      color: var(--premcolo);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    details[open] .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 1rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-answer code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* ===== CONCLUSION ===== */
+    .conclusion {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.07), rgba(255, 107, 53, 0.04));
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .conclusion h2 {
+      border: none;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    .conclusion ul {
+      color: var(--text);
+      padding-left: 1.2rem;
+    }
+
+    .conclusion li::before {
+      content: "\2713 ";
+      color: var(--accent2);
+      font-weight: bold;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+        /* ===== CODE SECTION ===== */
+    .code-section {
+      margin: 2rem 0;
+      width: 60vw;
+      max-width: 100%;
+    }
+
+    .code-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .code-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .code-tab {
+      padding: 8px 20px;
+      border-radius: 8px 8px 0 0;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .code-tab.active {
+      background: #1e1e2f;
+      color: #fff;
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .code-tab[data-lang="html"].active {
+      color: #ff6600;
+    }
+
+    .code-tab[data-lang="css"].active {
+      color: var(--premcolo);
+    }
+
+    /* ===== PREVIEW BUTTON ===== */
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.3px;
+    }
+
+    .preview-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .preview-btn:hover {
+      border-color: var(--premcolo);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .preview-btn:hover::before {
+      opacity: 1;
+    }
+
+    .preview-btn:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .preview-btn i {
+      font-size: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn.loading i {
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .code-panels {
+      position: relative;
+    }
+
+    .code-box {
+      background: #1e1e2f;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 0 12px 12px 12px;
+      position: relative;
+      display: none;
+    }
+
+    .code-box.active {
+      display: block;
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-lang-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    .copy-btn.copied {
+      color: #4ade80;
+      border-color: #4ade80;
+    }
+
+    :not(pre)>code[class*="language-"],
+    pre[class*="language-"] {
+      width: 100%;
+      max-width: 100%;
+      height: 50vh;
+      border-radius: 0 0 12px 12px;
+      overflow-y: auto;
+      overflow-x: auto;
+      margin: 0;
+    }
+
+    pre::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    pre::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    pre::-webkit-scrollbar-thumb {
+      background: var(--premcolo);
+      border-radius: 10px;
+    }
+    /* ===== SOURCE CODE BOX ===== */
+    .source-box {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.06), rgba(255, 107, 53, 0.04));
+      border: 1px solid rgba(0, 217, 255, 0.18);
+      border-radius: 14px;
+      padding: 1.5rem 1.75rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .source-box-title {
+      font-family: var(--font-head);
+      font-size: 14px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .source-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 28px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(0, 217, 255, 0.06));
+      border: 1px solid rgba(0, 217, 255, 0.35);
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .source-link:hover {
+      background: rgba(0, 217, 255, 0.2);
+      box-shadow: 0 0 30px rgba(0, 217, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      position: sticky;
+      top: 72px;
+    }
+
+    .sidebar-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-header {
+      padding: 14px 16px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--premcolo);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .related-list {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .related-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/9;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .related-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .related-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.85) 100%);
+    }
+
+    .related-card-title {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* ===== PREVIEW MODAL ===== */
+    .preview-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 5, 15, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+    }
+
+    .preview-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .preview-modal {
+      width: 95vw;
+      max-width: 95vw;
+      height: 95vh;
+      max-height: 95vh;
+      background: #0a0e1a;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(0, 217, 255, 0.06);
+      transform: scale(0.92) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .preview-overlay.open .preview-modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .preview-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+    }
+
+    .preview-modal-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-modal-title i {
+      color: var(--premcolo);
+      font-size: 16px;
+    }
+
+    .preview-modal-title strong {
+      color: #fff;
+    }
+
+    .preview-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .preview-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, filter 0.2s;
+    }
+
+    .preview-dot:hover {
+      transform: scale(1.2);
+      filter: brightness(1.3);
+    }
+
+    .preview-dot.red {
+      background: #ff5f57;
+    }
+
+    .preview-dot.yellow {
+      background: #febc2e;
+    }
+
+    .preview-dot.green {
+      background: #28c840;
+    }
+
+    .preview-close-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .preview-close-btn:hover {
+      border-color: var(--accent2);
+      color: var(--accent2);
+      background: rgba(255, 107, 53, 0.08);
+    }
+
+    .preview-iframe-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .preview-iframe-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      background: #000;
+    }
+
+    .preview-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: #0a0e1a;
+      z-index: 2;
+      transition: opacity 0.4s;
+    }
+
+    .preview-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .preview-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(0, 217, 255, 0.15);
+      border-top-color: var(--premcolo);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    .preview-loading-text {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .preview-hint {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 16px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      color: var(--text-muted);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s 0.8s;
+      white-space: nowrap;
+      z-index: 3;
+    }
+
+    .preview-hint.show {
+      opacity: 1;
+    }
+
+    .preview-hint i {
+      color: var(--accent2);
+      margin-right: 4px;
+    }
+    /* ===== SOURCE CODE BOX ===== */
+    .source-box {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.06), rgba(255, 107, 53, 0.04));
+      border: 1px solid rgba(0, 217, 255, 0.18);
+      border-radius: 14px;
+      padding: 1.5rem 1.75rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .source-box-title {
+      font-family: var(--font-head);
+      font-size: 14px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .source-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 28px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(0, 217, 255, 0.06));
+      border: 1px solid rgba(0, 217, 255, 0.35);
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .source-link:hover {
+      background: rgba(0, 217, 255, 0.2);
+      box-shadow: 0 0 30px rgba(0, 217, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      position: sticky;
+      top: 72px;
+    }
+
+    .sidebar-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-header {
+      padding: 14px 16px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--premcolo);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .related-list {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .related-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/9;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .related-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .related-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.85) 100%);
+    }
+
+    .related-card-title {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+            /* ===== COUNTDOWN ===== */
+        .countdown-box {
+            background: rgba(0, 217, 255, 0.05);
+            border: 1px solid rgba(0, 217, 255, 0.18);
+            border-radius: 14px;
+            padding: 1.5rem 1.75rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        .countdown-label {
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .countdown-timer {
+            font-family: var(--font-head);
+            font-size: 2.5rem;
+            color: var(--premcolo);
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .gist-link-wrapper {
+            display: none;
+            margin-top: 12px;
+        }
+
+        .gist-link-wrapper.visible {
+            display: block;
+        }
+
+        .gist-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(0, 217, 255, 0.06));
+            border: 1px solid rgba(0, 217, 255, 0.35);
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .gist-link:hover {
+            background: rgba(0, 217, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+        }
+
+
+    /* ===== BEST PRACTICES GRID ===== */
+    .practices-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 1.5rem 0;
+    }
+
+    .practice-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.1rem;
+      transition: border-color 0.25s;
+    }
+
+    .practice-item:hover {
+      border-color: rgba(0, 217, 255, 0.25);
+    }
+
+    .practice-item strong {
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 0.82rem;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .practice-item p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* ===== MISTAKES LIST ===== */
+    .mistakes-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+    }
+
+    .mistakes-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 0.75rem 1rem;
+      background: rgba(255, 107, 53, 0.04);
+      border: 1px solid rgba(255, 107, 53, 0.12);
+      border-radius: 10px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .mistakes-list li i {
+      color: var(--accent2);
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1.25rem;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .related-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .related-card {
+        flex: 1 1 calc(50% - 8px);
+      }
+
+      .hero {
+        padding: 2rem 1.25rem 1.5rem;
+      }
+
+      .navbar {
+        padding: 0 1.25rem;
+      }
+
+      .breadcrumb {
+        padding: 10px 1.25rem;
+      }
+
+      .back-link {
+        margin: 0.75rem 1.25rem;
+      }
+    }
+
+    @media (max-width: 640px) {
       .nav-links {
         display: none;
       }
 
       .hamburger {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hamburger.scrolled {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      background: rgb(65, 65, 65);
-}
-    }
-    /**respon**/
-    @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
+      }
 
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
+      .hero-stats {
+        gap: 1.2rem;
+      }
 
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .img img{
-    max-width: 100vw;
-    width: 90vw;
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .related-card {
+        flex: 1 1 100%;
+      }
+
+      .comparison-table {
+        font-size: 12px;
+      }
+
+      .step {
+        grid-template-columns: 36px 1fr;
+      }
+
+      .step-num {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+      }
+
+      .practices-grid {
+        grid-template-columns: 1fr;
+      }
     }
-  }
   </style>
 </head>
+
 <body>
-<header class="navbar">
-    <a href="#" class="logo">
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
       <span class="logo-icon">{ / }</span> 77cod_ing
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
       <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html">Terms & Conditions</a>
+      <a href="Terms & Conditions.html">Terms &amp; Conditions</a>
     </nav>
+    <div class="hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
 
-  <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-  <div class="mobile-menu" id="mobileMenu">
-    <span class="close-btn" id="closeBtn">&times;</span>
-    <a href="index.html"style="border-top: 2px solid #fff;height: 5rem;">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html" style="border-bottom: 2px solid #fff;">Terms & Conditions</a>
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+    <span class="close-btn" id="closeBtn" role="button" tabindex="0" aria-label="Close menu">&times;</span>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="Privacy Policy.html">Privacy Policy</a>
+    <a href="Terms & Conditions.html">Terms &amp; Conditions</a>
   </div>
 
-<div class="Ret">
-  <a href="projects.html#menu"><pre><span>&lt;</span> Return</pre></a>
-</div>
+  <!-- ===== BREADCRUMB ===== -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><i class='bx bx-home-alt-2'></i> <span itemprop="name">Home</span></a>
+        <meta itemprop="position" content="1">
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="projects.html"><i class='bx bx-data'></i> <span itemprop="name">Projects</span></a>
+        <meta itemprop="position" content="2">
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name" aria-current="page">Glowing Text Button</span>
+        <meta itemprop="position" content="3">
+      </li>
+    </ol>
+  </nav>
 
-<div class="img">
-  <img src="image copy 68.png" alt="Skewed Menu Example">
-</div>
+  <!-- ===== BACK BUTTON ===== -->
+  <a href="projects.html#menu" class="back-link" aria-label="Return to Projects">
+    <i class='bx bx-arrow-back'></i> Return to Projects
+  </a>
 
-<div class="par">
-  <span>
-
-    <h1>Create a Glowing Animated Text Button — HTML/CSS</h1>
-
-    <p>
-      Buttons are one of the most important visual elements on any website.
-      In this guide, you’ll learn how to create a
-      <strong>glowing animated text button</strong> using only HTML and CSS — no JavaScript required.
-      This effect gives your button a futuristic look with smooth glowing edges and text that “fills in” on hover.
-    </p>
-
-    <div class="highlight">
-      <p>
-        <strong>Quick Summary:</strong>
-        Build a text-based button using HTML, apply glowing hover effects with CSS transitions,
-        and create a futuristic highlight animation that draws user attention.
-      </p>
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="main-heading">
+    <div class="hero-meta">
+      <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+      <span class="tag tag-html">HTML</span>
+      <span class="tag tag-css">CSS</span>
+      <span class="tag tag-level">Beginner</span>
+      <span class="tag tag-nojs"><i class='bx bx-code-block'></i> No JS</span>
+      <span class="read-time"><i class='bx bx-time'></i> ~10 min read</span>
     </div>
 
-    <h2>What Is a Glowing Animated Button?</h2>
+    <h1 id="main-heading">
+      Glowing <span>Animated Text</span> Button<br>
+      Neon Hover Effect — Pure HTML &amp; CSS
+    </h1>
 
-    <p>
-      A glowing animated button is a text element that visually reacts when the user hovers over it.
-      The animation reveals a glowing text and an illuminated border effect — perfect for modern UI designs,
-      gaming websites, or tech-themed landing pages.
+    <p class="hero-lead">
+      Build a futuristic glowing animated text button with neon hover effects, text stroke fill animation,
+      and drop-shadow glow using only HTML and CSS. Zero JavaScript required.
     </p>
 
-    <h2>Why Use This Button Design?</h2>
-
-    <ul>
-      <li><strong>Modern Look:</strong> Adds a stylish neon-like glow effect.</li>
-      <li><strong>Interactive Feedback:</strong> Gives users clear visual feedback when hovering.</li>
-      <li><strong>Pure CSS:</strong> No JavaScript or extra libraries required.</li>
-      <li><strong>Lightweight & Responsive:</strong> Works smoothly on all devices and screen sizes.</li>
-    </ul>
-
-    <h2>Steps to Create the Animated Button</h2>
-
-    <h3>1. Structure the Button with HTML</h3>
-
-    <p>
-      Start with a simple <code>&lt;button&gt;</code> element. Inside it, include two
-      <code>&lt;span&gt;</code> elements — one for the regular text and another for the animated glowing text
-      that appears on hover.
-    </p>
-
-    <div class="img">
-      <img src="image copy 69.png" alt="HTML structure for glowing button">
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value">6</span>
+        <span class="stat-label">Build Steps</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">0</span>
+        <span class="stat-label">Lines of JS</span>
+      </div>
+      <div class="stat-value">2</span>
+        <span class="stat-label">CSS Properties</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">Free</span>
+        <span class="stat-label">Source Code</span>
+      </div>
     </div>
 
-    <h3>2. Add CSS for Styling and Animation</h3>
+    <img src="image copy 68.png"
+      alt="Glowing animated text button showing neon cyan text stroke effect with hover fill animation on dark background"
+      width="1200" height="500" loading="eager">
+    <p class="img-caption">Final result: A text button that glows and fills with light on hover</p>
+  </section>
 
-    <p>
-      In CSS, use <strong>text stroke</strong> and <strong>transparent text color</strong> to create the outlined effect.
-      Then, apply <strong>hover transitions</strong> to animate the glowing fill.
-      The <code>filter: drop-shadow()</code> property creates the neon glow, while
-      <code>width: 0% → 100%</code> makes the text appear smoothly.
-    </p>
+  <!-- ===== LAYOUT ===== -->
+  <div class="layout">
+    <main class="article-body" role="main">
 
-    <div class="img">
-      <img src="image copy 70.png" alt="CSS styling for glowing button">
-    </div>
+      <!-- ===== TABLE OF CONTENTS ===== -->
+      <div class="toc" aria-label="Table of contents">
+        <div class="toc-title"><i class='bx bx-list-ul'></i> Table of Contents</div>
+        <ol>
+          <li><a href="#features">What You'll Build</a></li>
+          <li><a href="#step-1">HTML Structure</a></li>
+          <li><a href="#step-2">Text Stroke &amp; Transparent Fill</a></li>
+          <li><a href="#step-3">Glowing Fill Span Setup</a></li>
+          <li><a href="#step-4">Hover Fill Transition</a></li>
+          <li><a href="#step-5">Drop-Shadow Neon Glow</a></li>
+          <li><a href="#step-6">Timing &amp; Customization</a></li>
+          <li><a href="#properties">CSS Properties Reference</a></li>
+          <li><a href="#practices">Best Practices</a></li>
+          <li><a href="#mistakes">Common Mistakes</a></li>
+          <li><a href="#faq">Frequently Asked Questions</a></li>
+        </ol>
+      </div>
 
-    <h3>3. See the Final Effect</h3>
+      <!-- ===== FEATURES ===== -->
+      <section id="features" aria-labelledby="features-heading">
+        <h2 id="features-heading">What You'll Build</h2>
+        <p>
+          This tutorial walks you through creating a premium glowing animated text button that's perfect for
+          <a href="projects.html#menu" style="color: var(--premcolo);">menu components</a>,
+          call-to-action sections, or any futuristic UI. Here's what makes it special:
+        </p>
 
-    <p>
-      When you hover over the button, the glowing text smoothly fills from left to right,
-      leaving a trailing glow that feels dynamic and futuristic.
-      This makes the button perfect for “Subscribe”, “Join”, or “Download” actions.
-    </p>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">&#x1F31F;</div>
+            <div class="feature-title">Neon Glow Effect</div>
+            <div class="feature-desc">Drop-shadow filter creates a realistic neon light glow around the text</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">&#x270D;&#xFE0F;</div>
+            <div class="feature-title">Text Stroke Outline</div>
+            <div class="feature-desc">Hollow text using -webkit-text-stroke that fills in on hover</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">&#x2728;</div>
+            <div class="feature-title">Smooth Fill Animation</div>
+            <div class="feature-desc">Left-to-right text fill with CSS width transition for a cinematic reveal</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">&#x1F4F1;</div>
+            <div class="feature-title">Fully Responsive</div>
+            <div class="feature-desc">Scales beautifully on all screen sizes without breaking the effect</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">&#x26A1;</div>
+            <div class="feature-title">Zero JavaScript</div>
+            <div class="feature-desc">Pure CSS solution — no JS libraries or dependencies needed</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">&#x1F3A8;</div>
+            <div class="feature-title">Easy Customization</div>
+            <div class="feature-desc">Change glow color, speed, and text with simple CSS variable edits</div>
+          </div>
+        </div>
+      </section>
 
-    <div class="img">
-      <img src="image copy 68.png" alt="Final preview of glowing animated button">
-    </div>
+      <!-- ===== STEPS ===== -->
+      <section aria-labelledby="steps-heading">
+        <h2 id="steps-heading">Step-by-Step Build Guide</h2>
 
-    <h2>Best Practices for Animated Buttons</h2>
+        <div class="steps">
+          <div class="step" id="step-1">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h3>Create the Button HTML Structure</h3>
+              <p>
+                Start with a <code>&lt;button&gt;</code> element. Inside it, include two
+                <code>&lt;span&gt;</code> elements — one for the regular outlined text and another
+                for the animated glowing text that appears on hover. The button wrapper uses
+                <code>overflow: hidden</code> to clip the fill animation.
+              </p>
+              <img src="image copy 69.png"
+                alt="HTML structure showing button element with two nested spans for stroke and fill text">
+              <p class="img-caption">The dual-span structure enables the stroke-to-fill transition</p>
+            </div>
+          </div>
 
-    <ul>
-      <li><strong>Readable Text:</strong> Ensure the glow doesn’t reduce contrast.</li>
-      <li><strong>Consistent Style:</strong> Match the button color palette with your site’s theme.</li>
-      <li><strong>Moderate Animation Speed:</strong> Keep transitions between 3–5 seconds for elegance.</li>
-      <li><strong>Accessibility:</strong> Maintain focus visibility for keyboard navigation.</li>
-    </ul>
+          <div class="step" id="step-2">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h3>Apply Text Stroke &amp; Transparent Fill</h3>
+              <p>
+                Use <code>-webkit-text-stroke</code> to create the outlined text effect. Set
+                <code>color: transparent</code> so only the stroke outline is visible initially.
+                This gives the button a hollow, wireframe look before interaction.
+              </p>
+              <div class="info-box">
+                <strong>&#x1F4A1; Pro Tip:</strong> The <code>-webkit-text-stroke</code> property
+                is supported by all modern browsers. The <code>-webkit-</code> prefix is required
+                even in Firefox and Edge for this specific property.
+              </div>
+            </div>
+          </div>
 
-    <h2>Common Mistakes to Avoid</h2>
+          <div class="step" id="step-3">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h3>Set Up the Glowing Fill Span</h3>
+              <p>
+                Style the second <code>&lt;span&gt;</code> with a solid color (e.g., cyan or white)
+                and position it absolutely over the stroke text. Set its initial
+                <code>width: 0%</code> so it's completely hidden. The <code>overflow: hidden</code>
+                on the parent button ensures the fill is clipped until triggered.
+              </p>
+            </div>
+          </div>
 
-    <ul>
-      <li>Using overly bright glow colors that strain the eyes.</li>
-      <li>Applying too many animations at once.</li>
-      <li>Forgetting responsive sizing for smaller screens.</li>
-      <li>Neglecting text alignment or padding consistency.</li>
-    </ul>
+          <div class="step" id="step-4">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h3>Add the Hover Fill Transition</h3>
+              <p>
+                On <code>button:hover</code>, animate the inner span's <code>width</code> from
+                <code>0%</code> to <code>100%</code> using a CSS <code>transition</code>. This
+                creates a smooth left-to-right fill effect. A duration of 3–5 seconds gives an
+                elegant, cinematic feel.
+              </p>
+              <img src="image copy 70.png" alt="CSS code showing hover transition for width property on the fill span">
+              <p class="img-caption">The width transition creates the left-to-right text fill reveal</p>
+            </div>
+          </div>
 
-    <h2>Conclusion</h2>
+          <div class="step" id="step-5">
+            <div class="step-num">5</div>
+            <div class="step-content">
+              <h3>Apply Drop-Shadow for Neon Glow</h3>
+              <p>
+                Use <code>filter: drop-shadow()</code> on the button to create the neon glow effect.
+                Unlike <code>text-shadow</code>, <code>drop-shadow</code> follows the actual rendered
+                shape of the text stroke, producing a more authentic glow. Stack multiple
+                drop-shadows for increased intensity.
+              </p>
+              <div class="warn-box">
+                <strong>&#x26A0;&#xFE0F; Important:</strong> Avoid using <code>text-shadow</code> for
+                this effect — it only applies to the text fill, not the stroke outline.
+                <code>filter: drop-shadow()</code> respects the full rendered shape including strokes.
+              </div>
+            </div>
+          </div>
 
-    <p>
-      Building a <strong>glowing animated text button</strong> with HTML and CSS is an easy yet powerful way
-      to make your website stand out. This effect delivers interactivity, modern style, and performance efficiency —
-      all without a single line of JavaScript. Use it to highlight key actions like
-      <em>Subscribe</em>, <em>Join</em>, or <em>Explore</em> and give your UI a sleek, futuristic vibe.
-    </p>
+          <div class="step" id="step-6">
+            <div class="step-num">6</div>
+            <div class="step-content">
+              <h3>Fine-Tune Timing &amp; Colors</h3>
+              <p>
+                Adjust the <code>transition-duration</code> (3–5s recommended), <code>cubic-bezier</code>
+                timing function, and glow color to match your site's theme. You can also add a subtle
+                <code>@keyframes</code> pulse animation for a breathing glow effect on the idle state.
+              </p>
+              <div class="success-box">
+                <strong>&#x2705; Result:</strong> When you hover over the button, the glowing text
+                smoothly fills from left to right with a trailing neon glow — perfect for
+                "Subscribe", "Join", or "Download" actions.
+              </div>
+              <img src="image copy 68.png" alt="Final preview of the glowing animated text button with neon cyan glow">
+              <p class="img-caption">The completed button with smooth hover fill animation and neon glow</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <div class="highlight">
-      <p>
-        <strong>SEO Keywords:</strong> glowing button CSS, neon text effect, animated hover button,
-        HTML CSS glowing text, modern UI button, pure CSS animation button
-      </p>
-    </div>
+      <!-- ===== CSS PROPERTIES REFERENCE ===== -->
+      <section id="properties" aria-labelledby="props-heading">
+        <h2 id="props-heading">CSS Properties Reference</h2>
+        <p>
+          Here's a quick reference of the key CSS properties used in this project and what each one does:
+        </p>
 
-  </span>
-</div>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Purpose</th>
+              <th>Key Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>-webkit-text-stroke</code></td>
+              <td>Creates outlined/hollow text by drawing a border around each character</td>
+              <td><span class="badge badge-cyan">1px #00d9ff</span></td>
+            </tr>
+            <tr>
+              <td><code>filter: drop-shadow()</code></td>
+              <td>Adds a glow that follows the actual rendered shape including strokes</td>
+              <td><span class="badge badge-cyan">0 0 10px cyan</span></td>
+            </tr>
+            <tr>
+              <td><code>transition</code></td>
+              <td>Animates the width change for the fill effect on hover</td>
+              <td><span class="badge badge-green">width 3s ease</span></td>
+            </tr>
+            <tr>
+              <td><code>overflow: hidden</code></td>
+              <td>Clips the fill span so it reveals progressively left-to-right</td>
+              <td><span class="badge badge-orange">hidden</span></td>
+            </tr>
+            <tr>
+              <td><code>position: absolute</code></td>
+              <td>Overlaps the fill span exactly on top of the stroke text</td>
+              <td><span class="badge badge-orange">absolute</span></td>
+            </tr>
+            <tr>
+              <td><code>color: transparent</code></td>
+              <td>Hides the text fill so only the stroke outline is visible initially</td>
+              <td><span class="badge badge-orange">transparent</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
+      <!-- ===== BEST PRACTICES ===== -->
+      <section id="practices" aria-labelledby="practices-heading">
+        <h2 id="practices-heading">Best Practices</h2>
 
+        <div class="practices-grid">
+          <div class="practice-item">
+            <strong>&#x1F4D6; Readable Text</strong>
+            <p>Ensure the glow doesn't reduce text contrast. Test on dark and light backgrounds.</p>
+          </div>
+          <div class="practice-item">
+            <strong>&#x1F3A8; Consistent Palette</strong>
+            <p>Match the glow color with your site's accent color for visual harmony.</p>
+          </div>
+          <div class="practice-item">
+            <strong>&#x23F1;&#xFE0F; Moderate Speed</strong>
+            <p>Keep transitions between 3–5 seconds. Too fast looks jittery, too slow feels unresponsive.</p>
+          </div>
+          <div class="practice-item">
+            <strong>&#x267F;&#xFE0F; Accessibility</strong>
+            <p>Maintain focus visibility for keyboard navigation. Add focus-visible styles matching the glow.</p>
+          </div>
+        </div>
+      </section>
 
+      <!-- ===== COMMON MISTAKES ===== -->
+      <section id="mistakes" aria-labelledby="mistakes-heading">
+        <h2 id="mistakes-heading">Common Mistakes to Avoid</h2>
 
-<div class="con1">
-  <div class="countdown" id="countdown">
-    <span id="number">10</span> wait...
-  </div>
+        <ul class="mistakes-list">
+          <li>
+            <i class='bx bx-x-circle'></i>
+            <span>Using <code>text-shadow</code> instead of <code>drop-shadow</code> — the shadow won't follow the
+              stroke outline</span>
+          </li>
+          <li>
+            <i class='bx bx-x-circle'></i>
+            <span>Using overly bright glow colors (e.g., pure white at full opacity) that strain the eyes</span>
+          </li>
+          <li>
+            <i class='bx bx-x-circle'></i>
+            <span>Applying too many simultaneous animations, causing performance issues on low-end devices</span>
+          </li>
+          <li>
+            <i class='bx bx-x-circle'></i>
+            <span>Forgetting <code>overflow: hidden</code> on the button, which breaks the fill clip effect</span>
+          </li>
+          <li>
+            <i class='bx bx-x-circle'></i>
+            <span>Neglecting responsive sizing — the text may overflow or become unreadable on small screens</span>
+          </li>
+          <li>
+            <i class='bx bx-x-circle'></i>
+            <span>Ignoring text alignment and padding consistency across different button instances</span>
+          </li>
+        </ul>
+      </section>
 
-  <div class="link-box" id="linkBox">
-    <a href="https://gist.github.com/77cod-ing/6763a3e7d414979579772c8124d93ea5" target="_blank">Go to code</a>
-  </div>
-</div>
+      <hr>
 
-<script>
-  let counter = 10;
-  let timer = null;
-  const countdownEl = document.getElementById("countdown");
-  const numberEl = document.getElementById("number");
-  const linkBox = document.getElementById("linkBox");
+      <!-- SOURCE CODE -->
+      <section id="source-code">
+        <h2>Full Source Code (Free)</h2>
+        <p>
+          The entire project lives in a single HTML file — no external CSS or JS files required.
+          The HTML sets up the card structure and links images from <code>picsum.photos</code>
+          for demonstration. The CSS drives every animation, transition, and responsive breakpoint.
+          A four-line script at the bottom removes the shimmer placeholder once each image has
+          loaded. Use the tabs below to explore the HTML and CSS sections separately.
+        </p>
+      
+        <div class="code-section">
+          <div class="code-toolbar">
+            <div class="code-tabs" role="tablist" aria-label="Code files">
+              <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                aria-controls="panel-html">HTML</button>
+              <button class="code-tab" data-lang="css" role="tab" aria-selected="false" aria-controls="panel-css">CSS</button>
+            </div>
+            <button class="preview-btn" id="previewBtn" aria-label="Preview the final result">
+              <i class='bx bx-play-circle'></i>
+              <span>Preview Result</span>
+            </button>
+          </div>
+      
+          <div class="code-panels">
+            <div class="code-box active" id="panel-html" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code1" class="language-html"></code></pre>
+            </div>
+      
+            <div class="code-box" id="panel-css" role="tabpanel">
+              <div class="code-header">
+                <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
+                <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+              </div>
+              <pre><code id="code2" class="language-css"></code></pre>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Countdown Gist reveal -->
+        <div class="countdown-box">
+          <p class="countdown-label">🔓 Full Source Code unlocks in</p>
+          <div class="countdown-timer" id="countdownDisplay">05</div>
+          <p style="font-size:13px;color:var(--text-muted);">Hosted on GitHub Gist — free, no sign-up required
+          </p>
+          <div class="gist-link-wrapper" id="gistLinkWrapper">
+            <a class="gist-link" href="https://gist.github.com/77cod-ing/6763a3e7d414979579772c8124d93ea5"
+              target="_blank" rel="noopener noreferrer">
+              <i class='bx bxl-github'></i> View Full Source Code on GitHub Gist
+            </a>
+          </div>
+        </div>
+      
+        <div class="info-box">
+          <strong>💡 Quick Start:</strong> Copy the full code into a single <code>index.html</code> file.
+          No build tools, no npm, no libraries — open it in any modern browser and the accordion
+          gallery works immediately. Swap the <code>picsum.photos</code> URLs with your own images
+          to customize it instantly.
+        </div>
+      </section>
 
-  function startCountdown() {
-    if (timer) return;
-    timer = setInterval(() => {
-      counter--;
-      numberEl.textContent = counter;
+      <!-- ===== FAQ ===== -->
+      <section id="faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">Frequently Asked Questions</h2>
 
-      if (counter === 0) {
-        clearInterval(timer);
-        timer = null;
-        countdownEl.style.display = "none"; 
-        linkBox.style.display = "block";
-      }
-    }, 1000);
-  }
+        <div class="faq">
+          <details class="faq-item">
+            <summary class="faq-question">How does the CSS text stroke effect work?</summary>
+            <div class="faq-answer">
+              The <code>-webkit-text-stroke</code> property draws an outline around text characters.
+              When combined with <code>color: transparent</code>, only the stroke outline is visible,
+              creating a hollow text effect. On hover, a second <code>&lt;span&gt;</code> with a solid
+              color fills in from left to right, creating the animation. The stroke width and color
+              are fully customizable.
+            </div>
+          </details>
 
-  function stopCountdown() {
-    clearInterval(timer);
-    timer = null;
-  }
+          <details class="faq-item">
+            <summary class="faq-question">What is the difference between text-shadow and drop-shadow for button glow?
+            </summary>
+            <div class="faq-answer">
+              <code>text-shadow</code> only applies to the text fill content and doesn't follow
+              transparent areas or stroke outlines. <code>filter: drop-shadow()</code> creates a shadow
+              based on the actual rendered shape of the element — including the <code>-webkit-text-stroke</code>
+              outline. This makes <code>drop-shadow</code> the correct choice for glowing outlined text
+              where you want the glow to follow the stroke path precisely.
+            </div>
+          </details>
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        startCountdown();
-      } else {
-        stopCountdown();
-      }
-    });
-  }, { threshold: 1.0 });
+          <details class="faq-item">
+            <summary class="faq-question">Can I change the glow color and animation speed?</summary>
+            <div class="faq-answer">
+              Yes. To change the glow color, modify the <code>drop-shadow()</code> color values and the
+              <code>-webkit-text-stroke</code> color. For animation speed, adjust the
+              <code>transition-duration</code> property on the button (e.g.,
+              <code>transition: all 3s ease</code> for a 3-second fill). You can also change the
+              <code>cubic-bezier</code> timing function for different easing curves like bounce or elastic feel.
+            </div>
+          </details>
 
-  observer.observe(countdownEl);
+          <details class="faq-item">
+            <summary class="faq-question">Does this glowing button work on all browsers?</summary>
+            <div class="faq-answer">
+              The <code>-webkit-text-stroke</code> property works in all modern browsers including Chrome,
+              Firefox, Safari, and Edge. The <code>filter: drop-shadow()</code> is also widely supported
+              with full browser coverage. For older browsers that don't support these properties, the button
+              will still function as a clickable element — it degrades gracefully, just without the visual
+              glow and stroke effects.
+            </div>
+          </details>
 
-  /**hamburger**/
+          <details class="faq-item">
+            <summary class="faq-question">Can I use this effect on links or div elements instead of buttons?</summary>
+            <div class="faq-answer">
+              Absolutely. The effect uses standard CSS properties that work on any HTML element. You can
+              apply the same classes to <code>&lt;a&gt;</code>, <code>&lt;div&gt;</code>, or
+              <code>&lt;span&gt;</code> elements. Just ensure you add <code>cursor: pointer</code> for
+              visual feedback and appropriate ARIA attributes (like <code>role="button"</code> and
+              <code>tabindex="0"</code>) for accessibility on non-button elements.
+            </div>
+          </details>
 
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeBtn = document.getElementById('closeBtn');
+          <details class="faq-item">
+            <summary class="faq-question">How do I make the glow animation more subtle or more intense?</summary>
+            <div class="faq-answer">
+              For a subtler glow, reduce the blur radius in <code>drop-shadow()</code> (e.g.,
+              <code>drop-shadow(0 0 3px cyan)</code>) and lower the color opacity. For more intensity,
+              stack multiple drop-shadow filters with increasing blur:
+              <code>filter: drop-shadow(0 0 5px cyan) drop-shadow(0 0 15px cyan) drop-shadow(0 0 30px cyan)</code>.
+              You can also add a pulsing <code>@keyframes</code> animation that cycles the shadow intensity
+              for a breathing glow effect.
+            </div>
+          </details>
+        </div>
+      </section>
 
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.add('active');
-    });
+      <!-- ===== CONCLUSION ===== -->
+      <div class="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          Building a <strong>glowing animated text button</strong> with HTML and CSS is an easy yet
+          powerful way to make your website stand out. This effect delivers interactivity, modern style,
+          and performance efficiency — all without a single line of JavaScript.
+        </p>
+        <ul>
+          <li>Pure CSS solution — no JavaScript dependencies</li>
+          <li>Neon glow effect using <code>filter: drop-shadow()</code></li>
+          <li>Cinematic text fill animation with width transition</li>
+          <li>Fully customizable colors, speed, and timing</li>
+          <li>Works across all modern browsers with graceful degradation</li>
+          <li>Perfect for Subscribe, Join, Download, and Explore actions</li>
+        </ul>
+      </div>
 
-    closeBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-    });
+    </main>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" aria-label="Related content">
+      <div class="sidebar-box">
+        <div class="sidebar-header"><i class='bx bx-star'></i> Related Projects</div>
+        <div class="related-list">
+          <a class="related-card" href="Project40.html" aria-label="Advanced JavaScript Image Slider with GSAP">
+            <img src="https://i.suar.me/Ep114/m" alt="Advanced JavaScript image slider with GSAP split-panel animation"
+              loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Advanced JavaScript Image Slider — GSAP Animation</div>
+          </a>
+          <a class="related-card" href="Project13.html" aria-label="Neon Cursor Animation">
+            <img src="https://77cod-ing.github.io/image%20copy%2036.png" alt="Neon Cursor Animation CSS JavaScript"
+              loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Neon Cursor Animation — CSS &amp; JavaScript</div>
+          </a>
+          <a class="related-card" href="Project23.html" aria-label="Animated Login and Signup Page">
+            <img src="https://77cod-ing.github.io/image%20copy%2075.png"
+              alt="Animated Login and Signup Page HTML CSS JavaScript" loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Animated Login &amp; Signup Page — HTML CSS JS</div>
+          </a>
+        </div>
+      </div>
     
+      <div class="sidebar-box" style="padding: 16px;">
+        <div style="font-family: var(--font-head); font-size: 13px; color: var(--premcolo); margin-bottom: 12px;">
+          <i class='bx bx-info-circle'></i> Quick Info
+        </div>
+        <div style="font-size: 13px; color: var(--text-muted); line-height: 1.8;">
+          <div><strong style="color:#fff;">Difficulty:</strong> Beginner</div>
+          <div><strong style="color:#fff;">Time:</strong> 15 minutes</div>
+          <div><strong style="color:#fff;">Files:</strong> HTML + CSS</div>
+          <div><strong style="color:#fff;">JavaScript:</strong> None</div>
+        </div>
+      </div>
+    </aside>
+    </div>
+    
+    <!-- ===== PREVIEW MODAL ===== -->
+    <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+      aria-label="Live preview of the CSS flexible accordion image card gallery">
+      <div class="preview-modal">
+        <div class="preview-modal-header">
+          <div class="preview-modal-title">
+            <i class='bx bx-show'></i>
+            <strong>Live Preview</strong> — 3D Flipping Card
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div class="preview-dots">
+              <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+              <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+              <button class="preview-dot green" aria-label="Maximize" disabled></button>
+            </div>
+            <button class="preview-close-btn" id="previewCloseBtn">
+              <i class='bx bx-x'></i> Close
+            </button>
+          </div>
+        </div>
+        <div class="preview-iframe-wrap">
+          <div class="preview-loading" id="previewLoading">
+            <div class="preview-spinner"></div>
+            <span class="preview-loading-text">Loading preview...</span>
+            <div class="preview-loading-files">
+              <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+              <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+            </div>
+          </div>
+          <iframe id="previewIframe" title="Preview of CSS flexible accordion image card gallery"
+            sandbox="allow-scripts allow-same-origin"></iframe>
+          <div class="preview-hint" id="previewHint">
+            <i class='bx bx-cursor'></i> Hover over the card to see the flip effect
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+      /*
+        ============================================
+          Gist URLs — update with the actual Gist raw URL for this project
+        ============================================
+      */
+      const gistBase = "https://gist.githubusercontent.com/77cod-ing/6763a3e7d414979579772c8124d93ea5/raw/";
 
-    window.addEventListener("scroll", function() {
-  const hamburger = document.querySelector(".hamburger");
-  if (window.scrollY > 50) {
-    hamburger.classList.add("scrolled");
-  } else {
-    hamburger.classList.remove("scrolled");
-  }
-});
+      const htmlUrl = gistBase + "index.html";
+      const cssUrl = gistBase + "style.css";
 
-</script>
+      let cachedHTML = "";
+      let cachedCSS = "";
+
+      async function loadCode(url, elementId, lang) {
+        try {
+          const res = await fetch(url);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const text = await res.text();
+          const el = document.getElementById(elementId);
+          el.textContent = text;
+          el.className = `language-${lang}`;
+          Prism.highlightElement(el);
+          if (lang === "html") cachedHTML = text;
+          if (lang === "css") cachedCSS = text;
+        } catch (e) {
+          const el = document.getElementById(elementId);
+          if (el) el.textContent = `/* Failed to load: ${e.message} */`;
+        }
+      }
+
+      loadCode(htmlUrl, "code1", "html");
+      loadCode(cssUrl, "code2", "css");
+
+      /* ===== Tabs ===== */
+      document.querySelectorAll(".code-tab").forEach(tab => {
+        tab.addEventListener("click", () => {
+          const lang = tab.dataset.lang;
+          document.querySelectorAll(".code-tab").forEach(t => {
+            t.classList.remove("active");
+            t.setAttribute("aria-selected", "false");
+          });
+          document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+          tab.classList.add("active");
+          tab.setAttribute("aria-selected", "true");
+          const panelMap = { html: "panel-html", css: "panel-css" };
+          document.getElementById(panelMap[lang]).classList.add("active");
+        });
+      });
+
+      /* ===== Copy buttons ===== */
+      document.querySelectorAll(".copy-btn").forEach(btn => {
+        btn.addEventListener("click", async () => {
+          const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+          if (!code) return;
+          try {
+            await navigator.clipboard.writeText(code);
+            btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+            btn.classList.add("copied");
+            setTimeout(() => {
+              btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
+              btn.classList.remove("copied");
+            }, 2000);
+          } catch { btn.textContent = "Error"; }
+        });
+      });
+
+      /* ===== Countdown timer ===== */
+      let seconds = 5;
+      const countdownDisplay = document.getElementById("countdownDisplay");
+      const gistLinkWrapper = document.getElementById("gistLinkWrapper");
+
+      const countdownInterval = setInterval(() => {
+        seconds--;
+        countdownDisplay.textContent = String(seconds).padStart(2, "0");
+        if (seconds <= 0) {
+          clearInterval(countdownInterval);
+          gistLinkWrapper.classList.add("visible");
+          countdownDisplay.style.display = "none";
+          document.querySelector(".countdown-label").textContent = "✅ Source Code Available";
+        }
+      }, 1000);
+
+      /* ===== Preview modal ===== */
+      const previewOverlay = document.getElementById("previewOverlay");
+      const previewIframe = document.getElementById("previewIframe");
+      const previewLoading = document.getElementById("previewLoading");
+      const previewHint = document.getElementById("previewHint");
+      const previewBtn = document.getElementById("previewBtn");
+      const previewCloseBtn = document.getElementById("previewCloseBtn");
+      const previewDotClose = document.getElementById("previewDotClose");
+      const tagHTML = document.getElementById("tagHTML");
+      const tagCSS = document.getElementById("tagCSS");
+
+      function openPreview() {
+        previewOverlay.classList.add("open");
+        document.body.style.overflow = "hidden";
+        previewLoading.classList.remove("hidden");
+        previewHint.classList.remove("show");
+        previewBtn.classList.add("loading");
+        tagHTML.classList.remove("loaded");
+        tagCSS.classList.remove("loaded");
+        buildPreview();
+      }
+
+      function closePreview() {
+        previewOverlay.classList.remove("open");
+        document.body.style.overflow = "";
+        previewIframe.srcdoc = "";
+        previewBtn.classList.remove("loading");
+      }
+
+      async function buildPreview() {
+        if (cachedHTML && cachedCSS) {
+          tagHTML.classList.add("loaded");
+          tagCSS.classList.add("loaded");
+          injectPreview(cachedHTML, cachedCSS);
+          return;
+        }
+        try {
+          const fetches = [];
+          if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
+          if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
+          if (cachedHTML) tagHTML.classList.add("loaded");
+          if (cachedCSS) tagCSS.classList.add("loaded");
+          await Promise.all(fetches);
+          injectPreview(cachedHTML, cachedCSS);
+        } catch (e) {
+          previewLoading.innerHTML = `
+                  <i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i>
+                  <span class="preview-loading-text" style="color:var(--accent2);">Failed to load preview: ${e.message}</span>
+                `;
+          previewBtn.classList.remove("loading");
+        }
+      }
+
+      function injectPreview(html, css) {
+        let combined = html;
+        if (combined.includes('<link') && /style\.css/i.test(combined)) {
+          combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
+        } else if (combined.includes("</head>")) {
+          combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
+        } else {
+          combined = `<style>${css}</style>\n${combined}`;
+        }
+        previewIframe.srcdoc = combined;
+        previewIframe.addEventListener("load", function onLoad() {
+          previewLoading.classList.add("hidden");
+          previewBtn.classList.remove("loading");
+          setTimeout(() => {
+            previewHint.classList.add("show");
+            setTimeout(() => previewHint.classList.remove("show"), 4000);
+          }, 300);
+          previewIframe.removeEventListener("load", onLoad);
+        });
+      }
+
+      previewBtn.addEventListener("click", openPreview);
+      previewCloseBtn.addEventListener("click", closePreview);
+      previewDotClose.addEventListener("click", closePreview);
+      previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+      document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
+    </script>
+
 </body>
+
 </html>
-
-
-
