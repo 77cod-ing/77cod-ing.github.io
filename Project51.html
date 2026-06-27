@@ -2131,6 +2131,22 @@
             });
         });
 
+                /* ===== Countdown timer ===== */
+                    let seconds = 5;
+                    const countdownDisplay = document.getElementById("countdownDisplay");
+                    const gistLinkWrapper = document.getElementById("gistLinkWrapper");
+
+                    const countdownInterval = setInterval(() => {
+                        seconds--;
+                        countdownDisplay.textContent = String(seconds).padStart(2, "0");
+                        if (seconds <= 0) {
+                            clearInterval(countdownInterval);
+                            gistLinkWrapper.classList.add("visible");
+                            countdownDisplay.style.display = "none";
+                            document.querySelector(".countdown-label").textContent = "✅ Source Code Available";
+                        }
+                    }, 1000);
+
 
 
         /* ===== Preview modal ===== */
@@ -2224,77 +2240,9 @@
         previewDotClose.addEventListener("click", closePreview);
         previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
         document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
+  </script>
 
-        /* ===== COUNTDOWN ===== */
-        (function () {
-            let counter = 5;
-            let timer = null;
-            const timerEl = document.getElementById("countdownTimer");
-            const numberEl = document.getElementById("countdownNumber");
-            const waitEl = document.getElementById("countdownWait");
-            const linkWrapper = document.getElementById("gistLinkWrapper");
-            const section = document.getElementById("countdownSection");
-
-            function startCountdown() {
-                if (timer) return;
-                timer = setInterval(function () {
-                    counter--;
-                    numberEl.textContent = counter;
-                    if (counter <= 0) {
-                        clearInterval(timer);
-                        timer = null;
-                        timerEl.style.display = "none";
-                        waitEl.style.display = "none";
-                        linkWrapper.classList.add("visible");
-                    }
-                }, 1000);
-            }
-
-            function stopCountdown() {
-                if (timer) {
-                    clearInterval(timer);
-                    timer = null;
-                }
-            }
-
-            const observer = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        startCountdown();
-                    } else {
-                        stopCountdown();
-                    }
-                });
-            }, { threshold: 0.8 });
-
-            observer.observe(section);
-        })();
-
-        /* ===== SCROLL REVEAL ===== */
-        (function () {
-            var reveals = document.querySelectorAll(".reveal");
-            if (!reveals.length) return;
-
-            var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-            if (prefersReduced) {
-                reveals.forEach(function (el) { el.classList.add("visible"); });
-                return;
-            }
-
-            var revealObserver = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                        revealObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
-
-            reveals.forEach(function (el) {
-                revealObserver.observe(el);
-            });
-        })();
-    </script>
+    
 
 
 </body>
