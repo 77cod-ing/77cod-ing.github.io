@@ -1,519 +1,2144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="Picture1.png">
-  <title>Code Build an Interactive Download Button — HTML/CSS</title>
-    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
-     crossorigin="anonymous"></script>
-  <style>
-    body {
-      background: linear-gradient(to right, #2c0e43 10%, #581c87);
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 50px;
-      padding: 0 2rem;
-      background-color: #0d1325;
-    }
+    <!-- ===== PRIMARY SEO META ===== -->
+    <title>Interactive Download Button with Animations — Pure HTML/CSS Tutorial</title>
+    <meta name="description"
+        content="Build an interactive download button that transforms into an Open button with pulsing circles, rotating icons, and text transitions — using only HTML and CSS. No JavaScript for animations. Free source code with live preview.">
+    <meta name="keywords"
+        content="interactive download button, CSS button animation, CSS keyframes pulse, rotate icon CSS, text transition CSS, checkbox hack button, modern UI button, HTML CSS download button, pure CSS interactive button, frontend button tutorial">
+    <meta name="author" content="77cod_ing">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://77cod-ing.github.io/Project9.html">
+    <meta name="theme-color" content="#00d9ff">
 
-    .logo {
-      display: flex;
-      align-items: center;
-      font-size: 22px;
-      font-weight: bold;
-      color: white;
-      text-decoration: none;
-    }
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Interactive Download Button with Animations — Pure HTML/CSS Tutorial">
+    <meta property="og:description"
+        content="Create a download button that pulses, rotates icons, and transitions text from Download to Open — pure HTML & CSS, no JavaScript for animations. Free source code.">
+    <meta property="og:image" content="https://77cod-ing.github.io/image%20copy%2022.png">
+    <meta property="og:url" content="https://77cod-ing.github.io/Project9.html">
+    <meta property="og:site_name" content="77cod_ing">
+    <meta property="article:published_time" content="2025-10-01T00:00:00Z">
+    <meta property="article:modified_time" content="2026-05-28T00:00:00Z">
+    <meta property="article:author" content="77cod_ing">
+    <meta property="article:section" content="CSS Tutorials">
+    <meta property="article:tag"
+        content="HTML, CSS, Keyframes, Checkbox Hack, Button Animation, UI Components, Frontend">
 
-    .logo-icon {
-      color: #a855f7;
-      font-size: 26px;
-      margin-right: 8px;
-      letter-spacing: 2.5px;
-    }
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Interactive Download Button | Pure HTML & CSS Tutorial">
+    <meta name="twitter:description"
+        content="Build a download button with pulse, rotate, and text transition animations. Pure CSS, no JavaScript needed.">
+    <meta name="twitter:image" content="https://77cod-ing.github.io/image%20copy%2022.png">
 
-    .nav-links {
-      display: flex;
-      gap: 35px;
-    }
-
-    .nav-links a {
-      color: #d1d5db;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: #a855f7;
-      transform: scale(1.2);
-    }
-    /*linke*/
-    .con1 {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin: auto 0;
-      height: 50vh;
-    }
-    .countdown {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00ffcc;
-    }
-
-    .link-box {
-      display: none;
-      padding: 20px 40px;
-      background: #1e2a47;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-      transition: 0.3s;
-    }
-
-    .link-box a {
-      text-decoration: none;
-      color: #00ffcc;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    .link-box:hover {
-      background: #26385c;
-      transform: scale(1.05);
-    }
-    /**ret**/
-    .Ret{
-      margin: 5px 0 0 3rem;
-      width: max-content;
-    }
-    .Ret a {
-      font-size: 2rem;
-      text-decoration: none;
-      color: #ffffff;
-    }
-    .Ret a span{
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 38px;
-      height: 38px;
-      border: 2px solid #fff;
-      border-radius: 50%;
-    }
-    .Ret a:hover {
-  color: #00e1ff;
-}
-    .Ret a:hover span {
-  border-color: #00e1ff;
-}
-    /**img**/
-    .img{
-      display: flex;
-      justify-content: center;
-      margin: 2rem auto;
-    }
-    .img img{
-      border-radius: 8px;
-      max-width: 100vw;
-    width: 70vw;
-    height: 65vh;
-    }
-    /**par**/
-    .par{
-       font-family: Arial, sans-serif;
-      line-height: 1.7;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      color: #ffffff;
-    }
-    h1, h2, h3 {
-      color: #00c8ff;
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
-    h2 {
-      margin-top: 35px;
-      font-size: 1.6rem;
-    }
-    h3 {
-      margin-top: 25px;
-      font-size: 1.3rem;
-    }
-    p {
-      margin-bottom: 18px;
-    }
-    ul {
-      margin: 15px 0;
-      padding-left: 25px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .highlight {
-      background: #000000;
-      padding: 8px 12px;
-      border-left: 4px solid #0073e6;
-      margin: 20px 0;
-    }
-    /**respon**/
-    @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .img img{
-    max-width: 100vw;
-    width: 90vw;
-    }
-  }
-        /**respon1**/
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hamburger .scrolled {
-      background: rgba(255, 255, 255, 0.7);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-}
-
-    .hamburger span {
-      width: 28px;
-      height: 3px;
-      background: white;
-      transition: all 0.3s ease;
-    }
-
-    /* ====== القائمة المنبثقة ====== */
-    .mobile-menu {
-      position: fixed;
-      top:0;
-      left: -100%;
-      width: 100%;
-      height: 100vh;
-      padding-top: 0.5rem ;
-      background: rgb(53, 53, 53);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 35px;
-      transition: left 0.5s ease;
-      z-index: 999;
-    }
-
-    .mobile-menu.active {
-      left: 0;
-    }
-
-    .mobile-menu a {
-      color: white;
-      font-size: 22px;
-      width: 100%;
-      height: 3rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      border-bottom: 0.5px solid #fff;
-      transition: color 0.3s;
-    }
-
-    .mobile-menu a:hover {
-      color: #ffffff;
-      background: rgba(104, 104, 104, 0.508);
-      backdrop-filter: bulur(20px);
-    }
-
-    /* ====== زر الإغلاق (X) ====== */
-    .close-btn {
-      position: absolute;
-      top: 20px;
-      right: 25px;
-      font-size: 30px;
-      color: white;
-      cursor: pointer;
-      width: 35px;
-      height: 35px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 2px solid #fff;
-      background: rgb(88, 88, 88);
-      border-radius: 50%;
-      transition: transform 0.3s ease;
-    }
-
-    .close-btn:hover {
-      transform: rotate(90deg);
-      color: #00e1ff;
-    }
-
-    /* ====== استجابة الهاتف ====== */
-    @media (max-width: 910px) {
-      .nav-links {
-        display: none;
+    <!-- ===== SCHEMA: TechArticle ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Build an Interactive Download Button with Pulse and Rotation Animations Using HTML and CSS",
+    "description": "A complete tutorial on building an interactive download button that uses a hidden checkbox to trigger pulsing circles, rotating icons, and text transitions from Download to Open — using only HTML and CSS.",
+    "image": "https://77cod-ing.github.io/image%20copy%2022.png",
+    "datePublished": "2025-10-01",
+    "dateModified": "2026-05-28",
+    "author": {
+      "@type": "Person",
+      "name": "77cod_ing",
+      "url": "https://77cod-ing.github.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "77cod_ing",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Picture1.png"
       }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://77cod-ing.github.io/Project9.html"
+    },
+    "articleSection": "CSS Tutorials",
+    "keywords": "interactive download button, CSS button animation, CSS keyframes pulse, checkbox hack button, text transition CSS",
+    "timeRequired": "PT8M",
+    "educationalLevel": "Beginner",
+    "teaches": ["CSS Keyframe Animations", "Checkbox Hack", "CSS Transitions", "CSS Pseudo-elements", "Transform Rotate", "Opacity Transitions", "Overflow Hidden Technique"]
+  }
+  </script>
 
-      .hamburger {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hamburger.scrolled {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      background: rgb(65, 65, 65);
-}
-    }
-  </style>
+    <!-- ===== SCHEMA: HowTo ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Build an Interactive Download Button with HTML and CSS",
+    "description": "Step-by-step guide to creating a download button that animates with pulse effects, icon rotation, and text transitions when clicked — using only HTML and CSS.",
+    "image": "https://77cod-ing.github.io/image%20copy%2022.png",
+    "totalTime": "PT8M",
+    "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "0"},
+    "supply": [
+      {"@type": "HowToSupply", "name": "Text editor (VS Code)"},
+      {"@type": "HowToSupply", "name": "A modern web browser"}
+    ],
+    "tool": [
+      {"@type": "HowToTool", "name": "HTML"},
+      {"@type": "HowToTool", "name": "CSS"}
+    ],
+    "step": [
+      {"@type": "HowToStep", "name": "Create the HTML Structure", "text": "Use a <label> element wrapping a hidden checkbox input, a circle div for the icon, and two text spans for Download and Open labels.", "position": 1},
+      {"@type": "HowToStep", "name": "Style the Button Container", "text": "Set fixed dimensions, rounded corners, borders, and position:relative. Hide the checkbox with position:absolute and opacity:0.", "position": 2},
+      {"@type": "HowToStep", "name": "Add Keyframe Animations", "text": "Create @keyframes for pulse (scale and opacity), rotate (360deg spin), and text fade transitions. Apply them via the :checked ~ label selector.", "position": 3},
+      {"@type": "HowToStep", "name": "Connect Checkbox to Animations", "text": "Use input:checked ~ label .circle to trigger pulse, input:checked ~ label .icon to trigger rotation, and input:checked ~ label .text-download to fade out.", "position": 4},
+      {"@type": "HowToStep", "name": "Test and Refine", "text": "Click the button to verify all animations fire in sequence. Adjust timing, colors, and easing to match your design.", "position": 5}
+    ]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: FAQPage ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the button work without JavaScript?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It uses the CSS checkbox hack. A hidden <input type='checkbox'> is placed inside or before a <label>. When the label is clicked, the checkbox toggles to :checked. CSS selectors like input:checked ~ label .element then trigger style changes and animations without any JavaScript."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the CSS checkbox hack?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The checkbox hack is a technique that uses a hidden checkbox input and the :checked pseudo-class to toggle CSS styles. By pairing the checkbox with a <label> element, clicking the label checks the checkbox, and CSS sibling selectors (~) apply new styles to sibling elements — enabling interactive toggles without JavaScript."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I change the button text from Download to something else?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Find the two text spans in the HTML — one for the default text and one for the checked-state text. Simply change the text content inside each span. Make sure to also update the CSS opacity and transform values if you change the number of text elements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I make the button reset back to Download after the animation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, but it requires either JavaScript to uncheck the checkbox after a delay, or a creative CSS-only approach using animation-delay and a second click. For a permanent state change (Download becomes Open), the checkbox hack works perfectly as-is."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I change the pulse color and glow effect?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Find the @keyframes pulse rule and the box-shadow or background-color values within it. Replace the color with your theme's accent color. Also update any box-shadow values on the button container that create the glow. Using CSS custom properties makes this easier."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the checkbox hack accessible for screen readers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The checkbox hack has accessibility limitations. The hidden checkbox should use clip: rect(0,0,0,0) or opacity:0 with position:absolute instead of display:none, so it remains in the accessibility tree. Add aria-label to the label element and ensure keyboard users can focus and toggle the checkbox with Space or Enter."
+        }
+      }
+    ]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: BreadcrumbList ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+      {"@type": "ListItem", "position": 3, "name": "Interactive Download Button", "item": "https://77cod-ing.github.io/Project9.html"}
+    ]
+  }
+  </script>
+
+<!-- ===== ASSETS ===== -->
+<link rel="icon" type="image/png" href="Picture1.png">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+<link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+    crossorigin="anonymous"></script>
+<!-- === API FOR SPEED === -->
+<script src="//instant.page/5.2.0" type="module"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+    crossorigin="anonymous"></script>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+            --premcolo: #00d9ff;
+            --accent2: #ff6b35;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --surface: rgba(255, 255, 255, 0.04);
+            --surface-hover: rgba(0, 217, 255, 0.07);
+            --border: rgba(255, 255, 255, 0.08);
+            --font-head: 'Space Mono', monospace;
+            --font-body: 'DM Sans', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--back);
+            font-family: var(--font-body);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 56px;
+            padding: 0 2.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            color: var(--premcolo);
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: clamp(1rem, 2vw, 2rem);
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: var(--premcolo);
+        }
+
+        /* ===== HAMBURGER ===== */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: white;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 13, 31, 0.97);
+            backdrop-filter: blur(20px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: left 0.5s ease;
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            left: 0;
+        }
+
+        .mobile-menu a {
+            color: var(--text);
+            font-size: 20px;
+            width: 100%;
+            height: 3.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            font-family: var(--font-head);
+            transition: color 0.3s, background 0.3s;
+        }
+
+        .mobile-menu a:first-of-type {
+            border-top: 1px solid var(--border);
+        }
+
+        .mobile-menu a:hover {
+            color: var(--premcolo);
+            background: var(--surface-hover);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 26px;
+            color: white;
+            cursor: pointer;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            border-radius: 50%;
+            transition: transform 0.3s ease, border-color 0.3s;
+        }
+
+        .close-btn:hover {
+            transform: rotate(90deg);
+            border-color: var(--accent2);
+            color: var(--accent2);
+        }
+
+        /* ===== BREADCRUMB ===== */
+        .breadcrumb {
+            padding: 12px 2.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb ol {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .breadcrumb li {
+            display: flex;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .breadcrumb li+li::before {
+            content: "\203A";
+            color: var(--premcolo);
+            margin-right: 6px;
+            font-size: 1.1rem;
+        }
+
+        .breadcrumb a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--premcolo);
+        }
+
+        .breadcrumb [aria-current="page"] {
+            color: var(--premcolo);
+            font-weight: 600;
+        }
+
+        /* ===== BACK BUTTON ===== */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+            margin: 1rem 2.5rem;
+        }
+
+        .back-link:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 3rem 2.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: var(--font-head);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .tag-tutorial {
+            background: rgba(0, 217, 255, 0.12);
+            color: var(--premcolo);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+        }
+
+        .tag-css {
+            background: rgba(0, 217, 255, 0.08);
+            color: #7dd3fc;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .tag-html {
+            background: rgba(255, 102, 0, 0.1);
+            color: #ff9966;
+            border: 1px solid rgba(255, 102, 0, 0.2);
+        }
+
+        .tag-nojs {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+        }
+
+        .read-time {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-head);
+            font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+            line-height: 1.25;
+            color: #fff;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 span {
+            color: var(--premcolo);
+        }
+
+        .hero h1 em {
+            color: #7dd3fc;
+            font-style: normal;
+        }
+
+        .hero-lead {
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            color: var(--text-muted);
+            max-width: 680px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .stat-value {
+            font-family: var(--font-head);
+            font-size: 1.4rem;
+            color: var(--premcolo);
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-img-wrap {
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            box-shadow: 0 0 60px rgba(0, 217, 255, 0.08), 0 32px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .img-caption {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* ===== LAYOUT ===== */
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2.5rem 4rem;
+            align-items: start;
+        }
+
+        /* ===== ARTICLE ===== */
+        .article-body h2 {
+            font-family: var(--font-head);
+            font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+            color: var(--premcolo);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            scroll-margin-top: 80px;
+        }
+
+        .article-body h3 {
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            color: #7dd3fc;
+            margin: 1.8rem 0 0.75rem;
+            scroll-margin-top: 80px;
+        }
+
+        .article-body p {
+            margin-bottom: 1.1rem;
+            color: var(--text);
+        }
+
+        .article-body code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 7px;
+            border-radius: 5px;
+        }
+
+        .article-body ul,
+        .article-body ol {
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 1.1rem;
+        }
+
+        .article-body li {
+            margin-bottom: 9px;
+        }
+
+        .article-body li strong {
+            color: #fff;
+        }
+
+        /* ===== TOC ===== */
+        .toc {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .toc-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--premcolo);
+            margin-bottom: 0.75rem;
+        }
+
+        .toc ol {
+            padding-left: 1.2rem;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+        }
+
+        .toc a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: var(--premcolo);
+        }
+
+        /* ===== FEATURE CARDS ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 1.5rem 0;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            transition: border-color 0.25s, background 0.25s;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(0, 217, 255, 0.3);
+            background: var(--surface-hover);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .feature-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* ===== STEPS ===== */
+        .steps {
+            margin: 1.5rem 0;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 44px 1fr;
+            gap: 1rem;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-num {
+            width: 44px;
+            height: 44px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-head);
+            color: var(--premcolo);
+            font-size: 1rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            margin-top: 0;
+            font-size: 1.05rem;
+        }
+
+        .step-content p {
+            margin-bottom: 0.75rem;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* ===== STEP IMAGES ===== */
+        .step-img-wrap {
+            margin: 1rem 0 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        .step-img-wrap img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            max-height: 380px;
+        }
+
+        /* ===== CODE SECTION ===== */
+        .code-section {
+            margin: 2rem 0;
+            width: 60vw;
+            max-width: 100%;
+        }
+
+        .code-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .code-tabs {
+            display: flex;
+            gap: 4px;
+        }
+
+        .code-tab {
+            padding: 8px 20px;
+            border-radius: 8px 8px 0 0;
+            border: 1px solid var(--border);
+            border-bottom: none;
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .code-tab.active {
+            background: #1e1e2f;
+            color: #fff;
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+
+        .code-tab[data-lang="html"].active {
+            color: #ff6600;
+        }
+
+        .code-tab[data-lang="css"].active {
+            color: #00d9ff;
+        }
+
+        /* ===== PREVIEW BUTTON ===== */
+        .preview-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 22px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 217, 255, 0.4);
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.3px;
+        }
+
+        .preview-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .preview-btn:hover {
+            border-color: var(--premcolo);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .preview-btn:hover::before {
+            opacity: 1;
+        }
+
+        .preview-btn:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        .preview-btn i,
+        .preview-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .preview-btn i {
+            font-size: 16px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .code-panels {
+            position: relative;
+        }
+
+        .code-box {
+            background: #1e1e2f;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+            border-radius: 0 12px 12px 12px;
+            position: relative;
+            display: none;
+        }
+
+        .code-box.active {
+            display: block;
+        }
+
+        .code-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .code-lang-label {
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .copy-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            border-radius: 7px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo);
+        }
+
+        .copy-btn.copied {
+            color: #4ade80;
+            border-color: #4ade80;
+        }
+
+        :not(pre)>code[class*="language-"],
+        pre[class*="language-"] {
+            width: 100%;
+            max-width: 100%;
+            height: 50vh;
+            border-radius: 0 0 12px 12px;
+            overflow-y: auto;
+            overflow-x: auto;
+            margin: 0;
+            tab-size: 2;
+            -moz-tab-size: 2;
+            white-space: pre;
+            word-break: normal;
+        }
+
+        pre::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        pre::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        pre::-webkit-scrollbar-thumb {
+            background: var(--premcolo);
+            border-radius: 10px;
+        }
+
+        /* ===== INFO / WARN BOXES ===== */
+        .info-box {
+            background: rgba(0, 217, 255, 0.06);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-left: 4px solid var(--premcolo);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .info-box strong {
+            color: var(--premcolo);
+        }
+
+        .warn-box {
+            background: rgba(255, 107, 53, 0.06);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-left: 4px solid var(--accent2);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .warn-box strong {
+            color: var(--accent2);
+        }
+
+        /* ===== PRACTICE GRID ===== */
+        .practice-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 1.5rem 0;
+        }
+
+        .practice-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+        }
+
+        .practice-card.do {
+            border-color: rgba(0, 217, 255, 0.2);
+        }
+
+        .practice-card.dont {
+            border-color: rgba(255, 107, 53, 0.2);
+        }
+
+        .practice-card-title {
+            font-family: var(--font-head);
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .practice-card ul {
+            padding-left: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        .practice-card li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        /* ===== FAQ ===== */
+        .faq {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .faq-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: border-color 0.2s;
+        }
+
+        .faq-item[open] {
+            border-color: rgba(0, 217, 255, 0.25);
+        }
+
+        .faq-question {
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            font-family: var(--font-head);
+            font-size: 0.9rem;
+            color: #fff;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            user-select: none;
+        }
+
+        .faq-question::after {
+            content: '+';
+            color: var(--premcolo);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            transition: transform 0.3s;
+        }
+
+        .faq-item[open] .faq-question::after {
+            content: '\2212';
+        }
+
+        .faq-answer {
+            padding: 0 1.25rem 1rem;
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .faq-answer code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* ===== CONCLUSION ===== */
+        .conclusion {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.07), rgba(0, 140, 160, 0.05));
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 16px;
+            padding: 1.75rem 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .conclusion h2 {
+            border: none;
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 1.5rem 0;
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            position: sticky;
+            top: 72px;
+        }
+
+        .sidebar-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-header {
+            padding: 14px 16px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--premcolo);
+            border-bottom: 1px solid var(--border);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .related-list {
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .related-card {
+            display: block;
+            text-decoration: none;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 16/9;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .related-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+
+        .related-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .related-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+        .related-card-title {
+            position: absolute;
+            bottom: 8px;
+            left: 10px;
+            right: 10px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* ===== PREVIEW MODAL ===== */
+        .preview-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 5, 15, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+        }
+
+        .preview-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .preview-modal {
+            width: 92vw;
+            max-width: 700px;
+            height: 85vh;
+            background: #0a0e1a;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7);
+            transform: scale(0.92) translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .preview-overlay.open .preview-modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .preview-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
+        }
+
+        .preview-modal-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .preview-modal-title i {
+            color: var(--premcolo);
+            font-size: 16px;
+        }
+
+        .preview-modal-title strong {
+            color: #fff;
+        }
+
+        .preview-dots {
+            display: flex;
+            gap: 7px;
+        }
+
+        .preview-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, filter 0.2s;
+        }
+
+        .preview-dot:hover {
+            transform: scale(1.2);
+            filter: brightness(1.3);
+        }
+
+        .preview-dot.red {
+            background: #ff5f57;
+        }
+
+        .preview-dot.yellow {
+            background: #febc2e;
+        }
+
+        .preview-dot.green {
+            background: #28c840;
+        }
+
+        .preview-close-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .preview-close-btn:hover {
+            border-color: var(--accent2);
+            color: var(--accent2);
+            background: rgba(255, 107, 53, 0.08);
+        }
+
+        .preview-iframe-wrap {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .preview-iframe-wrap iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            background: #000;
+        }
+
+        .preview-loading {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            background: #0a0e1a;
+            z-index: 2;
+            transition: opacity 0.4s;
+        }
+
+        .preview-loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .preview-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(0, 217, 255, 0.15);
+            border-top-color: var(--premcolo);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
+        .preview-loading-text {
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .preview-hint {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 6px 16px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            color: var(--text-muted);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.5s 0.8s;
+            white-space: nowrap;
+            z-index: 3;
+        }
+
+        .preview-hint.show {
+            opacity: 1;
+        }
+
+        .preview-hint i {
+            color: var(--premcolo);
+            margin-right: 4px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 1fr;
+                padding: 1.5rem 1.25rem;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .related-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .related-card {
+                flex: 1 1 calc(50% - 8px);
+            }
+
+            .hero {
+                padding: 2rem 1.25rem 1.5rem;
+            }
+
+            .navbar {
+                padding: 0 1.25rem;
+            }
+
+            .breadcrumb {
+                padding: 10px 1.25rem;
+            }
+
+            .back-link {
+                margin: 0.75rem 1.25rem;
+            }
+
+            .practice-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .code-section {
+                width: 85vw;
+            }
+        }
+
+        @media (max-width: 910px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                right: 1.25rem;
+                top: 14px;
+                z-index: 101;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero-stats {
+                gap: 1.2rem;
+            }
+
+            .code-tab {
+                padding: 7px 13px;
+                font-size: 12px;
+            }
+
+            .related-card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<header class="navbar">
-    <a href="#" class="logo">
-      <span class="logo-icon">{ / }</span> 77cod_ing
-    </a>
-    <nav class="nav-links">
-      <a href="https://77cod-ing.github.io">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html">Terms & Conditions</a>
-    </nav>
-  </header>
-  <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">{ / }</span> 77cod_ing
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="Privacy Policy.html">Privacy Policy</a>
+            <a href="Terms & Conditions.html">Terms &amp; Conditions</a>
+        </nav>
+    </header>
+
+    <button class="hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+        <span class="close-btn" id="closeBtn" aria-label="Close menu">&times;</span>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="Privacy Policy.html">Privacy Policy</a>
+        <a href="Terms & Conditions.html">Terms &amp; Conditions</a>
     </div>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <span class="close-btn" id="closeBtn">&times;</span>
-    <a href="index.html"style="border-top: 2px solid #fff;height: 5rem;">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html" style="border-bottom: 2px solid #fff;">Terms & Conditions</a>
-  </div>
-  <div class="Ret">
-    <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
-  </div>
-  <div class="img">
-    <img src="image copy 22.png" alt="subscribe.box">
-  </div>
-  <div class="par">
-  <span>
-<h1>Build an Interactive Download Button — HTML/CSS</h1>
-<p>
-  Buttons with interactive animations improve user experience and make websites feel dynamic. 
-  In this tutorial, you’ll learn how to create a <strong>download button</strong> 
-  that transforms into an "Open" button with animations using only HTML and CSS. 
-  This button features pulsing effects, rotating icons, and text transitions.
-</p>
+    <!-- ===== BREADCRUMB ===== -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
+            <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+            <li><span aria-current="page">Interactive Download Button</span></li>
+        </ol>
+    </nav>
 
-<div class="highlight">
-  <p><strong>Quick Summary:</strong> Set up an HTML structure with a checkbox input, 
-  style the button container and circle with CSS, 
-  and add keyframe animations for pulses, rotation, and text transitions.</p>
+    <!-- ===== BACK BUTTON ===== -->
+    <a href="projects.html" class="back-link" aria-label="Return to Projects">
+        <i class='bx bx-arrow-back'></i> Return to Projects
+    </a>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-labelledby="main-heading">
+        <div class="hero-meta">
+            <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+            <span class="tag tag-html">HTML</span>
+            <span class="tag tag-css">CSS</span>
+            <span class="tag tag-nojs">Checkbox Hack</span>
+            <span class="read-time"><i class='bx bx-time'></i> ~8 min read</span>
+        </div>
+
+        <h1 id="main-heading">
+            <span>Interactive Download Button</span> with<br>
+            <em>Pulse, Rotate &amp; Text Transitions</em>
+        </h1>
+
+        <p class="hero-lead">
+            A complete tutorial on building a download button that transforms into an "Open" button
+            with pulsing circles, rotating icons, and smooth text transitions — all triggered by a
+            hidden checkbox. Pure HTML and CSS, no JavaScript for animations.
+        </p>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-value">4</span>
+                <span class="stat-label">Build Steps</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">0 JS</span>
+                <span class="stat-label">For Animations</span>
+            </div>
+            <div class="stat-value">3</span>
+                <span class="stat-label">Keyframe Effects</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">Free</span>
+                <span class="stat-label">Source Code</span>
+            </div>
+        </div>
+
+        <div class="hero-img-wrap">
+            <img src="image copy 22.png"
+                alt="Interactive download button showing Download state and Open state with pulsing circle animation and rotating arrow icon"
+                class="hero-img" width="1200" height="500" loading="eager" fetchpriority="high">
+        </div>
+        <p class="img-caption">Final result: a button that pulses, rotates, and transitions text from Download to Open
+            on click</p>
+    </section>
+
+    <!-- ===== MAIN LAYOUT ===== -->
+    <div class="layout">
+
+        <!-- ===== ARTICLE BODY ===== -->
+        <main class="article-body" id="main-content">
+
+            <!-- TOC -->
+            <nav class="toc" aria-label="Table of contents">
+                <div class="toc-title"><i class='bx bx-list-ul'></i> Table of Contents</div>
+                <ol>
+                    <li><a href="#what-is">What Is an Interactive Download Button?</a></li>
+                    <li><a href="#why-use">Why Use This Button Design?</a></li>
+                    <li><a href="#features">Key Features</a></li>
+                    <li><a href="#source-code">Full Source Code (HTML + CSS)</a></li>
+                    <li><a href="#how-it-works">How It Works — Step by Step</a></li>
+                    <li><a href="#best-practices">Best Practices &amp; Common Mistakes</a></li>
+                    <li><a href="#faq">Frequently Asked Questions</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ol>
+            </nav>
+
+            <!-- What Is -->
+            <section id="what-is">
+                <h2>What Is an Interactive Download Button?</h2>
+                <p>
+                    An <strong>interactive download button</strong> is a UI component that responds visually when
+                    clicked,
+                    transforming from a "Download" state to an "Open" state with coordinated animations. Unlike a simple
+                    hover effect, this button uses a <strong>hidden checkbox</strong> to detect clicks and trigger
+                    multiple
+                    CSS animations simultaneously — a pulsing circle, a rotating icon, and fading text transitions.
+                </p>
+                <p>
+                    The technique is built entirely with HTML and CSS using the <strong>checkbox hack</strong>: a hidden
+                    <code>&lt;input type="checkbox"&gt;</code> paired with a <code>&lt;label&gt;</code>. When the label
+                    is clicked, the checkbox becomes <code>:checked</code>, and CSS sibling selectors apply new styles
+                    and
+                    keyframe animations to child elements.
+                </p>
+            </section>
+
+            <hr>
+
+            <!-- Why Use -->
+            <section id="why-use">
+                <h2>Why Use This Button Design?</h2>
+                <ul>
+                    <li><strong>Clear Visual Feedback:</strong> Users see an immediate, multi-layered animation that
+                        confirms
+                        their click was registered — far more engaging than a simple color change.</li>
+                    <li><strong>Modern UI Pattern:</strong> State-changing buttons (Download → Open, Install → Launch)
+                        are
+                        used by major platforms like Google Play, App Store, and desktop app stores.</li>
+                    <li><strong>No JavaScript for Animations:</strong> All visual effects are CSS keyframes — no
+                        scripts,
+                        no libraries, no render-blocking overhead.</li>
+                    <li><strong>Customizable:</strong> Change colors, icon, text labels, timing, and animation types to
+                        match
+                        any design system.</li>
+                    <li><strong>Lightweight:</strong> The entire effect uses minimal HTML and CSS — tiny file size with
+                        maximum visual impact.</li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <!-- Features -->
+            <section id="features">
+                <h2>Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: var(--premcolo);"><i
+                                class='bx bx-radio-circle-marked'></i></div>
+                        <div class="feature-title">Pulse Animation</div>
+                        <div class="feature-desc">A circle element pulses with scale and opacity keyframes on click,
+                            creating a ripple-like feedback effect.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: var(--accent2);"><i class='bx bx-sync'></i></div>
+                        <div class="feature-title">Icon Rotation</div>
+                        <div class="feature-desc">The download arrow icon rotates 360 degrees and fades out, signaling
+                            the action is in progress.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #7dd3fc;"><i class='bx bx-text-shadow'></i></div>
+                        <div class="feature-title">Text Transition</div>
+                        <div class="feature-desc">"Download" text fades out while "Open" text fades in, clearly
+                            communicating the new state.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #4ade80;"><i class='bx bx-check-square'></i></div>
+                        <div class="feature-title">Checkbox Hack</div>
+                        <div class="feature-desc">Uses a hidden checkbox input to detect clicks — no JavaScript event
+                            listeners needed.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #fbbf24;"><i class='bx bx-layer'></i></div>
+                        <div class="feature-title">Pseudo-Elements</div>
+                        <div class="feature-desc">::before and ::after pseudo-elements create expanding backgrounds and
+                            glow effects without extra HTML.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #c084fc;"><i class='bx bx-timer'></i></div>
+                        <div class="feature-title">Staggered Timing</div>
+                        <div class="feature-desc">Each animation starts at a different delay — pulse first, then
+                            rotation, then text — creating a sequenced feel.</div>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- Source Code -->
+            <div class="code-section" id="source-code">
+                <div class="code-toolbar">
+                    <div class="code-tabs" role="tablist" aria-label="Code files">
+                        <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                            aria-controls="panel-html">HTML</button>
+                        <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+                            aria-controls="panel-css">CSS</button>
+                    </div>
+                    <button class="preview-btn" id="previewBtn"><i class='bx bx-play-circle'></i><span>Preview
+                            Result</span></button>
+                </div>
+                <div class="code-panels">
+                    <div class="code-box active" id="panel-html" role="tabpanel">
+                        <div class="code-header">
+                            <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                            <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+                        </div>
+                        <pre><code id="code1" class="language-html"></code></pre>
+                    </div>
+                    <div class="code-box" id="panel-css" role="tabpanel">
+                        <div class="code-header">
+                            <span class="code-lang-label" style="color:#00d9ff;">CSS — style.css</span>
+                            <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+                        </div>
+                        <pre><code id="code2" class="language-css"></code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- How It Works -->
+            <section id="how-it-works">
+                <h2>How It Works — Step by Step</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-num">01</div>
+                        <div class="step-content">
+                            <h3>Create the HTML Structure with Checkbox</h3>
+                            <p>
+                                Use a <code>&lt;label&gt;</code> element wrapping a hidden
+                                <code>&lt;input type="checkbox"&gt;</code>, a circle <code>&lt;div&gt;</code> for the
+                                icon area, and two text <code>&lt;span&gt;</code> elements for "Download" and "Open"
+                                labels.
+                                The label makes the entire button clickable.
+                            </p>
+                            <div class="step-img-wrap">
+                                <img src="image copy 25.png"
+                                    alt="HTML structure for interactive download button showing checkbox input, label, circle div, and text spans"
+                                    loading="lazy" width="900" height="380">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">02</div>
+                        <div class="step-content">
+                            <h3>Style the Button Container and Hide Checkbox</h3>
+                            <p>
+                                Set fixed dimensions, rounded corners, and borders on the label. Hide the checkbox with
+                                <code>position: absolute; opacity: 0</code> (not <code>display: none</code> — it must
+                                remain
+                                functional). Style the circle, icon, and text with default-state positioning and colors.
+                            </p>
+                            <div class="step-img-wrap">
+                                <img src="image copy 27.png"
+                                    alt="CSS styling for the button container showing positioning, border-radius, and hidden checkbox"
+                                    loading="lazy" width="900" height="380">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">03</div>
+                        <div class="step-content">
+                            <h3>Add Keyframe Animations for All Effects</h3>
+                            <p>
+                                Create <code>@keyframes pulse</code> for scale/opacity, <code>@keyframes rotate</code>
+                                for the
+                                icon spin, and transition rules for text fade. Apply them using the
+                                <code>input:checked ~ label</code> selector so they fire when the checkbox is toggled.
+                            </p>
+                            <div class="step-img-wrap">
+                                <img src="image copy 26.png"
+                                    alt="CSS keyframe animations showing pulse, rotate, and text transition definitions"
+                                    loading="lazy" width="900" height="380">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">04</div>
+                        <div class="step-content">
+                            <h3>Preview the Final Interactive Button</h3>
+                            <p>
+                                When clicked, the button fires a sequenced animation: the circle pulses, the arrow icon
+                                rotates and fades, "Download" fades out, and "Open" fades in. The entire state change
+                                is permanent until the page is refreshed — all without any JavaScript.
+                            </p>
+                            <div class="step-img-wrap">
+                                <img src="image copy 22.png"
+                                    alt="Final interactive download button showing both Download and Open states with animations"
+                                    loading="lazy" width="900" height="380">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <strong>💡 CSS Trick:</strong> The checkbox hack works because CSS has no parent selector, but the
+                    <code>~</code> (general sibling combinator) lets you select siblings that come <em>after</em> the
+                    checkbox. This is why the <code>&lt;input&gt;</code> must be placed before the
+                    <code>&lt;label&gt;</code> in the HTML source order.
+                </div>
+                <div class="warn-box">
+                    <strong>⚠️ Accessibility Note:</strong> The checkbox hack has limitations. Always hide the input
+                    with <code>opacity: 0; position: absolute</code> — never <code>display: none</code>, which removes
+                    it from the accessibility tree. Add <code>aria-label</code> to the label and test with keyboard
+                    navigation (Tab + Space/Enter).
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- Best Practices -->
+            <section id="best-practices">
+                <h2>Best Practices &amp; Common Mistakes</h2>
+                <div class="practice-grid">
+                    <div class="practice-card do">
+                        <div class="practice-card-title">Do</div>
+                        <ul>
+                            <li>Keep button text <strong>short and clear</strong> — "Download" / "Open" is instantly
+                                understood</li>
+                            <li>Use <code>opacity: 0</code> to hide the checkbox — keeps it accessible</li>
+                            <li>Stagger animation delays for a <strong>sequenced feel</strong> — pulse → rotate → text
+                            </li>
+                            <li>Maintain <strong>high contrast</strong> between text/icon and background in both states
+                            </li>
+                            <li>Add <code>:focus-visible</code> styles for keyboard users</li>
+                            <li>Test on mobile — touch targets should be at least <strong>44×44px</strong></li>
+                        </ul>
+                    </div>
+                    <div class="practice-card dont">
+                        <div class="practice-card-title">Don't</div>
+                        <ul>
+                            <li>Use <code>display: none</code> on the checkbox — breaks accessibility and keyboard
+                                support</li>
+                            <li>Overcomplicate with too many simultaneous animations — causes visual chaos</li>
+                            <li>Use confusing text labels like "Click Here" or "Submit" — be specific about the action
+                            </li>
+                            <li>Forget <code>cursor: pointer</code> on the label — users won't know it's clickable</li>
+                            <li>Set animation durations above 2 seconds — feels unresponsive</li>
+                            <li>Ignore the <code>:checked</code> state — button won't change visually on click</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- FAQ -->
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq">
+                    <details class="faq-item">
+                        <summary class="faq-question">How does the button work without JavaScript?</summary>
+                        <div class="faq-answer">
+                            It uses the CSS checkbox hack. A hidden <code>&lt;input type="checkbox"&gt;</code> is placed
+                            before a <code>&lt;label&gt;</code>. When the label is clicked, the checkbox toggles to
+                            <code>:checked</code>. CSS selectors like <code>input:checked ~ label .element</code> then
+                            trigger style changes and keyframe animations without any JavaScript.
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">What is the CSS checkbox hack?</summary>
+                        <div class="faq-answer">
+                            The checkbox hack is a technique that uses a hidden checkbox input and the
+                            <code>:checked</code>
+                            pseudo-class to toggle CSS styles. By pairing the checkbox with a
+                            <code>&lt;label&gt;</code>,
+                            clicking the label checks the checkbox, and CSS sibling selectors (<code>~</code>) apply new
+                            styles to sibling elements — enabling interactive toggles without JavaScript.
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">How do I change the button text from Download to something else?
+                        </summary>
+                        <div class="faq-answer">
+                            Find the two text spans in the HTML — one for the default text and one for the checked-state
+                            text. Simply change the text content inside each span. Make sure to also update the CSS
+                            opacity and transform values if you change the number of text elements.
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Can I make the button reset back to Download after the animation?
+                        </summary>
+                        <div class="faq-answer">
+                            Yes, but it requires either JavaScript to uncheck the checkbox after a delay, or a creative
+                            CSS-only approach using <code>animation-delay</code> and a second click. For a permanent
+                            state
+                            change (Download becomes Open), the checkbox hack works perfectly as-is.
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">How do I change the pulse color and glow effect?</summary>
+                        <div class="faq-answer">
+                            Find the <code>@keyframes pulse</code> rule and the <code>box-shadow</code> or
+                            <code>background-color</code> values within it. Replace the color with your theme's accent
+                            color. Also update any <code>box-shadow</code> values on the button container. Using CSS
+                            custom properties makes this easier to maintain.
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Is the checkbox hack accessible for screen readers?</summary>
+                        <div class="faq-answer">
+                            The checkbox hack has accessibility limitations. The hidden checkbox should use
+                            <code>clip: rect(0,0,0,0)</code> or <code>opacity:0</code> with
+                            <code>position:absolute</code>
+                            instead of <code>display:none</code>, so it remains in the accessibility tree. Add
+                            <code>aria-label</code> to the label element and ensure keyboard users can focus and toggle
+                            the checkbox with Space or Enter.
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- Conclusion -->
+            <section id="conclusion" class="conclusion">
+                <h2>Conclusion</h2>
+                <p>
+                    The <strong>interactive download button</strong> showcases how creative CSS can replace JavaScript
+                    for common UI interactions. By combining the <strong>checkbox hack</strong>, <strong>keyframe
+                        animations</strong>, and <strong>staggered timing</strong>, you get a multi-stage button
+                    transformation that feels polished and professional — with zero JavaScript.
+                </p>
+                <p>
+                    Use this pattern for download buttons, install buttons, save buttons, or any action where
+                    the state changes after the first click. Adjust the colors, icons, and animation timing to
+                    match your brand — and ship a delightful micro-interaction in minutes.
+                </p>
+                <p style="color:var(--text-muted);font-size:14px;margin-bottom:0;">
+                    Found this useful? Explore the related projects in the sidebar for more modern UI components
+                    built with pure HTML and CSS.
+                </p>
+            </section>
+
+        </main>
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar" aria-label="Related projects">
+            <div class="sidebar-box">
+                <div class="sidebar-header"><i class='bx bx-link'></i> Related Projects</div>
+                <div class="related-list">
+                    <a class="related-card" href="expanding-button.html">
+                        <img src="https://77cod-ing.github.io/image%20copy%2076.png" alt="Expanding Animated Button"
+                            loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Expanding Animated Button — Circle &amp; Arrows</div>
+                    </a>
+                    <a class="related-card" href="Project10.html">
+                        <img src="https://77cod-ing.github.io/image%20copy%2024.png" alt="Star Rating System"
+                            loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Interactive Star Rating System — HTML &amp; CSS</div>
+                    </a>
+                    <a class="related-card" href="Project16.html">
+                        <img src="https://77cod-ing.github.io/image%20copy%2047.png" alt="Skewed Navigation Menu"
+                            loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Skewed Menu with Expanding Hover Effects</div>
+                    </a>
+                    <a class="related-card" href="Project14.html">
+                        <img src="https://77cod-ing.github.io/image%20copy%2040.png" alt="Neon Card Animation"
+                            loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Electric Neon Card Animation — HTML, CSS &amp; SVG</div>
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+<!-- ===== PREVIEW MODAL ===== -->
+<div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+    aria-label="Live preview of the CSS flexible accordion image card gallery">
+    <div class="preview-modal">
+        <div class="preview-modal-header">
+            <div class="preview-modal-title">
+                <i class='bx bx-show'></i>
+                <strong>Live Preview</strong> — Skewed Menu
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <div class="preview-dots">
+                    <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+                    <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+                    <button class="preview-dot green" aria-label="Maximize" disabled></button>
+                </div>
+                <button class="preview-close-btn" id="previewCloseBtn">
+                    <i class='bx bx-x'></i> Close
+                </button>
+            </div>
+        </div>
+        <div class="preview-iframe-wrap">
+            <div class="preview-loading" id="previewLoading">
+                <div class="preview-spinner"></div>
+                <span class="preview-loading-text">Loading preview...</span>
+                <div class="preview-loading-files">
+                    <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+                    <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+                </div>
+            </div>
+            <iframe id="previewIframe" title="Preview of CSS flexible accordion image card gallery"
+                sandbox="allow-scripts allow-same-origin"></iframe>
+            <div class="preview-hint" id="previewHint">
+                <i class='bx bx-cursor'></i> Hover over the menu items to see the expand effect
+            </div>
+        </div>
+    </div>
 </div>
 
-<h2>How the Interactive Download Button Works</h2>
-<p>
-  The button uses a hidden checkbox to detect clicks. When checked:
-  <ul>
-    <li>The circle pulses with a <code>pulse</code> animation.</li>
-    <li>An icon rotates and disappears with the <code>rotate</code> animation.</li>
-    <li>The "Download" text fades out, and "Open" text fades in.</li>
-    <li>Additional effects like scaling and shadow enhance the visual feedback.</li>
-  </ul>
-</p>
+<!-- ===== SCRIPTS ===== -->
+<script>
+    /*
+      ============================================
+        Gist URLs — update with the actual Gist raw URL for this project
+      ============================================
+    */
+    const gistBase = "https://gist.githubusercontent.com/77cod-ing/ca5f90be1678a5ce306071d48f8d407a/raw/";
 
-<h2>Why Use This Type of Button?</h2>
-<ul>
-  <li><strong>Improved User Experience:</strong> Users see a clear visual action.</li>
-  <li><strong>Modern Design:</strong> Adds professional-looking UI interactions.</li>
-  <li><strong>Pure CSS:</strong> No JavaScript is required for animations.</li>
-  <li><strong>Customizable:</strong> Easily change colors, icon, text, or timing.</li>
-</ul>
+    const htmlUrl = gistBase + "index.html";
+    const cssUrl = gistBase + "style.css";
 
-<h2>Steps to Build the Interactive Button</h2>
+    let cachedHTML = "";
+    let cachedCSS = "";
 
-<h3>1. Structure the HTML</h3>
-<p>
-  Use a <code>label</code> with a hidden checkbox input, a circle for the icon, 
-  and two text spans for "Download" and "Open".
-</p>
-<div class="img"><img src="image copy 25.png" alt="HTML structure for interactive download button"></div>
-
-<h3>2. Add CSS Styling</h3>
-<p>
-  Style the button container with borders, rounded corners, and positioning. 
-  Use <code>::before</code> and <code>::after</code> pseudo-elements 
-  for animations like pulse, rotation, and background expansion.
-</p>
-<div class="img"><img src="image copy 27.png" alt="CSS styling for interactive button"></div>
-
-<h3>3. Add Keyframe Animations</h3>
-<p>
-  Create keyframes for pulse, installing, rotation, and text transitions. 
-  Adjust timing to make the effect smooth and realistic.
-</p>
-<div class="img"><img src="image copy 26.png" alt="CSS keyframe animations for download button"></div>
-
-<h3>4. Preview the Final Button</h3>
-<p>
-  Once complete, clicking the button triggers animations:
-  <ul>
-    <li>Pulsing circle effect.</li>
-    <li>Rotating arrow icon disappearing.</li>
-    <li>Text changes from "Download" to "Open".</li>
-    <li>Smooth scaling and shadow effects enhance feedback.</li>
-  </ul>
-</p>
-<div class="img"><img src="image copy 22.png" alt="Final interactive download button preview"></div>
-
-<h2>Best Practices for Button Design</h2>
-<ul>
-  <li><strong>Keep Text Short:</strong> Ensure messages like "Download" or "Open" are readable.</li>
-  <li><strong>Maintain Contrast:</strong> Text and icon colors should be visible against the background.</li>
-  <li><strong>Responsive Layout:</strong> Button should adapt well to different screen sizes.</li>
-  <li><strong>Smooth Animations:</strong> Use easing for natural transitions without jarring movements.</li>
-</ul>
-
-<h2>Common Mistakes to Avoid</h2>
-<ul>
-  <li>Overcomplicating animations which distract users.</li>
-  <li>Using too many text labels or confusing messages.</li>
-  <li>Neglecting hover/focus effects for accessibility.</li>
-  <li>Not testing the button on mobile or different browsers.</li>
-</ul>
-
-<h2>Conclusion</h2>
-<p>
-  Creating an <strong>interactive download button</strong> with HTML and CSS 
-  is a fun and practical way to enhance your website. 
-  With pulsating circles, rotating icons, and smooth text transitions, 
-  you can deliver clear visual feedback to users and make your UI more engaging.
-</p>
-
-<div class="highlight">
-  <p><strong>SEO Keywords:</strong> HTML CSS button animation, interactive download button, 
-  CSS keyframes animation, pulse effect, rotate icon, text transition, modern UI button</p>
-</div>
-
-
-  <div class="con1">
-    <div class="countdown" id="countdown">
-    <span id="number">10</span> wait...
-  </div>
-
-  <div class="link-box" id="linkBox">
-    <a href="https://gist.github.com/77cod-ing/ca5f90be1678a5ce306071d48f8d407a" target="_blank">Go to code</a>
-  </div>
-  </div>
-
-  <script>
-    let counter = 10;
-    let timer = null;
-    const countdownEl = document.getElementById("countdown");
-    const numberEl = document.getElementById("number");
-    const linkBox = document.getElementById("linkBox");
-
-    function startCountdown() {
-      if (timer) return;
-      timer = setInterval(() => {
-        counter--;
-        numberEl.textContent = counter;
-
-        if (counter === 0) {
-          clearInterval(timer);
-          timer = null;
-          countdownEl.style.display = "none"; 
-          linkBox.style.display = "block";
+    async function loadCode(url, elementId, lang) {
+        try {
+            const res = await fetch(url);
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const text = await res.text();
+            const el = document.getElementById(elementId);
+            el.textContent = text;
+            el.className = `language-${lang}`;
+            Prism.highlightElement(el);
+            if (lang === "html") cachedHTML = text;
+            if (lang === "css") cachedCSS = text;
+        } catch (e) {
+            const el = document.getElementById(elementId);
+            if (el) el.textContent = `/* Failed to load: ${e.message} */`;
         }
-      }, 1000);
     }
 
-    function stopCountdown() {
-      clearInterval(timer);
-      timer = null;
+    loadCode(htmlUrl, "code1", "html");
+    loadCode(cssUrl, "code2", "css");
+
+    /* ===== Tabs ===== */
+    document.querySelectorAll(".code-tab").forEach(tab => {
+        tab.addEventListener("click", () => {
+            const lang = tab.dataset.lang;
+            document.querySelectorAll(".code-tab").forEach(t => {
+                t.classList.remove("active");
+                t.setAttribute("aria-selected", "false");
+            });
+            document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+            tab.classList.add("active");
+            tab.setAttribute("aria-selected", "true");
+            const panelMap = { html: "panel-html", css: "panel-css" };
+            document.getElementById(panelMap[lang]).classList.add("active");
+        });
+    });
+
+    /* ===== Copy buttons ===== */
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+        btn.addEventListener("click", async () => {
+            const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+            if (!code) return;
+            try {
+                await navigator.clipboard.writeText(code);
+                btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+                btn.classList.add("copied");
+                setTimeout(() => {
+                    btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
+                    btn.classList.remove("copied");
+                }, 2000);
+            } catch { btn.textContent = "Error"; }
+        });
+    });
+
+    /* ===== Countdown timer ===== */
+    let seconds = 5;
+    const countdownDisplay = document.getElementById("countdownDisplay");
+    const gistLinkWrapper = document.getElementById("gistLinkWrapper");
+
+    const countdownInterval = setInterval(() => {
+        seconds--;
+        countdownDisplay.textContent = String(seconds).padStart(2, "0");
+        if (seconds <= 0) {
+            clearInterval(countdownInterval);
+            gistLinkWrapper.classList.add("visible");
+            countdownDisplay.style.display = "none";
+            document.querySelector(".countdown-label").textContent = "✅ Source Code Available";
+        }
+    }, 1000);
+
+    /* ===== Preview modal ===== */
+    const previewOverlay = document.getElementById("previewOverlay");
+    const previewIframe = document.getElementById("previewIframe");
+    const previewLoading = document.getElementById("previewLoading");
+    const previewHint = document.getElementById("previewHint");
+    const previewBtn = document.getElementById("previewBtn");
+    const previewCloseBtn = document.getElementById("previewCloseBtn");
+    const previewDotClose = document.getElementById("previewDotClose");
+    const tagHTML = document.getElementById("tagHTML");
+    const tagCSS = document.getElementById("tagCSS");
+
+    function openPreview() {
+        previewOverlay.classList.add("open");
+        document.body.style.overflow = "hidden";
+        previewLoading.classList.remove("hidden");
+        previewHint.classList.remove("show");
+        previewBtn.classList.add("loading");
+        tagHTML.classList.remove("loaded");
+        tagCSS.classList.remove("loaded");
+        buildPreview();
     }
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          startCountdown();
+    function closePreview() {
+        previewOverlay.classList.remove("open");
+        document.body.style.overflow = "";
+        previewIframe.srcdoc = "";
+        previewBtn.classList.remove("loading");
+    }
+
+    async function buildPreview() {
+        if (cachedHTML && cachedCSS) {
+            tagHTML.classList.add("loaded");
+            tagCSS.classList.add("loaded");
+            injectPreview(cachedHTML, cachedCSS);
+            return;
+        }
+        try {
+            const fetches = [];
+            if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
+            if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
+            if (cachedHTML) tagHTML.classList.add("loaded");
+            if (cachedCSS) tagCSS.classList.add("loaded");
+            await Promise.all(fetches);
+            injectPreview(cachedHTML, cachedCSS);
+        } catch (e) {
+            previewLoading.innerHTML = `
+          <i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i>
+          <span class="preview-loading-text" style="color:var(--accent2);">Failed to load preview: ${e.message}</span>
+        `;
+            previewBtn.classList.remove("loading");
+        }
+    }
+
+    function injectPreview(html, css) {
+        let combined = html;
+        if (combined.includes('<link') && /style\.css/i.test(combined)) {
+            combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
+        } else if (combined.includes("</head>")) {
+            combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
         } else {
-          stopCountdown();
+            combined = `<style>${css}</style>\n${combined}`;
         }
-      });
-    }, { threshold: 1.0 });
+        previewIframe.srcdoc = combined;
+        previewIframe.addEventListener("load", function onLoad() {
+            previewLoading.classList.add("hidden");
+            previewBtn.classList.remove("loading");
+            setTimeout(() => {
+                previewHint.classList.add("show");
+                setTimeout(() => previewHint.classList.remove("show"), 4000);
+            }, 300);
+            previewIframe.removeEventListener("load", onLoad);
+        });
+    }
 
-    observer.observe(countdownEl);
-     /**hamburger**/
-
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeBtn = document.getElementById('closeBtn');
-
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.add('active');
-    });
-
-    closeBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-    });
-    
-
-    window.addEventListener("scroll", function() {
-  const hamburger = document.querySelector(".hamburger");
-  if (window.scrollY > 50) {
-    hamburger.classList.add("scrolled");
-  } else {
-    hamburger.classList.remove("scrolled");
-  }
-});
-  </script>
+    previewBtn.addEventListener("click", openPreview);
+    previewCloseBtn.addEventListener("click", closePreview);
+    previewDotClose.addEventListener("click", closePreview);
+    previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
+</script>
 </body>
 
 </html>
-
-
