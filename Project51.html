@@ -1,0 +1,2302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== PRIMARY SEO META ===== -->
+    <title>TechHub Landing Page UI Design – Responsive HTML CSS JavaScript Template (Free Source Code)</title>
+
+    <meta name="description"
+        content="Build a modern TechHub electronics landing page with HTML, CSS, and JavaScript. Learn responsive layouts, hero sections, product showcases, newsletter signup, and download the free source code.">
+
+    <meta name="keywords"
+        content="TechHub landing page, electronics landing page HTML CSS JavaScript, responsive ecommerce landing page, modern landing page UI, product showcase HTML CSS, hero section design, newsletter subscribe form, frontend project, landing page template, free source code, HTML CSS JavaScript projects">
+
+    <meta name="author" content="77cod_ing">
+
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <link rel="canonical" href="https://77cod-ing.github.io/Project51">
+
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:type" content="article">
+
+    <meta property="og:title" content="TechHub Landing Page – Responsive HTML CSS JavaScript UI Template">
+
+    <meta property="og:description"
+        content="Create a premium electronics landing page with responsive HTML, CSS, and JavaScript. Includes hero section, featured products, newsletter form, animations, and free source code.">
+
+    <meta property="og:image" content="https://i.suar.me/LpPE3/m">
+
+    <meta property="og:url" content="https://77cod-ing.github.io/Project-TechHub-Landing-Page.html">
+
+    <meta property="og:site_name" content="77cod_ing">
+
+    <meta property="article:published_time" content="2026-06-27T00:00:00Z">
+
+    <meta property="article:modified_time" content="2026-06-27T00:00:00Z">
+
+    <meta property="article:author" content="77cod_ing">
+
+    <meta property="article:section" content="Landing Page UI">
+
+    <meta property="article:tag" content="HTML,CSS,JavaScript,Landing Page,Electronics,Ecommerce,UI Design">
+
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="TechHub Landing Page UI Design | HTML CSS JavaScript">
+
+    <meta name="twitter:description"
+        content="Build a responsive electronics landing page with HTML, CSS, and JavaScript. Free source code included.">
+
+    <meta name="twitter:image" content="https://i.suar.me/LpPE3/m">
+
+    <!-- ===== SCHEMA: TechArticle ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "TechHub Landing Page UI Design with HTML CSS JavaScript",
+    "description": "A complete guide to building a modern floating placeholder subscribe box for websites, covering design best practices, audience growth strategies, newsletter optimization, and Google AdSense approval tips.",
+    "image": "https://i.suar.me/LpPE3/m",
+    "datePublished": "2026-06-12",
+    "dateModified": "2026-06-12",
+    "author": {
+      "@type": "Person",
+      "name": "77cod_ing",
+      "url": "https://77cod-ing.github.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "77cod_ing",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Picture1.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://77cod-ing.github.io/"
+    },
+    "articleSection": "Landing Page UI",
+    "keywords": "TechHub landing page, electronics landing page HTML CSS JavaScript, responsive landing page, ecommerce UI",
+    "timeRequired": "PT10M",
+    "educationalLevel": "Beginner",
+    "teaches": [ "Landing Page Design", "Responsive Layout", "Hero Section", "Product Showcase", "Newsletter Form", "Modern CSS UI"
+]
+    }
+  </script>
+
+    <!-- ===== SCHEMA: HowTo ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Build a Responsive TechHub Landing Page with HTML CSS JavaScript",
+    "description": "Learn how to create a modern electronics landing page featuring a responsive hero section, product cards, newsletter signup, and interactive UI components.",
+    "image": "https://i.suar.me/LpPE3/m",
+    "totalTime": "PT10M",
+    "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "0"},
+    "supply": [
+      {"@type": "HowToSupply", "name": "Text editor (VS Code)"},
+      {"@type": "HowToSupply", "name": "A modern web browser"}
+    ],
+    "tool": [
+      {"@type": "HowToTool", "name": "HTML"},
+      {"@type": "HowToTool", "name": "CSS"}
+    ],
+    "step": [
+      {"@type": "HowToStep", "name": "Design the Subscribe Box Layout", "text": "Create a centered container with a clean card-style layout, rounded corners, and subtle shadow for the subscription form.", "position": 1},
+      {"@type": "HowToStep", "name": "Implement Floating Labels", "text": "Use CSS :placeholder-shown and :focus pseudo-classes to animate labels from inside the input field to above it when the user focuses or types.", "position": 2},
+      {"@type": "HowToStep", "name": "Style the Submit Button", "text": "Add a gradient or solid accent-color button with hover effects, transition animations, and proper padding for a professional call-to-action.", "position": 3},
+      {"@type": "HowToStep", "name": "Add Accessibility Features", "text": "Include proper label elements, aria attributes, focus-visible styles, and keyboard navigation support for screen readers and keyboard users.", "position": 4},
+      {"@type": "HowToStep", "name": "Optimize for Conversions", "text": "Add compelling copy, social proof elements, and minimize form fields to maximize newsletter signup rates.", "position": 5}
+    ]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: FAQPage ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a floating placeholder input?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A floating placeholder input is a form field where the label text starts inside the input as a placeholder, then animates upward and shrinks when the user focuses on or fills the field. This pattern saves space while keeping labels always visible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does a subscribe box help grow my website audience?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A subscribe box captures visitor emails so you can send newsletters, updates, and promotions directly. This builds a loyal audience that returns to your site, increases page views, and improves overall engagement metrics."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a subscribe box help with Google AdSense approval?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Google AdSense looks for sites with genuine user engagement. A working subscribe box demonstrates that real visitors interact with your content, which signals authenticity and can positively influence the approval process."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the best practices for subscribe box design?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use a clean, minimal design with a clear call-to-action. Place the box above the fold or after valuable content. Use floating labels for a modern feel, ensure mobile responsiveness, include a privacy note, and avoid asking for too much information — name and email are usually enough."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this subscribe box suitable for an electronics store like TechHub?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Electronics stores benefit greatly from email lists to announce new products, share deals, and send restock notifications. A well-designed subscribe box integrated into product pages or the homepage can significantly boost repeat visits and sales."
+        }
+      }
+    ]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: BreadcrumbList ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+      {"@type": "ListItem", "position": 3, "name": "Subscribe Box — Floating Placeholder Input", "item": "https://77cod-ing.github.io/"}
+    ]
+  }
+  </script>
+
+    <!-- ===== ASSETS ===== -->
+    <link rel="icon" type="image/png" href="Picture1.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+    <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+        crossorigin="anonymous"></script>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+            --premcolo: #00d9ff;
+            --accent2: #ff6b35;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --surface: rgba(255, 255, 255, 0.04);
+            --surface-hover: rgba(0, 217, 255, 0.07);
+            --border: rgba(255, 255, 255, 0.08);
+            --font-head: 'Space Mono', monospace;
+            --font-body: 'DM Sans', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--back);
+            font-family: var(--font-body);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 56px;
+            padding: 0 2.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            color: var(--premcolo);
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: clamp(1rem, 2vw, 2rem);
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: var(--premcolo);
+        }
+
+        /* ===== CODE SECTION ===== */
+        .code-section {
+            margin: 2rem 0;
+            width: 60vw;
+        }
+
+        .code-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .code-tabs {
+            display: flex;
+            gap: 4px;
+        }
+
+        .code-tab {
+            padding: 8px 20px;
+            border-radius: 8px 8px 0 0;
+            border: 1px solid var(--border);
+            border-bottom: none;
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .code-tab.active {
+            background: #1e1e2f;
+            color: #fff;
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+
+        .code-tab[data-lang="html"].active {
+            color: #ff6600;
+        }
+
+        .code-tab[data-lang="css"].active {
+            color: #00ffff;
+        }
+
+        /* ===== PREVIEW BUTTON ===== */
+        .preview-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 22px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 217, 255, 0.4);
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.3px;
+        }
+
+        .preview-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .preview-btn:hover {
+            border-color: var(--premcolo);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .preview-btn:hover::before {
+            opacity: 1;
+        }
+
+        .preview-btn:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        .preview-btn i {
+            font-size: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .preview-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .preview-btn.loading i {
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .code-panels {
+            position: relative;
+        }
+
+        .code-box {
+            background: #1e1e2f;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+            border-radius: 0 12px 12px 12px;
+            position: relative;
+            display: none;
+        }
+
+        .code-box.active {
+            display: block;
+        }
+
+        .code-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .code-lang-label {
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .copy-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            border-radius: 7px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo);
+        }
+
+        .copy-btn.copied {
+            color: #4ade80;
+            border-color: #4ade80;
+        }
+
+        :not(pre)>code[class*="language-"],
+        pre[class*="language-"] {
+            width: 100%;
+            max-width: 100%;
+            height: 50vh;
+            border-radius: 0 0 12px 12px;
+            overflow-y: auto;
+            overflow-x: auto;
+            margin: 0;
+        }
+
+        pre::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        pre::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        pre::-webkit-scrollbar-thumb {
+            background: var(--premcolo);
+            border-radius: 10px;
+        }
+
+        /* ===== BREADCRUMB ===== */
+        .breadcrumb {
+            padding: 12px 2.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb ol {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .breadcrumb li {
+            display: flex;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .breadcrumb li+li::before {
+            content: "\203A";
+            color: var(--premcolo);
+            margin-right: 6px;
+            font-size: 1.1rem;
+        }
+
+        .breadcrumb a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--premcolo);
+        }
+
+        .breadcrumb [aria-current="page"] {
+            color: var(--premcolo);
+            font-weight: 600;
+        }
+
+        /* ===== BACK BUTTON ===== */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+            margin: 1rem 2.5rem;
+        }
+
+        .back-link:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 3rem 2.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -120px;
+            left: -60px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 107, 53, 0.04) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: var(--font-head);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .tag-tutorial {
+            background: rgba(0, 217, 255, 0.12);
+            color: var(--premcolo);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+        }
+
+        .tag-css {
+            background: rgba(0, 217, 255, 0.08);
+            color: #7dd3fc;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .tag-level {
+            background: rgba(255, 107, 53, 0.1);
+            color: var(--accent2);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+        }
+
+        .tag-seo {
+            background: rgba(74, 222, 128, 0.1);
+            color: #4ade80;
+            border: 1px solid rgba(74, 222, 128, 0.2);
+        }
+
+        .read-time {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-head);
+            font-size: clamp(1.6rem, 4vw, 2.6rem);
+            line-height: 1.25;
+            color: #fff;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 span {
+            color: var(--premcolo);
+        }
+
+        .hero-lead {
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            color: var(--text-muted);
+            max-width: 720px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .stat-value {
+            font-family: var(--font-head);
+            font-size: 1.4rem;
+            color: var(--premcolo);
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            display: block;
+            box-shadow: 0 0 60px rgba(0, 217, 255, 0.08), 0 32px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .img-caption {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* ===== LAYOUT ===== */
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2.5rem 4rem;
+            align-items: start;
+        }
+
+        /* ===== ARTICLE ===== */
+        .article-body h2 {
+            font-family: var(--font-head);
+            font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+            color: var(--premcolo);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            scroll-margin-top: 80px;
+        }
+
+        .article-body h3 {
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            color: #7dd3fc;
+            margin: 1.8rem 0 0.75rem;
+            scroll-margin-top: 80px;
+        }
+
+        .article-body p {
+            margin-bottom: 1.1rem;
+            color: var(--text);
+        }
+
+        .article-body code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 7px;
+            border-radius: 5px;
+        }
+
+        .article-body ul,
+        .article-body ol {
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 1.1rem;
+        }
+
+        .article-body li {
+            margin-bottom: 9px;
+        }
+
+        .article-body li strong {
+            color: #fff;
+        }
+
+        /* ===== TOC ===== */
+        .toc {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .toc-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--premcolo);
+            margin-bottom: 0.75rem;
+        }
+
+        .toc ol {
+            padding-left: 1.2rem;
+            list-style: decimal;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+        }
+
+        .toc a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: var(--premcolo);
+        }
+
+        /* ===== FEATURE CARDS ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 1.5rem 0;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            transition: border-color 0.25s, background 0.25s, transform 0.25s;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(0, 217, 255, 0.3);
+            background: var(--surface-hover);
+            transform: translateY(-2px);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            color: var(--premcolo);
+        }
+
+        .feature-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .feature-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* ===== STEPS ===== */
+        .steps {
+            margin: 1.5rem 0;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 44px 1fr;
+            gap: 1rem;
+            padding: 1.1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-num {
+            width: 44px;
+            height: 44px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-head);
+            color: var(--premcolo);
+            font-size: 1rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            margin-top: 0;
+            font-size: 1rem;
+        }
+
+        .step-content p {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* ===== INFO / WARN BOXES ===== */
+        .info-box {
+            background: rgba(0, 217, 255, 0.06);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-left: 4px solid var(--premcolo);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .info-box strong {
+            color: var(--premcolo);
+        }
+
+        .warn-box {
+            background: rgba(255, 107, 53, 0.06);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-left: 4px solid var(--accent2);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .warn-box strong {
+            color: var(--accent2);
+        }
+
+        /* ===== COMPARISON TABLE ===== */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 14px;
+        }
+
+        .comparison-table th {
+            font-family: var(--font-head);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 10px 14px;
+            background: rgba(0, 217, 255, 0.08);
+            color: var(--premcolo);
+            border: 1px solid var(--border);
+            text-align: left;
+        }
+
+        .comparison-table td {
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            vertical-align: top;
+        }
+
+        .comparison-table tr:hover td {
+            background: var(--surface-hover);
+        }
+
+        .comparison-table td strong {
+            color: #fff;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-family: var(--font-head);
+            font-weight: 700;
+        }
+
+        .badge-green {
+            background: rgba(74, 222, 128, 0.12);
+            color: #4ade80;
+            border: 1px solid rgba(74, 222, 128, 0.25);
+        }
+
+        .badge-orange {
+            background: rgba(255, 107, 53, 0.12);
+            color: var(--accent2);
+            border: 1px solid rgba(255, 107, 53, 0.25);
+        }
+
+        .badge-blue {
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+        }
+
+        /* ===== FAQ ===== */
+        .faq {
+            margin: 1.5rem 0;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            background: var(--surface);
+            font-weight: 600;
+            font-size: 15px;
+            transition: background 0.2s;
+            list-style: none;
+            user-select: none;
+            color: var(--text);
+        }
+
+        .faq-question:hover {
+            background: var(--surface-hover);
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.3rem;
+            color: var(--premcolo);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        details[open] .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 1rem 1.25rem;
+            color: var(--text-muted);
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+        }
+
+        .faq-answer code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* ===== CONCLUSION ===== */
+        .conclusion {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.07), rgba(0, 140, 160, 0.05));
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 16px;
+            padding: 1.75rem 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .conclusion h2 {
+            border: none;
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+
+        /* ===== COUNTDOWN BOX ===== */
+        .countdown-box {
+            background: rgba(0, 217, 255, 0.05);
+            border: 1px solid rgba(0, 217, 255, 0.18);
+            border-radius: 14px;
+            padding: 1.5rem 1.75rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .countdown-label {
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .countdown-timer {
+            font-family: var(--font-head);
+            font-size: 2.5rem;
+            color: var(--premcolo);
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .gist-link-wrapper {
+            display: none;
+            margin-top: 12px;
+        }
+
+        .gist-link-wrapper.visible {
+            display: block;
+        }
+
+        .gist-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(0, 217, 255, 0.06));
+            border: 1px solid rgba(0, 217, 255, 0.35);
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .gist-link:hover {
+            background: rgba(0, 217, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            position: sticky;
+            top: 72px;
+        }
+
+        .sidebar-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-header {
+            padding: 14px 16px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--premcolo);
+            border-bottom: 1px solid var(--border);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .related-list {
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .related-card {
+            display: block;
+            text-decoration: none;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 16/9;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .related-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+
+        .related-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .related-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.85) 100%);
+        }
+
+        .related-card-title {
+            position: absolute;
+            bottom: 8px;
+            left: 10px;
+            right: 10px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* ===== KEYWORDS HIGHLIGHT BOX ===== */
+        .keywords-box {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--premcolo);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 2rem 0;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .keywords-box strong {
+            color: var(--premcolo);
+            font-family: var(--font-head);
+        }
+
+        /* ===== HORIZONTAL RULE ===== */
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 2rem 0;
+        }
+
+        /* ===== SCROLL-REVEAL ANIMATION ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== PREVIEW MODAL ===== */
+        .preview-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 5, 15, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+        }
+
+        .preview-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .preview-modal {
+            width: 95vw;
+            max-width: 95vw;
+            height: 95vh;
+            max-height: 95vh;
+            background: #0a0e1a;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(0, 217, 255, 0.06);
+            transform: scale(0.92) translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .preview-overlay.open .preview-modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .preview-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
+        }
+
+        .preview-modal-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .preview-modal-title i {
+            color: var(--premcolo);
+            font-size: 16px;
+        }
+
+        .preview-modal-title strong {
+            color: #fff;
+        }
+
+        .preview-dots {
+            display: flex;
+            gap: 7px;
+        }
+
+        .preview-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, filter 0.2s;
+        }
+
+        .preview-dot:hover {
+            transform: scale(1.2);
+            filter: brightness(1.3);
+        }
+
+        .preview-dot.red {
+            background: #ff5f57;
+        }
+
+        .preview-dot.yellow {
+            background: #febc2e;
+        }
+
+        .preview-dot.green {
+            background: #28c840;
+        }
+
+        .preview-close-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .preview-close-btn:hover {
+            border-color: var(--accent2);
+            color: var(--accent2);
+            background: rgba(255, 107, 53, 0.08);
+        }
+
+        .preview-iframe-wrap {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .preview-iframe-wrap iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            background: #000;
+        }
+
+        .preview-loading {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            background: #0a0e1a;
+            z-index: 2;
+            transition: opacity 0.4s;
+        }
+
+        .preview-loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .preview-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(0, 217, 255, 0.15);
+            border-top-color: var(--premcolo);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
+        .preview-loading-text {
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .preview-loading-files {
+            display: flex;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .preview-file-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            font-weight: 700;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+
+        .preview-file-tag.loaded {
+            opacity: 1;
+        }
+
+        .preview-file-tag.html-tag {
+            background: rgba(255, 102, 0, 0.15);
+            color: #ff6600;
+            border: 1px solid rgba(255, 102, 0, 0.3);
+        }
+
+        .preview-file-tag.css-tag {
+            background: rgba(0, 255, 255, 0.1);
+            color: #00ffff;
+            border: 1px solid rgba(0, 255, 255, 0.25);
+        }
+
+        .preview-file-tag.js-tag {
+            background: rgba(247, 223, 30, 0.1);
+            color: #f7df1e;
+            border: 1px solid rgba(247, 223, 30, 0.25);
+        }
+
+        .preview-hint {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 6px 16px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            color: var(--text-muted);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.5s 0.8s;
+            white-space: nowrap;
+            z-index: 3;
+        }
+
+        .preview-hint.show {
+            opacity: 1;
+        }
+
+        .preview-hint i {
+            color: var(--premcolo);
+            margin-right: 4px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 1fr;
+                padding: 1.5rem 1.25rem;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .related-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .related-card {
+                flex: 1 1 calc(50% - 8px);
+            }
+
+            .hero {
+                padding: 2rem 1.25rem 1.5rem;
+            }
+
+            .navbar {
+                padding: 0 1.25rem;
+            }
+
+            .breadcrumb {
+                padding: 10px 1.25rem;
+            }
+
+            .back-link {
+                margin: 0.75rem 1.25rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-stats {
+                gap: 1.2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .related-card {
+                flex: 1 1 100%;
+            }
+
+            .comparison-table {
+                font-size: 12px;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 8px 10px;
+            }
+
+            .step {
+                grid-template-columns: 36px 1fr;
+                gap: 0.75rem;
+            }
+
+            .step-num {
+                width: 36px;
+                height: 36px;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+
+            html {
+                scroll-behavior: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+        <a href="https://77cod-ing.github.io/" class="logo">
+            <span class="logo-icon">{ / }</span> 77cod_ing
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="https://77cod-ing.github.io/">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="Privacy Policy.html">Privacy Policy</a>
+            <a href="Terms & Conditions.html">Terms & Conditions</a>
+        </nav>
+    </header>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://77cod-ing.github.io/index.html"><i class='bx bx-home-alt-2'></i>
+                    <span itemprop="name">Home</span></a>
+                <meta itemprop="position" content="1">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://77cod-ing.github.io/projects.html"><i class='bx bx-data'></i>
+                    <span itemprop="name">Projects</span></a>
+                <meta itemprop="position" content="2">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span aria-current="page" itemprop="name">TechHub Electronics Landing Page</span>
+                <meta itemprop="position" content="3">
+            </li>
+        </ol>
+    </nav>
+
+    <!-- ===== BACK BUTTON ===== -->
+    <a href="projects.html" class="back-link" aria-label="Return to Projects">
+        <i class='bx bx-arrow-back'></i> Return to Projects
+    </a>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-labelledby="main-heading">
+        <div class="hero-meta">
+            <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+            <span class="tag tag-css"><i class='bx bx-code-alt'></i> HTML & CSS</span>
+            <span class="tag tag-level"><i class='bx bx-star'></i> Beginner</span>
+            <span class="tag tag-seo"><i class='bx bx-search-alt-2'></i> SEO</span>
+            <span class="read-time"><i class='bx bx-time'></i> ~10 min read</span>
+        </div>
+
+        <h1 id="main-heading">
+            <span>TechHub</span> Electronics Landing Page<br>
+            HTML CSS JavaScript UI Design
+        </h1>
+
+        <p class="hero-lead">
+            Create a premium responsive <strong>electronics landing page</strong> inspired
+            by TechHub using HTML, CSS, and JavaScript. Discover how to build a modern
+            hero section, featured products, call-to-action buttons, newsletter
+            subscription, responsive layouts, and interactive UI components with clean,
+            production-ready source code.
+        </p>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-value">5</span>
+                <span class="stat-label">Build Steps</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">0</span>
+                <span class="stat-label">JS Required</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">A11y</span>
+                <span class="stat-label">Accessible</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">Free</span>
+                <span class="stat-label">Source Code</span>
+            </div>
+        </div>
+
+        <img src="https://i.suar.me/LpPE3/m"
+            alt="Subscribe box with floating placeholder input for website newsletter signup" class="hero-img"
+            width="1200" height="420" loading="eager" fetchpriority="high">
+        <p class="img-caption">A modern subscribe box with floating placeholder labels — clean, accessible,
+            and optimized for conversions</p>
+    </section>
+
+    <!-- ===== MAIN LAYOUT ===== -->
+    <div class="layout">
+
+        <main class="article-body" id="main-content">
+
+            <!-- TOC -->
+            <nav class="toc reveal" aria-label="Table of contents">
+                <p class="toc-title"><i class='bx bx-list-ul'></i> Table of Contents</p>
+                <ol>
+                    <li><a href="#why-techhub">Why TechHub Should Be Your Go-To Electronics Store</a></li>
+                    <li><a href="#navigate">How to Navigate TechHub Effectively</a></li>
+                    <li><a href="#benefits">Benefits for Customers & Online Visibility</a></li>
+                    <li><a href="#accessibility">Accessibility & Best Practices</a></li>
+                    <li><a href="#mistakes">Common Mistakes to Avoid</a></li>
+                    <li><a href="#faq">Frequently Asked Questions</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ol>
+            </nav>
+
+            <!-- FEATURE CARDS -->
+            <section class="reveal" aria-label="Key features">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class='bx bx-envelope'></i></div>
+                        <p class="feature-title">Email Capture</p>
+                        <p class="feature-desc">Convert visitors into subscribers with a clean, non-intrusive subscribe
+                            box.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class='bx bx-label'></i></div>
+                        <p class="feature-title">Floating Labels</p>
+                        <p class="feature-desc">Labels animate from placeholder to label position on focus — modern and
+                            space-efficient.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class='bx bx-check-shield'></i></div>
+                        <p class="feature-title">Accessible</p>
+                        <p class="feature-desc">Proper ARIA attributes, keyboard nav, and focus styles for all users.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class='bx bx-bar-chart-alt-2'></i></div>
+                        <p class="feature-title">SEO Friendly</p>
+                        <p class="feature-desc">Semantic HTML and structured data help search engines understand your
+                            content.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 1 -->
+            <section class="reveal" id="why-techhub">
+                <h2><i class='bx bx-star'></i> Why TechHub Should Be Your Go-To Electronics Store</h2>
+                <ul>
+                    <li><strong>Wide Product Range:</strong> TechHub offers a comprehensive selection of premium
+                        electronics from top global brands, covering gadgets, accessories, and smart home devices.</li>
+                    <li><strong>Quality Assurance:</strong> Every product is tested and verified for reliability and
+                        performance, ensuring customers receive durable, high-quality electronics.</li>
+                    <li><strong>Competitive Pricing:</strong> Enjoy the latest tech at competitive prices with frequent
+                        deals, bundles, and promotions designed for smart shoppers.</li>
+                    <li><strong>Expert Support:</strong> TechHub provides knowledgeable customer service and technical
+                        guidance to help you choose and optimize your devices.</li>
+                    <li><strong>Seamless Online Shopping:</strong> The store is optimized for desktop and mobile,
+                        offering an intuitive and secure shopping experience with fast checkout.</li>
+                </ul>
+            </section>
+
+            <div class="info-box reveal">
+                <strong><i class='bx bx-info-circle'></i> Pro Tip:</strong> Adding a subscribe box to your electronics
+                store landing page can increase newsletter signups by up to 30%. Place it after product highlights for
+                maximum visibility.
+            </div>
+
+            <!-- SECTION 2 -->
+            <section class="reveal" id="navigate">
+                <h2><i class='bx bx-compass'></i> How to Navigate TechHub Effectively</h2>
+
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-num">1</div>
+                        <div class="step-content">
+                            <h3>Browse by Category</h3>
+                            <p>Start by exploring well-organized product categories such as Smartphones, Laptops, Audio,
+                                Wearables, and Smart Home Devices. Each category has filters for brand, price range, and
+                                features, helping you quickly find what you need.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">2</div>
+                        <div class="step-content">
+                            <h3>Product Pages & Reviews</h3>
+                            <p>Each product page contains high-resolution images, detailed specifications, and customer
+                                reviews. Reading reviews and comparing specs helps make informed decisions. Watch for
+                                the TechHub Verified badge for products tested by experts.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">3</div>
+                        <div class="step-content">
+                            <h3>Checkout & Payment Options</h3>
+                            <p>TechHub supports multiple secure payment methods, including credit/debit cards, digital
+                                wallets, and financing plans. The checkout process is streamlined for efficiency, with
+                                optional gift wrapping and fast shipping options.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3 -->
+            <section class="reveal" id="benefits">
+                <h2><i class='bx bx-trophy'></i> Benefits for Customers & Online Visibility</h2>
+                <p>
+                    TechHub not only offers convenience but also enhances customer satisfaction with a modern shopping
+                    experience. Engaged shoppers are more likely to return, share experiences, and interact with
+                    newsletters or loyalty programs — improving brand reach and online presence.
+                </p>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Benefit</th>
+                            <th>Impact</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Time-Saving</strong></td>
+                            <td>Efficient navigation and search features let users find products quickly</td>
+                            <td><span class="badge badge-green">High</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Customer Trust</strong></td>
+                            <td>Verified reviews and quality assurance increase buyer confidence</td>
+                            <td><span class="badge badge-green">High</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>SEO & Visibility</strong></td>
+                            <td>Well-structured product pages with clear metadata support better search engine ranking
+                            </td>
+                            <td><span class="badge badge-blue">Medium</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Newsletter Growth</strong></td>
+                            <td>Subscribe boxes on key pages capture emails for repeat engagement</td>
+                            <td><span class="badge badge-blue">Medium</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <div class="warn-box reveal">
+                <strong><i class='bx bx-error'></i> Warning:</strong> Avoid placing too many subscribe boxes on a single
+                page — this creates a spammy experience that can hurt both user trust and SEO rankings. One well-placed
+                box is more effective than three poorly placed ones.
+            </div>
+
+            <!-- SECTION 4 -->
+            <section class="reveal" id="accessibility">
+                <h2><i class='bx bx-universal-access'></i> Accessibility & Best Practices</h2>
+                <ul>
+                    <li>Ensure all product images have descriptive <code>alt</code> text for screen readers.</li>
+                    <li>Provide keyboard-friendly navigation for category filters and shopping cart actions.</li>
+                    <li>Support reduced-motion preferences for users sensitive to animations in banners or product
+                        sliders.</li>
+                    <li>Use clear call-to-action buttons like <code>Add to Cart</code> or <code>Buy Now</code> with
+                        visible focus styles.</li>
+                    <li>For subscribe boxes, always use proper <code>&lt;label&gt;</code> elements linked to inputs via
+                        <code>for</code> attributes.</li>
+                    <li>Include a privacy note near email fields so users know how their data will be used.</li>
+                </ul>
+            </section>
+
+            <!-- SECTION 5 -->
+            <section class="reveal" id="mistakes">
+                <h2><i class='bx bx-error-circle'></i> Common Mistakes to Avoid</h2>
+                <ul>
+                    <li><strong>Overloading pages:</strong> Too many images or animations can slow down browsing and
+                        hurt Core Web Vitals.</li>
+                    <li><strong>Neglecting mobile responsiveness:</strong> Poor experience on smartphones or tablets
+                        drives away over 60% of potential visitors.</li>
+                    <li><strong>Ignoring accessibility standards:</strong> Excluding users with disabilities limits your
+                        audience and can lead to legal issues.</li>
+                    <li><strong>Failing to update inventory or pricing:</strong> Outdated information frustrates
+                        customers and destroys trust.</li>
+                    <li><strong>No subscribe box or hidden subscription options:</strong> Missing the opportunity to
+                        build a recurring audience through email.</li>
+                </ul>
+            </section>
+
+            <hr>
+            <!-- SOURCE CODE -->
+            <section id="source-code">
+                <h2>Full Source Code (Free)</h2>
+                <p>
+                    The project lives in a single HTML file. The CSS handles the FAB's glow, the icon morph,
+                    the pulse ring, and the staggered list reveal. The JavaScript is a single
+                    <code>click</code> listener that toggles the <code>active</code> class — every visual
+                    change is then driven entirely by CSS selectors targeting <code>.active</code>.
+                    Use the tabs to explore each section.
+                </p>
+
+                <div class="code-section">
+                    <div class="code-toolbar">
+                        <div class="code-tabs" role="tablist" aria-label="Code files">
+                            <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                                aria-controls="panel-html">HTML</button>
+                            <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+                                aria-controls="panel-css">CSS</button>
+                            <button class="code-tab" data-lang="js" role="tab" aria-selected="false"
+                                aria-controls="panel-js">JS</button>
+                        </div>
+                        <button class="preview-btn" id="previewBtn" aria-label="Preview the final result">
+                            <i class='bx bx-play-circle'></i>
+                            <span>Preview Result</span>
+                        </button>
+                    </div>
+
+                    <div class="code-panels">
+                        <div class="code-box active" id="panel-html" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                                <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code1" class="language-html"></code></pre>
+                        </div>
+
+                        <div class="code-box" id="panel-css" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
+                                <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code2" class="language-css"></code></pre>
+                        </div>
+
+                        <div class="code-box" id="panel-js" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#f7df1e;">JS — script.js</span>
+                                <button class="copy-btn" data-target="code3"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code3" class="language-javascript"></code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Countdown Gist reveal -->
+                <div class="countdown-box">
+                    <p class="countdown-label">🔓 Full Source Code unlocks in</p>
+                    <div class="countdown-timer" id="countdownDisplay">05</div>
+                    <p style="font-size:13px;color:var(--text-muted);">Hosted on GitHub Gist — free, no sign-up required
+                    </p>
+                    <div class="gist-link-wrapper" id="gistLinkWrapper">
+                        <a class="gist-link"
+                            href="https://gist.githubusercontent.com/77cod-ing/floating-action-menu-button/"
+                            target="_blank" rel="noopener noreferrer">
+                            <i class='bx bxl-github'></i> View Full Source Code on GitHub Gist
+                        </a>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <strong>💡 Quick Start:</strong> Copy all code into a single <code>index.html</code> file.
+                    No libraries, no build tools — open the file in any modern browser and the menu works
+                    immediately.
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="faq reveal" id="faq" aria-label="Frequently asked questions">
+                <h2><i class='bx bx-help-circle'></i> Frequently Asked Questions</h2>
+
+                <details class="faq-item">
+                    <summary class="faq-question">What is a floating placeholder input?</summary>
+                    <div class="faq-answer">
+                        A floating placeholder input is a form field where the label text starts inside the input as a
+                        placeholder, then animates upward and shrinks when the user focuses on or fills the field. This
+                        pattern saves space while keeping labels always visible, making it ideal for compact subscribe
+                        boxes.
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">How does a subscribe box help grow my website audience?</summary>
+                    <div class="faq-answer">
+                        A subscribe box captures visitor emails so you can send newsletters, updates, and promotions
+                        directly. This builds a loyal audience that returns to your site, increases page views, and
+                        improves overall engagement metrics — all signals that search engines value.
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">Can a subscribe box help with Google AdSense approval?</summary>
+                    <div class="faq-answer">
+                        Yes. Google AdSense looks for sites with genuine user engagement. A working subscribe box
+                        demonstrates that real visitors interact with your content, which signals authenticity and can
+                        positively influence the approval process. Combined with quality content and proper SEO, it
+                        strengthens your application.
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">What are the best placement positions for a subscribe box?</summary>
+                    <div class="faq-answer">
+                        The most effective positions are: (1) After the hero section or introduction, (2) At the end of
+                        an article or product page, (3) As a sticky sidebar widget on blog pages, and (4) As a popup
+                        after a user has scrolled 60% of the page. Avoid interrupting the user before they've had a
+                        chance to consume content.
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">Is this subscribe box suitable for an electronics store like TechHub?
+                    </summary>
+                    <div class="faq-answer">
+                        Absolutely. Electronics stores benefit greatly from email lists to announce new products, share
+                        exclusive deals, and send restock notifications. A well-designed subscribe box integrated into
+                        product pages or the homepage can significantly boost repeat visits and sales conversions.
+                    </div>
+                </details>
+            </section>
+
+            <hr>
+
+            <!-- CONCLUSION -->
+            <section class="conclusion reveal" id="conclusion">
+                <h2><i class='bx bx-check-double'></i> Conclusion</h2>
+                <p>
+                    <strong>TechHub — Premium Electronics Store</strong> provides a high-quality, user-friendly shopping
+                    experience for electronics enthusiasts. By combining detailed product information, expert support,
+                    secure transactions, and responsive design, TechHub ensures customers can shop confidently and
+                    efficiently.
+                </p>
+                <p>
+                    Integrating a modern <strong>floating placeholder subscribe box</strong> into such a store amplifies
+                    its reach — capturing emails, nurturing leads, and driving repeat traffic. Whether browsing,
+                    comparing, or purchasing, TechHub's focus on quality, accessibility, and user engagement makes it a
+                    go-to destination for premium electronics.
+                </p>
+            </section>
+
+            <!-- KEYWORDS BOX -->
+            <div class="keywords-box reveal">
+                <strong>SEO Keywords:</strong> TechHub electronics store, premium gadgets online, best electronics
+                store, smart home devices, tech product reviews, online electronics shopping, secure checkout
+                electronics, customer-friendly electronics store, top electronics deals, TechHub product categories,
+                subscribe box for website, email subscription box, floating placeholder input, newsletter signup,
+                increase engagement, Google AdSense approval tips
+            </div>
+
+            <!-- COUNTDOWN BOX -->
+            <div class="countdown-box reveal" id="countdownSection">
+                <p class="countdown-label"><i class='bx bx-code-curly'></i> Full Source Code</p>
+                <div class="countdown-timer" id="countdownTimer">
+                    <span id="countdownNumber">5</span>s
+                </div>
+                <p style="font-size:13px;color:var(--text-muted);margin-bottom:0;" id="countdownWait">Preparing your
+                    download link...</p>
+                <div class="gist-link-wrapper" id="gistLinkWrapper">
+                    <a href="https://gist.github.com/77cod-ing/b0eee96a66ec2475fcae391889cb27ec" target="_blank"
+                        rel="noopener" class="gist-link">
+                        <i class='bx bx-external-link'></i> Go to Full Source Code
+                    </a>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-box">
+                <div class="sidebar-header"><i class='bx bx-grid-alt'></i> Related Projects</div>
+                <div class="related-list">
+                    <a class="related-card" href="Project39.html" aria-label="Animated Button with Star Effects">
+                        <img src="https://i.suar.me/jvZZv/m"
+                            alt="Creative Animated Button with Star Effects Using HTML CSS" loading="lazy" width="280"
+                            height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Animated Button with Star Effects — HTML &amp; CSS</div>
+                    </a>
+                    <a class="related-card" href="Project45.html"
+                        aria-label="Animated Floating Action Button Menu with CSS">
+                        <img src="https://77cod-ing.github.io/button-list-item.png"
+                            alt="Animated floating action button menu expanding into a list built with CSS"
+                            loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Animated Floating Action Button Menu — CSS &amp; JS</div>
+                    </a>
+                    <a class="related-card" href="Project13.html" aria-label="Neon Cursor Animation CSS JavaScript">
+                        <img src="https://77cod-ing.github.io/image%20copy%2036.png"
+                            alt="Neon Cursor Animation CSS JavaScript" loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Neon Cursor Animation — CSS &amp; JavaScript</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-box">
+                <div class="sidebar-header"><i class='bx bx-tag'></i> Tags</div>
+                <div style="padding:12px;display:flex;flex-wrap:wrap;gap:6px;">
+                    <span class="tag tag-tutorial" style="font-size:11px;padding:3px 10px;">Tutorial</span>
+                    <span class="tag tag-css" style="font-size:11px;padding:3px 10px;">HTML</span>
+                    <span class="tag tag-css" style="font-size:11px;padding:3px 10px;">CSS</span>
+                    <span class="tag tag-seo" style="font-size:11px;padding:3px 10px;">SEO</span>
+                    <span class="tag tag-level" style="font-size:11px;padding:3px 10px;">Beginner</span>
+                    <span class="tag tag-tutorial" style="font-size:11px;padding:3px 10px;">Subscribe Box</span>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+    <!-- ===== PREVIEW MODAL ===== -->
+    <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+        aria-label="Live preview of the floating action button menu">
+        <div class="preview-modal">
+            <div class="preview-modal-header">
+                <div class="preview-modal-title">
+                    <i class='bx bx-show'></i>
+                    <strong>Live Preview</strong> — Animated Floating Action Button Menu
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <div class="preview-dots">
+                        <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+                        <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+                        <button class="preview-dot green" aria-label="Maximize" disabled></button>
+                    </div>
+                    <button class="preview-close-btn" id="previewCloseBtn">
+                        <i class='bx bx-x'></i> Close
+                    </button>
+                </div>
+            </div>
+            <div class="preview-iframe-wrap">
+                <div class="preview-loading" id="previewLoading">
+                    <div class="preview-spinner"></div>
+                    <span class="preview-loading-text">Loading preview...</span>
+                    <div class="preview-loading-files">
+                        <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+                        <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+                        <span class="preview-file-tag js-tag" id="tagJS">JS</span>
+                    </div>
+                </div>
+                <iframe id="previewIframe" title="Preview of animated floating action button menu"
+                    sandbox="allow-scripts allow-same-origin"></iframe>
+                <div class="preview-hint" id="previewHint">
+                    <i class='bx bx-cursor'></i> Click the round button to open the menu
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        /*
+          ============================================
+            Gist URLs — update with the actual Gist raw URL for this project
+          ============================================
+        */
+        const gistBase = "https://gist.githubusercontent.com/77cod-ing/b0eee96a66ec2475fcae391889cb27ec/raw/";
+
+        const htmlUrl = gistBase + "index.html";
+        const cssUrl = gistBase + "style.css";
+        const jsUrl = gistBase + "script.js";
+
+        let cachedHTML = "";
+        let cachedCSS = "";
+        let cachedJS = "";
+
+        async function loadCode(url, elementId, lang) {
+            try {
+                const res = await fetch(url);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const text = await res.text();
+                const el = document.getElementById(elementId);
+                el.textContent = text;
+                el.className = `language-${lang}`;
+                Prism.highlightElement(el);
+                if (lang === "html") cachedHTML = text;
+                if (lang === "css") cachedCSS = text;
+                if (lang === "js") cachedJS = text;
+            } catch (e) {
+                const el = document.getElementById(elementId);
+                if (el) el.textContent = `/* Failed to load: ${e.message} */`;
+            }
+        }
+
+        loadCode(htmlUrl, "code1", "html");
+        loadCode(cssUrl, "code2", "css");
+        loadCode(jsUrl, "code3", "js");
+
+        /* ===== Tabs ===== */
+        document.querySelectorAll(".code-tab").forEach(tab => {
+            tab.addEventListener("click", () => {
+                const lang = tab.dataset.lang;
+                document.querySelectorAll(".code-tab").forEach(t => {
+                    t.classList.remove("active");
+                    t.setAttribute("aria-selected", "false");
+                });
+                document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+                tab.classList.add("active");
+                tab.setAttribute("aria-selected", "true");
+                const panelMap = { html: "panel-html", css: "panel-css", js: "panel-js" };
+                document.getElementById(panelMap[lang]).classList.add("active");
+            });
+        });
+
+        /* ===== Copy buttons ===== */
+        document.querySelectorAll(".copy-btn").forEach(btn => {
+            btn.addEventListener("click", async () => {
+                const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+                if (!code) return;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+                    btn.classList.add("copied");
+                    setTimeout(() => {
+                        btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
+                        btn.classList.remove("copied");
+                    }, 2000);
+                } catch { btn.textContent = "Error"; }
+            });
+        });
+
+
+
+        /* ===== Preview modal ===== */
+        const previewOverlay = document.getElementById("previewOverlay");
+        const previewIframe = document.getElementById("previewIframe");
+        const previewLoading = document.getElementById("previewLoading");
+        const previewHint = document.getElementById("previewHint");
+        const previewBtn = document.getElementById("previewBtn");
+        const previewCloseBtn = document.getElementById("previewCloseBtn");
+        const previewDotClose = document.getElementById("previewDotClose");
+        const tagHTML = document.getElementById("tagHTML");
+        const tagCSS = document.getElementById("tagCSS");
+        const tagJS = document.getElementById("tagJS");
+
+        function openPreview() {
+            previewOverlay.classList.add("open");
+            document.body.style.overflow = "hidden";
+            previewLoading.classList.remove("hidden");
+            previewHint.classList.remove("show");
+            previewBtn.classList.add("loading");
+            tagHTML.classList.remove("loaded");
+            tagCSS.classList.remove("loaded");
+            tagJS.classList.remove("loaded");
+            buildPreview();
+        }
+
+        function closePreview() {
+            previewOverlay.classList.remove("open");
+            document.body.style.overflow = "";
+            previewIframe.srcdoc = "";
+            previewBtn.classList.remove("loading");
+        }
+
+        async function buildPreview() {
+            if (cachedHTML && cachedCSS && cachedJS) {
+                tagHTML.classList.add("loaded");
+                tagCSS.classList.add("loaded");
+                tagJS.classList.add("loaded");
+                injectPreview(cachedHTML, cachedCSS, cachedJS);
+                return;
+            }
+            try {
+                const fetches = [];
+                if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
+                if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
+                if (!cachedJS) fetches.push(fetch(jsUrl).then(r => r.text()).then(t => { cachedJS = t; tagJS.classList.add("loaded"); }));
+                if (cachedHTML) tagHTML.classList.add("loaded");
+                if (cachedCSS) tagCSS.classList.add("loaded");
+                if (cachedJS) tagJS.classList.add("loaded");
+                await Promise.all(fetches);
+                injectPreview(cachedHTML, cachedCSS, cachedJS);
+            } catch (e) {
+                previewLoading.innerHTML = `
+              <i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i>
+              <span class="preview-loading-text" style="color:var(--accent2);">Failed to load preview: ${e.message}</span>
+            `;
+                previewBtn.classList.remove("loading");
+            }
+        }
+
+        function injectPreview(html, css, js) {
+            let combined = html;
+            if (combined.includes('<link') && /style\.css/i.test(combined)) {
+                combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
+            } else if (combined.includes("</head>")) {
+                combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
+            } else {
+                combined = `<style>${css}</style>\n${combined}`;
+            }
+            if (combined.includes('<script') && /script\.js/i.test(combined)) {
+                combined = combined.replace(/<script[^>]*src=["'][^"']*script\.js["'][^>]*><\/script>/gi, `<script>${js}<\/script>`);
+            } else if (combined.includes("</body>")) {
+                combined = combined.replace("</body>", `<script>${js}<\/script>\n</body>`);
+            } else {
+                combined = `${combined}\n<script>${js}<\/script>`;
+            }
+            previewIframe.srcdoc = combined;
+            previewIframe.addEventListener("load", function onLoad() {
+                previewLoading.classList.add("hidden");
+                previewBtn.classList.remove("loading");
+                setTimeout(() => {
+                    previewHint.classList.add("show");
+                    setTimeout(() => previewHint.classList.remove("show"), 4000);
+                }, 300);
+                previewIframe.removeEventListener("load", onLoad);
+            });
+        }
+
+        previewBtn.addEventListener("click", openPreview);
+        previewCloseBtn.addEventListener("click", closePreview);
+        previewDotClose.addEventListener("click", closePreview);
+        previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+        document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
+
+        /* ===== COUNTDOWN ===== */
+        (function () {
+            let counter = 5;
+            let timer = null;
+            const timerEl = document.getElementById("countdownTimer");
+            const numberEl = document.getElementById("countdownNumber");
+            const waitEl = document.getElementById("countdownWait");
+            const linkWrapper = document.getElementById("gistLinkWrapper");
+            const section = document.getElementById("countdownSection");
+
+            function startCountdown() {
+                if (timer) return;
+                timer = setInterval(function () {
+                    counter--;
+                    numberEl.textContent = counter;
+                    if (counter <= 0) {
+                        clearInterval(timer);
+                        timer = null;
+                        timerEl.style.display = "none";
+                        waitEl.style.display = "none";
+                        linkWrapper.classList.add("visible");
+                    }
+                }, 1000);
+            }
+
+            function stopCountdown() {
+                if (timer) {
+                    clearInterval(timer);
+                    timer = null;
+                }
+            }
+
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        startCountdown();
+                    } else {
+                        stopCountdown();
+                    }
+                });
+            }, { threshold: 0.8 });
+
+            observer.observe(section);
+        })();
+
+        /* ===== SCROLL REVEAL ===== */
+        (function () {
+            var reveals = document.querySelectorAll(".reveal");
+            if (!reveals.length) return;
+
+            var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            if (prefersReduced) {
+                reveals.forEach(function (el) { el.classList.add("visible"); });
+                return;
+            }
+
+            var revealObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+
+            reveals.forEach(function (el) {
+                revealObserver.observe(el);
+            });
+        })();
+    </script>
+
+
+</body>
+
+</html>
