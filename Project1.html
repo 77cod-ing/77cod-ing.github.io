@@ -1,400 +1,1774 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>How to Add a Subscribe Box to Your Website | Engagement & AdSense Approval</title>
+  <meta name="description"
+    content="Learn how to add a professional email subscribe box to your website. Boost engagement, grow your audience, and improve Google AdSense approval chances. Free HTML & CSS source code.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="77cod_ing">
+  <link rel="canonical" href="https://77cod-ing.github.io/Project1.html">
+  <meta name="theme-color" content="#00d9ff">
   <link rel="icon" type="image/png" href="Picture1.png">
-  <title>Code How to Add a Subscribe Box to Your Website for Better Engagement and AdSense Approval</title>
-    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
-     crossorigin="anonymous"></script>
-<style>
-    body {
-      background: linear-gradient(to right, #2c0e43 10%, #581c87);
-      font-family: Arial, sans-serif;
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Add a Subscribe Box to Your Website | Engagement & AdSense Approval">
+  <meta property="og:description"
+    content="Add a professional subscribe box to grow your audience and improve Google AdSense approval. Free HTML & CSS source code with live preview.">
+  <meta property="og:url" content="https://77cod-ing.github.io/Project1.html">
+  <meta property="og:image" content="https://77cod-ing.github.io/Subscribe_Box.png">
+  <meta property="og:site_name" content="77cod_ing">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Subscribe Box for Website | HTML CSS Tutorial">
+  <meta name="twitter:description"
+    content="Build a professional email subscribe box with HTML & CSS. Boost engagement and AdSense approval. Free code.">
+  <meta name="twitter:image" content="https://77cod-ing.github.io/Subscribe_Box.png">
+
+  <script
+    type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"How to Add a Subscribe Box to Your Website for Better Engagement and AdSense Approval","description":"A complete tutorial for creating a professional email subscribe box using HTML and CSS. Includes design best practices, SEO tips, and AdSense approval strategies.","image":"https://77cod-ing.github.io/Subscribe_Box.png","datePublished":"2025-10-01","dateModified":"2026-05-28","author":{"@type":"Person","name":"77cod_ing","url":"https://77cod-ing.github.io"},"publisher":{"@type":"Organization","name":"77cod_ing","logo":{"@type":"ImageObject","url":"https://77cod-ing.github.io/Picture1.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://77cod-ing.github.io/Project1.html"},"proficiencyLevel":"Beginner","keywords":["subscribe box for website","email subscription box","grow website audience","newsletter signup","increase engagement","Google AdSense approval tips"]}</script>
+  <script
+    type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://77cod-ing.github.io/index.html"},{"@type":"ListItem","position":2,"name":"Projects","item":"https://77cod-ing.github.io/projects.html"},{"@type":"ListItem","position":3,"name":"Subscribe Box","item":"https://77cod-ing.github.io/Project1.html"}]}</script>
+  <script
+    type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does adding a subscribe box help with Google AdSense approval?","acceptedAnswer":{"@type":"Answer","text":"Yes. Google AdSense evaluates user engagement signals like return visits, time on site, and bounce rate. A subscribe box encourages repeat visits and shows Google that your site provides ongoing value to users, which strengthens your AdSense application."}},{"@type":"Question","name":"Where is the best place to put a subscribe box on my website?","acceptedAnswer":{"@type":"Answer","text":"The most effective positions are: below the hero section on your homepage, in the sidebar, at the end of blog posts, and in the footer. Placing it after valuable content increases conversion because users have already engaged with your material."}},{"@type":"Question","name":"Should I ask for only an email or more information?","acceptedAnswer":{"@type":"Answer","text":"Only ask for an email address. Every additional field you add reduces conversion rates significantly. Studies show that single-field forms convert 25-50% higher than multi-field forms. You can always collect more data later through follow-up emails."}},{"@type":"Question","name":"Can I build a subscribe box without JavaScript?","acceptedAnswer":{"@type":"Answer","text":"Yes. The visual design and layout of a subscribe box can be built entirely with HTML and CSS. However, to actually process subscriptions and send emails, you will need a backend service like Mailchimp, ConvertKit, or a custom server-side script."}},{"@type":"Question","name":"How does a subscribe box improve SEO?","acceptedAnswer":{"@type":"Answer","text":"Indirectly. A subscribe box builds an email list that drives returning visitors. More returning visitors means lower bounce rates, higher average session duration, and more page views per session — all positive user engagement signals that search engines use in rankings."}}]}</script>
+
+  <!-- ===== ASSETS ===== -->
+  <link rel="icon" type="image/png" href="Picture1.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+  <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+    crossorigin="anonymous"></script>
+            <!-- === API FOR SPEED === -->
+            <script src="//instant.page/5.2.0" type="module"></script>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+              crossorigin="anonymous"></script>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
+    :root {
+      --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+      --neon2: #00d9ff;
+      --neon3: #ff006e;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --surface: rgba(255, 255, 255, 0.03);
+      --surface-hover: rgba(0, 213, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.07);
+      --font-head: 'Space Mono', monospace;
+      --font-body: 'DM Sans', sans-serif;
+      --premcolo: #00d9ff;
+      --accent2: #ff006e;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--back);
+      font-family: var(--font-body);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    /* NAVBAR */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 50px;
-      padding: 0 2rem;
-      background-color: #0d1325;
+      height: 56px;
+      padding: 0 2.5rem;
+      background: rgba(0, 5, 18, 0.7);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(0, 217, 255, 0.12);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      font-size: 2.5vw;
-      font-weight: bold;
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: 700;
       color: white;
       text-decoration: none;
-      
+      gap: 8px;
     }
 
     .logo-icon {
-      color: #a855f7;
-      font-size: 2.5vw;
-      margin-right: 8px;
-      letter-spacing: 2.5px;
+      color: var(--premcolo);
+      letter-spacing: 2px;
     }
 
     .nav-links {
       display: flex;
-      gap: 35px;
+      gap: clamp(1rem, 2vw, 2rem);
+      align-items: center;
     }
 
     .nav-links a {
-      color: #d1d5db;
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.25s;
     }
 
     .nav-links a:hover {
-      color: #a855f7;
-      transform: scale(1.2);
-    }
-    /*linke*/
-    .con1 {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin: auto 0;
-      height: 50vh;
-    }
-    .countdown {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00ffcc;
+      color: var(--premcolo);
     }
 
-    .link-box {
+    /* HAMBURGER */
+    .hamburger {
       display: none;
-      padding: 20px 40px;
-      background: #1e2a47;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-      transition: 0.3s;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      transition: all 0.3s ease;
     }
 
-    .link-box a {
-      text-decoration: none;
-      color: #00ffcc;
-      font-size: 1.2rem;
-      font-weight: bold;
+    .hamburger span {
+      width: 28px;
+      height: 3px;
+      background: white;
+      border-radius: 2px;
+      transition: all 0.3s ease;
     }
 
-    .link-box:hover {
-      background: #26385c;
-      transform: scale(1.05);
-    }
-    /**ret**/
-    .Ret{
-      margin: 5px 0 0 3rem;
-      width: 5vw;
-    }
-    .Ret a {
-      font-size: 4vw;
-      text-decoration: none;
-      color: #ffffff;
-    }
-    .Ret a span{
-      display: inline-flex;
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0, 13, 31, 0.97);
+      backdrop-filter: blur(20px);
+      display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 5vw;
-      height: 5vw;
-      border: 2px solid #fff;
-      border-radius: 50%;
+      transition: left 0.5s ease;
+      z-index: 999;
     }
-    .Ret a:hover {
-  color: #00e1ff;
-}
-    .Ret a:hover span {
-  border-color: #00e1ff;
-}
-    /**img**/
-    .img{
+
+    .mobile-menu.active {
+      left: 0;
+    }
+
+    .mobile-menu a {
+      color: var(--text);
+      font-size: 20px;
+      width: 100%;
+      height: 3.5rem;
       display: flex;
       justify-content: center;
-      margin: 2rem auto;
+      align-items: center;
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      font-family: var(--font-head);
+      transition: color 0.3s, background 0.3s;
     }
-    .img img{
-      border-radius: 8px;
-      max-width: 100vw;
-    width: 90vw;
+
+    .mobile-menu a:first-of-type {
+      border-top: 1px solid var(--border);
     }
-    /**par**/
-    .par{
-       font-family: Arial, sans-serif;
-      line-height: 1.7;
-      max-width: 900px;
+
+    .mobile-menu a:hover {
+      color: var(--premcolo);
+      background: var(--surface-hover);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 26px;
+      color: white;
+      cursor: pointer;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: 50%;
+      transition: transform 0.3s ease, border-color 0.3s;
+    }
+
+    .close-btn:hover {
+      transform: rotate(90deg);
+      border-color: var(--accent2);
+      color: var(--accent2);
+    }
+
+    /* BREADCRUMB */
+    .breadcrumb {
+      padding: 12px 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb ol {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .breadcrumb li+li::before {
+      content: "\203A";
+      color: var(--premcolo);
+      margin-right: 6px;
+      font-size: 1.1rem;
+    }
+
+    .breadcrumb a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--premcolo);
+    }
+
+    .breadcrumb [aria-current="page"] {
+      color: var(--premcolo);
+      font-weight: 600;
+    }
+
+    /* BACK */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.2s;
+      margin: 1rem 2.5rem;
+    }
+
+    .back-link:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 3rem 2.5rem 2rem;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 20px;
-      color: #ffffff;
     }
-    h1, h2, h3 {
-      color: #00c8ff;
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+      pointer-events: none;
     }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
     }
-    h2 {
-      margin-top: 35px;
-      font-size: 1.6rem;
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: var(--font-head);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
     }
-    h3 {
-      margin-top: 25px;
-      font-size: 1.3rem;
+
+    .tag-tutorial {
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      border: 1px solid rgba(0, 217, 255, 0.25);
     }
-    p {
-      margin-bottom: 18px;
+
+    .tag-css {
+      background: rgba(0, 217, 255, 0.08);
+      color: var(--neon2);
+      border: 1px solid rgba(0, 217, 255, 0.2);
     }
-    ul {
-      margin: 15px 0;
-      padding-left: 25px;
+
+    .tag-html {
+      background: rgba(255, 102, 0, 0.1);
+      color: #ff6600;
+      border: 1px solid rgba(255, 102, 0, 0.2);
     }
-    li {
-      margin-bottom: 10px;
+
+    .tag-seo {
+      background: rgba(74, 222, 128, 0.1);
+      color: #4ade80;
+      border: 1px solid rgba(74, 222, 128, 0.2);
     }
-    .highlight {
-      background: #000000;
-      padding: 8px 12px;
-      border-left: 4px solid #0073e6;
-      margin: 20px 0;
+
+    .read-time {
+      color: var(--text-muted);
+      font-size: 13px;
     }
-    /**respon**/
-    @media (max-width: 1015px){
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      color: var(--premcolo);
+    }
+
+    .hero h1 em {
+      color: var(--neon2);
+      font-style: normal;
+    }
+
+    .hero-lead {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      color: var(--premcolo);
+      font-weight: 800;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-img-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      box-shadow: 0 0 60px rgba(0, 217, 255, 0.1), 0 32px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    /* LAYOUT */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem;
+      align-items: start;
+    }
+
+    /* ARTICLE */
+    .article-body h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: var(--premcolo);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(0, 217, 255, 0.15);
+      scroll-margin-top: 80px;
+    }
+
+    .article-body h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: var(--neon2);
+      margin: 1.8rem 0 0.75rem;
+      scroll-margin-top: 80px;
+    }
+
+    .article-body p {
+      margin-bottom: 1.1rem;
+      color: var(--text);
+    }
+
+    .article-body code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.08);
+      color: var(--premcolo);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .article-body ul {
+      padding-left: 1.4rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .article-body li {
+      margin-bottom: 9px;
+    }
+
+    .article-body li strong {
+      color: #fff;
+    }
+
+    /* TOC */
+    .toc {
+      background: var(--surface);
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .toc-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--premcolo);
+      margin-bottom: 0.75rem;
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--premcolo);
+    }
+
+    /* WHY CARDS */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .why-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .why-card:hover {
+      border-color: rgba(0, 217, 255, 0.3);
+      background: var(--surface-hover);
+    }
+
+    .why-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .why-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .why-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* STEPS */
+    .steps {
+      margin: 1.5rem 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      width: 44px;
+      height: 44px;
+      background: rgba(0, 217, 255, 0.08);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      color: var(--premcolo);
+      font-size: 1rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      margin-top: 0;
+      font-size: 1.05rem;
+    }
+
+    .step-content p {
+      margin-bottom: 0.75rem;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* BOXES */
+    .info-box {
+      background: rgba(0, 217, 255, 0.04);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-left: 4px solid var(--premcolo);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .info-box strong {
+      color: var(--premcolo);
+    }
+
+    .warn-box {
+      background: rgba(255, 0, 110, 0.04);
+      border: 1px solid rgba(255, 0, 110, 0.2);
+      border-left: 4px solid var(--neon3);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .warn-box strong {
+      color: var(--neon3);
+    }
+
+    /* PRACTICE GRID */
+    .practice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 1.5rem 0;
+    }
+
+    .practice-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .practice-card.do {
+      border-color: rgba(0, 217, 255, 0.2);
+    }
+
+    .practice-card.dont {
+      border-color: rgba(255, 0, 110, 0.2);
+    }
+
+    .practice-card-title {
+      font-family: var(--font-head);
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .practice-card ul {
+      padding-left: 1.2rem;
+      color: var(--text-muted);
+    }
+
+    .practice-card li {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    /* CODE */
+    .code-section {
+      margin: 2rem 0;
+      width: 60vw;
+      max-width: 100%;
+    }
+
+    .code-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .code-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .code-tab {
+      padding: 8px 20px;
+      border-radius: 8px 8px 0 0;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .code-tab.active {
+      background: #1e1e2f;
+      color: #fff;
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .code-tab[data-lang="html"].active {
+      color: #ff6600;
+    }
+
+    .code-tab[data-lang="css"].active {
+      color: #00d9ff;
+    }
+
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .preview-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .preview-btn:hover {
+      border-color: var(--premcolo);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+      transform: translateY(-1px);
+    }
+
+    .preview-btn:hover::before {
+      opacity: 1;
+    }
+
+    .preview-btn i,
+    .preview-btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn i {
+      font-size: 16px;
+    }
+
+    .preview-btn.loading i {
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .code-panels {
+      position: relative;
+    }
+
+    .code-box {
+      background: #1e1e2f;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 0 12px 12px 12px;
+      display: none;
+    }
+
+    .code-box.active {
+      display: block;
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-lang-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    .copy-btn.copied {
+      color: #4ade80;
+      border-color: #4ade80;
+    }
+
+    :not(pre)>code[class*="language-"],
+    pre[class*="language-"] {
+      width: 100%;
+      max-width: 100%;
+      height: 50vh;
+      border-radius: 0 0 12px 12px;
+      overflow-y: auto;
+      overflow-x: auto;
+      margin: 0;
+      tab-size: 2;
+      -moz-tab-size: 2;
+      white-space: pre;
+      word-break: normal;
+    }
+
+    pre::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    pre::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    pre::-webkit-scrollbar-thumb {
+      background: var(--premcolo);
+      border-radius: 10px;
+    }
+
+    /* FAQ */
+    .faq {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .faq-item[open] {
+      border-color: rgba(0, 217, 255, 0.25);
+    }
+
+    .faq-question {
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      font-family: var(--font-head);
+      font-size: 0.9rem;
+      color: #fff;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .faq-question::after {
+      content: '+';
+      color: var(--premcolo);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .faq-item[open] .faq-question::after {
+      content: '\2212';
+    }
+
+    .faq-answer {
+      padding: 0 1.25rem 1rem;
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* CONCLUSION */
+    .conclusion {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.05), rgba(0, 0, 20, 0.3));
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .conclusion h2 {
+      border: none;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      position: sticky;
+      top: 72px;
+    }
+
+    .sidebar-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-header {
+      padding: 14px 16px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--premcolo);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .related-list {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .related-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/9;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .related-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .related-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    .related-card-title {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* PREVIEW MODAL */
+    .preview-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 5, 15, 0.85);
+      backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+    }
+
+    .preview-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .preview-modal {
+      width: 92vw;
+      max-width: 700px;
+      height: 85vh;
+      background: #0a0e1a;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7);
+      transform: scale(0.92) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .preview-overlay.open .preview-modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .preview-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+    }
+
+    .preview-modal-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-modal-title i {
+      color: var(--premcolo);
+      font-size: 16px;
+    }
+
+    .preview-modal-title strong {
+      color: #fff;
+    }
+
+    .preview-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .preview-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, filter 0.2s;
+    }
+
+    .preview-dot:hover {
+      transform: scale(1.2);
+      filter: brightness(1.3);
+    }
+
+    .preview-dot.red {
+      background: #ff5f57;
+    }
+
+    .preview-dot.yellow {
+      background: #febc2e;
+    }
+
+    .preview-dot.green {
+      background: #28c840;
+    }
+
+    .preview-close-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .preview-close-btn:hover {
+      border-color: var(--accent2);
+      color: var(--accent2);
+      background: rgba(255, 0, 110, 0.08);
+    }
+
+    .preview-iframe-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .preview-iframe-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .preview-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: #0a0e1a;
+      z-index: 2;
+      transition: opacity 0.4s;
+    }
+
+    .preview-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .preview-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(0, 217, 255, 0.15);
+      border-top-color: var(--premcolo);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    .preview-loading-text {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-hint {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 16px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      color: var(--text-muted);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s 0.8s;
+      white-space: nowrap;
+      z-index: 3;
+    }
+
+    .preview-hint.show {
+      opacity: 1;
+    }
+
+    .preview-hint i {
+      color: var(--premcolo);
+      margin-right: 4px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1.25rem;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .related-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .related-card {
+        flex: 1 1 calc(50% - 8px);
+      }
+
+      .hero {
+        padding: 2rem 1.25rem 1.5rem;
+      }
+
       .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-  .navbar nav a{
-    gap: 5vw;
-    margin-top: 2.5vh;
-  }
+        padding: 0 1.25rem;
+      }
+
+      .breadcrumb {
+        padding: 10px 1.25rem;
+      }
+
+      .back-link {
+        margin: 0.75rem 1.25rem;
+      }
+
+      .practice-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .code-section {
+        width: 85vw;
+      }
     }
 
-    
-    @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
+    @media (max-width: 910px) {
+      .nav-links {
+        display: none;
+      }
 
-  .navbar nav {
-    width: 10vw;
-    margin: 0;
-    padding: 0;
-    gap: 5vw;
-    margin-left: -80vw;
-  }
-  .navbar nav a{
-    font-size: 3vw;
-    margin-top: 1.5vh;
-  }
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
-  .logo ,.logo-icon  {
-    font-size: 4vw;
-  }
+      .hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        right: 1.25rem;
+        top: 14px;
+        z-index: 101;
+      }
 
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .img img{
-    max-width: 100vw;
-    width: 90vw;
+      .hamburger.scrolled {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 1px solid var(--border);
+        background: rgba(0, 13, 31, 0.9);
+      }
     }
-  }
+
+    @media (max-width: 640px) {
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-stats {
+        gap: 1.2rem;
+      }
+
+      .code-tab {
+        padding: 7px 13px;
+        font-size: 12px;
+      }
+
+      .related-card {
+        flex: 1 1 100%;
+      }
+    }
   </style>
 </head>
+
 <body>
-<header class="navbar">
-    <a href="#" class="logo">
-      <span class="logo-icon">{ / }</span> 77cod_ing
-    </a>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html">Terms & Conditions</a>
+
+  <header class="navbar">
+    <a href="index.html" class="logo"><span class="logo-icon">{ / }</span> 77cod_ing</a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a><a href="Privacy Policy.html">Privacy Policy</a><a
+        href="Terms & Conditions.html">Terms & Conditions</a>
     </nav>
   </header>
-  <div class="Ret">
-    <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
-  </div>
-  <div class="img">
-    <img src="image copy.png" alt="subscribe.box">
-  </div>
-  <div class="par">
-  <span>
 
-  <h1>How to Add a Subscribe Box to Your Website for Better Engagement and AdSense Approval</h1>
-
-  <p>
-    A subscribe box is one of the most powerful tools you can add to your website. It not only helps you grow your audience but also 
-    improves user engagement, boosts return visits, and strengthens your website’s credibility. Whether you run a blog, an online business, 
-    or a professional portfolio, adding a subscribe box can accelerate your growth and improve your chances of being approved for 
-    <strong>Google AdSense</strong>.
-  </p>
-
-  <div class="highlight">
-    <p><strong>Quick Summary:</strong> In this guide, you’ll learn what a subscribe box is, why it’s important, best practices for creating one, and how it directly supports SEO and Google AdSense approval.</p>
+  <button class="hamburger" id="hamburger" aria-label="Open navigation"
+    aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+    <span class="close-btn" id="closeBtn" aria-label="Close menu">&times;</span>
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a><a href="Privacy Policy.html">Privacy Policy</a><a
+      href="Terms & Conditions.html">Terms &amp; Conditions</a>
   </div>
 
-  <h2>What Is a Subscribe Box?</h2>
-  <p>
-    A subscribe box is a section of your website where visitors can enter their email address to receive newsletters, updates, or exclusive 
-    content. It acts as a bridge between you and your audience, allowing you to maintain long-term communication even after visitors leave 
-    your website.
-  </p>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
+      <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+      <li><span aria-current="page">Subscribe Box</span></li>
+    </ol>
+  </nav>
 
-  <h2>Why Every Website Needs a Subscribe Box</h2>
-  <ul>
-    <li><strong>Grow Your Audience:</strong> Build an email list to connect with readers anytime.</li>
-    <li><strong>Increase Engagement:</strong> Subscribers are more likely to return and interact with your site.</li>
-    <li><strong>Boost Revenue:</strong> Loyal readers help generate more ad clicks and sales.</li>
-    <li><strong>Improve SEO:</strong> Returning visitors reduce bounce rates and improve user signals.</li>
-  </ul>
+  <a href="projects.html#subscribe" class="back-link"><i class='bx bx-arrow-back'></i> Return to Projects</a>
 
-  <h2>Best Practices for Designing a Subscribe Box</h2>
-  <h3>1. Keep It Simple</h3>
-  <p>
-    A cluttered subscribe form discourages users. Keep it minimal—usually just an email field and a subscribe button.
-  </p>
+  <section class="hero" aria-labelledby="main-heading">
+    <div class="hero-meta">
+      <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+      <span class="tag tag-html">HTML</span>
+      <span class="tag tag-css">CSS</span>
+      <span class="tag tag-seo"><i class='bx bx-search-alt-2'></i> SEO</span>
+      <span class="read-time"><i class='bx bx-time'></i> ~10 min read</span>
+    </div>
+    <h1 id="main-heading">How to Add a <span>Subscribe Box</span><br>for <em>Engagement &amp; AdSense</em></h1>
+    <p class="hero-lead">A complete guide to adding a professional email subscribe box to your website. Grow your
+      audience, boost engagement, and strengthen your Google AdSense approval chances. Free HTML &amp; CSS source code
+      included.</p>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-value">4</span><span class="stat-label">Steps</span></div>
+      <div class="stat"><span class="stat-value">0 JS</span><span class="stat-label">Dependencies</span></div>
+      <div class="stat"><span class="stat-value">SEO</span><span class="stat-label">Optimized</span></div>
+      <div class="stat"><span class="stat-value">Free</span><span class="stat-label">Source Code</span></div>
+    </div>
+    <div class="hero-img-wrap">
+      <img src="https://77cod-ing.github.io/Subscribe_Box.png"
+        alt="Professional subscribe box design for website with email input and subscribe button" class="hero-img"
+        width="1200" height="420" loading="eager" fetchpriority="high">
+    </div>
+    <p class="img-caption">A clean, modern subscribe box that boosts engagement and supports AdSense approval</p>
+  </section>
 
-  <h3>2. Use Clear Call-to-Action Text</h3>
-  <p>
-    Instead of a generic “Submit,” use actionable text like “Subscribe Now,” “Join Our Newsletter,” or “Get Free Updates.”
-  </p>
+  <div class="layout">
+    <main class="article-body" id="main-content">
 
-  <h3>3. Make It Mobile-Friendly</h3>
-  <p>
-    More than 60% of web traffic comes from mobile devices. Ensure your subscribe box looks great and works smoothly on smartphones and tablets.
-  </p>
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-title">Contents</p>
+        <ol>
+          <li><a href="#what-is">What Is a Subscribe Box?</a></li>
+          <li><a href="#why-use">Why Every Website Needs One</a></li>
+          <li><a href="#source-code">Full Source Code (HTML + CSS)</a></li>
+          <li><a href="#how-it-works">How It Works — Step by Step</a></li>
+          <li><a href="#adsense">How It Helps with AdSense Approval</a></li>
+          <li><a href="#seo-tips">SEO Optimization Tips</a></li>
+          <li><a href="#best-practices">Best Practices &amp; Common Mistakes</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </nav>
 
-  <h3>4. Highlight the Benefits</h3>
-  <p>
-    Tell users what they gain by subscribing. Examples: “Exclusive tips,” “Free resources,” or “Weekly updates.”
-  </p>
+      <section id="what-is">
+        <h2>What Is a Subscribe Box?</h2>
+        <p>A <strong>subscribe box</strong> is a dedicated section on your website where visitors can enter their email
+          address to receive newsletters, updates, or exclusive content. It acts as a direct communication channel
+          between you and your audience — one that works even after visitors leave your site.</p>
+        <p>Unlike social media followers, an email list is an asset you <strong>own</strong>. Subscribers receive your
+          content directly in their inbox, giving you consistent traffic regardless of algorithm changes on any
+          platform.</p>
+      </section>
 
-  <h3>5. Place It Strategically</h3>
-  <p>
-    The best spots for a subscribe box include the homepage, sidebar, footer, or at the end of blog posts.
-  </p>
+      <hr>
 
-  <h2>How a Subscribe Box Helps with Google AdSense Approval</h2>
-  <p>
-    Google AdSense looks for websites that provide valuable content, have a professional design, and engage users. 
-    A well-implemented subscribe box shows that your site is active, trustworthy, and focused on long-term growth.
-  </p>
+      <section id="why-use">
+        <h2>Why Every Website Needs a Subscribe Box</h2>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon">📬</div>
+            <div class="why-title">Grow Your Audience</div>
+            <div class="why-desc">Build an email list to connect with readers anytime — no algorithm dependency.</div>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">🔄</div>
+            <div class="why-title">Increase Engagement</div>
+            <div class="why-desc">Subscribers return more often, interact longer, and consume more pages per visit.
+            </div>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">💰</div>
+            <div class="why-title">Boost Revenue</div>
+            <div class="why-desc">Loyal readers generate more ad clicks, affiliate sales, and product conversions.</div>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">📈</div>
+            <div class="why-title">Improve SEO Signals</div>
+            <div class="why-desc">Returning visitors lower bounce rates and increase dwell time — positive ranking
+              signals.</div>
+          </div>
+        </div>
+      </section>
 
-  <ul>
-    <li><strong>Professional Appearance:</strong> Improves the overall look of your website.</li>
-    <li><strong>Higher Engagement:</strong> Encourages users to return regularly.</li>
-    <li><strong>Better SEO Signals:</strong> Lower bounce rates and more time on site.</li>
-    <li><strong>Revenue Potential:</strong> A loyal audience increases AdSense click-through rates.</li>
-  </ul>
+      <hr>
 
-  <h2>Tips for Optimizing Your Subscribe Box for SEO</h2>
-  <p>
-    Search engines pay attention to how users interact with your website. A subscribe box can indirectly improve SEO when done correctly:
-  </p>
-  <ul>
-    <li>Use <strong>SEO-friendly text</strong> near your subscribe box like “Get free coding tips every week.”</li>
-    <li>Ensure the subscribe form doesn’t slow down page speed.</li>
-    <li>Use responsive design so it looks good on all devices.</li>
-    <li>Don’t use intrusive pop-ups that annoy users and hurt SEO.</li>
-  </ul>
+      <div class="code-section" id="source-code">
+        <div class="code-toolbar">
+          <div class="code-tabs" role="tablist" aria-label="Code files">
+            <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+              aria-controls="panel-html">HTML</button>
+            <button class="code-tab" data-lang="css" role="tab" aria-selected="false" aria-controls="panel-css">CSS</button>
+          </div>
+          <button class="preview-btn" id="previewBtn"><i class='bx bx-play-circle'></i><span>Preview
+              Result</span></button>
+        </div>
+        <div class="code-panels">
+          <div class="code-box active" id="panel-html" role="tabpanel">
+            <div class="code-header"><span class="code-lang-label" style="color:#ff6600;">HTML —
+                index.html</span><button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+            </div>
+            <pre><code id="code1" class="language-html"></code></pre>
+          </div>
+          <div class="code-box" id="panel-css" role="tabpanel">
+            <div class="code-header"><span class="code-lang-label" style="color:#00d9ff;">CSS — style.css</span><button
+                class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button></div>
+            <pre><code id="code2" class="language-css"></code></pre>
+          </div>
+        </div>
+      </div>
 
-  <h2>Common Mistakes to Avoid</h2>
-  <ul>
-    <li>Asking for too much information (only ask for an email).</li>
-    <li>Using unclear text like “Submit” instead of action-driven CTAs.</li>
-    <li>Placing the subscribe box in hidden areas where users won’t notice it.</li>
-    <li>Not testing on mobile devices before publishing.</li>
-  </ul>
+      <hr>
 
-  <h2>Conclusion</h2>
-  <p>
-    Adding a subscribe box to your website is a simple yet powerful way to grow your audience, improve engagement, 
-    and prepare for Google AdSense approval. By keeping it clean, mobile-friendly, and strategically placed, 
-    you can create a better experience for visitors while strengthening your chances of monetization. 
-    Start today, and watch your online community grow over time.
-  </p>
+      <section id="how-it-works">
+        <h2>How It Works — Step by Step</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>Create the Container Structure</h3>
+              <p>Start with a <code>&lt;div class="subscribe-box"&gt;</code> wrapper. Inside, add an icon or heading, a
+                short description of what subscribers will receive, and the form element. This creates a clear visual
+                hierarchy that guides the user's eye from top to bottom.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>Build the Email Form</h3>
+              <p>Add a <code>&lt;form&gt;</code> with an <code>&lt;input type="email"&gt;</code> field and a submit
+                <code>&lt;button&gt;</code>. Use the <code>required</code> attribute on the input to prevent empty
+                submissions. The <code>placeholder</code> text should clearly indicate what to type.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>Style with CSS — Background &amp; Borders</h3>
+              <p>Apply a dark gradient background with a subtle glowing border using <code>border-color</code> and
+                <code>box-shadow</code>. Use <code>border-radius: 20px</code> for a modern card look. Add
+                <code>backdrop-filter: blur()</code> if placing over other content.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h3>Add Hover Effects &amp; Transitions</h3>
+              <p>Apply <code>transition</code> to the button for smooth hover states. On <code>:hover</code>, add
+                <code>transform: translateY(-2px)</code> and an enhanced <code>box-shadow</code> glow. Style the input
+                <code>:focus</code> state with a brighter border color for clear feedback.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="info-box"><strong>💡 Pro Tip:</strong> Place your subscribe box <strong>after valuable
+            content</strong> — not before it. Users who have already read and benefited from your content are 3-5x more
+          likely to subscribe than those who see the form immediately on arrival.</div>
+        <div class="warn-box"><strong>⚠️ Important:</strong> A subscribe box only <em>collects</em> emails visually. To
+          actually send newsletters, connect the form to a service like <strong>Mailchimp</strong>, <strong>ConvertKit
+          </strong>, <strong>Brevo</strong>, or your own backend endpoint via the form's <code>action</code> attribute.
+        </div>
+      </section>
 
-  <div class="highlight">
-    <p><strong>SEO Keywords:</strong> subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips</p>
+      <hr>
+
+      <section id="adsense">
+        <h2>How a Subscribe Box Helps with Google AdSense Approval</h2>
+        <p>Google AdSense reviewers evaluate your website on multiple criteria. A well-implemented subscribe box
+          positively impacts several of them:</p>
+        <ul>
+          <li><strong>Professional Appearance:</strong> A styled subscribe box signals that your site is polished and
+            purposeful — not a thin content page.</li>
+          <li><strong>Higher Engagement:</strong> The subscribe feature shows Google you're building a community, not
+            just publishing isolated articles.</li>
+          <li><strong>Better User Signals:</strong> Subscribers return more often, lowering bounce rate and increasing
+            average session duration.</li>
+          <li><strong>Revenue Potential:</strong> A loyal, returning audience generates more ad impressions and
+            click-throughs over time.</li>
+          <li><strong>Content Value Indicator:</strong> Offering a newsletter implies your content is valuable enough
+            that people want more of it.</li>
+        </ul>
+        <div class="info-box"><strong>💡 AdSense Insight:</strong> Google explicitly states that sites should have
+          "high-quality content" and "good user engagement." A subscribe box is a tangible feature that demonstrates
+          both — it shows you care about retaining visitors, not just attracting one-time clicks.</div>
+      </section>
+
+      <hr>
+
+      <section id="seo-tips">
+        <h2>SEO Optimization Tips for Your Subscribe Box</h2>
+        <p>Search engines pay attention to how users interact with your website. A subscribe box can indirectly improve
+          SEO when implemented correctly:</p>
+        <ul>
+          <li>Use <strong>SEO-friendly text</strong> near your subscribe box — e.g., "Get free coding tips every week"
+            instead of generic "Subscribe."</li>
+          <li>Ensure the subscribe form <strong>doesn't slow down page speed</strong> — keep CSS minimal and avoid
+            heavy JavaScript.</li>
+          <li>Use <strong>responsive design</strong> so the box looks perfect on all devices — Google uses
+            mobile-first indexing.</li>
+          <li>Don't use <strong>intrusive pop-ups</strong> that cover content immediately on page load — Google
+            penalizes
+            this.</li>
+          <li>Add a <strong>privacy note</strong> like "No spam, unsubscribe anytime" — this builds trust and may
+            reduce form abandonment.</li>
+          <li>Place the box <strong>above the fold on mobile</strong> or at the end of content — both are
+            high-conversion
+            positions.</li>
+        </ul>
+      </section>
+
+      <hr>
+
+      <section id="best-practices">
+        <h2>Best Practices &amp; Common Mistakes</h2>
+        <div class="practice-grid">
+          <div class="practice-card do">
+            <div class="practice-card-title">Do</div>
+            <ul>
+              <li>Ask for <strong>email only</strong> — single-field forms convert 25-50% higher</li>
+              <li>Use clear, action-driven CTA text like "Subscribe Now" or "Get Free Updates"</li>
+              <li>Highlight the <strong>benefit</strong> users get — exclusive tips, free resources, weekly updates</li>
+              <li>Make it <strong>mobile-friendly</strong> — 60%+ of traffic comes from mobile devices</li>
+              <li>Place it <strong>strategically</strong>: homepage, sidebar, footer, or end of blog posts</li>
+              <li>Add a <strong>trust signal</strong> like "No spam, unsubscribe anytime"</li>
+            </ul>
+          </div>
+          <div class="practice-card dont">
+            <div class="practice-card-title">Don't</div>
+            <ul>
+              <li>Ask for <strong>name + email + phone</strong> — each extra field drops conversions significantly</li>
+              <li>Use generic text like <code>Submit</code> — it's unclear and reduces click-through</li>
+              <li>Hide the box in areas users <strong>won't notice</strong> — footer-only placement limits visibility
+              </li>
+              <li>Use <strong>intrusive pop-ups</strong> that block content on page load — hurts SEO and UX</li>
+              <li>Forget to <strong>test on mobile</strong> before publishing — broken forms lose subscribers</li>
+              <li>Ignore <strong>accessibility</strong> — always use proper <code>label</code>,
+                <code>type="email"</code>,
+                and <code>required</code></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+          <details class="faq-item">
+            <summary class="faq-question">Does adding a subscribe box help with Google AdSense approval?</summary>
+            <div class="faq-answer">Yes. Google AdSense evaluates user engagement signals like return visits, time on
+              site, and bounce rate. A subscribe box encourages repeat visits and shows Google that your site provides
+              ongoing value to users, which strengthens your AdSense application.</div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Where is the best place to put a subscribe box on my website?</summary>
+            <div class="faq-answer">The most effective positions are: below the hero section on your homepage, in the
+              sidebar, at the end of blog posts, and in the footer. Placing it after valuable content increases
+              conversion because users have already engaged with your material.</div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Should I ask for only an email or more information?</summary>
+            <div class="faq-answer">Only ask for an email address. Every additional field you add reduces conversion
+              rates significantly. Studies show that single-field forms convert 25-50% higher than multi-field forms.
+              You can always collect more data later through follow-up emails.</div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Can I build a subscribe box without JavaScript?</summary>
+            <div class="faq-answer">Yes. The visual design and layout of a subscribe box can be built entirely with
+              HTML and CSS. However, to actually process subscriptions and send emails, you will need a backend service
+              like Mailchimp, ConvertKit, or a custom server-side script.</div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">How does a subscribe box improve SEO?</summary>
+            <div class="faq-answer">Indirectly. A subscribe box builds an email list that drives returning visitors.
+              More returning visitors means lower bounce rates, higher average session duration, and more page views per
+              session — all positive user engagement signals that search engines use in rankings.</div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">What CTA text should I use instead of "Submit"?</summary>
+            <div class="faq-answer">Use action-oriented text that highlights the benefit: "Subscribe Now," "Join Our
+              Newsletter," "Get Free Updates," "Unlock Exclusive Content," or "Stay in the Loop." Specific,
+              benefit-driven
+              CTAs consistently outperform generic labels.</div>
+          </details>
+        </div>
+      </section>
+
+      <hr>
+
+      <section id="conclusion" class="conclusion">
+        <h2>Conclusion</h2>
+        <p>Adding a <strong>subscribe box</strong> to your website is one of the highest-impact, lowest-effort
+          improvements you can make. It grows your audience, increases engagement, improves SEO signals, and
+          demonstrates to Google AdSense reviewers that your site is professional and user-focused.</p>
+        <p>Keep it clean, mobile-friendly, and strategically placed. Use a single email field, write a clear CTA, and
+          always highlight what subscribers gain. With the free HTML &amp; CSS code above, you can implement a polished
+          subscribe box in minutes.</p>
+        <p style="color:var(--text-muted);font-size:14px;margin-bottom:0;">Found this useful? Explore the related
+          projects in the sidebar for more modern UI components and SEO-optimized designs.</p>
+      </section>
+
+    </main>
+
+    <aside class="sidebar" aria-label="Related projects">
+      <div class="sidebar-box">
+        <div class="sidebar-header">Related Projects</div>
+        <div class="related-list">
+          <a class="related-card" href="Project10.html"><img src="https://77cod-ing.github.io/image%20copy%2024.png"
+              alt="Star Rating System" loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Interactive Star Rating System — HTML &amp; CSS</div>
+          </a>
+          <a class="related-card" href="Project14.html"><img src="https://77cod-ing.github.io/image%20copy%2040.png"
+              alt="Electric Neon Card Animation" loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Electric Neon Card Animation — HTML, CSS &amp; SVG</div>
+          </a>
+          <a class="related-card" href="Project37.html"><img src="https://i.suar.me/Np3EO/m"
+              alt="Glassmorphism Login Page" loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Modern Glassmorphism Login Page</div>
+          </a>
+          <a class="related-card" href="Project40.html"><img src="https://i.suar.me/Ep114/m"
+              alt="CSS Neon Digital Clock" loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">CSS Neon Digital Clock Animation</div>
+          </a>
+        </div>
+      </div>
+    </aside>
   </div>
-  </span>
-  </div>
-  <div class="con1">
-    <div class="countdown" id="countdown">
-    <span id="number">10</span> wait...
-  </div>
 
-  <div class="link-box" id="linkBox">
-    <a href="https://gist.github.com/77cod-ing/acd2f24b68d29990137d07fb9a24333b/c890d7c4883336506dcff0911621479ce5c01107" target="_blank">Go to code</a>
-  </div>
+  <!-- PREVIEW MODAL -->
+  <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+    aria-label="Live preview of subscribe box">
+    <div class="preview-modal">
+      <div class="preview-modal-header">
+        <div class="preview-modal-title"><i class='bx bx-show'></i><strong>Live Preview</strong> — Subscribe Box
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="preview-dots"><button class="preview-dot red" id="previewDotClose"
+              aria-label="Close"></button><button class="preview-dot yellow" disabled></button><button
+              class="preview-dot green" disabled></button></div>
+          <button class="preview-close-btn" id="previewCloseBtn"><i class='bx bx-x'></i> Close</button>
+        </div>
+      </div>
+      <div class="preview-iframe-wrap">
+        <div class="preview-loading" id="previewLoading">
+          <div class="preview-spinner"></div>
+          <span class="preview-loading-text">Loading preview...</span>
+        </div>
+        <div class="preview-hint" id="previewHint"><i class='bx bx-info-circle'></i> This is a static design preview
+        </div>
+        <iframe id="previewIframe" title="Subscribe box preview"></iframe>
+      </div>
+    </div>
   </div>
 
   <script>
-    let counter = 10;
-    let timer = null;
-    const countdownEl = document.getElementById("countdown");
-    const numberEl = document.getElementById("number");
-    const linkBox = document.getElementById("linkBox");
+    /* HAMBURGER */
+    const hamburger = document.getElementById('hamburger'), mobileMenu = document.getElementById('mobileMenu'), closeBtn = document.getElementById('closeBtn');
+    hamburger.addEventListener('click', () => { mobileMenu.classList.add('active'); hamburger.setAttribute('aria-expanded', 'true'); });
+    closeBtn.addEventListener('click', () => { mobileMenu.classList.remove('active'); hamburger.setAttribute('aria-expanded', 'false'); });
+    window.addEventListener('scroll', () => hamburger.classList.toggle('scrolled', window.scrollY > 50));
 
-    function startCountdown() {
-      if (timer) return;
-      timer = setInterval(() => {
-        counter--;
-        numberEl.textContent = counter;
+    /* CODE */
+    const gistBase = "https://gist.githubusercontent.com/77cod-ing/acd2f24b68d29990137d07fb9a24333b/raw/";
+    const htmlUrl = gistBase + "index.html", cssUrl = gistBase + "style.css";
+    let cachedHTML = "", cachedCSS = "";
+    const codeCache = {};
 
-        if (counter === 0) {
-          clearInterval(timer);
-          timer = null;
-          countdownEl.style.display = "none"; // يخفي العداد والكلمة
-          linkBox.style.display = "block";
-        }
-      }, 1000);
+    async function loadCode(url, elId, lang, key) {
+      try {
+        const res = await fetch(url); if (!res.ok) throw new Error("HTTP " + res.status);
+        const text = res.text ? await res.text() : "";
+        const clean = text.trim();
+        codeCache[key] = clean;
+        const el = document.getElementById(elId);
+        el.textContent = clean; el.className = "language-" + lang;
+        Prism.highlightElement(el);
+        if (lang === "html") cachedHTML = clean;
+        if (lang === "css") cachedCSS = clean;
+      } catch (e) { const el = document.getElementById(elId); if (el) el.textContent = "/* Failed to load: " + e.message + " */"; }
     }
+    loadCode(htmlUrl, "code1", "html", "html");
+    loadCode(cssUrl, "code2", "css", "css");
 
-    function stopCountdown() {
-      clearInterval(timer);
-      timer = null;
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          startCountdown();
-        } else {
-          stopCountdown();
-        }
+    /* TABS */
+    document.querySelectorAll(".code-tab").forEach(tab => {
+      tab.addEventListener("click", () => {
+        document.querySelectorAll(".code-tab").forEach(t => { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
+        document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+        tab.classList.add("active"); tab.setAttribute("aria-selected", "true");
+        document.getElementById({ html: "panel-html", css: "panel-css" }[tab.dataset.lang]).classList.add("active");
       });
-    }, { threshold: 1.0 });
+    });
 
-    observer.observe(countdownEl);
+    /* COPY */
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const key = btn.dataset.target === "code1" ? "html" : "css";
+        const code = (codeCache[key] || document.getElementById(btn.dataset.target)?.textContent || "").trim();
+        if (!code) return;
+        try {
+          await navigator.clipboard.writeText(code);
+          btn.innerHTML = "<i class='bx bx-check'></i> Copied!"; btn.classList.add("copied");
+          setTimeout(() => { btn.innerHTML = "<i class='bx bxs-copy'></i> Copy"; btn.classList.remove("copied"); }, 2000);
+        } catch (e) { btn.textContent = "Error"; }
+      });
+    });
+
+    /* PREVIEW */
+    const previewOverlay = document.getElementById("previewOverlay"), previewIframe = document.getElementById("previewIframe"),
+      previewLoading = document.getElementById("previewLoading"), previewHint = document.getElementById("previewHint"),
+      previewBtn = document.getElementById("previewBtn"), previewCloseBtn = document.getElementById("previewCloseBtn"),
+      previewDotClose = document.getElementById("previewDotClose");
+
+    function openPreview() { previewOverlay.classList.add("open"); document.body.style.overflow = "hidden"; previewLoading.classList.remove("hidden"); previewHint.classList.remove("show"); previewBtn.classList.add("loading"); buildPreview(); }
+    function closePreview() { previewOverlay.classList.remove("open"); document.body.style.overflow = ""; previewIframe.srcdoc = ""; previewBtn.classList.remove("loading"); }
+
+    async function buildPreview() {
+      if (cachedHTML && cachedCSS) { injectPreview(cachedHTML, cachedCSS); return; }
+      try {
+        const [hR, cR] = await Promise.all([fetch(htmlUrl), fetch(cssUrl)]);
+        cachedHTML = (await hR.text()).trim(); cachedCSS = (await cR.text()).trim();
+        injectPreview(cachedHTML, cachedCSS);
+      } catch (e) { previewLoading.innerHTML = "<i class='bx bx-error-circle' style='font-size:32px;color:var(--accent2);'></i><span class='preview-loading-text' style='color:var(--accent2);'>Failed: " + e.message + "</span>"; previewBtn.classList.remove("loading"); }
+    }
+
+    function injectPreview(html, css) {
+      let c = html.replace(/<link[^>]*href=["'][\w./]*\.css["'][^>]*>/gi, "<style>" + css + "</style>");
+      if (!c.includes("<style>")) c = c.includes("</head>") ? c.replace("</head>", "<style>" + css + "</style>\n</head>") : "<style>" + css + "</style>\n" + c;
+      const bg = "<style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#000d1f;}</style>";
+      c = c.includes("<head>") ? c.replace("<head>", "<head>" + bg) : bg + c;
+      previewIframe.srcdoc = c;
+      previewIframe.addEventListener("load", function onLoad() {
+        previewLoading.classList.add("hidden"); previewBtn.classList.remove("loading");
+        setTimeout(() => { previewHint.classList.add("show"); setTimeout(() => previewHint.classList.remove("show"), 9000); }, 300);
+        previewIframe.removeEventListener("load", onLoad);
+      });
+    }
+
+    previewBtn.addEventListener("click", openPreview);
+    previewCloseBtn.addEventListener("click", closePreview);
+    previewDotClose.addEventListener("click", closePreview);
+    previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
   </script>
 </body>
+
 </html>
