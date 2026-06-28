@@ -1,509 +1,2615 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="Picture1.png">
-  <title>Create a Skewed Navigation Menu — HTML/CSS</title>
-  <meta name="description" content="Skewed navigation menu, interactive menu design, CSS 3D effects, hover animation, responsive web design, modern UI navigation.">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
-     crossorigin="anonymous"></script>
-   <style>
-    body {
-      background: linear-gradient(to right, #2c0e43 10%, #581c87);
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 50px;
-      padding: 0 2rem;
-      background-color: #0d1325;
-    }
+    <!-- ===== PRIMARY SEO META ===== -->
+    <title>Animated Input Field with Floating Labels — Pure HTML/CSS Tutorial 2026</title>
+    <meta name="description"
+        content="Build a modern animated input field with floating labels, smooth underline animations, and responsive styling using only HTML and CSS. No JavaScript required. Free source code.">
+    <meta name="keywords"
+        content="animated input field, floating label css, css input animation, underline animation input, responsive form field, modern ui input, html css form design, css focus animation, input field hover effect, pure css input styling, animated form elements, css label transition, frontend project 2026">
+    <meta name="author" content="77cod_ing">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://77cod-ing.github.io/Project20.html">
 
-    .logo {
-      display: flex;
-      align-items: center;
-      font-size: 22px;
-      font-weight: bold;
-      color: white;
-      text-decoration: none;
-    }
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Animated Input Field with Floating Labels — Pure HTML/CSS Tutorial 2026">
+    <meta property="og:description"
+        content="Learn how to build a modern animated input field with floating labels, smooth underline animations, and responsive styling using only HTML and CSS. Zero JavaScript. Free source code included.">
+    <meta property="og:image" content="https://77cod-ing.github.io/image%20copy%2065.png">
+    <meta property="og:url" content="https://77cod-ing.github.io/Project20.html">
+    <meta property="og:site_name" content="77cod_ing">
+    <meta property="article:published_time" content="2026-06-14T00:00:00Z">
+    <meta property="article:modified_time" content="2026-06-14T00:00:00Z">
+    <meta property="article:author" content="77cod_ing">
+    <meta property="article:section" content="CSS Tutorials">
+    <meta property="article:tag"
+        content="HTML, CSS, Input Field, Floating Label, Form Design, CSS Transitions, UI Components, Frontend">
 
-    .logo-icon {
-      color: #a855f7;
-      font-size: 26px;
-      margin-right: 8px;
-      letter-spacing: 2.5px;
-    }
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Animated Input Field with Floating Labels — Pure HTML/CSS Tutorial">
+    <meta name="twitter:description"
+        content="Build a modern animated input field with floating labels and smooth underline animations using only HTML and CSS. No JavaScript needed.">
+    <meta name="twitter:image" content="https://77cod-ing.github.io/image%20copy%2065.png">
 
-    .nav-links {
-      display: flex;
-      gap: 35px;
-    }
-
-    .nav-links a {
-      color: #d1d5db;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: #a855f7;
-      transform: scale(1.2);
-    }
-    /*linke*/
-    .con1 {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin: auto 0;
-      height: 50vh;
-    }
-    .countdown {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00ffcc;
-    }
-
-    .link-box {
-      display: none;
-      padding: 20px 40px;
-      background: #1e2a47;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-      transition: 0.3s;
-    }
-
-    .link-box a {
-      text-decoration: none;
-      color: #00ffcc;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    .link-box:hover {
-      background: #26385c;
-      transform: scale(1.05);
-    }
-    /**ret**/
-    .Ret{
-      margin: 5px 0 0 3rem;
-      width: max-content;
-    }
-    .Ret a {
-      font-size: 2rem;
-      text-decoration: none;
-      color: #ffffff;
-    }
-    .Ret a span{
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 38px;
-      height: 38px;
-      border: 2px solid #fff;
-      border-radius: 50%;
-    }
-    .Ret a:hover {
-  color: #00e1ff;
-}
-    .Ret a:hover span {
-  border-color: #00e1ff;
-}
-    /**img**/
-    .img{
-      display: flex;
-      justify-content: center;
-      margin: 2rem auto;
-    }
-    .img img{
-      border-radius: 8px;
-      max-width: 100vw;
-    width: 70vw;
-    height: 65vh;
-    }
-    /**par**/
-    .par{
-       font-family: Arial, sans-serif;
-      line-height: 1.7;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      color: #ffffff;
-    }
-    h1, h2, h3 {
-      color: #00c8ff;
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
-    h2 {
-      margin-top: 35px;
-      font-size: 1.6rem;
-    }
-    h3 {
-      margin-top: 25px;
-      font-size: 1.3rem;
-    }
-    p {
-      margin-bottom: 18px;
-    }
-    ul {
-      margin: 15px 0;
-      padding-left: 25px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .highlight {
-      background: #000000;
-      padding: 8px 12px;
-      border-left: 4px solid #0073e6;
-      margin: 20px 0;
-    }
-    /**respon**/
-    @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .img img{
-    max-width: 100vw;
-    width: 90vw;
-    }
-  }
-         /**respon1**/
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hamburger .scrolled {
-      background: rgba(255, 255, 255, 0.7);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-}
-
-    .hamburger span {
-      width: 28px;
-      height: 3px;
-      background: white;
-      transition: all 0.3s ease;
-    }
-
-    /* ====== القائمة المنبثقة ====== */
-    .mobile-menu {
-      position: fixed;
-      top:0;
-      left: -100%;
-      width: 100%;
-      height: 100vh;
-      padding-top: 0.5rem ;
-      background: rgb(53, 53, 53);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 35px;
-      transition: left 0.5s ease;
-      z-index: 999;
-    }
-
-    .mobile-menu.active {
-      left: 0;
-    }
-
-    .mobile-menu a {
-      color: white;
-      font-size: 22px;
-      width: 100%;
-      height: 3rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      border-bottom: 0.5px solid #fff;
-      transition: color 0.3s;
-    }
-
-    .mobile-menu a:hover {
-      color: #ffffff;
-      background: rgba(104, 104, 104, 0.508);
-      backdrop-filter: bulur(20px);
-    }
-
-    /* ====== زر الإغلاق (X) ====== */
-    .close-btn {
-      position: absolute;
-      top: 20px;
-      right: 25px;
-      font-size: 30px;
-      color: white;
-      cursor: pointer;
-      width: 35px;
-      height: 35px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 2px solid #fff;
-      background: rgb(88, 88, 88);
-      border-radius: 50%;
-      transition: transform 0.3s ease;
-    }
-
-    .close-btn:hover {
-      transform: rotate(90deg);
-      color: #00e1ff;
-    }
-
-    /* ====== استجابة الهاتف ====== */
-    @media (max-width: 910px) {
-      .nav-links {
-        display: none;
+    <!-- ===== SCHEMA: TechArticle ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Animated Input Field with Floating Labels — Pure HTML/CSS Tutorial for Beginners",
+    "description": "A complete tutorial on building a modern animated input field using CSS transitions, absolute positioning, pseudo-elements, and transform scaling — zero JavaScript required.",
+    "image": "https://77cod-ing.github.io/image%20copy%2065.png",
+    "datePublished": "2026-06-14",
+    "dateModified": "2026-06-14",
+    "author": {
+      "@type": "Person",
+      "name": "77cod_ing",
+      "url": "https://77cod-ing.github.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "77cod_ing",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Picture1.png"
       }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://77cod-ing.github.io/Project20.html"
+    },
+    "articleSection": "CSS Tutorials",
+    "keywords": "animated input field, floating label css, underline animation, css focus effect, responsive form design",
+    "timeRequired": "PT8M",
+    "educationalLevel": "Beginner",
+    "teaches": ["CSS Position (absolute/relative)", "CSS Transitions", "CSS Transform (scale/translateY)", "CSS :focus/:focus-within", "CSS Pseudo-elements", "Responsive Form Design"]
+  }
+  </script>
 
-      .hamburger {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
+    <!-- ===== SCHEMA: HowTo ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Build an Animated Input Field with Floating Labels",
+    "description": "Step-by-step guide to creating a pure CSS animated input field with floating labels, underline animations, and responsive styling.",
+    "image": "https://77cod-ing.github.io/image%20copy%2065.png",
+    "totalTime": "PT8M",
+    "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "0"},
+    "supply": [
+      {"@type": "HowToSupply", "name": "Text editor (VS Code)"},
+      {"@type": "HowToSupply", "name": "A modern web browser"}
+    ],
+    "tool": [
+      {"@type": "HowToTool", "name": "HTML"},
+      {"@type": "HowToTool", "name": "CSS"}
+    ],
+    "step": [
+      {"@type": "HowToStep", "name": "Create the Input Container", "text": "Build a wrapper div with position: relative. Inside, add an <input> element, a <label>, and two decorative div elements for the top and bottom underline animations.", "position": 1},
+      {"@type": "HowToStep", "name": "Style the Default State", "text": "Set the input to width: 100%, transparent background, and a bottom border. Position the label absolutely inside the wrapper, centered vertically, with a transition for transform and font-size.", "position": 2},
+      {"@type": "HowToStep", "name": "Animate the Floating Label", "text": "On input:focus or when the input has content (using :not(:placeholder-shown)), move the label up with transform: translateY(-25px) and scale it down with transform: scale(0.85). Change the label color to the accent color.", "position": 3},
+      {"@type": "HowToStep", "name": "Build the Underline Animation", "text": "Style the top and bottom line divs with position: absolute, width: 0, and a bottom border or background color. On input:focus, transition width to 100% with different timing for a staggered left-to-right sweep effect.", "position": 4},
+      {"@type": "HowToStep", "name": "Add Border Highlight on Focus", "text": "On input:focus, change the border-color of the input to the accent color. Add a subtle box-shadow glow effect using the accent color at low opacity.", "position": 5},
+      {"@type": "HowToStep", "name": "Make It Responsive", "text": "Use max-width on the form container and relative font sizes. Ensure the input has adequate padding on mobile for comfortable touch interaction.", "position": 6}
+    ]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: FAQPage ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the floating label animation work without JavaScript?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The floating label uses the CSS :not(:placeholder-shown) pseudo-class combined with :focus. When the input is focused or has typed content (making the placeholder not shown), the label transitions to a smaller font-size and moves upward using transform: translateY(). This pure CSS approach eliminates the need for JavaScript event listeners."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is position: relative needed on the input container?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The label and the animated underline divs all use position: absolute. Without position: relative on the parent container, these absolutely positioned children would escape the container and position themselves relative to the nearest positioned ancestor or the viewport, breaking the entire layout."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use this input field inside a real form for submission?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The input is a standard HTML <input type='text'> element with a name attribute. It works identically to any regular form input — you can wrap it in a <form> and submit it via GET or POST. The CSS animations are purely visual and do not affect the input's functionality."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the underline sweep animation create a staggered effect?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Two separate div elements are positioned at the bottom of the input. The first (top line) starts from the left and expands to width: 100% on focus with one transition-duration. The second (bottom line) starts from the right (using right: 0 instead of left: 0) and expands with a slightly longer or shorter duration. This timing difference creates the staggered sweep illusion."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this animated input work on mobile devices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The animation triggers on :focus, which activates when a mobile user taps the input field. The floating label moves up and the underlines animate in. Make sure to add adequate padding (at least 16px vertical) so the input meets the 44px minimum touch target guideline for mobile accessibility."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I change the animation speed and accent color?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Adjust the transition-duration value (e.g., 0.2s for faster, 0.5s for slower) on the label and underline elements. To change the accent color, update the color value used in the :focus state for the label, border, box-shadow, and underline background — using CSS custom properties (variables) makes this a single-line change."
+        }
+      }
+    ]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: BreadcrumbList ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+      {"@type": "ListItem", "position": 3, "name": "Animated Input Field with Floating Labels", "item": "https://77cod-ing.github.io/Project20.html"}
+    ]
+  }
+  </script>
+
+    <!-- ===== ASSETS ===== -->
+    <link rel="icon" type="image/png" href="Picture1.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+    <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+        crossorigin="anonymous"></script>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+            --premcolo: #00d9ff;
+            --accent2: #ff6b35;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --surface: rgba(255, 255, 255, 0.04);
+            --surface-hover: rgba(0, 217, 255, 0.07);
+            --border: rgba(255, 255, 255, 0.08);
+            --font-head: 'Space Mono', monospace;
+            --font-body: 'DM Sans', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--back);
+            font-family: var(--font-body);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 56px;
+            padding: 0 2.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            color: var(--premcolo);
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: clamp(1rem, 2vw, 2rem);
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: var(--premcolo);
+        }
+
+        /* ===== HAMBURGER ===== */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            width: 44px;
+            height: 44px;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            background: transparent;
+            z-index: 200;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: #fff;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 13, 31, 0.97);
+            backdrop-filter: blur(20px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 150;
+        }
+
+        .mobile-menu.active {
+            left: 0;
+        }
+
+        .mobile-menu a {
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 18px;
+            width: 100%;
+            padding: 18px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            transition: color 0.2s, background 0.2s;
+        }
+
+        .mobile-menu a:first-child {
+            border-top: 1px solid var(--border);
+        }
+
+        .mobile-menu a:hover {
+            color: var(--premcolo);
+            background: var(--surface-hover);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            font-size: 24px;
+            color: var(--text-muted);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            border-radius: 50%;
+            transition: transform 0.3s ease, color 0.2s, border-color 0.2s;
+        }
+
+        .close-btn:hover {
+            transform: rotate(90deg);
+            color: var(--accent2);
+            border-color: var(--accent2);
+        }
+
+        /* ===== BREADCRUMB ===== */
+        .breadcrumb {
+            padding: 12px 2.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb ol {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .breadcrumb li {
+            display: flex;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .breadcrumb li+li::before {
+            content: "\203A";
+            color: var(--premcolo);
+            margin-right: 6px;
+            font-size: 1.1rem;
+        }
+
+        .breadcrumb a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--premcolo);
+        }
+
+        .breadcrumb [aria-current="page"] {
+            color: var(--premcolo);
+            font-weight: 600;
+        }
+
+        /* ===== BACK BUTTON ===== */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+            margin: 1rem 2.5rem;
+        }
+
+        .back-link:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 3rem 2.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: var(--font-head);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .tag-tutorial {
+            background: rgba(0, 217, 255, 0.12);
+            color: var(--premcolo);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+        }
+
+        .tag-css {
+            background: rgba(0, 217, 255, 0.08);
+            color: #7dd3fc;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .tag-html {
+            background: rgba(255, 102, 0, 0.1);
+            color: #ff9966;
+            border: 1px solid rgba(255, 102, 0, 0.2);
+        }
+
+        .tag-level {
+            background: rgba(255, 107, 53, 0.1);
+            color: var(--accent2);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+        }
+
+        .read-time {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-head);
+            font-size: clamp(1.6rem, 4vw, 2.6rem);
+            line-height: 1.25;
+            color: #fff;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 span {
+            color: var(--premcolo);
+        }
+
+        .hero-lead {
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            color: var(--text-muted);
+            max-width: 680px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .stat-value {
+            font-family: var(--font-head);
+            font-size: 1.4rem;
+            color: var(--premcolo);
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-height: 500px;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            display: block;
+            box-shadow: 0 0 60px rgba(0, 217, 255, 0.08), 0 32px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .img-caption {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* ===== LAYOUT ===== */
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2.5rem 4rem;
+            align-items: start;
+        }
+
+        /* ===== ARTICLE ===== */
+        .article-body h2 {
+            font-family: var(--font-head);
+            font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+            color: var(--premcolo);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            scroll-margin-top: 80px;
+        }
+
+        .article-body h3 {
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            color: #7dd3fc;
+            margin: 1.8rem 0 0.75rem;
+            scroll-margin-top: 80px;
+        }
+
+        .article-body p {
+            margin-bottom: 1.1rem;
+            color: var(--text);
+        }
+
+        .article-body code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 7px;
+            border-radius: 5px;
+        }
+
+        .article-body ul,
+        .article-body ol {
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 1.1rem;
+        }
+
+        .article-body li {
+            margin-bottom: 9px;
+        }
+
+        .article-body li strong {
+            color: #fff;
+        }
+
+        /* ===== TOC ===== */
+        .toc {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .toc-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--premcolo);
+            margin-bottom: 0.75rem;
+        }
+
+        .toc ol {
+            padding-left: 1.2rem;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+        }
+
+        .toc a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: var(--premcolo);
+        }
+
+        /* ===== FEATURE CARDS ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 1.5rem 0;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            transition: border-color 0.25s, background 0.25s;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(0, 217, 255, 0.3);
+            background: var(--surface-hover);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .feature-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* ===== STEPS ===== */
+        .steps {
+            margin: 1.5rem 0;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 44px 1fr;
+            gap: 1rem;
+            padding: 1.1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-num {
+            width: 44px;
+            height: 44px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-head);
+            color: var(--premcolo);
+            font-size: 1rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            margin-top: 0;
+            font-size: 1rem;
+        }
+
+        .step-content p {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* ===== STEP IMAGES ===== */
+        .step-img {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin: 0.75rem 0;
+            display: block;
+        }
+
+        /* ===== CODE SECTION ===== */
+        .code-section {
+            margin: 2rem 0;
+            width: 60vw;
+        }
+
+        .code-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .code-tabs {
+            display: flex;
+            gap: 4px;
+        }
+
+        .code-tab {
+            padding: 8px 20px;
+            border-radius: 8px 8px 0 0;
+            border: 1px solid var(--border);
+            border-bottom: none;
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .code-tab.active {
+            background: #1e1e2f;
+            color: #fff;
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+
+        .code-tab[data-lang="html"].active {
+            color: #ff6600;
+        }
+
+        .code-tab[data-lang="css"].active {
+            color: #00ffff;
+        }
+
+        /* ===== PREVIEW BUTTON ===== */
+        .preview-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 22px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 217, 255, 0.4);
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.3px;
+        }
+
+        .preview-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .preview-btn:hover {
+            border-color: var(--premcolo);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .preview-btn:hover::before {
+            opacity: 1;
+        }
+
+        .preview-btn:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        .preview-btn i,
+        .preview-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .preview-btn.loading i {
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .code-panels {
+            position: relative;
+        }
+
+        .code-box {
+            background: #1e1e2f;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+            border-radius: 0 12px 12px 12px;
+            position: relative;
+            display: none;
+        }
+
+        .code-box.active {
+            display: block;
+        }
+
+        .code-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .code-lang-label {
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .copy-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            border-radius: 7px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo);
+        }
+
+        .copy-btn.copied {
+            color: #4ade80;
+            border-color: #4ade80;
+        }
+
+        :not(pre)>code[class*="language-"],
+        pre[class*="language-"] {
+            width: 100%;
+            max-width: 100%;
+            height: 50vh;
+            border-radius: 0 0 12px 12px;
+            overflow-y: auto;
+            overflow-x: auto;
+            margin: 0;
+        }
+
+        pre::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        pre::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        pre::-webkit-scrollbar-thumb {
+            background: var(--premcolo);
+            border-radius: 10px;
+        }
+
+        /* ===== INFO / WARN ===== */
+        .info-box {
+            background: rgba(0, 217, 255, 0.06);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-left: 4px solid var(--premcolo);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .info-box strong {
+            color: var(--premcolo);
+        }
+
+        .warn-box {
+            background: rgba(255, 107, 53, 0.06);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-left: 4px solid var(--accent2);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .warn-box strong {
+            color: var(--accent2);
+        }
+
+        /* ===== COMPARISON TABLE ===== */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 14px;
+        }
+
+        .comparison-table th {
+            font-family: var(--font-head);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 10px 14px;
+            background: rgba(0, 217, 255, 0.08);
+            color: var(--premcolo);
+            border: 1px solid var(--border);
+            text-align: left;
+        }
+
+        .comparison-table td {
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            vertical-align: top;
+        }
+
+        .comparison-table tr:hover td {
+            background: var(--surface-hover);
+        }
+
+        .comparison-table td strong {
+            color: #fff;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-family: var(--font-head);
+            font-weight: 700;
+        }
+
+        .badge-green {
+            background: rgba(74, 222, 128, 0.12);
+            color: #4ade80;
+            border: 1px solid rgba(74, 222, 128, 0.25);
+        }
+
+        .badge-orange {
+            background: rgba(255, 107, 53, 0.12);
+            color: var(--accent2);
+            border: 1px solid rgba(255, 107, 53, 0.25);
+        }
+
+        .badge-blue {
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+        }
+
+        /* ===== FAQ ===== */
+        .faq {
+            margin: 1.5rem 0;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            background: var(--surface);
+            font-weight: 600;
+            font-size: 15px;
+            transition: background 0.2s;
+            list-style: none;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background: var(--surface-hover);
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.3rem;
+            color: var(--premcolo);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        details[open] .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 1rem 1.25rem;
+            color: var(--text-muted);
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+        }
+
+        .faq-answer code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* ===== CONCLUSION ===== */
+        .conclusion {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.07), rgba(0, 140, 160, 0.05));
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 16px;
+            padding: 1.75rem 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .conclusion h2 {
+            border: none;
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 1.5rem 0;
+        }
+
+        /* ===== COUNTDOWN ===== */
+        .countdown-box {
+            background: rgba(0, 217, 255, 0.05);
+            border: 1px solid rgba(0, 217, 255, 0.18);
+            border-radius: 14px;
+            padding: 1.5rem 1.75rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        .countdown-label {
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .countdown-timer {
+            font-family: var(--font-head);
+            font-size: 2.5rem;
+            color: var(--premcolo);
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .gist-link-wrapper {
+            display: none;
+            margin-top: 12px;
+        }
+
+        .gist-link-wrapper.visible {
+            display: block;
+        }
+
+        .gist-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(0, 217, 255, 0.06));
+            border: 1px solid rgba(0, 217, 255, 0.35);
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .gist-link:hover {
+            background: rgba(0, 217, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            position: sticky;
+            top: 72px;
+        }
+
+        .sidebar-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-header {
+            padding: 14px 16px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--premcolo);
+            border-bottom: 1px solid var(--border);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .related-list {
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .related-card {
+            display: block;
+            text-decoration: none;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 16/9;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .related-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+
+        .related-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .related-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+        .related-card-title {
+            position: absolute;
+            bottom: 8px;
+            left: 10px;
+            right: 10px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* ===== PREVIEW MODAL ===== */
+        .preview-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 5, 15, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+        }
+
+        .preview-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .preview-modal {
+            width: 95vw;
+            max-width: 95vw;
+            height: 95vh;
+            max-height: 95vh;
+            background: #0a0e1a;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(0, 217, 255, 0.06);
+            transform: scale(0.92) translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .preview-overlay.open .preview-modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .preview-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
+        }
+
+        .preview-modal-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .preview-modal-title i {
+            color: var(--premcolo);
+            font-size: 16px;
+        }
+
+        .preview-modal-title strong {
+            color: #fff;
+        }
+
+        .preview-dots {
+            display: flex;
+            gap: 7px;
+        }
+
+        .preview-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, filter 0.2s;
+        }
+
+        .preview-dot:hover {
+            transform: scale(1.2);
+            filter: brightness(1.3);
+        }
+
+        .preview-dot.red {
+            background: #ff5f57;
+        }
+
+        .preview-dot.yellow {
+            background: #febc2e;
+        }
+
+        .preview-dot.green {
+            background: #28c840;
+        }
+
+        .preview-close-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .preview-close-btn:hover {
+            border-color: var(--accent2);
+            color: var(--accent2);
+            background: rgba(255, 107, 53, 0.08);
+        }
+
+        .preview-iframe-wrap {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .preview-iframe-wrap iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            background: #000;
+        }
+
+        .preview-loading {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            background: #0a0e1a;
+            z-index: 2;
+            transition: opacity 0.4s;
+        }
+
+        .preview-loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .preview-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(0, 217, 255, 0.15);
+            border-top-color: var(--premcolo);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
+        .preview-loading-text {
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .preview-loading-files {
+            display: flex;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .preview-file-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            font-weight: 700;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+
+        .preview-file-tag.loaded {
+            opacity: 1;
+        }
+
+        .preview-file-tag.html-tag {
+            background: rgba(255, 102, 0, 0.15);
+            color: #ff6600;
+            border: 1px solid rgba(255, 102, 0, 0.3);
+        }
+
+        .preview-file-tag.css-tag {
+            background: rgba(0, 255, 255, 0.1);
+            color: #00ffff;
+            border: 1px solid rgba(0, 255, 255, 0.25);
+        }
+
+        .preview-hint {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 6px 16px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            color: var(--text-muted);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.5s 0.8s;
+            white-space: nowrap;
+            z-index: 3;
+        }
+
+        .preview-hint.show {
+            opacity: 1;
+        }
+
+        .preview-hint i {
+            color: var(--premcolo);
+            margin-right: 4px;
+        }
+   /* ===== CODE SECTION ===== */
+    .code-section {
+      margin: 2rem 0;
+      width: 60vw;
     }
-    .hamburger.scrolled {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      background: rgb(65, 65, 65);
-}
+
+    .code-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
-  </style>
+
+    .code-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .code-tab {
+      padding: 8px 20px;
+      border-radius: 8px 8px 0 0;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .code-tab.active {
+      background: #1e1e2f;
+      color: #fff;
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .code-tab[data-lang="html"].active {
+      color: #ff6600;
+    }
+
+    .code-tab[data-lang="css"].active {
+      color: #00ffff;
+    }
+
+    /* ===== PREVIEW BUTTON ===== */
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.3px;
+    }
+
+    .preview-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .preview-btn:hover {
+      border-color: var(--premcolo);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .preview-btn:hover::before {
+      opacity: 1;
+    }
+
+    .preview-btn:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .preview-btn i {
+      font-size: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn.loading i {
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .code-panels {
+      position: relative;
+    }
+
+    .code-box {
+      background: #1e1e2f;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 0 12px 12px 12px;
+      position: relative;
+      display: none;
+    }
+
+    .code-box.active {
+      display: block;
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-lang-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    .copy-btn.copied {
+      color: #4ade80;
+      border-color: #4ade80;
+    }
+
+    :not(pre)>code[class*="language-"],
+    pre[class*="language-"] {
+      width: 100%;
+      max-width: 100%;
+      height: 50vh;
+      border-radius: 0 0 12px 12px;
+      overflow-y: auto;
+      overflow-x: auto;
+      margin: 0;
+    }
+
+    pre::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    pre::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    pre::-webkit-scrollbar-thumb {
+      background: var(--premcolo);
+      border-radius: 10px;
+    }
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 1fr;
+                padding: 1.5rem 1.25rem;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .related-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .related-card {
+                flex: 1 1 calc(50% - 8px);
+            }
+
+            .hero {
+                padding: 2rem 1.25rem 1.5rem;
+            }
+
+            .navbar {
+                padding: 0 1.25rem;
+            }
+
+            .breadcrumb {
+                padding: 10px 1.25rem;
+            }
+
+            .back-link {
+                margin: 0.75rem 1.25rem;
+            }
+
+            .code-section {
+                width: 85vw;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero-stats {
+                gap: 1.2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .code-tab {
+                padding: 7px 13px;
+                font-size: 12px;
+            }
+
+            .related-card {
+                flex: 1 1 100%;
+            }
+
+            .comparison-table {
+                font-size: 12px;
+            }
+
+            .code-section {
+                width: 95vw;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<header class="navbar">
-    <a href="#" class="logo">
-      <span class="logo-icon">{ / }</span> 77cod_ing
-    </a>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html">Terms & Conditions</a>
-    </nav>
-  </header>
-  <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">{ / }</span> 77cod_ing
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="Privacy Policy.html">Privacy Policy</a>
+            <a href="Terms & Conditions.html">Terms &amp; Conditions</a>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div class="mobile-menu" id="mobileMenu">
+        <span class="close-btn" id="closeBtn" role="button" aria-label="Close menu">&times;</span>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="Privacy Policy.html">Privacy Policy</a>
+        <a href="Terms & Conditions.html">Terms &amp; Conditions</a>
     </div>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <span class="close-btn" id="closeBtn">&times;</span>
-    <a href="index.html"style="border-top: 2px solid #fff;height: 5rem;">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html" style="border-bottom: 2px solid #fff;">Terms & Conditions</a>
-  </div>
-<div class="Ret">
-  <a href="projects.html#menu"><pre><span>&lt;</span> Return</pre></a>
+    <!-- ===== BREADCRUMB ===== -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="index.html"><i class='bx bx-home-alt-2'></i> <span
+                        itemprop="name">Home</span></a>
+                <meta itemprop="position" content="1">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="projects.html"><i class='bx bx-data'></i> <span
+                        itemprop="name">Projects</span></a>
+                <meta itemprop="position" content="2">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name" aria-current="page">Animated Input Field</span>
+                <meta itemprop="position" content="3">
+            </li>
+        </ol>
+    </nav>
+
+    <!-- ===== BACK BUTTON ===== -->
+    <a href="projects.html#input" class="back-link" aria-label="Return to Projects">
+        <i class='bx bx-arrow-back'></i> Return to Projects
+    </a>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-labelledby="main-heading">
+        <div class="hero-meta">
+            <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+            <span class="tag tag-html">HTML</span>
+            <span class="tag tag-css">CSS</span>
+            <span class="tag tag-level">Beginner</span>
+            <span class="read-time"><i class='bx bx-time'></i> ~8 min read</span>
+        </div>
+
+        <h1 id="main-heading">
+            <span>Animated Input Field</span> with Floating<br>
+            Labels — Pure HTML/CSS
+        </h1>
+
+        <p class="hero-lead">
+            A complete tutorial on building a modern animated input field where the label floats upward
+            on focus, decorative underlines sweep in from both sides, and the border highlights with a
+            subtle glow — all using only HTML and CSS, zero JavaScript required.
+        </p>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-value">3</span>
+                <span class="stat-label">Build Steps</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">0</span>
+                <span class="stat-label">Lines of JS</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">3</span>
+                <span class="stat-label">CSS Effects</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">Free</span>
+                <span class="stat-label">Source Code</span>
+            </div>
+        </div>
+
+        <img src="image copy 65.png"
+            alt="Animated input field with floating label effect showing the label moved above the input on a dark background with cyan underline animation"
+            class="hero-img" width="1200" height="500" loading="eager">
+        <p class="img-caption">Final result: a floating label input with animated underlines and focus glow</p>
+    </section>
+
+    <!-- ===== MAIN LAYOUT ===== -->
+    <div class="layout">
+
+        <!-- ===== ARTICLE BODY ===== -->
+        <article class="article-body" itemscope itemtype="https://schema.org/TechArticle">
+
+            <!-- TOC -->
+            <nav class="toc" aria-label="Table of contents">
+                <div class="toc-title"><i class='bx bx-list-ul'></i> Table of Contents</div>
+                <ol>
+                    <li><a href="#what-is">What Is an Animated Input Field?</a></li>
+                    <li><a href="#why-use">Why Use Animated Input Fields?</a></li>
+                    <li><a href="#features">Key Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#step-1">Step 1: Structure the Input Field</a></li>
+                    <li><a href="#step-2">Step 2: Add CSS Styling</a></li>
+                    <li><a href="#step-3">Step 3: Preview the Final Effect</a></li>
+                    <li><a href="#comparison">CSS Properties Used</a></li>
+                    <li><a href="#best-practices">Best Practices for Input Field Design</a></li>
+                    <li><a href="#mistakes">Common Mistakes to Avoid</a></li>
+                    <li><a href="#faq">Frequently Asked Questions</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ol>
+            </nav>
+
+            <!-- What Is -->
+            <section id="what-is">
+                <h2>What Is an Animated Input Field?</h2>
+                <p>
+                    An <strong>animated input field</strong> is a form element that responds visually when
+                    users interact with it. Features like <strong>floating labels</strong> that move upward
+                    on focus, color changes on the border, and <strong>sliding underline animations</strong>
+                    create a more engaging and intuitive experience for users filling out forms.
+                </p>
+                <p>
+                    Unlike static inputs where the label sits above or inside the field permanently, animated
+                    inputs use CSS transitions to transform the label's position, size, and color — providing
+                    clear visual feedback about which field is currently active and whether it contains data.
+                </p>
+            </section>
+
+            <!-- Why Use -->
+            <section id="why-use">
+                <h2>Why Use Animated Input Fields?</h2>
+                <ul>
+                    <li><strong>Visual Feedback:</strong> Provides clear indication of focus and interaction,
+                        so users always know which field they're typing in.</li>
+                    <li><strong>Better UX:</strong> Improves user experience and form completion rates by
+                        making the form feel responsive and alive.</li>
+                    <li><strong>Modern Design:</strong> Makes your forms look sleek and professional,
+                        matching the quality expectations of modern web applications.</li>
+                    <li><strong>No JavaScript Needed:</strong> Built entirely with HTML and CSS using
+                        <code>:focus</code> and <code>:not(:placeholder-shown)</code> pseudo-classes.
+                    </li>
+                    <li><strong>Space Efficient:</strong> The floating label pattern saves vertical space
+                        since the label occupies the input area when empty.</li>
+                </ul>
+            </section>
+
+            <!-- Features -->
+            <section id="features">
+                <h2>Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: var(--premcolo);"><i class='bx bx-label'></i></div>
+                        <div class="feature-title">Floating Label</div>
+                        <div class="feature-desc">The label scales down and moves upward when the input is focused or
+                            has content.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: var(--accent2);"><i class='bx bx-linear-gradient'></i>
+                        </div>
+                        <div class="feature-title">Sweeping Underlines</div>
+                        <div class="feature-desc">Two decorative lines animate from left and right on focus for a
+                            staggered reveal.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #7dd3fc;"><i class='bx bx-bolt-circle'></i></div>
+                        <div class="feature-title">Border Highlight</div>
+                        <div class="feature-desc">The input border transitions to the accent color with a subtle glow on
+                            focus.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #4ade80;"><i class='bx bx-palette'></i></div>
+                        <div class="feature-title">Color Transition</div>
+                        <div class="feature-desc">Label, border, and underline colors all transition smoothly for a
+                            cohesive effect.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #fbbf24;"><i class='bx bx-code-alt'></i></div>
+                        <div class="feature-title">Zero JavaScript</div>
+                        <div class="feature-desc">Uses :not(:placeholder-shown) and :focus pseudo-classes — no JS event
+                            listeners.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #c084fc;"><i class='bx bx-mobile-alt'></i></div>
+                        <div class="feature-title">Responsive</div>
+                        <div class="feature-desc">Scales gracefully on all screen sizes with relative units and flexible
+                            widths.</div>
+                    </div>
+                </div>
+            </section>
+
+                <!-- SOURCE CODE -->
+                <section id="source-code">
+                    <h2>Full Source Code (Free)</h2>
+                    <p>
+                        The entire project lives in a single HTML file — no external CSS or JS files required.
+                        The HTML sets up the card structure and links images from <code>picsum.photos</code>
+                        for demonstration. The CSS drives every animation, transition, and responsive breakpoint.
+                        A four-line script at the bottom removes the shimmer placeholder once each image has
+                        loaded. Use the tabs below to explore the HTML and CSS sections separately.
+                    </p>
+                
+                    <div class="code-section">
+                        <div class="code-toolbar">
+                            <div class="code-tabs" role="tablist" aria-label="Code files">
+                                <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                                    aria-controls="panel-html">HTML</button>
+                                <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+                                    aria-controls="panel-css">CSS</button>
+                            </div>
+                            <button class="preview-btn" id="previewBtn" aria-label="Preview the final result">
+                                <i class='bx bx-play-circle'></i>
+                                <span>Preview Result</span>
+                            </button>
+                        </div>
+                
+                        <div class="code-panels">
+                            <div class="code-box active" id="panel-html" role="tabpanel">
+                                <div class="code-header">
+                                    <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                                    <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+                                </div>
+                                <pre><code id="code1" class="language-html"></code></pre>
+                            </div>
+                
+                            <div class="code-box" id="panel-css" role="tabpanel">
+                                <div class="code-header">
+                                    <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
+                                    <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+                                </div>
+                                <pre><code id="code2" class="language-css"></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="info-box">
+                        <strong>💡 Quick Start:</strong> Copy the full code into a single <code>index.html</code> file.
+                        No build tools, no npm, no libraries — open it in any modern browser and the accordion
+                        gallery works immediately. Swap the <code>picsum.photos</code> URLs with your own images
+                        to customize it instantly.
+                    </div>
+                </section>
+
+            <!-- How It Works -->
+            <section id="how-it-works">
+                <h2>How It Works</h2>
+                <p>
+                    The structure uses a <code>&lt;div&gt;</code> container with <code>position: relative</code>
+                    holding three children: an <code>&lt;input&gt;</code>, a <code>&lt;label&gt;</code>, and two
+                    decorative <code>&lt;div&gt;</code> elements for the animated underlines.
+                </p>
+                <ul>
+                    <li>The <code>&lt;label&gt;</code> is positioned absolutely inside the container, centered
+                        vertically by default.</li>
+                    <li>On <code>:focus</code> or when content is present (<code>:not(:placeholder-shown)</code>),
+                        the label moves up via <code>transform: translateY()</code> and scales down.</li>
+                    <li>The two underline divs start at <code>width: 0</code> and transition to
+                        <code>width: 100%</code> on focus — one from the left, one from the right.
+                    </li>
+                    <li>The input border color changes on focus with a <code>box-shadow</code> glow for
+                        added emphasis.</li>
+                </ul>
+
+                <div class="info-box">
+                    <p><strong>Quick Summary:</strong> Build a text input field with HTML, style it with CSS,
+                        and add animations for floating labels and sweeping underlines — all without JavaScript.
+                        The key trick is using <code>placeholder=" "</code> (a space) so
+                        <code>:not(:placeholder-shown)</code> can detect when the user has typed content.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Step 1 -->
+            <section id="step-1">
+                <h2>Step 1: Structure the Input Field</h2>
+                <p>
+                    Start with a simple HTML input element wrapped in a container div. Add a label and
+                    two decorative divs for top and bottom lines that animate on focus.
+                </p>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-num">1</div>
+                        <div class="step-content">
+                            <h3>Create the HTML Structure</h3>
+                            <p>Wrap an <code>&lt;input&gt;</code> with <code>placeholder=" "</code> (a space
+                                character is required for the CSS trick to work), a <code>&lt;label&gt;</code>
+                                linked via <code>for</code> attribute, and two <code>&lt;div&gt;</code> elements
+                                with classes for the top and bottom animated lines.</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="image copy 66.png"
+                    alt="HTML code showing the input field structure with label and decorative line divs"
+                    class="step-img" width="800" height="400" loading="lazy">
+            </section>
+
+            <!-- Step 2 -->
+            <section id="step-2">
+                <h2>Step 2: Add CSS Styling</h2>
+                <p>
+                    Style the input with padding, border, and transparent background. Position the label
+                    absolutely to create a floating effect. Use the decorative divs for underline animations
+                    when the input is focused.
+                </p>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-num">2</div>
+                        <div class="step-content">
+                            <h3>Style the Default and Focus States</h3>
+                            <p>Set the container to <code>position: relative</code>. Style the input with a
+                                bottom border, transparent background, and padding that accounts for the floating
+                                label. Position the label absolutely, centered vertically. On
+                                <code>input:focus ~ label</code> and <code>input:not(:placeholder-shown) ~ label</code>,
+                                move the label up and scale it down.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">3</div>
+                        <div class="step-content">
+                            <h3>Animate the Underlines</h3>
+                            <p>Position both line divs at the bottom of the container with <code>width: 0</code>.
+                                On <code>input:focus ~ .line</code>, transition to <code>width: 100%</code>.
+                                Use different <code>left</code>/<code>right</code> positioning and timing for the
+                                staggered sweep effect.</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="image copy 67.png"
+                    alt="CSS code showing the input styling, floating label transition, and underline animation"
+                    class="step-img" width="800" height="400" loading="lazy">
+
+                <div class="warn-box">
+                    <p><strong>Important:</strong> The <code>placeholder</code> attribute must contain a
+                        space character (<code>placeholder=" "</code>), not be empty. An empty placeholder
+                        means <code>:placeholder-shown</code> never matches, breaking the floating label
+                        when users type content without first focusing the field.</p>
+                </div>
+            </section>
+
+            <!-- Step 3 -->
+            <section id="step-3">
+                <h2>Step 3: Preview the Final Effect</h2>
+                <p>
+                    When the user focuses on the input, the label scales and moves upward, the top and
+                    bottom lines animate smoothly from both sides, and the border highlights — resulting
+                    in a visually appealing and interactive input field.
+                </p>
+                <img src="image copy 65.png"
+                    alt="Final preview of the animated input field showing the floating label and underline animations"
+                    class="step-img" width="800" height="400" loading="lazy">
+                <p class="img-caption">The completed input field in its default and focused states</p>
+            </section>
+
+            <!-- Comparison Table -->
+            <section id="comparison">
+                <h2>CSS Properties Used</h2>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Purpose</th>
+                            <th>Applied To</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>position: relative</strong></td>
+                            <td>Contains the absolutely positioned label and underline divs</td>
+                            <td><span class="badge badge-blue">Container</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>position: absolute</strong></td>
+                            <td>Allows the label and lines to be positioned freely inside the container</td>
+                            <td><span class="badge badge-green">Label + Lines</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>transform: translateY()</strong></td>
+                            <td>Moves the label upward when input is focused or has content</td>
+                            <td><span class="badge badge-blue">:focus state</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>transform: scale()</strong></td>
+                            <td>Reduces the label font size proportionally when floated</td>
+                            <td><span class="badge badge-blue">:focus state</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>width transition</strong></td>
+                            <td>Animates the underline divs from 0 to 100% width</td>
+                            <td><span class="badge badge-green">Line divs</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>:not(:placeholder-shown)</strong></td>
+                            <td>Detects when the input has typed content without JavaScript</td>
+                            <td><span class="badge badge-orange">Pseudo-class</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>box-shadow</strong></td>
+                            <td>Adds a subtle glow around the input border on focus</td>
+                            <td><span class="badge badge-blue">:focus state</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Best Practices -->
+            <section id="best-practices">
+                <h2>Best Practices for Input Field Design</h2>
+                <ul>
+                    <li><strong>Use Clear Labels:</strong> Make sure the label text clearly describes what
+                        the user should type (e.g., "Full Name", "Email Address").</li>
+                    <li><strong>Maintain Accessibility:</strong> Always link the label to the input using
+                        the <code>for</code> attribute matching the input's <code>id</code>. Add
+                        <code>:focus-visible</code> styles for keyboard navigation.
+                    </li>
+                    <li><strong>Responsive Design:</strong> Use <code>max-width</code> on the container
+                        and relative padding so the input resizes gracefully on mobile screens.</li>
+                    <li><strong>Smooth Animations:</strong> Keep transition durations between 0.2s and 0.4s
+                        for a feel that's responsive but not jarring.</li>
+                    <li><strong>Don't Remove the Placeholder Trick:</strong> The space in
+                        <code>placeholder=" "</code> is essential — document it in your code so
+                        collaborators don't "fix" it by accident.
+                    </li>
+                    <li><strong>Test Without JS:</strong> Since the entire effect is CSS-based, test in
+                        browsers with JavaScript disabled to confirm it still works.</li>
+                </ul>
+            </section>
+
+            <!-- Mistakes -->
+            <section id="mistakes">
+                <h2>Common Mistakes to Avoid</h2>
+                <ul>
+                    <li><strong>Overcomplicating animations</strong> — too many moving parts distract users
+                        from the actual task of filling in the field.</li>
+                    <li><strong>Low-contrast labels</strong> — if the label becomes hard to read after
+                        floating (small size + light color), users lose context about what to type.</li>
+                    <li><strong>Forgetting :not(:placeholder-shown)</strong> — without this, the label
+                        drops back down on blur even when the field has content, covering the typed text.</li>
+                    <li><strong>Using an empty placeholder</strong> — <code>placeholder=""</code> doesn't
+                        trigger <code>:placeholder-shown</code> correctly; it must be
+                        <code>placeholder=" "</code> with a space.
+                    </li>
+                    <li><strong>Neglecting focus-visible states</strong> — keyboard users need to see which
+                        field is active just like mouse users.</li>
+                    <li><strong>Making the input too narrow</strong> — especially on mobile, cramped inputs
+                        lead to frustrating typing experiences.</li>
+                </ul>
+
+                <div class="warn-box">
+                    <p><strong>Pro Tip:</strong> If you need to support very old browsers that don't
+                        understand <code>:not(:placeholder-shown)</code>, add a small JavaScript fallback
+                        that toggles a <code>.has-value</code> class on the input when its value is non-empty.
+                        But for all modern browsers (Chrome, Firefox, Safari, Edge), the pure CSS approach
+                        works perfectly.</p>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq">
+                    <details class="faq-item">
+                        <summary class="faq-question">How does the floating label animation work without JavaScript?
+                        </summary>
+                        <div class="faq-answer">
+                            <p>The floating label uses the CSS <code>:not(:placeholder-shown)</code> pseudo-class
+                                combined with <code>:focus</code>. When the input is focused or has typed content
+                                (making the placeholder not shown), the label transitions to a smaller
+                                <code>font-size</code> and moves upward using <code>transform: translateY()</code>.
+                                This pure CSS approach eliminates the need for JavaScript event listeners.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Why is position: relative needed on the input container?</summary>
+                        <div class="faq-answer">
+                            <p>The label and the animated underline divs all use <code>position: absolute</code>.
+                                Without <code>position: relative</code> on the parent container, these absolutely
+                                positioned children would escape the container and position themselves relative to
+                                the nearest positioned ancestor or the viewport, breaking the entire layout.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Can I use this input field inside a real form for submission?
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes. The input is a standard HTML <code>&lt;input type="text"&gt;</code> element
+                                with a <code>name</code> attribute. It works identically to any regular form input
+                                — you can wrap it in a <code>&lt;form&gt;</code> and submit it via GET or POST.
+                                The CSS animations are purely visual and do not affect the input's functionality.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How does the underline sweep animation create a staggered effect?
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Two separate div elements are positioned at the bottom of the input. The first
+                                (top line) starts from the left and expands to <code>width: 100%</code> on focus
+                                with one <code>transition-duration</code>. The second (bottom line) starts from the
+                                right (using <code>right: 0</code> instead of <code>left: 0</code>) and expands
+                                with a slightly longer or shorter duration. This timing difference creates the
+                                staggered sweep illusion.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Does this animated input work on mobile devices?</summary>
+                        <div class="faq-answer">
+                            <p>Yes. The animation triggers on <code>:focus</code>, which activates when a
+                                mobile user taps the input field. The floating label moves up and the underlines
+                                animate in. Make sure to add adequate padding (at least 16px vertical) so the
+                                input meets the 44px minimum touch target guideline for mobile accessibility.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Can I change the animation speed and accent color?</summary>
+                        <div class="faq-answer">
+                            <p>Yes. Adjust the <code>transition-duration</code> value (e.g., <code>0.2s</code>
+                                for faster, <code>0.5s</code> for slower) on the label and underline elements.
+                                To change the accent color, update the color value used in the <code>:focus</code>
+                                state for the label, border, <code>box-shadow</code>, and underline background —
+                                using CSS custom properties (variables) makes this a single-line change.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Conclusion -->
+            <section id="conclusion">
+                <div class="conclusion">
+                    <h2>Conclusion</h2>
+                    <p>
+                        Creating an <strong>animated input field</strong> with HTML and CSS is a simple yet
+                        effective way to improve your website forms. With floating labels, animated underlines,
+                        and responsive design, you can make your forms modern, functional, and visually
+                        appealing — all without a single line of JavaScript.
+                    </p>
+                    <p>
+                        The <code>:not(:placeholder-shown)</code> trick is the key to detecting typed content
+                        in pure CSS. Combined with smooth <code>transition</code> values and careful
+                        <code>position: absolute</code> placement, this technique delivers a polished UX that
+                        rivals JavaScript-heavy form libraries.
+                    </p>
+                    <p>
+                        Try it in your next project — your users will notice the difference, even if they
+                        can't quite articulate why your forms feel better to use.
+                    </p>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- Countdown / Source Code -->
+            <div class="countdown-box" id="countdownBox">
+                <div class="countdown-label"><i class='bx bx-code-block'></i> Source Code</div>
+                <div class="countdown-timer" id="countdownTimer">
+                    <span id="countdownNumber">10</span>s
+                </div>
+                <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 0;">
+                    Wait for the timer to access the full source code
+                </p>
+                <div class="gist-link-wrapper" id="gistWrapper">
+                    <a href="https://gist.github.com/77cod-ing/a1a1e94ca403e53e0dece88d9c659fd0" target="_blank"
+                        rel="noopener noreferrer" class="gist-link">
+                        <i class='bx bx-external-link'></i> Go to Source Code
+                    </a>
+                </div>
+            </div>
+
+        </article>
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-box">
+                <div class="sidebar-header"><i class='bx bx-collection'></i> Related Projects</div>
+                <div class="related-list">
+                    <a href="Project22.html" class="related-card">
+                        <img src="image copy 71.png"
+                            alt="Navigation Bar with Floating Active Indicator" width="400" height="225" loading="lazy">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Navigation Bar with Floating Active Indicator – CSS JavaScript UI</div>
+                    </a>
+                    <a href="Project15.html" class="related-card">
+                        <img src="image copy 43.png"
+                            alt="Floating Label Input Effect — CSS" width="400" height="225"
+                            loading="lazy">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Floating Label Input Effect — CSS</div>
+                    </a>
+                    <a href="Project23.html" class="related-card">
+                        <img src="image copy 75.png"
+                            alt="Expanding animated button with circle reveal and arrow direction effects in CSS" width="400" height="225" loading="lazy">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Animated Login &amp; Signup Sliding Page – HTML CSS JavaScript</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-box">
+                <div class="sidebar-header"><i class='bx bx-info-circle'></i> Quick Info</div>
+                <div
+                    style="padding: 14px 16px; font-size: 13px; color: var(--text-muted); display: flex; flex-direction: column; gap: 10px;">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Difficulty</span>
+                        <span class="badge badge-green">Beginner</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Technologies</span>
+                        <span class="badge badge-blue">HTML + CSS</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>JavaScript</span>
+                        <span class="badge badge-green">None</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Time</span>
+                        <span class="badge badge-orange">~8 min</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- ===== PREVIEW MODAL ===== -->
+    <div class="preview-overlay" id="previewOverlay">
+        <div class="preview-modal">
+            <div class="preview-modal-header">
+                <div class="preview-modal-title">
+                    <i class='bx bx-desktop'></i> <strong>Live Preview</strong> — Animated Input Field
+                </div>
+                <div style="display: flex; align-items: center; gap: 14px;">
+                    <div class="preview-dots">
+                        <button class="preview-dot red" aria-label="Close preview" onclick="closePreview()"></button>
+                        <button class="preview-dot yellow" aria-label="Minimize"></button>
+                        <button class="preview-dot green" aria-label="Maximize"></button>
+                    </div>
+                    <button class="preview-close-btn" onclick="closePreview()">
+                        <i class='bx bx-x'></i> Close
+                    </button>
+                </div>
+            </div>
+            <div class="preview-iframe-wrap">
+                <div class="preview-loading" id="previewLoading">
+                    <div class="preview-spinner"></div>
+                    <div class="preview-loading-text">Loading preview...</div>
+                    <div class="preview-loading-files">
+                        <span class="preview-file-tag html-tag" id="htmlTag">HTML</span>
+                        <span class="preview-file-tag css-tag" id="cssTag">CSS</span>
+                    </div>
+                </div>
+                <div class="preview-hint" id="previewHint">
+                    <i class='bx bx-pointer'></i> Click the input field to see the animation
+                </div>
+                <iframe id="previewIframe" title="Live preview of animated input field"></iframe>
+            </div>
+        </div>
+    </div>
+
+<!-- ===== PREVIEW MODAL ===== -->
+<div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+    aria-label="Live preview of the CSS flexible accordion image card gallery">
+    <div class="preview-modal">
+        <div class="preview-modal-header">
+            <div class="preview-modal-title">
+                <i class='bx bx-show'></i>
+                <strong>Live Preview</strong> — Skewed Menu
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <div class="preview-dots">
+                    <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+                    <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+                    <button class="preview-dot green" aria-label="Maximize" disabled></button>
+                </div>
+                <button class="preview-close-btn" id="previewCloseBtn">
+                    <i class='bx bx-x'></i> Close
+                </button>
+            </div>
+        </div>
+        <div class="preview-iframe-wrap">
+            <div class="preview-loading" id="previewLoading">
+                <div class="preview-spinner"></div>
+                <span class="preview-loading-text">Loading preview...</span>
+                <div class="preview-loading-files">
+                    <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+                    <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+                </div>
+            </div>
+            <iframe id="previewIframe" title="Preview of CSS flexible accordion image card gallery"
+                sandbox="allow-scripts allow-same-origin"></iframe>
+            <div class="preview-hint" id="previewHint">
+                <i class='bx bx-cursor'></i> Hover over the menu items to see the expand effect
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="img">
-  <img src="image copy 65.png" alt="Skewed Menu Example">
-</div>
-
-<div class="par">
-  <span>
-<h1>Build a Stylish Animated Input Field — HTML/CSS</h1>
-<p>
-  Input fields are essential for user interaction on websites. 
-  In this guide, you’ll learn how to create a <strong>modern animated input field</strong> 
-  using HTML and CSS. This design features smooth underline animations, 
-  floating labels, and responsive styling for an elegant user experience.
-</p>
-
-<div class="highlight">
-  <p><strong>Quick Summary:</strong> Build a text input field with HTML, 
-  style it with CSS, and add animations for floating labels and underlines.</p>
-</div>
-
-<h2>What Is an Animated Input Field?</h2>
-<p>
-  An animated input field is a form element that responds visually 
-  when users interact with it. Features like floating labels, color changes, 
-  and sliding lines create a more engaging and intuitive experience for users.
-</p>
-
-<h2>Why Use Animated Input Fields?</h2>
-<ul>
-  <li><strong>Visual Feedback:</strong> Provides clear indication of focus and interaction.</li>
-  <li><strong>Better UX:</strong> Improves user experience and form completion rates.</li>
-  <li><strong>Modern Design:</strong> Makes your forms look sleek and professional.</li>
-  <li><strong>No JavaScript Needed:</strong> Built entirely with HTML and CSS.</li>
-</ul>
-
-<h2>Steps to Build the Animated Input Field</h2>
-
-<h3>1. Structure the Input Field</h3>
-<p>
-  Start with a simple HTML input element wrapped in a container div. 
-  Add a label and decorative divs for top and bottom lines that animate on focus.
-</p>
-<div class="img"><img src="image copy 66.png" alt="HTML structure for animated input field"></div>
-
-<h3>2. Add CSS Styling</h3>
-<p>
-  Style the input with padding, border, and transparent background. 
-  Position the label absolutely to create a floating effect. 
-  Use pseudo-elements or extra divs for underline animations when the input is focused.
-</p>
-<div class="img"><img src="image copy 67.png" alt="CSS styling for animated input field"></div>
-
-<h3>3. Preview the Final Effect</h3>
-<p>
-  When the user focuses on the input, the label scales and moves upward, 
-  the top and bottom lines animate smoothly, and the border highlights — 
-  resulting in a visually appealing and interactive input field.
-</p>
-<div class="img"><img src="image copy 65.png" alt="Final preview of animated input field"></div>
-
-<h2>Best Practices for Input Field Design</h2>
-<ul>
-  <li><strong>Use Clear Labels:</strong> Make sure the label describes the input.</li>
-  <li><strong>Maintain Accessibility:</strong> Ensure text is readable and fields are focusable.</li>
-  <li><strong>Responsive Design:</strong> Input should resize gracefully on mobile screens.</li>
-  <li><strong>Smooth Animations:</strong> Use transitions to create subtle and natural movement.</li>
-</ul>
-
-<h2>Common Mistakes to Avoid</h2>
-<ul>
-  <li>Overcomplicating animations that distract users.</li>
-  <li>Low-contrast labels that reduce readability.</li>
-  <li>Neglecting focus and hover states for accessibility.</li>
-  <li>Making the input too narrow or too tall for typical usage.</li>
-</ul>
-
-<h2>Conclusion</h2>
-<p>
-  Creating an <strong>animated input field</strong> with HTML and CSS 
-  is a simple yet effective way to improve your website forms. 
-  With floating labels, animated underlines, and responsive design, 
-  you can make your forms modern, functional, and visually appealing.
-</p>
-
-<div class="highlight">
-  <p><strong>SEO Keywords:</strong> HTML CSS input animation, animated input field, 
-  floating label CSS, underline animation input, responsive form field, modern UI input</p>
-</div>
-</span>
-</div>
-
-
-
-<div class="con1">
-  <div class="countdown" id="countdown">
-    <span id="number">10</span> wait...
-  </div>
-
-  <div class="link-box" id="linkBox">
-    <a href="https://gist.github.com/77cod-ing/a1a1e94ca403e53e0dece88d9c659fd0" target="_blank">Go to code</a>
-  </div>
-</div>
-
+<!-- ===== SCRIPTS ===== -->
 <script>
-  let counter = 10;
-  let timer = null;
-  const countdownEl = document.getElementById("countdown");
-  const numberEl = document.getElementById("number");
-  const linkBox = document.getElementById("linkBox");
+    /*
+      ============================================
+        Gist URLs — update with the actual Gist raw URL for this project
+      ============================================
+    */
+    const gistBase = "https://gist.githubusercontent.com/77cod-ing/a1a1e94ca403e53e0dece88d9c659fd0/raw/";
 
-  function startCountdown() {
-    if (timer) return;
-    timer = setInterval(() => {
-      counter--;
-      numberEl.textContent = counter;
+    const htmlUrl = gistBase + "index.html";
+    const cssUrl = gistBase + "style.css";
 
-      if (counter === 0) {
-        clearInterval(timer);
-        timer = null;
-        countdownEl.style.display = "none"; 
-        linkBox.style.display = "block";
-      }
+    let cachedHTML = "";
+    let cachedCSS = "";
+
+    async function loadCode(url, elementId, lang) {
+        try {
+            const res = await fetch(url);
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const text = await res.text();
+            const el = document.getElementById(elementId);
+            el.textContent = text;
+            el.className = `language-${lang}`;
+            Prism.highlightElement(el);
+            if (lang === "html") cachedHTML = text;
+            if (lang === "css") cachedCSS = text;
+        } catch (e) {
+            const el = document.getElementById(elementId);
+            if (el) el.textContent = `/* Failed to load: ${e.message} */`;
+        }
+    }
+
+    loadCode(htmlUrl, "code1", "html");
+    loadCode(cssUrl, "code2", "css");
+
+    /* ===== Tabs ===== */
+    document.querySelectorAll(".code-tab").forEach(tab => {
+        tab.addEventListener("click", () => {
+            const lang = tab.dataset.lang;
+            document.querySelectorAll(".code-tab").forEach(t => {
+                t.classList.remove("active");
+                t.setAttribute("aria-selected", "false");
+            });
+            document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+            tab.classList.add("active");
+            tab.setAttribute("aria-selected", "true");
+            const panelMap = { html: "panel-html", css: "panel-css" };
+            document.getElementById(panelMap[lang]).classList.add("active");
+        });
+    });
+
+    /* ===== Copy buttons ===== */
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+        btn.addEventListener("click", async () => {
+            const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+            if (!code) return;
+            try {
+                await navigator.clipboard.writeText(code);
+                btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+                btn.classList.add("copied");
+                setTimeout(() => {
+                    btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
+                    btn.classList.remove("copied");
+                }, 2000);
+            } catch { btn.textContent = "Error"; }
+        });
+    });
+
+    /* ===== Countdown timer ===== */
+    let seconds = 5;
+    const countdownDisplay = document.getElementById("countdownDisplay");
+    const gistLinkWrapper = document.getElementById("gistLinkWrapper");
+
+    const countdownInterval = setInterval(() => {
+        seconds--;
+        countdownDisplay.textContent = String(seconds).padStart(2, "0");
+        if (seconds <= 0) {
+            clearInterval(countdownInterval);
+            gistLinkWrapper.classList.add("visible");
+            countdownDisplay.style.display = "none";
+            document.querySelector(".countdown-label").textContent = "✅ Source Code Available";
+        }
     }, 1000);
-  }
 
-  function stopCountdown() {
-    clearInterval(timer);
-    timer = null;
-  }
+    /* ===== Preview modal ===== */
+    const previewOverlay = document.getElementById("previewOverlay");
+    const previewIframe = document.getElementById("previewIframe");
+    const previewLoading = document.getElementById("previewLoading");
+    const previewHint = document.getElementById("previewHint");
+    const previewBtn = document.getElementById("previewBtn");
+    const previewCloseBtn = document.getElementById("previewCloseBtn");
+    const previewDotClose = document.getElementById("previewDotClose");
+    const tagHTML = document.getElementById("tagHTML");
+    const tagCSS = document.getElementById("tagCSS");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        startCountdown();
-      } else {
-        stopCountdown();
-      }
-    });
-  }, { threshold: 1.0 });
+    function openPreview() {
+        previewOverlay.classList.add("open");
+        document.body.style.overflow = "hidden";
+        previewLoading.classList.remove("hidden");
+        previewHint.classList.remove("show");
+        previewBtn.classList.add("loading");
+        tagHTML.classList.remove("loaded");
+        tagCSS.classList.remove("loaded");
+        buildPreview();
+    }
 
-  observer.observe(countdownEl);
-   /**hamburger**/
+    function closePreview() {
+        previewOverlay.classList.remove("open");
+        document.body.style.overflow = "";
+        previewIframe.srcdoc = "";
+        previewBtn.classList.remove("loading");
+    }
 
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeBtn = document.getElementById('closeBtn');
+    async function buildPreview() {
+        if (cachedHTML && cachedCSS) {
+            tagHTML.classList.add("loaded");
+            tagCSS.classList.add("loaded");
+            injectPreview(cachedHTML, cachedCSS);
+            return;
+        }
+        try {
+            const fetches = [];
+            if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
+            if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
+            if (cachedHTML) tagHTML.classList.add("loaded");
+            if (cachedCSS) tagCSS.classList.add("loaded");
+            await Promise.all(fetches);
+            injectPreview(cachedHTML, cachedCSS);
+        } catch (e) {
+            previewLoading.innerHTML = `
+          <i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i>
+          <span class="preview-loading-text" style="color:var(--accent2);">Failed to load preview: ${e.message}</span>
+        `;
+            previewBtn.classList.remove("loading");
+        }
+    }
 
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.add('active');
-    });
+    function injectPreview(html, css) {
+        let combined = html;
+        if (combined.includes('<link') && /style\.css/i.test(combined)) {
+            combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
+        } else if (combined.includes("</head>")) {
+            combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
+        } else {
+            combined = `<style>${css}</style>\n${combined}`;
+        }
+        previewIframe.srcdoc = combined;
+        previewIframe.addEventListener("load", function onLoad() {
+            previewLoading.classList.add("hidden");
+            previewBtn.classList.remove("loading");
+            setTimeout(() => {
+                previewHint.classList.add("show");
+                setTimeout(() => previewHint.classList.remove("show"), 4000);
+            }, 300);
+            previewIframe.removeEventListener("load", onLoad);
+        });
+    }
 
-    closeBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-    });
-    
-
-    window.addEventListener("scroll", function() {
-  const hamburger = document.querySelector(".hamburger");
-  if (window.scrollY > 50) {
-    hamburger.classList.add("scrolled");
-  } else {
-    hamburger.classList.remove("scrolled");
-  }
-});
+    previewBtn.addEventListener("click", openPreview);
+    previewCloseBtn.addEventListener("click", closePreview);
+    previewDotClose.addEventListener("click", closePreview);
+    previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
 </script>
+
 </body>
+
 </html>
-
-
-
-
