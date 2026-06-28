@@ -1,508 +1,2252 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="Picture1.png">
-  <title>Build an Animated Subscribe Button — HTML/CSS</title>
-    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
-     crossorigin="anonymous"></script>
-  <style>
-    body {
-      background: linear-gradient(to right, #2c0e43 10%, #581c87);
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 50px;
-      padding: 0 2rem;
-      background-color: #0d1325;
-    }
+    <!-- ===== PRIMARY SEO META ===== -->
+    <title>Build an Animated Subscribe Button — Pure HTML/CSS Tutorial 2026</title>
+    <meta name="description"
+        content="Learn how to build a stylish animated subscribe button with glowing hover effects, smooth scaling, and background expansion using only HTML and CSS. No JavaScript required. Free source code.">
+    <meta name="keywords"
+        content="animated subscribe button, css button animation, html css subscribe button, glowing button css, css hover effect button, background expansion css, modern ui button, responsive css button, pure css button animation, subscribe box for website, email subscription box, newsletter signup button, css transform scale, css box-shadow glow, frontend project 2026">
+    <meta name="author" content="77cod_ing">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://77cod-ing.github.io/Project8.html">
 
-    .logo {
-      display: flex;
-      align-items: center;
-      font-size: 22px;
-      font-weight: bold;
-      color: white;
-      text-decoration: none;
-    }
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Build an Animated Subscribe Button — Pure HTML/CSS Tutorial 2026">
+    <meta property="og:description"
+        content="Create a glowing, modern animated subscribe button using HTML and CSS. Features hover scaling, background expansion, and neon glow effects. Zero JavaScript. Free source code included.">
+    <meta property="og:image" content="https://77cod-ing.github.io/image%20copy%2018.png">
+    <meta property="og:url" content="https://77cod-ing.github.io/Project8.html">
+    <meta property="og:site_name" content="77cod_ing">
+    <meta property="article:published_time" content="2026-06-14T00:00:00Z">
+    <meta property="article:modified_time" content="2026-06-14T00:00:00Z">
+    <meta property="article:author" content="77cod_ing">
+    <meta property="article:section" content="CSS Tutorials">
+    <meta property="article:tag"
+        content="HTML, CSS, Button Animation, Hover Effects, Box-Shadow, CSS Transitions, UI Components, Frontend">
 
-    .logo-icon {
-      color: #a855f7;
-      font-size: 26px;
-      margin-right: 8px;
-      letter-spacing: 2.5px;
-    }
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Build an Animated Subscribe Button — Pure HTML/CSS Tutorial">
+    <meta name="twitter:description"
+        content="Build a glowing, modern subscribe button with hover scaling and background expansion using only HTML and CSS. No JavaScript needed.">
+    <meta name="twitter:image" content="https://77cod-ing.github.io/image%20copy%2018.png">
 
-    .nav-links {
-      display: flex;
-      gap: 35px;
-    }
-
-    .nav-links a {
-      color: #d1d5db;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: #a855f7;
-      transform: scale(1.2);
-    }
-    /*linke*/
-    .con1 {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin: auto 0;
-      height: 50vh;
-    }
-    .countdown {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00ffcc;
-    }
-
-    .link-box {
-      display: none;
-      padding: 20px 40px;
-      background: #1e2a47;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-      transition: 0.3s;
-    }
-
-    .link-box a {
-      text-decoration: none;
-      color: #00ffcc;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    .link-box:hover {
-      background: #26385c;
-      transform: scale(1.05);
-    }
-    /**ret**/
-    .Ret{
-      margin: 5px 0 0 3rem;
-      width: max-content;
-    }
-    .Ret a {
-      font-size: 2rem;
-      text-decoration: none;
-      color: #ffffff;
-    }
-    .Ret a span{
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 38px;
-      height: 38px;
-      border: 2px solid #fff;
-      border-radius: 50%;
-    }
-    .Ret a:hover {
-  color: #00e1ff;
-}
-    .Ret a:hover span {
-  border-color: #00e1ff;
-}
-    /**img**/
-    .img{
-      display: flex;
-      justify-content: center;
-      margin: 2rem auto;
-    }
-    .img img{
-      border-radius: 8px;
-      max-width: 100vw;
-    width: 70vw;
-    height: 65vh;
-    }
-    /**par**/
-    .par{
-       font-family: Arial, sans-serif;
-      line-height: 1.7;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      color: #ffffff;
-    }
-    h1, h2, h3 {
-      color: #00c8ff;
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
-    h2 {
-      margin-top: 35px;
-      font-size: 1.6rem;
-    }
-    h3 {
-      margin-top: 25px;
-      font-size: 1.3rem;
-    }
-    p {
-      margin-bottom: 18px;
-    }
-    ul {
-      margin: 15px 0;
-      padding-left: 25px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .highlight {
-      background: #000000;
-      padding: 8px 12px;
-      border-left: 4px solid #0073e6;
-      margin: 20px 0;
-    }
-    /**respon**/
-    @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .img img{
-    max-width: 100vw;
-    width: 90vw;
-    }
-  }
-        /**respon1**/
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hamburger .scrolled {
-      background: rgba(255, 255, 255, 0.7);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-}
-
-    .hamburger span {
-      width: 28px;
-      height: 3px;
-      background: white;
-      transition: all 0.3s ease;
-    }
-
-    /* ====== القائمة المنبثقة ====== */
-    .mobile-menu {
-      position: fixed;
-      top:0;
-      left: -100%;
-      width: 100%;
-      height: 100vh;
-      padding-top: 0.5rem ;
-      background: rgb(53, 53, 53);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 35px;
-      transition: left 0.5s ease;
-      z-index: 999;
-    }
-
-    .mobile-menu.active {
-      left: 0;
-    }
-
-    .mobile-menu a {
-      color: white;
-      font-size: 22px;
-      width: 100%;
-      height: 3rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      border-bottom: 0.5px solid #fff;
-      transition: color 0.3s;
-    }
-
-    .mobile-menu a:hover {
-      color: #ffffff;
-      background: rgba(104, 104, 104, 0.508);
-      backdrop-filter: bulur(20px);
-    }
-
-    /* ====== زر الإغلاق (X) ====== */
-    .close-btn {
-      position: absolute;
-      top: 20px;
-      right: 25px;
-      font-size: 30px;
-      color: white;
-      cursor: pointer;
-      width: 35px;
-      height: 35px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 2px solid #fff;
-      background: rgb(88, 88, 88);
-      border-radius: 50%;
-      transition: transform 0.3s ease;
-    }
-
-    .close-btn:hover {
-      transform: rotate(90deg);
-      color: #00e1ff;
-    }
-
-    /* ====== استجابة الهاتف ====== */
-    @media (max-width: 910px) {
-      .nav-links {
-        display: none;
+    <!-- ===== SCHEMA: TechArticle ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Build an Animated Subscribe Button — Pure HTML/CSS Tutorial for Beginners",
+    "description": "A complete tutorial on building a stylish animated subscribe button using CSS transitions, pseudo-elements, box-shadow glow, and transform scaling — zero JavaScript required.",
+    "image": "https://77cod-ing.github.io/image%20copy%2018.png",
+    "datePublished": "2026-06-14",
+    "dateModified": "2026-06-14",
+    "author": {
+      "@type": "Person",
+      "name": "77cod_ing",
+      "url": "https://77cod-ing.github.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "77cod_ing",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://77cod-ing.github.io/Picture1.png"
       }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://77cod-ing.github.io/Project8.html"
+    },
+    "articleSection": "CSS Tutorials",
+    "keywords": "animated subscribe button, css button animation, glowing button css, hover effect, background expansion",
+    "timeRequired": "PT8M",
+    "educationalLevel": "Beginner",
+    "teaches": ["CSS Transitions", "CSS Transform (scale)", "CSS Pseudo-elements (::before)", "CSS Box-Shadow (Glow)", "CSS Overflow Hidden", "Responsive Button Design"]
+  }
+  </script>
 
-      .hamburger {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
+    <!-- ===== SCHEMA: HowTo ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Build an Animated Subscribe Button with HTML and CSS",
+    "description": "Step-by-step guide to creating a pure CSS animated subscribe button with glowing hover effects, smooth scaling, and background expansion animation.",
+    "image": "https://77cod-ing.github.io/image%20copy%2018.png",
+    "totalTime": "PT8M",
+    "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": "0"},
+    "supply": [
+      {"@type": "HowToSupply", "name": "Text editor (VS Code)"},
+      {"@type": "HowToSupply", "name": "A modern web browser"}
+    ],
+    "tool": [
+      {"@type": "HowToTool", "name": "HTML"},
+      {"@type": "HowToTool", "name": "CSS"}
+    ],
+    "step": [
+      {"@type": "HowToStep", "name": "Create the Button HTML", "text": "Add a <button> or <a> element with the text 'Subscribe' inside your page body. This serves as the base element for all CSS effects.", "position": 1},
+      {"@type": "HowToStep", "name": "Style the Default State", "text": "Apply padding, border-radius, background color, font styling, and overflow: hidden to the button. Set position: relative so the ::before pseudo-element stays contained.", "position": 2},
+      {"@type": "HowToStep", "name": "Build the Background Expansion", "text": "Use a ::before pseudo-element with a contrasting background color. Position it with left: 0, bottom: 0, width: 100%, height: 0, and transition height to 100% on hover.", "position": 3},
+      {"@type": "HowToStep", "name": "Add the Glowing Hover Shadow", "text": "On :hover, apply multiple box-shadow layers with the accent color at varying spread values to create a neon glow effect around the button.", "position": 4},
+      {"@type": "HowToStep", "name": "Animate Scale and Color", "text": "Add transform: scale(1.05) and change the text color on :hover with a cubic-bezier transition for smooth, natural-feeling motion.", "position": 5},
+      {"@type": "HowToStep", "name": "Ensure Responsiveness", "text": "Use relative units (rem, em, %) for sizing and add media queries to adjust padding and font-size on smaller screens.", "position": 6}
+    ]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: FAQPage ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the background expansion animation work on the subscribe button?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The expansion uses a ::before pseudo-element positioned at the bottom of the button with height: 0 by default. On hover, the height transitions to 100%, creating a smooth upward fill effect. The parent button has overflow: hidden so the pseudo-element doesn't spill outside the rounded corners."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I change the glow color without breaking the animation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The glow is created entirely with box-shadow on the :hover state. Simply change the rgba color values in the box-shadow declaration to match your brand color. Make sure to also update the ::before background color and the text color on hover for a cohesive look."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this animated button work on mobile devices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Since the animation uses CSS :hover, it activates on tap for mobile users. However, the hover state may persist after tapping on some browsers. To ensure a clean experience, keep the hover and active states visually similar, and use media queries to adjust button size for touch targets (minimum 44x44px)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is overflow: hidden important for this button design?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The ::before pseudo-element that creates the background fill expands from bottom to top. Without overflow: hidden on the parent button, the pseudo-element would be visible outside the button's border-radius, creating sharp square corners that break the rounded design."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use this button inside a form or does it need to be a link?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can use either a <button> element inside a <form> for actual form submission, or an <a> element styled as a button for link-based subscription flows (like Mailchimp links). The CSS works identically for both elements — just apply the same class."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I make the animation faster or slower?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Adjust the transition-duration value on the button and its ::before pseudo-element. For example, transition: all 0.2s ease makes it faster, while transition: all 0.6s ease makes it slower. You can also use cubic-bezier() timing functions for custom easing curves — cubic-bezier(0.4, 0, 0.2, 1) gives a Material Design-like feel."
+        }
+      }
+    ]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: BreadcrumbList ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+      {"@type": "ListItem", "position": 3, "name": "Animated Subscribe Button", "item": "https://77cod-ing.github.io/Project8.html"}
+    ]
+  }
+  </script>
+
+<!-- ===== ASSETS ===== -->
+<link rel="icon" type="image/png" href="Picture1.png">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+<link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+    crossorigin="anonymous"></script>
+<!-- === API FOR SPEED === -->
+<script src="//instant.page/5.2.0" type="module"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+    crossorigin="anonymous"></script>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+            --premcolo: #00d9ff;
+            --accent2: #ff6b35;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --surface: rgba(255, 255, 255, 0.04);
+            --surface-hover: rgba(0, 217, 255, 0.07);
+            --border: rgba(255, 255, 255, 0.08);
+            --font-head: 'Space Mono', monospace;
+            --font-body: 'DM Sans', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--back);
+            font-family: var(--font-body);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 56px;
+            padding: 0 2.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            color: var(--premcolo);
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: clamp(1rem, 2vw, 2rem);
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: var(--premcolo);
+        }
+
+        /* ===== BREADCRUMB ===== */
+        .breadcrumb {
+            padding: 12px 2.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb ol {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .breadcrumb li {
+            display: flex;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .breadcrumb li+li::before {
+            content: "\203A";
+            color: var(--premcolo);
+            margin-right: 6px;
+            font-size: 1.1rem;
+        }
+
+        .breadcrumb a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--premcolo);
+        }
+
+        .breadcrumb [aria-current="page"] {
+            color: var(--premcolo);
+            font-weight: 600;
+        }
+
+        /* ===== BACK BUTTON ===== */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+            margin: 1rem 2.5rem;
+        }
+
+        .back-link:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 3rem 2.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: var(--font-head);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .tag-tutorial {
+            background: rgba(0, 217, 255, 0.12);
+            color: var(--premcolo);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+        }
+
+        .tag-css {
+            background: rgba(0, 217, 255, 0.08);
+            color: #7dd3fc;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .tag-html {
+            background: rgba(255, 102, 0, 0.1);
+            color: #ff9966;
+            border: 1px solid rgba(255, 102, 0, 0.2);
+        }
+
+        .tag-level {
+            background: rgba(255, 107, 53, 0.1);
+            color: var(--accent2);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+        }
+
+        .read-time {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-head);
+            font-size: clamp(1.6rem, 4vw, 2.6rem);
+            line-height: 1.25;
+            color: #fff;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 span {
+            color: var(--premcolo);
+        }
+
+        .hero-lead {
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            color: var(--text-muted);
+            max-width: 680px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .stat-value {
+            font-family: var(--font-head);
+            font-size: 1.4rem;
+            color: var(--premcolo);
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-height: 500px;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            display: block;
+            box-shadow: 0 0 60px rgba(0, 217, 255, 0.08), 0 32px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .img-caption {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* ===== LAYOUT ===== */
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2.5rem 4rem;
+            align-items: start;
+        }
+
+        /* ===== ARTICLE ===== */
+        .article-body h2 {
+            font-family: var(--font-head);
+            font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+            color: var(--premcolo);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            scroll-margin-top: 80px;
+        }
+
+        .article-body h3 {
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            color: #7dd3fc;
+            margin: 1.8rem 0 0.75rem;
+            scroll-margin-top: 80px;
+        }
+
+        .article-body p {
+            margin-bottom: 1.1rem;
+            color: var(--text);
+        }
+
+        .article-body code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 7px;
+            border-radius: 5px;
+        }
+
+        .article-body ul,
+        .article-body ol {
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 1.1rem;
+        }
+
+        .article-body li {
+            margin-bottom: 9px;
+        }
+
+        .article-body li strong {
+            color: #fff;
+        }
+
+        /* ===== TOC ===== */
+        .toc {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .toc-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--premcolo);
+            margin-bottom: 0.75rem;
+        }
+
+        .toc ol {
+            padding-left: 1.2rem;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+        }
+
+        .toc a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: var(--premcolo);
+        }
+
+        /* ===== FEATURE CARDS ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 1.5rem 0;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            transition: border-color 0.25s, background 0.25s;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(0, 217, 255, 0.3);
+            background: var(--surface-hover);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .feature-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* ===== STEPS ===== */
+        .steps {
+            margin: 1.5rem 0;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 44px 1fr;
+            gap: 1rem;
+            padding: 1.1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-num {
+            width: 44px;
+            height: 44px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-head);
+            color: var(--premcolo);
+            font-size: 1rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            margin-top: 0;
+            font-size: 1rem;
+        }
+
+        .step-content p {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* ===== STEP IMAGES ===== */
+        .step-img {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin: 0.75rem 0;
+            display: block;
+        }
+
+        /* ===== INFO / WARN ===== */
+        .info-box {
+            background: rgba(0, 217, 255, 0.06);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-left: 4px solid var(--premcolo);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .info-box strong {
+            color: var(--premcolo);
+        }
+
+        .warn-box {
+            background: rgba(255, 107, 53, 0.06);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-left: 4px solid var(--accent2);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .warn-box strong {
+            color: var(--accent2);
+        }
+
+        /* ===== COMPARISON TABLE ===== */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 14px;
+        }
+
+        .comparison-table th {
+            font-family: var(--font-head);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 10px 14px;
+            background: rgba(0, 217, 255, 0.08);
+            color: var(--premcolo);
+            border: 1px solid var(--border);
+            text-align: left;
+        }
+
+        .comparison-table td {
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            vertical-align: top;
+        }
+
+        .comparison-table tr:hover td {
+            background: var(--surface-hover);
+        }
+
+        .comparison-table td strong {
+            color: #fff;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-family: var(--font-head);
+            font-weight: 700;
+        }
+
+        .badge-green {
+            background: rgba(74, 222, 128, 0.12);
+            color: #4ade80;
+            border: 1px solid rgba(74, 222, 128, 0.25);
+        }
+
+        .badge-orange {
+            background: rgba(255, 107, 53, 0.12);
+            color: var(--accent2);
+            border: 1px solid rgba(255, 107, 53, 0.25);
+        }
+
+        .badge-blue {
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+        }
+
+        /* ===== FAQ ===== */
+        .faq {
+            margin: 1.5rem 0;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            background: var(--surface);
+            font-weight: 600;
+            font-size: 15px;
+            transition: background 0.2s;
+            list-style: none;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background: var(--surface-hover);
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.3rem;
+            color: var(--premcolo);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        details[open] .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 1rem 1.25rem;
+            color: var(--text-muted);
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+        }
+
+        .faq-answer code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* ===== CONCLUSION ===== */
+        .conclusion {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.07), rgba(0, 140, 160, 0.05));
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 16px;
+            padding: 1.75rem 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .conclusion h2 {
+            border: none;
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 1.5rem 0;
+        }
+
+        /* ===== COUNTDOWN ===== */
+        .countdown-box {
+            background: rgba(0, 217, 255, 0.05);
+            border: 1px solid rgba(0, 217, 255, 0.18);
+            border-radius: 14px;
+            padding: 1.5rem 1.75rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        .countdown-label {
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .countdown-timer {
+            font-family: var(--font-head);
+            font-size: 2.5rem;
+            color: var(--premcolo);
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .gist-link-wrapper {
+            display: none;
+            margin-top: 12px;
+        }
+
+        .gist-link-wrapper.visible {
+            display: block;
+        }
+
+        .gist-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(0, 217, 255, 0.06));
+            border: 1px solid rgba(0, 217, 255, 0.35);
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .gist-link:hover {
+            background: rgba(0, 217, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            position: sticky;
+            top: 72px;
+        }
+
+        .sidebar-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-header {
+            padding: 14px 16px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--premcolo);
+            border-bottom: 1px solid var(--border);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .related-list {
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .related-card {
+            display: block;
+            text-decoration: none;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 16/9;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .related-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+
+        .related-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .related-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+        .related-card-title {
+            position: absolute;
+            bottom: 8px;
+            left: 10px;
+            right: 10px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+            /* ===== CODE SECTION ===== */
+    .code-section {
+      margin: 2rem 0;
+      width: 60vw;
+      max-width: 100%;
     }
-    .hamburger.scrolled {
-      width: 50px;
-      height: 50px;
+
+    .code-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .code-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .code-tab {
+      padding: 8px 20px;
+      border-radius: 8px 8px 0 0;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .code-tab.active {
+      background: #1e1e2f;
+      color: #fff;
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .code-tab[data-lang="html"].active {
+      color: #ff6600;
+    }
+
+    .code-tab[data-lang="css"].active {
+      color: #00d9ff;
+    }
+
+    /* ===== PREVIEW BUTTON ===== */
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.3px;
+    }
+
+    .preview-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .preview-btn:hover {
+      border-color: var(--premcolo);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .preview-btn:hover::before {
+      opacity: 1;
+    }
+
+    .preview-btn:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .preview-btn i,
+    .preview-btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-btn i {
+      font-size: 16px;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .code-panels {
+      position: relative;
+    }
+
+    .code-box {
+      background: #1e1e2f;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 0 12px 12px 12px;
+      position: relative;
+      display: none;
+    }
+
+    .code-box.active {
+      display: block;
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-lang-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    .copy-btn.copied {
+      color: #4ade80;
+      border-color: #4ade80;
+    }
+
+    :not(pre)>code[class*="language-"],
+    pre[class*="language-"] {
+      width: 100%;
+      max-width: 100%;
+      height: 50vh;
+      border-radius: 0 0 12px 12px;
+      overflow-y: auto;
+      overflow-x: auto;
+      margin: 0;
+      tab-size: 2;
+      -moz-tab-size: 2;
+      white-space: pre;
+      word-break: normal;
+    }
+
+    pre::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    pre::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    pre::-webkit-scrollbar-thumb {
+      background: var(--premcolo);
+      border-radius: 10px;
+    }
+            /* ===== PREVIEW MODAL ===== */
+    .preview-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 5, 15, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+    }
+
+    .preview-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .preview-modal {
+      width: 92vw;
+      max-width: 700px;
+      height: 85vh;
+      background: #0a0e1a;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7);
+      transform: scale(0.92) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .preview-overlay.open .preview-modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .preview-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+    }
+
+    .preview-modal-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-modal-title i {
+      color: var(--premcolo);
+      font-size: 16px;
+    }
+
+    .preview-modal-title strong {
+      color: #fff;
+    }
+
+    .preview-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .preview-dot {
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
-      border: 2px solid #fff;
-      background: rgb(65, 65, 65);
-}
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, filter 0.2s;
     }
-  </style>
+
+    .preview-dot:hover {
+      transform: scale(1.2);
+      filter: brightness(1.3);
+    }
+
+    .preview-dot.red {
+      background: #ff5f57;
+    }
+
+    .preview-dot.yellow {
+      background: #febc2e;
+    }
+
+    .preview-dot.green {
+      background: #28c840;
+    }
+
+    .preview-close-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .preview-close-btn:hover {
+      border-color: var(--accent2);
+      color: var(--accent2);
+      background: rgba(255, 107, 53, 0.08);
+    }
+
+    .preview-iframe-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .preview-iframe-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      background: #000;
+    }
+
+    .preview-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: #0a0e1a;
+      z-index: 2;
+      transition: opacity 0.4s;
+    }
+
+    .preview-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .preview-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(0, 217, 255, 0.15);
+      border-top-color: var(--premcolo);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    .preview-loading-text {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .preview-hint {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 16px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      color: var(--text-muted);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s 0.8s;
+      white-space: nowrap;
+      z-index: 3;
+    }
+
+    .preview-hint.show {
+      opacity: 1;
+    }
+
+    .preview-hint i {
+      color: var(--premcolo);
+      margin-right: 4px;
+    }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 1fr;
+                padding: 1.5rem 1.25rem;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .related-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .related-card {
+                flex: 1 1 calc(50% - 8px);
+            }
+
+            .hero {
+                padding: 2rem 1.25rem 1.5rem;
+            }
+
+            .navbar {
+                padding: 0 1.25rem;
+            }
+
+            .breadcrumb {
+                padding: 10px 1.25rem;
+            }
+
+            .back-link {
+                margin: 0.75rem 1.25rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-stats {
+                gap: 1.2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .related-card {
+                flex: 1 1 100%;
+            }
+
+            .comparison-table {
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<header class="navbar">
-    <a href="#" class="logo">
-      <span class="logo-icon">{ / }</span> 77cod_ing
-    </a>
-    <nav class="nav-links">
-      <a href="https://77cod-ing.github.io">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html">Terms & Conditions</a>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">{ / }</span> 77cod_ing
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="Privacy Policy.html">Privacy Policy</a>
+            <a href="Terms & Conditions.html">Terms &amp; Conditions</a>
+        </nav>
+    </header>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="index.html"><i class='bx bx-home-alt-2'></i> <span
+                        itemprop="name">Home</span></a>
+                <meta itemprop="position" content="1">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="projects.html"><i class='bx bx-data'></i> <span
+                        itemprop="name">Projects</span></a>
+                <meta itemprop="position" content="2">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name" aria-current="page">Animated Subscribe Button</span>
+                <meta itemprop="position" content="3">
+            </li>
+        </ol>
     </nav>
-  </header>
-  <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+
+    <!-- ===== BACK BUTTON ===== -->
+    <a href="projects.html#subscribe" class="back-link" aria-label="Return to Projects">
+        <i class='bx bx-arrow-back'></i> Return to Projects
+    </a>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-labelledby="main-heading">
+        <div class="hero-meta">
+            <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+            <span class="tag tag-html">HTML</span>
+            <span class="tag tag-css">CSS</span>
+            <span class="tag tag-level">Beginner</span>
+            <span class="read-time"><i class='bx bx-time'></i> ~8 min read</span>
+        </div>
+
+        <h1 id="main-heading">
+            Build an <span>Animated Subscribe Button</span><br>
+            — Pure HTML/CSS
+        </h1>
+
+        <p class="hero-lead">
+            Buttons are one of the most important interactive elements in web design. In this guide,
+            you'll learn how to build a stylish animated subscribe button using only HTML and CSS — featuring
+            a glowing hover effect, smooth scaling, and a background expansion animation that creates
+            a modern, polished user experience.
+        </p>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-value">3</span>
+                <span class="stat-label">Build Steps</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">0</span>
+                <span class="stat-label">Lines of JS</span>
+            </div>
+            <div class="stat-value">3</span>
+                <span class="stat-label">CSS Effects</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">Free</span>
+                <span class="stat-label">Source Code</span>
+            </div>
+        </div>
+
+        <img src="image copy 18.png"
+            alt="Animated subscribe button on a dark background showing glowing cyan hover effect with smooth background expansion and scaled transform"
+            class="hero-img" width="1200" height="500" loading="eager">
+        <p class="img-caption">Final result: a glowing subscribe button that expands and scales on hover</p>
+    </section>
+
+    <!-- ===== MAIN LAYOUT ===== -->
+    <div class="layout">
+
+        <!-- ===== ARTICLE BODY ===== -->
+        <article class="article-body" itemscope itemtype="https://schema.org/TechArticle">
+
+            <!-- TOC -->
+            <nav class="toc" aria-label="Table of contents">
+                <div class="toc-title"><i class='bx bx-list-ul'></i> Table of Contents</div>
+                <ol>
+                    <li><a href="#what-is">What Is an Animated Button?</a></li>
+                    <li><a href="#why-use">Why Use an Animated Subscribe Button?</a></li>
+                    <li><a href="#features">Key Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#step-1">Step 1: Structure the Button</a></li>
+                    <li><a href="#step-2">Step 2: Add CSS Styling</a></li>
+                    <li><a href="#step-3">Step 3: Preview the Final Effect</a></li>
+                    <li><a href="#comparison">CSS Properties Used</a></li>
+                    <li><a href="#best-practices">Best Practices for Button Design</a></li>
+                    <li><a href="#mistakes">Common Mistakes to Avoid</a></li>
+                    <li><a href="#faq">Frequently Asked Questions</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ol>
+            </nav>
+
+            <!-- What Is -->
+            <section id="what-is">
+                <h2>What Is an Animated Button?</h2>
+                <p>
+                    An <strong>animated button</strong> is a UI element that responds visually when users
+                    interact with it. Animations such as color changes, shadow glows, scaling transforms,
+                    and background expansions add life to buttons — making them more engaging and improving
+                    the overall user interaction experience.
+                </p>
+                <p>
+                    Unlike static buttons that only change color on hover, animated buttons use CSS
+                    transitions and pseudo-elements to create multi-layered effects that feel polished
+                    and professional, signaling quality and attention to detail in your design.
+                </p>
+            </section>
+
+            <!-- Why Use -->
+            <section id="why-use">
+                <h2>Why Use an Animated Subscribe Button?</h2>
+                <ul>
+                    <li><strong>Visual Appeal:</strong> The glowing effect and smooth expansion immediately catch
+                        the user's attention, drawing focus to your call-to-action.</li>
+                    <li><strong>Better Engagement:</strong> Animated buttons encourage users to click and interact,
+                        which can directly improve subscription conversion rates.</li>
+                    <li><strong>Modern Design:</strong> Adds elegance and professionalism to your site, making it
+                        feel current and well-crafted.</li>
+                    <li><strong>Lightweight:</strong> Built only with HTML and CSS — no JavaScript libraries or
+                        frameworks required, resulting in faster page loads.</li>
+                    <li><strong>Easy to Customize:</strong> Change colors, sizes, and animation timing with just a
+                        few CSS variable tweaks.</li>
+                </ul>
+            </section>
+
+            <!-- Features -->
+            <section id="features">
+                <h2>Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: var(--premcolo);"><i class='bx bx-bolt-circle'></i>
+                        </div>
+                        <div class="feature-title">Glowing Hover Shadow</div>
+                        <div class="feature-desc">Multiple box-shadow layers create a neon-like glow effect that
+                            activates on hover.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: var(--accent2);"><i class='bx bx-expand-horizontal'></i>
+                        </div>
+                        <div class="feature-title">Background Expansion</div>
+                        <div class="feature-desc">A ::before pseudo-element fills the button from bottom to top on
+                            hover.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #7dd3fc;"><i class='bx bx-zoom-in'></i></div>
+                        <div class="feature-title">Smooth Scaling</div>
+                        <div class="feature-desc">The button subtly scales up using transform: scale() for a satisfying
+                            press feel.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #4ade80;"><i class='bx bx-palette'></i></div>
+                        <div class="feature-title">Color Transition</div>
+                        <div class="feature-desc">Text and background colors transition smoothly for a cohesive
+                            animation flow.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #fbbf24;"><i class='bx bx-code-alt'></i></div>
+                        <div class="feature-title">Zero JavaScript</div>
+                        <div class="feature-desc">Everything is achieved with HTML structure and CSS transitions — no JS
+                            needed.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #c084fc;"><i class='bx bx-mobile-alt'></i></div>
+                        <div class="feature-title">Responsive</div>
+                        <div class="feature-desc">Uses relative units and media queries for perfect scaling on all
+                            devices.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How It Works -->
+            <section id="how-it-works">
+                <h2>How It Works</h2>
+                <p>
+                    The button uses a single HTML element with a <code>::before</code> pseudo-element for the
+                    background fill effect. Here's the breakdown:
+                </p>
+                <ul>
+                    <li><code>overflow: hidden</code> on the button keeps the expanding pseudo-element contained
+                        within the rounded corners.</li>
+                    <li><code>::before</code> starts with <code>height: 0</code> and transitions to
+                        <code>height: 100%</code> on hover, creating the upward fill.
+                    </li>
+                    <li><code>transform: scale(1.05)</code> on hover gives the button a subtle "lift" effect.</li>
+                    <li>Multiple <code>box-shadow</code> layers on hover produce the neon glow.</li>
+                    <li><code>transition</code> with <code>cubic-bezier</code> easing ensures the animation
+                        feels natural and responsive.</li>
+                </ul>
+
+                <div class="info-box">
+                    <p><strong>Quick Summary:</strong> Create a button with HTML, style it with CSS, and add
+                        hover animations for scaling, glowing shadows, and background expansion effects — all
+                        without a single line of JavaScript.</p>
+                </div>
+            </section>
+
+            <!-- Step 1 -->
+            <section id="step-1">
+                <h2>Step 1: Structure the Button</h2>
+                <p>
+                    Start with a simple HTML button element. This will act as the base for applying all
+                    the CSS effects. You can also use an <code>&lt;a&gt;</code> tag if the button links
+                    to a subscription page.
+                </p>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-num">1</div>
+                        <div class="step-content">
+                            <h3>Create the HTML Element</h3>
+                            <p>Add a <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> element with the
+                                text "Subscribe" inside your page body. Wrap it in a container if you need
+                                centered positioning.</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="image copy 20.png"
+                    alt="HTML code showing the button element structure for the animated subscribe button"
+                    class="step-img" width="800" height="400" loading="lazy">
+            </section>
+
+            <!-- Step 2 -->
+            <section id="step-2">
+                <h2>Step 2: Add CSS Styling</h2>
+                <p>
+                    Style the button with padding, rounded corners, and a border color. Then use
+                    <code>::before</code> for the background expansion effect. Add hover animations
+                    for scale and glowing shadows.
+                </p>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-num">2</div>
+                        <div class="step-content">
+                            <h3>Apply Base Styles and ::before</h3>
+                            <p>Set padding, border-radius, position: relative, overflow: hidden, and the
+                                initial colors. Create the ::before pseudo-element with absolute positioning,
+                                starting at height: 0 from the bottom.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">3</div>
+                        <div class="step-content">
+                            <h3>Add Hover Effects</h3>
+                            <p>On <code>:hover</code>, set <code>::before { height: 100% }</code>,
+                                <code>transform: scale(1.05)</code>, update text color, and apply multiple
+                                <code>box-shadow</code> layers for the glow. Add <code>transition</code>
+                                with <code>cubic-bezier</code> easing to the button and pseudo-element.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <img src="image copy 19.png"
+                    alt="CSS code showing the styling, pseudo-element, and hover animation for the subscribe button"
+                    class="step-img" width="800" height="400" loading="lazy">
+
+                <div class="warn-box">
+                    <p><strong>Important:</strong> Don't forget <code>position: relative</code> on the
+                        button and <code>position: absolute</code> on <code>::before</code>. Without these,
+                        the pseudo-element will not be contained within the button.</p>
+                </div>
+            </section>
+
+            <!-- Step 3 -->
+            <section id="step-3">
+                <h2>Step 3: Preview the Final Effect</h2>
+                <p>
+                    When users hover over the button, it expands smoothly from bottom to top, changes
+                    text color for contrast, scales up slightly, and adds a glowing shadow — resulting
+                    in a polished, modern subscribe button that feels alive.
+                </p>
+                <img src="image copy 18.png"
+                    alt="Final preview of the animated subscribe button showing the glowing hover state with background expansion"
+                    class="step-img" width="800" height="400" loading="lazy">
+                <p class="img-caption">The completed button in its default and hover states</p>
+            </section>
+
+            <!-- Comparison Table -->
+            <section id="comparison">
+                <h2>CSS Properties Used</h2>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Purpose</th>
+                            <th>Applied To</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>transform: scale()</strong></td>
+                            <td>Subtly enlarges the button on hover for a lift effect</td>
+                            <td><span class="badge badge-blue">:hover</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>box-shadow</strong></td>
+                            <td>Creates the multi-layered neon glow effect</td>
+                            <td><span class="badge badge-blue">:hover</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>::before + height</strong></td>
+                            <td>Animates the background fill from bottom to top</td>
+                            <td><span class="badge badge-green">Pseudo-element</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>overflow: hidden</strong></td>
+                            <td>Contains the ::before expansion within border-radius</td>
+                            <td><span class="badge badge-blue">Base state</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>transition</strong></td>
+                            <td>Controls animation speed and easing curve</td>
+                            <td><span class="badge badge-blue">Base state</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>border-radius</strong></td>
+                            <td>Rounds the button corners for a modern look</td>
+                            <td><span class="badge badge-blue">Base state</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>cubic-bezier()</strong></td>
+                            <td>Custom easing for natural, non-linear animation feel</td>
+                            <td><span class="badge badge-orange">transition</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Best Practices -->
+            <section id="best-practices">
+                <h2>Best Practices for Button Design</h2>
+                <ul>
+                    <li><strong>Keep It Clear:</strong> Use short, action-oriented text (e.g., "Subscribe",
+                        "Sign Up"). Avoid vague labels.</li>
+                    <li><strong>Maintain Contrast:</strong> Ensure text is always readable against the
+                        background — both in default and hover states.</li>
+                    <li><strong>Responsive Design:</strong> Use relative units (rem, em) for padding and
+                        font-size. Make sure the button scales well on mobile devices with a minimum
+                        touch target of 44x44px.</li>
+                    <li><strong>Smooth Animations:</strong> Use easing functions like
+                        <code>cubic-bezier(0.4, 0, 0.2, 1)</code> for natural transitions. Avoid
+                        overly fast or jarring movements.
+                    </li>
+                    <li><strong>Accessibility:</strong> Add <code>:focus-visible</code> styles that mirror
+                        the <code>:hover</code> effect so keyboard users get the same experience.</li>
+                    <li><strong>Performance:</strong> Only animate <code>transform</code> and
+                        <code>opacity</code> when possible for GPU-accelerated, jank-free animations.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Mistakes -->
+            <section id="mistakes">
+                <h2>Common Mistakes to Avoid</h2>
+                <ul>
+                    <li><strong>Overusing animations</strong> — too many effects make the button distracting
+                        rather than attractive.</li>
+                    <li><strong>Low-contrast colors</strong> — if the text becomes hard to read during or
+                        after the animation, users won't know what the button does.</li>
+                    <li><strong>Wrong sizing</strong> — buttons that are too large look awkward, and buttons
+                        that are too small are hard to click, especially on mobile.</li>
+                    <li><strong>Forgetting hover/focus states</strong> — without visual feedback, users
+                        can't tell if the button is interactive, hurting accessibility.</li>
+                    <li><strong>Missing overflow: hidden</strong> — without this, the ::before expansion
+                        will break outside the rounded corners, looking broken.</li>
+                    <li><strong>No position: relative</strong> — the absolutely positioned ::before will
+                        escape the button and position itself relative to the page instead.</li>
+                </ul>
+
+                <div class="warn-box">
+                    <p><strong>Pro Tip:</strong> Always test your animated buttons on both desktop and mobile.
+                        CSS <code>:hover</code> behaves differently on touch devices — the state may persist
+                        after tapping. Consider adding <code>:active</code> styles as a fallback for mobile
+                        users.</p>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq">
+                    <details class="faq-item">
+                        <summary class="faq-question">How does the background expansion animation work?</summary>
+                        <div class="faq-answer">
+                            <p>The expansion uses a <code>::before</code> pseudo-element positioned at the bottom of
+                                the button with <code>height: 0</code> by default. On hover, the height transitions
+                                to <code>100%</code>, creating a smooth upward fill effect. The parent button has
+                                <code>overflow: hidden</code> so the pseudo-element doesn't spill outside the rounded
+                                corners.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Can I change the glow color without breaking the animation?
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes. The glow is created entirely with <code>box-shadow</code> on the <code>:hover</code>
+                                state. Simply change the <code>rgba</code> color values in the box-shadow declaration
+                                to match your brand color. Make sure to also update the <code>::before</code> background
+                                color and the text color on hover for a cohesive look.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Does this animated button work on mobile devices?</summary>
+                        <div class="faq-answer">
+                            <p>Yes. Since the animation uses CSS <code>:hover</code>, it activates on tap for mobile
+                                users. However, the hover state may persist after tapping on some browsers. To ensure
+                                a clean experience, keep the hover and active states visually similar, and use media
+                                queries to adjust button size for touch targets (minimum 44x44px).</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Why is overflow: hidden important for this button design?
+                        </summary>
+                        <div class="faq-answer">
+                            <p>The <code>::before</code> pseudo-element that creates the background fill expands
+                                from bottom to top. Without <code>overflow: hidden</code> on the parent button, the
+                                pseudo-element would be visible outside the button's <code>border-radius</code>,
+                                creating sharp square corners that break the rounded design.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Can I use this button inside a form or does it need to be a link?
+                        </summary>
+                        <div class="faq-answer">
+                            <p>You can use either a <code>&lt;button&gt;</code> element inside a
+                                <code>&lt;form&gt;</code>
+                                for actual form submission, or an <code>&lt;a&gt;</code> element styled as a button for
+                                link-based subscription flows (like Mailchimp links). The CSS works identically for both
+                                elements — just apply the same class.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How can I make the animation faster or slower?</summary>
+                        <div class="faq-answer">
+                            <p>Adjust the <code>transition-duration</code> value on the button and its
+                                <code>::before</code> pseudo-element. For example,
+                                <code>transition: all 0.2s ease</code>
+                                makes it faster, while <code>transition: all 0.6s ease</code> makes it slower. You can
+                                also use <code>cubic-bezier()</code> timing functions for custom easing curves —
+                                <code>cubic-bezier(0.4, 0, 0.2, 1)</code> gives a Material Design-like feel.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+                <!-- Source Code -->
+                <div class="code-section" id="source-code">
+                    <div class="code-toolbar">
+                        <div class="code-tabs" role="tablist" aria-label="Code files">
+                            <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                                aria-controls="panel-html">HTML</button>
+                            <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+                                aria-controls="panel-css">CSS</button>
+                        </div>
+                        <button class="preview-btn" id="previewBtn"><i class='bx bx-play-circle'></i><span>Preview
+                                Result</span></button>
+                    </div>
+                    <div class="code-panels">
+                        <div class="code-box active" id="panel-html" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                                <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code1" class="language-html"></code></pre>
+                        </div>
+                        <div class="code-box" id="panel-css" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#00d9ff;">CSS — style.css</span>
+                                <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code2" class="language-css"></code></pre>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Conclusion -->
+            <section id="conclusion">
+                <div class="conclusion">
+                    <h2>Conclusion</h2>
+                    <p>
+                        Building an <strong>animated subscribe button</strong> with HTML and CSS is a simple
+                        yet powerful way to enhance your website's interactivity. With just a few lines of CSS,
+                        you can create a glowing, modern design that encourages clicks and boosts engagement.
+                    </p>
+                    <p>
+                        The combination of <code>::before</code> background expansion, <code>transform: scale()</code>,
+                        and multi-layered <code>box-shadow</code> creates a polished effect that would normally
+                        require JavaScript — but here it's pure CSS, meaning faster load times and better performance.
+                    </p>
+                    <p>
+                        Try it in your next project and make your buttons stand out. Small details like animated
+                        buttons signal quality and attention to craft, which builds trust with your audience.
+                    </p>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- Countdown / Source Code -->
+            <div class="countdown-box" id="countdownBox">
+                <div class="countdown-label"><i class='bx bx-code-block'></i> Source Code</div>
+                <div class="countdown-timer" id="countdownTimer">
+                    <span id="countdownNumber">10</span>s
+                </div>
+                <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 0;">
+                    Wait for the timer to access the full source code
+                </p>
+                <div class="gist-link-wrapper" id="gistWrapper">
+                    <a href="https://gist.github.com/77cod-ing/08d9e629cf393ebc536d1d8a2f5f315f" target="_blank"
+                        rel="noopener noreferrer" class="gist-link">
+                        <i class='bx bx-external-link'></i> Go to Source Code
+                    </a>
+                </div>
+            </div>
+
+        </article>
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-box">
+                <div class="sidebar-header"><i class='bx bx-link'></i> Related Projects</div>
+                <div class="related-list">
+                    <a class="related-card" href="Project24.html">
+                        <img src="https://77cod-ing.github.io/Expanding_Animated_Button.png" alt="Expanding Animated Button"
+                            loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Expanding Animated Button — Circle &amp; Arrows</div>
+                    </a>
+                    <a class="related-card" href="Project10.html">
+                        <img src="https://77cod-ing.github.io/image%20copy%2024.png" alt="Star Rating System" loading="lazy"
+                            width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Interactive Star Rating System — HTML &amp; CSS</div>
+                    </a>
+                    <a class="related-card" href="Project16.html">
+                        <img src="https://77cod-ing.github.io/image%20copy%2047.png" alt="Skewed Navigation Menu" loading="lazy"
+                            width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Skewed Menu with Expanding Hover Effects</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-box">
+                <div class="sidebar-header"><i class='bx bx-info-circle'></i> Quick Info</div>
+                <div
+                    style="padding: 14px 16px; font-size: 13px; color: var(--text-muted); display: flex; flex-direction: column; gap: 10px;">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Difficulty</span>
+                        <span class="badge badge-green">Beginner</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Technologies</span>
+                        <span class="badge badge-blue">HTML + CSS</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>JavaScript</span>
+                        <span class="badge badge-green">None</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Time</span>
+                        <span class="badge badge-orange">~8 min</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
     </div>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <span class="close-btn" id="closeBtn">&times;</span>
-    <a href="index.html"style="border-top: 2px solid #fff;height: 5rem;">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html" style="border-bottom: 2px solid #fff;">Terms & Conditions</a>
-  </div>
-  <div class="Ret">
-    <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
-  </div>
-  <div class="img">
-    <img src="image copy 18.png" alt="subscribe.box">
-  </div>
-  <div class="par">
-  <span>
-<h1>Build an Animated Subscribe Button — HTML/CSS</h1>
-<p>
-  Buttons are one of the most important interactive elements in web design. 
-  In this guide, you’ll learn how to build a stylish 
-  <strong>animated subscribe button</strong> using HTML and CSS. 
-  This design features a glowing hover effect, smooth scaling, 
-  and a background expansion animation that creates a modern user experience.
-</p>
-
-<div class="highlight">
-  <p><strong>Quick Summary:</strong> Create a button with HTML, style it with CSS, 
-  and add hover animations for scaling, glowing shadows, 
-  and background expansion effects.</p>
-</div>
-
-<h2>What Is an Animated Button?</h2>
-<p>
-  An animated button is a UI element that responds visually when users interact with it. 
-  Animations such as color changes, shadows, and scaling add life to buttons, 
-  making them more engaging and improving user interaction.
-</p>
-
-<h2>Why Use an Animated Subscribe Button?</h2>
-<ul>
-  <li><strong>Visual Appeal:</strong> Catch the user’s attention instantly.</li>
-  <li><strong>Better Engagement:</strong> Encourages users to click and interact.</li>
-  <li><strong>Modern Design:</strong> Adds elegance and professionalism to your site.</li>
-  <li><strong>Lightweight:</strong> Built only with HTML and CSS, no JavaScript required.</li>
-</ul>
-
-<h2>Steps to Build the Animated Subscribe Button</h2>
-
-<h3>1. Structure the Button</h3>
-<p>
-  Start with a simple HTML button element. 
-  This will act as the base for applying all the CSS effects.
-</p>
-<div class="img"><img src="image copy 20.png" alt="HTML structure for animated subscribe button"></div>
-
-<h3>2. Add CSS Styling</h3>
-<p>
-  Style the button with padding, rounded corners, 
-  and a border color. Then use <code>::before</code> 
-  for the background expansion effect. 
-  Add hover animations for scale and glowing shadows.
-</p>
-<div class="img"><img src="image copy 19.png" alt="CSS styling for animated subscribe button"></div>
-
-<h3>3. Preview the Final Effect</h3>
-<p>
-  When users hover, the button expands smoothly, 
-  changes text color, and adds a glowing shadow — 
-  resulting in a polished modern subscribe button.
-</p>
-<div class="img"><img src="image copy 18.png" alt="Final preview of animated subscribe button"></div>
-
-<h2>Best Practices for Button Design</h2>
-<ul>
-  <li><strong>Keep It Clear:</strong> Use short and action-oriented text (e.g., Subscribe).</li>
-  <li><strong>Maintain Contrast:</strong> Ensure text is visible against the background.</li>
-  <li><strong>Responsive Design:</strong> Make sure the button scales well on mobile devices.</li>
-  <li><strong>Smooth Animations:</strong> Use easing functions like <code>cubic-bezier</code> for natural transitions.</li>
-</ul>
-
-<h2>Common Mistakes to Avoid</h2>
-<ul>
-  <li>Overusing animations that make the button distracting.</li>
-  <li>Using low-contrast colors that hurt readability.</li>
-  <li>Making the button too large or too small.</li>
-  <li>Forgetting hover/focus states for accessibility.</li>
-</ul>
-
-<h2>Conclusion</h2>
-<p>
-  Building an <strong>animated subscribe button</strong> with HTML and CSS 
-  is a simple yet powerful way to enhance your website’s interactivity. 
-  With just a few lines of CSS, you can create a glowing, 
-  modern design that encourages clicks and boosts engagement. 
-  Try it in your next project and make your buttons stand out!
-</p>
-
-<div class="highlight">
-  <p><strong>SEO Keywords:</strong> HTML CSS button animation, animated subscribe button, 
-  CSS hover effect, glowing button design, modern UI button, responsive CSS button</p>
-</div>
-
-
-
-  <div class="con1">
-    <div class="countdown" id="countdown">
-    <span id="number">10</span> wait...
-  </div>
-
-  <div class="link-box" id="linkBox">
-    <a href="https://gist.github.com/77cod-ing/08d9e629cf393ebc536d1d8a2f5f315f" target="_blank">Go to code</a>
-  </div>
-  </div>
-
-  <script>
-    let counter = 10;
-    let timer = null;
-    const countdownEl = document.getElementById("countdown");
-    const numberEl = document.getElementById("number");
-    const linkBox = document.getElementById("linkBox");
-
-    function startCountdown() {
-      if (timer) return;
-      timer = setInterval(() => {
-        counter--;
-        numberEl.textContent = counter;
-
-        if (counter === 0) {
-          clearInterval(timer);
-          timer = null;
-          countdownEl.style.display = "none"; 
-          linkBox.style.display = "block";
-        }
-      }, 1000);
-    }
-
-    function stopCountdown() {
-      clearInterval(timer);
-      timer = null;
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          startCountdown();
-        } else {
-          stopCountdown();
-        }
-      });
-    }, { threshold: 1.0 });
-
-    observer.observe(countdownEl);
-     /**hamburger**/
-
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeBtn = document.getElementById('closeBtn');
-
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.add('active');
-    });
-
-    closeBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-    });
+    <!-- ===== PREVIEW MODAL ===== -->
+    <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+        aria-label="Live preview of the CSS flexible accordion image card gallery">
+        <div class="preview-modal">
+            <div class="preview-modal-header">
+                <div class="preview-modal-title">
+                    <i class='bx bx-show'></i>
+                    <strong>Live Preview</strong> — Skewed Menu
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <div class="preview-dots">
+                        <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+                        <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+                        <button class="preview-dot green" aria-label="Maximize" disabled></button>
+                    </div>
+                    <button class="preview-close-btn" id="previewCloseBtn">
+                        <i class='bx bx-x'></i> Close
+                    </button>
+                </div>
+            </div>
+            <div class="preview-iframe-wrap">
+                <div class="preview-loading" id="previewLoading">
+                    <div class="preview-spinner"></div>
+                    <span class="preview-loading-text">Loading preview...</span>
+                    <div class="preview-loading-files">
+                        <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+                        <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+                    </div>
+                </div>
+                <iframe id="previewIframe" title="Preview of CSS flexible accordion image card gallery"
+                    sandbox="allow-scripts allow-same-origin"></iframe>
+                <div class="preview-hint" id="previewHint">
+                    <i class='bx bx-cursor'></i> Hover over the menu items to see the expand effect
+                </div>
+            </div>
+        </div>
+    </div>
     
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        /*
+          ============================================
+            Gist URLs — update with the actual Gist raw URL for this project
+          ============================================
+        */
+        const gistBase = "https://gist.githubusercontent.com/77cod-ing/08d9e629cf393ebc536d1d8a2f5f315f/raw/";
 
-    window.addEventListener("scroll", function() {
-  const hamburger = document.querySelector(".hamburger");
-  if (window.scrollY > 50) {
-    hamburger.classList.add("scrolled");
-  } else {
-    hamburger.classList.remove("scrolled");
-  }
-});
-  </script>
+        const htmlUrl = gistBase + "index.html";
+        const cssUrl = gistBase + "style.css";
+
+        let cachedHTML = "";
+        let cachedCSS = "";
+
+        async function loadCode(url, elementId, lang) {
+            try {
+                const res = await fetch(url);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const text = await res.text();
+                const el = document.getElementById(elementId);
+                el.textContent = text;
+                el.className = `language-${lang}`;
+                Prism.highlightElement(el);
+                if (lang === "html") cachedHTML = text;
+                if (lang === "css") cachedCSS = text;
+            } catch (e) {
+                const el = document.getElementById(elementId);
+                if (el) el.textContent = `/* Failed to load: ${e.message} */`;
+            }
+        }
+
+        loadCode(htmlUrl, "code1", "html");
+        loadCode(cssUrl, "code2", "css");
+
+        /* ===== Tabs ===== */
+        document.querySelectorAll(".code-tab").forEach(tab => {
+            tab.addEventListener("click", () => {
+                const lang = tab.dataset.lang;
+                document.querySelectorAll(".code-tab").forEach(t => {
+                    t.classList.remove("active");
+                    t.setAttribute("aria-selected", "false");
+                });
+                document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+                tab.classList.add("active");
+                tab.setAttribute("aria-selected", "true");
+                const panelMap = { html: "panel-html", css: "panel-css" };
+                document.getElementById(panelMap[lang]).classList.add("active");
+            });
+        });
+
+        /* ===== Copy buttons ===== */
+        document.querySelectorAll(".copy-btn").forEach(btn => {
+            btn.addEventListener("click", async () => {
+                const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+                if (!code) return;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+                    btn.classList.add("copied");
+                    setTimeout(() => {
+                        btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
+                        btn.classList.remove("copied");
+                    }, 2000);
+                } catch { btn.textContent = "Error"; }
+            });
+        });
+
+        /* ===== Countdown timer ===== */
+        let seconds = 5;
+        const countdownDisplay = document.getElementById("countdownDisplay");
+        const gistLinkWrapper = document.getElementById("gistLinkWrapper");
+
+        const countdownInterval = setInterval(() => {
+            seconds--;
+            countdownDisplay.textContent = String(seconds).padStart(2, "0");
+            if (seconds <= 0) {
+                clearInterval(countdownInterval);
+                gistLinkWrapper.classList.add("visible");
+                countdownDisplay.style.display = "none";
+                document.querySelector(".countdown-label").textContent = "✅ Source Code Available";
+            }
+        }, 1000);
+
+        /* ===== Preview modal ===== */
+        const previewOverlay = document.getElementById("previewOverlay");
+        const previewIframe = document.getElementById("previewIframe");
+        const previewLoading = document.getElementById("previewLoading");
+        const previewHint = document.getElementById("previewHint");
+        const previewBtn = document.getElementById("previewBtn");
+        const previewCloseBtn = document.getElementById("previewCloseBtn");
+        const previewDotClose = document.getElementById("previewDotClose");
+        const tagHTML = document.getElementById("tagHTML");
+        const tagCSS = document.getElementById("tagCSS");
+
+        function openPreview() {
+            previewOverlay.classList.add("open");
+            document.body.style.overflow = "hidden";
+            previewLoading.classList.remove("hidden");
+            previewHint.classList.remove("show");
+            previewBtn.classList.add("loading");
+            tagHTML.classList.remove("loaded");
+            tagCSS.classList.remove("loaded");
+            buildPreview();
+        }
+
+        function closePreview() {
+            previewOverlay.classList.remove("open");
+            document.body.style.overflow = "";
+            previewIframe.srcdoc = "";
+            previewBtn.classList.remove("loading");
+        }
+
+        async function buildPreview() {
+            if (cachedHTML && cachedCSS) {
+                tagHTML.classList.add("loaded");
+                tagCSS.classList.add("loaded");
+                injectPreview(cachedHTML, cachedCSS);
+                return;
+            }
+            try {
+                const fetches = [];
+                if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
+                if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
+                if (cachedHTML) tagHTML.classList.add("loaded");
+                if (cachedCSS) tagCSS.classList.add("loaded");
+                await Promise.all(fetches);
+                injectPreview(cachedHTML, cachedCSS);
+            } catch (e) {
+                previewLoading.innerHTML = `
+              <i class='bx bx-error-circle' style="font-size:32px;color:var(--accent2);"></i>
+              <span class="preview-loading-text" style="color:var(--accent2);">Failed to load preview: ${e.message}</span>
+            `;
+                previewBtn.classList.remove("loading");
+            }
+        }
+
+        function injectPreview(html, css) {
+            let combined = html;
+            if (combined.includes('<link') && /style\.css/i.test(combined)) {
+                combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
+            } else if (combined.includes("</head>")) {
+                combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
+            } else {
+                combined = `<style>${css}</style>\n${combined}`;
+            }
+            previewIframe.srcdoc = combined;
+            previewIframe.addEventListener("load", function onLoad() {
+                previewLoading.classList.add("hidden");
+                previewBtn.classList.remove("loading");
+                setTimeout(() => {
+                    previewHint.classList.add("show");
+                    setTimeout(() => previewHint.classList.remove("show"), 4000);
+                }, 300);
+                previewIframe.removeEventListener("load", onLoad);
+            });
+        }
+
+        previewBtn.addEventListener("click", openPreview);
+        previewCloseBtn.addEventListener("click", closePreview);
+        previewDotClose.addEventListener("click", closePreview);
+        previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+        document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
+    </script>
+
+    <script>
+        /* ===== Countdown Timer ===== */
+        (function () {
+            let counter = 10;
+            let timer = null;
+            const timerEl = document.getElementById("countdownTimer");
+            const numberEl = document.getElementById("countdownNumber");
+            const wrapperEl = document.getElementById("gistWrapper");
+            const boxEl = document.getElementById("countdownBox");
+
+            function startCountdown() {
+                if (timer) return;
+                timer = setInterval(function () {
+                    counter--;
+                    numberEl.textContent = counter;
+                    if (counter <= 0) {
+                        clearInterval(timer);
+                        timer = null;
+                        timerEl.style.display = "none";
+                        wrapperEl.classList.add("visible");
+                    }
+                }, 1000);
+            }
+
+            function stopCountdown() {
+                if (timer) {
+                    clearInterval(timer);
+                    timer = null;
+                }
+            }
+
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        startCountdown();
+                    } else {
+                        stopCountdown();
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            if (boxEl) {
+                observer.observe(boxEl);
+            }
+        })();
+    </script>
+
 </body>
 
 </html>
-
-
