@@ -1,202 +1,972 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="Picture1.png">
+
+  <!-- ===== PRIMARY SEO META ===== -->
   <title>How to Build a Modern Sign In Form using HTML, CSS & JavaScript</title>
-    <meta name="description" content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <meta name="description"
+    content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
+  <meta name="keywords"
+    content="sign in form HTML CSS, modern login page, glassmorphism sign in UI, frosted glass login card, responsive sign in design, password visibility toggle, login form javascript">
+  <meta name="author" content="77cod_ing">
+  <meta name="robots" content="index, follow">
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Build a Modern Sign In Form using HTML, CSS & JavaScript">
+  <meta property="og:description"
+    content="Learn how to create a modern, frosted-glass styled sign-in card with interactive features using HTML, CSS, and JavaScript.">
+  <meta property="og:site_name" content="77cod_ing">
+
+  <!-- ===== SCHEMA: TechArticle ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "How to Build a Modern Sign In Form using HTML, CSS & JavaScript",
+    "description": "A complete guide to building a modern sign-in form with glassmorphism, password toggle, and form validation using HTML, CSS, and vanilla JavaScript.",
+    "author": { "@type": "Person", "name": "77cod_ing", "url": "https://77cod-ing.github.io" },
+    "publisher": { "@type": "Organization", "name": "77cod_ing" },
+    "articleSection": "JavaScript Tutorials",
+    "keywords": "sign in form, html css javascript, glassmorphism, login page, password toggle, form validation",
+    "educationalLevel": "Beginner",
+    "teaches": ["HTML Form Structure", "CSS Glassmorphism", "JavaScript Form Validation", "Password Visibility Toggle"]
+  }
+  </script>
+
+  <!-- ===== SCHEMA: BreadcrumbList ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
+      {"@type": "ListItem", "position": 3, "name": "Sign In Form", "item": "https://77cod-ing.github.io/signin-form.html"}
+    ]
+  }
+  </script>
+
+  <!-- ===== ASSETS ===== -->
+  <link rel="icon" type="image/png" href="Picture1.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
-     crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
+
   <style>
-    body {
-      background: linear-gradient(to right, #2c0e43 10%, #581c87);
-      font-family: Arial, sans-serif;
+    /* ===== RESET & VARIABLES ===== */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
+    :root {
+      --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+      --premcolo: #00d9ff;
+      --accent2: #ff6b35;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --surface: rgba(255, 255, 255, 0.04);
+      --surface-hover: rgba(0, 217, 255, 0.07);
+      --border: rgba(255, 255, 255, 0.08);
+      --font-head: 'Space Mono', monospace;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--back);
+      font-family: var(--font-body);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ===== NAVBAR ===== */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 50px;
-      padding: 0 2rem;
-      background-color: #0d1325;
+      height: 56px;
+      padding: 0 2.5rem;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      font-size: 22px;
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 2vw, 1.2rem);
       font-weight: bold;
       color: white;
       text-decoration: none;
+      gap: 8px;
     }
 
     .logo-icon {
-      color: #a855f7;
-      font-size: 26px;
-      margin-right: 8px;
-      letter-spacing: 2.5px;
+      color: var(--premcolo);
+      letter-spacing: 2px;
     }
 
     .nav-links {
       display: flex;
-      gap: 35px;
+      gap: clamp(1rem, 2vw, 2rem);
+      align-items: center;
     }
 
     .nav-links a {
-      color: #d1d5db;
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.25s;
     }
 
     .nav-links a:hover {
-      color: #a855f7;
-      transform: scale(1.2);
+      color: var(--premcolo);
     }
-    /*linke*/
-    .con1 {
-      font-family: Arial, sans-serif;
+
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      padding: 12px 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb ol {
       display: flex;
-      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      list-style: none;
       align-items: center;
-      flex-direction: column;
-      margin: auto 0;
-      height: 50vh;
     }
+
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .breadcrumb li+li::before {
+      content: "›";
+      color: var(--premcolo);
+      margin-right: 6px;
+      font-size: 1.1rem;
+    }
+
+    .breadcrumb a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--premcolo);
+    }
+
+    .breadcrumb [aria-current="page"] {
+      color: var(--premcolo);
+      font-weight: 600;
+    }
+
+    /* ===== BACK BUTTON ===== */
+    /*ret*/
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.2s;
+      margin: 1rem 2.5rem;
+    }
+
+    .back-link:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 3rem 2.5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-head);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .tag-tutorial {
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      border: 1px solid rgba(0, 217, 255, 0.3);
+    }
+
+    .tag-js {
+      background: rgba(235, 223, 0, 0.1);
+      color: #ebdf00;
+      border: 1px solid rgba(235, 223, 0, 0.2);
+    }
+
+    .tag-css {
+      background: rgba(192, 132, 252, 0.1);
+      color: #c084fc;
+      border: 1px solid rgba(192, 132, 252, 0.2);
+    }
+
+    .tag-html {
+      background: rgba(255, 102, 0, 0.1);
+      color: #ff6600;
+      border: 1px solid rgba(255, 102, 0, 0.2);
+    }
+
+    .tag-level {
+      background: rgba(74, 222, 128, 0.12);
+      color: #4ade80;
+      border: 1px solid rgba(74, 222, 128, 0.3);
+    }
+
+    .read-time {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      color: var(--premcolo);
+    }
+
+    .hero-lead {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      color: var(--premcolo);
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== IMAGE ===== */
+    /*img*/
+    .hero-img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      display: block;
+      box-shadow: 0 0 60px rgba(0, 217, 255, 0.1), 0 32px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 4rem;
+      align-items: start;
+    }
+
+    /* ===== ARTICLE ===== */
+    /*par*/
+    .article-body h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: var(--premcolo);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 80px;
+    }
+
+    .article-body h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      color: #7dd3fc;
+      margin: 1.8rem 0 0.75rem;
+      scroll-margin-top: 80px;
+    }
+
+    .article-body p {
+      margin-bottom: 1.1rem;
+      color: var(--text);
+    }
+
+    .article-body code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.12);
+      color: var(--premcolo);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .article-body ul,
+    .article-body ol {
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .article-body li {
+      margin-bottom: 9px;
+    }
+
+    .article-body li strong {
+      color: #fff;
+    }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .toc-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--premcolo);
+      margin-bottom: 0.75rem;
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover {
+      color: var(--premcolo);
+    }
+
+    /* ===== FEATURE CARDS ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px;
+      margin: 1.5rem 0;
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(0, 217, 255, 0.4);
+      background: var(--surface-hover);
+    }
+
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .feature-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .feature-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ===== STEPS ===== */
+    .steps {
+      margin: 1.5rem 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      width: 44px;
+      height: 44px;
+      background: rgba(0, 217, 255, 0.1);
+      border: 1px solid rgba(0, 217, 255, 0.25);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      color: var(--premcolo);
+      font-size: 1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+
+    .step-content p {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* ===== INFO / WARN / SEO BOXES ===== */
+    .info-box {
+      background: rgba(0, 217, 255, 0.05);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-left: 4px solid var(--premcolo);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .info-box strong {
+      color: var(--premcolo);
+    }
+
+    .warn-box {
+      background: rgba(239, 68, 68, 0.06);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+      border-left: 4px solid #ef4444;
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .warn-box strong {
+      color: #fca5a5;
+    }
+
+    .seo-box {
+      background: rgba(0, 242, 255, 0.04);
+      border: 1px solid rgba(235, 223, 0, 0.15);
+      border-left: 4px solid #ebdf00;
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .seo-box strong {
+      color: #ebdf00;
+    }
+
+    /* ===== SECONDARY IMAGE CARD ===== */
+    .img-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      margin: 1.5rem 0;
+    }
+
+    .img-card-header {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+      font-family: var(--font-head);
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .img-card-header i {
+      color: var(--premcolo);
+    }
+
+    .img-card img {
+      width: 100%;
+      display: block;
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      margin: 1.5rem 0;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      background: var(--surface);
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s;
+      list-style: none;
+      user-select: none;
+    }
+
+    .faq-question:hover {
+      background: var(--surface-hover);
+    }
+
+    .faq-question::after {
+      content: "+";
+      font-size: 1.3rem;
+      color: var(--premcolo);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    details[open] .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 1rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-answer code {
+      font-family: var(--font-head);
+      font-size: 0.85em;
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--premcolo);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* ===== CONCLUSION ===== */
+    .conclusion {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.06), rgba(0, 180, 210, 0.03));
+      border: 1px solid rgba(0, 217, 255, 0.18);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .conclusion h2 {
+      border: none;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+      /* ===== CODE SECTION ===== */
+    .code-section {
+      margin: 2rem 0;
+      width: 60vw;
+    }
+
+    .code-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .code-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .code-tab {
+      padding: 8px 20px;
+      border-radius: 8px 8px 0 0;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      background: rgba(0, 217, 255, 0.08);
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .code-tab.active {
+      background: #1e1e2f;
+      color: #fff;
+      border-color: rgba(0, 217, 255, 0.3);
+    }
+
+    .code-tab[data-lang="html"].active {
+      color: #ff6600;
+    }
+
+    .code-tab[data-lang="css"].active {
+      color: #00ffff;
+    }
+
+    /* ===== PREVIEW BUTTON ===== */
+    .preview-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(0, 217, 255, 0.05));
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      letter-spacing: 0.3px;
+    }
+
+    .preview-btn:hover {
+      border-color: var(--premcolo);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.25);
+      transform: translateY(-1px);
+    }
+
+    .preview-btn:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .preview-btn.loading i {
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .code-panels {
+      position: relative;
+    }
+
+    .code-box {
+      background: #1e1e2f;
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 0 12px 12px 12px;
+      display: none;
+    }
+
+    .code-box.active {
+      display: block;
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-lang-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+    }
+
+    .copy-btn.copied {
+      color: #4ade80;
+      border-color: #4ade80;
+    }
+
+    :not(pre)>code[class*="language-"],
+    pre[class*="language-"] {
+      width: 100%;
+      max-width: 100%;
+      height: 50vh;
+      border-radius: 0 0 12px 12px;
+      overflow-y: auto;
+      overflow-x: auto;
+      margin: 0;
+      background: #1e1e2f !important;
+    }
+
+    pre::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    pre::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    pre::-webkit-scrollbar-thumb {
+      background: var(--premcolo);
+      border-radius: 10px;
+    }
+    /* ===== COUNTDOWN ===== */
+    /*linke*/
+    .countdown-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
     .countdown {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00ffcc;
+      font-family: var(--font-head);
+      font-size: 1.5rem;
+      color: var(--premcolo);
+      margin-bottom: 1rem;
     }
 
     .link-box {
       display: none;
-      padding: 20px 40px;
-      background: #1e2a47;
+      padding: 14px 28px;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(0, 180, 210, 0.08));
+      border: 1px solid rgba(0, 217, 255, 0.4);
       border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-      transition: 0.3s;
+      width: fit-content;
+      margin: 0 auto;
+      transition: all 0.3s;
+    }
+
+    .link-box:hover {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.25), rgba(0, 180, 210, 0.15));
+      transform: scale(1.03);
     }
 
     .link-box a {
       text-decoration: none;
-      color: #00ffcc;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    .link-box:hover {
-      background: #26385c;
-      transform: scale(1.05);
-    }
-    /**ret**/
-    .Ret{
-      margin: 5px 0 0 3rem;
-      width: max-content;
-    }
-    .Ret a {
-      font-size: 2rem;
-      text-decoration: none;
-      color: #ffffff;
-    }
-    .Ret a span{
+      color: var(--premcolo);
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 700;
       display: inline-flex;
-      justify-content: center;
       align-items: center;
-      width: 38px;
-      height: 38px;
-      border: 2px solid #fff;
-      border-radius: 50%;
+      gap: 8px;
     }
-    .Ret a:hover {
-  color: #00e1ff;
-}
-    .Ret a:hover span {
-  border-color: #00e1ff;
-}
-    /**img**/
-    .img{
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      position: sticky;
+      top: 72px;
+    }
+
+    .sidebar-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-header {
+      padding: 14px 16px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--premcolo);
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .related-list {
+      padding: 12px;
       display: flex;
-      justify-content: center;
-      margin: 2rem auto;
+      flex-direction: column;
+      gap: 10px;
     }
-    .img img{
-      border-radius: 8px;
-      max-width: 100vw;
-    width: 70vw;
-    height: 65vh;
-    }
-    /**par**/
-    .par{
-       font-family: Arial, sans-serif;
-      line-height: 1.7;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      color: #ffffff;
-    }
-    h1, h2, h3 {
-      color: #00c8ff;
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
-    h2 {
-      margin-top: 35px;
-      font-size: 1.6rem;
-    }
-    h3 {
-      margin-top: 25px;
-      font-size: 1.3rem;
-    }
-    p {
-      margin-bottom: 18px;
-    }
-    ul {
-      margin: 15px 0;
-      padding-left: 25px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .highlight {
-      background: #000000;
-      padding: 8px 12px;
-      border-left: 4px solid #0073e6;
-      margin: 20px 0;
-    }
-    /**respon**/
-    @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
 
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .img img{
-    max-width: 100vw;
-    width: 90vw;
+    .related-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/9;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, border-color 0.2s;
     }
-  }
-        /**respon1**/
+
+    .related-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 217, 255, 0.4);
+    }
+
+    .related-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .related-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    .related-card-title {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* ===== HAMBURGER ===== */
+    /*respon1*/
     .hamburger {
       display: none;
       flex-direction: column;
@@ -204,10 +974,6 @@
       gap: 5px;
       transition: background 0.3s ease, box-shadow 0.3s ease;
     }
-    .hamburger .scrolled {
-      background: rgba(255, 255, 255, 0.7);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-}
 
     .hamburger span {
       width: 28px;
@@ -216,14 +982,14 @@
       transition: all 0.3s ease;
     }
 
-    /* ====== القائمة المنبثقة ====== */
+    /* ===== MOBILE MENU ===== */
     .mobile-menu {
       position: fixed;
-      top:0;
+      top: 0;
       left: -100%;
       width: 100%;
       height: 100vh;
-      padding-top: 0.5rem ;
+      padding-top: 0.5rem;
       background: rgb(53, 53, 53);
       display: flex;
       flex-direction: column;
@@ -254,10 +1020,10 @@
     .mobile-menu a:hover {
       color: #ffffff;
       background: rgba(104, 104, 104, 0.508);
-      backdrop-filter: bulur(20px);
+      backdrop-filter: blur(20px);
     }
 
-    /* ====== زر الإغلاق (X) ====== */
+    /* ===== CLOSE BUTTON (X) ===== */
     .close-btn {
       position: absolute;
       top: 20px;
@@ -280,9 +1046,280 @@
       transform: rotate(90deg);
       color: #00e1ff;
     }
+    /* ===== PREVIEW MODAL ===== */
+    .preview-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 10, 30, 0.88);
+      backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s, visibility 0.35s;
+    }
 
-    /* ====== استجابة الهاتف ====== */
-    @media (max-width: 910px) {
+    .preview-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .preview-modal {
+      width: 92vw;
+      max-width: 92vw;
+      height: 94vh;
+      max-height: 95vh;
+      background: #0a1628;
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.7);
+      transform: scale(0.92) translateY(20px);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .preview-overlay.open .preview-modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .preview-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+    }
+
+    .preview-modal-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-modal-title i {
+      color: var(--premcolo);
+      font-size: 16px;
+    }
+
+    .preview-modal-title strong {
+      color: #fff;
+    }
+
+    .preview-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .preview-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .preview-dot:hover {
+      transform: scale(1.2);
+    }
+
+    .preview-dot.red {
+      background: #ff5f57;
+    }
+
+    .preview-dot.yellow {
+      background: #febc2e;
+    }
+
+    .preview-dot.green {
+      background: #28c840;
+    }
+
+    .preview-close-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .preview-close-btn:hover {
+      border-color: var(--premcolo);
+      color: var(--premcolo);
+      background: rgba(0, 217, 255, 0.08);
+    }
+
+    .preview-iframe-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .preview-iframe-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .preview-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: #0a1628;
+      z-index: 2;
+      transition: opacity 0.4s;
+    }
+
+    .preview-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .preview-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(0, 217, 255, 0.2);
+      border-top-color: var(--premcolo);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    .preview-loading-text {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .preview-loading-files {
+      display: flex;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .preview-file-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      font-weight: 700;
+      opacity: 0.4;
+      transition: opacity 0.3s;
+    }
+
+    .preview-file-tag.loaded {
+      opacity: 1;
+    }
+
+    .preview-file-tag.html-tag {
+      background: rgba(255, 102, 0, 0.15);
+      color: #ff6600;
+      border: 1px solid rgba(255, 102, 0, 0.3);
+    }
+
+    .preview-file-tag.css-tag {
+      background: rgba(192, 132, 252, 0.12);
+      color: #c084fc;
+      border: 1px solid rgba(192, 132, 252, 0.3);
+    }
+
+    .preview-file-tag.js-tag {
+      background: rgba(247, 223, 30, 0.1);
+      color: #f7df1e;
+      border: 1px solid rgba(247, 223, 30, 0.25);
+    }
+
+    .preview-hint {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 16px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      color: var(--text-muted);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s 0.8s;
+      white-space: nowrap;
+      z-index: 3;
+    }
+
+    .preview-hint.show {
+      opacity: 1;
+    }
+
+    .preview-hint i {
+      color: var(--premcolo);
+      margin-right: 4px;
+    }
+    /* ===== RESPONSIVE ===== */
+    /*respon*/
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1.25rem;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .related-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .related-card {
+        flex: 1 1 calc(50% - 8px);
+      }
+
+      .hero {
+        padding: 2rem 1.25rem 1.5rem;
+      }
+
+      .navbar {
+        padding: 0 1.25rem;
+      }
+
+      .breadcrumb {
+        padding: 10px 1.25rem;
+      }
+
+      .back-link {
+        margin: 0.75rem 1.25rem;
+      }
+    }
+
+    /* Phone responsive */
+    @media (max-width: 640px) {
       .nav-links {
         display: none;
       }
@@ -292,163 +1329,546 @@
         justify-content: center;
         align-items: center;
         position: fixed;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .hamburger.scrolled {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        background: rgb(65, 65, 65);
+      }
+
+      .hero-stats {
+        gap: 1.2rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .related-card {
+        flex: 1 1 100%;
+      }
     }
-    .hamburger.scrolled {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      background: rgb(65, 65, 65);
-}
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+      }
+
+      .navbar .logo {
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
+
 <body>
-<header class="navbar">
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
     <a href="#" class="logo">
       <span class="logo-icon">{ / }</span> 77cod_ing
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
       <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html">Terms & Conditions</a>
+      <a href="Terms & Conditions.html">Terms &amp; Conditions</a>
     </nav>
   </header>
-  <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
 
+  <!-- ===== HAMBURGER ===== -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- ===== MOBILE MENU ===== -->
   <div class="mobile-menu" id="mobileMenu">
     <span class="close-btn" id="closeBtn">&times;</span>
-    <a href="index.html"style="border-top: 2px solid #fff;height: 5rem;">Home</a>
-      <a href="https://77cod-ing.github.io">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html" style="border-bottom: 2px solid #fff;">Terms & Conditions</a>
-  </div>
-  <div class="Ret">
-    <a href="projects.html#subscribe"><pre><span>&lt;</span> Return</pre></a>
-  </div>
-  <div class="img">
-    <img src="image copy 2.png" alt="subscribe.box">
-  </div>
-  <div class="par">
-  <span>
-<h1>How to Build a Modern Sign In Form using HTML, CSS & JavaScript</h1>
-<p>
-  The <strong>Sign In Form</strong> is one of the most essential components of any website or application.
-  A well-designed login interface doesn’t just authenticate users — it also sets the tone for the user experience.
-  In this guide, we’ll explore how to create a modern, frosted-glass styled sign-in card with interactive features using
-  <strong>HTML, CSS, and JavaScript</strong>.
-</p>
-
-<div class="highlight">
-  <p>
-    <strong>Quick Summary:</strong> In this tutorial, you’ll learn how to design a visually appealing Sign In form,
-    style it with modern CSS effects like glassmorphism, and enhance it with JavaScript features such as
-    password visibility toggling and basic form validation.
-  </p>
-</div>
-
-<h2>What Is a Modern Sign In Form?</h2>
-<p>
-  A modern Sign In form is more than just two input fields and a button.
-  It often includes responsive layouts, clear accessibility labels, smooth focus states, and user-friendly enhancements.
-  Adding subtle gradients, shadows, and frosted-glass effects can elevate the form into a professional UI component
-  that users enjoy interacting with.
-</p>
-
-<h2>Why Use a Stylish Sign In Form</h2>
-<ul>
-  <li><strong>User Trust:</strong> A clean and modern design builds credibility and trust.</li>
-  <li><strong>Accessibility:</strong> Clear labels and focus states make the form usable for all users.</li>
-  <li><strong>Interactivity:</strong> Features like password visibility toggling improve usability.</li>
-  <li><strong>First Impression:</strong> The login screen is often the user’s first touchpoint with your product.</li>
-</ul>
-
-<h2>How to Implement the Sign In Form</h2>
-
-<h3>1. HTML Structure</h3>
-<p>
-  Start with a centered card that contains a <code>form</code> element.
-  Inside the form, include input fields for username and password, along with a "Sign In" button
-  and a “Forgot password?” link.
-</p>
-
-<h3>2. CSS Styling</h3>
-<p>
-  Use a frosted-glass style with <code>backdrop-filter</code> and subtle gradients.
-  Rounded corners, smooth shadows, and hover states make the UI modern and inviting.
-  Responsive media queries ensure it adapts well to mobile screens.
-</p>
-
-<h3>3. JavaScript Enhancements</h3>
-<p>
-  Add a small script to toggle password visibility between “text” and “password.”
-  Include simple form validation logic to enable or disable the Sign In button
-  depending on whether both fields are filled.
-</p>
-
-<h2>Practical Example</h2>
-<p>
-  Imagine a user visiting your app.
-  They see a sleek card in the center of the screen with a gradient background and frosted effect.
-  They type in their <strong>username</strong> and <strong>password</strong>,
-  click the "Show" button to verify the password, and then hit “Sign In.”
-  A smooth interaction gives them confidence that the site is secure and professional.
-</p>
-
-<h2>Benefits for SEO and User Engagement</h2>
-<ul>
-  <li><strong>Lower Bounce Rate:</strong> A professional login page keeps users from leaving quickly.</li>
-  <li><strong>Improved Accessibility:</strong> Proper labels and ARIA attributes make the form screen-reader friendly.</li>
-  <li><strong>Modern UI:</strong> A polished login experience encourages trust and return visits.</li>
-</ul>
-
-<h2>Common Mistakes to Avoid</h2>
-<ul>
-  <li>Forgetting to disable the Sign In button when fields are empty.</li>
-  <li>Not adding password visibility toggle, which frustrates users.</li>
-  <li>Using overly complex animations that slow down the page.</li>
-  <li>Skipping responsive design, making the form hard to use on mobile.</li>
-</ul>
-
-<h2>Conclusion</h2>
-<p>
-  The <strong>Sign In Form</strong> is a vital part of any digital product.
-  With HTML, CSS, and a touch of JavaScript, you can create a login page that is not only functional
-  but also visually appealing and user-friendly.
-  By combining accessibility, modern design, and interactivity, your Sign In page can become
-  a polished entry point that leaves a strong impression on users.
-</p>
-
-<div class="highlight">
-  <p>
-    <strong>SEO Keywords:</strong> sign in form HTML CSS, modern login page, glassmorphism sign in UI,
-    frosted glass login card, responsive sign in design, password visibility toggle
-  </p>
-</div>
-
-  <div class="con1">
-    <div class="countdown" id="countdown">
-    <span id="number">10</span> wait...
+    <a href="index.html" style="border-top: 2px solid #fff;height: 5rem;">Home</a>
+    <a href="https://77cod-ing.github.io">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="Privacy Policy.html">Privacy Policy</a>
+    <a href="Terms & Conditions.html" style="border-bottom: 2px solid #fff;">Terms &amp; Conditions</a>
   </div>
 
-  <div class="link-box" id="linkBox">
-    <a href="https://gist.github.com/77cod-ing/a10075de3a9db81afea4a7e30b38904f" target="_blank">Go to code</a>
-  </div>
+  <!-- ===== BREADCRUMB ===== -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Home</a></li>
+      <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+      <li><span aria-current="page">Sign In Form</span></li>
+    </ol>
+  </nav>
+
+  <!-- ===== BACK BUTTON ===== -->
+  <!--ret-->
+  <a href="projects.html#subscribe" class="back-link" aria-label="Return to Projects">
+    <i class='bx bx-arrow-back'></i> Return to Projects
+  </a>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="main-heading">
+    <div class="hero-meta">
+      <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+      <span class="tag tag-html">HTML</span>
+      <span class="tag tag-css">CSS</span>
+      <span class="tag tag-js">JavaScript</span>
+      <span class="tag tag-level">Beginner</span>
+      <span class="read-time"><i class='bx bx-time'></i> ~10 min read</span>
+    </div>
+
+    <h1 id="main-heading">
+      How to Build a <span>Modern Sign In Form</span><br>using HTML, CSS &amp; JavaScript
+    </h1>
+
+    <p class="hero-lead">
+      The Sign In Form is one of the most essential components of any website or application.
+      A well-designed login interface doesn't just authenticate users — it also sets the tone for the user experience.
+      Learn how to create a modern, frosted-glass styled sign-in card with interactive features.
+    </p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value">3</span>
+        <span class="stat-label">Build Steps</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">0</span>
+        <span class="stat-label">Frameworks</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">Free</span>
+        <span class="stat-label">Source Code</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">1</span>
+        <span class="stat-label">File</span>
+      </div>
+    </div>
+
+    <!--img-->
+    <img src="image copy 2.png" alt="Modern Sign In Form built with HTML CSS JavaScript — frosted glass login card"
+      class="hero-img" width="1200" height="420" loading="eager">
+    <p class="img-caption">Final result: A modern sign-in form with glassmorphism effect, password visibility toggle,
+      and form validation built with pure HTML, CSS &amp; JavaScript</p>
+  </section>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <div class="layout">
+
+    <main class="article-body" id="main-content">
+
+      <!-- TOC -->
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-title"><i class='bx bx-list-ol'></i> Contents</p>
+        <ol>
+          <li><a href="#overview">What Is a Modern Sign In Form?</a></li>
+          <li><a href="#features">Why Use a Stylish Sign In Form</a></li>
+          <li><a href="#how-it-works">How to Implement the Sign In Form</a></li>
+          <li><a href="#practical">Practical Example</a></li>
+          <li><a href="#benefits">Benefits for SEO and User Engagement</a></li>
+          <li><a href="#mistakes">Common Mistakes to Avoid</a></li>
+          <li><a href="#source-code">Get the Source Code</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </nav>
+
+      <!-- OVERVIEW -->
+      <section id="overview">
+        <h2>What Is a Modern Sign In Form?</h2>
+        <p>
+          A modern Sign In form is more than just two input fields and a button.
+          It often includes responsive layouts, clear accessibility labels, smooth focus states, and user-friendly
+          enhancements.
+          Adding subtle gradients, shadows, and frosted-glass effects can elevate the form into a professional UI
+          component
+          that users enjoy interacting with.
+        </p>
+
+        <div class="info-box">
+          <strong>💡 Quick Summary:</strong> In this tutorial, you'll learn how to design a visually appealing Sign In
+          form,
+          style it with modern CSS effects like glassmorphism, and enhance it with JavaScript features such as
+          password visibility toggling and basic form validation.
+        </div>
+
+        <div class="img-card">
+          <div class="img-card-header"><i class='bx bx-image'></i> Project Preview — Sign In Form Interface</div>
+          <img src="image copy 2.png" alt="Sign In Form interface screenshot showing frosted glass card with inputs"
+            loading="lazy">
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- FEATURES -->
+      <section id="features">
+        <h2>Why Use a Stylish Sign In Form</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🛡️</div>
+            <div class="feature-title">User Trust</div>
+            <div class="feature-desc">A clean and modern design builds credibility and trust with your visitors.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">♿</div>
+            <div class="feature-title">Accessibility</div>
+            <div class="feature-desc">Clear labels and focus states make the form usable for all users.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <div class="feature-title">Interactivity</div>
+            <div class="feature-desc">Features like password visibility toggling improve usability significantly.</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <div class="feature-title">First Impression</div>
+            <div class="feature-desc">The login screen is often the user's first touchpoint with your product.</div>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- HOW IT WORKS -->
+      <section id="how-it-works">
+        <h2>How to Implement the Sign In Form</h2>
+        <p>The Sign In form is built in three layers. Here's how each one contributes to the final result.</p>
+
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>HTML Structure</h3>
+              <p>
+                Start with a centered card that contains a <code>form</code> element.
+                Inside the form, include input fields for username and password, along with a "Sign In" button
+                and a "Forgot password?" link.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>CSS Styling</h3>
+              <p>
+                Use a frosted-glass style with <code>backdrop-filter</code> and subtle gradients.
+                Rounded corners, smooth shadows, and hover states make the UI modern and inviting.
+                Responsive media queries ensure it adapts well to mobile screens.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>JavaScript Enhancements</h3>
+              <p>
+                Add a small script to toggle password visibility between "text" and "password."
+                Include simple form validation logic to enable or disable the Sign In button
+                depending on whether both fields are filled.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="info-box">
+          <strong>💡 Best Practices:</strong> Use semantic HTML elements, proper <code>label</code> associations with
+          <code>for</code> attributes, ARIA labels for interactive elements, and <code>autocomplete</code> attributes
+          to improve both accessibility and browser autofill behavior.
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- PRACTICAL EXAMPLE -->
+      <section id="practical">
+        <h2>Practical Example</h2>
+        <p>
+          Imagine a user visiting your app.
+          They see a sleek card in the center of the screen with a gradient background and frosted effect.
+          They type in their <strong>username</strong> and <strong>password</strong>,
+          click the "Show" button to verify the password, and then hit "Sign In."
+          A smooth interaction gives them confidence that the site is secure and professional.
+        </p>
+      </section>
+
+      <hr>
+
+      <!-- BENEFITS -->
+      <section id="benefits">
+        <h2>Benefits for SEO and User Engagement</h2>
+        <ul>
+          <li><strong>Lower Bounce Rate:</strong> A professional login page keeps users from leaving quickly.</li>
+          <li><strong>Improved Accessibility:</strong> Proper labels and ARIA attributes make the form screen-reader
+            friendly.</li>
+          <li><strong>Modern UI:</strong> A polished login experience encourages trust and return visits.</li>
+        </ul>
+      </section>
+
+      <hr>
+
+      <!-- COMMON MISTAKES -->
+      <section id="mistakes">
+        <h2>Common Mistakes to Avoid</h2>
+
+        <div class="warn-box">
+          <strong>⚠️ Watch out for these pitfalls:</strong>
+        </div>
+
+        <ul>
+          <li>Forgetting to disable the Sign In button when fields are empty.</li>
+          <li>Not adding password visibility toggle, which frustrates users.</li>
+          <li>Using overly complex animations that slow down the page.</li>
+          <li>Skipping responsive design, making the form hard to use on mobile.</li>
+        </ul>
+      </section>
+
+      <hr>
+
+      <!-- SOURCE CODE / COUNTDOWN -->
+      <section id="source-code">
+        <h2>Get the Source Code</h2>
+        <p>
+          The full source code for this Sign In Form project is available on GitHub Gist.
+          Wait for the countdown below to unlock the download link.
+        </p>
+
+              <!-- SOURCE CODE -->
+              <section id="source-code">
+                <h2>Get the Source Code</h2>
+                <p>
+                  The full source code is split across three files — <code>index.html</code>, <code>style.css</code>, and
+                  <code>script.js</code>.
+                  Explore the code below or wait for the countdown to get the GitHub Gist link.
+                </p>
+              
+                <div class="code-section">
+                  <div class="code-toolbar">
+                    <div class="code-tabs" role="tablist" aria-label="Code files">
+                      <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                        aria-controls="panel-html">HTML</button>
+                      <button class="code-tab" data-lang="css" role="tab" aria-selected="false" aria-controls="panel-css">CSS</button>
+                      <button class="code-tab" data-lang="js" role="tab" aria-selected="false" aria-controls="panel-js">JS</button>
+                    </div>
+                    <button class="preview-btn" id="previewBtn" aria-label="Preview GAMERS WORLD">
+                      <i class='bx bx-play-circle'></i>
+                      <span>Preview Result</span>
+                    </button>
+                  </div>
+              
+                  <div class="code-panels">
+                    <div class="code-box active" id="panel-html" role="tabpanel">
+                      <div class="code-header">
+                        <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                        <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+                      </div>
+                      <pre><code id="code1" class="language-html"><!-- Loading source code... --></code></pre>
+                    </div>
+              
+                    <div class="code-box" id="panel-css" role="tabpanel">
+                      <div class="code-header">
+                        <span class="code-lang-label" style="color:#c084fc;">CSS — style.css</span>
+                        <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+                      </div>
+                      <pre><code id="code2" class="language-css">/* Loading source code... */</code></pre>
+                    </div>
+              
+                    <div class="code-box" id="panel-js" role="tabpanel">
+                      <div class="code-header">
+                        <span class="code-lang-label" style="color:#f7df1e;">JS — script.js</span>
+                        <button class="copy-btn" data-target="code3"><i class='bx bxs-copy'></i> Copy</button>
+                      </div>
+                      <pre><code id="code3" class="language-javascript">// Loading source code...</code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="info-box">
+                  <strong>💡 Quick Start:</strong> Download all three files into the same folder and open
+                  <code>index.html</code> in your browser. No server or build process required —
+                  the site runs immediately.
+                </div>
+              
+
+        <!--linke-->
+        <div class="countdown-section">
+          <p style="color:var(--text-muted); font-size:14px; margin-bottom:0.75rem;">Full source code available after
+            countdown</p>
+          <div class="countdown" id="countdown">
+            <span id="number">10</span> seconds...
+          </div>
+          <div class="link-box" id="linkBox">
+            <a href="https://gist.github.com/77cod-ing/a10075de3a9db81afea4a7e30b38904f" target="_blank">
+              <i class='bx bx-link-external'></i> Go to Code
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+
+          <details class="faq-item">
+            <summary class="faq-question">What CSS technique creates the frosted-glass effect?</summary>
+            <div class="faq-answer">
+              The frosted-glass (glassmorphism) effect is achieved using <code>backdrop-filter: blur()</code> combined
+              with a
+              semi-transparent background color like <code>rgba(255, 255, 255, 0.1)</code>. Adding a subtle border and
+              box-shadow
+              completes the look.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How does the password visibility toggle work?</summary>
+            <div class="faq-answer">
+              A small JavaScript function listens for a click event on the toggle button. It checks the current
+              <code>type</code> attribute of the password input — if it's <code>"password"</code>, it switches to
+              <code>"text"</code> (and vice versa). The button icon also updates to reflect the current state.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Is this form responsive on mobile devices?</summary>
+            <div class="faq-answer">
+              Yes. The form card uses <code>max-width</code> and percentage-based sizing to adapt to smaller screens.
+              Media queries adjust padding, font sizes, and the card dimensions to ensure a comfortable
+              touch-friendly experience on mobile.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Can I add this to an existing website?</summary>
+            <div class="faq-answer">
+              Absolutely. The Sign In Form is self-contained — you can copy the HTML, CSS, and JavaScript into any
+              existing project. Just make sure there are no conflicting class names or styles, and adjust the form's
+              <code>action</code> attribute to point to your authentication endpoint.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Does this form include backend authentication?</summary>
+            <div class="faq-answer">
+              No — this is a front-end only project focused on the UI/UX design and client-side interactivity.
+              To make it functional, you'll need to connect it to a backend (like Node.js, PHP, or Firebase Auth)
+              that handles user verification and session management.
+            </div>
+          </details>
+
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- CONCLUSION -->
+      <section id="conclusion" class="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          The <strong>Sign In Form</strong> is a vital part of any digital product.
+          With HTML, CSS, and a touch of JavaScript, you can create a login page that is not only functional
+          but also visually appealing and user-friendly.
+          By combining accessibility, modern design, and interactivity, your Sign In page can become
+          a polished entry point that leaves a strong impression on users.
+        </p>
+
+        <div class="seo-box" style="margin-top:1.5rem;">
+          <strong>🔑 SEO Keywords:</strong> sign in form HTML CSS, modern login page, glassmorphism sign in UI,
+          frosted glass login card, responsive sign in design, password visibility toggle
+        </div>
+
+        <p style="color:var(--text-muted); font-size:14px; margin-bottom:0; margin-top:1rem;">
+          Found this useful? Explore more HTML CSS JavaScript projects in the sidebar →
+        </p>
+      </section>
+
+    </main>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" aria-label="Related projects">
+      <div class="sidebar-box">
+        <div class="sidebar-header">🔗 Related Projects</div>
+        <div class="related-list">
+          <a class="related-card" href="Project11.html" aria-label="3D Carousel Support Messages">
+            <img src="image copy 23.png" alt="3D Rotating Carousel CSS JavaScript" loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">3D Carousel Support Messages — HTML CSS JavaScript</div>
+          </a>
+          <a class="related-card" href="Project15.html" aria-label="Glassmorphism 3D Card UI">
+            <img src="image copy 43.png" alt="Glassmorphism 3D Card UI CSS" loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">Floating Label Input Effect — CSS</div>
+          </a>
+          <a class="related-card" href="Project40.html" aria-label="CSS Neon Digital Clock">
+            <img src="https://i.suar.me/Ep114/m" alt="CSS Neon Digital Clock" loading="lazy" width="280" height="158">
+            <div class="related-card-overlay"></div>
+            <div class="related-card-title">CSS Neon Digital Clock — HTML CSS JavaScript</div>
+          </a>
+        </div>
+      </div>
+    </aside>
+
   </div>
 
+  <!-- ===== PREVIEW MODAL ===== -->
+  <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+    aria-label="Live preview of GAMERS WORLD">
+    <div class="preview-modal">
+      <div class="preview-modal-header">
+        <div class="preview-modal-title">
+          <i class='bx bx-show'></i>
+          <strong>Live Preview</strong> — GAMERS WORLD
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="preview-dots">
+            <button class="preview-dot red" id="previewDotClose" aria-label="Close preview"></button>
+            <button class="preview-dot yellow" disabled aria-label="Minimize"></button>
+            <button class="preview-dot green" disabled aria-label="Maximize"></button>
+          </div>
+          <button class="preview-close-btn" id="previewCloseBtn"><i class='bx bx-x'></i> Close</button>
+        </div>
+      </div>
+      <div class="preview-iframe-wrap">
+        <div class="preview-loading" id="previewLoading">
+          <div class="preview-spinner"></div>
+          <span class="preview-loading-text">Loading preview...</span>
+          <div class="preview-loading-files">
+            <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+            <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+            <span class="preview-file-tag js-tag" id="tagJS">JS</span>
+          </div>
+        </div>
+        <iframe id="previewIframe" title="Preview of GAMERS WORLD" sandbox="allow-scripts allow-same-origin"></iframe>
+        <div class="preview-hint" id="previewHint">
+          <i class='bx bx-cursor'></i> Explore the gaming interface
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ===== SCRIPTS ===== -->
   <script>
-    let counter = 10;
-    let timer = null;
+    /* ===== Countdown ===== */
+    let counter = 10, timer = null;
     const countdownEl = document.getElementById("countdown");
     const numberEl = document.getElementById("number");
     const linkBox = document.getElementById("linkBox");
@@ -458,58 +1878,159 @@
       timer = setInterval(() => {
         counter--;
         numberEl.textContent = counter;
-
         if (counter === 0) {
-          clearInterval(timer);
-          timer = null;
-          countdownEl.style.display = "none"; 
+          clearInterval(timer); timer = null;
+          countdownEl.style.display = "none";
           linkBox.style.display = "block";
         }
       }, 1000);
     }
 
-    function stopCountdown() {
-      clearInterval(timer);
-      timer = null;
-    }
+    function stopCountdown() { clearInterval(timer); timer = null; }
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          startCountdown();
-        } else {
-          stopCountdown();
-        }
-      });
-    }, { threshold: 1.0 });
+      entries.forEach(e => { if (e.isIntersecting) startCountdown(); else stopCountdown(); });
+    }, { threshold: 0.5 });
 
     observer.observe(countdownEl);
-     /**hamburger**/
 
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeBtn = document.getElementById('closeBtn');
-
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.add('active');
+    /* ===== Code tabs ===== */
+    document.querySelectorAll(".code-tab").forEach(tab => {
+      tab.addEventListener("click", () => {
+        const lang = tab.dataset.lang;
+        document.querySelectorAll(".code-tab").forEach(t => { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
+        document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+        tab.classList.add("active");
+        tab.setAttribute("aria-selected", "true");
+        const map = { html: "panel-html", css: "panel-css", js: "panel-js" };
+        document.getElementById(map[lang]).classList.add("active");
+      });
     });
 
-    closeBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
+    /* ===== Copy buttons ===== */
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+        if (!code.trim()) return;
+        try {
+          await navigator.clipboard.writeText(code);
+          btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+          btn.classList.add("copied");
+          setTimeout(() => { btn.innerHTML = "<i class='bx bxs-copy'></i> Copy"; btn.classList.remove("copied"); }, 2000);
+        } catch { btn.textContent = "Error"; }
+      });
     });
-    
 
-    window.addEventListener("scroll", function() {
-  const hamburger = document.querySelector(".hamburger");
-  if (window.scrollY > 50) {
-    hamburger.classList.add("scrolled");
-  } else {
-    hamburger.classList.remove("scrolled");
-  }
-});
+    /* ===== Load code from Gist ===== */
+    const gistBase = "https://gist.githubusercontent.com/77cod-ing/a10075de3a9db81afea4a7e30b38904f/raw/a6083357bbfb24407724094f10aac31613749487/";
+    const htmlUrl = gistBase + "index.html";
+    const cssUrl = gistBase + "style.css";
+    const jsUrl = gistBase + "script.js";
+
+    let cachedHTML = "", cachedCSS = "", cachedJS = "";
+
+    async function loadCode(url, elementId, lang, cacheKey) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const text = await res.text();
+        const el = document.getElementById(elementId);
+        el.textContent = text;
+        el.className = `language-${lang}`;
+        if (window.Prism) Prism.highlightElement(el);
+        if (lang === "html") cachedHTML = text;
+        if (lang === "css") cachedCSS = text;
+        if (lang === "javascript") cachedJS = text;
+      } catch {
+        const el = document.getElementById(elementId);
+        if (el) el.textContent = `/* Source code available via the GitHub Gist link below. */`;
+      }
+    }
+
+    loadCode(htmlUrl, "code1", "html");
+    loadCode(cssUrl, "code2", "css");
+    loadCode(jsUrl, "code3", "javascript");
+
+    /* ===== Preview modal ===== */
+    const previewOverlay = document.getElementById("previewOverlay");
+    const previewIframe = document.getElementById("previewIframe");
+    const previewLoading = document.getElementById("previewLoading");
+    const previewHint = document.getElementById("previewHint");
+    const previewBtn = document.getElementById("previewBtn");
+    const previewCloseBtn = document.getElementById("previewCloseBtn");
+    const previewDotClose = document.getElementById("previewDotClose");
+    const tagHTML = document.getElementById("tagHTML");
+    const tagCSS = document.getElementById("tagCSS");
+    const tagJS = document.getElementById("tagJS");
+
+    function openPreview() {
+      previewOverlay.classList.add("open");
+      document.body.style.overflow = "hidden";
+      previewLoading.classList.remove("hidden");
+      previewHint.classList.remove("show");
+      previewBtn.classList.add("loading");
+      tagHTML.classList.remove("loaded"); tagCSS.classList.remove("loaded"); tagJS.classList.remove("loaded");
+      buildPreview();
+    }
+
+    function closePreview() {
+      previewOverlay.classList.remove("open");
+      document.body.style.overflow = "";
+      previewIframe.srcdoc = "";
+      previewBtn.classList.remove("loading");
+    }
+
+    async function buildPreview() {
+      if (cachedHTML && cachedCSS && cachedJS) {
+        tagHTML.classList.add("loaded"); tagCSS.classList.add("loaded"); tagJS.classList.add("loaded");
+        injectPreview(cachedHTML, cachedCSS, cachedJS); return;
+      }
+      try {
+        const fetches = [];
+        if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; tagHTML.classList.add("loaded"); }));
+        if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; tagCSS.classList.add("loaded"); }));
+        if (!cachedJS) fetches.push(fetch(jsUrl).then(r => r.text()).then(t => { cachedJS = t; tagJS.classList.add("loaded"); }));
+        if (cachedHTML) tagHTML.classList.add("loaded");
+        if (cachedCSS) tagCSS.classList.add("loaded");
+        if (cachedJS) tagJS.classList.add("loaded");
+        await Promise.all(fetches);
+        injectPreview(cachedHTML, cachedCSS, cachedJS);
+      } catch (e) {
+        previewLoading.innerHTML = `<i class='bx bx-error-circle' style="font-size:32px;color:#00d9ff;"></i><span class="preview-loading-text" style="color:#00d9ff;">Failed to load preview: ${e.message}</span>`;
+        previewBtn.classList.remove("loading");
+      }
+    }
+
+    function injectPreview(html, css, js) {
+      let combined = html;
+      if (/style\.css/i.test(combined)) {
+        combined = combined.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, `<style>${css}</style>`);
+      } else if (combined.includes("</head>")) {
+        combined = combined.replace("</head>", `<style>${css}</style>\n</head>`);
+      } else { combined = `<style>${css}</style>\n${combined}`; }
+
+      if (/script\.js/i.test(combined)) {
+        combined = combined.replace(/<script[^>]*src=["'][^"']*script\.js["'][^>]*><\/script>/gi, `<script>${js}<\/script>`);
+      } else if (combined.includes("</body>")) {
+        combined = combined.replace("</body>", `<script>${js}<\/script>\n</body>`);
+      } else { combined = `${combined}\n<script>${js}<\/script>`; }
+
+      previewIframe.srcdoc = combined;
+      previewIframe.addEventListener("load", function onLoad() {
+        previewLoading.classList.add("hidden");
+        previewBtn.classList.remove("loading");
+        setTimeout(() => { previewHint.classList.add("show"); setTimeout(() => previewHint.classList.remove("show"), 4000); }, 300);
+        previewIframe.removeEventListener("load", onLoad);
+      });
+    }
+
+    previewBtn.addEventListener("click", openPreview);
+    previewCloseBtn.addEventListener("click", closePreview);
+    previewDotClose.addEventListener("click", closePreview);
+    previewOverlay.addEventListener("click", (e) => { if (e.target === previewOverlay) closePreview(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
   </script>
+
 </body>
 
 </html>
-
-
