@@ -4124,44 +4124,6 @@ modal.addEventListener("click",(e)=>{
 
 });
 </script>
-<script>
-    paypal.Buttons({
-
-        style: {
-            shape: "rect",
-            color: "gold",
-            layout: "vertical",
-            label: "subscribe"
-        },
-
-        createSubscription: function (data, actions) {
-
-            return actions.subscription.create({
-
-                plan_id: "P-43U00789CP136221DNJF2GQI"
-
-            });
-
-        },
-
-        onApprove: function (data, actions) {
-
-            console.log("Subscription ID:", data.subscriptionID);
-
-            alert("Subscription successful!");
-
-        },
-
-        onError: function (err) {
-
-            console.error(err);
-
-            alert("An error occurred while processing the subscription.");
-
-        }
-
-    }).render("#paypal-starter");
-</script>
 </body>
 
-</html
+</html>
