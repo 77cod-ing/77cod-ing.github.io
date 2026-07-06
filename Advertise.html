@@ -4052,7 +4052,8 @@ grid-template-columns:1fr;
 
                 console.log(result);
 
-                alert("Token: " + result.token);
+                window.location.href =
+                    "advertise-form.html?token=" + encodeURIComponent(result.token);
 
             },
             onError: function (err) {
