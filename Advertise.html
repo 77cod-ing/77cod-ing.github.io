@@ -4035,28 +4035,33 @@ grid-template-columns:1fr;
 
                 console.log("Subscription ID:", data.subscriptionID);
 
-                const response = await fetch(
-                    "https://black-leaf-3a4aadvertise-api-v2.tt2980665.workers.dev",
-                    {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json"
-                        },
-                        body: JSON.stringify({
-                            subscriptionID: data.subscriptionID
-                        })
-                    }
-                );
+                try {
 
-                const result = await response.json();
+                    const response = await fetch(
+                        "https://black-leaf-3a4aadvertise-api-v2.tt2980665.workers.dev",
+                        {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify({
+                                subscriptionID: data.subscriptionID
+                            })
+                        }
+                    );
 
-                if (result.success) {
+                    console.log("HTTP Status:", response.status);
 
-                    alert("Subscription successful!");
+                    const text = await response.text();
 
-                } else {
+                    console.log("Worker Response:", text);
 
-                    alert("Database error");
+                    alert(text);
+
+                } catch (e) {
+
+                    console.error(e);
+                    alert(e);
 
                 }
 
