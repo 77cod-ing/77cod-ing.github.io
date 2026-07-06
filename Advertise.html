@@ -1,0 +1,4131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertise With Us — Reach Developers Where They Learn & Build</title>
+    <meta name="description"
+        content="Place your product in front of a highly targeted developer audience. Premium advertising inside HTML, CSS & JavaScript programming articles with real search traffic.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Advertise With Us — Reach Developers Where They Learn">
+    <meta property="og:description"
+        content="Premium advertising inside programming articles with real search traffic. AI tools, SaaS, hosting, and developer tools welcome.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://picsum.photos/seed/og-advertise/1200/630.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Advertise With Us — Reach Developers">
+    <meta name="twitter:description"
+        content="Premium advertising inside programming articles with real search traffic.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "name":"Advertise With Us",
+  "description":"Premium advertising for developer-focused brands inside programming articles.",
+  "publisher":{"@type":"Organization","name":"DevAds"}
+}
+</script>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        :root {
+            --bg: #050816;
+            --bg2: #0B1023;
+            --card: rgba(255, 255, 255, .05);
+            --cb: rgba(255, 255, 255, .10);
+            --pri: #4F46E5;
+            --sec: #06B6D4;
+            --hl: #8B5CF6;
+            --suc: #22C55E;
+            --warn: #F59E0B;
+            --dan: #EF4444;
+            --w: #FFFFFF;
+            --g: #B7C0D8;
+            --r: 24px;
+            --rb: 18px;
+            --rc: 20px;
+            --sp: 120px;
+            --isz: 52px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--w);
+            font-weight: 500;
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 800;
+            line-height: 1.12;
+            letter-spacing: -.03em
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        img {
+            max-width: 100%;
+            display: block
+        }
+
+        ul {
+            list-style: none
+        }
+button{
+    width: 20vw;
+}
+        button,
+        input,
+        textarea,
+        select {
+            font-family: inherit;
+            font-size: inherit
+        }
+
+        .ctn {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 32px
+        }
+
+        /* Glow */
+        #glow {
+            position: fixed;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            background: radial-gradient(circle, rgba(79, 70, 229, .07) 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+            will-change: transform
+        }
+
+        /* Loader */
+        #ld {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            transition: opacity .6s, visibility .6s
+        }
+
+        #ld.hide {
+            opacity: 0;
+            visibility: hidden
+        }
+
+        .ld-ring {
+            width: 44px;
+            height: 44px;
+            border: 3px solid rgba(255, 255, 255, .08);
+            border-top-color: var(--sec);
+            border-radius: 50%;
+            animation: sp .7s linear infinite
+        }
+
+        @keyframes sp {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        .ld-text {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--g);
+            letter-spacing: .08em;
+            text-transform: uppercase
+        }
+
+        /* Nav */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 14px 0;
+            transition: all .4s
+        }
+
+        .nav.sc {
+            background: rgba(5, 8, 22, .88);
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid var(--cb)
+        }
+
+        .nav .ctn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            font-size: 17px;
+            letter-spacing: -.01em
+        }
+
+        .logo-i {
+            width: 34px;
+            height: 34px;
+            border-radius: 9px;
+            background: linear-gradient(135deg, var(--pri), var(--sec));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px
+        }
+
+        .nav-l {
+            display: flex;
+            align-items: center;
+            gap: 28px
+        }
+
+        .nav-l a {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--g);
+            transition: color .3s
+        }
+
+        .nav-l a:hover {
+            color: var(--w)
+        }
+
+        .nav-c {
+            padding: 9px 22px;
+            border-radius: var(--rb);
+            background: linear-gradient(135deg, var(--pri), var(--sec));
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .02em;
+            border: none;
+            cursor: pointer;
+            transition: all .3s
+        }
+
+        .nav-c:hover {
+            box-shadow: 0 0 30px rgba(79, 70, 229, .4);
+            transform: translateY(-1px)
+        }
+
+        .nav-t {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--w);
+            font-size: 22px;
+            cursor: pointer
+        }
+
+        /* Btns */
+        .btn-p {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 15px 34px;
+            border-radius: var(--rb);
+            background: linear-gradient(135deg, var(--pri), var(--sec));
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: all .3s;
+            position: relative;
+            overflow: hidden
+        }
+
+        .btn-p:hover {
+            box-shadow: 0 0 40px rgba(79, 70, 229, .45), 0 0 80px rgba(6, 182, 212, .15);
+            transform: translateY(-2px)
+        }
+
+        .btn-p .rip {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .3);
+            transform: scale(0);
+            animation: rip .6s linear
+        }
+
+        @keyframes rip {
+            to {
+                transform: scale(4);
+                opacity: 0
+            }
+        }
+
+        .btn-s {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 15px 34px;
+            border-radius: var(--rb);
+            background: var(--card);
+            border: 1px solid var(--cb);
+            color: var(--w);
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all .3s
+        }
+
+        .btn-s:hover {
+            background: rgba(255, 255, 255, .1);
+            border-color: rgba(255, 255, 255, .2);
+            transform: translateY(-2px)
+        }
+
+        .btn-sm {
+            padding: 10px 22px;
+            font-size: 12px;
+            border-radius: 12px
+        }
+
+        /* Section */
+        section {
+            position: relative;
+            z-index: 1
+        }
+
+        .lab {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 18px;
+            border-radius: 100px;
+            background: rgba(79, 70, 229, .1);
+            border: 1px solid rgba(79, 70, 229, .22);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            color: var(--sec);
+            margin-bottom: 20px
+        }
+
+        .stit {
+            font-size: clamp(30px, 4.5vw, 52px);
+            margin-bottom: 16px
+        }
+
+        .sdesc {
+            font-size: 17px;
+            color: var(--g);
+            max-width: 620px;
+            line-height: 1.7
+        }
+
+        .tc {
+            text-align: center
+        }
+
+        .mxa {
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        /* Reveal */
+        .rv {
+            opacity: 0;
+            transform: translateY(36px);
+            transition: all .8s cubic-bezier(.16, 1, .3, 1)
+        }
+
+        .rv.on {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        .d1 {
+            transition-delay: .1s
+        }
+
+        .d2 {
+            transition-delay: .2s
+        }
+
+        .d3 {
+            transition-delay: .3s
+        }
+
+        .d4 {
+            transition-delay: .4s
+        }
+
+        .d5 {
+            transition-delay: .5s
+        }
+
+        .rb2 {
+            opacity: 0;
+            filter: blur(10px);
+            transform: translateY(28px) scale(.97);
+            transition: all 1s cubic-bezier(.16, 1, .3, 1)
+        }
+
+        .rb2.on {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateY(0) scale(1)
+        }
+
+        /* Glass */
+        .gc {
+            background: var(--card);
+            border: 1px solid var(--cb);
+            border-radius: var(--rc);
+            backdrop-filter: blur(12px);
+            transition: all .5s cubic-bezier(.16, 1, .3, 1)
+        }
+
+        .gc:hover {
+            border-color: rgba(255, 255, 255, .18);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, .3)
+        }
+
+        /* Placeholder note */
+        .ph {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 8px;
+            background: rgba(245, 158, 11, .08);
+            border: 1px solid rgba(245, 158, 11, .2);
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--warn);
+            margin-bottom: 24px
+        }
+
+        /* ====== HERO ====== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+            padding-bottom: 80px;
+            position: relative;
+            overflow: hidden
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(255, 255, 255, .025) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .025) 1px, transparent 1px);
+            background-size: 64px 64px;
+            mask-image: radial-gradient(ellipse 70% 55% at 50% 40%, black, transparent)
+        }
+
+        .hero-o1 {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(79, 70, 229, .14), transparent 70%);
+            top: -120px;
+            right: -80px;
+            animation: fl 8s ease-in-out infinite
+        }
+
+        .hero-o2 {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(6, 182, 212, .08), transparent 70%);
+            bottom: -80px;
+            left: -80px;
+            animation: fl 10s ease-in-out infinite reverse
+        }
+
+        @keyframes fl {
+
+            0%,
+            100% {
+                transform: translate(0, 0)
+            }
+
+            50% {
+                transform: translate(25px, -25px)
+            }
+        }
+
+        .hero .ctn {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px;
+            align-items: center;
+            position: relative;
+            z-index: 2
+        }
+
+        .hero-ht {
+            font-size: clamp(36px, 5.5vw, 64px);
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fff 30%, var(--g) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text
+        }
+
+        .hero-ht em {
+            font-style: normal;
+            background: linear-gradient(135deg, var(--sec), var(--hl));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text
+        }
+
+        .hero-sub {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--g);
+            margin-bottom: 14px
+        }
+
+        .hero-d {
+            font-size: 15px;
+            color: var(--g);
+            margin-bottom: 36px;
+            max-width: 500px;
+            line-height: 1.8;
+            opacity: .8
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 36px
+        }
+
+        .hero-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .08);
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--g)
+        }
+
+        .hero-badge .iconify {
+            color: var(--suc);
+            font-size: 14px
+        }
+
+        /* Hero Mockup */
+        .hero-mk {
+            position: relative;
+            perspective: 1000px
+        }
+
+        .mk-art {
+            background: var(--bg2);
+            border: 1px solid var(--cb);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, .5);
+            transform: rotateY(-4deg) rotateX(2deg);
+            transition: transform .7s cubic-bezier(.16, 1, .3, 1)
+        }
+
+        .mk-art:hover {
+            transform: rotateY(0) rotateX(0)
+        }
+
+        .mk-bar {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, .03);
+            border-bottom: 1px solid var(--cb)
+        }
+
+        .mk-d {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%
+        }
+
+        .mk-d.r {
+            background: #FF5F57
+        }
+
+        .mk-d.y {
+            background: #FFBD2E
+        }
+
+        .mk-d.g {
+            background: #28CA41
+        }
+
+        .mk-url {
+            flex: 1;
+            margin-left: 10px;
+            padding: 5px 12px;
+            border-radius: 7px;
+            background: rgba(255, 255, 255, .05);
+            font-size: 10px;
+            color: var(--g);
+            font-weight: 500
+        }
+
+        .mk-body {
+            padding: 20px
+        }
+
+        .mk-tag {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 5px;
+            background: rgba(79, 70, 229, .12);
+            color: var(--sec);
+            font-size: 9px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: .04em
+        }
+
+        .mk-h {
+            font-size: 15px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            line-height: 1.3
+        }
+
+        .mk-ln {
+            height: 6px;
+            border-radius: 3px;
+            background: rgba(255, 255, 255, .05);
+            margin-bottom: 5px
+        }
+
+        .mk-ln.w85 {
+            width: 85%
+        }
+
+        .mk-ln.w65 {
+            width: 65%
+        }
+
+        .mk-ln.w9 {
+            width: 90%
+        }
+
+        .mk-ln.w7 {
+            width: 70%
+        }
+
+        .mk-code {
+            background: rgba(0, 0, 0, .4);
+            border: 1px solid var(--cb);
+            border-radius: 8px;
+            padding: 10px 12px;
+            margin: 10px 0 14px;
+            font-size: 9px;
+            font-family: 'Courier New', monospace;
+            color: var(--g);
+            line-height: 1.9
+        }
+
+        .mk-code .kw {
+            color: var(--sec)
+        }
+
+        .mk-code .st {
+            color: var(--suc)
+        }
+
+        .mk-code .fn {
+            color: var(--hl)
+        }
+
+        .mk-ad {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(79, 70, 229, .18), rgba(6, 182, 212, .12));
+            border: 1px solid rgba(79, 70, 229, .28);
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            animation: adgl 3s ease-in-out infinite
+        }
+
+        @keyframes adgl {
+
+            0%,
+            100% {
+                box-shadow: 0 0 15px rgba(79, 70, 229, .08)
+            }
+
+            50% {
+                box-shadow: 0 0 35px rgba(79, 70, 229, .22)
+            }
+        }
+
+        .mk-ad-b {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            padding: 2px 7px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, .12);
+            font-size: 8px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            color: var(--g)
+        }
+
+        .mk-ad-i {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--pri), var(--sec));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 16px
+        }
+
+        .mk-ad-t h4 {
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 1px
+        }
+
+        .mk-ad-t p {
+            font-size: 9px;
+            color: var(--g);
+            line-height: 1.3
+        }
+
+        .mk-ad-c {
+            margin-left: auto;
+            padding: 5px 12px;
+            border-radius: 7px;
+            background: linear-gradient(135deg, var(--pri), var(--sec));
+            font-size: 9px;
+            font-weight: 700;
+            color: #fff;
+            white-space: nowrap
+        }
+
+        /* Float */
+        .fel {
+            position: absolute;
+            z-index: 3;
+            animation: fl 6s ease-in-out infinite
+        }
+
+        .fel-1 {
+            top: -16px;
+            right: -16px;
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: rgba(79, 70, 229, .12);
+            border: 1px solid rgba(79, 70, 229, .22);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px
+        }
+
+        .fel-2 {
+            bottom: 30px;
+            left: -24px;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: rgba(6, 182, 212, .12);
+            border: 1px solid rgba(6, 182, 212, .22);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            animation-delay: 2s
+        }
+
+        .fel-3 {
+            top: 45%;
+            right: -36px;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: rgba(139, 92, 246, .12);
+            border: 1px solid rgba(139, 92, 246, .22);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            animation-delay: 4s
+        }
+
+        /* Float stat badges */
+        .fstat {
+            position: absolute;
+            z-index: 4;
+            padding: 8px 14px;
+            border-radius: 10px;
+            background: rgba(11, 16, 35, .9);
+            border: 1px solid var(--cb);
+            backdrop-filter: blur(12px);
+            font-size: 11px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            animation: fl 7s ease-in-out infinite;
+            white-space: nowrap
+        }
+
+        .fstat .iconify {
+            font-size: 14px
+        }
+
+        .fstat-1 {
+            top: 20px;
+            left: -50px;
+            color: var(--suc)
+        }
+
+        .fstat-1 .iconify {
+            color: var(--suc)
+        }
+
+        .fstat-2 {
+            bottom: 60px;
+            right: -40px;
+            color: var(--sec);
+            animation-delay: 3s
+        }
+
+        .fstat-2 .iconify {
+            color: var(--sec)
+        }
+
+        /* ====== TRUSTED BY ====== */
+        .trust-sec {
+            padding: 80px 0 0
+        }
+
+        .trust-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            opacity: .4
+        }
+
+        .trust-logo {
+            padding: 12px 24px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, .06);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--g);
+            letter-spacing: .02em;
+            transition: opacity .3s
+        }
+
+        .trust-logo:hover {
+            opacity: .7
+        }
+
+        .perfect-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 14px;
+            margin-top: 32px
+        }
+
+        .perfect-item {
+            padding: 20px 16px;
+            text-align: center;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, .02);
+            border: 1px solid rgba(255, 255, 255, .06);
+            transition: all .4s
+        }
+
+        .perfect-item:hover {
+            background: var(--card);
+            border-color: var(--cb);
+            transform: translateY(-3px)
+        }
+
+        .perfect-item .iconify {
+            font-size: 22px;
+            margin-bottom: 8px;
+            color: var(--sec)
+        }
+
+        .perfect-item h4 {
+            font-size: 12px;
+            font-weight: 700
+        }
+
+        /* ====== WHY ====== */
+        .why-sec {
+            padding: var(--sp) 0
+        }
+
+        .why-g {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+            margin-top: 56px
+        }
+
+        .why-c {
+            padding: 32px 26px;
+            position: relative;
+            overflow: hidden
+        }
+
+        .why-c::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(79, 70, 229, .04), transparent);
+            opacity: 0;
+            transition: opacity .5s
+        }
+
+        .why-c:hover::before {
+            opacity: 1
+        }
+
+        .why-i {
+            width: var(--isz);
+            height: var(--isz);
+            border-radius: 15px;
+            background: rgba(79, 70, 229, .08);
+            border: 1px solid rgba(79, 70, 229, .18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: var(--sec);
+            margin-bottom: 22px;
+            transition: all .5s
+        }
+
+        .why-c:hover .why-i {
+            background: rgba(79, 70, 229, .18);
+            transform: scale(1.08)
+        }
+
+        .why-c h3 {
+            font-size: 17px;
+            margin-bottom: 10px;
+            font-weight: 700
+        }
+
+        .why-c p {
+            font-size: 13px;
+            color: var(--g);
+            line-height: 1.7
+        }
+
+        /* ====== AUDIENCE ====== */
+        .aud-sec {
+            padding: var(--sp) 0;
+            position: relative
+        }
+
+        .aud-sec::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(79, 70, 229, .04), transparent 70%);
+            pointer-events: none
+        }
+
+        .aud-g {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 22px;
+            width: 115vw;
+            padding-left: 15vw;
+            margin-top: 56px
+        }
+
+        .aud-card {
+            padding: 28px
+        }
+
+        .aud-card h4 {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .aud-card h4 .iconify {
+            color: var(--sec);
+            font-size: 18px
+        }
+
+        .bar-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px
+        }
+
+        .bar-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--g);
+            width: 100px;
+            flex-shrink: 0;
+            text-align: right
+        }
+
+        .bar-track {
+            flex: 1;
+            height: 28px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, .04);
+            overflow: hidden;
+            position: relative
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 8px;
+            transition: width 1.5s cubic-bezier(.16, 1, .3, 1);
+            width: 0
+        }
+
+        .bar-fill.pri {
+            background: linear-gradient(90deg, var(--pri), var(--sec))
+        }
+
+        .bar-fill.sec {
+            background: linear-gradient(90deg, var(--sec), var(--hl))
+        }
+
+        .bar-fill.hl {
+            background: linear-gradient(90deg, var(--hl), #EC4899)
+        }
+
+        .bar-fill.suc {
+            background: linear-gradient(90deg, var(--suc), var(--sec))
+        }
+
+        .bar-val {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--g);
+            width: 40px;
+            flex-shrink: 0
+        }
+
+        .donut-wrap {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 20px
+        }
+
+        .donut {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: relative;
+            flex-shrink: 0
+        }
+
+        .donut-center {
+            position: absolute;
+            inset: 16px;
+            border-radius: 50%;
+            background: var(--bg2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 900
+        }
+
+        .donut-legend {
+            display: flex;
+            flex-direction: column;
+            gap: 6px
+        }
+
+        .donut-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+            color: var(--g)
+        }
+
+        .donut-legend-item span {
+            width: 10px;
+            height: 10px;
+            border-radius: 3px;
+            flex-shrink: 0
+        }
+
+        .aud-stat {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, .05)
+        }
+
+        .aud-stat:last-child {
+            border-bottom: none
+        }
+
+        .aud-stat-l {
+            font-size: 13px;
+            color: var(--g)
+        }
+
+        .aud-stat-v {
+            font-size: 15px;
+            font-weight: 800
+        }
+
+        /* ====== STATS ====== */
+        .stats-sec {
+            padding: var(--sp) 0;
+            position: relative;
+            overflow: hidden
+        }
+
+        .stats-sec::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent, rgba(79, 70, 229, .025), transparent);
+            pointer-events: none
+        }
+
+        .stats-g {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+            margin-top: 56px
+        }
+
+        .stat-c {
+            padding: 36px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden
+        }
+
+        .stat-c::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            border-radius: 1px;
+            background: linear-gradient(90deg, var(--pri), var(--sec));
+            opacity: 0;
+            transition: opacity .5s
+        }
+
+        .stat-c:hover::after {
+            opacity: 1
+        }
+
+        .stat-n {
+            font-size: 44px;
+            font-weight: 900;
+            letter-spacing: -.03em;
+            background: linear-gradient(135deg, var(--w), var(--sec));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+            margin-bottom: 6px
+        }
+
+        .stat-suf {
+            font-size: 24px;
+            font-weight: 800
+        }
+
+        .stat-l {
+            font-size: 12px;
+            color: var(--g);
+            font-weight: 500
+        }
+
+        /* ====== FORMATS ====== */
+        .fmt-sec {
+            padding: var(--sp) 0
+        }
+
+        .fmt-g {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-top: 56px
+        }
+
+        .fmt-c {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column
+        }
+
+        .fmt-vis {
+            height: 160px;
+            background: rgba(0, 0, 0, .3);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--cb)
+        }
+
+        .fmt-vis-i {
+            font-size: 36px;
+            color: rgba(255, 255, 255, .1);
+            transition: all .5s
+        }
+
+        .fmt-c:hover .fmt-vis-i {
+            color: rgba(255, 255, 255, .22);
+            transform: scale(1.15)
+        }
+
+        .fmt-lab {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 3px 9px;
+            border-radius: 5px;
+            background: rgba(79, 70, 229, .18);
+            border: 1px solid rgba(79, 70, 229, .28);
+            font-size: 9px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            color: var(--sec)
+        }
+
+        .fmt-dim {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 9px;
+            color: var(--g);
+            font-weight: 500
+        }
+
+        .fmt-info {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column
+        }
+
+        .fmt-info h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 4px
+        }
+
+        .fmt-place {
+            font-size: 11px;
+            color: var(--sec);
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: .04em
+        }
+
+        .fmt-info p {
+            font-size: 12px;
+            color: var(--g);
+            line-height: 1.7;
+            flex: 1;
+            margin-bottom: 12px
+        }
+
+        .fmt-meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 14px
+        }
+
+        .fmt-meta div {
+            font-size: 10px;
+            color: var(--g)
+        }
+
+        .fmt-meta strong {
+            color: var(--w);
+            font-weight: 600
+        }
+
+        .fmt-price {
+            font-size: 20px;
+            font-weight: 900;
+            margin-bottom: 4px
+        }
+
+        .fmt-price span {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--g)
+        }
+
+        .fmt-best {
+            font-size: 10px;
+            color: var(--hl);
+            font-weight: 600;
+            margin-bottom: 14px
+        }
+
+        .fmt-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 16px
+        }
+
+        .fmt-tags span {
+            padding: 3px 8px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, .04);
+            font-size: 10px;
+            color: var(--g);
+            font-weight: 500
+        }
+
+        .fmt-info .btn-p {
+            width: 100%;
+            justify-content: center
+        }
+
+        /* ====== PRICING ====== */
+        .pri-sec {
+            padding: var(--sp) 0
+        }
+
+        .pri-g {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-top: 56px;
+            align-items: start
+        }
+
+        .pri-c {
+            padding: 36px 28px;
+            position: relative;
+            overflow: hidden
+        }
+
+        .pri-c.pop {
+            border-color: rgba(79, 70, 229, .35);
+            background: rgba(79, 70, 229, .06)
+        }
+
+        .pri-pop {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 6px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--pri), var(--sec));
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .06em
+        }
+
+        .pri-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--sec);
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            margin-bottom: 8px;
+            margin-top: 8px
+        }
+
+        .pri-c.pop .pri-name {
+            margin-top: 28px
+        }
+
+        .pri-price {
+            font-size: 42px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 4px
+        }
+
+        .pri-price span {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--g)
+        }
+
+        .pri-per {
+            font-size: 12px;
+            color: var(--g);
+            margin-bottom: 24px
+        }
+
+        .pri-feat {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 28px
+        }
+
+        .pri-feat div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--g)
+        }
+
+        .pri-feat .iconify {
+            color: var(--suc);
+            font-size: 16px;
+            flex-shrink: 0
+        }
+
+        .pri-c .btn-p,
+        .pri-c .btn-s {
+            width: 100%;
+            justify-content: center
+        }
+
+        .pri-note {
+            font-size: 10px;
+            color: var(--g);
+            text-align: center;
+            margin-top: 8px;
+            opacity: .7
+        }
+
+        /* ====== PREVIEW ====== */
+        .prev-sec {
+            padding: var(--sp) 0;
+            position: relative
+        }
+
+        .prev-sec::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 900px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(6, 182, 212, .04), transparent 70%);
+            pointer-events: none
+        }
+
+        .prev-tabs {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 28px;
+            justify-content: center
+        }
+
+        .prev-tab {
+            padding: 9px 20px;
+            border-radius: 10px;
+            background: var(--card);
+            border: 1px solid var(--cb);
+            color: var(--g);
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .3s
+        }
+
+        .prev-tab.on {
+            background: rgba(79, 70, 229, .12);
+            border-color: rgba(79, 70, 229, .28);
+            color: var(--w)
+        }
+
+        .prev-tab:hover {
+            border-color: rgba(255, 255, 255, .18)
+        }
+
+        .prev-wrap {
+            position: relative;
+            max-width: 960px;
+            margin: 0 auto
+        }
+
+        .prev-frame {
+            background: var(--bg2);
+            border: 1px solid var(--cb);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, .4);
+            transition: transform .6s
+        }
+
+        .prev-frame:hover {
+            transform: scale(1.015)
+        }
+
+        .prev-bar {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 10px 14px;
+            background: rgba(255, 255, 255, .03);
+            border-bottom: 1px solid var(--cb)
+        }
+
+        .prev-bar .dots {
+            display: flex;
+            gap: 5px
+        }
+
+        .prev-bar .dots span {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%
+        }
+
+        .prev-bar .ub {
+            flex: 1;
+            margin-left: 10px;
+            padding: 5px 12px;
+            border-radius: 7px;
+            background: rgba(255, 255, 255, .05);
+            font-size: 10px;
+            color: var(--g)
+        }
+
+        .prev-body {
+            display: flex;
+            min-height: 460px
+        }
+
+        .prev-main {
+            flex: 1;
+            padding: 24px
+        }
+
+        .prev-side {
+            width: 260px;
+            padding: 20px;
+            border-left: 1px solid var(--cb);
+            display: flex;
+            flex-direction: column;
+            gap: 14px
+        }
+
+        .ptag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: rgba(79, 70, 229, .1);
+            color: var(--sec);
+            font-size: 9px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: .03em
+        }
+
+        .ph2 {
+            font-size: 14px;
+            font-weight: 800;
+            margin-bottom: 6px;
+            line-height: 1.3
+        }
+
+        .pln {
+            height: 5px;
+            border-radius: 3px;
+            background: rgba(255, 255, 255, .04);
+            margin-bottom: 4px
+        }
+
+        .pln.w8 {
+            width: 80%
+        }
+
+        .pln.w6 {
+            width: 60%
+        }
+
+        .pln.w9 {
+            width: 90%
+        }
+
+        .pln.w7 {
+            width: 70%
+        }
+
+        .pcode {
+            background: rgba(0, 0, 0, .4);
+            border: 1px solid var(--cb);
+            border-radius: 7px;
+            padding: 10px;
+            margin: 12px 0;
+            font-size: 9px;
+            font-family: monospace;
+            color: var(--g);
+            line-height: 1.8
+        }
+
+        .padh {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            animation: ppulse 3s ease-in-out infinite
+        }
+
+        @keyframes ppulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 2px rgba(79, 70, 229, .25)
+            }
+
+            50% {
+                box-shadow: 0 0 0 3px rgba(79, 70, 229, .45)
+            }
+        }
+
+        .pad-top {
+            margin-bottom: 16px;
+            padding: 12px 14px;
+            background: linear-gradient(135deg, rgba(79, 70, 229, .14), rgba(6, 182, 212, .08));
+            border: 1px solid rgba(79, 70, 229, .22);
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .pad-inl {
+            margin: 12px 0;
+            padding: 12px 14px;
+            background: linear-gradient(135deg, rgba(6, 182, 212, .1), rgba(79, 70, 229, .06));
+            border: 1px solid rgba(6, 182, 212, .22);
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .pad-side {
+            padding: 14px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, .1), rgba(79, 70, 229, .06));
+            border: 1px solid rgba(139, 92, 246, .22);
+            border-radius: 12px;
+            text-align: center
+        }
+
+        .pad-side .si {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--pri), var(--sec));
+            margin: 0 auto 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px
+        }
+
+        .pad-side h5 {
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 3px
+        }
+
+        .pad-side p {
+            font-size: 9px;
+            color: var(--g);
+            margin-bottom: 8px
+        }
+
+        .pad-side .sb {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 5px;
+            background: linear-gradient(135deg, var(--pri), var(--sec));
+            font-size: 9px;
+            font-weight: 700;
+            color: #fff
+        }
+
+        .adlb {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            padding: 1px 5px;
+            border-radius: 3px;
+            background: rgba(255, 255, 255, .1);
+            font-size: 7px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            color: var(--g)
+        }
+
+        /* Mobile preview */
+        .prev-mob {
+            display: none;
+            max-width: 360px;
+            margin: 0 auto
+        }
+
+        .prev-mob .prev-frame {
+            border-radius: 24px
+        }
+
+        .prev-mob .prev-main {
+            padding: 16px
+        }
+
+        .prev-mob .prev-side {
+            display: none
+        }
+
+        /* ====== WHY CHOOSE ====== */
+        .wc-sec {
+            padding: var(--sp) 0
+        }
+
+        .wc-g {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 56px
+        }
+
+        .wc-item {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            padding: 24px;
+            border-radius: var(--rc);
+            transition: all .4s
+        }
+
+        .wc-item:hover {
+            background: var(--card);
+            transform: translateX(4px)
+        }
+
+        .wc-chk {
+            width: 34px;
+            height: 34px;
+            border-radius: 9px;
+            background: rgba(34, 197, 94, .08);
+            border: 1px solid rgba(34, 197, 94, .18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--suc);
+            font-size: 15px;
+            flex-shrink: 0;
+            transition: all .4s
+        }
+
+        .wc-item:hover .wc-chk {
+            background: rgba(34, 197, 94, .16);
+            transform: scale(1.1)
+        }
+
+        .wc-item h4 {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 3px
+        }
+
+        .wc-item p {
+            font-size: 11px;
+            color: var(--g);
+            line-height: 1.6
+        }
+
+        /* ====== PROCESS ====== */
+        .how-sec {
+            padding: var(--sp) 0
+        }
+
+        .how-tl {
+            display: flex;
+            align-items: flex-start;
+            gap: 0;
+            margin-top: 56px;
+            position: relative;
+            overflow-x: auto;
+            padding-bottom: 20px;
+            justify-content: center
+        }
+
+        .how-s {
+            flex: 0 0 220px;
+            text-align: center;
+            position: relative;
+            padding: 0 12px
+        }
+
+        .how-s::before {
+            content: '';
+            position: absolute;
+            top: 26px;
+            left: calc(50% + 26px);
+            right: calc(-50% + 26px);
+            height: 2px;
+            background: linear-gradient(90deg, var(--pri), rgba(6, 182, 212, .25))
+        }
+
+        .how-s:last-child::before {
+            display: none
+        }
+
+        .how-n {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--pri), var(--sec));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 900;
+            color: #fff;
+            margin: 0 auto 16px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 0 25px rgba(79, 70, 229, .25)
+        }
+
+        .how-s h4 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 6px
+        }
+
+        .how-s p {
+            font-size: 12px;
+            color: var(--g);
+            line-height: 1.6
+        }
+
+        .how-arr {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: var(--sec);
+            min-width: 36px;
+            padding-top: 10px
+        }
+
+/* ====== LAUNCH OFFER ====== */
+    .launch-offer {
+      padding: var(--sp) 0;
+      position: relative;
+      overflow: hidden
+    }
+
+    .launch-offer::before {
+      content: '';
+      position: absolute;
+      top: -160px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 900px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245, 158, 11, .07), transparent 70%);
+      pointer-events: none
+    }
+
+    .launch-offer .ctn {
+      position: relative;
+      z-index: 2
+    }
+
+    .offer-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto
+    }
+
+    .offer-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      border-radius: 100px;
+      background: rgba(245, 158, 11, .1);
+      border: 1px solid rgba(245, 158, 11, .28);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--warn);
+      margin-bottom: 22px;
+      animation: offerpulse 2.6s ease-in-out infinite
+    }
+
+    @keyframes offerpulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(245, 158, 11, .22)
+      }
+
+      50% {
+        box-shadow: 0 0 0 7px rgba(245, 158, 11, 0)
+      }
+    }
+
+    .offer-header h2 {
+      font-size: clamp(28px, 4vw, 44px);
+      margin-bottom: 14px
+    }
+
+    .offer-header p {
+      font-size: 15px;
+      color: var(--g);
+      line-height: 1.75
+    }
+
+    .offer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 52px
+    }
+
+    .offer-card {
+      padding: 30px 26px;
+      position: relative;
+      overflow: hidden
+    }
+
+    .offer-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(245, 158, 11, .05), transparent);
+      opacity: 0;
+      transition: opacity .5s
+    }
+
+    .offer-card:hover::before {
+      opacity: 1
+    }
+
+    .offer-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      background: rgba(245, 158, 11, .1);
+      border: 1px solid rgba(245, 158, 11, .22);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 21px;
+      color: var(--warn);
+      margin-bottom: 20px;
+      transition: all .5s
+    }
+
+    .offer-card:hover .offer-icon {
+      background: rgba(245, 158, 11, .18);
+      transform: scale(1.08)
+    }
+
+    .offer-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px
+    }
+
+    .offer-card p {
+      font-size: 12.5px;
+      color: var(--g);
+      line-height: 1.7
+    }
+
+    .offer-footer {
+      max-width: 480px;
+      margin: 56px auto 0;
+      text-align: center
+    }
+
+    .offer-footer h4 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 18px
+    }
+
+    .progress-bar {
+      height: 10px;
+      border-radius: 100px;
+      background: rgba(255, 255, 255, .04);
+      border: 1px solid var(--cb);
+      overflow: hidden;
+      margin-bottom: 12px
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0;
+      border-radius: 100px;
+      background: linear-gradient(90deg, var(--warn), var(--sec));
+      transition: width 1.4s cubic-bezier(.16, 1, .3, 1)
+    }
+
+    .offer-footer>p {
+      font-size: 12px;
+      color: var(--g);
+      margin-bottom: 26px
+    }
+
+    .offer-footer .btn-p {
+      padding: 15px 38px
+    }
+
+@media(max-width:992px){
+
+.offer-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.offer-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+        /* ====== TESTIMONIALS ====== */
+        .test-sec {
+            padding: var(--sp) 0
+        }
+
+        .test-placeholder {
+            text-align: center;
+            padding: 80px 40px;
+            border-radius: var(--r);
+            background: var(--card);
+            border: 1px solid var(--cb);
+            margin-top: 56px
+        }
+
+        .test-placeholder .iconify {
+            font-size: 48px;
+            color: var(--hl);
+            margin-bottom: 20px;
+            opacity: .5
+        }
+
+        .test-placeholder h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px
+        }
+
+        .test-placeholder p {
+            font-size: 15px;
+            color: var(--g);
+            max-width: 480px;
+            margin: 0 auto
+        }
+
+        /* ====== FAQ ====== */
+        .faq-sec {
+            padding: var(--sp) 0
+        }
+
+        .faq-l {
+            max-width: 780px;
+            margin: 56px auto 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px
+        }
+
+        .faq-i {
+            border: 1px solid var(--cb);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: all .4s;
+            background: rgba(255, 255, 255, .015)
+        }
+
+        .faq-i.op {
+            border-color: rgba(79, 70, 229, .28);
+            background: rgba(79, 70, 229, .025)
+        }
+
+        .faq-q {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 24px;
+            cursor: pointer;
+            transition: all .3s;
+            gap: 14px
+        }
+
+        .faq-q:hover {
+            background: rgba(255, 255, 255, .015)
+        }
+
+        .faq-q h4 {
+            font-size: 14px;
+            font-weight: 600;
+            flex: 1
+        }
+
+        .faq-ic {
+            width: 30px;
+            height: 30px;
+            border-radius: 7px;
+            background: rgba(255, 255, 255, .04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .4s;
+            flex-shrink: 0;
+            font-size: 14px;
+            color: var(--g)
+        }
+
+        .faq-i.op .faq-ic {
+            background: rgba(79, 70, 229, .18);
+            color: var(--sec);
+            transform: rotate(45deg)
+        }
+
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .5s cubic-bezier(.16, 1, .3, 1)
+        }
+
+        .faq-i.op .faq-a {
+            max-height: 300px
+        }
+
+        .faq-a p {
+            padding: 0 24px 18px;
+            font-size: 13px;
+            color: var(--g);
+            line-height: 1.8
+        }
+
+        /* ====== MEDIA KIT ====== */
+        .mk-sec {
+            padding: var(--sp) 0
+        }
+
+        .mk-card {
+            max-width: 700px;
+            margin: 56px auto 0;
+            padding: 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden
+        }
+
+        .mk-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(79, 70, 229, .06), rgba(6, 182, 212, .03));
+            pointer-events: none
+        }
+
+        .mk-card>* {
+            position: relative;
+            z-index: 2
+        }
+
+        .mk-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 20px;
+            background: rgba(79, 70, 229, .1);
+            border: 1px solid rgba(79, 70, 229, .2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 32px;
+            color: var(--sec)
+        }
+
+        .mk-card h3 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 12px
+        }
+
+        .mk-card>p {
+            font-size: 14px;
+            color: var(--g);
+            margin-bottom: 24px;
+            line-height: 1.7
+        }
+
+        .mk-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 32px;
+            text-align: left
+        }
+
+        .mk-list div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 14px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, .03);
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--g)
+        }
+
+        .mk-list .iconify {
+            color: var(--suc);
+            font-size: 16px;
+            flex-shrink: 0
+        }
+
+        /* ====== CONTACT FORM ====== */
+        .cont-sec {
+            padding: var(--sp) 0
+        }
+
+        .cont-form {
+            max-width: 800px;
+            margin: 56px auto 0
+        }
+
+        .form-g {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px
+        }
+
+        .form-g.fw {
+            grid-template-columns: 1fr
+        }
+
+        .fg {
+            display: flex;
+            flex-direction: column;
+            gap: 6px
+        }
+
+        .fg label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--g)
+        }
+
+        .fg input,
+        .fg textarea,
+        .fg select {
+            padding: 13px 16px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid var(--cb);
+            color: var(--w);
+            font-size: 13px;
+            font-weight: 500;
+            transition: all .3s;
+            outline: none;
+            -webkit-appearance: none
+        }
+
+        .fg input:focus,
+        .fg textarea:focus,
+        .fg select:focus {
+            border-color: rgba(79, 70, 229, .4);
+            background: rgba(79, 70, 229, .04);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, .08)
+        }
+
+        .fg textarea {
+            min-height: 120px;
+            resize: vertical
+        }
+
+        .fg select {
+            cursor: pointer;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23B7C0D8' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center
+        }
+
+        .fg select option {
+            background: var(--bg2);
+            color: var(--w)
+        }
+
+        .form-note {
+            font-size: 11px;
+            color: var(--g);
+            opacity: .7;
+            margin-bottom: 20px
+        }
+
+        .form-submit {
+            width: 100%
+        }
+
+        /* ====== FINAL CTA ====== */
+        .cta-sec {
+            padding: var(--sp) 0;
+            position: relative;
+            overflow: hidden
+        }
+
+        .cta-box {
+            position: relative;
+            padding: 90px 50px;
+            border-radius: var(--r);
+            overflow: hidden;
+            text-align: center;
+            background: var(--bg2);
+            border: 1px solid var(--cb)
+        }
+
+        .cta-box::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(79, 70, 229, .07), rgba(6, 182, 212, .04), rgba(139, 92, 246, .07));
+            animation: ctag 8s ease-in-out infinite
+        }
+
+        @keyframes ctag {
+
+            0%,
+            100% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: .4
+            }
+        }
+
+        .cta-box::after {
+            content: '';
+            position: absolute;
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(79, 70, 229, .12), transparent 70%);
+            pointer-events: none
+        }
+
+        .cta-box>* {
+            position: relative;
+            z-index: 2
+        }
+
+        .cta-box h2 {
+            font-size: clamp(26px, 4vw, 44px);
+            margin-bottom: 14px
+        }
+
+        .cta-box>p {
+            font-size: 17px;
+            color: var(--g);
+            margin-bottom: 36px;
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .cta-perks {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 32px
+        }
+
+        .cta-perk {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: var(--g);
+            font-weight: 500
+        }
+
+        .cta-perk .iconify {
+            color: var(--suc);
+            font-size: 15px
+        }
+
+        /* ====== FOOTER ====== */
+        .foot {
+            padding: 56px 0 28px;
+            border-top: 1px solid var(--cb);
+            position: relative;
+            z-index: 1
+        }
+
+        .foot-g {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px
+        }
+
+        .foot-b p {
+            font-size: 12px;
+            color: var(--g);
+            margin-top: 10px;
+            line-height: 1.7;
+            max-width: 280px
+        }
+
+        .foot-c h5 {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .07em;
+            color: var(--g);
+            margin-bottom: 14px
+        }
+
+        .foot-c a {
+            display: block;
+            font-size: 13px;
+            color: var(--g);
+            padding: 3px 0;
+            transition: color .3s
+        }
+
+        .foot-c a:hover {
+            color: var(--w)
+        }
+
+        .foot-bot {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 28px;
+            border-top: 1px solid var(--cb);
+            flex-wrap: wrap;
+            gap: 14px
+        }
+
+        .foot-bot p {
+            font-size: 12px;
+            color: var(--g)
+        }
+
+        .foot-soc {
+            display: flex;
+            gap: 10px
+        }
+
+        .foot-soc a {
+            width: 34px;
+            height: 34px;
+            border-radius: 9px;
+            background: var(--card);
+            border: 1px solid var(--cb);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            color: var(--g);
+            transition: all .3s
+        }
+
+        .foot-soc a:hover {
+            background: rgba(79, 70, 229, .12);
+            border-color: rgba(79, 70, 229, .28);
+            color: var(--sec)
+        }
+        .paypal-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    z-index:9999;
+}
+
+.paypal-box{
+
+    width:min(500px,92%);
+
+    background:#111;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    position:relative;
+
+    text-align:center;
+
+    box-shadow:0 25px 80px rgba(0,0,0,.45);
+
+}
+
+.paypal-box h2{
+
+    margin-bottom:15px;
+
+}
+
+.paypal-box p{
+
+    margin-bottom:30px;
+
+    opacity:.8;
+
+}
+
+.paypal-close{
+
+    position:absolute;
+
+    top:15px;
+
+    right:15px;
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:28px;
+
+}
+
+        /* ====== RESPONSIVE ====== */
+        @media(max-width:1024px) {
+            .hero .ctn {
+                grid-template-columns: 1fr;
+                gap: 50px;
+                text-align: center
+            }
+
+            .hero-d {
+                margin-left: auto;
+                margin-right: auto
+            }
+
+            .hero-btns {
+                justify-content: center
+            }
+
+            .hero-badges {
+                justify-content: center
+            }
+
+            .hero-mk {
+                max-width: 560px;
+                margin: 0 auto
+            }
+
+            .why-g {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .perfect-grid {
+                grid-template-columns: repeat(3, 1fr)
+            }
+
+            .aud-g {
+                grid-template-columns: 1fr 1fr
+            }
+            .aud-g {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 22px;
+            width: 90vw;
+            padding-left: 0vw;
+        }
+
+            .fmt-g {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .pri-g {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .wc-g {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .stats-g {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .foot-g {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .prev-side {
+                display: none
+            }
+
+            .fstat {
+                display: none
+            }
+        }
+
+        @media(max-width:768px) {
+            :root {
+                --sp: 72px
+            }
+
+            .ctn {
+                padding: 0 18px
+            }
+
+            .nav-l {
+                display: none
+            }
+
+            .nav-t {
+                display: block
+            }
+
+            .why-g,
+            .perfect-grid,
+            .aud-g,
+            .fmt-g,
+            .pri-g,
+            .wc-g,
+            .stats-g,
+            .form-g {
+                grid-template-columns: 1fr
+            }
+
+            .hero-ht {
+                font-size: 32px
+            }
+
+            .stit {
+                font-size: 26px
+            }
+
+            .mk-art {
+                transform: none
+            }
+
+            .mk-art:hover {
+                transform: none
+            }
+
+            .how-tl {
+                flex-direction: column;
+                align-items: center
+            }
+
+            .how-s::before {
+                display: none
+            }
+
+            .how-arr {
+                transform: rotate(90deg);
+                min-width: auto;
+                padding: 0
+            }
+
+            .cta-box {
+                padding: 56px 20px
+            }
+
+            .foot-g {
+                grid-template-columns: 1fr;
+                gap: 28px
+            }
+
+            .foot-bot {
+                flex-direction: column;
+                text-align: center
+            }
+
+            .prev-dsk {
+                display: none
+            }
+
+            .prev-mob {
+                display: block
+            }
+
+            .fel {
+                display: none
+            }
+
+            .mk-list {
+                grid-template-columns: 1fr
+            }
+
+            .trust-row {
+                gap: 12px
+            }
+
+            .trust-logo {
+                padding: 8px 16px;
+                font-size: 11px
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div id="ld">
+        <div class="ld-ring"></div>
+        <div class="ld-text">Loading</div>
+    </div>
+
+    <!-- Mouse Glow -->
+    <div id="glow"></div>
+
+    <!-- Nav -->
+    <nav class="nav" id="nav">
+        <div class="ctn">
+            <a href="#" class="logo">
+                <div class="logo-i"><span class="iconify" data-icon="ph:code-bold"></span></div>DevAds
+            </a>
+            <div class="nav-l">
+                <a href="#why">Why Us</a>
+                <a href="#audience">Audience</a>
+                <a href="#formats">Formats</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+                <button class="nav-c" onclick="scrollTo('#cta')">Get Started</button>
+                <div id="starter-modal" style="display:none;">
+                    <div id="paypal-starter"></div>
+                </div>
+            </div>
+            <button class="nav-t" onclick="toggleMob()" aria-label="Menu"><span class="iconify"
+                    data-icon="ph:list-bold"></span></button>
+        </div>
+    </nav>
+
+    <!-- ===================== S1: HERO ===================== -->
+    <section class="hero">
+        <div class="hero-grid"></div>
+        <div class="hero-o1"></div>
+        <div class="hero-o2"></div>
+        <div class="ctn">
+            <div class="hero-content">
+                <div class="rv">
+                    <div class="lab"><span class="iconify" data-icon="ph:megaphone-bold"
+                            style="font-size:13px"></span>Advertising Platform</div>
+                </div>
+                <h1 class="hero-ht rv d1">Reach Developers Ready to <em>Discover Your Product</em></h1>
+                <p class="hero-sub rv d2">Your next customers are already reading our articles. Put your brand where
+                    developers look for solutions.</p>
+                <p class="hero-d rv d3">We publish HTML, CSS & JavaScript tutorials that rank on Google and attract
+                    developers with real purchase intent. Your ad goes directly inside that content.</p>
+                <div class="hero-btns rv d4">
+                    <button class="btn-p" onclick="rip(event);scrollTo('#contact')"><span class="iconify"
+                            data-icon="ph:calendar-check-bold" style="font-size:17px"></span>Book Your Advertising
+                        Spot</button>
+                    <button class="btn-s btn-sm" data-action="download-kit">
+                        <span class="iconify" data-icon="mdi:download"></span>
+                        Download Media Kit
+                    </button>
+                </div>
+                <div class="hero-badges rv d5">
+                    <div class="hero-badge"><span class="iconify" data-icon="ph:check-circle-fill"></span>Developer
+                        Audience</div>
+                    <div class="hero-badge"><span class="iconify" data-icon="ph:check-circle-fill"></span>SEO Traffic
+                    </div>
+                    <div class="hero-badge"><span class="iconify" data-icon="ph:check-circle-fill"></span>Worldwide
+                        Reach</div>
+                    <div class="hero-badge"><span class="iconify" data-icon="ph:check-circle-fill"></span>Fast Response
+                    </div>
+                </div>
+            </div>
+            <div class="hero-mk rb2">
+                <div class="fstat fstat-1"><span class="iconify" data-icon="ph:users-bold"></span> 320K+ monthly readers
+                </div>
+                <div class="fstat fstat-2"><span class="iconify" data-icon="ph:arrow-line-up-bold"></span> 92% organic
+                    traffic</div>
+                <div class="fel fel-1"><span class="iconify" data-icon="ph:chart-line-up-bold"></span></div>
+                <div class="fel fel-2"><span class="iconify" data-icon="ph:cursor-click-bold"></span></div>
+                <div class="fel fel-3"><span class="iconify" data-icon="ph:rocket-launch-bold"></span></div>
+                <div class="mk-art">
+                    <div class="mk-bar"><span class="mk-d r"></span><span class="mk-d y"></span><span
+                            class="mk-d g"></span>
+                        <div class="mk-url">devexample.com/css-grid-layout-tutorial</div>
+                    </div>
+                    <div class="mk-body">
+                        <div class="mk-tag">CSS Tutorial</div>
+                        <div class="mk-h">Building a Responsive Grid Layout with CSS Grid</div>
+                        <div class="mk-ln w9"></div>
+                        <div class="mk-ln w85"></div>
+                        <div class="mk-ln w65"></div>
+                        <div class="mk-code"><span class="kw">.container</span> {<br>&nbsp;&nbsp;display: <span
+                                class="fn">grid</span>;<br>&nbsp;&nbsp;grid-template-columns: <span class="st">repeat(3,
+                                1fr)</span>;<br>&nbsp;&nbsp;gap: <span class="st">24px</span>;<br>}</div>
+                        <div class="mk-ad">
+                            <span class="mk-ad-b">Sponsored</span>
+                            <div class="mk-ad-i"><span class="iconify" data-icon="ph:cloud-bold"></span></div>
+                            <div class="mk-ad-t">
+                                <h4>CloudDeploy Pro</h4>
+                                <p>Deploy in seconds. Scale instantly.</p>
+                            </div>
+                            <div class="mk-ad-c">Try Free →</div>
+                        </div>
+                        <div style="margin-top:12px">
+                            <div class="mk-ln w9"></div>
+                            <div class="mk-ln w7"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== S2: TRUSTED BY ===================== -->
+    <section class="trust-sec">
+        <div class="ctn tc">
+            <p class="rv"
+                style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--g);opacity:.6">
+                Perfect For</p>
+            <div class="perfect-grid rv d1">
+                <div class="perfect-item"><span class="iconify" data-icon="ph:brain-bold"></span>
+                    <h4>AI Startups</h4>
+                </div>
+                <div class="perfect-item"><span class="iconify" data-icon="ph:app-window-bold"></span>
+                    <h4>SaaS</h4>
+                </div>
+                <div class="perfect-item"><span class="iconify" data-icon="ph:hard-drives-bold"></span>
+                    <h4>Hosting</h4>
+                </div>
+                <div class="perfect-item"><span class="iconify" data-icon="ph:wrench-bold"></span>
+                    <h4>Dev Tools</h4>
+                </div>
+                <div class="perfect-item"><span class="iconify" data-icon="ph:cloud-bold"></span>
+                    <h4>Cloud</h4>
+                </div>
+                <div class="perfect-item"><span class="iconify" data-icon="ph:plugs-connected-bold"></span>
+                    <h4>APIs</h4>
+                </div>
+            </div>
+            <div class="trust-row rv d2">
+                <div class="trust-logo">[Your Logo Here]</div>
+                <div class="trust-logo">[Your Logo Here]</div>
+                <div class="trust-logo">[Your Logo Here]</div>
+                <div class="trust-logo">[Your Logo Here]</div>
+                <div class="trust-logo">[Your Logo Here]</div>
+            </div>
+            <p class="rv d3" style="font-size:11px;color:var(--g);opacity:.5;margin-top:16px">Replace with your actual
+                advertiser logos</p>
+        </div>
+    </section>
+
+    <!-- ===================== S3: WHY ADVERTISE ===================== -->
+    <section class="why-sec" id="why">
+        <div class="ctn tc">
+            <div class="lab rv"><span class="iconify" data-icon="ph:target-bold" style="font-size:13px"></span>Why
+                Advertise Here</div>
+            <h2 class="stit rv d1">Every Visitor Has Purchase Intent</h2>
+            <p class="sdesc mxa rv d2">Unlike generic ad networks, our audience arrives through Google searches for
+                specific programming solutions — they're already looking for tools like yours.</p>
+            <div class="why-g">
+                <div class="gc why-c rv">
+                    <div class="why-i"><span class="iconify" data-icon="ph:magnifying-glass-bold"></span></div>
+                    <h3>Intent-Driven Visitors</h3>
+                    <p>Readers find our articles by searching for specific problems. When they see your tool solving
+                        that exact problem, conversion is natural.</p>
+                </div>
+                <div class="gc why-c rv d1">
+                    <div class="why-i"><span class="iconify" data-icon="ph:trend-up-bold"></span></div>
+                    <h3>SEO Traffic That Lasts</h3>
+                    <p>Our articles rank for years. Your ad keeps generating impressions month after month without
+                        additional spend on your end.</p>
+                </div>
+                <div class="gc why-c rv d2">
+                    <div class="why-i"><span class="iconify" data-icon="ph:clock-countdown-bold"></span></div>
+                    <h3>Evergreen Content</h3>
+                    <p>We don't publish news that dies in a week. Our tutorials and references stay relevant, giving
+                        your ad long-term exposure.</p>
+                </div>
+                <div class="gc why-c rv d3">
+                    <div class="why-i"><span class="iconify" data-icon="ph:timer-bold"></span></div>
+                    <h3>High Engagement</h3>
+                    <p>Developers spend 8+ minutes on our articles. More time on page means more eyes on your
+                        advertisement and higher CTR.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== S4: AUDIENCE OVERVIEW ===================== -->
+    <section class="aud-sec" id="audience">
+        <div class="ctn">
+            <div class="tc">
+                <div class="lab rv"><span class="iconify" data-icon="ph:chart-pie-slice-bold"
+                        style="font-size:13px"></span>Audience Overview</div>
+                <h2 class="stit rv d1">Know Exactly Who<br>You're Reaching</h2>
+                <p class="sdesc mxa rv d2">Transparent audience data so you can make an informed decision.</p>
+                <div class="ph rv d3"><span class="iconify" data-icon="ph:info-bold" style="font-size:13px"></span>
+                    Replace with your real analytics data</div>
+            </div>
+            <div class="aud-g">
+                <!-- Traffic Sources -->
+                <div class="gc aud-card rv">
+                    <h4><span class="iconify" data-icon="ph:flow-arrow-bold"></span>Traffic Sources  (Last 30 days)</h4>
+                    <div class="bar-row">
+                        <div class="bar-label">Direct</div>
+                        <div class="bar-track">
+                            <div class="bar-fill pri" data-w="81"></div>
+                        </div>
+                        <div class="bar-val">81%</div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">Google</div>
+                        <div class="bar-track">
+                            <div class="bar-fill hl" data-w="13"></div>
+                        </div>
+                        <div class="bar-val">13%</div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">AI</div>
+                        <div class="bar-track">
+                            <div class="bar-fill sec" data-w="2"></div>
+                        </div>
+                        <div class="bar-val">2%</div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">Social</div>
+                        <div class="bar-track">
+                            <div class="bar-fill suc" data-w="2"></div>
+                        </div>
+                        <div class="bar-val">2%</div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">Image Search</div>
+                        <div class="bar-track">
+                            <div class="bar-fill suc" data-w="2"></div>
+                        </div>
+                        <div class="bar-val">2%</div>
+                    </div>
+                </div>
+                <!-- Countries -->
+                <div class="gc aud-card rv d1">
+                    <h4><span class="iconify" data-icon="ph:globe-bold"></span>Top Countries</h4>
+                    <div class="bar-row">
+                        <div class="bar-label">USA</div>
+                        <div class="bar-track">
+                            <div class="bar-fill pri" data-w="34"></div>
+                        </div>
+                        <div class="bar-val">34%</div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">India</div>
+                        <div class="bar-track">
+                            <div class="bar-fill sec" data-w="18"></div>
+                        </div>
+                        <div class="bar-val">18%</div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">UK</div>
+                        <div class="bar-track">
+                            <div class="bar-fill hl" data-w="9"></div>
+                        </div>
+                        <div class="bar-val">9%</div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">France</div>
+                        <div class="bar-track">
+                            <div class="bar-fill suc" data-w="7"></div>
+                        </div>
+                        <div class="bar-val">7%</div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">Others</div>
+                        <div class="bar-track">
+                            <div class="bar-fill pri" data-w="32"></div>
+                        </div>
+                        <div class="bar-val">32%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== S5: STATS ===================== -->
+    <section class="stats-sec" id="stats">
+        <div class="ctn tc">
+            <div class="lab rv"><span class="iconify" data-icon="ph:chart-bar-bold"
+                    style="font-size:13px"></span>Website Statistics</div>
+            <h2 class="stit rv d1">The Numbers<br>Behind the Platform</h2>
+            <div class="ph mxa rv d2"><span class="iconify" data-icon="ph:info-bold" style="font-size:13px"></span>
+                Replace with your real analytics data</div>
+            <div class="stats-g">
+                <div class="gc stat-c rv">
+                    <div class="stat-n"><span class="ctr" data-t="850">0</span><span class="stat-suf">+</span></div>
+                    <div class="stat-l">Published Articles</div>
+                </div>
+                <div class="gc stat-c rv d1">
+                    <div class="stat-n"><span class="ctr" data-t="320">0</span><span class="stat-suf">+</span></div>
+                    <div class="stat-l">Monthly Visitors</div>
+                </div>
+                <div class="gc stat-c rv d2">
+                    <div class="stat-n"><span class="ctr" data-t="1200">0</span><span class="stat-suf">+</span></div>
+                    <div class="stat-l">Projects Published</div>
+                </div>
+                <div class="gc stat-c rv d3">
+                    <div class="stat-n"><span class="ctr" data-t="5">0</span><span class="stat-suf">M</span></div>
+                    <div class="stat-l">Search Impressions/mo</div>
+                </div>
+                <div class="gc stat-c rv">
+                    <div class="stat-n"><span class="ctr" data-t="140">0</span><span class="stat-suf">+</span></div>
+                    <div class="stat-l">Countries Reached</div>
+                </div>
+                <div class="gc stat-c rv d1">
+                    <div class="stat-n"><span class="ctr" data-t="48">0</span><span class="stat-suf">K</span></div>
+                    <div class="stat-l">Monthly Clicks</div>
+                </div>
+                <div class="gc stat-c rv d2">
+                    <div class="stat-n"><span class="ctr" data-t="3">0</span><span class="stat-suf">.2%</span></div>
+                    <div class="stat-l">Average CTR</div>
+                </div>
+                <div class="gc stat-c rv d3">
+                    <div class="stat-n"><span class="ctr" data-t="8">0</span><span class="stat-suf">:24</span></div>
+                    <div class="stat-l">Avg. Session Duration</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== S6: AD FORMATS ===================== -->
+    <section class="fmt-sec" id="formats">
+        <div class="ctn tc">
+            <div class="lab rv"><span class="iconify" data-icon="ph:layout-bold"
+                    style="font-size:13px"></span>Advertising Formats</div>
+            <h2 class="stit rv d1">Choose the Format<br>That Fits Your Goal</h2>
+            <p class="sdesc mxa rv d2">Each format is designed for a specific objective — from brand awareness to direct
+                conversions.</p>
+            <div class="ph mxa rv d3"><span class="iconify" data-icon="ph:info-bold" style="font-size:13px"></span>
+                Replace placeholder prices with your actual pricing</div>
+        </div>
+        <div class="ctn">
+            <div class="fmt-g">
+                <div class="gc fmt-c rv">
+                    <div class="fmt-vis"><span class="fmt-lab">Popular</span><span class="fmt-dim">728 × 90</span>
+                        <div class="fmt-vis-i"><span class="iconify" data-icon="ph:rectangle-bold"></span></div>
+                    </div>
+                    <div class="fmt-info">
+                        <h3>In-Article Banner</h3>
+                        <div class="fmt-place">Mid-article · Between paragraphs</div>
+                        <p>Placed between content paragraphs where reader attention is highest. Feels native to the
+                            reading experience.</p>
+                        <div class="fmt-meta">
+                            <div><strong>Size:</strong> 728×90</div>
+                            <div><strong>View:</strong> Desktop & Mobile</div>
+                        </div>
+                        <div class="fmt-price">$X<span> / month</span></div>
+                        <div class="fmt-best">Best for: Direct response & conversions</div>
+                        <div class="fmt-tags"><span>High CTR</span><span>Native feel</span><span>Contextual</span></div>
+                        <button class="btn-p btn-sm" onclick="rip(event);scrollTo('#contact')">Book This Spot</button>
+                    </div>
+                </div>
+                <div class="gc fmt-c rv d1">
+                    <div class="fmt-vis"><span class="fmt-lab">Premium</span><span class="fmt-dim">1200 × 120</span>
+                        <div class="fmt-vis-i"><span class="iconify" data-icon="ph:wide-rectangle-bold"></span></div>
+                    </div>
+                    <div class="fmt-info">
+                        <h3>Top Banner</h3>
+                        <div class="fmt-place">Page header · Above content</div>
+                        <p>Full-width banner visible before any content loads. First impression placement with maximum
+                            visibility.</p>
+                        <div class="fmt-meta">
+                            <div><strong>Size:</strong> 1200×120</div>
+                            <div><strong>View:</strong> Desktop only</div>
+                        </div>
+                        <div class="fmt-price">$X<span> / month</span></div>
+                        <div class="fmt-best">Best for: Brand awareness & launches</div>
+                        <div class="fmt-tags"><span>Full width</span><span>First view</span><span>High impact</span>
+                        </div>
+                        <button class="btn-p btn-sm" onclick="rip(event);scrollTo('#contact')">Book This Spot</button>
+                    </div>
+                </div>
+                <div class="gc fmt-c rv d2">
+                    <div class="fmt-vis"><span class="fmt-dim">300 × 250</span>
+                        <div class="fmt-vis-i"><span class="iconify" data-icon="ph:star-bold" style=" background-image: url('https://i.ibb.co/JX5RbhT/4c171a78-687d-4cde-876a-cbacb1613539.png'); background-size: contain; width: 28vw; height: auto;"></span></div>
+                    </div>
+                    <div class="fmt-info">
+                        <h3>Sidebar Card</h3>
+                        <div class="fmt-place">Right sidebar · Sticky position</div>
+                        <p>Stays visible as readers scroll through the entire article. Perfect for sustained brand
+                            exposure.</p>
+                        <div class="fmt-meta">
+                            <div><strong>Size:</strong> 300×250</div>
+                            <div><strong>View:</strong> Desktop only</div>
+                        </div>
+                        <div class="fmt-price">$X<span> / month</span></div>
+                        <div class="fmt-best">Best for: Brand awareness & retargeting</div>
+                        <div class="fmt-tags"><span>Sticky</span><span>Always visible</span><span>Scroll-aware</span>
+                        </div>
+                        <button class="btn-p btn-sm" onclick="rip(event);scrollTo('#contact')">Book This Spot</button>
+                    </div>
+                </div>
+                <div class="gc fmt-c rv">
+                    <div class="fmt-vis"><span class="fmt-lab">Featured</span><span class="fmt-dim">Custom</span>
+                        <div class="fmt-vis-i"><span class="iconify" data-icon="ph:star-bold"></span></div>
+                    </div>
+                    <div class="fmt-info">
+                        <h3>Featured Tool Box</h3>
+                        <div class="fmt-place">After intro · High prominence</div>
+                        <p>Card-style placement with icon, description and CTA. Looks like an editorial recommendation,
+                            not an ad.</p>
+                        <div class="fmt-meta">
+                            <div><strong>Size:</strong> Custom</div>
+                            <div><strong>View:</strong> All devices</div>
+                        </div>
+                        <div class="fmt-price">$X<span> / month</span></div>
+                        <div class="fmt-best">Best for: Trust-building & high CTR</div>
+                        <div class="fmt-tags"><span>Editorial style</span><span>Custom design</span><span>Trust
+                                signal</span></div>
+                        <button class="btn-p btn-sm" onclick="rip(event);scrollTo('#contact')">Book This Spot</button>
+                    </div>
+                </div>
+                <div class="gc fmt-c rv d1">
+                    <div class="fmt-vis"><span class="fmt-dim">Full article</span>
+                        <div class="fmt-vis-i"><span class="iconify" data-icon="ph:article-bold"></span></div>
+                    </div>
+                    <div class="fmt-info">
+                        <h3>Sponsored Article</h3>
+                        <div class="fmt-place">Dedicated section · In-article</div>
+                        <p>A mini-section within an article showcasing your project with screenshots, features, and a
+                            direct link.</p>
+                        <div class="fmt-meta">
+                            <div><strong>Size:</strong> Custom</div>
+                            <div><strong>View:</strong> All devices</div>
+                        </div>
+                        <div class="fmt-price">$X<span> / month</span></div>
+                        <div class="fmt-best">Best for: Deep product exposure</div>
+                        <div class="fmt-tags"><span>Screenshots</span><span>Features</span><span>Deep dive</span></div>
+                        <button class="btn-p btn-sm" onclick="rip(event);scrollTo('#contact')">Book This Spot</button>
+                    </div>
+                </div>
+                <div class="gc fmt-c rv d2">
+                    <div class="fmt-vis"><span class="fmt-lab">Exclusive</span><span class="fmt-dim">1200 × 400</span>
+                        <div class="fmt-vis-i"><span class="iconify" data-icon="ph:spotlight-bold"></span></div>
+                    </div>
+                    <div class="fmt-info">
+                        <h3>Homepage Spotlight</h3>
+                        <div class="fmt-place">Homepage · Hero area</div>
+                        <p>Premium homepage placement visible to every single visitor. Maximum reach across the entire
+                            platform.</p>
+                        <div class="fmt-meta">
+                            <div><strong>Size:</strong> 1200×400</div>
+                            <div><strong>View:</strong> All devices</div>
+                        </div>
+                        <div class="fmt-price">$X<span> / month</span></div>
+                        <div class="fmt-best">Best for: Product launches & maximum reach</div>
+                        <div class="fmt-tags"><span>Max reach</span><span>Exclusive</span><span>High impact</span></div>
+                        <button class="btn-p btn-sm" onclick="rip(event);scrollTo('#contact')">Book This Spot</button>
+                    </div>
+                </div>
+                <div class="gc fmt-c rv" style="grid-column:1/-1;max-width:400px;margin:0 auto;width:100%">
+                    <div class="fmt-vis"><span class="fmt-dim">Newsletter</span>
+                        <div class="fmt-vis-i"><span class="iconify" data-icon="ph:envelope-bold"></span></div>
+                    </div>
+                    <div class="fmt-info">
+                        <h3>Newsletter Mention</h3>
+                        <div class="fmt-place">Email newsletter · Weekly send</div>
+                        <p>Your product featured in our weekly developer newsletter with a dedicated section and direct
+                            link.</p>
+                        <div class="fmt-meta">
+                            <div><strong>Format:</strong> Text + Image</div>
+                            <div><strong>Send:</strong> Weekly</div>
+                        </div>
+                        <div class="fmt-price">$X<span> / send</span></div>
+                        <div class="fmt-best">Best for: Direct reach to subscriber inbox</div>
+                        <div class="fmt-tags"><span>Inbox</span><span>Direct link</span><span>High open rate</span>
+                        </div>
+                        <button class="btn-p btn-sm" onclick="rip(event);scrollTo('#contact')">Book This Spot</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== S7: PRICING ===================== -->
+    <section class="pri-sec" id="pricing">
+        <div class="ctn tc">
+            <div class="lab rv"><span class="iconify" data-icon="ph:tag-bold" style="font-size:13px"></span>Pricing
+            </div>
+            <h2 class="stit rv d1">Simple, Transparent<br>Pricing</h2>
+            <p class="sdesc mxa rv d2">No hidden fees. No complicated dashboards. Pick a plan and we handle everything.
+            </p>
+            <div class="ph mxa rv d3"><span class="iconify" data-icon="ph:info-bold" style="font-size:13px"></span>
+                Replace placeholder prices with your actual pricing</div>
+        </div>
+        <div class="ctn">
+            <div class="pri-g">
+                <!-- Starter -->
+                <div class="gc pri-c rv">
+                    <div class="pri-name">Starter</div>
+                    <div class="pri-price">$3<span>/mo</span></div>
+                    <div class="pri-per">Billed monthly · Cancel anytime</div>
+                    <div class="pri-feat">
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>1 Ad placement</div>
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>In-Article Banner (728×90)</div>
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>1 Article of your choice</div>
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>Desktop + Mobile</div>
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>Monthly impressions report</div>
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>Email support</div>
+                    </div>
+                    <button class="btn-s" id="starter-btn">
+                        Get Started
+                    </button>
+                    <div class="pri-note">No long-term contract required</div>
+                </div>
+                <!-- Professional -->
+                <div class="gc pri-c pop rv d1">
+                    <div class="pri-pop">Most Popular</div>
+                    <div class="pri-name">Professional</div>
+                    <div class="pri-price">$5<span>/mo</span></div>
+                    <div class="pri-per">Billed monthly · Cancel anytime</div>
+                    <div class="pri-feat">
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>3 Ad placements</div>
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>Banner + Sidebar + Featured Tool
+                        </div>
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>Up to 5 Articles</div>
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>Desktop + Mobile</div>
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>Bi-weekly performance report</div>
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>1 Banner redesign included</div>
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>Priority email support</div>
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>Newsletter mention (1x)</div>
+                    </div>
+                    <button class="btn-p" onclick="rip(event);scrollTo('#contact')">Get Started</button>
+                    <div class="pri-note">Best value for most advertisers</div>
+                </div>
+                <!-- Enterprise -->
+                <div class="gc pri-c rv d2">
+                    <div class="pri-name">Enterprise</div>
+                    <div class="pri-price">$20<span>/mo</span></div>
+                    <div class="pri-per">Billed monthly · Custom terms</div>
+                    <div class="pri-feat">
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>All ad formats included</div>
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>Unlimited articles</div>
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>Homepage Spotlight</div>
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>Sponsored Article section</div>
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>Weekly performance reports</div>
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>Custom banner designs</div>
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>Dedicated account manager</div>
+                        <div><span class="iconify" data-icon="ph:check-bold"></span>Newsletter (every send)</div>
+                    </div>
+                    <button class="btn-s" onclick="rip(event);scrollTo('#contact')">Contact Us</button>
+                    <div class="pri-note">Custom contracts available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ===================== S7.5: LAUNCH OFFER ===================== -->
+<section class="launch-offer" id="launch-offer">
+    <div class="ctn">
+        <div class="offer-header tc">
+            <span class="offer-badge rv"><span class="iconify" data-icon="ph:fire-bold"
+                    style="font-size:13px"></span>Limited Launch Offer</span>
+            <h2 class="rv d1">Exclusive Benefits for Our First Advertisers</h2>
+            <p class="rv d2">Book your campaign now and unlock premium bonuses available only for the first
+                advertisers.</p>
+        </div>
+
+        <div class="offer-grid">
+            <article class="gc offer-card rv">
+                <div class="offer-icon"><span class="iconify" data-icon="ph:gift-bold"></span></div>
+                <h3>Free Extra Campaign</h3>
+                <p>Get additional advertising time at no extra cost.</p>
+            </article>
+
+            <article class="gc offer-card rv d1">
+                <div class="offer-icon"><span class="iconify" data-icon="ph:crown-bold"></span></div>
+                <h3>Premium Placement</h3>
+                <p>Your ad appears in the highest visibility locations.</p>
+            </article>
+
+            <article class="gc offer-card rv d2">
+                <div class="offer-icon"><span class="iconify" data-icon="ph:chart-line-up-bold"></span></div>
+                <h3>Performance Reports</h3>
+                <p>Detailed impressions, clicks and CTR reports.</p>
+            </article>
+
+            <article class="gc offer-card rv">
+                <div class="offer-icon"><span class="iconify" data-icon="ph:magnifying-glass-bold"></span></div>
+                <h3>Landing Page Review</h3>
+                <p>Free optimization suggestions before launch.</p>
+            </article>
+
+            <article class="gc offer-card rv d1">
+                <div class="offer-icon"><span class="iconify" data-icon="ph:medal-bold"></span></div>
+                <h3>Featured Sponsor</h3>
+                <p>Receive a special sponsor badge during your campaign.</p>
+            </article>
+
+            <article class="gc offer-card rv d2">
+                <div class="offer-icon"><span class="iconify" data-icon="ph:clock-countdown-bold"></span></div>
+                <h3>Priority Renewal</h3>
+                <p>Reserve your advertising spot before everyone else.</p>
+            </article>
+        </div>
+
+        <div class="offer-footer rv">
+            <h4>Only for the first 10 advertisers</h4>
+            <div class="progress-bar">
+                <div class="progress-fill" data-w="60"></div>
+            </div>
+            <p>4 of 10 spots remaining</p>
+            <button class="btn-p" onclick="rip(event);scrollTo('#contact')">
+                <span class="iconify" data-icon="ph:rocket-launch-bold" style="font-size:17px"></span>
+                Claim Your Launch Offer
+            </button>
+        </div>
+    </div>
+</section>
+    <!-- ===================== S8: PREVIEW ===================== -->
+    <section class="prev-sec" id="preview">
+        <div class="ctn tc">
+            <div class="lab rv"><span class="iconify" data-icon="ph:monitor-bold" style="font-size:13px"></span>Live
+                Preview</div>
+            <h2 class="stit rv d1">See Exactly Where<br>Your Ad Appears</h2>
+            <p class="sdesc mxa rv d2">No surprises. This is exactly how your advertisement will look to readers.</p>
+            <div class="prev-tabs rv d3">
+                <button class="prev-tab on" onclick="swPrev('dsk',this)"><span class="iconify"
+                        data-icon="ph:desktop-bold"
+                        style="margin-right:5px;font-size:14px;vertical-align:-2px"></span>Desktop</button>
+                <button class="prev-tab" onclick="swPrev('mob',this)"><span class="iconify"
+                        data-icon="ph:device-mobile-bold"
+                        style="margin-right:5px;font-size:14px;vertical-align:-2px"></span>Mobile</button>
+            </div>
+            <!-- Desktop -->
+            <div class="prev-wrap prev-dsk rb2">
+                <div class="prev-frame">
+                    <div class="prev-bar">
+                        <div class="dots"><span class="mk-d r"></span><span class="mk-d y"></span><span
+                                class="mk-d g"></span></div>
+                        <div class="ub">devexample.com/building-modern-dropdown-menu</div>
+                    </div>
+                    <div class="prev-body">
+                        <div class="prev-main">
+                            <div class="ptag">JavaScript Tutorial</div>
+                            <div class="ph2">Building a Modern Dropdown Menu with Vanilla JavaScript</div>
+                            <div class="pln w9"></div>
+                            <div class="pln w8"></div>
+                            <div class="pln w6"></div>
+                            <div class="padh pad-top" style="margin-top:12px">
+                                <span class="adlb">Sponsored</span>
+                                <div
+                                    style="width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--pri),var(--sec));display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                                    <span class="iconify" data-icon="ph:terminal-window-bold"
+                                        style="font-size:14px;color:#fff"></span></div>
+                                <div style="flex:1">
+                                    <div style="font-size:11px;font-weight:700">CodeShip IDE</div>
+                                    <div style="font-size:9px;color:var(--g)">Fastest online code editor for teams</div>
+                                </div>
+                                <div
+                                    style="padding:4px 12px;border-radius:5px;background:linear-gradient(135deg,var(--pri),var(--sec));font-size:9px;font-weight:700;color:#fff;white-space:nowrap">
+                                    Start Free →</div>
+                            </div>
+                            <div class="pln w9" style="margin-top:12px"></div>
+                            <div class="pln w7"></div>
+                            <div class="pcode"><span style="color:var(--sec)">const</span> dropdown = document.<span
+                                    style="color:var(--hl)">querySelector</span>(<span
+                                    style="color:var(--suc)">'.dropdown'</span>);</div>
+                            <div class="pln w8"></div>
+                            <div class="pln w6"></div>
+                            <div class="padh pad-inl">
+                                <span class="adlb">Sponsored</span>
+                                <div
+                                    style="width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--hl),#EC4899);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                                    <span class="iconify" data-icon="ph:palette-bold"
+                                        style="font-size:14px;color:#fff"></span></div>
+                                <div style="flex:1">
+                                    <div style="font-size:11px;font-weight:700">UIkit Pro</div>
+                                    <div style="font-size:9px;color:var(--g)">Beautiful components for modern web apps
+                                    </div>
+                                </div>
+                                <div
+                                    style="padding:4px 12px;border-radius:5px;background:linear-gradient(135deg,var(--hl),#EC4899);font-size:9px;font-weight:700;color:#fff;white-space:nowrap">
+                                    Learn More →</div>
+                            </div>
+                            <div class="pln w7" style="margin-top:10px"></div>
+                            <div class="pln w6"></div>
+                        </div>
+                        <div class="prev-side">
+                            <div
+                                style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--g);margin-bottom:2px">
+                                Sponsored</div>
+                            <div class="padh pad-side">
+                                <div class="si"><span class="iconify" data-icon="ph:lightning-bold"
+                                        style="font-size:14px;color:#fff"></span></div>
+                                <h5>HostBolt</h5>
+                                <p>Blazing fast hosting. $3/mo.</p>
+                                <div class="sb">Get Started →</div>
+                            </div>
+                            <div class="padh pad-side">
+                                <div class="si" style="background:linear-gradient(135deg,var(--suc),#14B8A6)"><span
+                                        class="iconify" data-icon="ph:book-open-bold"
+                                        style="font-size:14px;color:#fff"></span></div>
+                                <h5>MasterJS Course</h5>
+                                <p>50+ projects included.</p>
+                                <div class="sb" style="background:linear-gradient(135deg,var(--suc),#14B8A6)">Enroll Now
+                                    →</div>
+                            </div>
+                            <div class="pln w9"></div>
+                            <div class="pln w6"></div>
+                            <div class="pln w8"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile -->
+            <div class="prev-mob rb2" style="display:none">
+                <div class="prev-frame">
+                    <div class="prev-bar">
+                        <div class="dots"><span class="mk-d r"></span><span class="mk-d y"></span><span
+                                class="mk-d g"></span></div>
+                        <div class="ub">devexample.com/…</div>
+                    </div>
+                    <div class="prev-main">
+                        <div class="ptag">JavaScript</div>
+                        <div class="ph2">Building a Modern Dropdown Menu</div>
+                        <div class="pln w9"></div>
+                        <div class="pln w7"></div>
+                        <div class="padh pad-top" style="margin-top:10px">
+                            <span class="adlb">Sponsored</span>
+                            <div
+                                style="width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,var(--pri),var(--sec));display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                                <span class="iconify" data-icon="ph:terminal-window-bold"
+                                    style="font-size:12px;color:#fff"></span></div>
+                            <div style="flex:1">
+                                <div style="font-size:10px;font-weight:700">CodeShip IDE</div>
+                                <div style="font-size:8px;color:var(--g)">Fastest online code editor</div>
+                            </div>
+                            <div
+                                style="padding:3px 9px;border-radius:4px;background:linear-gradient(135deg,var(--pri),var(--sec));font-size:8px;font-weight:700;color:#fff">
+                                Try →</div>
+                        </div>
+                        <div class="pln w9" style="margin-top:10px"></div>
+                        <div class="pln w6"></div>
+                        <div class="pcode">const dd = document.querySelector('.dd');</div>
+                        <div class="padh pad-inl" style="margin-top:10px">
+                            <span class="adlb">Sponsored</span>
+                            <div
+                                style="width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,var(--hl),#EC4899);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                                <span class="iconify" data-icon="ph:palette-bold"
+                                    style="font-size:12px;color:#fff"></span></div>
+                            <div style="flex:1">
+                                <div style="font-size:10px;font-weight:700">UIkit Pro</div>
+                                <div style="font-size:8px;color:var(--g)">Components for web apps</div>
+                            </div>
+                            <div
+                                style="padding:3px 9px;border-radius:4px;background:linear-gradient(135deg,var(--hl),#EC4899);font-size:8px;font-weight:700;color:#fff">
+                                More →</div>
+                        </div>
+                        <div class="pln w8" style="margin-top:10px"></div>
+                        <div class="pln w6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== S9: WHY CHOOSE ===================== -->
+    <section class="wc-sec" id="choose">
+        <div class="ctn tc">
+            <div class="lab rv"><span class="iconify" data-icon="ph:shield-check-bold" style="font-size:13px"></span>Why
+                Companies Choose Us</div>
+            <h2 class="stit rv d1">What Makes This<br>Worth Your Budget</h2>
+        </div>
+        <div class="ctn">
+            <div class="wc-g">
+                <div class="wc-item rv">
+                    <div class="wc-chk"><span class="iconify" data-icon="ph:check-bold"></span></div>
+                    <div>
+                        <h4>SEO-Driven Traffic</h4>
+                        <p>Visitors come from Google with real search intent, not paid ads or social media noise.</p>
+                    </div>
+                </div>
+                <div class="wc-item rv d1">
+                    <div class="wc-chk"><span class="iconify" data-icon="ph:check-bold"></span></div>
+                    <div>
+                        <h4>High Intent Audience</h4>
+                        <p>Readers are actively searching for solutions — your product matches their current need.</p>
+                    </div>
+                </div>
+                <div class="wc-item rv d2">
+                    <div class="wc-chk"><span class="iconify" data-icon="ph:check-bold"></span></div>
+                    <div>
+                        <h4>No Spam Ads</h4>
+                        <p>We reject low-quality or misleading advertisers. Your brand shares space with quality
+                            content.</p>
+                    </div>
+                </div>
+                <div class="wc-item rv d3">
+                    <div class="wc-chk"><span class="iconify" data-icon="ph:check-bold"></span></div>
+                    <div>
+                        <h4>Long-Term Visibility</h4>
+                        <p>Articles rank for years. Your ad compounds in value over time without extra spend.</p>
+                    </div>
+                </div>
+                <div class="wc-item rv">
+                    <div class="wc-chk"><span class="iconify" data-icon="ph:check-bold"></span></div>
+                    <div>
+                        <h4>Relevant Audience Only</h4>
+                        <p>100% developer and tech audience — no accidental clicks, no bots, no junk traffic.</p>
+                    </div>
+                </div>
+                <div class="wc-item rv d1">
+                    <div class="wc-chk"><span class="iconify" data-icon="ph:check-bold"></span></div>
+                    <div>
+                        <h4>Developer Community</h4>
+                        <p>Part of a trusted ecosystem that developers return to and recommend to peers.</p>
+                    </div>
+                </div>
+                <div class="wc-item rv d2">
+                    <div class="wc-chk"><span class="iconify" data-icon="ph:check-bold"></span></div>
+                    <div>
+                        <h4>Fast Publishing</h4>
+                        <p>Your ad goes live within 24-48 hours of approval. No lengthy campaign setups.</p>
+                    </div>
+                </div>
+                <div class="wc-item rv d3">
+                    <div class="wc-chk"><span class="iconify" data-icon="ph:check-bold"></span></div>
+                    <div>
+                        <h4>Personal Support</h4>
+                        <p>You deal with a real person, not a self-serve dashboard. We help optimize your placement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== S10: PROCESS ===================== -->
+    <section class="how-sec" id="how">
+        <div class="ctn tc">
+            <div class="lab rv"><span class="iconify" data-icon="ph:steps-bold" style="font-size:13px"></span>How It
+                Works</div>
+            <h2 class="stit rv d1">Four Steps to<br>Your First Placement</h2>
+        </div>
+        <div class="ctn">
+            <div class="how-tl rb2">
+                <div class="how-s">
+                    <div class="how-n">1</div>
+                    <h4>Choose Package</h4>
+                    <p>Select the format and plan that matches your campaign goals.</p>
+                </div>
+                <div class="how-arr"><span class="iconify" data-icon="ph:arrow-right-bold"></span></div>
+                <div class="how-s">
+                    <div class="how-n">2</div>
+                    <h4>Send Request</h4>
+                    <p>Fill out the form with your details, creative assets, and target articles.</p>
+                </div>
+                <div class="how-arr"><span class="iconify" data-icon="ph:arrow-right-bold"></span></div>
+                <div class="how-s">
+                    <div class="how-n">3</div>
+                    <h4>Approve Banner</h4>
+                    <p>We design or integrate your ad and send a preview for final approval.</p>
+                </div>
+                <div class="how-arr"><span class="iconify" data-icon="ph:arrow-right-bold"></span></div>
+                <div class="how-s">
+                    <div class="how-n">4</div>
+                    <h4>Go Live</h4>
+                    <p>Your advertisement is published and starts reaching developers immediately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== S11: TESTIMONIALS ===================== -->
+    <section class="test-sec" id="testimonials">
+        <div class="ctn tc">
+            <div class="lab rv"><span class="iconify" data-icon="ph:chat-circle-text-bold"
+                    style="font-size:13px"></span>Testimonials</div>
+            <h2 class="stit rv d1">What Advertisers Say</h2>
+            <div class="test-placeholder rv d1">
+                <span class="iconify" data-icon="ph:quotes-bold"></span>
+                <h3>Be the First to Advertise Here</h3>
+                <p>We're launching our advertising program and looking for forward-thinking companies to become our
+                    founding advertisers. You'll get premium placement and founding rates.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== S12: FAQ ===================== -->
+    <section class="faq-sec" id="faq">
+        <div class="ctn tc">
+            <div class="lab rv"><span class="iconify" data-icon="ph:question-bold" style="font-size:13px"></span>FAQ
+            </div>
+            <h2 class="stit rv d1">Common Questions</h2>
+        </div>
+        <div class="ctn">
+            <div class="faq-l">
+                <div class="faq-i rv" onclick="tFaq(this)">
+                    <div class="faq-q">
+                        <h4>What payment methods do you accept?</h4>
+                        <div class="faq-ic"><span class="iconify" data-icon="ph:plus-bold"></span></div>
+                    </div>
+                    <div class="faq-a">
+                        <p>We accept credit/debit cards (Visa, Mastercard, Amex), PayPal, bank transfer.
+                            For enterprise orders, we can issue invoices with NET-30 terms.</p>
+                    </div>
+                </div>
+                <div class="faq-i rv d1" onclick="tFaq(this)">
+                    <div class="faq-q">
+                        <h4>What banner sizes do you support?</h4>
+                        <div class="faq-ic"><span class="iconify" data-icon="ph:plus-bold"></span></div>
+                    </div>
+                    <div class="faq-a">
+                        <p>We support 728×90 (in-article), 1200×120 (top banner), 300×250 (sidebar), and custom sizes
+                            for featured tools and sponsored sections. If you need a different size, contact us and
+                            we'll accommodate.</p>
+                    </div>
+                </div>
+                <div class="faq-i rv d2" onclick="tFaq(this)">
+                    <div class="faq-q">
+                        <h4>What is your refund policy?</h4>
+                        <div class="faq-ic"><span class="iconify" data-icon="ph:plus-bold"></span></div>
+                    </div>
+                    <div class="faq-a">
+                        <p>If we fail to deliver your placement as described within the agreed timeline, you're eligible
+                            for a full refund. We don't offer refunds based on performance metrics since we don't
+                            guarantee clicks — only placement and impressions.</p>
+                    </div>
+                </div>
+                <div class="faq-i rv" onclick="tFaq(this)">
+                    <div class="faq-q">
+                        <h4>Can I update my banner after it goes live?</h4>
+                        <div class="faq-ic"><span class="iconify" data-icon="ph:plus-bold"></span></div>
+                    </div>
+                    <div class="faq-a">
+                        <p>Yes. You can update your banner creative once per billing period at no extra cost. Additional
+                            changes may incur a small fee. Just send the new design and we'll replace it within 24
+                            hours.</p>
+                    </div>
+                </div>
+                <div class="faq-i rv d1" onclick="tFaq(this)">
+                    <div class="faq-q">
+                        <h4>Can I sponsor a specific article?</h4>
+                        <div class="faq-ic"><span class="iconify" data-icon="ph:plus-bold"></span></div>
+                    </div>
+                    <div class="faq-a">
+                        <p>Yes. You can choose which articles your ad appears in, subject to availability. We can also
+                            recommend articles based on your target audience and the topics most relevant to your
+                            product.</p>
+                    </div>
+                </div>
+                <div class="faq-i rv d2" onclick="tFaq(this)">
+                    <div class="faq-q">
+                        <h4>Will my ad appear on mobile devices?</h4>
+                        <div class="faq-ic"><span class="iconify" data-icon="ph:plus-bold"></span></div>
+                    </div>
+                    <div class="faq-a">
+                        <p>Yes. In-article banners and featured tools are fully responsive and visible on all devices.
+                            Sidebar cards are desktop-only by design, but we offer mobile-specific alternatives.</p>
+                    </div>
+                </div>
+                <div class="faq-i rv" onclick="tFaq(this)">
+                    <div class="faq-q">
+                        <h4>How long does my advertisement stay live?</h4>
+                        <div class="faq-ic"><span class="iconify" data-icon="ph:plus-bold"></span></div>
+                    </div>
+                    <div class="faq-a">
+                        <p>Standard plans are monthly with auto-renewal. You can also opt for 3-month or 12-month plans
+                            at discounted rates. Since our articles are evergreen, your ad keeps generating value
+                            throughout.</p>
+                    </div>
+                </div>
+                <div class="faq-i rv d1" onclick="tFaq(this)">
+                    <div class="faq-q">
+                        <h4>Which countries will my ad be visible in?</h4>
+                        <div class="faq-ic"><span class="iconify" data-icon="ph:plus-bold"></span></div>
+                    </div>
+                    <div class="faq-a">
+                        <p>Your ad will be visible worldwide. Our top traffic comes from USA, India, UK, Germany, and
+                            140+ other countries. If you want to geo-target specific regions, contact us to discuss
+                            options.</p>
+                    </div>
+                </div>
+                <div class="faq-i rv d2" onclick="tFaq(this)">
+                    <div class="faq-q">
+                        <h4>Do you provide performance reports?</h4>
+                        <div class="faq-ic"><span class="iconify" data-icon="ph:plus-bold"></span></div>
+                    </div>
+                    <div class="faq-a">
+                        <p>Yes. Starter plans get monthly impression reports. Professional and Enterprise plans get
+                            detailed reports including impressions, estimated clicks, and placement performance. We use
+                            privacy-friendly analytics.</p>
+                    </div>
+                </div>
+                <div class="faq-i rv" onclick="tFaq(this)">
+                    <div class="faq-q">
+                        <h4>Can I advertise my AI tool or SaaS product?</h4>
+                        <div class="faq-ic"><span class="iconify" data-icon="ph:plus-bold"></span></div>
+                    </div>
+                    <div class="faq-a">
+                        <p>Absolutely. AI tools, SaaS products, hosting services, developer APIs, UI libraries, and
+                            programming courses are our most popular advertising categories. As long as your product is
+                            relevant to developers, it's a great fit.</p>
+                    </div>
+                </div>
+                <div class="faq-i rv d1" onclick="tFaq(this)">
+                    <div class="faq-q">
+                        <h4>Can you provide an invoice for my company?</h4>
+                        <div class="faq-ic"><span class="iconify" data-icon="ph:plus-bold"></span></div>
+                    </div>
+                    <div class="faq-a">
+                        <p>Yes. We provide professional invoices with all required details (company name, address, tax
+                            ID, etc.) for accounting and expense purposes. Invoices are sent upon payment.</p>
+                    </div>
+                </div>
+                <div class="faq-i rv d2" onclick="tFaq(this)">
+                    <div class="faq-q">
+                        <h4>What kind of support do you offer?</h4>
+                        <div class="faq-ic"><span class="iconify" data-icon="ph:plus-bold"></span></div>
+                    </div>
+                    <div class="faq-a">
+                        <p>All plans include email support with response within 24 hours. Enterprise plans include a
+                            dedicated account manager with priority support via email and scheduled calls. We help with
+                            banner design, placement strategy, and optimization.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== S13: MEDIA KIT ===================== -->
+    <section class="mk-sec" id="mediakit">
+        <div class="ctn">
+            <div class="gc mk-card rv">
+                <div class="mk-icon"><span class="iconify" data-icon="ph:file-pdf-bold"></span></div>
+                <h3>Download Our Media Kit</h3>
+                <p>Get a comprehensive PDF with audience data, traffic statistics, advertising formats, pricing, and
+                    contact information. Share it with your marketing team.</p>
+                <div class="mk-list">
+                    <div><span class="iconify" data-icon="ph:check-bold"></span>Traffic Data</div>
+                    <div><span class="iconify" data-icon="ph:check-bold"></span>Audience Demographics</div>
+                    <div><span class="iconify" data-icon="ph:check-bold"></span>Pricing Overview</div>
+                    <div><span class="iconify" data-icon="ph:check-bold"></span>Banner Specifications</div>
+                    <div><span class="iconify" data-icon="ph:check-bold"></span>Format Examples</div>
+                    <div><span class="iconify" data-icon="ph:check-bold"></span>Contact Details</div>
+                </div>
+                <button class="btn-p" onclick="rip(event)">
+                    <span class="iconify" data-icon="ph:download-simple-bold" style="font-size:17px"></span>
+                    Download PDF Media Kit
+                </button>
+                <p style="font-size:11px;color:var(--g);opacity:.6;margin-top:12px">PDF · ~2MB · Updated monthly</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== S14: CONTACT FORM ===================== -->
+    <section class="cont-sec" id="contact">
+        <div class="ctn tc">
+            <div class="lab rv"><span class="iconify" data-icon="ph:envelope-simple-bold"
+                    style="font-size:13px"></span>Get In Touch</div>
+            <h2 class="stit rv d1">Request Your<br>Advertising Spot</h2>
+            <p class="sdesc mxa rv d2">Fill out the form below and we'll get back to you within 24 hours with placement
+                options and next steps.</p>
+        </div>
+        <div class="ctn">
+            <form class="cont-form rv d2" onsubmit="handleForm(event)">
+                <div class="form-g">
+                    <div class="fg"><label>Company Name *</label><input type="text" placeholder="Your company name"
+                            required></div>
+                    <div class="fg"><label>Website URL *</label><input type="url" placeholder="https://yourproduct.com"
+                            required></div>
+                </div>
+                <div class="form-g">
+                    <div class="fg"><label>Contact Person *</label><input type="text" placeholder="Full name" required>
+                    </div>
+                    <div class="fg"><label>Business Email *</label><input type="email" placeholder="you@company.com"
+                            required></div>
+                </div>
+                <div class="form-g">
+                    <div class="fg"><label>Country</label><input type="text" placeholder="United States"></div>
+                    <div class="fg">
+                        <label>Preferred Package</label>
+                        <select>
+                            <option value="">Select a package</option>
+                            <option>Starter</option>
+                            <option>Professional</option>
+                            <option>Enterprise</option>
+                            <option>Custom / Not sure yet</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-g">
+                    <div class="fg">
+                        <label>Advertising Goal</label>
+                        <select>
+                            <option value="">Select your primary goal</option>
+                            <option>Brand Awareness</option>
+                            <option>Direct Conversions / Sign-ups</option>
+                            <option>Product Launch</option>
+                            <option>Content Distribution</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="fg">
+                        <label>Monthly Budget</label>
+                        <select>
+                            <option value="">Select your budget range</option>
+                            <option>Under $100</option>
+                            <option>$100 — $300</option>
+                            <option>$300 — $500</option>
+                            <option>$500 — $1,000</option>
+                            <option>$1,000+</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-g fw">
+                    <div class="fg"><label>Additional Message</label><textarea
+                            placeholder="Tell us about your product, target audience, or any specific requirements..."></textarea>
+                    </div>
+                </div>
+                <p class="form-note">We'll respond within 24 hours. Your information is kept confidential and never
+                    shared with third parties.</p>
+                <button type="submit" class="btn-p form-submit" onclick="rip(event)">
+                    <span class="iconify" data-icon="ph:paper-plane-tilt-bold" style="font-size:17px"></span>
+                    Request Advertising
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===================== S15: FINAL CTA ===================== -->
+    <section class="cta-sec" id="cta">
+        <div class="ctn">
+            <div class="cta-box rb2">
+                <h2>Ready To Reach Thousands<br>Of Developers?</h2>
+                <p>Your next customers are already reading our articles. Put your product where they're looking.</p>
+                <button class="btn-p" onclick="rip(event);scrollTo('#contact')"
+                    style="font-size:16px;padding:18px 44px">
+                    <span class="iconify" data-icon="ph:rocket-launch-bold" style="font-size:19px"></span>
+                    Book Your Advertising Spot
+                </button>
+                <div class="cta-perks">
+                    <div class="cta-perk"><span class="iconify" data-icon="ph:clock-bold"></span>Response within 24
+                        hours</div>
+                    <div class="cta-perk"><span class="iconify" data-icon="ph:globe-bold"></span>Worldwide advertisers
+                        welcome</div>
+                    <div class="cta-perk"><span class="iconify" data-icon="ph:lock-open-bold"></span>No long-term
+                        contract</div>
+                    <div class="cta-perk"><span class="iconify" data-icon="ph:user-circle-bold"></span>Personal support
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="foot">
+        <div class="ctn">
+            <div class="foot-g">
+                <div class="foot-b">
+                    <a href="#" class="logo">
+                        <div class="logo-i"><span class="iconify" data-icon="ph:code-bold"></span></div>DevAds
+                    </a>
+                    <p>Premium advertising platform for developer-focused brands. Place your product inside high-quality
+                        programming content.</p>
+                </div>
+                <div class="foot-c">
+                    <h5>Advertising</h5>
+                    <a href="#formats">Ad Formats</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#stats">Statistics</a>
+                    <a href="#audience">Audience</a>
+                    <a href="#how">How It Works</a>
+                </div>
+                <div class="foot-c">
+                    <h5>Resources</h5>
+                    <a href="#mediakit">Media Kit</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#preview">Ad Preview</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+                <div class="foot-c">
+                    <h5>Legal</h5>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="mailto:ads@devexample.com">ads@devexample.com</a>
+                </div>
+            </div>
+            <div class="foot-bot">
+                <p>&copy; 2025 DevAds. All rights reserved.</p>
+                <div class="foot-soc">
+                    <a href="#" aria-label="Twitter"><span class="iconify" data-icon="ph:x-logo-bold"></span></a>
+                    <a href="#" aria-label="LinkedIn"><span class="iconify"
+                            data-icon="ph:linkedin-logo-bold"></span></a>
+                    <a href="#" aria-label="GitHub"><span class="iconify" data-icon="ph:github-logo-bold"></span></a>
+                    <a href="#" aria-label="Email"><span class="iconify" data-icon="ph:envelope-bold"></span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="paypalModal" class="paypal-modal">
+    
+        <div class="paypal-box">
+    
+            <button id="closePaypalModal" class="paypal-close">
+                &times;
+            </button>
+    
+            <h2>Complete your subscription</h2>
+    
+            <p>
+                You will be redirected securely to PayPal to activate your monthly advertising subscription.
+            </p>
+    
+            <div id="paypal-starter"></div>
+    
+        </div>
+    
+    </div>
+<script src="https://www.paypal.com/sdk/js?client-id=AaSZZ_gpjB2l-Lp_2SaXSE_FB37Vctm-GbQPRaBGCemGrmj2rGhTaZ1ZIATGfXSsd8_sh6xCQSC6RF9g&vault=true&intent=subscription"></script>
+
+<script>
+    // Loader
+    window.addEventListener('load', () => { setTimeout(() => document.getElementById('ld').classList.add('hide'), 350) });
+
+    // Mouse glow
+    const gl = document.getElementById('glow'); let gx = 0, gy = 0, cx = 0, cy = 0;
+    document.addEventListener('mousemove', e => { gx = e.clientX; gy = e.clientY });
+    (function aGlow() { cx += (gx - cx) * .07; cy += (gy - cy) * .07; gl.style.left = cx + 'px'; gl.style.top = cy + 'px'; requestAnimationFrame(aGlow) })();
+
+    // Nav scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('sc', scrollY > 40));
+
+    // Scroll reveal
+    const rvEls = document.querySelectorAll('.rv,.rb2');
+    const rvObs = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) e.target.classList.add('on') }) }, { threshold: .08, rootMargin: '0px 0px -50px 0px' });
+    rvEls.forEach(el => rvObs.observe(el));
+
+    // Bar / progress fill animation
+    const bars = document.querySelectorAll('.bar-fill, .progress-fill');
+    const barObs = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) { e.target.style.width = e.target.dataset.w + '%'; barObs.unobserve(e.target) } }) }, { threshold: .3 });
+    bars.forEach(b => barObs.observe(b));
+
+    // Counter animation
+    const ctrs = document.querySelectorAll('.ctr'); let ctrDone = false;
+    const ctrObs = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting && !ctrDone) { ctrDone = true; ctrs.forEach(c => { const t = +c.dataset.t; const dur = 2000; const st = performance.now(); (function up(now) { const p = Math.min((now - st) / dur, 1); const e2 = 1 - Math.pow(1 - p, 3); c.textContent = Math.floor(e2 * t); if (p < 1) requestAnimationFrame(up); else c.textContent = t })(st) }) } }) }, { threshold: .3 });
+    ctrs.forEach(c => ctrObs.observe(c.closest('.stat-c')));
+
+    // FAQ
+    function tFaq(i) { const o = i.classList.contains('op'); document.querySelectorAll('.faq-i').forEach(x => x.classList.remove('op')); if (!o) i.classList.add('op') }
+
+    // Preview switch
+    function swPrev(t, btn) { document.querySelectorAll('.prev-tab').forEach(x => x.classList.remove('on')); btn.classList.add('on'); document.querySelector('.prev-dsk').style.display = t === 'dsk' ? '' : 'none'; document.querySelector('.prev-mob').style.display = t === 'mob' ? '' : 'none' }
+
+    // Ripple (clipped safely inside each button via position:relative + overflow:hidden)
+    function rip(e) { const b = e.currentTarget; const existing = b.querySelector('.rip'); if (existing) existing.remove(); const r = document.createElement('span'); r.classList.add('rip'); const rc = b.getBoundingClientRect(); const sz = Math.max(rc.width, rc.height); r.style.width = r.style.height = sz + 'px'; r.style.left = (e.clientX - rc.left - sz / 2) + 'px'; r.style.top = (e.clientY - rc.top - sz / 2) + 'px'; b.appendChild(r); setTimeout(() => r.remove(), 600) }
+
+    // Smooth scroll
+    function scrollTo(sel) { document.querySelector(sel).scrollIntoView({ behavior: 'smooth' }) }
+
+    // Form
+    function handleForm(e) { e.preventDefault(); const btn = e.target.querySelector('.form-submit'); btn.innerHTML = '<span class="iconify" data-icon="ph:check-circle-bold" style="font-size:17px"></span> Request Sent! We\'ll be in touch within 24 hours.'; btn.style.background = 'linear-gradient(135deg,#22C55E,#14B8A6)'; btn.disabled = true; setTimeout(() => { btn.innerHTML = '<span class="iconify" data-icon="ph:paper-plane-tilt-bold" style="font-size:17px"></span> Request Advertising'; btn.style.background = ''; btn.disabled = false; e.target.reset() }, 4000) }
+
+    // Mobile menu
+    function toggleMob() { const l = document.querySelector('.nav-l'); if (l.style.display === 'flex') { l.style.display = 'none'; l.removeAttribute('style') } else { l.style.cssText = 'display:flex;position:absolute;top:66px;left:18px;right:18px;flex-direction:column;background:rgba(5,8,22,.95);backdrop-filter:blur(20px);border-radius:14px;border:1px solid rgba(255,255,255,.08);padding:18px;gap:14px;z-index:100' } }
+
+    // Parallax orbs
+    window.addEventListener('scroll', () => { const s = scrollY; const o1 = document.querySelector('.hero-o1'), o2 = document.querySelector('.hero-o2'); if (o1) o1.style.transform = `translate(${s * .025}px,${s * -.018}px)`; if (o2) o2.style.transform = `translate(${s * -.018}px,${s * .025}px)` });
+</script>
+
+<script>
+    const modal=document.getElementById("paypalModal");
+
+document
+.getElementById("starter-btn")
+.addEventListener("click",()=>{
+
+    modal.style.display="flex";
+
+});
+
+document
+.getElementById("closePaypalModal")
+.addEventListener("click",()=>{
+
+    modal.style.display="none";
+
+});
+
+modal.addEventListener("click",(e)=>{
+
+    if(e.target===modal){
+
+        modal.style.display="none";
+
+    }
+
+});
+</script>
+<script>
+    paypal.Buttons({
+
+        style: {
+            shape: "rect",
+            color: "gold",
+            layout: "vertical",
+            label: "subscribe"
+        },
+
+        createSubscription: function (data, actions) {
+
+            return actions.subscription.create({
+
+                plan_id: "P-43U00789CP136221DNJF2GQI"
+
+            });
+
+        },
+
+        onApprove: function (data, actions) {
+
+            console.log("Subscription ID:", data.subscriptionID);
+
+            alert("Subscription successful!");
+
+        },
+
+        onError: function (err) {
+
+            console.error(err);
+
+            alert("An error occurred while processing the subscription.");
+
+        }
+
+    }).render("#paypal-starter");
+</script>
+</body>
+
+</html
