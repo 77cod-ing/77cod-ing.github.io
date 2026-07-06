@@ -1132,7 +1132,7 @@ async function verifyToken(){
 
     // Expected shape: { success: true, subscriptionId, paymentDate, status, used }
     // Adjust the field names below to match the real API response if they differ.
-    const used = data.used === true || data.used === 1 || data.used === "1";
+    const used = data.payment.used == 1;
 
     if(used){
       showScreen("used");
