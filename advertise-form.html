@@ -1151,13 +1151,18 @@ async function verifyToken(){
 }
 
 function populateSubscriptionInfo(data){
-  const subIdEl = document.getElementById("meta-sub-id");
-  const paymentDateEl = document.getElementById("meta-payment-date");
-  const statusEl = document.getElementById("meta-status");
 
-  subIdEl.textContent = data.subscriptionId || data.id || "—";
-  paymentDateEl.textContent = formatDate(data.paymentDate) || "—";
-  statusEl.textContent = data.status || "Active";
+  const payment = data.payment;
+
+  document.getElementById("meta-sub-id").textContent =
+      payment.payment_id;
+
+  document.getElementById("meta-payment-date").textContent =
+      payment.created_at;
+
+  document.getElementById("meta-status").textContent =
+      payment.paid ? "Paid" : "Pending";
+
 }
 
 function formatDate(value){
