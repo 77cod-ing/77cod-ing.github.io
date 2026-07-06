@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advertise Form</title>
+</head>
+
+<body>
+
+<h1>Checking your subscription...</h1>
+
+<div id="content"></div>
+
+<script>
+
+const token = new URLSearchParams(window.location.search).get("token");
+
+if(!token){
+
+    document.body.innerHTML="<h2>Access denied</h2>";
+
+}else{
+
+    fetch(
+        "https://black-leaf-3a4aadvertise-api-v2.tt2980665.workers.dev/verify?token="+encodeURIComponent(token)
+    )
+
+    .then(r=>r.json())
+
+    .then(data=>{
+
+        if(!data.success){
+
+            document.body.innerHTML="<h2>Invalid access.</h2>";
+
+            return;
+
+        }
+
+        document.getElementById("content").innerHTML=`
+
+        <h2>Welcome!</h2>
+
+        <p>Your subscription has been verified.</p>
+
+        <p><b>Subscription ID:</b> ${data.payment.payment_id}</p>
+
+        <p><b>Status:</b> Paid</p>
+
+        `;
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
