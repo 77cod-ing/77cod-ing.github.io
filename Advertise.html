@@ -4031,9 +4031,35 @@ grid-template-columns:1fr;
                 });
             },
 
-            onApprove: function (data) {
+            onApprove: async function (data) {
+
                 console.log("Subscription ID:", data.subscriptionID);
-                alert("Subscription successful!");
+
+                const response = await fetch(
+                    "https://black-leaf-3a4aadvertise-api-v2.tt2980665.workers.dev",
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            subscriptionID: data.subscriptionID
+                        })
+                    }
+                );
+
+                const result = await response.json();
+
+                if (result.success) {
+
+                    alert("Subscription successful!");
+
+                } else {
+
+                    alert("Database error");
+
+                }
+
             },
 
             onError: function (err) {
@@ -4123,6 +4149,7 @@ modal.addEventListener("click",(e)=>{
 
 });
 </script>
+
 </body>
 
-</html>
+</html
