@@ -1382,9 +1382,13 @@ form.addEventListener("submit", async (e) => {
 
     const data = await res.json().catch(() => ({}));
 
-    if(!res.ok || data.success === false){
-      throw new Error(data.message || "Submission failed");
-    }
+    if (!res.ok || data.success === false) {
+    throw new Error(
+        data.error ||
+        data.message ||
+        JSON.stringify(data)
+    );
+}
 
     showScreen("success");
 
