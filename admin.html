@@ -1424,15 +1424,74 @@
          6. API CALLS
          ========================================================================== */
       async function fetchAdsList() {
+
         if (USE_MOCK_DATA) return mockFetchList();
 
-        // TODO: replace with real endpoint call once /admin/ads is deployed.
-        const res = await fetch(ENDPOINTS.list, { headers: { "Accept": "application/json" } });
-        if (!res.ok) throw new Error(`Server responded with ${res.status}`);
-        const data = await res.json();
-        return data.ads || data; // adapt to whatever shape the real API returns
-      }
+        const res = await fetch(ENDPOINTS.list, {
+          headers: {
+            "Accept": "application/json"
+          }
+        });
 
+        if (!res.ok)
+          throw new Error(`Server responded with ${res.status}`);
+
+        const data = await res.json();
+
+        return (data.ads || []).map(ad => ({
+
+          adId: ad.ad_id,
+          subscriptionId: ad.payment_id,
+          accessToken: ad.access_token,
+          paymentId: ad.payment_id,
+          submittedDate: ad.created_at,
+
+          company: {
+            name: ad.company_name,
+            website: ad.website,
+            businessEmail: ad.business_email,
+            contactName: ad.contact_name,
+            country: ad.country,
+            companySize: ad.company_size,
+            industry: ad.industry
+          },
+
+          advertisement: {
+            title: ad.ad_title,
+            slogan: ad.slogan,
+            destinationUrl: ad.destination_url,
+            cta: ad.call_to_action,
+            type: ad.placement,
+            description: ad.description
+          },
+
+          targeting: {
+            audience: ad.target_audience,
+            countries: ad.countries,
+            languages: JSON.parse(ad.programming_languages || "[]"),
+            categories: JSON.parse(ad.categories || "[]")
+          },
+
+          campaign: {
+            startDate: ad.preferred_start_date,
+            duration: ad.duration,
+            budgetNotes: ad.budget_notes
+          },
+
+          media: {
+            logo: ad.logo_url,
+            banner: ad.banner_url,
+            additional: ad.media_url ? [ad.media_url] : []
+          },
+
+          status:
+            ad.status === "pending" ? "Pending" :
+              ad.status === "approved" ? "Approved" :
+                ad.status === "rejected" ? "Rejected" :
+                  "Pending"
+
+        }));
+      }
       async function updateAdStatus(id, status) {
         if (USE_MOCK_DATA) return mockUpdateStatus(id, status);
 
