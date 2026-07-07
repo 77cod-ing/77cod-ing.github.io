@@ -1509,7 +1509,7 @@
       }
 
       function populateCountryFilter() {
-        const countries = Array.from(new Set(allAds.map(a => a.company.country).filter(Boolean))).sort();
+        const countries = Array.from(new Set(allAds.map(a => a.country).filter(Boolean))).sort();
         const current = els.filterCountry.value;
         els.filterCountry.innerHTML = `<option value="">All countries</option>` +
           countries.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join("");
