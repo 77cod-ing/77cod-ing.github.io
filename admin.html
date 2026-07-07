@@ -1260,430 +1260,427 @@
     </div>
   </div>
 
-  <script>
-    (function () {
-      "use strict";
+<script>
+  (function () {
+    "use strict";
 
-      /* ==========================================================================
-         1. CONFIG — API endpoints
-         TODO: confirm these match the real Worker routes once the backend exists.
-         This page assumes the same API host used by advertise-form.html.
-         ========================================================================== */
-      const API_BASE = "https://black-leaf-3a4aadvertise-api-v2.tt2980665.workers.dev";
-      const ENDPOINTS = {
-        list: API_BASE + "/admin/ads",        // GET  /admin/ads
-        detail: API_BASE + "/admin/ad",         // GET  /admin/ad?id=...
-        status: API_BASE + "/admin/status",     // POST /admin/status
-        del: API_BASE + "/admin/delete"      // POST /admin/delete
+    /* ==========================================================================
+       1. CONFIG — API endpoints
+       ========================================================================== */
+    const API_BASE = "https://black-leaf-3a4aadvertise-api-v2.tt2980665.workers.dev";
+    const ENDPOINTS = {
+      list: API_BASE + "/admin/ads",        // GET  /admin/ads
+      detail: API_BASE + "/admin/ad",         // GET  /admin/ad?id=...
+      status: API_BASE + "/admin/status",     // POST /admin/status
+      del: API_BASE + "/admin/delete"      // POST /admin/delete
+    };
+
+    const USE_MOCK_DATA = false;
+
+    /* ==========================================================================
+       2. STATE
+       ========================================================================== */
+    let allAds = [];           // full dataset, ALWAYS normalized objects
+    let currentAdId = null;    // ad currently open in the view modal
+    let pendingDeleteId = null;
+
+    /* ==========================================================================
+       3. DOM REFERENCES
+       ========================================================================== */
+    const els = {
+      currentDate: document.getElementById("currentDate"),
+      refreshBtn: document.getElementById("refreshBtn"),
+      searchInput: document.getElementById("searchInput"),
+
+      statTotal: document.getElementById("statTotal"),
+      statPending: document.getElementById("statPending"),
+      statApproved: document.getElementById("statApproved"),
+      statRejected: document.getElementById("statRejected"),
+
+      filterStatus: document.getElementById("filterStatus"),
+      filterCountry: document.getElementById("filterCountry"),
+      filterType: document.getElementById("filterType"),
+      filterSort: document.getElementById("filterSort"),
+      filterCount: document.getElementById("filterCount"),
+
+      skeletonTable: document.getElementById("skeletonTable"),
+      skeletonBody: document.getElementById("skeletonBody"),
+      dataTable: document.getElementById("dataTable"),
+      tableBody: document.getElementById("tableBody"),
+      emptyState: document.getElementById("emptyState"),
+      errorState: document.getElementById("errorState"),
+      errorDesc: document.getElementById("errorDesc"),
+      retryBtn: document.getElementById("retryBtn"),
+
+      viewModal: document.getElementById("viewModal"),
+      modalAdId: document.getElementById("modalAdId"),
+      modalBody: document.getElementById("modalBody"),
+      closeViewModal: document.getElementById("closeViewModal"),
+      statusSelect: document.getElementById("statusSelect"),
+      saveStatusBtn: document.getElementById("saveStatusBtn"),
+      statusSaveNote: document.getElementById("statusSaveNote"),
+
+      deleteModal: document.getElementById("deleteModal"),
+      cancelDeleteBtn: document.getElementById("cancelDeleteBtn"),
+      confirmDeleteBtn: document.getElementById("confirmDeleteBtn")
+    };
+
+    /* ==========================================================================
+       4. HEADER — live date
+       ========================================================================== */
+    function renderCurrentDate() {
+      els.currentDate.textContent = new Date().toLocaleDateString(undefined, {
+        weekday: "short", year: "numeric", month: "short", day: "numeric"
+      });
+    }
+    renderCurrentDate();
+
+    /* ==========================================================================
+       5. NORMALIZATION
+       Converts a raw snake_case API record into the single normalized shape
+       used everywhere else in this file. This is the ONLY place snake_case
+       field names should ever appear.
+       ========================================================================== */
+    function normalizeAd(raw) {
+      if (!raw) return null;
+
+      // Support both a flat snake_case record and an already-nested one
+      // (defensive: some endpoints may nest company/advertisement/etc. too)
+      const company = raw.company || {};
+      const advertisement = raw.advertisement || {};
+      const targeting = raw.targeting || {};
+      const campaign = raw.campaign || {};
+      const media = raw.media || {};
+
+      return {
+        adId: raw.adId || raw.ad_id || "",
+        subscriptionId: raw.subscriptionId || raw.subscription_id || "",
+        accessToken: raw.accessToken || raw.access_token || "",
+        paymentId: raw.paymentId || raw.payment_id || "",
+        submittedDate: raw.submittedDate || raw.created_at || raw.submitted_date || "",
+
+        company: {
+          name: company.name || raw.company_name || "",
+          website: company.website || raw.website || "",
+          businessEmail: company.businessEmail || raw.business_email || "",
+          contactName: company.contactName || raw.contact_name || "",
+          country: company.country || raw.country || "",
+          companySize: company.companySize || raw.company_size || "",
+          industry: company.industry || raw.industry || ""
+        },
+
+        advertisement: {
+          title: advertisement.title || raw.title || "",
+          slogan: advertisement.slogan || raw.slogan || "",
+          destinationUrl: advertisement.destinationUrl || raw.destination_url || "",
+          cta: advertisement.cta || raw.cta || "",
+          type: advertisement.type || raw.placement || raw.type || "",
+          description: advertisement.description || raw.description || ""
+        },
+
+        targeting: {
+          audience: targeting.audience || raw.audience || "",
+          countries: targeting.countries || raw.target_countries || "",
+          languages: targeting.languages || raw.languages || [],
+          categories: targeting.categories || raw.categories || []
+        },
+
+        campaign: {
+          startDate: campaign.startDate || raw.start_date || "",
+          duration: campaign.duration || raw.duration || "",
+          budgetNotes: campaign.budgetNotes || raw.budget_notes || ""
+        },
+
+        media: {
+          logo: media.logo || raw.logo_url || null,
+          banner: media.banner || raw.banner_url || null,
+          additional: media.additional || raw.additional_media || []
+        },
+
+        status: raw.status || "Pending"
       };
+    }
 
-      // TODO: remove this flag and the mockFetchList()/mockFetchDetail() functions
-      // below once the real /admin/* endpoints are live. Kept on by default so the
-      // dashboard is fully testable while the backend is still in progress.
-      const USE_MOCK_DATA = false;
+    /* ==========================================================================
+       6. MOCK DATA — used only while USE_MOCK_DATA is true
+       ========================================================================== */
+    function mockFetchList() {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          resolve([
+            {
+              ad_id: "AD-1042", subscription_id: "SUB-88291", access_token: "tok_9f3e...c2a1",
+              payment_id: "PAY-55210", created_at: "2026-07-01T10:22:00Z",
+              company_name: "Nimbus Cloud", website: "https://nimbuscloud.dev", business_email: "team@nimbuscloud.dev",
+              contact_name: "Sara Lambert", country: "Germany", company_size: "11-50", industry: "Cloud hosting",
+              title: "Deploy in seconds with Nimbus", slogan: "Cloud that just works",
+              destination_url: "https://nimbuscloud.dev/start", cta: "Start Free", placement: "Homepage",
+              description: "Nimbus Cloud gives frontend teams instant, zero-config deployments with a generous free tier.",
+              audience: "Frontend developers", target_countries: "Global", languages: ["HTML", "CSS", "JavaScript"], categories: ["Cloud", "Hosting", "Developer Tools"],
+              start_date: "2026-07-15", duration: "1 month", budget_notes: "$500–800 range",
+              logo_url: null, banner_url: null, additional_media: [],
+              status: "Pending"
+            },
+            {
+              ad_id: "AD-1041", subscription_id: "SUB-88104", access_token: "tok_1a2b...77f0",
+              payment_id: "PAY-55198", created_at: "2026-06-28T15:05:00Z",
+              company_name: "Pixel Forge", website: "https://pixelforge.io", business_email: "hello@pixelforge.io",
+              contact_name: "Marco Diaz", country: "Spain", company_size: "1-10", industry: "UI component library",
+              title: "200+ ready-made UI components", slogan: "Ship interfaces faster",
+              destination_url: "https://pixelforge.io/library", cta: "Learn More", placement: "Sidebar",
+              description: "A drop-in component library for React and vanilla JS with live customization.",
+              audience: "Indie hackers, startups", target_countries: "US, Canada, UK", languages: ["JavaScript", "CSS"], categories: ["Developer Tools", "APIs"],
+              start_date: "2026-07-05", duration: "2 weeks", budget_notes: "",
+              logo_url: null, banner_url: null, additional_media: [],
+              status: "Approved"
+            },
+            {
+              ad_id: "AD-1039", subscription_id: "SUB-87950", access_token: "tok_5c6d...31ee",
+              payment_id: "PAY-55160", created_at: "2026-06-20T09:40:00Z",
+              company_name: "QuickAPI", website: "https://quickapi.dev", business_email: "contact@quickapi.dev",
+              contact_name: "Jenna Wu", country: "United States", company_size: "51-200", industry: "API infrastructure",
+              title: "REST APIs in one click", slogan: "", destination_url: "https://quickapi.dev",
+              cta: "Try Now", placement: "Banner",
+              description: "Generate and host production-ready REST APIs from any dataset without writing backend code.",
+              audience: "Backend and full-stack developers", target_countries: "Global", languages: ["JavaScript"], categories: ["APIs", "SaaS"],
+              start_date: "2026-06-25", duration: "Ongoing", budget_notes: "Flexible",
+              logo_url: null, banner_url: null, additional_media: [],
+              status: "Rejected"
+            }
+          ]);
+        }, 700);
+      });
+    }
 
-      /* ==========================================================================
-         2. STATE
-         ========================================================================== */
-      let allAds = [];           // full dataset as returned by the API
-      let currentAdId = null;    // ad currently open in the view modal
-      let pendingDeleteId = null;
+    function mockUpdateStatus(id, status) {
+      return new Promise(resolve => setTimeout(() => resolve({ success: true }), 500));
+    }
 
-      /* ==========================================================================
-         3. DOM REFERENCES
-         ========================================================================== */
-      const els = {
-        currentDate: document.getElementById("currentDate"),
-        refreshBtn: document.getElementById("refreshBtn"),
-        searchInput: document.getElementById("searchInput"),
+    function mockDelete(id) {
+      return new Promise(resolve => setTimeout(() => resolve({ success: true }), 500));
+    }
 
-        statTotal: document.getElementById("statTotal"),
-        statPending: document.getElementById("statPending"),
-        statApproved: document.getElementById("statApproved"),
-        statRejected: document.getElementById("statRejected"),
+    /* ==========================================================================
+       7. API CALLS — all return / accept NORMALIZED objects only
+       ========================================================================== */
+    async function fetchAdsList() {
+      const rawList = USE_MOCK_DATA
+        ? await mockFetchList()
+        : await (async () => {
+          const res = await fetch(ENDPOINTS.list, { headers: { "Accept": "application/json" } });
+          if (!res.ok) throw new Error(`Server responded with ${res.status}`);
+          const data = await res.json();
+          return data.ads || data;
+        })();
 
-        filterStatus: document.getElementById("filterStatus"),
-        filterCountry: document.getElementById("filterCountry"),
-        filterType: document.getElementById("filterType"),
-        filterSort: document.getElementById("filterSort"),
-        filterCount: document.getElementById("filterCount"),
+      return (rawList || []).map(normalizeAd);
+    }
 
-        skeletonTable: document.getElementById("skeletonTable"),
-        skeletonBody: document.getElementById("skeletonBody"),
-        dataTable: document.getElementById("dataTable"),
-        tableBody: document.getElementById("tableBody"),
-        emptyState: document.getElementById("emptyState"),
-        errorState: document.getElementById("errorState"),
-        errorDesc: document.getElementById("errorDesc"),
-        retryBtn: document.getElementById("retryBtn"),
-
-        viewModal: document.getElementById("viewModal"),
-        modalAdId: document.getElementById("modalAdId"),
-        modalBody: document.getElementById("modalBody"),
-        closeViewModal: document.getElementById("closeViewModal"),
-        statusSelect: document.getElementById("statusSelect"),
-        saveStatusBtn: document.getElementById("saveStatusBtn"),
-        statusSaveNote: document.getElementById("statusSaveNote"),
-
-        deleteModal: document.getElementById("deleteModal"),
-        cancelDeleteBtn: document.getElementById("cancelDeleteBtn"),
-        confirmDeleteBtn: document.getElementById("confirmDeleteBtn")
-      };
-
-      /* ==========================================================================
-         4. HEADER — live date
-         ========================================================================== */
-      function renderCurrentDate() {
-        els.currentDate.textContent = new Date().toLocaleDateString(undefined, {
-          weekday: "short", year: "numeric", month: "short", day: "numeric"
-        });
+    async function fetchAdDetail(id) {
+      if (USE_MOCK_DATA) {
+        return allAds.find(a => a.adId === id) || null;
       }
-      renderCurrentDate();
+      const res = await fetch(`${ENDPOINTS.detail}?id=${encodeURIComponent(id)}`);
+      if (!res.ok) throw new Error(`Server responded with ${res.status}`);
+      const raw = await res.json();
+      return normalizeAd(raw);
+    }
 
-      /* ==========================================================================
-         5. MOCK DATA — used only while USE_MOCK_DATA is true, mirrors the shape
-         the real /admin/ads endpoint is expected to return. Remove alongside the
-         USE_MOCK_DATA flag once the backend is live.
-         ========================================================================== */
-      function mockFetchList() {
-        return new Promise(resolve => {
-          setTimeout(() => {
-            resolve([
-              {
-                adId: "AD-1042", subscriptionId: "SUB-88291", accessToken: "tok_9f3e...c2a1",
-                paymentId: "PAY-55210", submittedDate: "2026-07-01T10:22:00Z",
-                company: {
-                  name: "Nimbus Cloud", website: "https://nimbuscloud.dev", businessEmail: "team@nimbuscloud.dev",
-                  contactName: "Sara Lambert", country: "Germany", companySize: "11-50", industry: "Cloud hosting"
-                },
-                advertisement: {
-                  title: "Deploy in seconds with Nimbus", slogan: "Cloud that just works",
-                  destinationUrl: "https://nimbuscloud.dev/start", cta: "Start Free", type: "Homepage",
-                  description: "Nimbus Cloud gives frontend teams instant, zero-config deployments with a generous free tier."
-                },
-                targeting: { audience: "Frontend developers", countries: "Global", languages: ["HTML", "CSS", "JavaScript"], categories: ["Cloud", "Hosting", "Developer Tools"] },
-                campaign: { startDate: "2026-07-15", duration: "1 month", budgetNotes: "$500–800 range" },
-                media: { logo: null, banner: null, additional: [] },
-                status: "Pending"
-              },
-              {
-                adId: "AD-1041", subscriptionId: "SUB-88104", accessToken: "tok_1a2b...77f0",
-                paymentId: "PAY-55198", submittedDate: "2026-06-28T15:05:00Z",
-                company: {
-                  name: "Pixel Forge", website: "https://pixelforge.io", businessEmail: "hello@pixelforge.io",
-                  contactName: "Marco Diaz", country: "Spain", companySize: "1-10", industry: "UI component library"
-                },
-                advertisement: {
-                  title: "200+ ready-made UI components", slogan: "Ship interfaces faster",
-                  destinationUrl: "https://pixelforge.io/library", cta: "Learn More", type: "Sidebar",
-                  description: "A drop-in component library for React and vanilla JS with live customization."
-                },
-                targeting: { audience: "Indie hackers, startups", countries: "US, Canada, UK", languages: ["JavaScript", "CSS"], categories: ["Developer Tools", "APIs"] },
-                campaign: { startDate: "2026-07-05", duration: "2 weeks", budgetNotes: "" },
-                media: { logo: null, banner: null, additional: [] },
-                status: "Approved"
-              },
-              {
-                adId: "AD-1039", subscriptionId: "SUB-87950", accessToken: "tok_5c6d...31ee",
-                paymentId: "PAY-55160", submittedDate: "2026-06-20T09:40:00Z",
-                company: {
-                  name: "QuickAPI", website: "https://quickapi.dev", businessEmail: "contact@quickapi.dev",
-                  contactName: "Jenna Wu", country: "United States", companySize: "51-200", industry: "API infrastructure"
-                },
-                advertisement: {
-                  title: "REST APIs in one click", slogan: "", destinationUrl: "https://quickapi.dev",
-                  cta: "Try Now", type: "Banner",
-                  description: "Generate and host production-ready REST APIs from any dataset without writing backend code."
-                },
-                targeting: { audience: "Backend and full-stack developers", countries: "Global", languages: ["JavaScript"], categories: ["APIs", "SaaS"] },
-                campaign: { startDate: "2026-06-25", duration: "Ongoing", budgetNotes: "Flexible" },
-                media: { logo: null, banner: null, additional: [] },
-                status: "Rejected"
-              }
-            ]);
-          }, 700);
-        });
-      }
+    async function updateAdStatus(id, status) {
+      if (USE_MOCK_DATA) return mockUpdateStatus(id, status);
 
-      function mockUpdateStatus(id, status) {
-        return new Promise(resolve => setTimeout(() => {
-          const ad = allAds.find(a => a.adId === id);
-          if (ad) ad.status = status;
-          resolve({ success: true });
-        }, 500));
-      }
+      const res = await fetch(ENDPOINTS.status, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ adId: id, status })
+      });
+      if (!res.ok) throw new Error(`Server responded with ${res.status}`);
+      return res.json();
+    }
 
-      function mockDelete(id) {
-        return new Promise(resolve => setTimeout(() => {
-          allAds = allAds.filter(a => a.adId !== id);
-          resolve({ success: true });
-        }, 500));
-      }
+    async function deleteAd(id) {
+      if (USE_MOCK_DATA) return mockDelete(id);
 
-      /* ==========================================================================
-         6. API CALLS
-         ========================================================================== */
-      async function fetchAdsList() {
+      const res = await fetch(ENDPOINTS.del, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ adId: id })
+      });
+      if (!res.ok) throw new Error(`Server responded with ${res.status}`);
+      return res.json();
+    }
 
-        if (USE_MOCK_DATA) return mockFetchList();
+    /* ==========================================================================
+       8. LOAD + RENDER FLOW
+       ========================================================================== */
+    function showTableState(state) {
+      // state: "loading" | "data" | "empty" | "error"
+      els.skeletonTable.hidden = state !== "loading";
+      els.dataTable.hidden = state !== "data";
+      els.emptyState.hidden = state !== "empty";
+      els.errorState.hidden = state !== "error";
+    }
 
-        const res = await fetch(ENDPOINTS.list, {
-          headers: {
-            "Accept": "application/json"
-          }
-        });
-
-        if (!res.ok)
-          throw new Error(`Server responded with ${res.status}`);
-
-        const data = await res.json();
-
-        return (data.ads || []).map(ad => ({
-
-          adId: ad.ad_id,
-          subscriptionId: ad.payment_id,
-          accessToken: ad.access_token,
-          paymentId: ad.payment_id,
-          submittedDate: ad.created_at,
-
-          company: {
-            name: ad.company_name,
-            website: ad.website,
-            businessEmail: ad.business_email,
-            contactName: ad.contact_name,
-            country: ad.country,
-            companySize: ad.company_size,
-            industry: ad.industry
-          },
-
-          advertisement: {
-            title: ad.ad_title,
-            slogan: ad.slogan,
-            destinationUrl: ad.destination_url,
-            cta: ad.call_to_action,
-            type: ad.placement,
-            description: ad.description
-          },
-
-          targeting: {
-            audience: ad.target_audience,
-            countries: ad.countries,
-            languages: JSON.parse(ad.programming_languages || "[]"),
-            categories: JSON.parse(ad.categories || "[]")
-          },
-
-          campaign: {
-            startDate: ad.preferred_start_date,
-            duration: ad.duration,
-            budgetNotes: ad.budget_notes
-          },
-
-          media: {
-            logo: ad.logo_url,
-            banner: ad.banner_url,
-            additional: ad.media_url ? [ad.media_url] : []
-          },
-
-          status:
-            ad.status === "pending" ? "Pending" :
-              ad.status === "approved" ? "Approved" :
-                ad.status === "rejected" ? "Rejected" :
-                  "Pending"
-
-        }));
-      }
-      async function updateAdStatus(id, status) {
-        if (USE_MOCK_DATA) return mockUpdateStatus(id, status);
-
-        // TODO: replace with real endpoint call once /admin/status is deployed.
-        const res = await fetch(ENDPOINTS.status, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ adId: id, status })
-        });
-        if (!res.ok) throw new Error(`Server responded with ${res.status}`);
-        return res.json();
-      }
-
-      async function deleteAd(id) {
-        if (USE_MOCK_DATA) return mockDelete(id);
-
-        // TODO: replace with real endpoint call once /admin/delete is deployed.
-        const res = await fetch(ENDPOINTS.del, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ adId: id })
-        });
-        if (!res.ok) throw new Error(`Server responded with ${res.status}`);
-        return res.json();
-      }
-
-      /* ==========================================================================
-         7. LOAD + RENDER FLOW
-         ========================================================================== */
-      function showTableState(state) {
-        // state: "loading" | "data" | "empty" | "error"
-        els.skeletonTable.hidden = state !== "loading";
-        els.dataTable.hidden = state !== "data";
-        els.emptyState.hidden = state !== "empty";
-        els.errorState.hidden = state !== "error";
-      }
-
-      function renderSkeletonRows() {
-        const cols = 11;
-        const rows = 6;
-        let html = "";
-        for (let r = 0; r < rows; r++) {
-          html += "<tr class='skeleton-row'>";
-          for (let c = 0; c < cols; c++) {
-            const width = c === cols - 1 ? "90px" : `${60 + Math.random() * 40}%`;
-            html += `<td><div class="skeleton-bar" style="width:${width}"></div></td>`;
-          }
-          html += "</tr>";
+    function renderSkeletonRows() {
+      const cols = 11;
+      const rows = 6;
+      let html = "";
+      for (let r = 0; r < rows; r++) {
+        html += "<tr class='skeleton-row'>";
+        for (let c = 0; c < cols; c++) {
+          const width = c === cols - 1 ? "90px" : `${60 + Math.random() * 40}%`;
+          html += `<td><div class="skeleton-bar" style="width:${width}"></div></td>`;
         }
-        els.skeletonBody.innerHTML = html;
+        html += "</tr>";
       }
+      els.skeletonBody.innerHTML = html;
+    }
 
-      async function loadAds() {
-        showTableState("loading");
-        renderSkeletonRows();
+    async function loadAds() {
+      showTableState("loading");
+      renderSkeletonRows();
 
-        try {
-          allAds = await fetchAdsList();
-          populateCountryFilter();
-          renderStats();
-          applyFiltersAndRender();
-        } catch (err) {
-          console.error("Failed to load advertisements:", err);
-          els.errorDesc.textContent = err.message || "Something went wrong while fetching data from the server.";
-          showTableState("error");
+      try {
+        allAds = await fetchAdsList();
+        populateCountryFilter();
+        renderStats();
+        applyFiltersAndRender();
+      } catch (err) {
+        console.error("Failed to load advertisements:", err);
+        els.errorDesc.textContent = err.message || "Something went wrong while fetching data from the server.";
+        showTableState("error");
+      }
+    }
+
+    function renderStats() {
+      els.statTotal.textContent = allAds.length;
+      els.statPending.textContent = allAds.filter(a => a.status === "Pending").length;
+      els.statApproved.textContent = allAds.filter(a => a.status === "Approved").length;
+      els.statRejected.textContent = allAds.filter(a => a.status === "Rejected").length;
+    }
+
+    function populateCountryFilter() {
+      const countries = Array.from(new Set(allAds.map(a => a.company.country).filter(Boolean))).sort();
+      const current = els.filterCountry.value;
+      els.filterCountry.innerHTML = `<option value="">All countries</option>` +
+        countries.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join("");
+      els.filterCountry.value = current;
+    }
+
+    /* ==========================================================================
+       9. FILTERING + SEARCH + SORT
+       ========================================================================== */
+    function getFilteredAds() {
+      const query = els.searchInput.value.trim().toLowerCase();
+      const statusFilter = els.filterStatus.value;
+      const countryFilter = els.filterCountry.value;
+      const typeFilter = els.filterType.value;
+      const sortOrder = els.filterSort.value;
+
+      let result = allAds.filter(ad => {
+        if (statusFilter && ad.status !== statusFilter) return false;
+        if (countryFilter && ad.company.country !== countryFilter) return false;
+        if (typeFilter && ad.advertisement.type !== typeFilter) return false;
+
+        if (query) {
+          const haystack = [
+            ad.adId, ad.subscriptionId, ad.company.name,
+            ad.company.contactName, ad.company.businessEmail
+          ].join(" ").toLowerCase();
+          if (!haystack.includes(query)) return false;
         }
+        return true;
+      });
+
+      result.sort((a, b) => {
+        const diff = new Date(a.submittedDate) - new Date(b.submittedDate);
+        return sortOrder === "oldest" ? diff : -diff;
+      });
+
+      return result;
+    }
+
+    function applyFiltersAndRender() {
+      if (allAds.length === 0) {
+        showTableState("empty");
+        els.filterCount.textContent = "";
+        return;
       }
 
-      function renderStats() {
-        els.statTotal.textContent = allAds.length;
-        els.statPending.textContent = allAds.filter(a => a.status === "Pending").length;
-        els.statApproved.textContent = allAds.filter(a => a.status === "Approved").length;
-        els.statRejected.textContent = allAds.filter(a => a.status === "Rejected").length;
+      const filtered = getFilteredAds();
+      els.filterCount.textContent = `${filtered.length} of ${allAds.length} advertisements`;
+
+      if (filtered.length === 0) {
+        showTableState("empty");
+        return;
       }
 
-      function populateCountryFilter() {
-        const countries = Array.from(new Set(allAds.map(a => a.country).filter(Boolean))).sort();
-        const current = els.filterCountry.value;
-        els.filterCountry.innerHTML = `<option value="">All countries</option>` +
-          countries.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join("");
-        els.filterCountry.value = current;
-      }
+      showTableState("data");
+      renderTableRows(filtered);
+    }
 
-      /* ==========================================================================
-         8. FILTERING + SEARCH + SORT
-         ========================================================================== */
-      function getFilteredAds() {
-        const query = els.searchInput.value.trim().toLowerCase();
-        const statusFilter = els.filterStatus.value;
-        const countryFilter = els.filterCountry.value;
-        const typeFilter = els.filterType.value;
-        const sortOrder = els.filterSort.value;
+    [els.searchInput, els.filterStatus, els.filterCountry, els.filterType, els.filterSort]
+      .forEach(el => el.addEventListener("input", applyFiltersAndRender));
 
-        let result = allAds.filter(ad => {
-          if (statusFilter && ad.status !== statusFilter) return false;
-          if (countryFilter && ad.company.country !== countryFilter) return false;
-          if (typeFilter && ad.advertisement.type !== typeFilter) return false;
+    /* ==========================================================================
+       10. TABLE RENDERING
+       ========================================================================== */
+    function statusBadgeClass(status) {
+      return { Pending: "is-pending", Approved: "is-approved", Rejected: "is-rejected" }[status] || "is-pending";
+    }
 
-          if (query) {
-            const haystack = [
-              ad.adId, ad.subscriptionId, ad.company.name,
-              ad.company.contactName, ad.company.businessEmail
-            ].join(" ").toLowerCase();
-            if (!haystack.includes(query)) return false;
-          }
-          return true;
-        });
+    function formatDate(value) {
+      if (!value) return "—";
+      const d = new Date(value);
+      if (isNaN(d.getTime())) return value;
+      return d.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+    }
 
-        result.sort((a, b) => {
-          const diff = new Date(a.submittedDate) - new Date(b.submittedDate);
-          return sortOrder === "oldest" ? diff : -diff;
-        });
+    function escapeHtml(str) {
+      const div = document.createElement("div");
+      div.textContent = str == null ? "" : String(str);
+      return div.innerHTML;
+    }
 
-        return result;
-      }
+    function shortenUrl(url) {
+      if (!url) return "—";
+      return url.replace(/^https?:\/\//, "").replace(/\/$/, "");
+    }
 
-      function applyFiltersAndRender() {
-        if (allAds.length === 0) {
-          showTableState("empty");
-          els.filterCount.textContent = "";
-          return;
-        }
+    function renderTableRows(ads) {
 
-        const filtered = getFilteredAds();
-        els.filterCount.textContent = `${filtered.length} of ${allAds.length} advertisements`;
-
-        if (filtered.length === 0) {
-          showTableState("empty");
-          return;
-        }
-
-        showTableState("data");
-        renderTableRows(filtered);
-      }
-
-      [els.searchInput, els.filterStatus, els.filterCountry, els.filterType, els.filterSort]
-        .forEach(el => el.addEventListener("input", applyFiltersAndRender));
-
-      /* ==========================================================================
-         9. TABLE RENDERING
-         ========================================================================== */
-      function statusBadgeClass(status) {
-        return { Pending: "is-pending", Approved: "is-approved", Rejected: "is-rejected" }[status] || "is-pending";
-      }
-
-      function formatDate(value) {
-        if (!value) return "—";
-        const d = new Date(value);
-        if (isNaN(d.getTime())) return value;
-        return d.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
-      }
-
-      function escapeHtml(str) {
-        const div = document.createElement("div");
-        div.textContent = str == null ? "" : String(str);
-        return div.innerHTML;
-      }
-
-      function renderTableRows(ads) {
-
-        els.tableBody.innerHTML = ads.map(ad => `
+      els.tableBody.innerHTML = ads.map(ad => `
 
     <tr>
 
-      <td class="cell-mono">${escapeHtml(ad.ad_id)}</td>
+      <td class="cell-mono">${escapeHtml(ad.adId)}</td>
 
-      <td class="cell-mono">${escapeHtml(ad.payment_id)}</td>
+      <td class="cell-mono">${escapeHtml(ad.paymentId)}</td>
 
-      <td>${escapeHtml(ad.company_name)}</td>
+      <td>${escapeHtml(ad.company.name)}</td>
 
-      <td>${escapeHtml(ad.contact_name)}</td>
+      <td>${escapeHtml(ad.company.contactName)}</td>
 
       <td>
         <a class="cell-link"
-           href="mailto:${escapeHtml(ad.business_email)}">
-           ${escapeHtml(ad.business_email)}
+           href="mailto:${escapeHtml(ad.company.businessEmail)}">
+           ${escapeHtml(ad.company.businessEmail)}
         </a>
       </td>
 
       <td>
         <a class="cell-link"
-           href="${escapeHtml(ad.website)}"
+           href="${escapeHtml(ad.company.website)}"
            target="_blank">
-           ${escapeHtml(shortenUrl(ad.website))}
+           ${escapeHtml(shortenUrl(ad.company.website))}
         </a>
       </td>
 
-      <td>${escapeHtml(ad.country) || "—"}</td>
+      <td>${escapeHtml(ad.company.country) || "—"}</td>
 
-      <td>${escapeHtml(ad.placement) || "—"}</td>
+      <td>${escapeHtml(ad.advertisement.type) || "—"}</td>
 
-      <td>${formatDate(ad.created_at)}</td>
+      <td>${formatDate(ad.submittedDate)}</td>
 
       <td>
         <span class="badge ${statusBadgeClass(ad.status)}">
@@ -1698,28 +1695,28 @@
           <button
             class="row-action-btn is-view"
             data-action="view"
-            data-id="${escapeHtml(ad.ad_id)}">
+            data-id="${escapeHtml(ad.adId)}">
             <i class='bx bx-show'></i>
           </button>
 
           <button
             class="row-action-btn is-approve"
             data-action="approve"
-            data-id="${escapeHtml(ad.ad_id)}">
+            data-id="${escapeHtml(ad.adId)}">
             <i class='bx bx-check'></i>
           </button>
 
           <button
             class="row-action-btn is-reject"
             data-action="reject"
-            data-id="${escapeHtml(ad.ad_id)}">
+            data-id="${escapeHtml(ad.adId)}">
             <i class='bx bx-x'></i>
           </button>
 
           <button
             class="row-action-btn is-delete"
             data-action="delete"
-            data-id="${escapeHtml(ad.ad_id)}">
+            data-id="${escapeHtml(ad.adId)}">
             <i class='bx bx-trash'></i>
           </button>
 
@@ -1731,86 +1728,74 @@
 
   `).join("");
 
+    }
+
+    /* Delegated row action clicks */
+    els.tableBody.addEventListener("click", (e) => {
+      const btn = e.target.closest(".row-action-btn");
+      if (!btn) return;
+      const id = btn.dataset.id;
+      const action = btn.dataset.action;
+
+      if (action === "view") openViewModal(id);
+      if (action === "approve") quickSetStatus(id, "Approved");
+      if (action === "reject") quickSetStatus(id, "Rejected");
+      if (action === "delete") openDeleteModal(id);
+    });
+
+    async function quickSetStatus(id, status) {
+      try {
+        await updateAdStatus(id, status);
+        const ad = allAds.find(a => a.adId === id);
+        if (ad) ad.status = status;
+        renderStats();
+        applyFiltersAndRender();
+      } catch (err) {
+        console.error("Failed to update status:", err);
+        alert("Couldn't update the status. Please try again.");
       }
-      function shortenUrl(url) {
-        if (!url) return "—";
-        return url.replace(/^https?:\/\//, "").replace(/\/$/, "");
-      }
+    }
 
-      /* Delegated row action clicks */
-      els.tableBody.addEventListener("click", (e) => {
-        const btn = e.target.closest(".row-action-btn");
-        if (!btn) return;
-        const id = btn.dataset.id;
-        const action = btn.dataset.action;
+    /* ==========================================================================
+       11. VIEW MODAL
+       ========================================================================== */
+    async function openViewModal(id) {
+      currentAdId = id;
 
-        if (action === "view") openViewModal(id);
-        if (action === "approve") quickSetStatus(id, "Approved");
-        if (action === "reject") quickSetStatus(id, "Rejected");
-        if (action === "delete") openDeleteModal(id);
-      });
-
-      async function quickSetStatus(id, status) {
-        try {
-          await updateAdStatus(id, status);
-          const ad = allAds.find(a => a.adId === id);
-          if (ad) ad.status = status;
-          renderStats();
-          applyFiltersAndRender();
-        } catch (err) {
-          console.error("Failed to update status:", err);
-          alert("Couldn't update the status. Please try again.");
-        }
-      }
-
-      /* ==========================================================================
-         10. VIEW MODAL
-         ========================================================================== */
-      async function openViewModal(id) {
-        currentAdId = id;
-
-        if (USE_MOCK_DATA) {
-          // Detail is already in memory in mock mode.
-          const ad = allAds.find(a => a.adId === id);
-          renderModalContent(ad);
-        } else {
-          // TODO: replace with real endpoint call once /admin/ad is deployed.
-          try {
-            const res = await fetch(`${ENDPOINTS.detail}?id=${encodeURIComponent(id)}`);
-            if (!res.ok) throw new Error(`Server responded with ${res.status}`);
-            const ad = await res.json();
-            renderModalContent(ad);
-          } catch (err) {
-            console.error("Failed to load ad detail:", err);
-            alert("Couldn't load the full submission. Please try again.");
-            return;
-          }
-        }
-
-        els.viewModal.hidden = false;
-        document.body.style.overflow = "hidden";
+      try {
+        const ad = await fetchAdDetail(id);
+        if (!ad) throw new Error("Advertisement not found");
+        renderModalContent(ad);
+      } catch (err) {
+        console.error("Failed to load ad detail:", err);
+        alert("Couldn't load the full submission. Please try again.");
+        return;
       }
 
-      function renderModalContent(ad) {
-        els.modalAdId.textContent = `${ad.adId} · ${ad.subscriptionId}`;
-        els.statusSelect.value = ad.status;
-        els.statusSaveNote.textContent = "";
-        els.statusSaveNote.className = "status-save-note";
+      els.viewModal.hidden = false;
+      document.body.style.overflow = "hidden";
+    }
 
-        const media = ad.media || {};
-        const mediaTile = (label, url, icon) => `
+    function renderModalContent(ad) {
+      els.modalAdId.textContent = `${ad.adId} · ${ad.subscriptionId}`;
+      els.statusSelect.value = ad.status;
+      els.statusSaveNote.textContent = "";
+      els.statusSaveNote.className = "status-save-note";
+
+      const media = ad.media || {};
+      const mediaTile = (label, url, icon) => `
     <div class="media-tile">
       ${url ? `<img src="${escapeHtml(url)}" alt="${escapeHtml(label)}">` : `<div class="media-tile-empty"><i class='bx ${icon}'></i></div>`}
       <div class="media-tile-label">${label}</div>
     </div>`;
 
-        const tagList = (items) => (items && items.length)
-          ? `<div class="tag-list">${items.map(t => `<span class="tag-pill">${escapeHtml(t)}</span>`).join("")}</div>`
-          : `<span class="detail-value is-empty">None specified</span>`;
+      const tagList = (items) => (items && items.length)
+        ? `<div class="tag-list">${items.map(t => `<span class="tag-pill">${escapeHtml(t)}</span>`).join("")}</div>`
+        : `<span class="detail-value is-empty">None specified</span>`;
 
-        const val = (v) => v ? escapeHtml(v) : `<span class="detail-value is-empty">Not provided</span>`;
+      const val = (v) => v ? escapeHtml(v) : `<span class="detail-value is-empty">Not provided</span>`;
 
-        els.modalBody.innerHTML = `
+      els.modalBody.innerHTML = `
     <div class="detail-section">
       <div class="detail-section-title"><i class='bx bx-user-circle'></i> Customer information</div>
       <div class="detail-grid">
@@ -1866,113 +1851,113 @@
         ${mediaTile("Logo", media.logo, "bx-image")}
         ${mediaTile("Banner", media.banner, "bx-panorama")}
         ${(media.additional && media.additional.length)
-            ? media.additional.map((url, i) => mediaTile(`Additional ${i + 1}`, url, "bx-folder-open")).join("")
-            : mediaTile("Additional media", null, "bx-folder-open")}
+          ? media.additional.map((url, i) => mediaTile(`Additional ${i + 1}`, url, "bx-folder-open")).join("")
+          : mediaTile("Additional media", null, "bx-folder-open")}
       </div>
     </div>
   `;
+    }
+
+    els.closeViewModal.addEventListener("click", closeViewModal);
+    els.viewModal.addEventListener("click", (e) => { if (e.target === els.viewModal) closeViewModal(); });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closeViewModal();
+        closeDeleteModal();
       }
+    });
 
-      els.closeViewModal.addEventListener("click", closeViewModal);
-      els.viewModal.addEventListener("click", (e) => { if (e.target === els.viewModal) closeViewModal(); });
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") {
-          closeViewModal();
-          closeDeleteModal();
-        }
-      });
+    function closeViewModal() {
+      els.viewModal.hidden = true;
+      document.body.style.overflow = "";
+      currentAdId = null;
+    }
 
-      function closeViewModal() {
-        els.viewModal.hidden = true;
-        document.body.style.overflow = "";
-        currentAdId = null;
+    els.saveStatusBtn.addEventListener("click", async () => {
+      if (!currentAdId) return;
+      const newStatus = els.statusSelect.value;
+
+      els.saveStatusBtn.disabled = true;
+      const originalLabel = els.saveStatusBtn.innerHTML;
+      els.saveStatusBtn.innerHTML = `<span class="spinner"></span> Saving...`;
+
+      try {
+        await updateAdStatus(currentAdId, newStatus);
+        const ad = allAds.find(a => a.adId === currentAdId);
+        if (ad) ad.status = newStatus;
+        renderStats();
+        applyFiltersAndRender();
+        els.statusSaveNote.textContent = "Status updated";
+        els.statusSaveNote.className = "status-save-note is-success";
+      } catch (err) {
+        console.error("Failed to save status:", err);
+        els.statusSaveNote.textContent = "Failed to save";
+        els.statusSaveNote.className = "status-save-note is-error";
+      } finally {
+        els.saveStatusBtn.disabled = false;
+        els.saveStatusBtn.innerHTML = originalLabel;
       }
+    });
 
-      els.saveStatusBtn.addEventListener("click", async () => {
-        if (!currentAdId) return;
-        const newStatus = els.statusSelect.value;
+    /* ==========================================================================
+       12. DELETE CONFIRMATION MODAL
+       ========================================================================== */
+    function openDeleteModal(id) {
+      pendingDeleteId = id;
+      els.deleteModal.hidden = false;
+      document.body.style.overflow = "hidden";
+    }
+    function closeDeleteModal() {
+      els.deleteModal.hidden = true;
+      document.body.style.overflow = "";
+      pendingDeleteId = null;
+    }
 
-        els.saveStatusBtn.disabled = true;
-        const originalLabel = els.saveStatusBtn.innerHTML;
-        els.saveStatusBtn.innerHTML = `<span class="spinner"></span> Saving...`;
+    els.cancelDeleteBtn.addEventListener("click", closeDeleteModal);
+    els.deleteModal.addEventListener("click", (e) => { if (e.target === els.deleteModal) closeDeleteModal(); });
 
-        try {
-          await updateAdStatus(currentAdId, newStatus);
-          const ad = allAds.find(a => a.adId === currentAdId);
-          if (ad) ad.status = newStatus;
-          renderStats();
-          applyFiltersAndRender();
-          els.statusSaveNote.textContent = "Status updated";
-          els.statusSaveNote.className = "status-save-note is-success";
-        } catch (err) {
-          console.error("Failed to save status:", err);
-          els.statusSaveNote.textContent = "Failed to save";
-          els.statusSaveNote.className = "status-save-note is-error";
-        } finally {
-          els.saveStatusBtn.disabled = false;
-          els.saveStatusBtn.innerHTML = originalLabel;
-        }
-      });
+    els.confirmDeleteBtn.addEventListener("click", async () => {
+      if (!pendingDeleteId) return;
 
-      /* ==========================================================================
-         11. DELETE CONFIRMATION MODAL
-         ========================================================================== */
-      function openDeleteModal(id) {
-        pendingDeleteId = id;
-        els.deleteModal.hidden = false;
-        document.body.style.overflow = "hidden";
+      els.confirmDeleteBtn.disabled = true;
+      const originalLabel = els.confirmDeleteBtn.innerHTML;
+      els.confirmDeleteBtn.innerHTML = `<span class="spinner"></span> Deleting...`;
+
+      try {
+        await deleteAd(pendingDeleteId);
+        allAds = allAds.filter(a => a.adId !== pendingDeleteId);
+        renderStats();
+        populateCountryFilter();
+        applyFiltersAndRender();
+        closeDeleteModal();
+        if (!els.viewModal.hidden && currentAdId === pendingDeleteId) closeViewModal();
+      } catch (err) {
+        console.error("Failed to delete advertisement:", err);
+        alert("Couldn't delete this advertisement. Please try again.");
+      } finally {
+        els.confirmDeleteBtn.disabled = false;
+        els.confirmDeleteBtn.innerHTML = originalLabel;
       }
-      function closeDeleteModal() {
-        els.deleteModal.hidden = true;
-        document.body.style.overflow = "";
-        pendingDeleteId = null;
-      }
+    });
 
-      els.cancelDeleteBtn.addEventListener("click", closeDeleteModal);
-      els.deleteModal.addEventListener("click", (e) => { if (e.target === els.deleteModal) closeDeleteModal(); });
+    /* ==========================================================================
+       13. REFRESH + RETRY
+       ========================================================================== */
+    els.refreshBtn.addEventListener("click", async () => {
+      els.refreshBtn.classList.add("is-spinning");
+      await loadAds();
+      els.refreshBtn.classList.remove("is-spinning");
+    });
 
-      els.confirmDeleteBtn.addEventListener("click", async () => {
-        if (!pendingDeleteId) return;
+    els.retryBtn.addEventListener("click", loadAds);
 
-        els.confirmDeleteBtn.disabled = true;
-        const originalLabel = els.confirmDeleteBtn.innerHTML;
-        els.confirmDeleteBtn.innerHTML = `<span class="spinner"></span> Deleting...`;
+    /* ==========================================================================
+       14. INIT
+       ========================================================================== */
+    loadAds();
 
-        try {
-          await deleteAd(pendingDeleteId);
-          allAds = allAds.filter(a => a.adId !== pendingDeleteId);
-          renderStats();
-          populateCountryFilter();
-          applyFiltersAndRender();
-          closeDeleteModal();
-          if (!els.viewModal.hidden && currentAdId === pendingDeleteId) closeViewModal();
-        } catch (err) {
-          console.error("Failed to delete advertisement:", err);
-          alert("Couldn't delete this advertisement. Please try again.");
-        } finally {
-          els.confirmDeleteBtn.disabled = false;
-          els.confirmDeleteBtn.innerHTML = originalLabel;
-        }
-      });
-
-      /* ==========================================================================
-         12. REFRESH + RETRY
-         ========================================================================== */
-      els.refreshBtn.addEventListener("click", async () => {
-        els.refreshBtn.classList.add("is-spinning");
-        await loadAds();
-        els.refreshBtn.classList.remove("is-spinning");
-      });
-
-      els.retryBtn.addEventListener("click", loadAds);
-
-      /* ==========================================================================
-         13. INIT
-         ========================================================================== */
-      loadAds();
-
-    })();
-  </script>
+  })();
+</script>
 
 </body>
 
