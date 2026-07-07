@@ -1381,8 +1381,13 @@
           targeting: {
             audience: targeting.audience || raw.audience || "",
             countries: targeting.countries || raw.target_countries || "",
-            languages: targeting.languages || raw.languages || [],
-            categories: targeting.categories || raw.categories || []
+            languages: Array.isArray(targeting.languages)
+              ? targeting.languages
+              : JSON.parse(raw.programming_languages || "[]"),
+
+            categories: Array.isArray(targeting.categories)
+              ? targeting.categories
+              : JSON.parse(raw.categories || "[]"),
           },
 
           campaign: {
@@ -1476,15 +1481,6 @@
         return (rawList || []).map(normalizeAd);
       }
 
-      async function fetchAdDetail(id) {
-        if (USE_MOCK_DATA) {
-          return allAds.find(a => a.adId === id) || null;
-        }
-        const res = await fetch(`${ENDPOINTS.detail}?id=${encodeURIComponent(id)}`);
-        if (!res.ok) throw new Error(`Server responded with ${res.status}`);
-        const raw = await res.json();
-        return normalizeAd(raw);
-      }
 
       async function updateAdStatus(id, status) {
         if (USE_MOCK_DATA) return mockUpdateStatus(id, status);
@@ -1763,24 +1759,19 @@
 
         currentAdId = id;
 
-        try {
+        const ad = allAds.find(a => a.adId === id);
 
-          const ad = await fetchAdDetail(id);
-
-          renderModalContent(ad);
-
-        } catch (err) {
-
-          console.error("Failed to load ad detail:", err);
-          alert("Couldn't load the full submission.");
-
+        if (!ad) {
+          alert("Couldn't find this advertisement.");
+          currentAdId = null;
           return;
         }
+
+        renderModalContent(ad);
 
         els.viewModal.hidden = false;
         document.body.style.overflow = "hidden";
       }
-
       function renderModalContent(ad) {
         els.modalAdId.textContent = `${ad.adId} · ${ad.subscriptionId}`;
         els.statusSelect.value = ad.status;
@@ -1794,10 +1785,22 @@
       <div class="media-tile-label">${label}</div>
     </div>`;
 
-        const tagList = (items) => (items && items.length)
-          ? `<div class="tag-list">${items.map(t => `<span class="tag-pill">${escapeHtml(t)}</span>`).join("")}</div>`
-          : `<span class="detail-value is-empty">None specified</span>`;
+        const tagList = (items) => {
 
+          if (!Array.isArray(items))
+            items = [];
+
+          if (items.length === 0)
+            return `<span class="detail-value is-empty">None specified</span>`;
+
+          return `
+        <div class="tag-list">
+            ${items.map(item =>
+            `<span class="tag-pill">${escapeHtml(item)}</span>`
+          ).join("")}
+        </div>
+    `;
+        };
         const val = (v) => v ? escapeHtml(v) : `<span class="detail-value is-empty">Not provided</span>`;
 
         els.modalBody.innerHTML = `
