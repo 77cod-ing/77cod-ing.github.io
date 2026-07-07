@@ -1592,30 +1592,87 @@
       }
 
       function renderTableRows(ads) {
-        els.tableBody.innerHTML = ads.map(ad => `
-    <tr>
-      <td class="cell-mono">${escapeHtml(ad.adId)}</td>
-      <td class="cell-mono">${escapeHtml(ad.subscriptionId)}</td>
-      <td>${escapeHtml(ad.company.name)}</td>
-      <td>${escapeHtml(ad.company.contactName)}</td>
-      <td><a class="cell-link" href="mailto:${escapeHtml(ad.company.businessEmail)}">${escapeHtml(ad.company.businessEmail)}</a></td>
-      <td><a class="cell-link" href="${escapeHtml(ad.company.website)}" target="_blank" rel="noopener">${escapeHtml(shortenUrl(ad.company.website))}</a></td>
-      <td>${escapeHtml(ad.company.country) || "—"}</td>
-      <td>${escapeHtml(ad.advertisement.type)}</td>
-      <td>${formatDate(ad.submittedDate)}</td>
-      <td><span class="badge ${statusBadgeClass(ad.status)}">${escapeHtml(ad.status)}</span></td>
-      <td>
-        <div class="row-actions">
-          <button class="row-action-btn is-view" data-action="view" data-id="${escapeHtml(ad.adId)}" title="View" aria-label="View"><i class='bx bx-show'></i></button>
-          <button class="row-action-btn is-approve" data-action="approve" data-id="${escapeHtml(ad.adId)}" title="Approve" aria-label="Approve"><i class='bx bx-check'></i></button>
-          <button class="row-action-btn is-reject" data-action="reject" data-id="${escapeHtml(ad.adId)}" title="Reject" aria-label="Reject"><i class='bx bx-x'></i></button>
-          <button class="row-action-btn is-delete" data-action="delete" data-id="${escapeHtml(ad.adId)}" title="Delete" aria-label="Delete"><i class='bx bx-trash'></i></button>
-        </div>
-      </td>
-    </tr>
-  `).join("");
-      }
 
+        els.tableBody.innerHTML = ads.map(ad => `
+
+    <tr>
+
+      <td class="cell-mono">${escapeHtml(ad.ad_id)}</td>
+
+      <td class="cell-mono">${escapeHtml(ad.payment_id)}</td>
+
+      <td>${escapeHtml(ad.company_name)}</td>
+
+      <td>${escapeHtml(ad.contact_name)}</td>
+
+      <td>
+        <a class="cell-link"
+           href="mailto:${escapeHtml(ad.business_email)}">
+           ${escapeHtml(ad.business_email)}
+        </a>
+      </td>
+
+      <td>
+        <a class="cell-link"
+           href="${escapeHtml(ad.website)}"
+           target="_blank">
+           ${escapeHtml(shortenUrl(ad.website))}
+        </a>
+      </td>
+
+      <td>${escapeHtml(ad.country) || "—"}</td>
+
+      <td>${escapeHtml(ad.placement) || "—"}</td>
+
+      <td>${formatDate(ad.created_at)}</td>
+
+      <td>
+        <span class="badge ${statusBadgeClass(ad.status)}">
+          ${escapeHtml(ad.status)}
+        </span>
+      </td>
+
+      <td>
+
+        <div class="row-actions">
+
+          <button
+            class="row-action-btn is-view"
+            data-action="view"
+            data-id="${escapeHtml(ad.ad_id)}">
+            <i class='bx bx-show'></i>
+          </button>
+
+          <button
+            class="row-action-btn is-approve"
+            data-action="approve"
+            data-id="${escapeHtml(ad.ad_id)}">
+            <i class='bx bx-check'></i>
+          </button>
+
+          <button
+            class="row-action-btn is-reject"
+            data-action="reject"
+            data-id="${escapeHtml(ad.ad_id)}">
+            <i class='bx bx-x'></i>
+          </button>
+
+          <button
+            class="row-action-btn is-delete"
+            data-action="delete"
+            data-id="${escapeHtml(ad.ad_id)}">
+            <i class='bx bx-trash'></i>
+          </button>
+
+        </div>
+
+      </td>
+
+    </tr>
+
+  `).join("");
+
+      }
       function shortenUrl(url) {
         if (!url) return "—";
         return url.replace(/^https?:\/\//, "").replace(/\/$/, "");
