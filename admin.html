@@ -1763,9 +1763,60 @@
       currentAdId = id;
 
       try {
-        const ad = await fetchAdDetail(id);
-        if (!ad) throw new Error("Advertisement not found");
-        renderModalContent(ad);
+        const ad = await res.json();
+
+// تحويل بيانات قاعدة البيانات إلى الشكل الذي يحتاجه الموقع
+ad.company = {
+    name: ad.company_name,
+    website: ad.website,
+    businessEmail: ad.business_email,
+    contactName: ad.contact_name,
+    country: ad.country,
+    companySize: ad.company_size,
+    industry: ad.industry
+};
+
+ad.advertisement = {
+    title: ad.ad_title,
+    slogan: ad.slogan,
+    destinationUrl: ad.destination_url,
+    cta: ad.call_to_action,
+    type: ad.placement,
+    description: ad.description
+};
+
+ad.targeting = {
+    audience: ad.target_audience,
+    countries: ad.countries,
+    languages: JSON.parse(ad.programming_languages || "[]"),
+    categories: JSON.parse(ad.categories || "[]")
+};
+
+ad.campaign = {
+    startDate: ad.preferred_start_date,
+    duration: ad.duration,
+    budgetNotes: ad.budget_notes
+};
+
+ad.media = {
+    logo: ad.logo_url,
+    banner: ad.banner_url,
+    additional: ad.media_url ? [ad.media_url] : []
+};
+
+ad.adId = ad.ad_id;
+ad.subscriptionId = ad.payment_id;
+ad.accessToken = ad.access_token;
+ad.paymentId = ad.payment_id;
+ad.submittedDate = ad.created_at;
+
+ad.status =
+    ad.status === "pending" ? "Pending" :
+    ad.status === "approved" ? "Approved" :
+    ad.status === "rejected" ? "Rejected" :
+    "Pending";
+
+renderModalContent(ad);
       } catch (err) {
         console.error("Failed to load ad detail:", err);
         alert("Couldn't load the full submission. Please try again.");
