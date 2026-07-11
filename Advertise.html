@@ -1698,32 +1698,21 @@
                 form.append("image", file);
 
                 const response = await fetch(
-
                     `${IMGBB_URL}?key=${IMGBB_API_KEY}`,
-
                     {
                         method: "POST",
                         body: form
                     }
-
                 );
 
-                if (!response.ok) {
-
-                    throw new Error(
-                        "Failed uploading " + file.name
-                    );
-
-                }
+                console.log("HTTP Status:", response.status);
 
                 const result = await response.json();
 
+                console.log("ImgBB Response:", result);
+
                 if (!result.success) {
-
-                    throw new Error(
-                        result.error?.message || "ImgBB error"
-                    );
-
+                    throw new Error(result.error?.message || "ImgBB upload failed");
                 }
 
                 return result.data.url;
@@ -1748,10 +1737,20 @@
                 document.querySelector("#submitBtn i.bx-send").style.display = "none";
 
                 const formData = collectFormData();
-                const logoUrl = await uploadToImgBB(formData.files.logo);
 
-                console.log(logoUrl);
-                console.log(formData);
+                try {
+
+                    const logoUrl = await uploadToImgBB(formData.files.logo);
+
+                    console.log("Logo URL:", logoUrl);
+                    console.log(formData);
+
+                } catch (err) {
+
+                    console.error("UPLOAD ERROR:", err);
+                    return;
+
+                }
                 try {
                     const res = await fetch(SUBMIT_URL, {
                         method: "POST",
