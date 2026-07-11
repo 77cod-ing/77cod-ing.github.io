@@ -1741,6 +1741,7 @@
                 try {
 
                     const logoUrl = await uploadToImgBB(formData.files.logo);
+                    formData.logo_url = logoUrl;
 
                     console.log("Logo URL:", logoUrl);
                     console.log(formData);
