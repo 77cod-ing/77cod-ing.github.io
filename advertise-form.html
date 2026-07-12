@@ -1742,6 +1742,13 @@
 
                     const logoUrl = await uploadToImgBB(formData.files.logo);
                     formData.logo_url = logoUrl;
+                    let bannerUrl = null;
+
+                    if (formData.files.banner) {
+                    bannerUrl = await uploadToImgBB(formData.files.banner);
+                    }
+
+                    formData.banner_url = bannerUrl;
 
                     console.log("Logo URL:", logoUrl);
                     console.log(formData);
