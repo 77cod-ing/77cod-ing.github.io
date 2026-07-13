@@ -1261,6 +1261,13 @@
   </div>
 
   <script>
+    const ADMIN_TOKEN = "77cod-ing-admin";
+
+      const savedToken = localStorage.getItem("admin_token");
+
+      if (savedToken !== ADMIN_TOKEN) {
+        window.location.href = "login.html";
+      }
     (function () {
       "use strict";
 
@@ -1396,10 +1403,18 @@
             budgetNotes: campaign.budgetNotes || raw.budget_notes || ""
           },
 
-          media: {
+         media: {
             logo: media.logo || raw.logo_url || null,
             banner: media.banner || raw.banner_url || null,
-            additional: media.additional || raw.additional_media || []
+            additional: (() => {
+              try {
+                if (Array.isArray(media.additional)) return media.additional;
+                if (raw.additional_media) return JSON.parse(raw.additional_media);
+                return [];
+              } catch {
+                return [];
+              }
+            })()
           },
 
           status: raw.status || "Pending"
