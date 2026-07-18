@@ -3318,7 +3318,9 @@ grid-template-columns:1fr;
                         <div><span class="iconify" data-icon="ph:check-bold"></span>Priority email support</div>
                         <div><span class="iconify" data-icon="ph:check-bold"></span>Newsletter mention (1x)</div>
                     </div>
-                    <button class="btn-p" onclick="rip(event);scrollTo('#contact')">Get Started</button>
+                    <button class="btn-p" id="professional-btn" onclick="rip(event)">
+                        Get Started
+                    </button>
                     <div class="pri-note">Best value for most advertisers</div>
                 </div>
                 <!-- Enterprise -->
@@ -3336,7 +3338,7 @@ grid-template-columns:1fr;
                         <div><span class="iconify" data-icon="ph:check-bold"></span>Dedicated account manager</div>
                         <div><span class="iconify" data-icon="ph:check-bold"></span>Newsletter (every send)</div>
                     </div>
-                    <button class="btn-s" onclick="rip(event);scrollTo('#contact')">Contact Us</button>
+                    <button class="btn-s" id="enterprise-btn" >Contact Us</button>
                     <div class="pri-note">Custom contracts available</div>
                 </div>
             </div>
@@ -3831,9 +3833,11 @@ grid-template-columns:1fr;
                     <div><span class="iconify" data-icon="ph:check-bold"></span>Format Examples</div>
                     <div><span class="iconify" data-icon="ph:check-bold"></span>Contact Details</div>
                 </div>
-                <button class="btn-p" onclick="rip(event)">
+                <button class="btn-p" onclick="rip(event)" >
                     <span class="iconify" data-icon="ph:download-simple-bold" style="font-size:17px"></span>
-                    Download PDF Media Kit
+                    <a href="assets/media/77cod-ing_Media_Kit_2026.pdf" download="https://77cod-ing.github.io/77cod-ing_Media_Kit_2026.pdf.pdf" class="download-btn">
+                        Download PDF Media Kit
+                    </a>
                 </button>
                 <p style="font-size:11px;color:var(--g);opacity:.6;margin-top:12px">PDF · ~2MB · Updated monthly</p>
             </div>
@@ -4006,15 +4010,19 @@ grid-template-columns:1fr;
         </div>
     
     </div>
-<script src="https://www.paypal.com/sdk/js?client-id=AaSZZ_gpjB2l-Lp_2SaXSE_FB37Vctm-GbQPRaBGCemGrmj2rGhTaZ1ZIATGfXSsd8_sh6xCQSC6RF9g&vault=true&intent=subscription"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AbqUIESiw3v3NsiKbxYZ8FHBxzXmxMsVQZJjvINQAoReloFqq-Iq1FYHSQSIPsW7j_1ejjAYQzMknhhe&vault=true&intent=subscription"></script>
 
 <script>
+    let selectedPlan = "P-43U00789CP136221DNJF2GQI";
+    
     window.addEventListener("load", function () {
 
         if (!window.paypal) {
             console.error("PayPal SDK failed to load");
             return;
         }
+
+
 
         paypal.Buttons({
 
@@ -4026,8 +4034,9 @@ grid-template-columns:1fr;
             },
 
             createSubscription: function (data, actions) {
+                console.log("Selected Plan:", selectedPlan);
                 return actions.subscription.create({
-                    plan_id: "P-43U00789CP136221DNJF2GQI"
+                    plan_id: selectedPlan
                 });
             },
 
@@ -4043,7 +4052,8 @@ grid-template-columns:1fr;
                             "Content-Type": "application/json"
                         },
                         body: JSON.stringify({
-                            subscriptionID: data.subscriptionID
+                            subscriptionID: data.subscriptionID,
+                            planID: selectedPlan
                         })
                     }
                 );
@@ -4117,13 +4127,36 @@ grid-template-columns:1fr;
 <script>
     const modal=document.getElementById("paypalModal");
 
-document
-.getElementById("starter-btn")
-.addEventListener("click",()=>{
+    document
+        .getElementById("starter-btn")
+        .addEventListener("click", () => {
 
-    modal.style.display="flex";
+            selectedPlan = "P-6SM080395L201673ENJMALLQ"; // Starter
 
-});
+            console.log("Starter clicked");
+            console.log(selectedPlan);
+
+            modal.style.display = "flex";
+
+        });
+        document
+                .getElementById("professional-btn")
+                .addEventListener("click", () => {
+
+                    selectedPlan = "P-9EA05794BT664281LNJKYEUQ"; // Professional
+
+                    modal.style.display = "flex";
+
+                });
+        document
+                .getElementById("enterprise-btn")
+                .addEventListener("click", () => {
+
+                    selectedPlan = "P-5WM25162K6688661MNJMAMSA"; // Enterprise
+
+                    modal.style.display = "flex";
+
+                });
 
 document
 .getElementById("closePaypalModal")
