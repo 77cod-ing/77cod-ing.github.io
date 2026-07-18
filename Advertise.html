@@ -2813,10 +2813,9 @@ grid-template-columns:1fr;
             <div class="nav-l">
                 <a href="#why">Why Us</a>
                 <a href="#audience">Audience</a>
-                <a href="#formats">Formats</a>
                 <a href="#pricing">Pricing</a>
                 <a href="#faq">FAQ</a>
-                <button class="nav-c" onclick="scrollTo('#cta')">Get Started</button>
+                <a href="#pricing"><button class="nav-c" onclick="scrollTo('#pricing')">Get Started</button></a>
                 <div id="starter-modal" style="display:none;">
                 </div>
             </div>
@@ -2842,13 +2841,15 @@ grid-template-columns:1fr;
                 <p class="hero-d rv d3">We publish HTML, CSS & JavaScript tutorials that rank on Google and attract
                     developers with real purchase intent. Your ad goes directly inside that content.</p>
                 <div class="hero-btns rv d4">
-                    <button class="btn-p" onclick="rip(event);scrollTo('#contact')"><span class="iconify"
+                    <a href="#pricing"> <button class="btn-p" onclick="rip(event);scrollTo('#contact')"><span class="iconify"
                             data-icon="ph:calendar-check-bold" style="font-size:17px"></span>Book Your Advertising
-                        Spot</button>
-                    <button class="btn-s btn-sm" data-action="download-kit">
+                        Spot</button></a>
+                    <a href="#mediakit">
+                        <button class="btn-s btn-sm" data-action="download-kit">
                         <span class="iconify" data-icon="mdi:download"></span>
                         Download Media Kit
                     </button>
+                    </a>
                 </div>
                 <div class="hero-badges rv d5">
                     <div class="hero-badge"><span class="iconify" data-icon="ph:check-circle-fill"></span>Developer
@@ -3116,159 +3117,7 @@ grid-template-columns:1fr;
         </div>
     </section>
 
-    <!-- ===================== S6: AD FORMATS ===================== -->
-    <section class="fmt-sec" id="formats">
-        <div class="ctn tc">
-            <div class="lab rv"><span class="iconify" data-icon="ph:layout-bold"
-                    style="font-size:13px"></span>Advertising Formats</div>
-            <h2 class="stit rv d1">Choose the Format<br>That Fits Your Goal</h2>
-            <p class="sdesc mxa rv d2">Each format is designed for a specific objective — from brand awareness to direct
-                conversions.</p>
-            <div class="ph mxa rv d3"><span class="iconify" data-icon="ph:info-bold" style="font-size:13px"></span>
-                Replace placeholder prices with your actual pricing</div>
-        </div>
-        <div class="ctn">
-            <div class="fmt-g">
-                <div class="gc fmt-c rv">
-                    <div class="fmt-vis"><span class="fmt-lab">Popular</span><span class="fmt-dim">728 × 90</span>
-                        <div class="fmt-vis-i"><span class="iconify" data-icon="ph:rectangle-bold"></span></div>
-                    </div>
-                    <div class="fmt-info">
-                        <h3>In-Article Banner</h3>
-                        <div class="fmt-place">Mid-article · Between paragraphs</div>
-                        <p>Placed between content paragraphs where reader attention is highest. Feels native to the
-                            reading experience.</p>
-                        <div class="fmt-meta">
-                            <div><strong>Size:</strong> 728×90</div>
-                            <div><strong>View:</strong> Desktop & Mobile</div>
-                        </div>
-                        <div class="fmt-price">$X<span> / month</span></div>
-                        <div class="fmt-best">Best for: Direct response & conversions</div>
-                        <div class="fmt-tags"><span>High CTR</span><span>Native feel</span><span>Contextual</span></div>
-                        <button class="btn-p btn-sm" onclick="rip(event);scrollTo('#contact')">Book This Spot</button>
-                    </div>
-                </div>
-                <div class="gc fmt-c rv d1">
-                    <div class="fmt-vis"><span class="fmt-lab">Premium</span><span class="fmt-dim">1200 × 120</span>
-                        <div class="fmt-vis-i"><span class="iconify" data-icon="ph:wide-rectangle-bold"></span></div>
-                    </div>
-                    <div class="fmt-info">
-                        <h3>Top Banner</h3>
-                        <div class="fmt-place">Page header · Above content</div>
-                        <p>Full-width banner visible before any content loads. First impression placement with maximum
-                            visibility.</p>
-                        <div class="fmt-meta">
-                            <div><strong>Size:</strong> 1200×120</div>
-                            <div><strong>View:</strong> Desktop only</div>
-                        </div>
-                        <div class="fmt-price">$X<span> / month</span></div>
-                        <div class="fmt-best">Best for: Brand awareness & launches</div>
-                        <div class="fmt-tags"><span>Full width</span><span>First view</span><span>High impact</span>
-                        </div>
-                        <button class="btn-p btn-sm" onclick="rip(event);scrollTo('#contact')">Book This Spot</button>
-                    </div>
-                </div>
-                <div class="gc fmt-c rv d2">
-                    <div class="fmt-vis"><span class="fmt-dim">300 × 250</span>
-                        <div class="fmt-vis-i"><span class="iconify" data-icon="ph:star-bold" style=" background-image: url('https://i.ibb.co/JX5RbhT/4c171a78-687d-4cde-876a-cbacb1613539.png'); background-size: contain; width: 28vw; height: auto;"></span></div>
-                    </div>
-                    <div class="fmt-info">
-                        <h3>Sidebar Card</h3>
-                        <div class="fmt-place">Right sidebar · Sticky position</div>
-                        <p>Stays visible as readers scroll through the entire article. Perfect for sustained brand
-                            exposure.</p>
-                        <div class="fmt-meta">
-                            <div><strong>Size:</strong> 300×250</div>
-                            <div><strong>View:</strong> Desktop only</div>
-                        </div>
-                        <div class="fmt-price">$X<span> / month</span></div>
-                        <div class="fmt-best">Best for: Brand awareness & retargeting</div>
-                        <div class="fmt-tags"><span>Sticky</span><span>Always visible</span><span>Scroll-aware</span>
-                        </div>
-                        <button class="btn-p btn-sm" onclick="rip(event);scrollTo('#contact')">Book This Spot</button>
-                    </div>
-                </div>
-                <div class="gc fmt-c rv">
-                    <div class="fmt-vis"><span class="fmt-lab">Featured</span><span class="fmt-dim">Custom</span>
-                        <div class="fmt-vis-i"><span class="iconify" data-icon="ph:star-bold"></span></div>
-                    </div>
-                    <div class="fmt-info">
-                        <h3>Featured Tool Box</h3>
-                        <div class="fmt-place">After intro · High prominence</div>
-                        <p>Card-style placement with icon, description and CTA. Looks like an editorial recommendation,
-                            not an ad.</p>
-                        <div class="fmt-meta">
-                            <div><strong>Size:</strong> Custom</div>
-                            <div><strong>View:</strong> All devices</div>
-                        </div>
-                        <div class="fmt-price">$X<span> / month</span></div>
-                        <div class="fmt-best">Best for: Trust-building & high CTR</div>
-                        <div class="fmt-tags"><span>Editorial style</span><span>Custom design</span><span>Trust
-                                signal</span></div>
-                        <button class="btn-p btn-sm" onclick="rip(event);scrollTo('#contact')">Book This Spot</button>
-                    </div>
-                </div>
-                <div class="gc fmt-c rv d1">
-                    <div class="fmt-vis"><span class="fmt-dim">Full article</span>
-                        <div class="fmt-vis-i"><span class="iconify" data-icon="ph:article-bold"></span></div>
-                    </div>
-                    <div class="fmt-info">
-                        <h3>Sponsored Article</h3>
-                        <div class="fmt-place">Dedicated section · In-article</div>
-                        <p>A mini-section within an article showcasing your project with screenshots, features, and a
-                            direct link.</p>
-                        <div class="fmt-meta">
-                            <div><strong>Size:</strong> Custom</div>
-                            <div><strong>View:</strong> All devices</div>
-                        </div>
-                        <div class="fmt-price">$X<span> / month</span></div>
-                        <div class="fmt-best">Best for: Deep product exposure</div>
-                        <div class="fmt-tags"><span>Screenshots</span><span>Features</span><span>Deep dive</span></div>
-                        <button class="btn-p btn-sm" onclick="rip(event);scrollTo('#contact')">Book This Spot</button>
-                    </div>
-                </div>
-                <div class="gc fmt-c rv d2">
-                    <div class="fmt-vis"><span class="fmt-lab">Exclusive</span><span class="fmt-dim">1200 × 400</span>
-                        <div class="fmt-vis-i"><span class="iconify" data-icon="ph:spotlight-bold"></span></div>
-                    </div>
-                    <div class="fmt-info">
-                        <h3>Homepage Spotlight</h3>
-                        <div class="fmt-place">Homepage · Hero area</div>
-                        <p>Premium homepage placement visible to every single visitor. Maximum reach across the entire
-                            platform.</p>
-                        <div class="fmt-meta">
-                            <div><strong>Size:</strong> 1200×400</div>
-                            <div><strong>View:</strong> All devices</div>
-                        </div>
-                        <div class="fmt-price">$X<span> / month</span></div>
-                        <div class="fmt-best">Best for: Product launches & maximum reach</div>
-                        <div class="fmt-tags"><span>Max reach</span><span>Exclusive</span><span>High impact</span></div>
-                        <button class="btn-p btn-sm" onclick="rip(event);scrollTo('#contact')">Book This Spot</button>
-                    </div>
-                </div>
-                <div class="gc fmt-c rv" style="grid-column:1/-1;max-width:400px;margin:0 auto;width:100%">
-                    <div class="fmt-vis"><span class="fmt-dim">Newsletter</span>
-                        <div class="fmt-vis-i"><span class="iconify" data-icon="ph:envelope-bold"></span></div>
-                    </div>
-                    <div class="fmt-info">
-                        <h3>Newsletter Mention</h3>
-                        <div class="fmt-place">Email newsletter · Weekly send</div>
-                        <p>Your product featured in our weekly developer newsletter with a dedicated section and direct
-                            link.</p>
-                        <div class="fmt-meta">
-                            <div><strong>Format:</strong> Text + Image</div>
-                            <div><strong>Send:</strong> Weekly</div>
-                        </div>
-                        <div class="fmt-price">$X<span> / send</span></div>
-                        <div class="fmt-best">Best for: Direct reach to subscriber inbox</div>
-                        <div class="fmt-tags"><span>Inbox</span><span>Direct link</span><span>High open rate</span>
-                        </div>
-                        <button class="btn-p btn-sm" onclick="rip(event);scrollTo('#contact')">Book This Spot</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- ===================== S7: PRICING ===================== -->
     <section class="pri-sec" id="pricing">
@@ -3318,7 +3167,7 @@ grid-template-columns:1fr;
                         <div><span class="iconify" data-icon="ph:check-bold"></span>Priority email support</div>
                         <div><span class="iconify" data-icon="ph:check-bold"></span>Newsletter mention (1x)</div>
                     </div>
-                    <button class="btn-p" id="professional-btn" onclick="rip(event)">
+                    <button class="btn-p" id="professional-btn" >
                         Get Started
                     </button>
                     <div class="pri-note">Best value for most advertisers</div>
@@ -3854,24 +3703,24 @@ grid-template-columns:1fr;
                 options and next steps.</p>
         </div>
         <div class="ctn">
-            <form class="cont-form rv d2" onsubmit="handleForm(event)">
+            <form id="contactForm" class="cont-form rv d2" action="https://formspree.io/f/mojgdnon" method="POST">
                 <div class="form-g">
-                    <div class="fg"><label>Company Name *</label><input type="text" placeholder="Your company name"
+                    <div class="fg"><label>Company Name *</label><input type="text" placeholder="Your company name" name="company_name"
                             required></div>
-                    <div class="fg"><label>Website URL *</label><input type="url" placeholder="https://yourproduct.com"
+                    <div class="fg"><label>Website URL *</label><input type="url" placeholder="https://yourproduct.com" name="website"
                             required></div>
                 </div>
                 <div class="form-g">
-                    <div class="fg"><label>Contact Person *</label><input type="text" placeholder="Full name" required>
+                    <div class="fg"><label>Contact Person *</label><input type="text" placeholder="Full name" name="contact_person" required>
                     </div>
-                    <div class="fg"><label>Business Email *</label><input type="email" placeholder="you@company.com"
+                    <div class="fg"><label>Business Email *</label><input type="email" name="business_email" placeholder="you@company.com"
                             required></div>
                 </div>
                 <div class="form-g">
-                    <div class="fg"><label>Country</label><input type="text" placeholder="United States"></div>
+                    <div class="fg"><label>Country</label><input type="text" name="country" placeholder="United States"></div>
                     <div class="fg">
                         <label>Preferred Package</label>
-                        <select>
+                        <select  name="package" >
                             <option value="">Select a package</option>
                             <option>Starter</option>
                             <option>Professional</option>
@@ -3883,7 +3732,7 @@ grid-template-columns:1fr;
                 <div class="form-g">
                     <div class="fg">
                         <label>Advertising Goal</label>
-                        <select>
+                        <select name="goal" >
                             <option value="">Select your primary goal</option>
                             <option>Brand Awareness</option>
                             <option>Direct Conversions / Sign-ups</option>
@@ -3894,7 +3743,7 @@ grid-template-columns:1fr;
                     </div>
                     <div class="fg">
                         <label>Monthly Budget</label>
-                        <select>
+                        <select name="budget" >
                             <option value="">Select your budget range</option>
                             <option>Under $100</option>
                             <option>$100 — $300</option>
@@ -3906,15 +3755,16 @@ grid-template-columns:1fr;
                 </div>
                 <div class="form-g fw">
                     <div class="fg"><label>Additional Message</label><textarea
-                            placeholder="Tell us about your product, target audience, or any specific requirements..."></textarea>
+                            placeholder="Tell us about your product, target audience, or any specific requirements..."  name="message"></textarea>
                     </div>
                 </div>
                 <p class="form-note">We'll respond within 24 hours. Your information is kept confidential and never
                     shared with third parties.</p>
-                <button type="submit" class="btn-p form-submit" onclick="rip(event)">
+                <button type="submit" class="btn-p form-submit" id="submitBtn" >
                     <span class="iconify" data-icon="ph:paper-plane-tilt-bold" style="font-size:17px"></span>
                     Request Advertising
                 </button>
+                <div id="formMessage"></div>
             </form>
         </div>
     </section>
@@ -3925,11 +3775,12 @@ grid-template-columns:1fr;
             <div class="cta-box rb2">
                 <h2>Ready To Reach Thousands<br>Of Developers?</h2>
                 <p>Your next customers are already reading our articles. Put your product where they're looking.</p>
-                <button class="btn-p" onclick="rip(event);scrollTo('#contact')"
-                    style="font-size:16px;padding:18px 44px">
-                    <span class="iconify" data-icon="ph:rocket-launch-bold" style="font-size:19px"></span>
-                    Book Your Advertising Spot
-                </button>
+                <a href="#pricing">
+                    <button class="btn-p" onclick="rip(event);scrollTo('#contact')" style="font-size:16px;padding:18px 44px">
+                        <span class="iconify" data-icon="ph:rocket-launch-bold" style="font-size:19px"></span>
+                        Book Your Advertising Spot
+                    </button>
+                </a>
                 <div class="cta-perks">
                     <div class="cta-perk"><span class="iconify" data-icon="ph:clock-bold"></span>Response within 24
                         hours</div>
@@ -3957,7 +3808,6 @@ grid-template-columns:1fr;
                 </div>
                 <div class="foot-c">
                     <h5>Advertising</h5>
-                    <a href="#formats">Ad Formats</a>
                     <a href="#pricing">Pricing</a>
                     <a href="#stats">Statistics</a>
                     <a href="#audience">Audience</a>
@@ -3979,7 +3829,7 @@ grid-template-columns:1fr;
                 </div>
             </div>
             <div class="foot-bot">
-                <p>&copy; 2025 DevAds. All rights reserved.</p>
+                <p>&copy; 2026 DevAds. All rights reserved.</p>
                 <div class="foot-soc">
                     <a href="#" aria-label="Twitter"><span class="iconify" data-icon="ph:x-logo-bold"></span></a>
                     <a href="#" aria-label="LinkedIn"><span class="iconify"
@@ -4175,6 +4025,77 @@ modal.addEventListener("click",(e)=>{
     }
 
 });
+</script>
+<script>
+    const form = document.getElementById("contactForm");
+        const submitBtn = document.getElementById("submitBtn");
+        const messageBox = document.getElementById("formMessage");
+
+        form.addEventListener("submit", async function (e) {
+
+            e.preventDefault();
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `
+        <span class="iconify" data-icon="svg-spinners:90-ring"></span>
+        Sending...
+    `;
+
+            messageBox.innerHTML = "";
+
+            const data = new FormData(form);
+
+            try {
+
+                const response = await fetch("https://formspree.io/f/mojgdnon", {
+                    method: "POST",
+                    body: data,
+                    headers: {
+                        Accept: "application/json"
+                    }
+                });
+
+                if (response.ok) {
+
+                    form.reset();
+
+                    messageBox.innerHTML = `
+                <div class="success-message">
+                    ✅ Thank you! Your request has been sent successfully.
+                    We'll contact you within 24 hours.
+                </div>
+            `;
+
+                } else {
+
+                    messageBox.innerHTML = `
+                <div class="error-message">
+                    ❌ Something went wrong.
+                    Please try again.
+                </div>
+            `;
+
+                }
+
+            } catch (error) {
+
+                messageBox.innerHTML = `
+            <div class="error-message">
+                ❌ Unable to connect.
+                Please check your internet connection.
+            </div>
+        `;
+
+            }
+
+            submitBtn.disabled = false;
+
+            submitBtn.innerHTML = `
+        <span class="iconify" data-icon="ph:paper-plane-tilt-bold"></span>
+        Request Advertising
+    `;
+
+        });
 </script>
 
 </body>
