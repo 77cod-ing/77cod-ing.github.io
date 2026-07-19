@@ -19,7 +19,7 @@
   <meta property="og:title" content="Build a Star Rating System with HTML & CSS | SVG Stars Tutorial">
   <meta property="og:description"
     content="Create an interactive star rating system using only HTML and CSS. SVG stars, :checked pseudo-class, hover effects. Free source code.">
-  <meta property="og:url" content="https://77cod-ing.github.io/star-rating.html">
+  <meta property="og:url" content="https://77cod-ing.github.io/Project10.html">
   <meta property="og:image" content="https://77cod-ing.github.io/image%20copy%2024.png">
   <meta property="og:site_name" content="77cod_ing">
 
@@ -30,9 +30,9 @@
   <meta name="twitter:image" content="https://77cod-ing.github.io/image%20copy%2024.png">
 
   <script
-    type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Build an Interactive Star Rating System with HTML and CSS","description":"A step-by-step tutorial for creating a CSS-only star rating system using SVG icons, radio inputs, and the :checked pseudo-class.","image":"https://77cod-ing.github.io/image%20copy%2024.png","datePublished":"2025-10-01","dateModified":"2026-05-28","author":{"@type":"Person","name":"77cod_ing","url":"https://77cod-ing.github.io"},"publisher":{"@type":"Organization","name":"77cod_ing","logo":{"@type":"ImageObject","url":"https://77cod-ing.github.io/Picture1.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://77cod-ing.github.io/star-rating.html"},"proficiencyLevel":"Beginner","keywords":["star rating CSS","HTML radio input rating","CSS :checked selector","SVG star rating","interactive feedback form"]}</script>
+    type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Build an Interactive Star Rating System with HTML and CSS","description":"A step-by-step tutorial for creating a CSS-only star rating system using SVG icons, radio inputs, and the :checked pseudo-class.","image":"https://77cod-ing.github.io/image%20copy%2024.png","datePublished":"2025-10-01","dateModified":"2026-05-28","author":{"@type":"Person","name":"77cod_ing","url":"https://77cod-ing.github.io"},"publisher":{"@type":"Organization","name":"77cod_ing","logo":{"@type":"ImageObject","url":"https://77cod-ing.github.io/Picture1.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://77cod-ing.github.io/Project10.html"},"proficiencyLevel":"Beginner","keywords":["star rating CSS","HTML radio input rating","CSS :checked selector","SVG star rating","interactive feedback form"]}</script>
   <script
-    type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://77cod-ing.github.io/index.html"},{"@type":"ListItem","position":2,"name":"Projects","item":"https://77cod-ing.github.io/projects.html"},{"@type":"ListItem","position":3,"name":"Star Rating System","item":"https://77cod-ing.github.io/star-rating.html"}]}</script>
+    type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://77cod-ing.github.io/"},{"@type":"ListItem","position":2,"name":"Projects","item":"https://77cod-ing.github.io/projects.html"},{"@type":"ListItem","position":3,"name":"Star Rating System","item":"https://77cod-ing.github.io/Project10.html"}]}</script>
   <script
     type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I build a star rating system without JavaScript?","acceptedAnswer":{"@type":"Answer","text":"Yes. Using HTML radio inputs paired with CSS :checked and the general sibling selector (~), you can create a fully interactive star rating system with hover and selection effects using zero JavaScript."}},{"@type":"Question","name":"Why use SVG for star rating icons?","acceptedAnswer":{"@type":"Answer","text":"SVG icons scale perfectly at any resolution, making them sharp on Retina and high-DPI displays. They are also easily colorable with CSS fill and stroke properties."}},{"@type":"Question","name":"How do I make a star rating accessible?","acceptedAnswer":{"@type":"Answer","text":"Use actual radio inputs with associated labels. Never use display:none to hide the inputs — use opacity:0 with position:absolute instead. This keeps the inputs in the accessibility tree for keyboard and screen reader users."}}]}</script>
 
@@ -1338,9 +1338,9 @@
       <span class="read-time"><i class='bx bx-time'></i> ~12 min read</span>
     </div>
     <h1 id="main-heading">Build a <span>Star Rating System</span><br>with <em>HTML &amp; CSS</em></h1>
-    <p class="hero-lead">A complete beginner-friendly guide to creating an interactive star rating system using only
-      HTML radio inputs and CSS — no JavaScript. SVG icons, smooth hover effects, and full accessibility included. Free
-      source code.</p>
+    <p class="hero-lead">Learn how to build a responsive star rating system using HTML and CSS without JavaScript. This beginner-friendly
+    tutorial includes SVG star icons, accessible radio inputs, smooth hover animations, keyboard support, and free
+    copy-and-paste source code for modern websites.</p>
     <div class="hero-stats">
       <div class="stat"><span class="stat-value">3</span><span class="stat-label">Steps</span></div>
       <div class="stat"><span class="stat-value">0 JS</span><span class="stat-label">Dependencies</span></div>
@@ -1374,12 +1374,21 @@
 
       <section id="what-is">
         <h2>What Is a Star Rating System?</h2>
-        <p>A <strong>star rating system</strong> allows users to evaluate content, products, or services by selecting a
-          score — usually from 1 to 5 stars. Instead of plain radio buttons, the interface is transformed into an
-          intuitive row of clickable SVG stars that highlight on hover and lock in color on selection.</p>
-        <p>The technique works by pairing hidden <code>&lt;input type="radio"&gt;</code> elements with visible
-          <code>&lt;label&gt;</code> elements containing SVG star icons. The CSS <code>:checked</code> pseudo-class and
-          the general sibling combinator (<code>~</code>) do the rest — no JavaScript needed.
+        <p>
+          A <strong>star rating system</strong> is a widely used user interface component that allows visitors to rate products,
+          services, articles, or other content by selecting a score, typically from one to five stars. Because the familiar
+          five-star scale is instantly recognizable, users can provide feedback quickly without needing additional instructions.
+          This makes star ratings an excellent choice for review systems, customer feedback forms, e-commerce websites, blogs,
+          and online applications.
+        </p>
+        
+        <p>
+          In this tutorial, the entire rating system is built using semantic
+          <code>&lt;input type="radio"&gt;</code> elements paired with clickable
+          <code>&lt;label&gt;</code> elements containing scalable SVG star icons. CSS handles every interaction through the
+          <code>:checked</code> pseudo-class, hover states, and the general sibling combinator
+          (<code>~</code>), creating a smooth, fully interactive experience without writing a single line of JavaScript. The
+          result is a lightweight, accessible, responsive, and easy-to-customize component suitable for modern websites.
         </p>
       </section>
 
@@ -1387,29 +1396,49 @@
 
       <section id="why-use">
         <h2>Why Use a Star Rating System?</h2>
+      
         <div class="why-grid">
+      
           <div class="why-card">
             <div class="why-icon">⭐</div>
             <div class="why-title">Universally Understood</div>
-            <div class="why-desc">Everyone recognizes stars as a rating scale — zero learning curve for users.</div>
+            <div class="why-desc">
+              The familiar five-star rating scale is recognized worldwide, allowing users to rate products,
+              services, articles, and other content instantly without requiring instructions or additional guidance.
+            </div>
           </div>
+      
           <div class="why-card">
             <div class="why-icon">🪶</div>
             <div class="why-title">Zero JavaScript</div>
-            <div class="why-desc">Pure HTML and CSS — no scripts, no libraries, no render-blocking overhead.</div>
+            <div class="why-desc">
+              Built entirely with semantic HTML and modern CSS, this component eliminates the need for JavaScript,
+              external libraries, or frameworks while remaining lightweight and fast.
+            </div>
           </div>
+      
           <div class="why-card">
             <div class="why-icon">🎨</div>
             <div class="why-title">Fully Customizable</div>
-            <div class="why-desc">Change star color, size, count, and spacing with a few CSS variable edits.</div>
+            <div class="why-desc">
+              Easily customize the star color, size, spacing, animations, and icons using standard CSS,
+              making the component simple to match any website design.
+            </div>
           </div>
+      
           <div class="why-card">
             <div class="why-icon">♿</div>
             <div class="why-title">Accessible by Default</div>
-            <div class="why-desc">Real radio inputs keep the widget keyboard-navigable and screen-reader friendly.</div>
+            <div class="why-desc">
+              Native radio inputs provide keyboard navigation, screen-reader compatibility, and semantic HTML,
+              helping you create an accessible rating system for every visitor.
+            </div>
           </div>
+      
         </div>
       </section>
+
+      
 
       <hr>
 
@@ -1630,6 +1659,8 @@
       </div>
     </div>
   </div>
+
+
 
   <script>
     /* HAMBURGER */
