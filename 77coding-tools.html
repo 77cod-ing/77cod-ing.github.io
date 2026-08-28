@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ══════════════════════════════════════════════
+       SEO META – TITLE & DESCRIPTION
+  ══════════════════════════════════════════════ -->
+  <title>Free Online Tools for Developers – 77coding-tools</title>
+  <meta name="description"
+    content="Free browser-based tools for developers and designers: image compressor, and more utilities coming soon. No sign-up, nothing uploaded to a server." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://77cod-ing.com/tools/" />
+
+  <!-- Robots -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <!-- Keywords (supplementary signal) -->
+  <meta name="keywords"
+    content="free online tools, developer tools, web tools, image compressor, frontend utilities, browser based tools" />
+
+  <!-- Author / Publisher -->
+  <meta name="author" content="77cod_ing" />
+
+  <!-- ══════════════════════════════════════════════
+       OPEN GRAPH
+  ══════════════════════════════════════════════ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="77coding-tools" />
+  <meta property="og:url" content="https://77cod-ing.com/tools/" />
+  <meta property="og:title" content="Free Online Tools for Developers – 77coding-tools" />
+  <meta property="og:description"
+    content="Free browser-based tools for developers and designers: image compressor, and more utilities coming soon." />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- ══════════════════════════════════════════════
+       TWITTER CARD
+  ══════════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@77cod_ing" />
+  <meta name="twitter:title" content="Free Online Tools for Developers – 77coding-tools" />
+  <meta name="twitter:description"
+    content="Free browser-based tools for developers and designers: image compressor, and more utilities coming soon." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../Picture1.png" />
+
+  <!-- ══════════════════════════════════════════════
+       JSON-LD STRUCTURED DATA
+  ══════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://77cod-ing.com/tools/#webpage",
+        "url": "https://77cod-ing.com/tools/",
+        "name": "Free Online Tools for Developers – 77coding-tools",
+        "description": "A collection of free, browser-based tools for developers and designers, including an image compressor and more utilities added over time.",
+        "inLanguage": "en-US",
+        "isPartOf": { "@id": "https://77cod-ing.com/#website" },
+        "breadcrumb": { "@id": "https://77cod-ing.com/tools/#breadcrumb" },
+        "publisher": {
+          "@type": "Person",
+          "name": "77cod_ing",
+          "url": "https://77cod-ing.com"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://77cod-ing.com/tools/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://77cod-ing.com/tools/" }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://77cod-ing.com/tools/#toollist",
+        "name": "77coding-tools – Free Online Developer Tools",
+        "numberOfItems": 1,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Free Image Compressor",
+            "url": "https://77cod-ing.com/tools/image-compressor.html",
+            "description": "Compress JPG, PNG and WebP images online for free, directly in your browser, with batch compression and PNG transparency support."
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :focus-visible {
+      outline: 3px solid #4f46e5;
+      outline-offset: 2px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* =========================
+       HEADER / NAV
+    ========================= */
+
+    header.navbar {
+      background: #ffffff;
+      border-bottom: 1px solid #e7eaf0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 0 5%;
+      min-height: 70px;
+    }
+
+    .logo {
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: 800;
+      color: #172033;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-icon {
+      color: #4f46e5;
+    }
+
+    .logo .tools-suffix {
+      color: #4f46e5;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #4b5563;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: #4f46e5;
+    }
+
+    /* =========================
+       BREADCRUMB
+    ========================= */
+
+    .breadcrumb {
+      padding: 14px 0 0;
+      font-size: 13px;
+      color: #64748b;
+    }
+
+    .breadcrumb ol {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .breadcrumb a {
+      color: #4b5563;
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+      color: #4f46e5;
+      text-decoration: underline;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      text-align: center;
+      padding: 45px 0 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.15;
+      margin-bottom: 15px;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 span.accent {
+      color: #4f46e5;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #64748b;
+      font-size: 16px;
+    }
+
+    /* =========================
+       FILTER BAR
+    ========================= */
+
+    .filter-bar {
+      margin: 26px 0;
+    }
+
+    .filter-bar-inner {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .filter-search {
+      position: relative;
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .filter-search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #94a3b8;
+      pointer-events: none;
+    }
+
+    #searchInput {
+      width: 100%;
+      padding: 12px 40px 12px 40px;
+      border-radius: 10px;
+      border: 1px solid #dde3ee;
+      background: #ffffff;
+      font-size: 14px;
+      color: #172033;
+    }
+
+    #searchInput:focus {
+      border-color: #4f46e5;
+    }
+
+    .clear-search {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: transparent;
+      color: #94a3b8;
+      font-size: 18px;
+      cursor: pointer;
+      line-height: 1;
+      padding: 4px;
+    }
+
+    .clear-search:hover {
+      color: #4f46e5;
+    }
+
+    .filter-count {
+      font-size: 13px;
+      color: #64748b;
+      white-space: nowrap;
+    }
+
+    .filter-categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .filter-pill {
+      border: 1px solid #dde3ee;
+      background: #ffffff;
+      color: #4b5563;
+      border-radius: 999px;
+      padding: 7px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.15s ease;
+    }
+
+    .filter-pill:hover {
+      border-color: #4f46e5;
+      color: #4f46e5;
+    }
+
+    .filter-pill[aria-pressed="true"] {
+      background: #4f46e5;
+      border-color: #4f46e5;
+      color: #ffffff;
+    }
+
+    /* =========================
+       NO RESULTS
+    ========================= */
+
+    .no-results {
+      display: none;
+      text-align: center;
+      padding: 60px 20px;
+      color: #64748b;
+    }
+
+    .no-results-icon {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .no-results-text {
+      font-size: 17px;
+      font-weight: 700;
+      color: #172033;
+      margin-bottom: 6px;
+    }
+
+    .no-results-hint {
+      font-size: 13px;
+    }
+
+    /* =========================
+       SECTIONS / GALLERY
+    ========================= */
+
+    .section-heading {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .section-desc {
+      color: #64748b;
+      font-size: 14px;
+      max-width: 700px;
+      margin-bottom: 22px;
+    }
+
+    section.tool-section {
+      margin-bottom: 44px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    /* =========================
+       TOOL CARD
+    ========================= */
+
+    .tool-card-wrapper {
+      position: relative;
+    }
+
+    .tool-card {
+      display: block;
+      background: #ffffff;
+      border: 1px solid #e4e8ef;
+      border-radius: 16px;
+      padding: 24px;
+      text-decoration: none;
+      color: #172033;
+      height: 100%;
+      transition: 0.2s ease;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+    }
+
+    .tool-card:hover {
+      transform: translateY(-3px);
+      border-color: #c7d2fe;
+      box-shadow: 0 16px 34px rgba(79, 70, 229, 0.14);
+    }
+
+    .tool-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: #eef2ff;
+      color: #4f46e5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .tool-name {
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .tool-desc {
+      font-size: 13px;
+      color: #64748b;
+      margin-bottom: 16px;
+    }
+
+    .tool-badges {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .tool-badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #f0fdf4;
+      color: #16a34a;
+      border: 1px solid #bbf7d0;
+    }
+
+    .tool-badge.no-upload {
+      background: #eff6ff;
+      color: #2563eb;
+      border-color: #bfdbfe;
+    }
+
+    .tool-cta {
+      margin-top: 16px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #4f46e5;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tool-cta .arrow {
+      transition: transform 0.15s ease;
+    }
+
+    .tool-card:hover .tool-cta .arrow {
+      transform: translateX(3px);
+    }
+
+    /* Coming soon (disabled) cards */
+    .tool-card-wrapper.coming-soon .tool-card {
+      cursor: default;
+      opacity: 0.72;
+    }
+
+    .tool-card-wrapper.coming-soon .tool-card:hover {
+      transform: none;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+      border-color: #e4e8ef;
+    }
+
+    .coming-soon-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: #fff7ed;
+      color: #c2410c;
+      border: 1px solid #fed7aa;
+      padding: 4px 9px;
+      border-radius: 999px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      border-top: 1px solid #e5e7eb;
+      background: #ffffff;
+      padding: 30px 0;
+      margin-top: 60px;
+      text-align: center;
+      color: #64748b;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: #4f46e5;
+      text-decoration: none;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 700px) {
+      .nav-links {
+        display: none;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════
+       HEADER / NAV
+  ════════════════════════════════════ -->
+  <header class="navbar" role="banner">
+    <a href="/" class="logo" aria-label="77coding-tools – Free Online Developer Tools Home">
+      <span class="logo-icon" aria-hidden="true">{ / }</span> 77coding<span class="tools-suffix">-tools</span>
+    </a>
+    <nav class="nav-links" role="navigation" aria-label="Main navigation">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/projects.html">Projects</a>
+      <a href="/tools/" aria-current="page">Tools</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/Privacy Policy.html">Privacy Policy</a>
+      <a href="/Terms & Conditions.html">Terms &amp; Conditions</a>
+    </nav>
+  </header>
+
+  <nav class="container breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li aria-current="page">Tools</li>
+    </ol>
+  </nav>
+
+  <!-- ════════════════════════════════════
+       HERO
+  ════════════════════════════════════ -->
+  <div class="container">
+    <div class="hero">
+      <h1><span class="accent">77coding</span>-tools</h1>
+      <p>
+        A growing collection of free, browser-based tools for developers and designers. Nothing is uploaded to a
+        server — everything runs right in your browser, no sign-up required.
+      </p>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════
+       FILTER BAR
+  ════════════════════════════════════ -->
+  <div class="container">
+    <div class="filter-bar" id="filterBar" role="search" aria-label="Filter tools">
+      <div class="filter-bar-inner">
+        <div class="filter-search">
+          <svg class="filter-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input type="text" id="searchInput" placeholder="Search tools..." aria-label="Search tools by name" />
+          <button id="clearSearch" class="clear-search" aria-label="Clear search" style="display:none;">&times;</button>
+        </div>
+        <div class="filter-count" id="filterCount" aria-live="polite">1 tool</div>
+      </div>
+      <div class="filter-categories" id="filterCategories" role="tablist" aria-label="Filter by category">
+        <!-- Pills injected by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════ -->
+  <main id="main-content" role="main" aria-label="Developer tools list" class="container">
+
+    <div class="no-results" id="noResults" aria-live="polite">
+      <div class="no-results-icon" aria-hidden="true">🔍</div>
+      <div class="no-results-text">No tools found</div>
+      <div class="no-results-hint">Try a different search term or category</div>
+    </div>
+
+    <!-- ── SECTION: Image Tools ── -->
+    <section class="tool-section" aria-labelledby="image-tools-heading">
+      <h2 id="image-tools-heading" class="section-heading">Image Tools</h2>
+      <p class="section-desc">
+        Compress, convert and prepare images for the web — all processed locally in your browser.
+      </p>
+
+      <div class="gallery">
+
+        <div class="tool-card-wrapper" data-category="image">
+          <a class="tool-card" href="image-compressor.html" aria-label="Open the free Image Compressor tool">
+            <div class="tool-icon" aria-hidden="true"><img src="https://i.pinimg.com/1200x/50/ed/22/50ed22eac9e2e193bedef2e007dc0d32.jpg" alt="" style="width: 5vw; border-radius: 8px;"></div>
+            <div class="tool-name">Image Compressor</div>
+            <p class="tool-desc">
+              Compress JPG, PNG and WebP images, keep PNG transparency, and batch-compress several images at once.
+            </p>
+            <div class="tool-badges">
+              <span class="tool-badge">Free</span>
+              <span class="tool-badge no-upload">No upload</span>
+            </div>
+            <span class="tool-cta">Open tool <span class="arrow" aria-hidden="true">→</span></span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── SECTION: Coming Soon ── -->
+    <section class="tool-section" aria-labelledby="coming-soon-heading">
+      <h2 id="coming-soon-heading" class="section-heading">Coming Soon</h2>
+      <p class="section-desc">
+        More free tools are on the way — check back soon.
+      </p>
+
+      <div class="gallery">
+
+        <div class="tool-card-wrapper coming-soon" data-category="generators">
+          <span class="coming-soon-badge">Coming soon</span>
+          <div class="tool-card" aria-disabled="true">
+            <div class="tool-icon" aria-hidden="true">🎨</div>
+            <div class="tool-name">CSS Gradient Generator</div>
+            <p class="tool-desc">
+              Build and copy custom CSS gradients with a live preview.
+            </p>
+            <div class="tool-badges">
+              <span class="tool-badge no-upload">No upload</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-card-wrapper coming-soon" data-category="text">
+          <span class="coming-soon-badge">Coming soon</span>
+          <div class="tool-card" aria-disabled="true">
+            <div class="tool-icon" aria-hidden="true">{ }</div>
+            <div class="tool-name">JSON Formatter &amp; Validator</div>
+            <p class="tool-desc">
+              Format, validate and minify JSON data instantly in your browser.
+            </p>
+            <div class="tool-badges">
+              <span class="tool-badge no-upload">No upload</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-card-wrapper coming-soon" data-category="generators">
+          <span class="coming-soon-badge">Coming soon</span>
+          <div class="tool-card" aria-disabled="true">
+            <div class="tool-icon" aria-hidden="true">🔐</div>
+            <div class="tool-name">Password Generator</div>
+            <p class="tool-desc">
+              Generate strong, random passwords with adjustable length and character sets.
+            </p>
+            <div class="tool-badges">
+              <span class="tool-badge no-upload">No upload</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 <a href="/">77cod-ing</a>. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    "use strict";
+
+    const searchInput = document.getElementById("searchInput");
+    const clearSearch = document.getElementById("clearSearch");
+    const filterCount = document.getElementById("filterCount");
+    const filterCategories = document.getElementById("filterCategories");
+    const noResults = document.getElementById("noResults");
+
+    const cards = Array.from(document.querySelectorAll(".tool-card-wrapper"));
+    const sections = Array.from(document.querySelectorAll(".tool-section"));
+
+    const CATEGORY_LABELS = {
+      all: "All",
+      image: "Image",
+      text: "Text",
+      generators: "Generators"
+    };
+
+    let activeCategory = "all";
+    let query = "";
+
+    function buildPills() {
+      const categories = new Set(["all"]);
+      cards.forEach(function (card) {
+        (card.dataset.category || "").split(",").forEach(function (cat) {
+          if (cat) categories.add(cat.trim());
+        });
+      });
+
+      categories.forEach(function (cat) {
+        const pill = document.createElement("button");
+        pill.type = "button";
+        pill.className = "filter-pill";
+        pill.textContent = CATEGORY_LABELS[cat] || cat;
+        pill.setAttribute("role", "tab");
+        pill.setAttribute("aria-pressed", cat === "all" ? "true" : "false");
+        pill.addEventListener("click", function () {
+          activeCategory = cat;
+          filterCategories.querySelectorAll(".filter-pill").forEach(function (p) {
+            p.setAttribute("aria-pressed", "false");
+          });
+          pill.setAttribute("aria-pressed", "true");
+          applyFilters();
+        });
+        filterCategories.appendChild(pill);
+      });
+    }
+
+    function applyFilters() {
+      let visibleCount = 0;
+
+      cards.forEach(function (card) {
+        const name = card.querySelector(".tool-name").textContent.toLowerCase();
+        const desc = card.querySelector(".tool-desc").textContent.toLowerCase();
+        const categories = (card.dataset.category || "").split(",").map(function (c) { return c.trim(); });
+
+        const matchesQuery = !query || name.includes(query) || desc.includes(query);
+        const matchesCategory = activeCategory === "all" || categories.includes(activeCategory);
+        const visible = matchesQuery && matchesCategory;
+
+        card.style.display = visible ? "" : "none";
+        if (visible) visibleCount += 1;
+      });
+
+      sections.forEach(function (section) {
+        const anyVisible = Array.from(section.querySelectorAll(".tool-card-wrapper"))
+          .some(function (card) { return card.style.display !== "none"; });
+        section.style.display = anyVisible ? "" : "none";
+      });
+
+      filterCount.textContent = `${visibleCount} tool${visibleCount === 1 ? "" : "s"}`;
+      noResults.style.display = visibleCount === 0 ? "block" : "none";
+    }
+
+    searchInput.addEventListener("input", function () {
+      query = searchInput.value.trim().toLowerCase();
+      clearSearch.style.display = query ? "block" : "none";
+      applyFilters();
+    });
+
+    clearSearch.addEventListener("click", function () {
+      searchInput.value = "";
+      query = "";
+      clearSearch.style.display = "none";
+      searchInput.focus();
+      applyFilters();
+    });
+
+    buildPills();
+    applyFilters();
+  })();
+  </script>
+
+</body>
+
+</html>
