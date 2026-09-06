@@ -13,7 +13,7 @@
     content="Visual Studio Code, VS Code, install VS Code Windows, download VS Code Windows, VS Code setup guide, VS Code step by step, VS Code Windows installer, how to install VS Code, VS Code 2025, code editor Windows, VS Code system requirements, add VS Code to PATH, VS Code extensions">
   <meta name="author" content="77cod_ing">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <link rel="canonical" href="https://77cod-ing.github.io/Project2.html">
+  <link rel="canonical" href="https://77cod-ing.github.io/Project2">
 
   <!-- ===== OPEN GRAPH ===== -->
   <meta property="og:type" content="article">
@@ -21,7 +21,7 @@
   <meta property="og:description"
     content="A complete step-by-step guide to downloading and installing Visual Studio Code on Windows. Screenshots included for every step.">
   <meta property="og:image" content="https://77cod-ing.github.io/Picture2%20(2).png">
-  <meta property="og:url" content="https://77cod-ing.github.io/Project2.html">
+  <meta property="og:url" content="https://77cod-ing.github.io/Project2">
   <meta property="og:site_name" content="77cod_ing">
   <meta property="article:published_time" content="2025-06-01T00:00:00Z">
   <meta property="article:modified_time" content="2025-06-15T00:00:00Z">
@@ -61,7 +61,7 @@
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://77cod-ing.github.io/Project2.html"
+      "@id": "https://77cod-ing.github.io/Project2"
     },
     "articleSection": "Tutorials",
     "keywords": "Visual Studio Code, VS Code, install VS Code Windows, download VS Code, step by step guide, code editor",
@@ -165,9 +165,9 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html"},
-      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
-      {"@type": "ListItem", "position": 3, "name": "Install VS Code on Windows", "item": "https://77cod-ing.github.io/Project2.html"}
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects"},
+      {"@type": "ListItem", "position": 3, "name": "Install VS Code on Windows", "item": "https://77cod-ing.github.io/Project2"}
     ]
   }
   </script>
@@ -217,16 +217,16 @@
     }
 
     /* ===== NAVBAR ===== */
+  
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       height: 56px;
       padding: 0 2.5rem;
-      background: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
+      background: rgba(0, 5, 18, 0.7);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(0, 217, 255, 0.12);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -237,7 +237,7 @@
       align-items: center;
       font-family: var(--font-head);
       font-size: clamp(1rem, 2vw, 1.2rem);
-      font-weight: bold;
+      font-weight: 700;
       color: white;
       text-decoration: none;
       gap: 8px;
@@ -265,6 +265,30 @@
     .nav-links a:hover {
       color: var(--premcolo);
     }
+    .nav-new-link {
+  position: relative;
+}
+
+.new-badge {
+  position: absolute;
+  top: -8px;
+  right: -18px;
+  background: rgb(0, 255, 42);
+  color: #000000;
+  font-size: 7px;
+  font-weight: 800;
+  padding: 1px 5px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  animation: newPulse 2s ease-in-out infinite;
+  pointer-events: none;
+  rotate: 30deg;
+}
+
+@keyframes newPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
 
     /* ===== BREADCRUMB ===== */
     .breadcrumb {
@@ -1090,31 +1114,27 @@
 <body>
 
   <!-- ===== NAVBAR ===== -->
-  <header class="navbar">
-    <a href="https://77cod-ing.github.io/" class="logo">
-      <span class="logo-icon">{ / }</span> 77cod_ing
-    </a>
-    <nav class="nav-links" aria-label="Primary navigation">
-      <a href="https://77cod-ing.github.io/">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html">Terms & Conditions</a>
-    </nav>
-  </header>
+<header class="navbar">
+  <a href="/" class="logo"><span class="logo-icon">{ / }</span> 77cod_ing</a>
+  <nav class="nav-links" aria-label="Primary navigation">
+    <a href="/">Home</a><a href="about">About</a><a href="projects">Projects</a>
+    <a href="contact">Contact</a><a href="Privacy Policy">Privacy Policy</a><a href="Terms & Conditions">Terms &
+      Conditions</a>
+    <a href="77coding-tools" class="nav-new-link">77coding-tools <span class="new-badge">NEW</span></a>
+  </nav>
+</header>
 
   <!-- ===== BREADCRUMB ===== -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <ol>
       <li><a href="https://77cod-ing.github.io/"><i class='bx bx-home-alt-2'></i> Home</a></li>
-      <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+      <li><a href="projects"><i class='bx bx-data'></i> Projects</a></li>
       <li><span aria-current="page">Install VS Code on Windows</span></li>
     </ol>
   </nav>
 
   <!-- ===== BACK BUTTON ===== -->
-  <a href="projects.html#vscod" class="back-link" aria-label="Return to Projects">
+  <a href="projects#vscod" class="back-link" aria-label="Return to Projects">
     <i class='bx bx-arrow-back'></i> Return to Projects
   </a>
 
@@ -1425,7 +1445,7 @@
                 <li><strong>Add "Open with Code" action to Windows Explorer directory context menu</strong> —
                   right-click any folder to open it as a project</li>
                 <li><strong>Register Code as an editor for supported file types</strong> — makes VS Code the default for
-                  .js, .py, .html, etc.</li>
+                  .js, .py, , etc.</li>
                 <li><strong>Add to PATH</strong> — allows you to type <code>code</code> in any terminal to open VS Code
                 </li>
                 <li><strong>Create a Desktop Shortcut</strong> — quick access from your desktop</li>
@@ -1721,26 +1741,26 @@
       <div class="sidebar-box">
         <div class="sidebar-header">Related Projects</div>
         <div class="related-list">
-          <a class="related-card" href="Project34.html" aria-label="3D Flip Login Interface Tutorial">
+          <a class="related-card" href="Project34" aria-label="3D Flip Login Interface Tutorial">
             <img src="https://77cod-ing.github.io/image%20copy%2088.png"
               alt="3D Flip Login and Register Interface built with HTML CSS and JavaScript" loading="lazy" width="280"
               height="158">
             <div class="related-card-overlay"></div>
             <div class="related-card-title">3D Flip Login & Register Interface — HTML CSS JS</div>
           </a>
-          <a class="related-card" href="Project37.html" aria-label="Glassmorphism Login Page">
+          <a class="related-card" href="Project37" aria-label="Glassmorphism Login Page">
             <img src="https://i.suar.me/Np3EO/m" alt="Modern Glassmorphism Login Page Design" loading="lazy" width="280"
               height="158">
             <div class="related-card-overlay"></div>
             <div class="related-card-title">Modern Glassmorphism Login Page Design</div>
           </a>
-          <a class="related-card" href="Project39.html" aria-label="Animated Button with Star Effects">
+          <a class="related-card" href="Project39" aria-label="Animated Button with Star Effects">
             <img src="https://i.suar.me/jvZZv/m" alt="Animated Button with Star Effects" loading="lazy" width="280"
               height="158">
             <div class="related-card-overlay"></div>
             <div class="related-card-title">Animated Button with Star Effects — HTML & CSS</div>
           </a>
-          <a class="related-card" href="Project40.html" aria-label="CSS Neon Digital Clock">
+          <a class="related-card" href="Project40" aria-label="CSS Neon Digital Clock">
             <img src="https://i.suar.me/Ep114/m" alt="CSS Neon Digital Clock Animation" loading="lazy" width="280"
               height="158">
             <div class="related-card-overlay"></div>
