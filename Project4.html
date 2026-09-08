@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Floating Label Input CSS Tutorial (2026) | HTML Form Animation Without JavaScript</title>
+  <title>Floating Label Input CSS Tutorial (2026) | HTML Form Animation Without JavaScript</title>
 
-<meta name="description"
-  content="Learn how to create a modern floating label input using pure HTML and CSS. Build responsive forms with smooth animations, improved UX, accessibility, and SEO-friendly code.">
+  <meta name="description"
+    content="Learn how to create a modern floating label input using pure HTML and CSS. Build responsive forms with smooth animations, improved UX, accessibility, and SEO-friendly code.">
 
-<meta name="keywords"
-  content="floating label input, floating placeholder css, html css form tutorial, input animation css, modern form ui, css focus effects, responsive forms">
+  <meta name="keywords"
+    content="floating label input, floating placeholder css, html css form tutorial, input animation css, modern form ui, css focus effects, responsive forms">
 
-<meta name="author" content="77cod_ing">
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="author" content="77cod_ing">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 
-<link rel="canonical" href="https://77cod-ing.github.io/Project4.html">
+  <link rel="canonical" href="https://77cod-ing.github.io/Project4">
 
-<meta name="theme-color" content="#00d9ff">
-<meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#00d9ff">
+  <meta name="color-scheme" content="dark light">
 
-<link rel="icon" href="https://77cod-ing.github.io/favicon.png" type="image/png">
+  <link rel="icon" href="https://77cod-ing.github.io/favicon.png" type="image/png">
 
-<!-- Open Graph -->
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="77cod_ing">
-<meta property="og:title" content="Floating Label Input CSS Tutorial | Modern HTML Form Animation">
-<meta property="og:description"
-  content="Build a smooth floating label input using only HTML and CSS. No JavaScript required. Perfect for modern forms and UI design.">
-<meta property="og:url" content="https://77cod-ing.github.io/Project4.html">
-<meta property="og:image" content="https://77cod-ing.github.io/Project4.html">
-<meta property="og:image:alt" content="Floating label input animation created with HTML and CSS">
-<meta property="article:author" content="77cod_ing">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="77cod_ing">
+  <meta property="og:title" content="Floating Label Input CSS Tutorial | Modern HTML Form Animation">
+  <meta property="og:description"
+    content="Build a smooth floating label input using only HTML and CSS. No JavaScript required. Perfect for modern forms and UI design.">
+  <meta property="og:url" content="https://77cod-ing.github.io/Project4">
+  <meta property="og:image" content="https://77cod-ing.github.io/Project4">
+  <meta property="og:image:alt" content="Floating label input animation created with HTML and CSS">
+  <meta property="article:author" content="77cod_ing">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Floating Label Input CSS Tutorial | HTML & CSS">
-<meta name="twitter:description"
-  content="Create a floating label input animation using pure CSS. Modern, responsive and accessible form design.">
-<meta name="twitter:image" content="https://77cod-ing.github.io/floating-label-input-preview.webp">
-<meta name="twitter:creator" content="@77cod_ing">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Floating Label Input CSS Tutorial | HTML & CSS">
+  <meta name="twitter:description"
+    content="Create a floating label input animation using pure CSS. Modern, responsive and accessible form design.">
+  <meta name="twitter:image" content="https://77cod-ing.github.io/image%20copy%2014.png">
+  <meta name="twitter:creator" content="@77cod_ing">
   <!-- ===== ASSETS ===== -->
   <link rel="icon" type="image/png" href="Picture1.png">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
@@ -89,6 +90,7 @@
       line-height: 1.7;
     }
 
+    /* NAVBAR */
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -136,6 +138,31 @@
     .nav-links a:hover {
       color: var(--premcolo);
     }
+    .nav-new-link {
+  position: relative;
+}
+
+.new-badge {
+  position: absolute;
+  top: -8px;
+  right: -18px;
+  background: rgb(0, 255, 42);
+  color: #000000;
+  font-size: 7px;
+  font-weight: 800;
+  padding: 1px 5px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  animation: newPulse 2s ease-in-out infinite;
+  pointer-events: none;
+  rotate: 30deg;
+}
+
+@keyframes newPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
 
     .hamburger {
       display: none;
@@ -1271,13 +1298,14 @@
 
 <body>
 
+  <!-- ===== NAVBAR ===== -->
   <header class="navbar">
-    <a href="https://77cod-ing.github.io/" class="logo"><span class="logo-icon">{ / }</span> 77cod_ing</a>
+    <a href="/" class="logo"><span class="logo-icon">{ / }</span> 77cod_ing</a>
     <nav class="nav-links" aria-label="Primary navigation">
-      <a href="https://77cod-ing.github.io/">Home</a>
-      <a href="about.html">About</a><a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a><a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html">Terms & Conditions</a>
+      <a href="/">Home</a><a href="about">About</a><a href="projects">Projects</a>
+      <a href="contact">Contact</a><a href="Privacy Policy">Privacy Policy</a><a href="Terms & Conditions">Terms &
+        Conditions</a>
+      <a href="77coding-tools/json-formatter" class="nav-new-link">77coding-tools <span class="new-badge">NEW</span></a>
     </nav>
   </header>
 
@@ -1285,20 +1313,20 @@
     aria-expanded="false"><span></span><span></span><span></span></button>
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
     <span class="close-btn" id="closeBtn" aria-label="Close menu">&times;</span>
-    <a href="https://77cod-ing.github.io/">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a><a href="Privacy Policy.html">Privacy Policy</a><a
-      href="Terms & Conditions.html">Terms &amp; Conditions</a>
+    <a href="https://77cod-ing.github.io/">Home</a><a href="about">About</a><a href="projects">Projects</a>
+    <a href="contact">Contact</a><a href="Privacy Policy">Privacy Policy</a><a
+      href="Terms & Conditions">Terms &amp; Conditions</a>
   </div>
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <ol>
       <li><a href="https://77cod-ing.github.io/"><i class='bx bx-home-alt-2'></i> Home</a></li>
-      <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+      <li><a href="projects"><i class='bx bx-data'></i> Projects</a></li>
       <li><span aria-current="page">Floating Placeholder Input</span></li>
     </ol>
   </nav>
 
-  <a href="projects.html#subscribe" class="back-link"><i class='bx bx-arrow-back'></i> Return to Projects</a>
+  <a href="projects#subscribe" class="back-link"><i class='bx bx-arrow-back'></i> Return to Projects</a>
 
   <section class="hero" aria-labelledby="main-heading">
     <div class="hero-meta">
@@ -1402,7 +1430,7 @@
         <div class="code-panels">
           <div class="code-box active" id="panel-html" role="tabpanel">
             <div class="code-header"><span class="code-lang-label" style="color:#ff6600;">HTML —
-                index.html</span><button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+                index</span><button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
             </div>
             <pre><code id="code1" class="language-html"></code></pre>
           </div>
@@ -1550,22 +1578,22 @@
       <div class="sidebar-box">
         <div class="sidebar-header">🔗 Related Projects</div>
         <div class="related-list">
-          <a class="related-card" href="Project14.html"><img src="https://77cod-ing.github.io/image%20copy%2040.png"
+          <a class="related-card" href="Project14"><img src="https://77cod-ing.github.io/image%20copy%2040.png"
               alt="Electric Neon Card Animation" loading="lazy" width="280" height="158">
             <div class="related-card-overlay"></div>
             <div class="related-card-title">Electric Neon Card Animation — HTML, CSS &amp; SVG</div>
           </a>
-          <a class="related-card" href="Project39.html"><img src="https://i.suar.me/jvZZv/m"
+          <a class="related-card" href="Project39"><img src="https://i.suar.me/jvZZv/m"
               alt="Animated Button with Star Effects" loading="lazy" width="280" height="158">
             <div class="related-card-overlay"></div>
             <div class="related-card-title">Animated Button with Star Effects</div>
           </a>
-          <a class="related-card" href="Project37.html"><img src="https://i.suar.me/Np3EO/m"
+          <a class="related-card" href="Project37"><img src="https://i.suar.me/Np3EO/m"
               alt="Glassmorphism Login Page" loading="lazy" width="280" height="158">
             <div class="related-card-overlay"></div>
             <div class="related-card-title">Modern Glassmorphism Login Page</div>
           </a>
-          <a class="related-card" href="Project40.html"><img src="https://i.suar.me/Ep114/m"
+          <a class="related-card" href="Project40"><img src="https://i.suar.me/Ep114/m"
               alt="CSS Neon Digital Clock" loading="lazy" width="280" height="158">
             <div class="related-card-overlay"></div>
             <div class="related-card-title">CSS Neon Digital Clock Animation</div>
