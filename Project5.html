@@ -13,7 +13,7 @@
     content="circle to rectangle animation html css, shape morphing css, border-radius animation, logo reveal effect, interactive ui animation, product showcase effect, css transition animation 2026, JavaScript toggle class animation">
   <meta name="author" content="77cod_ing">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://77cod-ing.github.io/Project5.html">
+  <link rel="canonical" href="https://77cod-ing.github.io/Project5">
 
   <!-- ===== OPEN GRAPH ===== -->
   <meta property="og:type" content="article">
@@ -47,8 +47,8 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/"},
-      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
-      {"@type": "ListItem", "position": 3, "name": "Circle to Rectangle Animation", "item": "https://77cod-ing.github.io/circle-to-rectangle.html"}
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects"},
+      {"@type": "ListItem", "position": 3, "name": "Circle to Rectangle Animation", "item": "https://77cod-ing.github.io/circle-to-rectangle"}
     ]
   }
   </script>
@@ -131,16 +131,16 @@
       min-height: 100vh;
     }
 
-    /* ===== NAVBAR ===== */
+    /* NAVBAR */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       height: 56px;
       padding: 0 2.5rem;
-      background: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
+      background: rgba(0, 5, 18, 0.7);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(0, 217, 255, 0.12);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -151,7 +151,7 @@
       align-items: center;
       font-family: var(--font-head);
       font-size: clamp(1rem, 2vw, 1.2rem);
-      font-weight: bold;
+      font-weight: 700;
       color: white;
       text-decoration: none;
       gap: 8px;
@@ -173,28 +173,37 @@
       text-decoration: none;
       font-size: 14px;
       font-weight: 500;
-      position: relative;
       transition: color 0.25s;
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: var(--premcolo);
-      transition: width 0.3s ease;
     }
 
     .nav-links a:hover {
       color: var(--premcolo);
     }
+    .nav-new-link {
+  position: relative;
+}
 
-    .nav-links a:hover::after {
-      width: 100%;
-    }
+.new-badge {
+  position: absolute;
+  top: -8px;
+  right: -18px;
+  background: rgb(0, 255, 42);
+  color: #000000;
+  font-size: 7px;
+  font-weight: 800;
+  padding: 1px 5px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  animation: newPulse 2s ease-in-out infinite;
+  pointer-events: none;
+  rotate: 30deg;
+}
+
+@keyframes newPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
 
     /* ===== HAMBURGER ===== */
     .hamburger {
@@ -1048,7 +1057,7 @@
       opacity: 1;
     }
 
-    .preview-file-tag.html-tag {
+    .preview-file-tag-tag {
       background: rgba(255, 102, 0, 0.15);
       color: #ff6600;
       border: 1px solid rgba(255, 102, 0, 0.3);
@@ -1336,44 +1345,37 @@
 
   <!-- ===== NAVBAR ===== -->
   <header class="navbar">
-    <a href="https://77cod-ing.github.io" class="logo">
-      <span class="logo-icon">{ / }</span> 77cod_ing
-    </a>
+    <a href="/" class="logo"><span class="logo-icon">{ / }</span> 77cod_ing</a>
     <nav class="nav-links" aria-label="Primary navigation">
-      <a href="https://77cod-ing.github.io">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html">Terms & Conditions</a>
+      <a href="/">Home</a><a href="about">About</a><a href="projects">Projects</a>
+      <a href="contact">Contact</a><a href="Privacy Policy">Privacy Policy</a><a href="Terms & Conditions">Terms &
+        Conditions</a>
+      <a href="77coding-tools/json-formatter" class="nav-new-link">77coding-tools <span class="new-badge">NEW</span></a>
     </nav>
-    <div class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
-    </div>
   </header>
 
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <span class="close-btn" id="closeBtn">&times;</span>
     <a href="https://77cod-ing.github.io">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-    <a href="Privacy Policy.html">Privacy Policy</a>
-    <a href="Terms & Conditions.html">Terms & Conditions</a>
+    <a href="about">About</a>
+    <a href="projects">Projects</a>
+    <a href="contact">Contact</a>
+    <a href="Privacy Policy">Privacy Policy</a>
+    <a href="Terms & Conditions">Terms & Conditions</a>
   </div>
 
   <!-- ===== BREADCRUMB ===== -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <ol>
       <li><a href="https://77cod-ing.github.io"><i class='bx bx-home-alt-2'></i> Home</a></li>
-      <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+      <li><a href="projects"><i class='bx bx-data'></i> Projects</a></li>
       <li><span aria-current="page">Circle to Rectangle Animation</span></li>
     </ol>
   </nav>
 
   <!-- ===== BACK BUTTON ===== -->
-  <a href="projects.html#subscribe" class="back-link" aria-label="Return to Projects">
+  <a href="projects#subscribe" class="back-link" aria-label="Return to Projects">
     <i class='bx bx-arrow-back'></i> Return to Projects
   </a>
 
@@ -1505,7 +1507,7 @@
           <div class="feature-card">
             <div class="feature-icon">🚀</div>
             <div class="feature-title">Zero Dependencies</div>
-            <div class="feature-desc">No CDN, no npm, no frameworks. Open <code>index.html</code> in any modern
+            <div class="feature-desc">No CDN, no npm, no frameworks. Open <code>index</code> in any modern
               browser and the animation runs instantly.</div>
           </div>
         </div>
@@ -1636,7 +1638,7 @@
           <div class="code-panels">
             <div class="code-box active" id="panel-html" role="tabpanel">
               <div class="code-header">
-                <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
+                <span class="code-lang-label" style="color:#ff6600;">HTML — index</span>
                 <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
               </div>
               <pre><code id="code1" class="language-html"><!-- Loading source code... --></code></pre>
@@ -1661,8 +1663,8 @@
         </div>
 
         <div class="info-box">
-          <strong>💡 Quick Start:</strong> Download <code>index.html</code>, <code>style.css</code>,
-          and <code>script.js</code>, place them in the same folder, and open <code>index.html</code>
+          <strong>💡 Quick Start:</strong> Download <code>index</code>, <code>style.css</code>,
+          and <code>script.js</code>, place them in the same folder, and open <code>index</code>
           in your browser. The Three.js Toys library loads from a CDN automatically —
           no server or install step required.
         </div>
@@ -1767,19 +1769,19 @@
       <div class="sidebar-box">
         <div class="sidebar-header">🔗 Related Projects</div>
         <div class="related-list">
-          <a class="related-card" href="Project13.html" aria-label="Neon Cursor Animation">
+          <a class="related-card" href="Project13" aria-label="Neon Cursor Animation">
             <img src="image copy 36.png" alt="Neon Cursor Animation HTML CSS JavaScript Three.js" loading="lazy"
               width="280" height="158">
             <div class="related-card-overlay"></div>
             <div class="related-card-title">Neon Cursor Animation — HTML CSS JS</div>
           </a>
-          <a class="related-card" href="Project23.html" aria-label="Animated Login and Signup Page">
+          <a class="related-card" href="Project23" aria-label="Animated Login and Signup Page">
             <img src="image copy 75.png" alt="Modern Animated Login Signup Page HTML CSS JS" loading="lazy" width="280"
               height="158">
             <div class="related-card-overlay"></div>
             <div class="related-card-title">Animated Login &amp; Signup Page — HTML CSS JS</div>
           </a>
-          <a class="related-card" href="Project40.html" aria-label="CSS Neon Digital Clock">
+          <a class="related-card" href="Project40" aria-label="CSS Neon Digital Clock">
             <img src="https://i.suar.me/Ep114/m" alt="CSS Neon Digital Clock Animation" loading="lazy" width="280"
               height="158">
             <div class="related-card-overlay"></div>
