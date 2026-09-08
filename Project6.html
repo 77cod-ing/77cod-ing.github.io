@@ -4,51 +4,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- ===== PRIMARY SEO META ===== -->
-  <title>How to Build a Modern Sign In Form using HTML, CSS & JavaScript</title>
+  <!-- ===================================================== PRIMARY SEO ====================================================== -->
+  <title>Modern Sign In Form with HTML, CSS & JavaScript | 77cod_ing</title>
   <meta name="description"
-    content="Subscribe box for website, email subscription box, grow website audience, newsletter signup, increase engagement, Google AdSense approval tips.">
+    content="Learn how to build a modern responsive Sign In Form with HTML, CSS and JavaScript. Create a glassmorphism login UI with password visibility toggle, form validation and mobile-friendly design.">
   <meta name="keywords"
-    content="sign in form HTML CSS, modern login page, glassmorphism sign in UI, frosted glass login card, responsive sign in design, password visibility toggle, login form javascript">
+    content="sign in form HTML CSS JavaScript, login form HTML CSS, modern login page, glassmorphism login form, responsive sign in form, password visibility toggle, JavaScript form validation, login UI">
   <meta name="author" content="77cod_ing">
   <meta name="robots" content="index, follow">
-
-  <!-- ===== OPEN GRAPH ===== -->
+  <link rel="canonical" href="https://77cod-ing.github.io/Project6">
+  <!-- ===================================================== OPEN GRAPH ====================================================== -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="How to Build a Modern Sign In Form using HTML, CSS & JavaScript">
+  <meta property="og:title" content="Modern Sign In Form with HTML, CSS & JavaScript">
   <meta property="og:description"
-    content="Learn how to create a modern, frosted-glass styled sign-in card with interactive features using HTML, CSS, and JavaScript.">
+    content="Build a modern responsive Sign In Form using HTML, CSS and JavaScript with a glassmorphism design, password visibility toggle and form validation.">
+  <meta property="og:url" content="https://77cod-ing.github.io/Project6">
   <meta property="og:site_name" content="77cod_ing">
-
-  <!-- ===== SCHEMA: TechArticle ===== -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "How to Build a Modern Sign In Form using HTML, CSS & JavaScript",
-    "description": "A complete guide to building a modern sign-in form with glassmorphism, password toggle, and form validation using HTML, CSS, and vanilla JavaScript.",
-    "author": { "@type": "Person", "name": "77cod_ing", "url": "https://77cod-ing.github.io" },
-    "publisher": { "@type": "Organization", "name": "77cod_ing" },
-    "articleSection": "JavaScript Tutorials",
-    "keywords": "sign in form, html css javascript, glassmorphism, login page, password toggle, form validation",
-    "educationalLevel": "Beginner",
-    "teaches": ["HTML Form Structure", "CSS Glassmorphism", "JavaScript Form Validation", "Password Visibility Toggle"]
-  }
-  </script>
-
-  <!-- ===== SCHEMA: BreadcrumbList ===== -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/"},
-      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html"},
-      {"@type": "ListItem", "position": 3, "name": "Sign In Form", "item": "https://77cod-ing.github.io/signin-form.html"}
-    ]
-  }
-  </script>
+  <meta property="og:image" content="https://77cod-ing.github.io/image%20copy%202.png">
+  <meta property="og:image:alt" content="Modern Sign In Form built with HTML CSS and JavaScript">
+  <!-- ===================================================== TWITTER / X ====================================================== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Modern Sign In Form with HTML, CSS & JavaScript">
+  <meta name="twitter:description"
+    content="Learn how to build a modern responsive glassmorphism Sign In Form with HTML, CSS and JavaScript.">
+  <meta name="twitter:image" content="https://77cod-ing.github.io/image%20copy%202.png">
+  <meta name="twitter:image:alt" content="Modern Sign In Form interface">
+  <!-- ===================================================== THEME ====================================================== -->
+  <meta name="theme-color" content="#0b1b2d">
+  <!-- ===================================================== STRUCTURED DATA — TECH ARTICLE ====================================================== -->
+  <script
+    type="application/ld+json"> { "@context": "https://schema.org", "@type": "TechArticle", "@id": "https://77cod-ing.github.io/Project6#article", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://77cod-ing.github.io/Project6" }, "headline": "Modern Sign In Form with HTML, CSS & JavaScript", "description": "Learn how to build a modern responsive Sign In Form using HTML, CSS and JavaScript with a glassmorphism design, password visibility toggle and form validation.", "image": "https://77cod-ing.github.io/image%20copy%202.png", "author": { "@type": "Organization", "name": "77cod_ing", "url": "https://77cod-ing.github.io/" }, "publisher": { "@type": "Organization", "name": "77cod_ing", "url": "https://77cod-ing.github.io/" }, "articleSection": "HTML CSS JavaScript Tutorials", "keywords": [ "sign in form", "HTML CSS JavaScript", "login form", "glassmorphism", "responsive login page", "password visibility toggle", "JavaScript form validation" ], "educationalLevel": "Beginner", "proficiencyLevel": "Beginner", "inLanguage": "en", "isAccessibleForFree": true } </script>
+  <!-- ===================================================== STRUCTURED DATA — BREADCRUMBS ====================================================== -->
+  <script
+    type="application/ld+json"> { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/" }, { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects" }, { "@type": "ListItem", "position": 3, "name": "Modern Sign In Form", "item": "https://77cod-ing.github.io/Project6" } ] } </script>
 
   <!-- ===== ASSETS ===== -->
   <link rel="icon" type="image/png" href="Picture1.png">
@@ -98,17 +86,16 @@
       min-height: 100vh;
     }
 
-    /* ===== NAVBAR ===== */
+    /* NAVBAR */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       height: 56px;
       padding: 0 2.5rem;
-      background: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
+      background: rgba(0, 5, 18, 0.7);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(0, 217, 255, 0.12);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -119,7 +106,7 @@
       align-items: center;
       font-family: var(--font-head);
       font-size: clamp(1rem, 2vw, 1.2rem);
-      font-weight: bold;
+      font-weight: 700;
       color: white;
       text-decoration: none;
       gap: 8px;
@@ -147,6 +134,41 @@
     .nav-links a:hover {
       color: var(--premcolo);
     }
+
+    .nav-new-link {
+      position: relative;
+    }
+
+    .new-badge {
+      position: absolute;
+      top: -8px;
+      right: -18px;
+      background: rgb(0, 255, 42);
+      color: #000000;
+      font-size: 7px;
+      font-weight: 800;
+      padding: 1px 5px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+      animation: newPulse 2s ease-in-out infinite;
+      pointer-events: none;
+      rotate: 30deg;
+    }
+
+    @keyframes newPulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+    }
+
 
     /* ===== BREADCRUMB ===== */
     .breadcrumb {
@@ -685,7 +707,7 @@
       margin: 1.5rem 0;
     }
 
-      /* ===== CODE SECTION ===== */
+    /* ===== CODE SECTION ===== */
     .code-section {
       margin: 2rem 0;
       width: 60vw;
@@ -848,6 +870,7 @@
       background: var(--premcolo);
       border-radius: 10px;
     }
+
     /* ===== COUNTDOWN ===== */
     /*linke*/
     .countdown-section {
@@ -1046,6 +1069,7 @@
       transform: rotate(90deg);
       color: #00e1ff;
     }
+
     /* ===== PREVIEW MODAL ===== */
     .preview-overlay {
       position: fixed;
@@ -1235,7 +1259,7 @@
       opacity: 1;
     }
 
-    .preview-file-tag.html-tag {
+    .preview-file-tag-tag {
       background: rgba(255, 102, 0, 0.15);
       color: #ff6600;
       border: 1px solid rgba(255, 102, 0, 0.3);
@@ -1280,6 +1304,7 @@
       color: var(--premcolo);
       margin-right: 4px;
     }
+
     /* ===== RESPONSIVE ===== */
     /*respon*/
     @media (max-width: 900px) {
@@ -1371,16 +1396,12 @@
 
   <!-- ===== NAVBAR ===== -->
   <header class="navbar">
-    <a href="#" class="logo">
-      <span class="logo-icon">{ / }</span> 77cod_ing
-    </a>
+    <a href="/" class="logo"><span class="logo-icon">{ / }</span> 77cod_ing</a>
     <nav class="nav-links" aria-label="Primary navigation">
-      <a href="https://77cod-ing.github.io">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-      <a href="Privacy Policy.html">Privacy Policy</a>
-      <a href="Terms & Conditions.html">Terms &amp; Conditions</a>
+      <a href="/">Home</a><a href="about">About</a><a href="projects">Projects</a>
+      <a href="contact">Contact</a><a href="Privacy Policy">Privacy Policy</a><a href="Terms & Conditions">Terms &
+        Conditions</a>
+      <a href="77coding-tools" class="nav-new-link">77coding-tools <span class="new-badge">NEW</span></a>
     </nav>
   </header>
 
@@ -1396,24 +1417,24 @@
     <span class="close-btn" id="closeBtn">&times;</span>
     <a href="https://77cod-ing.github.io" style="border-top: 2px solid #fff;height: 5rem;">Home</a>
     <a href="https://77cod-ing.github.io">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-    <a href="Privacy Policy.html">Privacy Policy</a>
-    <a href="Terms & Conditions.html" style="border-bottom: 2px solid #fff;">Terms &amp; Conditions</a>
+    <a href="projects">Projects</a>
+    <a href="contact">Contact</a>
+    <a href="Privacy Policy">Privacy Policy</a>
+    <a href="Terms & Conditions" style="border-bottom: 2px solid #fff;">Terms &amp; Conditions</a>
   </div>
 
   <!-- ===== BREADCRUMB ===== -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <ol>
       <li><a href="https://77cod-ing.github.io"><i class='bx bx-home-alt-2'></i> Home</a></li>
-      <li><a href="projects.html"><i class='bx bx-data'></i> Projects</a></li>
+      <li><a href="projects"><i class='bx bx-data'></i> Projects</a></li>
       <li><span aria-current="page">Sign In Form</span></li>
     </ol>
   </nav>
 
   <!-- ===== BACK BUTTON ===== -->
   <!--ret-->
-  <a href="projects.html#subscribe" class="back-link" aria-label="Return to Projects">
+  <a href="projects#subscribe" class="back-link" aria-label="Return to Projects">
     <i class='bx bx-arrow-back'></i> Return to Projects
   </a>
 
@@ -1649,157 +1670,159 @@
           Wait for the countdown below to unlock the download link.
         </p>
 
-              <!-- SOURCE CODE -->
-              <section id="source-code">
-                <h2>Get the Source Code</h2>
-                <p>
-                  The full source code is split across three files — <code>index.html</code>, <code>style.css</code>, and
-                  <code>script.js</code>.
-                  Explore the code below or wait for the countdown to get the GitHub Gist link.
-                </p>
-              
-                <div class="code-section">
-                  <div class="code-toolbar">
-                    <div class="code-tabs" role="tablist" aria-label="Code files">
-                      <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
-                        aria-controls="panel-html">HTML</button>
-                      <button class="code-tab" data-lang="css" role="tab" aria-selected="false" aria-controls="panel-css">CSS</button>
-                      <button class="code-tab" data-lang="js" role="tab" aria-selected="false" aria-controls="panel-js">JS</button>
-                    </div>
-                    <button class="preview-btn" id="previewBtn" aria-label="Preview GAMERS WORLD">
-                      <i class='bx bx-play-circle'></i>
-                      <span>Preview Result</span>
-                    </button>
-                  </div>
-              
-                  <div class="code-panels">
-                    <div class="code-box active" id="panel-html" role="tabpanel">
-                      <div class="code-header">
-                        <span class="code-lang-label" style="color:#ff6600;">HTML — index.html</span>
-                        <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
-                      </div>
-                      <pre><code id="code1" class="language-html"><!-- Loading source code... --></code></pre>
-                    </div>
-              
-                    <div class="code-box" id="panel-css" role="tabpanel">
-                      <div class="code-header">
-                        <span class="code-lang-label" style="color:#c084fc;">CSS — style.css</span>
-                        <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
-                      </div>
-                      <pre><code id="code2" class="language-css">/* Loading source code... */</code></pre>
-                    </div>
-              
-                    <div class="code-box" id="panel-js" role="tabpanel">
-                      <div class="code-header">
-                        <span class="code-lang-label" style="color:#f7df1e;">JS — script.js</span>
-                        <button class="copy-btn" data-target="code3"><i class='bx bxs-copy'></i> Copy</button>
-                      </div>
-                      <pre><code id="code3" class="language-javascript">// Loading source code...</code></pre>
-                    </div>
-                  </div>
+        <!-- SOURCE CODE -->
+        <section id="source-code">
+          <h2>Get the Source Code</h2>
+          <p>
+            The full source code is split across three files — <code>index</code>, <code>style.css</code>, and
+            <code>script.js</code>.
+            Explore the code below or wait for the countdown to get the GitHub Gist link.
+          </p>
+
+          <div class="code-section">
+            <div class="code-toolbar">
+              <div class="code-tabs" role="tablist" aria-label="Code files">
+                <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                  aria-controls="panel-html">HTML</button>
+                <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+                  aria-controls="panel-css">CSS</button>
+                <button class="code-tab" data-lang="js" role="tab" aria-selected="false"
+                  aria-controls="panel-js">JS</button>
+              </div>
+              <button class="preview-btn" id="previewBtn" aria-label="Preview GAMERS WORLD">
+                <i class='bx bx-play-circle'></i>
+                <span>Preview Result</span>
+              </button>
+            </div>
+
+            <div class="code-panels">
+              <div class="code-box active" id="panel-html" role="tabpanel">
+                <div class="code-header">
+                  <span class="code-lang-label" style="color:#ff6600;">HTML — index</span>
+                  <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
                 </div>
-              
-                <div class="info-box">
-                  <strong>💡 Quick Start:</strong> Download all three files into the same folder and open
-                  <code>index.html</code> in your browser. No server or build process required —
-                  the site runs immediately.
+                <pre><code id="code1" class="language-html"><!-- Loading source code... --></code></pre>
+              </div>
+
+              <div class="code-box" id="panel-css" role="tabpanel">
+                <div class="code-header">
+                  <span class="code-lang-label" style="color:#c084fc;">CSS — style.css</span>
+                  <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
                 </div>
-              
+                <pre><code id="code2" class="language-css">/* Loading source code... */</code></pre>
+              </div>
 
-        <!--linke-->
-        <div class="countdown-section">
-          <p style="color:var(--text-muted); font-size:14px; margin-bottom:0.75rem;">Full source code available after
-            countdown</p>
-          <div class="countdown" id="countdown">
-            <span id="number">10</span> seconds...
+              <div class="code-box" id="panel-js" role="tabpanel">
+                <div class="code-header">
+                  <span class="code-lang-label" style="color:#f7df1e;">JS — script.js</span>
+                  <button class="copy-btn" data-target="code3"><i class='bx bxs-copy'></i> Copy</button>
+                </div>
+                <pre><code id="code3" class="language-javascript">// Loading source code...</code></pre>
+              </div>
+            </div>
           </div>
-          <div class="link-box" id="linkBox">
-            <a href="https://gist.github.com/77cod-ing/a10075de3a9db81afea4a7e30b38904f" target="_blank">
-              <i class='bx bx-link-external'></i> Go to Code
-            </a>
+
+          <div class="info-box">
+            <strong>💡 Quick Start:</strong> Download all three files into the same folder and open
+            <code>index</code> in your browser. No server or build process required —
+            the site runs immediately.
           </div>
-        </div>
-      </section>
 
-      <hr>
 
-      <!-- FAQ -->
-      <section id="faq">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq">
-
-          <details class="faq-item">
-            <summary class="faq-question">What CSS technique creates the frosted-glass effect?</summary>
-            <div class="faq-answer">
-              The frosted-glass (glassmorphism) effect is achieved using <code>backdrop-filter: blur()</code> combined
-              with a
-              semi-transparent background color like <code>rgba(255, 255, 255, 0.1)</code>. Adding a subtle border and
-              box-shadow
-              completes the look.
+          <!--linke-->
+          <div class="countdown-section">
+            <p style="color:var(--text-muted); font-size:14px; margin-bottom:0.75rem;">Full source code available after
+              countdown</p>
+            <div class="countdown" id="countdown">
+              <span id="number">10</span> seconds...
             </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-question">How does the password visibility toggle work?</summary>
-            <div class="faq-answer">
-              A small JavaScript function listens for a click event on the toggle button. It checks the current
-              <code>type</code> attribute of the password input — if it's <code>"password"</code>, it switches to
-              <code>"text"</code> (and vice versa). The button icon also updates to reflect the current state.
+            <div class="link-box" id="linkBox">
+              <a href="https://gist.github.com/77cod-ing/a10075de3a9db81afea4a7e30b38904f" target="_blank">
+                <i class='bx bx-link-external'></i> Go to Code
+              </a>
             </div>
-          </details>
+          </div>
+        </section>
 
-          <details class="faq-item">
-            <summary class="faq-question">Is this form responsive on mobile devices?</summary>
-            <div class="faq-answer">
-              Yes. The form card uses <code>max-width</code> and percentage-based sizing to adapt to smaller screens.
-              Media queries adjust padding, font sizes, and the card dimensions to ensure a comfortable
-              touch-friendly experience on mobile.
-            </div>
-          </details>
+        <hr>
 
-          <details class="faq-item">
-            <summary class="faq-question">Can I add this to an existing website?</summary>
-            <div class="faq-answer">
-              Absolutely. The Sign In Form is self-contained — you can copy the HTML, CSS, and JavaScript into any
-              existing project. Just make sure there are no conflicting class names or styles, and adjust the form's
-              <code>action</code> attribute to point to your authentication endpoint.
-            </div>
-          </details>
+        <!-- FAQ -->
+        <section id="faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq">
 
-          <details class="faq-item">
-            <summary class="faq-question">Does this form include backend authentication?</summary>
-            <div class="faq-answer">
-              No — this is a front-end only project focused on the UI/UX design and client-side interactivity.
-              To make it functional, you'll need to connect it to a backend (like Node.js, PHP, or Firebase Auth)
-              that handles user verification and session management.
-            </div>
-          </details>
+            <details class="faq-item">
+              <summary class="faq-question">What CSS technique creates the frosted-glass effect?</summary>
+              <div class="faq-answer">
+                The frosted-glass (glassmorphism) effect is achieved using <code>backdrop-filter: blur()</code> combined
+                with a
+                semi-transparent background color like <code>rgba(255, 255, 255, 0.1)</code>. Adding a subtle border and
+                box-shadow
+                completes the look.
+              </div>
+            </details>
 
-        </div>
-      </section>
+            <details class="faq-item">
+              <summary class="faq-question">How does the password visibility toggle work?</summary>
+              <div class="faq-answer">
+                A small JavaScript function listens for a click event on the toggle button. It checks the current
+                <code>type</code> attribute of the password input — if it's <code>"password"</code>, it switches to
+                <code>"text"</code> (and vice versa). The button icon also updates to reflect the current state.
+              </div>
+            </details>
 
-      <hr>
+            <details class="faq-item">
+              <summary class="faq-question">Is this form responsive on mobile devices?</summary>
+              <div class="faq-answer">
+                Yes. The form card uses <code>max-width</code> and percentage-based sizing to adapt to smaller screens.
+                Media queries adjust padding, font sizes, and the card dimensions to ensure a comfortable
+                touch-friendly experience on mobile.
+              </div>
+            </details>
 
-      <!-- CONCLUSION -->
-      <section id="conclusion" class="conclusion">
-        <h2>Conclusion</h2>
-        <p>
-          The <strong>Sign In Form</strong> is a vital part of any digital product.
-          With HTML, CSS, and a touch of JavaScript, you can create a login page that is not only functional
-          but also visually appealing and user-friendly.
-          By combining accessibility, modern design, and interactivity, your Sign In page can become
-          a polished entry point that leaves a strong impression on users.
-        </p>
+            <details class="faq-item">
+              <summary class="faq-question">Can I add this to an existing website?</summary>
+              <div class="faq-answer">
+                Absolutely. The Sign In Form is self-contained — you can copy the HTML, CSS, and JavaScript into any
+                existing project. Just make sure there are no conflicting class names or styles, and adjust the form's
+                <code>action</code> attribute to point to your authentication endpoint.
+              </div>
+            </details>
 
-        <div class="seo-box" style="margin-top:1.5rem;">
-          <strong>🔑 SEO Keywords:</strong> sign in form HTML CSS, modern login page, glassmorphism sign in UI,
-          frosted glass login card, responsive sign in design, password visibility toggle
-        </div>
+            <details class="faq-item">
+              <summary class="faq-question">Does this form include backend authentication?</summary>
+              <div class="faq-answer">
+                No — this is a front-end only project focused on the UI/UX design and client-side interactivity.
+                To make it functional, you'll need to connect it to a backend (like Node.js, PHP, or Firebase Auth)
+                that handles user verification and session management.
+              </div>
+            </details>
 
-        <p style="color:var(--text-muted); font-size:14px; margin-bottom:0; margin-top:1rem;">
-          Found this useful? Explore more HTML CSS JavaScript projects in the sidebar →
-        </p>
-      </section>
+          </div>
+        </section>
+
+        <hr>
+
+        <!-- CONCLUSION -->
+        <section id="conclusion" class="conclusion">
+          <h2>Conclusion</h2>
+          <p>
+            The <strong>Sign In Form</strong> is a vital part of any digital product.
+            With HTML, CSS, and a touch of JavaScript, you can create a login page that is not only functional
+            but also visually appealing and user-friendly.
+            By combining accessibility, modern design, and interactivity, your Sign In page can become
+            a polished entry point that leaves a strong impression on users.
+          </p>
+
+          <div class="seo-box" style="margin-top:1.5rem;">
+            <strong>🔑 SEO Keywords:</strong> sign in form HTML CSS, modern login page, glassmorphism sign in UI,
+            frosted glass login card, responsive sign in design, password visibility toggle
+          </div>
+
+          <p style="color:var(--text-muted); font-size:14px; margin-bottom:0; margin-top:1rem;">
+            Found this useful? Explore more HTML CSS JavaScript projects in the sidebar →
+          </p>
+        </section>
 
     </main>
 
@@ -1808,17 +1831,18 @@
       <div class="sidebar-box">
         <div class="sidebar-header">🔗 Related Projects</div>
         <div class="related-list">
-          <a class="related-card" href="Project11.html" aria-label="3D Carousel Support Messages">
-            <img src="image copy 23.png" alt="3D Rotating Carousel CSS JavaScript" loading="lazy" width="280" height="158">
+          <a class="related-card" href="Project11" aria-label="3D Carousel Support Messages">
+            <img src="image copy 23.png" alt="3D Rotating Carousel CSS JavaScript" loading="lazy" width="280"
+              height="158">
             <div class="related-card-overlay"></div>
             <div class="related-card-title">3D Carousel Support Messages — HTML CSS JavaScript</div>
           </a>
-          <a class="related-card" href="Project15.html" aria-label="Glassmorphism 3D Card UI">
+          <a class="related-card" href="Project15" aria-label="Glassmorphism 3D Card UI">
             <img src="image copy 43.png" alt="Glassmorphism 3D Card UI CSS" loading="lazy" width="280" height="158">
             <div class="related-card-overlay"></div>
             <div class="related-card-title">Floating Label Input Effect — CSS</div>
           </a>
-          <a class="related-card" href="Project40.html" aria-label="CSS Neon Digital Clock">
+          <a class="related-card" href="Project40" aria-label="CSS Neon Digital Clock">
             <img src="https://i.suar.me/Ep114/m" alt="CSS Neon Digital Clock" loading="lazy" width="280" height="158">
             <div class="related-card-overlay"></div>
             <div class="related-card-title">CSS Neon Digital Clock — HTML CSS JavaScript</div>
@@ -1864,7 +1888,7 @@
       </div>
     </div>
   </div>
-  
+
   <!-- ===== SCRIPTS ===== -->
   <script>
     /* ===== Countdown ===== */
