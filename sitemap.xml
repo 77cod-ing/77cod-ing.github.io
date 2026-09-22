@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url><loc>https://77cod-ing.github.io/</loc></url>
+  <!-- Main Website -->
+  <url>
+    <loc>https://77cod-ing.github.io/</loc>
+  </url>
 
+  <!-- 77coding-tools -->
+  <url>
+    <loc>https://77cod-ing.github.io/77coding-tools/</loc>
+  </url>
+
+  <url>
+    <loc>https://77cod-ing.github.io/77coding-tools/json-formatter</loc>
+  </url>
+
+  <url>
+    <loc>https://77cod-ing.github.io/77coding-tools/image-compressor</loc>
+  </url>
+
+  <!-- Projects -->
   <url><loc>https://77cod-ing.github.io/Project1.html</loc></url>
   <url><loc>https://77cod-ing.github.io/Project2.html</loc></url>
   <url><loc>https://77cod-ing.github.io/Project3.html</loc></url>
