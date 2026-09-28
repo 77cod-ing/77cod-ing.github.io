@@ -1699,24 +1699,24 @@
         });
       });
 
-      /* ===== COPY BUTTONS ===== */
-      document.querySelectorAll(".copy-btn").forEach(btn => {
-        btn.addEventListener("click", async () => {
-          const code = document.getElementById(btn.dataset.target)?.innerText || "";
-          if (!code.trim()) return;
-          try {
-            await navigator.clipboard.writeText(code);
-            btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
-            btn.classList.add("copied");
-            setTimeout(() => {
-              btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
-              btn.classList.remove("copied");
-            }, 2000);
-          } catch {
-            btn.textContent = "Error";
-          }
-        });
-      });
+  /* ===== Copy buttons ===== */
+  document.querySelectorAll(".copy-btn").forEach(btn => {
+    btn.addEventListener("click", async () => {
+     const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+      if (!code.trim()) return;
+      try {
+        await navigator.clipboard.writeText(code);
+        btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+        btn.classList.add("copied");
+        setTimeout(() => {
+          btn.innerHTML = "<i class='bx bxs-copy'></i> Copy";
+          btn.classList.remove("copied");
+        }, 2000);
+      } catch {
+        btn.textContent = "Error";
+      }
+    });
+  });
 
       /* ===== PREVIEW MODAL ===== */
       const previewOverlay = document.getElementById("previewOverlay");
