@@ -1,0 +1,2264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== PRIMARY SEO META ===== -->
+    <title>Electric Border Button with SVG Filters — HTML, CSS & JS Tutorial 2026</title>
+    <meta name="description"
+        content="Build a glowing electric border button using SVG feTurbulence and feDisplacementMap filters, animated with SMIL and styled with CSS. Free source code, step-by-step tutorial.">
+    <meta name="keywords"
+        content="electric border button css, svg turbulence filter, feTurbulence animation, feDisplacementMap tutorial, glowing button css, neon button hover effect, svg filter css, oklch relative color, electric effect html css, css glow button, frontend project 2026">
+    <meta name="author" content="77cod_ing">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://77cod-ing.github.io/Project46">
+
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Electric Border Button with SVG Filters — HTML, CSS & JS Tutorial 2026">
+    <meta property="og:description"
+        content="Learn how to create a crackling electric border on hover using SVG feTurbulence, feOffset animation and feDisplacementMap. Free source code included.">
+    <meta property="og:image" content="https://77cod-ing.github.io/electric-button-preview.png">
+    <meta property="og:url" content="https://77cod-ing.github.io/Project46">
+    <meta property="og:site_name" content="77cod_ing">
+    <meta property="article:published_time" content="2026-10-02T00:00:00Z">
+    <meta property="article:modified_time" content="2026-10-02T00:00:00Z">
+    <meta property="article:author" content="77cod_ing">
+    <meta property="article:section" content="CSS Tutorials">
+    <meta property="article:tag"
+        content="HTML, CSS, SVG Filters, feTurbulence, Button, Hover Animation, UI Components, Frontend">
+
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Electric Border Button with SVG Filters — HTML, CSS & JS Tutorial">
+    <meta name="twitter:description"
+        content="Create a glowing button whose border crackles with electricity on hover, powered by SVG turbulence filters.">
+    <meta name="twitter:image" content="https://77cod-ing.github.io/electric-button-preview.png">
+
+    <!-- ===== SCHEMA: TechArticle ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Electric Border Button with SVG Filters — HTML, CSS & JS Tutorial",
+    "description": "A complete tutorial on building a glowing button with an animated electric border using SVG feTurbulence, feOffset, feDisplacementMap and layered CSS glows.",
+    "image": "https://77cod-ing.github.io/electric-button-preview.png",
+    "datePublished": "2026-10-02",
+    "dateModified": "2026-10-02",
+    "author": { "@type": "Person", "name": "77cod_ing", "url": "https://77cod-ing.github.io" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "77cod_ing",
+      "logo": { "@type": "ImageObject", "url": "https://77cod-ing.github.io/Picture1.png" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://77cod-ing.github.io/Project46" },
+    "articleSection": "CSS Tutorials",
+    "keywords": "electric border button, svg turbulence filter, feDisplacementMap, glowing button css, oklch relative color",
+    "timeRequired": "PT15M",
+    "educationalLevel": "Intermediate",
+    "teaches": ["SVG Filters", "feTurbulence", "feDisplacementMap", "SMIL Animation", "CSS Glow Layers", "oklch() Relative Colors", "prefers-reduced-motion"]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: HowTo ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Build an Electric Border Button with SVG Filters",
+    "description": "Step-by-step guide to creating a button whose border crackles with animated electricity on hover using SVG filters and CSS.",
+    "image": "https://77cod-ing.github.io/electric-button-preview.png",
+    "totalTime": "PT15M",
+    "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
+    "supply": [
+      { "@type": "HowToSupply", "name": "Text editor (VS Code)" },
+      { "@type": "HowToSupply", "name": "A modern web browser" }
+    ],
+    "tool": [
+      { "@type": "HowToTool", "name": "HTML" },
+      { "@type": "HowToTool", "name": "CSS" },
+      { "@type": "HowToTool", "name": "SVG" },
+      { "@type": "HowToTool", "name": "JavaScript" }
+    ],
+    "step": [
+      { "@type": "HowToStep", "name": "Define Color Variables", "text": "Declare the electric color in :root and derive the light and gradient shades with oklch() relative color syntax.", "position": 1 },
+      { "@type": "HowToStep", "name": "Build the Card Structure", "text": "Create a .card-container with an inner layer for borders and glows, an overlay layer, a background glow and a content layer holding the button.", "position": 2 },
+      { "@type": "HowToStep", "name": "Style the Pill Container", "text": "Give the card a 50px radius, padding and a layered background combining a diagonal gradient and a dark base color.", "position": 3 },
+      { "@type": "HowToStep", "name": "Create the SVG Turbulence Filter", "text": "Add a hidden SVG with a filter that generates four feTurbulence layers and combines them into one noise map.", "position": 4 },
+      { "@type": "HowToStep", "name": "Animate the Noise", "text": "Animate feOffset dx and dy with SMIL so the noise scrolls in four directions and loops seamlessly.", "position": 5 },
+      { "@type": "HowToStep", "name": "Distort the Border", "text": "Use feDisplacementMap to push the border pixels around using the noise map, then apply the filter to the border layers on hover.", "position": 6 },
+      { "@type": "HowToStep", "name": "Add Layered Glows", "text": "Stack two blurred border layers and a large blurred background glow, and raise their opacity on hover.", "position": 7 },
+      { "@type": "HowToStep", "name": "Sync the Filter Region with JavaScript", "text": "Measure the card, resize the filter region and animation distances to match, and pause animations when reduced motion is preferred.", "position": 8 }
+    ]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: FAQPage ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the electric border effect work?",
+        "acceptedAnswer": { "@type": "Answer", "text": "An SVG filter generates animated fractal noise with feTurbulence, then feDisplacementMap uses that noise to shift the pixels of a CSS border. Because the noise keeps scrolling, the border appears to crackle like electricity." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is JavaScript needed if the effect is SVG and CSS?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A small script measures the real size of the button and sets the filter region and the animation distances to match. When the animated offset equals the region size, the first and last frames are identical, so the loop never jumps." }
+      },
+      {
+        "@type": "Question",
+        "name": "What does oklch(from var(--color) l c h) do?",
+        "acceptedAnswer": { "@type": "Answer", "text": "It is CSS relative color syntax. It takes an existing color, reads its lightness, chroma and hue, and lets you build a new color from them, for example by lowering lightness and opacity to create a soft gradient shade from the same hue." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I change the electric color?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Change --electric-border-color in :root and the derived light and gradient colors update automatically. Hard-coded border and shadow colors in the rules should also be replaced with the variable." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the effect work on mobile devices?",
+        "acceptedAnswer": { "@type": "Answer", "text": "SVG filters run on mobile, but there is no hover on touch screens, so the effect appears on tap at best. Consider triggering it with :active or :focus-visible, and keep the displacement scale modest because turbulence filters are expensive on low-end devices." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the effect accessible?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The label is a real button element, so it is keyboard focusable. The script pauses SVG animations when prefers-reduced-motion is enabled, and you should mirror the hover styles on :focus-visible so keyboard users see the effect too." }
+      }
+    ]
+  }
+  </script>
+
+    <!-- ===== SCHEMA: BreadcrumbList ===== -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io/index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects.html" },
+      { "@type": "ListItem", "position": 3, "name": "Electric Border Button with SVG Filters", "item": "https://77cod-ing.github.io/Project46" }
+    ]
+  }
+  </script>
+
+    <!-- ===== ASSETS ===== -->
+    <link rel="icon" type="image/png" href="Picture1.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+    <link href="https://networks0.github.io/copy.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+        
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+            --premcolo: #00d9ff;
+            --accent2: #ff6b35;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --surface: rgba(255, 255, 255, 0.04);
+            --surface-hover: rgba(0, 217, 255, 0.07);
+            --border: rgba(255, 255, 255, 0.08);
+            --font-head: 'Space Mono', monospace;
+            --font-body: 'DM Sans', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--back);
+            font-family: var(--font-body);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 56px;
+            padding: 0 2.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--premcolo);
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: clamp(1rem, 2vw, 2rem);
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: var(--premcolo);
+        }
+
+        /* ===== BREADCRUMB ===== */
+        .breadcrumb {
+            padding: 12px 2.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb ol {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .breadcrumb li {
+            display: flex;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .breadcrumb li+li::before {
+            content: "\203A";
+            color: var(--premcolo);
+            margin-right: 6px;
+            font-size: 1.1rem;
+        }
+
+        .breadcrumb a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--premcolo);
+        }
+
+        .breadcrumb [aria-current="page"] {
+            color: var(--premcolo);
+            font-weight: 600;
+        }
+
+        /* ===== BACK BUTTON ===== */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            margin: 1rem 2.5rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .back-link:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 3rem 2.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: var(--font-head);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .tag-tutorial {
+            background: rgba(0, 217, 255, 0.12);
+            color: var(--premcolo);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+        }
+
+        .tag-css {
+            background: rgba(0, 217, 255, 0.08);
+            color: #7dd3fc;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+        }
+
+        .tag-html {
+            background: rgba(255, 102, 0, 0.1);
+            color: #ff9966;
+            border: 1px solid rgba(255, 102, 0, 0.2);
+        }
+
+        .tag-js {
+            background: rgba(251, 191, 36, 0.1);
+            color: #fbbf24;
+            border: 1px solid rgba(251, 191, 36, 0.25);
+        }
+
+        .tag-level {
+            background: rgba(255, 107, 53, 0.1);
+            color: var(--accent2);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+        }
+
+        .read-time {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-head);
+            font-size: clamp(1.6rem, 4vw, 2.6rem);
+            line-height: 1.25;
+            color: #fff;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 span {
+            color: var(--premcolo);
+        }
+
+        .hero-lead {
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            color: var(--text-muted);
+            max-width: 680px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .stat-value {
+            font-family: var(--font-head);
+            font-size: 1.4rem;
+            color: var(--premcolo);
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-height: 500px;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            display: block;
+            box-shadow: 0 0 60px rgba(0, 217, 255, 0.08), 0 32px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .img-caption {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* ===== LAYOUT ===== */
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2.5rem 4rem;
+            align-items: start;
+        }
+
+        .layout>* {
+            min-width: 0;
+        }
+
+        /* ===== ARTICLE ===== */
+        .article-body h2 {
+            font-family: var(--font-head);
+            font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+            color: var(--premcolo);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            scroll-margin-top: 80px;
+        }
+
+        .article-body h3 {
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            color: #7dd3fc;
+            margin: 1.8rem 0 0.75rem;
+            scroll-margin-top: 80px;
+        }
+
+        .article-body p {
+            margin-bottom: 1.1rem;
+            color: var(--text);
+        }
+
+        .article-body code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 7px;
+            border-radius: 5px;
+        }
+
+        .article-body ul,
+        .article-body ol {
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 1.1rem;
+        }
+
+        .article-body li {
+            margin-bottom: 9px;
+        }
+
+        .article-body li strong {
+            color: #fff;
+        }
+
+        /* ===== TOC ===== */
+        .toc {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .toc-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--premcolo);
+            margin-bottom: 0.75rem;
+        }
+
+        .toc ol {
+            padding-left: 1.2rem;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+        }
+
+        .toc a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: var(--premcolo);
+        }
+
+        /* ===== FEATURE CARDS ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 1.5rem 0;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            transition: border-color 0.25s, background 0.25s;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(0, 217, 255, 0.3);
+            background: var(--surface-hover);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-title {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .feature-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* ===== STEPS ===== */
+        .steps {
+            margin: 1.5rem 0;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 44px 1fr;
+            gap: 1rem;
+            padding: 1.1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-num {
+            width: 44px;
+            height: 44px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-head);
+            color: var(--premcolo);
+            font-size: 1rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            margin-top: 0;
+            font-size: 1rem;
+        }
+
+        .step-content p {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* ===== CODE SECTION ===== */
+        .code-section {
+            margin: 2rem 0;
+            width: 100%;
+        }
+
+        .code-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .code-tabs {
+            display: flex;
+            gap: 4px;
+        }
+
+        .code-tab {
+            padding: 8px 20px;
+            border-radius: 8px 8px 0 0;
+            border: 1px solid var(--border);
+            border-bottom: none;
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .code-tab.active {
+            background: #1e1e2f;
+            color: #ff6600;
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+
+        .preview-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 22px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 217, 255, 0.4);
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.12), rgba(0, 217, 255, 0.04));
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            letter-spacing: 0.3px;
+        }
+
+        .preview-btn:hover {
+            border-color: var(--premcolo);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2), 0 0 40px rgba(0, 217, 255, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .preview-btn:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        .preview-btn i {
+            font-size: 16px;
+        }
+
+        .preview-btn.loading i {
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .code-panels {
+            position: relative;
+        }
+
+        .code-box {
+            background: #1e1e2f;
+            border: 1px solid rgba(0, 217, 255, 0.15);
+            border-radius: 0 12px 12px 12px;
+            position: relative;
+            display: none;
+        }
+
+        .code-box.active {
+            display: block;
+        }
+
+        .code-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .code-lang-label {
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .copy-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            border-radius: 7px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo);
+        }
+
+        .copy-btn.copied {
+            color: #4ade80;
+            border-color: #4ade80;
+        }
+
+        :not(pre)>code[class*="language-"],
+        pre[class*="language-"] {
+            width: 100%;
+            max-width: 100%;
+            height: 50vh;
+            border-radius: 0 0 12px 12px;
+            overflow: auto;
+            margin: 0;
+        }
+
+        pre::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        pre::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        pre::-webkit-scrollbar-thumb {
+            background: var(--premcolo);
+            border-radius: 10px;
+        }
+
+
+
+        .warn-box {
+            background: rgba(255, 107, 53, 0.06);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-left: 4px solid var(--accent2);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .warn-box strong {
+            color: var(--accent2);
+        }
+
+        /* ===== TABLE ===== */
+        .table-wrap {
+            overflow-x: auto;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 14px;
+        }
+
+        .comparison-table th {
+            font-family: var(--font-head);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 10px 14px;
+            background: rgba(0, 217, 255, 0.08);
+            color: var(--premcolo);
+            border: 1px solid var(--border);
+            text-align: left;
+        }
+
+        .comparison-table td {
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            vertical-align: top;
+        }
+
+        .comparison-table tr:hover td {
+            background: var(--surface-hover);
+        }
+
+        .comparison-table td strong {
+            color: #fff;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-family: var(--font-head);
+            font-weight: 700;
+        }
+
+        .badge-green {
+            background: rgba(74, 222, 128, 0.12);
+            color: #4ade80;
+            border: 1px solid rgba(74, 222, 128, 0.25);
+        }
+
+        .badge-orange {
+            background: rgba(255, 107, 53, 0.12);
+            color: var(--accent2);
+            border: 1px solid rgba(255, 107, 53, 0.25);
+        }
+
+        .badge-blue {
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+        }
+
+        /* ===== FAQ ===== */
+        .faq {
+            margin: 1.5rem 0;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            background: var(--surface);
+            font-weight: 600;
+            font-size: 15px;
+            transition: background 0.2s;
+            list-style: none;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background: var(--surface-hover);
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.3rem;
+            color: var(--premcolo);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        details[open] .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 1rem 1.25rem;
+            color: var(--text-muted);
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+        }
+
+        .faq-answer code {
+            font-family: var(--font-head);
+            font-size: 0.85em;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--premcolo);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* ===== CONCLUSION ===== */
+        .conclusion {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.07), rgba(0, 140, 160, 0.05));
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 16px;
+            padding: 1.75rem 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .conclusion h2 {
+            border: none;
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 1.5rem 0;
+        }
+
+        /* ===== COUNTDOWN ===== */
+        .countdown-box {
+            background: rgba(0, 217, 255, 0.05);
+            border: 1px solid rgba(0, 217, 255, 0.18);
+            border-radius: 14px;
+            padding: 1.5rem 1.75rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        .countdown-label {
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .countdown-timer {
+            font-family: var(--font-head);
+            font-size: 2.5rem;
+            color: var(--premcolo);
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .gist-link-wrapper {
+            display: none;
+            margin-top: 12px;
+        }
+
+        .gist-link-wrapper.visible {
+            display: block;
+        }
+
+        .gist-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(0, 217, 255, 0.06));
+            border: 1px solid rgba(0, 217, 255, 0.35);
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .gist-link:hover {
+            background: rgba(0, 217, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            position: sticky;
+            top: 72px;
+        }
+
+        .sidebar-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-header {
+            padding: 14px 16px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--premcolo);
+            border-bottom: 1px solid var(--border);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .related-list {
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .related-card {
+            display: block;
+            text-decoration: none;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 16/9;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .related-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 217, 255, 0.3);
+        }
+
+        .related-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .related-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+        .related-card-title {
+            position: absolute;
+            bottom: 8px;
+            left: 10px;
+            right: 10px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* ===== PREVIEW MODAL ===== */
+        .preview-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 5, 15, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+        }
+
+        .preview-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .preview-modal {
+            width: 95vw;
+            max-width: 95vw;
+            height: 95vh;
+            max-height: 95vh;
+            background: #0a0e1a;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(0, 217, 255, 0.06);
+            transform: scale(0.92) translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .preview-overlay.open .preview-modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .preview-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
+        }
+
+        .preview-modal-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .preview-modal-title i {
+            color: var(--premcolo);
+            font-size: 16px;
+        }
+
+        .preview-modal-title strong {
+            color: #fff;
+        }
+
+        .preview-dots {
+            display: flex;
+            gap: 7px;
+        }
+
+        .preview-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, filter 0.2s;
+        }
+
+        .preview-dot:hover {
+            transform: scale(1.2);
+            filter: brightness(1.3);
+        }
+
+        .preview-dot.red {
+            background: #ff5f57;
+        }
+
+        .preview-dot.yellow {
+            background: #febc2e;
+        }
+
+        .preview-dot.green {
+            background: #28c840;
+        }
+
+        .preview-close-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .preview-close-btn:hover {
+            border-color: var(--accent2);
+            color: var(--accent2);
+            background: rgba(255, 107, 53, 0.08);
+        }
+
+        .preview-iframe-wrap {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .preview-iframe-wrap iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            background: #000;
+        }
+
+        .preview-loading {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            background: #0a0e1a;
+            z-index: 2;
+            transition: opacity 0.4s;
+        }
+
+        .preview-loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .preview-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(0, 217, 255, 0.15);
+            border-top-color: var(--premcolo);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
+        .preview-loading-text {
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .preview-loading-files {
+            display: flex;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .preview-file-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            font-weight: 700;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+            background: rgba(255, 102, 0, 0.15);
+            color: #ff6600;
+            border: 1px solid rgba(255, 102, 0, 0.3);
+        }
+
+        .preview-file-tag.loaded {
+            opacity: 1;
+        }
+
+        .preview-hint {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 6px 16px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            color: var(--text-muted);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.5s 0.8s;
+            white-space: nowrap;
+            z-index: 3;
+        }
+
+        .preview-hint.show {
+            opacity: 1;
+        }
+
+        .preview-hint i {
+            color: var(--premcolo);
+            margin-right: 4px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 1fr;
+                padding: 1.5rem 1.25rem;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .related-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .related-card {
+                flex: 1 1 calc(50% - 8px);
+            }
+
+            .hero {
+                padding: 2rem 1.25rem 1.5rem;
+            }
+
+            .navbar {
+                padding: 0 1.25rem;
+            }
+
+            .breadcrumb {
+                padding: 10px 1.25rem;
+            }
+
+            .back-link {
+                margin: 0.75rem 1.25rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-stats {
+                gap: 1.2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .related-card {
+                flex: 1 1 100%;
+            }
+
+            .comparison-table {
+                font-size: 12px;
+            }
+
+            .preview-hint {
+                display: none;
+            }
+        }
+        .premium-box { 
+        top: 14vh; 
+        position: absolute; 
+        display: flex; 
+        align-items: center; 
+        gap: 18px; 
+        padding: 24px; 
+        margin: 30px 0; 
+        border: 1px solid rgba(0, 217, 255, 0.35); 
+        border-radius: 16px; 
+        background: rgb(0, 11, 31); 
+        box-shadow: 0 0 25px rgba(0, 217, 255, 0.08); 
+        overflow: hidden; } 
+        .premium-box::before { 
+        content: ""; 
+        position: absolute; 
+        width: 180px; 
+        height: 180px; 
+        top: -100px; 
+        right: -70px; 
+        background: #00d9ff; 
+        opacity: 0.08; 
+        filter: blur(60px); 
+        pointer-events: none; } 
+        .premium-icon { 
+        width: 52px; 
+        height: 52px; 
+        min-width: 52px; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        border-radius: 14px; 
+        background: rgba(0, 217, 255, 0.08); 
+        border: 1px solid rgba(0, 217, 255, 0.25); 
+        font-size: 22px; } 
+        .premium-content { 
+        flex: 1; } 
+        .premium-label { 
+        display: inline-block; 
+        margin-bottom: 5px; 
+        color: #00d9ff; 
+        font-size: 11px; 
+        font-weight: 700; 
+        letter-spacing: 1.5px; } 
+        .premium-content h3 { 
+        margin: 0 0 7px; 
+        color: #fff; 
+        font-size: 20px; } 
+        .premium-content p { 
+        margin: 0; 
+        max-width: 600px; 
+        color: #9ca3af; 
+        font-size: 14px; 
+        line-height: 1.6; } 
+        
+        .premium-bottom { 
+        display: flex; 
+        align-items: center; 
+        gap: 18px; 
+        margin-top: 18px; } 
+        .premium-price { 
+        color: #fff; 
+        font-size: 25px; 
+        font-weight: 800; } 
+        .buy-button { 
+        display: inline-flex; 
+        align-items: center; 
+        gap: 10px; 
+        padding: 11px 20px; 
+        border-radius: 10px; 
+        color: #000; 
+        background: linear-gradient(90deg,rgb(255, 212, 40), rgb(255, 212, 40),rgb(255, 212, 40),rgb(149, 114, 0) ); 
+        text-decoration: none; 
+        font-size: 14px; 
+        font-weight: 700; 
+        transition: transform .25s ease, box-shadow .25s ease; } 
+        .buy-button:hover { 
+        transform: translateY(-2px); 
+        box-shadow: 0 8px 25px rgba(0, 217, 255, 0.25), 0 8px 25px rgba(255, 0, 110, 0.2); } 
+        .buy-button span { 
+        font-size: 18px; 
+        transition: transform .25s ease; } 
+        .buy-button:hover span { 
+        transform: translateX(4px); } 
+        @media (max-width: 600px) { 
+        .premium-box { 
+        align-items: flex-start; 
+        flex-direction: column; } 
+        .premium-bottom { 
+        width: 100%; 
+        justify-content: space-between; } 
+        .buy-button { 
+        flex: 1; 
+        justify-content: center; 
+        } 
+        }
+    </style> 
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+        <a href="index.html" class="logo"><span class="logo-icon">{ / }</span> 77cod_ing</a>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="Privacy Policy.html">Privacy Policy</a>
+            <a href="Terms & Conditions.html">Terms &amp; Conditions</a>
+        </nav>
+    </header>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="index.html"><i class='bx bx-home-alt-2'></i> <span
+                        itemprop="name">Home</span></a>
+                <meta itemprop="position" content="1">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="projects.html"><i class='bx bx-data'></i> <span
+                        itemprop="name">Projects</span></a>
+                <meta itemprop="position" content="2">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name" aria-current="page">Electric Border Button</span>
+                <meta itemprop="position" content="3">
+            </li>
+        </ol>
+    </nav>
+
+    <a href="projects.html" class="back-link" aria-label="Return to Projects">
+        <i class='bx bx-arrow-back'></i> Return to Projects
+    </a>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-labelledby="main-heading">
+        <div class="hero-meta">
+            <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+            <span class="tag tag-html">HTML</span>
+            <span class="tag tag-css">CSS</span>
+            <span class="tag tag-js">JS</span>
+            <span class="tag tag-level">Intermediate</span>
+            <span class="read-time"><i class='bx bx-time'></i> ~12 min read</span>
+        </div>
+
+        <h1 id="main-heading">
+            <span>Electric Border Button</span> with<br>
+            SVG Filters — HTML, CSS &amp; JS
+        </h1>
+
+        <p class="hero-lead">
+            A complete tutorial on building a glowing pill button whose border crackles with electricity on hover.
+            The effect is powered by SVG <code>feTurbulence</code> noise, animated with <code>feOffset</code>,
+            and bent into shape with <code>feDisplacementMap</code> — then wrapped in layered CSS glows.
+        </p>
+
+        <div class="hero-stats">
+            <div class="stat"><span class="stat-value">8</span><span class="stat-label">Build Steps</span></div>
+            <div class="stat"><span class="stat-value">4</span><span class="stat-label">Noise Layers</span></div>
+            <div class="stat"><span class="stat-value">~30</span><span class="stat-label">Lines of JS</span></div>
+            <div class="stat"><span class="stat-value">Free</span><span class="stat-label">Source Code</span></div>
+        </div>
+
+        <img src="electric-button-preview.png"
+            alt="Glowing pill-shaped button labeled 77cod-ing with a crackling blue electric border on a black background"
+            class="hero-img" width="1200" height="500" loading="eager">
+        <p class="img-caption">Final result: a pill button with a live electric border and layered neon glow</p>
+    </section>
+
+    <!-- ===== MAIN LAYOUT ===== -->
+    <div class="layout">
+
+        <article class="article-body" itemscope itemtype="https://schema.org/TechArticle">
+
+            <!-- TOC -->
+            <nav class="toc" aria-label="Table of contents">
+                <div class="toc-title"><i class='bx bx-list-ul'></i> Table of Contents</div>
+                <ol>
+                    <li><a href="#what-is">What Is an Electric Border Button?</a></li>
+                    <li><a href="#why-use">Why Use This Design?</a></li>
+                    <li><a href="#features">Key Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#step-1">Step 1: Define the Color Variables</a></li>
+                    <li><a href="#step-2">Step 2: Build the Card Structure</a></li>
+                    <li><a href="#step-3">Step 3: Style the Pill Container</a></li>
+                    <li><a href="#step-4">Step 4: Create the SVG Turbulence Filter</a></li>
+                    <li><a href="#step-5">Step 5: Animate the Noise</a></li>
+                    <li><a href="#step-6">Step 6: Distort the Border on Hover</a></li>
+                    <li><a href="#step-7">Step 7: Add Layered Glows</a></li>
+                    <li><a href="#step-8">Step 8: Sync the Filter with JavaScript</a></li>
+                    <li><a href="#source-code">Full Source Code</a></li>
+                    <li><a href="#comparison">SVG Filter Primitives Comparison</a></li>
+                    <li><a href="#tips">Tips for Better Results</a></li>
+                    <li><a href="#mistakes">Common Mistakes to Avoid</a></li>
+                    <li><a href="#faq">Frequently Asked Questions</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ol>
+            </nav>
+
+            <section id="what-is">
+                <h2>What Is an Electric Border Button?</h2>
+                <p>
+                    An <strong>electric border button</strong> is a call-to-action whose outline looks alive: on hover,
+                    the border
+                    wobbles and crackles like a charged wire while a neon glow pulses around it. Instead of animating
+                    dozens of
+                    CSS properties, the effect uses an <strong>SVG filter</strong> that generates procedural noise and
+                    uses it to
+                    displace the pixels of the border.
+                </p>
+                <p>
+                    The result feels like real electricity, yet the button itself is plain HTML: a
+                    <code>&lt;button&gt;</code>
+                    inside a styled container, so it stays accessible, selectable and easy to restyle.
+                </p>
+            </section>
+
+            <section id="why-use">
+                <h2>Why Use This Design?</h2>
+                <ul>
+                    <li><strong>Instant Attention:</strong> A crackling border pulls the eye to your main call-to-action
+                        better than a flat hover color.</li>
+                    <li><strong>No Image Assets:</strong> The effect is generated by the browser — no GIFs, videos or
+                        sprite sheets.</li>
+                    <li><strong>Seamless Loop:</strong> The script sizes the filter so the animation repeats with no
+                        visible jump.</li>
+                    <li><strong>Easy to Theme:</strong> One CSS variable controls the electric color and its derived
+                        shades.</li>
+                    <li><strong>Motion-Aware:</strong> Animations pause automatically for users who prefer reduced
+                        motion.</li>
+                </ul>
+            </section>
+
+            <section id="features">
+                <h2>Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: var(--premcolo);"><i class='bx bx-bolt-circle'></i>
+                        </div>
+                        <div class="feature-title">Turbulence Noise</div>
+                        <div class="feature-desc">Four <code>feTurbulence</code> layers create organic, never-repeating
+                            electric motion.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: var(--accent2);"><i class='bx bx-move'></i></div>
+                        <div class="feature-title">SMIL Animation</div>
+                        <div class="feature-desc">Looping <code>&lt;animate&gt;</code> tags scroll the noise up, down,
+                            left and right.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #7dd3fc;"><i class='bx bx-shape-circle'></i></div>
+                        <div class="feature-title">Displacement Map</div>
+                        <div class="feature-desc">The noise bends the border pixels so straight lines turn into
+                            lightning.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #4ade80;"><i class='bx bx-sun'></i></div>
+                        <div class="feature-title">Layered Glow</div>
+                        <div class="feature-desc">Two blurred borders and a large background glow brighten on hover.
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #fbbf24;"><i class='bx bx-palette'></i></div>
+                        <div class="feature-title">oklch() Colors</div>
+                        <div class="feature-desc">Relative color syntax derives light and gradient shades from one base
+                            color.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #c084fc;"><i class='bx bx-accessibility'></i></div>
+                        <div class="feature-title">Reduced Motion</div>
+                        <div class="feature-desc">Respects <code>prefers-reduced-motion</code> by pausing SVG
+                            animations.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="how-it-works">
+                <h2>How It Works</h2>
+                <p>The button is built from three cooperating pieces:</p>
+                <ul>
+                    <li><strong>HTML structure:</strong> a <code>.card-container</code> holding border layers, glow
+                        layers, overlays and the real <code>&lt;button&gt;</code>.</li>
+                    <li><strong>SVG filter:</strong> a hidden <code>&lt;svg&gt;</code> defining
+                        <code>#turbulent-displace</code>, which makes noise and displaces pixels.</li>
+                    <li><strong>CSS:</strong> applies the filter to the border layers only on <code>:hover</code> and
+                        fades the glows in.</li>
+                </ul>
+                <p>
+                    Inside the filter, four <code>feTurbulence</code> layers are scrolled in different directions by
+                    <code>feOffset</code>, merged with <code>feComposite</code> and <code>feBlend</code>, and fed into
+                    <code>feDisplacementMap</code> as the displacement source. A short script keeps the filter region
+                    equal
+                    to the real card size.
+                </p>
+                <div class="info-box">
+                    <strong><i class='bx bx-info-circle'></i> Quick Summary:</strong> Noise is generated, scrolled and
+                    blended
+                    into one map. The map shifts the border's pixels, and because the noise keeps moving the border
+                    keeps
+                    crackling. CSS decides when it is visible; JavaScript only measures the card.
+                </div>
+            </section>
+
+            <h2>Build Steps</h2>
+            <div class="steps">
+                <div class="step" id="step-1">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <h3>Define the Color Variables</h3>
+                        <p>Set <code>--electric-border-color: #00ccff</code> in <code>:root</code>. Derive the light and
+                            gradient shades with <code>oklch(from var(--electric-border-color) l c h)</code> so every
+                            glow shares one hue.</p>
+                    </div>
+                </div>
+                <div class="step" id="step-2">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <h3>Build the Card Structure</h3>
+                        <p>Create <code>.card-container</code> with an <code>.inner-container</code> (borders and
+                            glows), two overlays, a <code>.background-glow</code>, and a <code>.content-container</code>
+                            that holds the button.</p>
+                    </div>
+                </div>
+                <div class="step" id="step-3">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <h3>Style the Pill Container</h3>
+                        <p>Use <code>border-radius: 50px</code>, <code>padding: 12px 24px</code> and a two-layer
+                            background: a diagonal gradient on top of a dark neutral base.</p>
+                    </div>
+                </div>
+                <div class="step" id="step-4">
+                    <div class="step-num">4</div>
+                    <div class="step-content">
+                        <h3>Create the SVG Turbulence Filter</h3>
+                        <p>Add a zero-size SVG with <code>&lt;filter id="turbulent-displace"&gt;</code> using
+                            <code>filterUnits="userSpaceOnUse"</code> and four <code>feTurbulence</code> nodes with
+                            <code>baseFrequency="0.02"</code> and six octaves.</p>
+                    </div>
+                </div>
+                <div class="step" id="step-5">
+                    <div class="step-num">5</div>
+                    <div class="step-content">
+                        <h3>Animate the Noise</h3>
+                        <p>Give each <code>feOffset</code> an <code>&lt;animate&gt;</code> child that loops
+                            <code>dy</code> or <code>dx</code> over 6 seconds with <code>calcMode="linear"</code>, so
+                            the noise scrolls steadily.</p>
+                    </div>
+                </div>
+                <div class="step" id="step-6">
+                    <div class="step-num">6</div>
+                    <div class="step-content">
+                        <h3>Distort the Border on Hover</h3>
+                        <p>Blend the layers, then run <code>feDisplacementMap scale="30"</code>. In CSS, apply
+                            <code>filter: url(#turbulent-displace)</code> to <code>.main-card</code> only inside
+                            <code>.card-container:hover</code>.</p>
+                    </div>
+                </div>
+                <div class="step" id="step-7">
+                    <div class="step-num">7</div>
+                    <div class="step-content">
+                        <h3>Add Layered Glows</h3>
+                        <p>Stack <code>.glow-layer-1</code> (blur 1px) and <code>.glow-layer-2</code> (blur 4px) with
+                            0.4 opacity, plus a 32px-blurred <code>.background-glow</code>. Raise opacity on hover with
+                            a 0.4s transition.</p>
+                    </div>
+                </div>
+                <div class="step" id="step-8">
+                    <div class="step-num">8</div>
+                    <div class="step-content">
+                        <h3>Sync the Filter with JavaScript</h3>
+                        <p>Read <code>offsetWidth</code> and <code>offsetHeight</code>, add a 40px margin, then write
+                            the region and the <code>values</code> of the four <code>&lt;animate&gt;</code> tags. Re-run
+                            with <code>ResizeObserver</code> and pause animations for reduced motion.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOURCE CODE -->
+            <section id="source-code">
+                <h2>Full Source Code (Free)</h2>
+                <p>
+                    The entire project lives in a single HTML file — CSS in a <code>&lt;style&gt;</code> block, the SVG
+                    filter
+                    in the markup, and a short script at the bottom. No libraries, no build tools. Open the file in a
+                    modern
+                    browser and hover the button.
+                </p>
+
+                <div class="code-section">
+                    <div class="code-toolbar">
+                        <div class="code-tabs" role="tablist" aria-label="Code files">
+                            <button class="code-tab active" role="tab" aria-selected="true"
+                                aria-controls="panel-html">index.html</button>
+                        </div>
+                        <button class="preview-btn" id="previewBtn" aria-label="Preview the final result">
+                            <i class='bx bx-play-circle'></i><span>Preview Result</span>
+                        </button>
+                    </div>
+
+                    <div class="code-panels">
+                        <div class="code-box active" id="panel-html" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#ff6600;">HTML + CSS + JS — index.html</span>
+                                <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code  class="language-html"></div>
+                            </code></pre>
+                            <div class="premium-box">
+                            
+                                <div class="premium-icon">🔒</div>
+                            
+                                <div class="premium-content">
+                            
+                                    <span class="premium-label">PREMIUM SOURCE CODE</span>
+                            
+                                    <h3>Get the Complete Source Code</h3>
+                            
+                                    <p>
+                                        Get the complete HTML, CSS and JavaScript source code
+                                        and use this component in your own projects.
+                                    </p>
+                            
+                                    <div class="premium-bottom">
+                            
+                                        <span class="premium-price">$3</span>
+                            
+                                        <button type="button" class="buy-button" id="buy-button">
+                                            Get the Code <span>→</span>
+                                        </button>
+                            
+                                    </div>
+                            
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="countdown-box">
+                    <p class="countdown-label">🔓 Full Source Code unlocks in</p>
+                    <div class="countdown-timer" id="countdownDisplay">05</div>
+                    <p style="font-size:13px;color:var(--text-muted);">Hosted on GitHub Gist — free, no sign-up required
+                    </p>
+                    <div class="gist-link-wrapper" id="gistLinkWrapper">
+                        <a class="gist-link" href="https://gist.github.com/77cod-ing/YOUR_GIST_ID" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class='bx bxl-github'></i> View Full Source Code on GitHub Gist
+                        </a>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <strong>💡 Quick Start:</strong> Save the code as <code>index.html</code> and open it in Chrome,
+                    Edge,
+                    Safari or Firefox. Change <code>--electric-border-color</code> to instantly recolor the whole
+                    effect.
+                </div>
+            </section>
+
+            <section id="comparison">
+                <h2>SVG Filter Primitives Comparison</h2>
+                <div class="table-wrap">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Primitive</th>
+                                <th>Role</th>
+                                <th>Used For</th>
+                                <th>Importance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>feTurbulence</code></td>
+                                <td>Generates procedural noise</td>
+                                <td><strong>Electric pattern</strong></td>
+                                <td><span class="badge badge-blue">Core</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>feOffset + animate</code></td>
+                                <td>Scrolls the noise over time</td>
+                                <td><strong>Crackling motion</strong></td>
+                                <td><span class="badge badge-blue">Core</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>feDisplacementMap</code></td>
+                                <td>Shifts pixels using the noise</td>
+                                <td><strong>Border distortion</strong></td>
+                                <td><span class="badge badge-blue">Core</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>feComposite</code></td>
+                                <td>Merges noise layers</td>
+                                <td><strong>Top/bottom, left/right</strong></td>
+                                <td><span class="badge badge-green">Structure</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>feBlend color-dodge</code></td>
+                                <td>Combines the two halves</td>
+                                <td><strong>Brighter noise map</strong></td>
+                                <td><span class="badge badge-green">Structure</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>filter: blur()</code></td>
+                                <td>Soft glow layers</td>
+                                <td><strong>.glow-layer-1/2, .background-glow</strong></td>
+                                <td><span class="badge badge-green">Visual</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>mix-blend-mode: overlay</code></td>
+                                <td>Adds highlights</td>
+                                <td><strong>.overlay-1/2</strong></td>
+                                <td><span class="badge badge-orange">Polish</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="tips">
+                <h2>Tips for Better Results</h2>
+                <ul>
+                    <li><strong>Displacement Scale:</strong> <code>scale="30"</code> gives a strong crackle. Try 15–20
+                        for a subtler wobble.</li>
+                    <li><strong>Animation Speed:</strong> Lower <code>dur</code> to 3s for faster electricity, or raise
+                        it for a calm shimmer.</li>
+                    <li><strong>Base Frequency:</strong> Higher <code>baseFrequency</code> values produce finer, more
+                        chaotic sparks.</li>
+                    <li><strong>Performance:</strong> Apply the filter only on hover, as in this project, so idle
+                        buttons cost nothing.</li>
+                    <li><strong>Keyboard Users:</strong> Duplicate the <code>:hover</code> rules for
+                        <code>:focus-within</code> or <code>:focus-visible</code>.</li>
+                    <li><strong>Theming:</strong> Replace hard-coded <code>#00ccff</code> values with
+                        <code>var(--electric-border-color)</code> to recolor everything from one place.</li>
+                </ul>
+                <div class="info-box">
+                    <strong><i class='bx bx-lightbulb'></i> Pro Tip:</strong> Make the second border layer a slightly
+                    different
+                    color, as the yellow-layer rule in this code does, to give the electricity depth.
+                </div>
+            </section>
+
+            <section id="mistakes">
+                <h2>Common Mistakes to Avoid</h2>
+                <ul>
+                    <li><strong>Animation distance not matching the region:</strong> If the offset differs from the
+                        filter size, the loop visibly jumps. Keep them equal.</li>
+                    <li><strong>Clipped sparks:</strong> A filter region equal to the element size cuts the displaced
+                        border. Add a margin around it.</li>
+                    <li><strong>Unit-based offsets:</strong> Positioning layers with <code>vw</code>/<code>vh</code>
+                        margins shifts them between screen sizes. Prefer <code>inset</code> and percentages.</li>
+                    <li><strong>Filter always on:</strong> Running turbulence permanently is costly. Enable it on hover
+                        or focus only.</li>
+                    <li><strong>Forgetting pointer-events:</strong> Decorative layers must use
+                        <code>pointer-events: none</code> so the button stays clickable.</li>
+                    <li><strong>Ignoring reduced motion:</strong> Always pause the SVG animations when
+                        <code>prefers-reduced-motion</code> is set.</li>
+                </ul>
+                <div class="warn-box">
+                    <strong><i class='bx bx-error-circle'></i> Warning:</strong> The <code>oklch(from …)</code> relative
+                    color
+                    syntax is newer than basic <code>oklch()</code>. Provide a plain hex fallback on the line before it
+                    for
+                    older browsers.
+                </div>
+            </section>
+
+            <hr>
+
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq">
+                    <details class="faq-item">
+                        <summary class="faq-question">How does the electric border effect work?</summary>
+                        <div class="faq-answer">An SVG filter generates animated fractal noise with
+                            <code>feTurbulence</code>, then <code>feDisplacementMap</code> uses that noise to shift the
+                            pixels of a CSS border. Because the noise keeps scrolling, the border appears to crackle
+                            like electricity.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Why is JavaScript needed if the effect is SVG and CSS?</summary>
+                        <div class="faq-answer">The script measures the real size of the button and sets the filter
+                            region and animation distances to match. When the animated offset equals the region size,
+                            the first and last frames are identical, so the loop never jumps.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">What does oklch(from var(--color) l c h) do?</summary>
+                        <div class="faq-answer">It is CSS relative color syntax. It reads the lightness, chroma and hue
+                            of an existing color and lets you build a new one from them, for example
+                            <code>oklch(from var(--c) 0.3 calc(c / 2) h / 0.4)</code> for a darker, softer, translucent
+                            shade of the same hue.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Can I change the electric color?</summary>
+                        <div class="faq-answer">Yes. Change <code>--electric-border-color</code> in <code>:root</code>
+                            and the derived colors update. Also replace any hard-coded color in the border and shadow
+                            rules with the variable.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Does the effect work on mobile devices?</summary>
+                        <div class="faq-answer">SVG filters run on mobile, but touch screens have no real hover, so
+                            trigger the effect with <code>:active</code> or <code>:focus-visible</code> and keep the
+                            displacement scale modest, since turbulence is expensive on low-end devices.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Is the effect accessible?</summary>
+                        <div class="faq-answer">The label is a real <code>&lt;button&gt;</code>, so it is keyboard
+                            focusable. The script pauses SVG animations when <code>prefers-reduced-motion</code> is
+                            enabled. Mirror the hover styles on <code>:focus-visible</code> so keyboard users see the
+                            effect too.</div>
+                    </details>
+                </div>
+            </section>
+
+            <hr>
+
+            <section id="conclusion" class="conclusion">
+                <h2>Conclusion</h2>
+                <p>
+                    The <strong>Electric Border Button</strong> shows how far SVG filters can go when combined with
+                    modern CSS.
+                    Turbulence noise, scrolling offsets and a displacement map turn a plain border into living
+                    electricity,
+                    while layered glows and <code>oklch()</code> colors keep the design cohesive and easy to theme.
+                </p>
+                <p>
+                    Use it for a hero call-to-action, a gaming site or a futuristic landing page — and remember to keep
+                    the
+                    filter on hover only, size it to the card, and respect reduced-motion preferences.
+                </p>
+            </section>
+
+        </article>
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar" aria-label="Related content">
+            <div class="sidebar-box">
+                <div class="sidebar-header"><i class='bx bx-star'></i> Related Projects</div>
+                <div class="related-list">
+                    <a class="related-card" href="Project45.html"
+                        aria-label="Animated Floating Action Button Menu with CSS">
+                        <img src="https://77cod-ing.github.io/button-list-item.png"
+                            alt="Animated floating action button menu expanding into a staggered list built with CSS"
+                            loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Animated Floating Action Button Menu — CSS &amp; JS</div>
+                    </a>
+                    <a class="related-card" href="Project16.html" aria-label="Skewed Menu with Expanding Hover Effects">
+                        <img src="https://77cod-ing.github.io/skewed-menu-preview.png"
+                            alt="Skewed navigation menu with expanding hover effects" loading="lazy" width="280"
+                            height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Skewed Menu with Expanding Hover Effects — HTML &amp; CSS</div>
+                    </a>
+                    <a class="related-card" href="Project13.html" aria-label="Neon Cursor Animation">
+                        <img src="https://77cod-ing.github.io/image%20copy%2036.png"
+                            alt="Neon Cursor Animation CSS JavaScript" loading="lazy" width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Neon Cursor Animation — CSS &amp; JavaScript</div>
+                    </a>
+                    <a class="related-card" href="Project23.html" aria-label="Animated Login and Signup Page">
+                        <img src="https://77cod-ing.github.io/image%20copy%2075.png"
+                            alt="Animated Login and Signup Page HTML CSS JavaScript" loading="lazy" width="280"
+                            height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Animated Login &amp; Signup Page — HTML CSS JS</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-box" style="padding: 16px;">
+                <div
+                    style="font-family: var(--font-head); font-size: 13px; color: var(--premcolo); margin-bottom: 12px;">
+                    <i class='bx bx-info-circle'></i> Quick Info
+                </div>
+                <div style="font-size: 13px; color: var(--text-muted); line-height: 1.8;">
+                    <div><strong style="color:#fff;">Difficulty:</strong> Intermediate</div>
+                    <div><strong style="color:#fff;">Time:</strong> 20 minutes</div>
+                    <div><strong style="color:#fff;">Files:</strong> Single HTML file</div>
+                    <div><strong style="color:#fff;">JavaScript:</strong> Minimal (sizing only)</div>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- ===== PREVIEW MODAL ===== -->
+    <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
+        aria-label="Live preview of the electric border button">
+        <div class="preview-modal">
+            <div class="preview-modal-header">
+                <div class="preview-modal-title"><i class='bx bx-show'></i><strong>Live Preview</strong> — Electric
+                    Button</div>
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <div class="preview-dots">
+                        <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
+                        <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
+                        <button class="preview-dot green" aria-label="Maximize" disabled></button>
+                    </div>
+                    <button class="preview-close-btn" id="previewCloseBtn"><i class='bx bx-x'></i> Close</button>
+                </div>
+            </div>
+            <div class="preview-iframe-wrap">
+                <div class="preview-loading" id="previewLoading">
+                    <div class="preview-spinner"></div>
+                    <span class="preview-loading-text">Loading preview...</span>
+                    <div class="preview-loading-files"><span class="preview-file-tag" id="tagHTML">HTML</span></div>
+                </div>
+                <iframe id="previewIframe" title="Preview of the electric border button"
+                    sandbox="allow-scripts allow-same-origin"></iframe>
+                <div class="preview-hint" id="previewHint"><i class='bx bx-cursor'></i> Hover over the button to see the
+                    electric effect</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        /* Replace with the raw URL of your Gist (single index.html file) */
+        const htmlUrl = "https://gist.githubusercontent.com/77cod-ing/YOUR_GIST_ID/raw/index.html";
+
+        let cachedHTML = "";
+
+        async function loadCode() {
+            const el = document.getElementById("code1");
+            try {
+                const res = await fetch(htmlUrl);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                cachedHTML = await res.text();
+                el.textContent = cachedHTML;
+                Prism.highlightElement(el);
+            } catch (e) {
+                el.textContent = `<!-- Failed to load: ${e.message} -->`;
+            }
+        }
+        loadCode();
+
+        /* ===== Copy button ===== */
+        document.querySelectorAll(".copy-btn").forEach(btn => {
+            btn.addEventListener("click", async () => {
+                const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+                if (!code) return;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    btn.innerHTML = "<i class='bx bx-check'></i> Copied!";
+                    btn.classList.add("copied");
+                    setTimeout(() => { btn.innerHTML = "<i class='bx bxs-copy'></i> Copy"; btn.classList.remove("copied"); }, 2000);
+                } catch { btn.textContent = "Error"; }
+            });
+        });
+
+        /* ===== Countdown timer ===== */
+        let seconds = 5;
+        const countdownDisplay = document.getElementById("countdownDisplay");
+        const gistLinkWrapper = document.getElementById("gistLinkWrapper");
+        const countdownInterval = setInterval(() => {
+            seconds--;
+            countdownDisplay.textContent = String(seconds).padStart(2, "0");
+            if (seconds <= 0) {
+                clearInterval(countdownInterval);
+                gistLinkWrapper.classList.add("visible");
+                countdownDisplay.style.display = "none";
+                document.querySelector(".countdown-label").textContent = "✅ Source Code Available";
+            }
+        }, 1000);
+
+        /* ===== Preview modal ===== */
+        const previewOverlay = document.getElementById("previewOverlay");
+        const previewIframe = document.getElementById("previewIframe");
+        const previewLoading = document.getElementById("previewLoading");
+        const previewHint = document.getElementById("previewHint");
+        const previewBtn = document.getElementById("previewBtn");
+        const tagHTML = document.getElementById("tagHTML");
+
+        function openPreview() {
+            previewOverlay.classList.add("open");
+            document.body.style.overflow = "hidden";
+            previewLoading.classList.remove("hidden");
+            previewHint.classList.remove("show");
+            previewBtn.classList.add("loading");
+            tagHTML.classList.remove("loaded");
+            buildPreview();
+        }
+
+        function closePreview() {
+            previewOverlay.classList.remove("open");
+            document.body.style.overflow = "";
+            previewIframe.srcdoc = "";
+            previewBtn.classList.remove("loading");
+        }
+
+        async function buildPreview() {
+            try {
+                if (!cachedHTML) {
+                    const res = await fetch(htmlUrl);
+                    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                    cachedHTML = await res.text();
+                }
+                tagHTML.classList.add("loaded");
+                previewIframe.addEventListener("load", function onLoad() {
+                    previewLoading.classList.add("hidden");
+                    previewBtn.classList.remove("loading");
+                    setTimeout(() => {
+                        previewHint.classList.add("show");
+                        setTimeout(() => previewHint.classList.remove("show"), 4000);
+                    }, 300);
+                    previewIframe.removeEventListener("load", onLoad);
+                });
+                previewIframe.srcdoc = cachedHTML;
+            } catch (e) {
+                previewLoading.innerHTML = `<span class="preview-loading-text" style="color:var(--accent2);">Failed to load preview: ${e.message}</span>`;
+                previewBtn.classList.remove("loading");
+            }
+        }
+
+        previewBtn.addEventListener("click", openPreview);
+        document.getElementById("previewCloseBtn").addEventListener("click", closePreview);
+        document.getElementById("previewDotClose").addEventListener("click", closePreview);
+        previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+        document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
+    </script>
+
+
+        <!-- ====PAYPAL LIBRIRE ==== -->
+<script>
+    const SALES_API =
+        "https://77coding-sales.tt2980665.workers.dev";
+
+    const buyButton =
+        document.getElementById("buy-button");
+
+    buyButton.addEventListener("click", async () => {
+
+        const originalHTML = buyButton.innerHTML;
+
+        buyButton.disabled = true;
+        buyButton.innerHTML =
+            'Processing... <span>↗</span>';
+
+        try {
+
+            const response = await fetch(
+                `${SALES_API}/api/create-order`,
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                }
+            );
+
+            const data = await response.json();
+
+            console.log("PayPal response:", data);
+
+            if (!response.ok || !data.approvalUrl) {
+                throw new Error(
+                    data.error ||
+                    "Could not create PayPal order."
+                );
+            }
+
+            /*
+             * تحويل العميل إلى PayPal
+             */
+            window.location.href =
+                data.approvalUrl;
+
+        } catch (error) {
+
+            console.error(
+                "Checkout error:",
+                error
+            );
+
+            alert(
+                "Unable to start PayPal Checkout. Please try again."
+            );
+
+            buyButton.disabled = false;
+            buyButton.innerHTML =
+                originalHTML;
+        }
+
+    });
+</script>
+
+</body>
+
+</html>
