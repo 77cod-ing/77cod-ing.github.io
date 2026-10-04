@@ -159,7 +159,7 @@
         href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
         rel="stylesheet">
 
-        
+
 
     <style>
         *,
@@ -1366,103 +1366,133 @@
                 display: none;
             }
         }
-        .premium-box { 
-        top: 14vh; 
-        position: absolute; 
-        display: flex; 
-        align-items: center; 
-        gap: 18px; 
-        padding: 24px; 
-        margin: 30px 0; 
-        border: 1px solid rgba(0, 217, 255, 0.35); 
-        border-radius: 16px; 
-        background: rgb(0, 11, 31); 
-        box-shadow: 0 0 25px rgba(0, 217, 255, 0.08); 
-        overflow: hidden; } 
-        .premium-box::before { 
-        content: ""; 
-        position: absolute; 
-        width: 180px; 
-        height: 180px; 
-        top: -100px; 
-        right: -70px; 
-        background: #00d9ff; 
-        opacity: 0.08; 
-        filter: blur(60px); 
-        pointer-events: none; } 
-        .premium-icon { 
-        width: 52px; 
-        height: 52px; 
-        min-width: 52px; 
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
-        border-radius: 14px; 
-        background: rgba(0, 217, 255, 0.08); 
-        border: 1px solid rgba(0, 217, 255, 0.25); 
-        font-size: 22px; } 
-        .premium-content { 
-        flex: 1; } 
-        .premium-label { 
-        display: inline-block; 
-        margin-bottom: 5px; 
-        color: #00d9ff; 
-        font-size: 11px; 
-        font-weight: 700; 
-        letter-spacing: 1.5px; } 
-        .premium-content h3 { 
-        margin: 0 0 7px; 
-        color: #fff; 
-        font-size: 20px; } 
-        .premium-content p { 
-        margin: 0; 
-        max-width: 600px; 
-        color: #9ca3af; 
-        font-size: 14px; 
-        line-height: 1.6; } 
-        
-        .premium-bottom { 
-        display: flex; 
-        align-items: center; 
-        gap: 18px; 
-        margin-top: 18px; } 
-        .premium-price { 
-        color: #fff; 
-        font-size: 25px; 
-        font-weight: 800; } 
-        .buy-button { 
-        display: inline-flex; 
-        align-items: center; 
-        gap: 10px; 
-        padding: 11px 20px; 
-        border-radius: 10px; 
-        color: #000; 
-        background: linear-gradient(90deg,rgb(255, 212, 40), rgb(255, 212, 40),rgb(255, 212, 40),rgb(149, 114, 0) ); 
-        text-decoration: none; 
-        font-size: 14px; 
-        font-weight: 700; 
-        transition: transform .25s ease, box-shadow .25s ease; } 
-        .buy-button:hover { 
-        transform: translateY(-2px); 
-        box-shadow: 0 8px 25px rgba(0, 217, 255, 0.25), 0 8px 25px rgba(255, 0, 110, 0.2); } 
-        .buy-button span { 
-        font-size: 18px; 
-        transition: transform .25s ease; } 
-        .buy-button:hover span { 
-        transform: translateX(4px); } 
-        @media (max-width: 600px) { 
-        .premium-box { 
-        align-items: flex-start; 
-        flex-direction: column; } 
-        .premium-bottom { 
-        width: 100%; 
-        justify-content: space-between; } 
-        .buy-button { 
-        flex: 1; 
-        justify-content: center; 
-        } 
+
+        .premium-box {
+            top: 14vh;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 24px;
+            margin: 30px 0;
+            border: 1px solid rgba(0, 217, 255, 0.35);
+            border-radius: 16px;
+            background: rgb(0, 11, 31);
+            box-shadow: 0 0 25px rgba(0, 217, 255, 0.08);
+            overflow: hidden;
         }
-    </style> 
+
+        .premium-box::before {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            top: -100px;
+            right: -70px;
+            background: #00d9ff;
+            opacity: 0.08;
+            filter: blur(60px);
+            pointer-events: none;
+        }
+
+        .premium-icon {
+            width: 52px;
+            height: 52px;
+            min-width: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+            background: rgba(0, 217, 255, 0.08);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+            font-size: 22px;
+        }
+
+        .premium-content {
+            flex: 1;
+        }
+
+        .premium-label {
+            display: inline-block;
+            margin-bottom: 5px;
+            color: #00d9ff;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+
+        .premium-content h3 {
+            margin: 0 0 7px;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .premium-content p {
+            margin: 0;
+            max-width: 600px;
+            color: #9ca3af;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .premium-bottom {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-top: 18px;
+        }
+
+        .premium-price {
+            color: #fff;
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        .buy-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 11px 20px;
+            border-radius: 10px;
+            color: #000;
+            background: linear-gradient(90deg, rgb(255, 212, 40), rgb(255, 212, 40), rgb(255, 212, 40), rgb(149, 114, 0));
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .buy-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 217, 255, 0.25), 0 8px 25px rgba(255, 0, 110, 0.2);
+        }
+
+        .buy-button span {
+            font-size: 18px;
+            transition: transform .25s ease;
+        }
+
+        .buy-button:hover span {
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 600px) {
+            .premium-box {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .premium-bottom {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .buy-button {
+                flex: 1;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -1653,7 +1683,8 @@
                     <li><strong>HTML structure:</strong> a <code>.card-container</code> holding border layers, glow
                         layers, overlays and the real <code>&lt;button&gt;</code>.</li>
                     <li><strong>SVG filter:</strong> a hidden <code>&lt;svg&gt;</code> defining
-                        <code>#turbulent-displace</code>, which makes noise and displaces pixels.</li>
+                        <code>#turbulent-displace</code>, which makes noise and displaces pixels.
+                    </li>
                     <li><strong>CSS:</strong> applies the filter to the border layers only on <code>:hover</code> and
                         fades the glows in.</li>
                 </ul>
@@ -1707,7 +1738,8 @@
                         <h3>Create the SVG Turbulence Filter</h3>
                         <p>Add a zero-size SVG with <code>&lt;filter id="turbulent-displace"&gt;</code> using
                             <code>filterUnits="userSpaceOnUse"</code> and four <code>feTurbulence</code> nodes with
-                            <code>baseFrequency="0.02"</code> and six octaves.</p>
+                            <code>baseFrequency="0.02"</code> and six octaves.
+                        </p>
                     </div>
                 </div>
                 <div class="step" id="step-5">
@@ -1716,7 +1748,8 @@
                         <h3>Animate the Noise</h3>
                         <p>Give each <code>feOffset</code> an <code>&lt;animate&gt;</code> child that loops
                             <code>dy</code> or <code>dx</code> over 6 seconds with <code>calcMode="linear"</code>, so
-                            the noise scrolls steadily.</p>
+                            the noise scrolls steadily.
+                        </p>
                     </div>
                 </div>
                 <div class="step" id="step-6">
@@ -1725,7 +1758,8 @@
                         <h3>Distort the Border on Hover</h3>
                         <p>Blend the layers, then run <code>feDisplacementMap scale="30"</code>. In CSS, apply
                             <code>filter: url(#turbulent-displace)</code> to <code>.main-card</code> only inside
-                            <code>.card-container:hover</code>.</p>
+                            <code>.card-container:hover</code>.
+                        </p>
                     </div>
                 </div>
                 <div class="step" id="step-7">
@@ -1758,6 +1792,12 @@
                     modern
                     browser and hover the button.
                 </p>
+                <div class="purchase-box"> <label for="customer-email"> Email address </label> <input type="email" id="customer-email"
+                        placeholder="your@email.com" autocomplete="email" required>
+                    <p class="email-note"> Please make sure this email address is correct. Your project will be sent to this email
+                        within 48 hours after successful payment. </p> <button id="buy-button"> Buy Electric Buttons — $3 <span>↗</span>
+                    </button>
+                </div>
 
                 <div class="code-section">
                     <div class="code-toolbar">
@@ -1778,33 +1818,34 @@
                             </div>
                             <pre><code  class="language-html"></div>
                             </code></pre>
+                            
                             <div class="premium-box">
-                            
+
                                 <div class="premium-icon">🔒</div>
-                            
+
                                 <div class="premium-content">
-                            
+
                                     <span class="premium-label">PREMIUM SOURCE CODE</span>
-                            
+
                                     <h3>Get the Complete Source Code</h3>
-                            
+
                                     <p>
                                         Get the complete HTML, CSS and JavaScript source code
                                         and use this component in your own projects.
                                     </p>
-                            
+
                                     <div class="premium-bottom">
-                            
+
                                         <span class="premium-price">$3</span>
-                            
+
                                         <button type="button" class="buy-button" id="buy-button">
                                             Get the Code <span>→</span>
                                         </button>
-                            
+
                                     </div>
-                            
+
                                 </div>
-                            
+
                             </div>
                         </div>
                     </div>
@@ -1816,7 +1857,7 @@
                     <p style="font-size:13px;color:var(--text-muted);">Hosted on GitHub Gist — free, no sign-up required
                     </p>
                     <div class="gist-link-wrapper" id="gistLinkWrapper">
-                        <a class="gist-link" href="https://gist.github.com/77cod-ing/YOUR_GIST_ID" target="_blank"
+                        <a class="gist-link" href="" target="_blank"
                             rel="noopener noreferrer">
                             <i class='bx bxl-github'></i> View Full Source Code on GitHub Gist
                         </a>
@@ -1903,9 +1944,11 @@
                     <li><strong>Performance:</strong> Apply the filter only on hover, as in this project, so idle
                         buttons cost nothing.</li>
                     <li><strong>Keyboard Users:</strong> Duplicate the <code>:hover</code> rules for
-                        <code>:focus-within</code> or <code>:focus-visible</code>.</li>
+                        <code>:focus-within</code> or <code>:focus-visible</code>.
+                    </li>
                     <li><strong>Theming:</strong> Replace hard-coded <code>#00ccff</code> values with
-                        <code>var(--electric-border-color)</code> to recolor everything from one place.</li>
+                        <code>var(--electric-border-color)</code> to recolor everything from one place.
+                    </li>
                 </ul>
                 <div class="info-box">
                     <strong><i class='bx bx-lightbulb'></i> Pro Tip:</strong> Make the second border layer a slightly
@@ -1926,9 +1969,11 @@
                     <li><strong>Filter always on:</strong> Running turbulence permanently is costly. Enable it on hover
                         or focus only.</li>
                     <li><strong>Forgetting pointer-events:</strong> Decorative layers must use
-                        <code>pointer-events: none</code> so the button stays clickable.</li>
+                        <code>pointer-events: none</code> so the button stays clickable.
+                    </li>
                     <li><strong>Ignoring reduced motion:</strong> Always pause the SVG animations when
-                        <code>prefers-reduced-motion</code> is set.</li>
+                        <code>prefers-reduced-motion</code> is set.
+                    </li>
                 </ul>
                 <div class="warn-box">
                     <strong><i class='bx bx-error-circle'></i> Warning:</strong> The <code>oklch(from …)</code> relative
@@ -1949,7 +1994,8 @@
                         <div class="faq-answer">An SVG filter generates animated fractal noise with
                             <code>feTurbulence</code>, then <code>feDisplacementMap</code> uses that noise to shift the
                             pixels of a CSS border. Because the noise keeps scrolling, the border appears to crackle
-                            like electricity.</div>
+                            like electricity.
+                        </div>
                     </details>
                     <details class="faq-item">
                         <summary class="faq-question">Why is JavaScript needed if the effect is SVG and CSS?</summary>
@@ -1962,7 +2008,8 @@
                         <div class="faq-answer">It is CSS relative color syntax. It reads the lightness, chroma and hue
                             of an existing color and lets you build a new one from them, for example
                             <code>oklch(from var(--c) 0.3 calc(c / 2) h / 0.4)</code> for a darker, softer, translucent
-                            shade of the same hue.</div>
+                            shade of the same hue.
+                        </div>
                     </details>
                     <details class="faq-item">
                         <summary class="faq-question">Can I change the electric color?</summary>
@@ -2089,71 +2136,10 @@
     </div>
 
     <!-- ===== SCRIPTS ===== -->
-  
 
-        <!-- ====PAYPAL LIBRIRE ==== -->
-<script>
-    const SALES_API =
-        "https://77coding-sales.tt2980665.workers.dev";
 
-    const buyButton =
-        document.getElementById("buy-button");
-
-    buyButton.addEventListener("click", async () => {
-
-        const originalHTML = buyButton.innerHTML;
-
-        buyButton.disabled = true;
-        buyButton.innerHTML =
-            'Processing... <span>↗</span>';
-
-        try {
-
-            const response = await fetch(
-                `${SALES_API}/api/create-order`,
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    }
-                }
-            );
-
-            const data = await response.json();
-
-            console.log("PayPal response:", data);
-
-            if (!response.ok || !data.approvalUrl) {
-                throw new Error(
-                    data.error ||
-                    "Could not create PayPal order."
-                );
-            }
-
-            /*
-             * تحويل العميل إلى PayPal
-             */
-            window.location.href =
-                data.approvalUrl;
-
-        } catch (error) {
-
-            console.error(
-                "Checkout error:",
-                error
-            );
-
-            alert(
-                "Unable to start PayPal Checkout. Please try again."
-            );
-
-            buyButton.disabled = false;
-            buyButton.innerHTML =
-                originalHTML;
-        }
-
-    });
-</script>
+    <!-- ====PAYPAL LIBRIRE ==== -->
+<script> const SALES_API = "https://77coding-sales.tt2980665.workers.dev"; const buyButton = document.getElementById("buy-button"); const emailInput = document.getElementById("customer-email"); buyButton.addEventListener("click", async () => { const email = emailInput.value.trim();   if (!emailInput.checkValidity()) { emailInput.reportValidity(); return; } const originalHTML = buyButton.innerHTML; buyButton.disabled = true; buyButton.innerHTML = 'Processing... <span>↗</span>'; try { const response = await fetch( `${SALES_API}/api/create-order`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email: email }) } ); const data = await response.json(); console.log( "PayPal response:", data ); if ( !response.ok || !data.approvalUrl ) { throw new Error( data.error || "Could not create PayPal order." ); } window.location.href = data.approvalUrl; } catch (error) { console.error( "Checkout error:", error ); alert( error.message || "Unable to start PayPal Checkout. Please try again." ); buyButton.disabled = false; buyButton.innerHTML = originalHTML; } }); </script>
 
 </body>
 
