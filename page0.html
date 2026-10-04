@@ -950,63 +950,34 @@
             margin: 1.5rem 0;
         }
 
-        /* ===== COUNTDOWN ===== */
-        .countdown-box {
-            background: rgba(0, 217, 255, 0.05);
-            border: 1px solid rgba(0, 217, 255, 0.18);
-            border-radius: 14px;
-            padding: 1.5rem 1.75rem;
-            margin: 1.5rem 0;
-            text-align: center;
-        }
+        /* ==== videos  =====*/
+        .video-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+}
 
-        .countdown-label {
-            font-family: var(--font-head);
-            font-size: 13px;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-        }
+.video-modal.active {
+    display: flex;
+}
 
-        .countdown-timer {
-            font-family: var(--font-head);
-            font-size: 2.5rem;
-            color: var(--premcolo);
-            font-weight: 700;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
+.video-container {
+    width: min(900px, 90vw);
+    border-radius: 14px;
+    overflow: hidden;
+}
 
-        .gist-link-wrapper {
-            display: none;
-            margin-top: 12px;
-        }
-
-        .gist-link-wrapper.visible {
-            display: block;
-        }
-
-        .gist-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 24px;
-            border-radius: 10px;
-            background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(0, 217, 255, 0.06));
-            border: 1px solid rgba(0, 217, 255, 0.35);
-            color: var(--premcolo);
-            font-family: var(--font-head);
-            font-size: 14px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-
-        .gist-link:hover {
-            background: rgba(0, 217, 255, 0.2);
-            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
-        }
+.video-container video {
+    display: block;
+    width: 100%;
+    height: auto;
+    outline: none;
+    pointer-events: none;
+}
 
         /* ===== SIDEBAR ===== */
         .sidebar {
@@ -1080,229 +1051,9 @@
             line-height: 1.3;
         }
 
-        /* ===== PREVIEW MODAL ===== */
-        .preview-overlay {
-            position: fixed;
-            inset: 0;
-            z-index: 9999;
-            background: rgba(0, 5, 15, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
-        }
 
-        .preview-overlay.open {
-            opacity: 1;
-            visibility: visible;
-        }
 
-        .preview-modal {
-            width: 95vw;
-            max-width: 95vw;
-            height: 95vh;
-            max-height: 95vh;
-            background: #0a0e1a;
-            border: 1px solid rgba(0, 217, 255, 0.2);
-            border-radius: 18px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(0, 217, 255, 0.06);
-            transform: scale(0.92) translateY(20px);
-            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
 
-        .preview-overlay.open .preview-modal {
-            transform: scale(1) translateY(0);
-        }
-
-        .preview-modal-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 14px 20px;
-            border-bottom: 1px solid var(--border);
-            background: rgba(0, 0, 0, 0.3);
-            flex-shrink: 0;
-        }
-
-        .preview-modal-title {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-family: var(--font-head);
-            font-size: 13px;
-            color: var(--text-muted);
-        }
-
-        .preview-modal-title i {
-            color: var(--premcolo);
-            font-size: 16px;
-        }
-
-        .preview-modal-title strong {
-            color: #fff;
-        }
-
-        .preview-dots {
-            display: flex;
-            gap: 7px;
-        }
-
-        .preview-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.2s, filter 0.2s;
-        }
-
-        .preview-dot:hover {
-            transform: scale(1.2);
-            filter: brightness(1.3);
-        }
-
-        .preview-dot.red {
-            background: #ff5f57;
-        }
-
-        .preview-dot.yellow {
-            background: #febc2e;
-        }
-
-        .preview-dot.green {
-            background: #28c840;
-        }
-
-        .preview-close-btn {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px 14px;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            background: transparent;
-            color: var(--text-muted);
-            font-family: var(--font-head);
-            font-size: 12px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .preview-close-btn:hover {
-            border-color: var(--accent2);
-            color: var(--accent2);
-            background: rgba(255, 107, 53, 0.08);
-        }
-
-        .preview-iframe-wrap {
-            flex: 1;
-            position: relative;
-            overflow: hidden;
-            background: #000;
-        }
-
-        .preview-iframe-wrap iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
-            background: #000;
-        }
-
-        .preview-loading {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
-            background: #0a0e1a;
-            z-index: 2;
-            transition: opacity 0.4s;
-        }
-
-        .preview-loading.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .preview-spinner {
-            width: 40px;
-            height: 40px;
-            border: 3px solid rgba(0, 217, 255, 0.15);
-            border-top-color: var(--premcolo);
-            border-radius: 50%;
-            animation: spin 0.7s linear infinite;
-        }
-
-        .preview-loading-text {
-            font-family: var(--font-head);
-            font-size: 13px;
-            color: var(--text-muted);
-            letter-spacing: 0.5px;
-        }
-
-        .preview-loading-files {
-            display: flex;
-            gap: 8px;
-            margin-top: 4px;
-        }
-
-        .preview-file-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            padding: 3px 10px;
-            border-radius: 6px;
-            font-family: var(--font-head);
-            font-size: 11px;
-            font-weight: 700;
-            opacity: 0.5;
-            transition: opacity 0.3s;
-            background: rgba(255, 102, 0, 0.15);
-            color: #ff6600;
-            border: 1px solid rgba(255, 102, 0, 0.3);
-        }
-
-        .preview-file-tag.loaded {
-            opacity: 1;
-        }
-
-        .preview-hint {
-            position: absolute;
-            bottom: 14px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 6px 16px;
-            background: rgba(0, 0, 0, 0.7);
-            border: 1px solid var(--border);
-            border-radius: 99px;
-            font-family: var(--font-head);
-            font-size: 11px;
-            color: var(--text-muted);
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.5s 0.8s;
-            white-space: nowrap;
-            z-index: 3;
-        }
-
-        .preview-hint.show {
-            opacity: 1;
-        }
-
-        .preview-hint i {
-            color: var(--premcolo);
-            margin-right: 4px;
-        }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 900px) {
@@ -1492,6 +1243,145 @@
                 justify-content: center;
             }
         }
+        .purchase-box {
+  --accent: #6366f1;
+  --accent-2: #8b5cf6;
+  --bg: #ffffff;
+  --text: #1e1b4b;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+
+  max-width: 460px;
+  margin: 2rem auto;
+  padding: 28px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px -10px rgba(99, 102, 241, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* شريط لوني علوي */
+.purchase-box::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+
+.purchase-box label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.purchase-box input[type="email"] {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 1rem;
+  color: var(--text);
+  background: #f9fafb;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.purchase-box input[type="email"]::placeholder {
+  color: #9ca3af;
+}
+
+.purchase-box input[type="email"]:focus {
+  background: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+.purchase-box input[type="email"]:not(:placeholder-shown):valid {
+  border-color: #22c55e;
+}
+
+.purchase-box input[type="email"]:not(:placeholder-shown):invalid {
+  border-color: #ef4444;
+}
+
+.email-note {
+  margin: 0;
+  padding: 10px 12px;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--muted);
+  background: #f5f3ff;
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+}
+
+#buy-button {
+  margin-top: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px -6px rgba(99, 196, 241, 0.6);
+  transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+}
+
+#buy-button span {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+#buy-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  box-shadow: 0 12px 28px -6px rgba(99, 102, 241, 0.7);
+}
+
+#buy-button:hover span {
+  transform: translate(3px, -3px);
+}
+
+#buy-button:active {
+  transform: translateY(0);
+}
+
+#buy-button:focus-visible {
+  outline: 3px solid rgba(99, 102, 241, 0.5);
+  outline-offset: 3px;
+}
+
+/* الوضع الداكن */
+@media (prefers-color-scheme: dark) {
+  .purchase-box {
+    --bg: #14142b;
+    --text: #eef0ff;
+    --muted: #a5a8c6;
+    --border: #2a2a4a;
+  }
+  .purchase-box input[type="email"] {
+    background: #1b1b38;
+  }
+  .purchase-box input[type="email"]:focus {
+    background: #1f1f40;
+  }
+  .email-note {
+    background: rgba(99, 194, 241, 0.1);
+  }
+}
     </style>
 </head>
 
@@ -1563,7 +1453,7 @@
             <div class="stat"><span class="stat-value">Free</span><span class="stat-label">Source Code</span></div>
         </div>
 
-        <img src="electric-button-preview.png"
+        <img src= "file:///C:/Users/html/Downloads/Untitled.png"
             alt="Glowing pill-shaped button labeled 77cod-ing with a crackling blue electric border on a black background"
             class="hero-img" width="1200" height="500" loading="eager">
         <p class="img-caption">Final result: a pill button with a live electric border and layered neon glow</p>
@@ -1794,7 +1684,7 @@
                 </p>
                 <div class="purchase-box"> <label for="customer-email"> Email address </label> <input type="email" id="customer-email"
                         placeholder="your@email.com" autocomplete="email" required>
-                    <p class="email-note"> Please make sure this email address is correct. Your project will be sent to this email
+                    <p class="email-note">⛔ Please make sure this email address is correct. Your project will be sent to this email
                         within 48 hours after successful payment. </p> <button id="buy-button"> Buy Electric Buttons — $3 <span>↗</span>
                     </button>
                 </div>
@@ -1819,50 +1709,10 @@
                             <pre><code  class="language-html"></div>
                             </code></pre>
                             
-                            <div class="premium-box">
-
-                                <div class="premium-icon">🔒</div>
-
-                                <div class="premium-content">
-
-                                    <span class="premium-label">PREMIUM SOURCE CODE</span>
-
-                                    <h3>Get the Complete Source Code</h3>
-
-                                    <p>
-                                        Get the complete HTML, CSS and JavaScript source code
-                                        and use this component in your own projects.
-                                    </p>
-
-                                    <div class="premium-bottom">
-
-                                        <span class="premium-price">$3</span>
-
-                                        <button type="button" class="buy-button" id="buy-button">
-                                            Get the Code <span>→</span>
-                                        </button>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="countdown-box">
-                    <p class="countdown-label">🔓 Full Source Code unlocks in</p>
-                    <div class="countdown-timer" id="countdownDisplay">05</div>
-                    <p style="font-size:13px;color:var(--text-muted);">Hosted on GitHub Gist — free, no sign-up required
-                    </p>
-                    <div class="gist-link-wrapper" id="gistLinkWrapper">
-                        <a class="gist-link" href="" target="_blank"
-                            rel="noopener noreferrer">
-                            <i class='bx bxl-github'></i> View Full Source Code on GitHub Gist
-                        </a>
-                    </div>
-                </div>
 
                 <div class="info-box">
                     <strong>💡 Quick Start:</strong> Save the code as <code>index.html</code> and open it in Chrome,
@@ -2105,41 +1955,59 @@
 
     </div>
 
-    <!-- ===== PREVIEW MODAL ===== -->
-    <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true"
-        aria-label="Live preview of the electric border button">
-        <div class="preview-modal">
-            <div class="preview-modal-header">
-                <div class="preview-modal-title"><i class='bx bx-show'></i><strong>Live Preview</strong> — Electric
-                    Button</div>
-                <div style="display:flex;align-items:center;gap:12px;">
-                    <div class="preview-dots">
-                        <button class="preview-dot red" aria-label="Close preview" id="previewDotClose"></button>
-                        <button class="preview-dot yellow" aria-label="Minimize" disabled></button>
-                        <button class="preview-dot green" aria-label="Maximize" disabled></button>
-                    </div>
-                    <button class="preview-close-btn" id="previewCloseBtn"><i class='bx bx-x'></i> Close</button>
-                </div>
-            </div>
-            <div class="preview-iframe-wrap">
-                <div class="preview-loading" id="previewLoading">
-                    <div class="preview-spinner"></div>
-                    <span class="preview-loading-text">Loading preview...</span>
-                    <div class="preview-loading-files"><span class="preview-file-tag" id="tagHTML">HTML</span></div>
-                </div>
-                <iframe id="previewIframe" title="Preview of the electric border button"
-                    sandbox="allow-scripts allow-same-origin"></iframe>
-                <div class="preview-hint" id="previewHint"><i class='bx bx-cursor'></i> Hover over the button to see the
-                    electric effect</div>
-            </div>
+
+    <div class="video-modal" id="videoModal">
+        <div class="video-container">
+            <video id="previewVideo" playsinline preload="metadata">
+                <source src="file:///C:/Users/html/Downloads/[AnimeZid.net]%20Detective.Conan.S25E1201.WEB-DL.1080p.Dubbed.Ar.mp4" type="video/mp4">
+            </video>
         </div>
     </div>
 
+
+
+
+
     <!-- ===== SCRIPTS ===== -->
+<script>
+    const previewBtn = document.getElementById("previewBtn");
+        const videoModal = document.getElementById("videoModal");
+        const previewVideo = document.getElementById("previewVideo");
 
+        previewBtn.addEventListener("click", () => {
+            videoModal.classList.add("active");
 
-    <!-- ====PAYPAL LIBRIRE ==== -->
-<script> const SALES_API = "https://77coding-sales.tt2980665.workers.dev"; const buyButton = document.getElementById("buy-button"); const emailInput = document.getElementById("customer-email"); buyButton.addEventListener("click", async () => { const email = emailInput.value.trim();   if (!emailInput.checkValidity()) { emailInput.reportValidity(); return; } const originalHTML = buyButton.innerHTML; buyButton.disabled = true; buyButton.innerHTML = 'Processing... <span>↗</span>'; try { const response = await fetch( `${SALES_API}/api/create-order`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email: email }) } ); const data = await response.json(); console.log( "PayPal response:", data ); if ( !response.ok || !data.approvalUrl ) { throw new Error( data.error || "Could not create PayPal order." ); } window.location.href = data.approvalUrl; } catch (error) { console.error( "Checkout error:", error ); alert( error.message || "Unable to start PayPal Checkout. Please try again." ); buyButton.disabled = false; buyButton.innerHTML = originalHTML; } }); </script>
+            previewVideo.currentTime = 0;
+            previewVideo.play();
+        });
+
+        videoModal.addEventListener("click", () => {
+            previewVideo.pause();
+            previewVideo.currentTime = 0;
+            videoModal.classList.remove("active");
+        });
+
+        previewVideo.addEventListener("ended", () => {
+            videoModal.classList.remove("active");
+        });
+</script>
+<script>
+         const SALES_API = "https://77coding-sales.tt2980665.workers.dev"; 
+         const buyButton = document.getElementById("buy-button"); 
+         const emailInput = document.getElementById("customer-email"); 
+         buyButton.addEventListener("click", async () => { const email = emailInput.value.trim();   
+         if (!emailInput.checkValidity()) { emailInput.reportValidity(); return; 
+
+         } 
+         const originalHTML = buyButton.innerHTML; buyButton.disabled = true; 
+         buyButton.innerHTML = 'Processing... <span>↗</span>'; 
+         try { const response = await fetch( `${SALES_API}/api/create-order`, { method: "POST", headers: { "Content-Type": "application/json" }, 
+         body: JSON.stringify({ email: email }) } ); const data = await response.json(); console.log( "PayPal response:", data ); if ( !response.ok || !data.approvalUrl ) { throw new Error( data.error || "Could not create PayPal order." ); } 
+         window.location.href = data.approvalUrl; } 
+         catch (error) { console.error( "Checkout error:", error ); 
+         alert( error.message || "Unable to start PayPal Checkout. Please try again." ); 
+         buyButton.disabled = false; buyButton.innerHTML = originalHTML; } }); 
+</script>
 
 </body>
 
