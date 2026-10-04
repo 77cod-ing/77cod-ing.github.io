@@ -1,0 +1,237 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Payment Successful – 77cod_ing</title>
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: #080b14;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 520px;
+            padding: 40px 30px;
+            text-align: center;
+            background: #111827;
+            border: 1px solid rgba(0, 217, 255, 0.25);
+            border-radius: 20px;
+            box-shadow: 0 0 40px rgba(0, 217, 255, 0.08);
+        }
+
+        .icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(0, 217, 255, 0.1);
+            color: #00d9ff;
+            font-size: 36px;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: 30px;
+        }
+
+        p {
+            color: #aeb7c7;
+            line-height: 1.7;
+        }
+
+        .status {
+            margin-top: 25px;
+            padding: 15px;
+            border-radius: 12px;
+            background: #0b1220;
+            color: #00d9ff;
+        }
+
+        .order-id {
+            margin-top: 15px;
+            padding: 12px;
+            overflow-wrap: anywhere;
+            border-radius: 10px;
+            background: #080b14;
+            color: #9ca3af;
+            font-size: 13px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 13px 22px;
+            border-radius: 10px;
+            background: #00d9ff;
+            color: #061018;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .error {
+            color: #ff6b8a;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="icon" id="icon">✓</div>
+
+    <h1 id="title">Processing Payment...</h1>
+
+    <p id="message">
+        Please wait while we verify your PayPal payment.
+    </p>
+
+    <div class="status" id="status">
+        Connecting to PayPal...
+    </div>
+
+    <div class="order-id" id="orderBox" style="display:none;"></div>
+
+    <a
+        class="button"
+        href="https://77cod-ing.github.io/"
+        id="homeButton"
+        style="display:none;"
+    >
+        Back to 77cod_ing
+    </a>
+
+</div>
+
+<script>
+
+const SALES_API =
+    "https://77coding-sales.tt2980665.workers.dev";
+
+const params = new URLSearchParams(window.location.search);
+
+const orderID = params.get("token");
+
+const title = document.getElementById("title");
+const message = document.getElementById("message");
+const status = document.getElementById("status");
+const icon = document.getElementById("icon");
+const orderBox = document.getElementById("orderBox");
+const homeButton = document.getElementById("homeButton");
+
+async function capturePayment() {
+
+    if (!orderID) {
+
+        title.textContent = "Payment Error";
+        message.textContent =
+            "No PayPal order ID was found.";
+
+        status.textContent =
+            "The payment could not be verified.";
+
+        status.classList.add("error");
+
+        icon.textContent = "!";
+        homeButton.style.display = "inline-block";
+
+        return;
+    }
+
+    orderBox.style.display = "block";
+    orderBox.textContent =
+        "PayPal Order ID: " + orderID;
+
+    try {
+
+        const response = await fetch(
+            `${SALES_API}/api/capture-order`,
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify({
+                    orderID: orderID
+                })
+            }
+        );
+
+        const data = await response.json();
+
+        console.log("Capture response:", data);
+
+        if (!response.ok || !data.success) {
+            throw new Error(
+                data.error ||
+                "Payment capture failed."
+            );
+        }
+
+        title.textContent = "Payment Successful!";
+
+        message.textContent =
+            "Your PayPal Sandbox payment has been successfully verified.";
+
+        status.textContent =
+            "Payment completed and the order was saved.";
+
+        icon.textContent = "✓";
+
+        homeButton.style.display = "inline-block";
+
+    } catch (error) {
+
+        console.error(
+            "Payment capture error:",
+            error
+        );
+
+        title.textContent =
+            "Payment Verification Failed";
+
+        message.textContent =
+            "PayPal returned to the website, but we could not complete the payment verification.";
+
+        status.textContent =
+            error.message;
+
+        status.classList.add("error");
+
+        icon.textContent = "!";
+
+        homeButton.style.display =
+            "inline-block";
+    }
+}
+
+capturePayment();
+
+</script>
+
+</body>
+</html>
+```
