@@ -1,0 +1,1889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== PRIMARY SEO META ===== -->
+    <title>Glassmorphism Login Form UI ✨ | HTML, CSS &amp; JavaScript #WebDesign</title>
+    <meta name="description"
+        content="Build a modern glassmorphism login form UI with HTML, CSS and JavaScript. Frosted glass card, backdrop-filter blur, purple glow inputs and a password reveal button — free source code included.">
+    <meta name="keywords"
+        content="glassmorphism login form, glassmorphism css, login form html css js, backdrop-filter blur, frosted glass ui, password reveal button javascript, modern login page design, web design 2026">
+    <meta name="author" content="77cod_ing">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://77cod-ing.github.io/Project53">
+
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Glassmorphism Login Form UI ✨ | HTML, CSS &amp; JavaScript #WebDesign">
+    <meta property="og:description"
+        content="Create a frosted glass login form with blur, soft purple gradients and a smart password reveal toggle — pure HTML, CSS and JavaScript, free source code included.">
+    <meta property="og:url" content="https://77cod-ing.github.io/Project53">
+    <meta property="og:image" content="https://77cod-ing.github.io/Login_Form02.jpg">
+    <meta property="og:site_name" content="77cod_ing">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://77cod-ing.github.io/Login_Form02.jpg">
+
+    <!-- ===== SCHEMA: TechArticle ===== -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Glassmorphism Login Form UI — HTML, CSS & JavaScript",
+  "description": "A complete tutorial on building a glassmorphism login form using HTML, CSS and JavaScript. Features a frosted glass card with backdrop-filter blur, purple gradient glow and an animated password reveal button.",
+  "image": "https://77cod-ing.github.io/Login_Form02.jpg",
+  "mainEntityOfPage": "https://77cod-ing.github.io/Project53",
+  "datePublished": "2026-10-14",
+  "author": { "@type": "Person", "name": "77cod_ing", "url": "https://77cod-ing.github.io" },
+  "publisher": { "@type": "Organization", "name": "77cod_ing" },
+  "articleSection": "HTML CSS JavaScript Tutorials",
+  "keywords": "glassmorphism login form, backdrop-filter blur, frosted glass UI, password reveal button, modern login page",
+  "timeRequired": "PT15M",
+  "educationalLevel": "Beginner",
+  "teaches": ["HTML Forms", "CSS Glassmorphism", "backdrop-filter", "JavaScript DOM", "Password Toggle", "Responsive UI"]
+}
+</script>
+
+    <!-- ===== SCHEMA: BreadcrumbList ===== -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://77cod-ing.github.io"},
+    {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://77cod-ing.github.io/projects"},
+    {"@type": "ListItem", "position": 3, "name": "Glassmorphism Login Form", "item": "https://77cod-ing.github.io/Project53"}
+  ]
+}
+</script>
+
+    <!-- ===== SCHEMA: FAQPage ===== -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What is glassmorphism in web design?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Glassmorphism is a UI style that imitates frosted glass. It combines a translucent background, a blur applied to whatever sits behind the element, a thin light border and a soft shadow, so the card appears to float above a colorful backdrop."}},
+    {"@type": "Question", "name": "Which CSS property creates the frosted glass blur?",
+     "acceptedAnswer": {"@type": "Answer", "text": "The backdrop-filter property, for example backdrop-filter: blur(16px). It blurs everything behind the element, so the card needs a semi-transparent background for the effect to be visible. Add the -webkit- prefix for Safari support."}},
+    {"@type": "Question", "name": "How does the password show/hide button work?",
+     "acceptedAnswer": {"@type": "Answer", "text": "JavaScript listens to the input event on the password field. When the field has text, the eye button appears; clicking it switches the input type between password and text. When the field is emptied, the button hides and the type resets to password."}},
+    {"@type": "Question", "name": "Can I change the glass color and background image?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Yes. Edit the rgba values in the linear-gradient of the .login-card background to change the tint, and replace the background-image URL on the .con container with any colorful image or gradient."}}
+  ]
+}
+</script>
+
+    <!-- ===== ASSETS ===== -->
+    <link rel="icon" type="image/png" href="Picture1.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+    <link href="https://networks0.github.io/copy.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299172127946365"
+        crossorigin="anonymous"></script>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        :root {
+            --back: linear-gradient(135deg, #001b33 0%, #00122a 60%, #000d1f 100%);
+            --premcolo: #00d9ff;
+            --accent2: #ff6b35;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --surface: rgba(255, 255, 255, .04);
+            --surface-hover: rgba(0, 217, 255, .07);
+            --border: rgba(255, 255, 255, .08);
+            --font-head: 'Space Mono', monospace;
+            --font-body: 'DM Sans', sans-serif
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            background: var(--back);
+            font-family: var(--font-body);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.7;
+            min-height: 100vh
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 56px;
+            padding: 0 2.5rem;
+            background: rgba(0, 0, 0, .4);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            gap: 8px
+        }
+
+        .logo-icon {
+            color: var(--premcolo);
+            letter-spacing: 2px
+        }
+
+        .nav-links {
+            display: flex;
+            gap: clamp(1rem, 2vw, 2rem);
+            align-items: center
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            position: relative;
+            transition: color .25s
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--premcolo);
+            transition: width .3s
+        }
+
+        .nav-links a:hover {
+            color: var(--premcolo)
+        }
+
+        .nav-links a:hover::after {
+            width: 100%
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 6px;
+            z-index: 200
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--text);
+            border-radius: 2px
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 8, 20, .97);
+            backdrop-filter: blur(20px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: left .45s cubic-bezier(.77, 0, .175, 1);
+            z-index: 999
+        }
+
+        .mobile-menu.active {
+            left: 0
+        }
+
+        .mobile-menu a {
+            font-family: var(--font-head);
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            width: 100%;
+            padding: 1.2rem 2rem;
+            border-bottom: 1px solid var(--border);
+            transition: color .25s, background .25s;
+            letter-spacing: 1px
+        }
+
+        .mobile-menu a:first-of-type {
+            border-top: 1px solid var(--border)
+        }
+
+        .mobile-menu a:hover {
+            color: var(--premcolo);
+            background: var(--surface-hover)
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 18px;
+            right: 22px;
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            transition: .3s
+        }
+
+        .close-btn:hover {
+            color: var(--premcolo);
+            border-color: var(--premcolo);
+            transform: rotate(90deg)
+        }
+
+        /* BREADCRUMB + BACK */
+        .breadcrumb {
+            padding: 12px 2.5rem;
+            border-bottom: 1px solid var(--border)
+        }
+
+        .breadcrumb ol {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            list-style: none;
+            align-items: center
+        }
+
+        .breadcrumb li {
+            display: flex;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 13px
+        }
+
+        .breadcrumb li+li::before {
+            content: "\203A";
+            color: var(--premcolo);
+            margin-right: 6px;
+            font-size: 1.1rem
+        }
+
+        .breadcrumb a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color .2s
+        }
+
+        .breadcrumb a:hover {
+            color: var(--premcolo)
+        }
+
+        .breadcrumb [aria-current="page"] {
+            color: var(--premcolo);
+            font-weight: 600
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 14px;
+            transition: .2s;
+            margin: 1rem 2.5rem
+        }
+
+        .back-link:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo)
+        }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 3rem 2.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 217, 255, .08) 0%, transparent 70%);
+            pointer-events: none
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: var(--font-head);
+            letter-spacing: .5px;
+            text-transform: uppercase
+        }
+
+        .tag-tutorial {
+            background: rgba(0, 217, 255, .1);
+            color: var(--premcolo);
+            border: 1px solid rgba(0, 217, 255, .3)
+        }
+
+        .tag-css {
+            background: rgba(192, 132, 252, .1);
+            color: #c084fc;
+            border: 1px solid rgba(192, 132, 252, .2)
+        }
+
+        .tag-html {
+            background: rgba(255, 102, 0, .1);
+            color: #ff6600;
+            border: 1px solid rgba(255, 102, 0, .2)
+        }
+
+        .tag-js {
+            background: rgba(250, 204, 21, .1);
+            color: #facc15;
+            border: 1px solid rgba(250, 204, 21, .2)
+        }
+
+        .tag-level {
+            background: rgba(124, 58, 237, .15);
+            color: #a78bfa;
+            border: 1px solid rgba(124, 58, 237, .3)
+        }
+
+        .read-time {
+            color: var(--text-muted);
+            font-size: 13px
+        }
+
+        .hero h1 {
+            font-family: var(--font-head);
+            font-size: clamp(1.6rem, 4vw, 2.6rem);
+            line-height: 1.25;
+            color: #fff;
+            margin-bottom: 1rem;
+            letter-spacing: -.5px
+        }
+
+        .hero h1 span {
+            color: var(--premcolo)
+        }
+
+        .hero-lead {
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            color: var(--text-muted);
+            max-width: 680px;
+            margin-bottom: 1.5rem
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column
+        }
+
+        .stat-value {
+            font-family: var(--font-head);
+            font-size: 1.4rem;
+            color: var(--premcolo);
+            font-weight: 700
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: .5px
+        }
+
+        .hero-img {
+            width: 100%;
+            max-height: 490px;
+            border-radius: 16px;
+            object-fit: cover;
+            border: 1px solid var(--border);
+            display: block;
+            box-shadow: 0 0 60px rgba(0, 217, 255, .1), 0 32px 80px rgba(0, 0, 0, .5)
+        }
+
+        .img-caption {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic
+        }
+
+        /* LAYOUT + ARTICLE */
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2.5rem 4rem;
+            align-items: start
+        }
+
+        .article-body h2 {
+            font-family: var(--font-head);
+            font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+            color: var(--premcolo);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: .5rem;
+            border-bottom: 1px solid var(--border);
+            scroll-margin-top: 80px
+        }
+
+        .article-body h3 {
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            color: #7dd3fc;
+            margin: 1.8rem 0 .75rem;
+            scroll-margin-top: 80px
+        }
+
+        .article-body p {
+            margin-bottom: 1.1rem
+        }
+
+        .article-body code {
+            font-family: var(--font-head);
+            font-size: .85em;
+            background: rgba(0, 217, 255, .15);
+            color: var(--premcolo);
+            padding: 2px 7px;
+            border-radius: 5px
+        }
+
+        .toc {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem
+        }
+
+        .toc-title {
+            font-family: var(--font-head);
+            font-size: .85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--premcolo);
+            margin-bottom: .75rem
+        }
+
+        .toc ol {
+            padding-left: 1.2rem
+        }
+
+        .toc li {
+            margin-bottom: 6px
+        }
+
+        .toc a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color .2s
+        }
+
+        .toc a:hover {
+            color: var(--premcolo)
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 14px;
+            margin: 1.5rem 0
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            transition: .25s
+        }
+
+        .feature-card:hover {
+            border-color: rgba(0, 217, 255, .4);
+            background: var(--surface-hover)
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px
+        }
+
+        .feature-title {
+            font-family: var(--font-head);
+            font-size: .85rem;
+            color: #fff;
+            margin-bottom: 5px
+        }
+
+        .feature-desc {
+            font-size: 13px;
+            color: var(--text-muted)
+        }
+
+        .steps {
+            margin: 1.5rem 0
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 44px 1fr;
+            gap: 1rem;
+            padding: 1.1rem 0;
+            border-bottom: 1px solid var(--border)
+        }
+
+        .step:last-child {
+            border-bottom: none
+        }
+
+        .step-num {
+            width: 44px;
+            height: 44px;
+            background: rgba(0, 217, 255, .1);
+            border: 1px solid rgba(0, 217, 255, .3);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-head);
+            color: var(--premcolo);
+            font-weight: 700
+        }
+
+        .step-content h3 {
+            margin-top: 0;
+            font-size: 1rem
+        }
+
+        .step-content p {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: var(--text-muted)
+        }
+
+        .info-box,
+        .warn-box {
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0
+        }
+
+        .info-box {
+            background: rgba(0, 217, 255, .05);
+            border: 1px solid rgba(0, 217, 255, .2);
+            border-left: 4px solid var(--premcolo)
+        }
+
+        .info-box strong {
+            color: var(--premcolo)
+        }
+
+        .warn-box {
+            background: rgba(255, 107, 53, .06);
+            border: 1px solid rgba(255, 107, 53, .2);
+            border-left: 4px solid var(--accent2)
+        }
+
+        .warn-box strong {
+            color: var(--accent2)
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 1.5rem 0
+        }
+
+        /* CODE SECTION */
+        .code-section {
+            margin: 2rem 0;
+            width: 60vw
+        }
+
+        .code-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px
+        }
+
+        .code-tabs {
+            display: flex;
+            gap: 4px
+        }
+
+        .code-tab {
+            padding: 8px 20px;
+            border-radius: 8px 8px 0 0;
+            border: 1px solid var(--border);
+            border-bottom: none;
+            background: rgba(255, 255, 255, .02);
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 13px;
+            cursor: pointer;
+            transition: .2s
+        }
+
+        .code-tab.active {
+            background: #1e1e2f;
+            color: #fff;
+            border-color: rgba(0, 217, 255, .3)
+        }
+
+        .code-tab[data-lang="html"].active {
+            color: #ff6600
+        }
+
+        .code-tab[data-lang="css"].active {
+            color: #00d9ff
+        }
+
+        .code-tab[data-lang="js"].active {
+            color: #facc15
+        }
+
+        .preview-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 22px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 217, 255, .4);
+            background: linear-gradient(135deg, rgba(0, 217, 255, .12), rgba(0, 217, 255, .04));
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .3s
+        }
+
+        .preview-btn:hover {
+            border-color: var(--premcolo);
+            box-shadow: 0 0 20px rgba(0, 217, 255, .2);
+            transform: translateY(-1px)
+        }
+
+        .preview-btn.loading i {
+            animation: spin .8s linear infinite
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        .code-box {
+            background: #0c182af7;
+            border: 1px solid rgba(0, 217, 255, .15);
+            border-radius: 0 12px 12px 12px;
+            display: none
+        }
+
+        .code-box.active {
+            display: block
+        }
+
+        .code-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--border)
+        }
+
+        .code-lang-label {
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700
+        }
+
+        .copy-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            border-radius: 7px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 13px;
+            cursor: pointer;
+            transition: .2s
+        }
+
+        .copy-btn:hover {
+            border-color: var(--premcolo);
+            color: var(--premcolo)
+        }
+
+        .copy-btn.copied {
+            color: #4ade80;
+            border-color: #4ade80
+        }
+
+        pre[class*="language-"] {
+            width: 100%;
+            max-width: 100%;
+            height: 50vh;
+            border-radius: 0 0 12px 12px;
+            overflow: auto;
+            margin: 0;
+            tab-size: 2;
+            white-space: pre;
+            background: #0c182af7 !important
+        }
+
+        pre::-webkit-scrollbar {
+            width: 6px;
+            height: 6px
+        }
+
+        pre::-webkit-scrollbar-track {
+            background: transparent
+        }
+
+        pre::-webkit-scrollbar-thumb {
+            background: var(--premcolo);
+            border-radius: 10px
+        }
+
+        /* PREVIEW MODAL */
+        .preview-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 5, 15, .85);
+            backdrop-filter: blur(16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .35s, visibility .35s
+        }
+
+        .preview-overlay.open {
+            opacity: 1;
+            visibility: visible
+        }
+
+        .preview-modal {
+            width: 92vw;
+            max-width: 85vw;
+            height: 100vh;
+            background: #0a0e1a;
+            border: 1px solid rgba(0, 217, 255, .2);
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 24px 80px rgba(0, 0, 0, .7), 0 0 120px rgba(0, 217, 255, .06);
+            transform: scale(.92) translateY(20px);
+            transition: transform .4s cubic-bezier(.34, 1.56, .64, 1)
+        }
+
+        .preview-overlay.open .preview-modal {
+            transform: none
+        }
+
+        .preview-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(0, 0, 0, .3);
+            flex-shrink: 0
+        }
+
+        .preview-modal-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted)
+        }
+
+        .preview-modal-title i {
+            color: var(--premcolo);
+            font-size: 16px
+        }
+
+        .preview-modal-title strong {
+            color: #fff
+        }
+
+        .preview-dots {
+            display: flex;
+            gap: 7px
+        }
+
+        .preview-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: .2s
+        }
+
+        .preview-dot:hover {
+            transform: scale(1.2);
+            filter: brightness(1.3)
+        }
+
+        .preview-dot.red {
+            background: #ff5f57
+        }
+
+        .preview-dot.yellow {
+            background: #febc2e
+        }
+
+        .preview-dot.green {
+            background: #28c840
+        }
+
+        .preview-close-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-family: var(--font-head);
+            font-size: 12px;
+            cursor: pointer;
+            transition: .2s
+        }
+
+        .preview-close-btn:hover {
+            border-color: var(--accent2);
+            color: var(--accent2);
+            background: rgba(255, 107, 53, .08)
+        }
+
+        .preview-iframe-wrap {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            background: #000
+        }
+
+        .preview-iframe-wrap iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block
+        }
+
+        .preview-loading {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            background: #0a0e1a;
+            z-index: 2;
+            transition: opacity .4s
+        }
+
+        .preview-loading.hidden {
+            opacity: 0;
+            pointer-events: none
+        }
+
+        .preview-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(1, 217, 255, .15);
+            border-top-color: var(--premcolo);
+            border-radius: 50%;
+            animation: spin .7s linear infinite
+        }
+
+        .preview-loading-text {
+            font-family: var(--font-head);
+            font-size: 13px;
+            color: var(--text-muted);
+            letter-spacing: .5px
+        }
+
+        .preview-loading-files {
+            display: flex;
+            gap: 8px;
+            margin-top: 4px
+        }
+
+        .preview-file-tag {
+            display: inline-flex;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            font-weight: 700;
+            opacity: .5;
+            transition: opacity .3s
+        }
+
+        .preview-file-tag.loaded {
+            opacity: 1
+        }
+
+        .html-tag {
+            background: rgba(255, 102, 0, .15);
+            color: #ff6600;
+            border: 1px solid rgba(255, 102, 0, .3)
+        }
+
+        .css-tag {
+            background: rgba(0, 255, 255, .1);
+            color: #0ff;
+            border: 1px solid rgba(0, 255, 255, .25)
+        }
+
+        .js-tag {
+            background: rgba(247, 223, 30, .1);
+            color: #f7df1e;
+            border: 1px solid rgba(247, 223, 30, .25)
+        }
+
+        .preview-hint {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 6px 16px;
+            background: rgba(0, 0, 0, .7);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            font-family: var(--font-head);
+            font-size: 11px;
+            color: var(--text-muted);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity .5s .8s;
+            white-space: nowrap;
+            z-index: 3
+        }
+
+        .preview-hint.show {
+            opacity: 1
+        }
+
+        .preview-hint i {
+            color: var(--premcolo);
+            margin-right: 4px
+        }
+
+        /* FAQ */
+        .faq {
+            margin: 1.5rem 0
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            overflow: hidden
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            background: var(--surface);
+            font-weight: 600;
+            font-size: 15px;
+            transition: background .2s;
+            list-style: none;
+            user-select: none
+        }
+
+        .faq-question:hover {
+            background: var(--surface-hover)
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.3rem;
+            color: var(--premcolo);
+            transition: transform .3s;
+            flex-shrink: 0
+        }
+
+        details[open] .faq-question::after {
+            transform: rotate(45deg)
+        }
+
+        .faq-answer {
+            padding: 1rem 1.25rem;
+            color: var(--text-muted);
+            font-size: 14px;
+            border-top: 1px solid var(--border)
+        }
+
+        .faq-answer code {
+            font-family: var(--font-head);
+            font-size: .85em;
+            background: rgba(0, 217, 255, .1);
+            color: var(--premcolo);
+            padding: 2px 6px;
+            border-radius: 4px
+        }
+
+        /* CONCLUSION */
+        .conclusion {
+            background: linear-gradient(135deg, rgba(0, 217, 255, .06), rgba(0, 180, 210, .03));
+            border: 1px solid rgba(0, 217, 255, .2);
+            border-radius: 16px;
+            padding: 1.75rem 2rem;
+            margin-top: 2.5rem
+        }
+
+        .conclusion h2 {
+            border: none;
+            margin-top: 0;
+            padding-bottom: 0
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            position: sticky;
+            top: 72px
+        }
+
+        .sidebar-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 1.5rem
+        }
+
+        .sidebar-header {
+            padding: 14px 16px;
+            font-family: var(--font-head);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--premcolo);
+            border-bottom: 1px solid var(--border);
+            text-transform: uppercase;
+            letter-spacing: .5px
+        }
+
+        .related-list {
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px
+        }
+
+        .related-card {
+            display: block;
+            text-decoration: none;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 16/9;
+            border: 1px solid var(--border);
+            transition: .2s
+        }
+
+        .related-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 217, 255, .4)
+        }
+
+        .related-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block
+        }
+
+        .related-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, .8) 100%)
+        }
+
+        .related-card-title {
+            position: absolute;
+            bottom: 8px;
+            left: 10px;
+            right: 10px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.3
+        }
+
+        /* COUNTDOWN */
+        .countdown-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            margin: 2rem 0
+        }
+
+        .countdown-text {
+            font-family: var(--font-head);
+            font-size: 1.5rem;
+            color: var(--premcolo);
+            margin-bottom: 1rem
+        }
+
+        .link-box {
+            display: none;
+            padding: 14px 28px;
+            background: rgba(0, 217, 255, .1);
+            border: 1px solid rgba(0, 217, 255, .4);
+            border-radius: 10px;
+            transition: .3s
+        }
+
+        .link-box a {
+            text-decoration: none;
+            color: var(--premcolo);
+            font-family: var(--font-head);
+            font-size: 1rem;
+            font-weight: bold
+        }
+
+        .link-box:hover {
+            background: rgba(0, 217, 255, .18);
+            transform: translateY(-2px)
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:1300px) {
+            .code-section {
+                width: 90vw
+            }
+        }
+
+        @media(max-width:900px) {
+            .layout {
+                grid-template-columns: 1fr;
+                padding: 1.5rem 1.25rem
+            }
+
+            .sidebar {
+                position: static
+            }
+
+            .hero {
+                padding: 2rem 1.25rem 1.5rem
+            }
+
+            .navbar {
+                padding: 0 1.25rem
+            }
+
+            .breadcrumb {
+                padding: 10px 1.25rem
+            }
+
+            .back-link {
+                margin: .75rem 1.25rem
+            }
+        }
+
+        @media(max-width:640px) {
+            .nav-links {
+                display: none
+            }
+
+            .hamburger {
+                display: flex
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .code-section {
+                width: 90vw
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+        <a href="https://77cod-ing.github.io/" class="logo"><span class="logo-icon">{ / }</span> 77cod_ing</a>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="https://77cod-ing.github.io/">Home</a>
+            <a href="about">About</a>
+            <a href="projects">Projects</a>
+            <a href="contact">Contact</a>
+        </nav>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <a href="https://77cod-ing.github.io/">Home</a>
+        <a href="about">About</a>
+        <a href="projects">Projects</a>
+        <a href="contact">Contact</a>
+        <a href="Privacy Policy">Privacy Policy</a>
+        <a href="Terms & Conditions">Terms &amp; Conditions</a>
+    </div>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="https://77cod-ing.github.io/"><i class='bx bx-home-alt-2'></i> Home</a></li>
+            <li><a href="projects"><i class='bx bx-data'></i> Projects</a></li>
+            <li><span aria-current="page">Glassmorphism Login Form</span></li>
+        </ol>
+    </nav>
+
+    <a href="projects#subscribe" class="back-link" aria-label="Return to Projects"><i class='bx bx-arrow-back'></i>
+        Return to Projects</a>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-labelledby="main-heading">
+        <div class="hero-meta">
+            <span class="tag tag-tutorial"><i class='bx bx-book-open'></i> Tutorial</span>
+            <span class="tag tag-html">HTML</span>
+            <span class="tag tag-css">CSS</span>
+            <span class="tag tag-js">JavaScript</span>
+            <span class="tag tag-level">Beginner</span>
+            <span class="read-time"><i class='bx bx-time'></i> ~15 min read</span>
+        </div>
+
+        <h1 id="main-heading"><span>Glassmorphism Login</span> Form UI ✨<br>— HTML, CSS &amp; JavaScript</h1>
+
+        <p class="hero-lead">
+            A frosted glass login card floating over a deep purple background is one of the most popular looks in modern
+            web design.
+            Build a <strong>Glassmorphism Login Form</strong> using <em>HTML, CSS, and JavaScript</em> — complete with a
+            blurred
+            translucent card, glowing purple inputs and a smart password reveal button. No frameworks, free source code
+            included.
+            #WebDesign
+        </p>
+
+        <div class="hero-stats">
+            <div class="stat"><span class="stat-value">16px</span><span class="stat-label">Glass Blur</span></div>
+            <div class="stat"><span class="stat-value">0</span><span class="stat-label">Frameworks</span></div>
+            <div class="stat"><span class="stat-value">3</span><span class="stat-label">Files</span></div>
+            <div class="stat"><span class="stat-value">Free</span><span class="stat-label">Source Code</span></div>
+        </div>
+
+        <img src="https://77cod-ing.github.io/Login_Form02.jpg"
+            alt="Glassmorphism login form UI built with HTML CSS and JavaScript — frosted glass card with purple glow and password reveal button"
+            class="hero-img" width="1200" height="520" loading="eager">
+        <p class="img-caption">Final result: a frosted glass login card with backdrop blur, purple gradient glow and an
+            animated password toggle — pure HTML, CSS &amp; JavaScript</p>
+    </section>
+
+    <!-- ===== MAIN LAYOUT ===== -->
+    <div class="layout">
+
+        <main class="article-body" id="main-content">
+
+            <nav class="toc" aria-label="Table of contents">
+                <p class="toc-title">📋 Contents</p>
+                <ol>
+                    <li><a href="#overview">What You'll Build</a></li>
+                    <li><a href="#features">Key Features</a></li>
+                    <li><a href="#how-it-works">How It Works — Step by Step</a></li>
+                    <li><a href="#source-code">Get the Source Code</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ol>
+            </nav>
+
+            <!-- OVERVIEW -->
+            <section id="overview">
+                <h2>What You'll Build</h2>
+                <p>
+                    This tutorial walks you through creating a <strong>Glassmorphism Login Form</strong> using <em>HTML,
+                        CSS, and JavaScript</em>.
+                    The design centers on a translucent card with rounded corners that blurs the colorful background
+                    behind it, creating a
+                    realistic frosted glass effect.
+                </p>
+                <p>
+                    Inside the card you get a brand logo, a welcome message, email and password fields with a soft
+                    purple focus glow, a gradient
+                    login button, and a password reveal icon that only appears once the user starts typing. It is a
+                    perfect starting point for
+                    dashboards, SaaS products, portfolios and any modern sign-in page.
+                </p>
+                <div class="info-box">
+                    <strong>💡 Quick Summary:</strong> The glass look comes from four ingredients: a semi-transparent
+                    <code>linear-gradient</code> background, <code>backdrop-filter: blur()</code>, a thin light
+                    <code>border</code>
+                    and a deep soft <code>box-shadow</code> — all placed over a colorful background image.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- FEATURES -->
+            <section id="features">
+                <h2>Key Features of This Login Form</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🪟</div>
+                        <div class="feature-title">Frosted Glass Card</div>
+                        <div class="feature-desc">A translucent gradient card with <code>backdrop-filter</code> blur and
+                            a 40px rounded border.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💜</div>
+                        <div class="feature-title">Purple Focus Glow</div>
+                        <div class="feature-desc">Inputs light up with a soft violet border and shadow when focused for
+                            clear feedback.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👁️</div>
+                        <div class="feature-title">Password Reveal</div>
+                        <div class="feature-desc">An eye button appears only when text is typed and toggles the field
+                            between hidden and visible.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✨</div>
+                        <div class="feature-title">Gradient Button</div>
+                        <div class="feature-desc">A purple gradient login button with glow shadow and a subtle lift on
+                            hover.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <div class="feature-title">Boxicons Logo</div>
+                        <div class="feature-desc">The brand mark uses a Boxicons icon loaded from a CDN — no image files
+                            needed.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <div class="feature-title">Zero Dependencies</div>
+                        <div class="feature-desc">Plain HTML, CSS and vanilla JavaScript. Open the file in any modern
+                            browser and it runs.</div>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- HOW IT WORKS -->
+            <section id="how-it-works">
+                <h2>How It Works — Step by Step</h2>
+                <p>Here's a breakdown of the layers that power the glassmorphism login form.</p>
+
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-num">01</div>
+                        <div class="step-content">
+                            <h3>Structure the HTML</h3>
+                            <p>
+                                A <code>.con</code> container holds the background image and centers a
+                                <code>.login-card</code>. Inside the card
+                                sit the logo block, the welcome heading, a <code>&lt;form&gt;</code> with email and
+                                password
+                                <code>.input-group</code> blocks, a "Forget Password" link, the login button and a
+                                sign-up prompt. The password input is
+                                wrapped in a <code>.password-wrapper</code> so the reveal button can be positioned over
+                                it.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">02</div>
+                        <div class="step-content">
+                            <h3>Create the Glass Effect with CSS</h3>
+                            <p>
+                                Give the card a translucent <code>linear-gradient</code> using <code>rgba()</code> white
+                                and purple tones, then apply
+                                <code>backdrop-filter: blur(16px)</code> (plus the <code>-webkit-</code> prefix for
+                                Safari). Finish with a
+                                <code>1px</code> border at low opacity, a large <code>border-radius</code> and a dark
+                                soft
+                                <code>box-shadow</code> so the card appears to float above the background.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">03</div>
+                        <div class="step-content">
+                            <h3>Style Inputs and the Login Button</h3>
+                            <p>
+                                Inputs use a dark translucent background with a light border. On <code>:focus</code> the
+                                border switches to violet
+                                <code>#a370f7</code> with a soft glow. The login button uses a purple gradient, a
+                                colored shadow and a small
+                                <code>translateY(-2px)</code> on hover for a tactile feel.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">04</div>
+                        <div class="step-content">
+                            <h3>Add the Password Toggle with JavaScript</h3>
+                            <p>
+                                The script listens to the <code>input</code> event on the password field. When the value
+                                has characters, the reveal
+                                button is displayed; when it is empty, the button hides and the input type is reset to
+                                <code>password</code>. Clicking
+                                the button switches <code>type</code> between <code>password</code> and
+                                <code>text</code> and updates the icon.
+                                The browser's built-in reveal icon is hidden with the <code>::-ms-reveal</code>
+                                pseudo-element so only your custom
+                                button shows.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="warn-box">
+                    <strong>⚠️ Browser tip:</strong> <code>backdrop-filter</code> needs a semi-transparent background to
+                    be visible, and very large
+                    blur values can be heavy on low-end devices. Keep the blur between 10px and 20px and test on a
+                    mid-range phone before deploying.
+                </div>
+
+                <h3>Customizing the Glass Look</h3>
+                <p>
+                    To change the tint, edit the <code>rgba()</code> stops in the card's gradient. Lower alpha values
+                    make the card more
+                    transparent, higher values make it frostier. Swap the <code>background-image</code> on
+                    <code>.con</code> for any colorful
+                    image or gradient — glassmorphism looks best over vibrant, blurred shapes.
+                </p>
+
+                <h3>Best Practices for Glassmorphism Forms</h3>
+                <p>
+                    Keep text contrast high: use white or near-white text over the blurred background and avoid light
+                    colors behind the card.
+                    Always connect each <code>&lt;label&gt;</code> to its input with <code>for</code> and
+                    <code>id</code>, keep the focus state
+                    clearly visible for keyboard users, and use real form validation attributes like
+                    <code>required</code> and
+                    <code>type="email"</code>. Remember that this tutorial covers the front-end only — authentication
+                    must be handled securely
+                    on your server.
+                </p>
+            </section>
+
+            <hr>
+
+            <!-- SOURCE CODE -->
+            <section id="source-code">
+                <h2>Get the Source Code</h2>
+                <p>
+                    The full source code is available for free on GitHub Gist. Explore the code below, copy it directly,
+                    or click <strong>Preview Result</strong> to see the live demo — then wait for the countdown to grab
+                    the full Gist link.
+                </p>
+
+                <div class="code-section">
+                    <div class="code-toolbar">
+                        <div class="code-tabs" role="tablist" aria-label="Code files">
+                            <button class="code-tab active" data-lang="html" role="tab" aria-selected="true"
+                                aria-controls="panel-html">HTML</button>
+                            <button class="code-tab" data-lang="css" role="tab" aria-selected="false"
+                                aria-controls="panel-css">CSS</button>
+                            <button class="code-tab" data-lang="js" role="tab" aria-selected="false"
+                                aria-controls="panel-js">JS</button>
+                        </div>
+                        <button class="preview-btn" id="previewBtn" aria-label="Preview the glassmorphism login form">
+                            <i class='bx bx-play-circle'></i><span>Preview Result</span>
+                        </button>
+                    </div>
+
+                    <div class="code-panels">
+                        <div class="code-box active" id="panel-html" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#ff6600;">HTML — index</span>
+                                <button class="copy-btn" data-target="code1"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code1" class="language-html">&lt;!-- Loading source code... --&gt;</code></pre>
+                        </div>
+                        <div class="code-box" id="panel-css" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#00ffff;">CSS — style.css</span>
+                                <button class="copy-btn" data-target="code2"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code2" class="language-css">/* Loading source code... */</code></pre>
+                        </div>
+                        <div class="code-box" id="panel-js" role="tabpanel">
+                            <div class="code-header">
+                                <span class="code-lang-label" style="color:#f7df1e;">JS — script.js</span>
+                                <button class="copy-btn" data-target="code3"><i class='bx bxs-copy'></i> Copy</button>
+                            </div>
+                            <pre><code id="code3" class="language-javascript">// Loading source code...</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <strong>💡 Quick Start:</strong> Download <code>index</code>, <code>style.css</code> and
+                    <code>script.js</code>,
+                    place them in the same folder, and open <code>index</code> in your browser. Boxicons loads from a
+                    CDN automatically —
+                    no server or install step required.
+                </div>
+
+                <!-- COUNTDOWN -->
+                <div class="countdown-box">
+                    <div class="countdown-text" id="countdown"><span id="number">10</span> wait...</div>
+                    <div class="link-box" id="linkBox">
+                        <!-- TODO: replace YOUR_GIST_ID with the real Gist ID -->
+                        <a href="https://gist.github.com/77cod-ing/YOUR_GIST_ID" target="_blank">
+                            <i class='bx bxl-github'></i> View Full Code on GitHub Gist
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- FAQ -->
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq">
+                    <details class="faq-item">
+                        <summary class="faq-question">What is glassmorphism in web design?</summary>
+                        <div class="faq-answer">
+                            Glassmorphism is a UI style that imitates frosted glass. It combines a translucent
+                            background, a blur applied to whatever
+                            sits behind the element, a thin light border and a soft shadow, so the card appears to float
+                            above a colorful backdrop.
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Which CSS property creates the frosted glass blur?</summary>
+                        <div class="faq-answer">
+                            The <code>backdrop-filter</code> property, for example
+                            <code>backdrop-filter: blur(16px)</code>. It blurs everything behind
+                            the element, so the card needs a semi-transparent background for the effect to show. Add
+                            <code>-webkit-backdrop-filter</code>
+                            for Safari support.
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">How does the password show/hide button work?</summary>
+                        <div class="faq-answer">
+                            JavaScript listens to the <code>input</code> event on the password field. When the field has
+                            text, the eye button appears;
+                            clicking it switches the input <code>type</code> between <code>password</code> and
+                            <code>text</code>. When the field is
+                            emptied, the button hides and the type resets to <code>password</code>.
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Can I change the glass color and background image?</summary>
+                        <div class="faq-answer">
+                            Yes. Edit the <code>rgba()</code> values in the <code>linear-gradient</code> of
+                            <code>.login-card</code> to change the tint,
+                            and replace the <code>background-image</code> URL on <code>.con</code> with any colorful
+                            image or gradient.
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Is this login form secure for production?</summary>
+                        <div class="faq-answer">
+                            This tutorial covers the visual front-end only. For a real application you must validate
+                            credentials on a secure server,
+                            use HTTPS, and never store passwords in plain text.
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- CONCLUSION -->
+            <section id="conclusion" class="conclusion">
+                <h2>Conclusion</h2>
+                <p>
+                    The <strong>Glassmorphism Login Form</strong> shows how a few lines of CSS — translucency, blur, a
+                    light border and a soft
+                    shadow — can turn an ordinary form into a polished, modern interface. Add a focus glow, a gradient
+                    button and a smart
+                    password toggle, and you get a sign-in screen that feels premium without a single framework.
+                </p>
+                <p>
+                    Customize the colors, swap the background and reuse the card for sign-up, reset-password or contact
+                    forms to keep a
+                    consistent glass style across your whole project.
+                </p>
+                <p style="color:var(--text-muted);font-size:14px;margin-bottom:0;">
+                    Found this useful? Explore more HTML, CSS &amp; JavaScript projects in the sidebar →
+                </p>
+            </section>
+
+        </main>
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar" aria-label="Related projects">
+            <div class="sidebar-box">
+                <div class="sidebar-header">🔗 Related Projects</div>
+                <div class="related-list">
+                    <a class="related-card" href="Project23" aria-label="Animated Login and Signup Page">
+                        <img src="image copy 75.png" alt="Modern Animated Login Signup Page HTML CSS JS" loading="lazy"
+                            width="280" height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Animated Login &amp; Signup Page — HTML CSS JS</div>
+                    </a>
+                    <a class="related-card" href="Project13" aria-label="Neon Cursor Animation">
+                        <img src="image copy 36.png" alt="Neon Cursor Animation HTML CSS JS" loading="lazy" width="280"
+                            height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Neon Cursor Animation — HTML CSS JS</div>
+                    </a>
+                    <a class="related-card" href="Project15" aria-label="Floating Label Input Effect">
+                        <img src="image copy 43.png" alt="Floating Label Input Effect CSS" loading="lazy" width="280"
+                            height="158">
+                        <div class="related-card-overlay"></div>
+                        <div class="related-card-title">Floating Label Input Effect — HTML CSS</div>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- ===== PREVIEW MODAL ===== -->
+    <div class="preview-overlay" id="previewOverlay" role="dialog" aria-modal="true" aria-label="Live preview">
+        <div class="preview-modal">
+            <div class="preview-modal-header">
+                <div class="preview-modal-title"><i class='bx bx-show'></i><strong>Live Preview</strong> — Glassmorphism
+                    Login Form</div>
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <div class="preview-dots">
+                        <button class="preview-dot red" id="previewDotClose" aria-label="Close preview"></button>
+                        <button class="preview-dot yellow" disabled></button>
+                        <button class="preview-dot green" disabled></button>
+                    </div>
+                    <button class="preview-close-btn" id="previewCloseBtn"><i class='bx bx-x'></i> Close</button>
+                </div>
+            </div>
+            <div class="preview-iframe-wrap">
+                <div class="preview-loading" id="previewLoading">
+                    <div class="preview-spinner"></div>
+                    <span class="preview-loading-text">Loading preview...</span>
+                    <div class="preview-loading-files">
+                        <span class="preview-file-tag html-tag" id="tagHTML">HTML</span>
+                        <span class="preview-file-tag css-tag" id="tagCSS">CSS</span>
+                        <span class="preview-file-tag js-tag" id="tagJS">JS</span>
+                    </div>
+                </div>
+                <iframe id="previewIframe" title="Live preview" sandbox="allow-scripts allow-same-origin"></iframe>
+                <div class="preview-hint" id="previewHint"><i class='bx bx-info-circle'></i> This is a live rendered
+                    preview of the source code above</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        /* Hamburger menu */
+        const hamburger = document.getElementById("hamburger"), mobileMenu = document.getElementById("mobileMenu"), closeBtn = document.getElementById("closeBtn");
+        hamburger.addEventListener("click", () => mobileMenu.classList.add("active"));
+        closeBtn.addEventListener("click", () => mobileMenu.classList.remove("active"));
+
+        /* Countdown */
+        let count = 10;
+        const numberEl = document.getElementById("number"), countdownEl = document.getElementById("countdown"), linkBox = document.getElementById("linkBox");
+        const timer = setInterval(() => {
+            count--;
+            if (numberEl) numberEl.textContent = count;
+            if (count <= 0) { clearInterval(timer); if (countdownEl) countdownEl.style.display = "none"; if (linkBox) linkBox.style.display = "inline-block"; }
+        }, 1000);
+
+        /* Code tabs */
+        document.querySelectorAll(".code-tab").forEach(tab => {
+            tab.addEventListener("click", () => {
+                document.querySelectorAll(".code-tab").forEach(t => { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
+                document.querySelectorAll(".code-box").forEach(b => b.classList.remove("active"));
+                tab.classList.add("active"); tab.setAttribute("aria-selected", "true");
+                document.getElementById({ html: "panel-html", css: "panel-css", js: "panel-js" }[tab.dataset.lang]).classList.add("active");
+            });
+        });
+
+        /* Copy buttons */
+        document.querySelectorAll(".copy-btn").forEach(btn => {
+            btn.addEventListener("click", async () => {
+                const code = (document.getElementById(btn.dataset.target)?.textContent || "").trim();
+                if (!code) return;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    btn.innerHTML = "<i class='bx bx-check'></i> Copied!"; btn.classList.add("copied");
+                    setTimeout(() => { btn.innerHTML = "<i class='bx bxs-copy'></i> Copy"; btn.classList.remove("copied"); }, 2000);
+                } catch { btn.textContent = "Error"; }
+            });
+        });
+
+        /* Preview modal */
+        const previewOverlay = document.getElementById("previewOverlay"), previewIframe = document.getElementById("previewIframe"),
+            previewLoading = document.getElementById("previewLoading"), previewHint = document.getElementById("previewHint"),
+            previewBtn = document.getElementById("previewBtn"), previewCloseBtn = document.getElementById("previewCloseBtn"),
+            previewDotClose = document.getElementById("previewDotClose"),
+            tagHTML = document.getElementById("tagHTML"), tagCSS = document.getElementById("tagCSS"), tagJS = document.getElementById("tagJS");
+
+        /* TODO: replace YOUR_GIST_ID and YOUR_REVISION_ID with the real values from your Gist raw links */
+        const gistBase = "https://gist.githubusercontent.com/77cod-ing/2357490afaade3b6eb61020e7bbf001d/raw/ab2481c42780c099a56a237533b957dda88b34a9/";
+        const htmlUrl = gistBase + "index.html", cssUrl = gistBase + "style.css", jsUrl = gistBase + "script.js";
+        let cachedHTML = "", cachedCSS = "", cachedJS = "";
+
+        async function loadCode(url, elementId, lang) {
+            try {
+                const res = await fetch(url);
+                if (!res.ok) throw new Error("HTTP " + res.status);
+                const text = await res.text();
+                const el = document.getElementById(elementId);
+                el.textContent = text; el.className = "language-" + lang;
+                if (window.Prism) Prism.highlightElement(el);
+                if (lang === "html") cachedHTML = text;
+                if (lang === "css") cachedCSS = text;
+                if (lang === "js") cachedJS = text;
+            } catch (e) {
+                const el = document.getElementById(elementId);
+                if (el) el.textContent = "/* Source code available via the GitHub Gist link below. */";
+            }
+        }
+        loadCode(htmlUrl, "code1", "html"); loadCode(cssUrl, "code2", "css"); loadCode(jsUrl, "code3", "js");
+
+        function openPreview() {
+            previewOverlay.classList.add("open"); document.body.style.overflow = "hidden";
+            previewLoading.classList.remove("hidden"); previewHint.classList.remove("show"); previewBtn.classList.add("loading");
+            [tagHTML, tagCSS, tagJS].forEach(t => t.classList.remove("loaded"));
+            buildPreview();
+        }
+        function closePreview() {
+            previewOverlay.classList.remove("open"); document.body.style.overflow = "";
+            previewIframe.srcdoc = ""; previewBtn.classList.remove("loading");
+        }
+        async function buildPreview() {
+            try {
+                const fetches = [];
+                if (!cachedHTML) fetches.push(fetch(htmlUrl).then(r => r.text()).then(t => { cachedHTML = t; }));
+                if (!cachedCSS) fetches.push(fetch(cssUrl).then(r => r.text()).then(t => { cachedCSS = t; }));
+                if (!cachedJS) fetches.push(fetch(jsUrl).then(r => r.text()).then(t => { cachedJS = t; }));
+                await Promise.all(fetches);
+                [tagHTML, tagCSS, tagJS].forEach(t => t.classList.add("loaded"));
+                injectPreview(cachedHTML, cachedCSS, cachedJS);
+            } catch (e) {
+                previewLoading.innerHTML = '<i class="bx bx-error-circle" style="font-size:32px;color:var(--accent2);"></i><span class="preview-loading-text" style="color:var(--accent2);">Failed to load: ' + e.message + '</span>';
+                previewBtn.classList.remove("loading");
+            }
+        }
+        function injectPreview(html, css, js) {
+            let c = html;
+            if (c.includes('<link') && /style\.css/i.test(c)) c = c.replace(/<link[^>]*href=["'][^"']*style\.css["'][^>]*\/?>/gi, '<style>' + css + '<\/style>');
+            else if (c.includes("</head>")) c = c.replace("</head>", '<style>' + css + '<\/style>\n</head>');
+            else c = '<style>' + css + '<\/style>\n' + c;
+            if (c.includes('<script') && /script\.js/i.test(c)) c = c.replace(/<script[^>]*src=["'][^"']*script\.js["'][^>]*><\/script>/gi, '<script>' + js + '<\/script>');
+            else if (c.includes("</body>")) c = c.replace("</body>", '<script>' + js + '<\/script>\n</body>');
+            else c += '\n<script>' + js + '<\/script>';
+            const bg = '<style>body{margin:0;min-height:100vh;background:#000;}</style>';
+            c = c.includes("<head>") ? c.replace("<head>", "<head>" + bg) : bg + c;
+            previewIframe.srcdoc = c;
+            previewIframe.addEventListener("load", function onLoad() {
+                previewLoading.classList.add("hidden"); previewBtn.classList.remove("loading");
+                setTimeout(() => { previewHint.classList.add("show"); setTimeout(() => previewHint.classList.remove("show"), 4000); }, 300);
+                previewIframe.removeEventListener("load", onLoad);
+            });
+        }
+        previewBtn.addEventListener("click", openPreview);
+        previewCloseBtn.addEventListener("click", closePreview);
+        previewDotClose.addEventListener("click", closePreview);
+        previewOverlay.addEventListener("click", e => { if (e.target === previewOverlay) closePreview(); });
+        document.addEventListener("keydown", e => { if (e.key === "Escape" && previewOverlay.classList.contains("open")) closePreview(); });
+    </script>
+
+</body>
+
+</html>
